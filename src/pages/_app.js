@@ -8,8 +8,9 @@ const url = 'https://github.com/masakudamatsu/nextjs-template';
 const webfont = {
   server: 'https://fonts.gstatic.com',
   stylesheet:
-    'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap',
+    'fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cormorant+SC:wght@700&family=Cormorant:wght@700&display=swap',
 }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
+
 const favicon = {
   svg: '/logo.svg',
   ico: '/favicon.ico',
