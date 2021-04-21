@@ -3,6 +3,7 @@ import Head from 'next/head';
 import {title, description} from '../metadata/ryoanji';
 import Carousel from '../blocks/Carousel';
 import P from '../elements/P';
+import Spacer from '../elements/Spacer';
 
 function Ryoanji() {
   return (
@@ -45,10 +46,25 @@ function Ryoanji() {
         Pick any travel guide for Kyoto. I'm sure you’ll find Ryoan-ji, a Zen
         Buddhist temple famous for its Rock Garden (pictured above).
       </P>
-      <div style={{height: '15px', width: '100%'}}></div>
+      <Spacer betweenParagraphs textOnly />
       <P>
         This zen garden is made of fifteen rocks, surrounded by patches of moss,
         laid out in the ocean of gravels on a walled rectangular plot.
+      </P>
+      <Spacer betweenParagraphs textOnly />
+      <P>And that's it…</P>
+      <Spacer betweenParagraphs textOnly />
+      <P>
+        If you have been to this garden, you must have been utterly puzzled
+        during your visit. Too abstract and too minimal. I also scratched my
+        head during my first visit to the garden. My second visit a year later
+        didn’t help me figure out anything, either.
+      </P>
+      <Spacer betweenParagraphs textOnly />
+      <P>
+        During the third visit, however, the whole garden started to make sense
+        to me. It taught me how to live a happy life, with the layout of the
+        fifteen rocks as the “textbook”.
       </P>
     </>
   );

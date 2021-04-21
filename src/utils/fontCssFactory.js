@@ -9,19 +9,6 @@ export const getFontSize = typeface => {
   return fontSize;
 };
 
-// helper functions
-
-function capHeightToBe(capHeight, fontMetrics) {
-  const fontSizeToCapHeightRatio =
-    fontMetrics.unitsPerEm / fontMetrics.capHeight;
-  return capHeight * fontSizeToCapHeightRatio;
-}
-
-function xHeightToBe(xHeight, fontMetrics) {
-  const fontSizeToXHeightRatio = fontMetrics.unitsPerEm / fontMetrics.xHeight;
-  return xHeight * fontSizeToXHeightRatio;
-}
-
 export const getLineHeight = typeface => {
   if (!typeface.lineHeightRatio) {
     return 'normal';
@@ -34,3 +21,27 @@ export const getLineHeight = typeface => {
     typeface.fontMetrics.unitsPerEm
   );
 };
+
+export const getCapHeightXHeightDiff = typeface => {
+  let unit;
+  if (typeface.xHeight) {
+    unit = typeface.xHeight / typeface.fontMetrics.xHeight;
+  }
+  if (typeface.capHeight) {
+    unit = typeface.capHeight / typeface.fontMetrics.capHeight;
+  }
+  return unit * (typeface.fontMetrics.capHeight - typeface.fontMetrics.xHeight);
+};
+
+// helper functions
+
+function capHeightToBe(capHeight, fontMetrics) {
+  const fontSizeToCapHeightRatio =
+    fontMetrics.unitsPerEm / fontMetrics.capHeight;
+  return capHeight * fontSizeToCapHeightRatio;
+}
+
+function xHeightToBe(xHeight, fontMetrics) {
+  const fontSizeToXHeightRatio = fontMetrics.unitsPerEm / fontMetrics.xHeight;
+  return xHeight * fontSizeToXHeightRatio;
+}
