@@ -5,16 +5,21 @@ import P from './P';
 
 const mockProps = {};
 
-test('right-aligns the text if the rightAligned prop is provided', () => {
-  render(<P rightAligned {...mockProps} data-testid="paragraph" />);
-  expect(screen.getByTestId('paragraph')).toHaveStyle('text-align: right');
-});
-
 test('renders UI correctly:', () => {
   const {container} = render(<P {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      text-align: left;
+      font-family: 'Cormorant Garamond','Times New Roman',serif;
+      font-size: 1.2579rem;
+      font-weight: 500;
+      line-height: 1.393;
+      padding: 0 2.0859rem;
+    }
+
+    @media only screen and (min-width:45.5rem) {
+      .c0 {
+        font-size: 1.4675rem;
+      }
     }
 
     <div>

@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import {title, description} from '../metadata/ryoanji';
 import Carousel from '../blocks/Carousel';
+import P from '../elements/P';
 
 function Ryoanji() {
   return (
@@ -40,7 +41,15 @@ function Ryoanji() {
           alt="Ryoan-ji Rock Garden in winter"
         />
       </Carousel>
-      <div>Ryoan-ji</div>
+      <P>
+        Pick any travel guide for Kyoto. I'm sure you’ll find Ryoan-ji, a Zen
+        Buddhist temple famous for its Rock Garden (pictured above).
+      </P>
+      <div style={{height: '15px', width: '100%'}}></div>
+      <P>
+        This zen garden is made of fifteen rocks, surrounded by patches of moss,
+        laid out in the ocean of gravels on a walled rectangular plot.
+      </P>
     </>
   );
 }

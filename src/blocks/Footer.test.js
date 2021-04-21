@@ -70,7 +70,7 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
-  test('Paragraph', () => {
+  test.skip('Paragraph', () => {
     const {container} = render(<Footer.Paragraph {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
