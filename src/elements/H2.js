@@ -7,8 +7,8 @@ import remify from 'src/utils/remify';
 
 const defaultSpace = {
   mobile: {
-    ascender: 10,
-    descender: 11,
+    ascender: 6,
+    descender: 7,
     left: 2,
   },
 };
@@ -30,6 +30,7 @@ const defaultStyle = css`
   margin: 0 -${remify(whitespace.sideMargin)}; /* override the side margins */
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
   padding-left: ${remify(whitespace.sideMargin)};
+  padding-right: ${remify(whitespace.sideMargin)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.fontSize} {

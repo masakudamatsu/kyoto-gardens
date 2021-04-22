@@ -83,13 +83,15 @@ export const h2 = {
       xHeight: 402,
       capHeight: 642,
     }, // measured by myself
-    capHeight: whitespace.betweenParagraphs,
+    xHeight: (xHeight() * 5) / 3,
     lineHeightRatio: {
       xHeight: 5,
       betweenLines: 8,
     }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
     get padding() {
-      return this.capHeight;
+      return (
+        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
+      );
     },
   },
 };

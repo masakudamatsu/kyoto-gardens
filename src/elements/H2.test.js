@@ -41,13 +41,14 @@ test('renders UI correctly', () => {
       background-image: linear-gradient( 35deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,0.5) 55%,hsla(0,0%,100%,0.5) 65%,hsla(0,0%,100%,0) );
       color: #eee;
       font-family: 'Cormorant','Times New Roman',serif;
-      font-size: 3.2491rem;
+      font-size: 2.0756rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
       margin: 0 -2.0859rem;
-      padding-bottom: 1.3984rem;
+      padding-bottom: 0.895rem;
       padding-left: 2.0859rem;
-      padding-top: 1.4609rem;
+      padding-right: 2.0859rem;
+      padding-top: 0.9575rem;
       text-indent: -0.125rem;
     }
 
