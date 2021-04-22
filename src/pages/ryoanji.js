@@ -5,6 +5,7 @@ import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
 import FigureBordered from '../blocks/FigureBordered';
 import H2 from '../elements/H2';
+import Italic from '../elements/Italic';
 import Link from '../elements/Link';
 import P from '../elements/P';
 import Spacer from '../elements/Spacer';
@@ -119,6 +120,16 @@ function Ryoanji() {
           </Link>
           , pp. 58-59). The book says that the whole garden was constructed to
           be seen from this viewpoint.
+        </P>
+      </Section>
+      <Spacer betweenSections aboveFigure />
+      <Section>
+        <H2>No Focal Point in the Garden</H2>
+        <Spacer betweenParagraphs belowFigure />
+        <P>
+          Once I sit down and see the garden from the correct viewpoint, the
+          layout of fifteen rocks starts taking on its meaning:{' '}
+          <Italic>there is nothing emphasized in this garden</Italic>.
         </P>
       </Section>
       <Spacer betweenSections aboveFigure />
