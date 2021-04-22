@@ -75,8 +75,10 @@ function Ryoanji() {
           the fifteen rocks as the “textbook”.
         </P>
       </Section>
+      <Spacer betweenSections aboveFigure />
       <Section>
-        <h2>Get the Viewpoint Right</h2>
+        <H2>Get the Viewpoint Right</H2>
+        <Spacer betweenParagraphs belowFigure />
         <P>
           The key to understand this cryptic garden is to see it from where
           you're supposed to: halfway between the left and right edges of this
@@ -104,7 +106,7 @@ function Ryoanji() {
             </FigCaption.Footer>
           </FigCaption>
         </FigureBordered>
-        <Spacer betweenParagraphs aboveFigure />
+        <Spacer betweenParagraphs belowFigure />
         <P>
           My third visit to the garden was different from the previous ones in
           that I had this piece of knowledge, learned from a book on Japanese
@@ -119,6 +121,7 @@ function Ryoanji() {
           be seen from this viewpoint.
         </P>
       </Section>
+      <Spacer betweenSections aboveFigure />
     </>
   );
 }
