@@ -7,14 +7,14 @@ const primaryTint = '#bb86fc';
 const secondary = '#03dac6'; // should be applied sparingly to accent select parts of your UI (Floating action buttons, Selection controls, like sliders and switches, Highlighting selected text, Progress bars, Links and headlines)
 const secondaryShade = '#018786';
 
-const background = '#0a0a0a'; // behind scrollable content
+const background = '#ffffff'; // to match with the floorplan image background
 const surface = '#0a0a0a'; // cards, sheets, and menus
 const error = 'rgb(254, 254, 50)'; // errors in components, such as invalid text in a text field
 
 // text, iconography, and stroke
 const onPrimary = '#ffffff';
 const onSecondary = '#000000';
-const onBackground = '#ffffff';
+const onBackground = '#0a0a0a';
 const onSurface = '#ffffff';
 const onError = '#0a0a0a';
 
