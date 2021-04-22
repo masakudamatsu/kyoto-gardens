@@ -1,5 +1,3 @@
-import remify from './remify';
-
 function xHeight(screenWidth = 'mobile') {
   const mediumFontSize = {
     mobile: 18,
@@ -15,14 +13,10 @@ function xHeight(screenWidth = 'mobile') {
   }
 }
 
-export const breakpoint = {
-  font: `(min-width: ${remify(728)})`,
-};
-
 export const paragraph = {
   mobile: {
     fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
-    fontWeight: 500,
+    fontWeight: 600,
     fontMetrics: {
       unitsPerEm: 1000,
       xHeight: 398,
@@ -45,6 +39,23 @@ paragraph.desktop = {
   },
 };
 
+export const figCaption = {
+  mobile: {
+    fontFamily: "'Cormorant SC', 'Times New Roman', serif",
+    fontWeight: 700,
+    fontMetrics: {
+      unitsPerEm: 1000,
+      xHeight: 471,
+      capHeight: 630,
+    }, // measured by myself
+    xHeight: xHeight(),
+    lineHeightRatio: {
+      xHeight: 2,
+      betweenLines: 5,
+    },
+  },
+};
+
 export const whitespace = {
   get betweenLines() {
     const lineHeightRatio = paragraph.mobile.lineHeightRatio;
@@ -61,4 +72,13 @@ export const whitespace = {
   get sideMargin() {
     return this.betweenParagraphs;
   },
+};
+
+export const figureBordered = {
+  padding: 15.564,
+};
+
+export const breakpoint = {
+  fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
+  floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
 };

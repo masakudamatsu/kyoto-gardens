@@ -1,4 +1,3 @@
-import BannerForNoJs from 'src/components/BannerForNoJs';
 import Main from 'src/blocks/Main';
 import Section from 'src/blocks/Section';
 import TopAppBar from 'src/components/TopAppBar';
@@ -16,9 +15,7 @@ function HomePage() {
           <Section.Whitespace betweenSections />
         </Section>
       </Main>
-      <noscript>
-        <BannerForNoJs />
-      </noscript>
+      <noscript></noscript>
     </>
   );
 }

@@ -8,6 +8,9 @@ import remify from 'src/utils/remify';
 const Spacer = styled.div`
   height: ${props => {
     let targetHeight;
+    if (props.betweenLines) {
+      targetHeight = whitespace.betweenLines;
+    }
     if (props.betweenParagraphs) {
       targetHeight = whitespace.betweenParagraphs;
     }
@@ -22,11 +25,21 @@ const Spacer = styled.div`
         whitespace.betweenLines - getCapHeightXHeightDiff(paragraph.mobile);
       return remify(targetHeight - spaceByDefault);
     }
+    if (props.aboveFigure) {
+      const spaceByDefault = 8; // given x-height of 8px and line-height of 28px
+      return remify(targetHeight - spaceByDefault);
+    }
+    if (props.belowFigure) {
+      const spaceByDefault = 12 - getCapHeightXHeightDiff(paragraph.mobile);
+      return remify(targetHeight - spaceByDefault);
+    }
   }};
   width: 100%;
 `;
 
 Spacer.propTypes = {
+  aboveFigure: PropTypes.bool,
+  betweenLines: PropTypes.bool,
   betweenParagraphs: PropTypes.bool,
   betweenSections: PropTypes.bool,
   textOnly: PropTypes.bool,

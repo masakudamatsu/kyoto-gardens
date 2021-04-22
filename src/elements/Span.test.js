@@ -1,20 +1,20 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import Section from './Section';
+import Span from './Span';
 
 const mockProps = {};
 
-describe('renders UI correctly:', () => {
-  test('Parent', () => {
-    const {container} = render(<Section {...mockProps} />);
+describe('Props work as intended', () => {
+  test('nowrap', () => {
+    const {container} = render(<Span nowrap />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        padding: 0 2.0859rem;
+        white-space: nowrap;
       }
 
       <div>
-        <section
+        <span
           class="c0"
         />
       </div>
