@@ -4,7 +4,9 @@ import {title, description} from '../metadata/ryoanji';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
 import FigureBordered from '../blocks/FigureBordered';
+import FigurePhoto from '../blocks/FigurePhoto';
 import H2 from '../elements/H2';
+import H3 from '../elements/H3';
 import Italic from '../elements/Italic';
 import Link from '../elements/Link';
 import P from '../elements/P';
@@ -97,7 +99,6 @@ function Ryoanji() {
             <FigCaption.Footer>
               Adapted from{' '}
               <Link
-                class="link"
                 href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
                 target="_blank"
               >
@@ -131,6 +132,68 @@ function Ryoanji() {
           layout of fifteen rocks starts taking on its meaning:{' '}
           <Italic>there is nothing emphasized in this garden</Italic>.
         </P>
+        <section>
+          <Spacer betweenParagraphs aboveSubsectionTitle />
+          <H3>Straight ahead</H3>
+          <Spacer betweenLines belowSubsectionTitle />
+          <FigurePhoto>
+            <FigurePhoto.Img
+              src="/images/ryoanji-banner-summer-small.jpg"
+              srcSet="/images/ryoanji-banner-summer-large.jpg 1882w,
+                      /images/ryoanji-banner-summer-small.jpg 941w"
+              sizes="(min-width: 941px) 941px, 100vw"
+              alt="Central view of Ryoan-ji Zen Garden"
+            />
+          </FigurePhoto>
+          <Spacer betweenLines belowFigure />
+          <P>
+            There is no stone at the center of gaze when I look straight ahead.
+            The landscape composition is split between two groups of rocks on
+            the right and on the left. Nothing is really emphasized.
+          </P>
+        </section>
+        <section>
+          <Spacer betweenParagraphs aboveSubsectionTitle />
+          <H3>Leftward</H3>
+          <Spacer betweenLines belowSubsectionTitle />
+          <FigurePhoto>
+            <FigurePhoto.Img
+              src="/images/ryoanji-look-left-small.jpg"
+              srcSet="/images/ryoanji-look-left-large.jpg 1882w,
+                      /images/ryoanji-look-left-small.jpg 941w"
+              sizes="(min-width: 941px) 941px, 100vw"
+              alt="Leftward view of Ryoan-ji Zen Garden"
+            />
+          </FigurePhoto>
+          <Spacer betweenLines belowFigure />
+          <P>
+            Next, I turn my head to the left while sitting in the same
+            viewpoint. There is again nothing in the center of my vision. The
+            view is split. Nothing is emphasised.
+          </P>
+        </section>
+        <section>
+          <Spacer betweenParagraphs aboveSubsectionTitle />
+          <H3>Rightward</H3>
+          <Spacer betweenLines belowSubsectionTitle />
+          <FigurePhoto>
+            <FigurePhoto.Img
+              src="/images/ryoanji-look-right-small.jpg"
+              srcSet="/images/ryoanji-look-right-large.jpg 1882w,
+                      /images/ryoanji-look-right-small.jpg 941w"
+              sizes="(min-width: 941px) 941px, 100vw"
+              alt="Rightward view of Ryoan-ji Zen Garden"
+            />
+          </FigurePhoto>
+          <Spacer betweenLines belowFigure />
+          <P>
+            Finally, I turn my head to the right while still staying at the same
+            viewpoint. There are three groups of rocks, but none of them stand
+            out clearly. Location in the middle usually casts the spotlight, but
+            the two rocks in the middle group look rather modest and are located
+            off the center. Nothing is stressed in this view, either.
+          </P>
+        </section>
       </Section>
       <Spacer betweenSections aboveFigure />
     </>

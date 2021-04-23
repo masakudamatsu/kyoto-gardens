@@ -33,6 +33,14 @@ const Spacer = styled.div`
       const spaceByDefault = 12 - getCapHeightXHeightDiff(paragraph.mobile);
       return remify(targetHeight - spaceByDefault);
     }
+    if (props.aboveSubsectionTitle) {
+      const spaceByDefault = 14;
+      return remify(targetHeight - spaceByDefault);
+    }
+    if (props.belowSubsectionTitle) {
+      const spaceByDefault = 6;
+      return remify(targetHeight - spaceByDefault);
+    }
   }};
   width: 100%;
 `;

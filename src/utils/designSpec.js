@@ -96,6 +96,28 @@ export const h2 = {
   },
 };
 
+export const h3 = {
+  mobile: {
+    fontFamily: "'Cormorant', 'Times New Roman', serif",
+    fontWeight: 700,
+    fontMetrics: {
+      unitsPerEm: 1000,
+      xHeight: 402,
+      capHeight: 642,
+    }, // measured by myself
+    capHeight: whitespace.betweenLines,
+    lineHeightRatio: {
+      xHeight: 5,
+      betweenLines: 8,
+    }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
+    get padding() {
+      return (
+        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
+      );
+    },
+  },
+};
+
 export const figureBordered = {
   padding: 15.564,
 };
