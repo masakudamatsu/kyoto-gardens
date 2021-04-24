@@ -123,6 +123,10 @@ export const figureBordered = {
 
 export const lineLength = {
   min: 51.3 * xHeight(), // 436.093px for font-size of 21.3568px
+  max: {
+    mobile: 64.97 * xHeight('mobile'),
+    desktop: 64.97 * xHeight('desktop'),
+  }, // in em: 682.188px for font-size of 26.3824px
 };
 
 export const breakpoint = {
