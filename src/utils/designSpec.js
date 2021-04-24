@@ -52,6 +52,11 @@ export const figCaption = {
   },
 };
 
+figCaption.desktop = {
+  ...figCaption.mobile,
+  xHeight: xHeight('desktop'),
+};
+
 export function whitespace(screenWidth = 'mobile') {
   let lineHeightRatio;
   if (screenWidth === 'mobile') {
@@ -76,27 +81,6 @@ export function whitespace(screenWidth = 'mobile') {
   };
 }
 
-// export const whitespace = {
-//   get betweenLines() {
-//     const lineHeightRatio = paragraph.mobile.lineHeightRatio;
-//     const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
-//     return xHeight() * ratio;
-//   },
-//   scale: 5 / 3,
-//   get betweenParagraphs() {
-//     return this.betweenLines * this.scale;
-//   },
-//   get betweenSections() {
-//     return this.betweenParagraphs * this.scale;
-//   },
-//   get sideMargin() {
-//     return this.betweenLines;
-//   },
-//   get sideMarginLarge() {
-//     return this.betweenParagraphs;
-//   },
-// };
-
 export const h2 = {
   mobile: {
     fontFamily: "'Cormorant', 'Times New Roman', serif",
@@ -119,6 +103,11 @@ export const h2 = {
   },
 };
 
+h2.desktop = {
+  ...h2.mobile,
+  xHeight: (xHeight('desktop') * 5) / 3,
+};
+
 export const h3 = {
   mobile: {
     fontFamily: "'Cormorant', 'Times New Roman', serif",
@@ -139,6 +128,11 @@ export const h3 = {
       );
     },
   },
+};
+
+h3.desktop = {
+  ...h3.mobile,
+  capHeight: whitespace('desktop').betweenLines,
 };
 
 export const figureBordered = {

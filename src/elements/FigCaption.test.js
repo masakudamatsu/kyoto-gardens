@@ -18,6 +18,12 @@ describe('renders UI correctly', () => {
         text-align: right;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          font-size: 1.3933rem;
+        }
+      }
+
       <div>
         <figcaption
           class="c0"

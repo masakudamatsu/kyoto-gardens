@@ -26,6 +26,7 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c0 {
+        font-size: 2.811rem;
         padding: 0 3.0078rem;
       }
     }

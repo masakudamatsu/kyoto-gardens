@@ -60,6 +60,7 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c0 {
+        font-size: 2.7208rem;
         padding-left: 3.0078rem;
         padding-right: 3.0078rem;
       }

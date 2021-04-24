@@ -23,6 +23,7 @@ const H3 = styled.h3`
     padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
+    font-size: ${remify(getFontSize(h3.desktop))};
     padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
