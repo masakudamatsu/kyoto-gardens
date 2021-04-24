@@ -12,22 +12,15 @@ test('renders UI correctly', () => {
     .c0 {
       border-bottom: 1px solid hsla(193,50%,26%,0.2);
       border-top: 1px solid hsla(193,50%,26%,0.2);
-      margin: 0 -1.3281rem;
       overflow: hidden;
       padding: 15.564px;
-    }
-
-    @media only screen and (min-width:31.6802rem) {
-      .c0 {
-        margin: 0 -2.2135rem;
-      }
     }
 
     @media only screen and (min-width:528.128px) {
       .c0 {
         border-left: 1px solid hsla(193,50%,26%,0.2);
         border-right: 1px solid hsla(193,50%,26%,0.2);
-        margin: 0;
+        margin: 0 2.2135rem;
       }
     }
 

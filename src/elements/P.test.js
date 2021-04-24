@@ -13,6 +13,13 @@ test('renders UI correctly:', () => {
       font-size: 1.3348rem;
       font-weight: 600;
       line-height: 1.393;
+      padding: 0 1.3281rem;
+    }
+
+    @media only screen and (min-width:31.6802rem) {
+      .c0 {
+        padding: 0 2.2135rem;
+      }
     }
 
     @media only screen and (min-width:728px) {

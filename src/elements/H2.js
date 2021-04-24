@@ -27,14 +27,12 @@ const defaultStyle = css`
   font-size: ${remify(getFontSize(h2.mobile))};
   font-weight: ${h2.mobile.fontWeight};
   line-height: ${getLineHeight(h2.mobile)};
-  margin: 0 -${remify(whitespace.sideMargin)}; /* override the side margins */
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
   padding-left: ${remify(whitespace.sideMargin)};
   padding-right: ${remify(whitespace.sideMargin)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.sideMargin} {
-    margin: 0 -${remify(whitespace.sideMarginLarge)}; /* override the side margins */
     padding-left: ${remify(whitespace.sideMarginLarge)};
     padding-right: ${remify(whitespace.sideMarginLarge)};
   }

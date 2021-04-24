@@ -44,7 +44,6 @@ test('renders UI correctly', () => {
       font-size: 2.2025rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
-      margin: 0 -1.3281rem;
       padding-bottom: 0.9765rem;
       padding-left: 1.3281rem;
       padding-right: 1.3281rem;
@@ -54,7 +53,6 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:31.6802rem) {
       .c0 {
-        margin: 0 -2.2135rem;
         padding-left: 2.2135rem;
         padding-right: 2.2135rem;
       }

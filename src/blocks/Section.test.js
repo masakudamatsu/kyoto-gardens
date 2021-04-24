@@ -9,19 +9,9 @@ describe('renders UI correctly:', () => {
   test('Parent', () => {
     const {container} = render(<Section {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
-        padding: 0 1.3281rem;
-      }
-
-      @media only screen and (min-width:31.6802rem) {
-        .c0 {
-          padding: 0 2.2135rem;
-        }
-      }
-
       <div>
         <section
-          class="c0"
+          class="Section-yfzme9-0"
         />
       </div>
     `);

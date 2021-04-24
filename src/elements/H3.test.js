@@ -14,7 +14,14 @@ test('renders UI correctly', () => {
       font-size: 2.0687rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
+      padding: 0 1.3281rem;
       text-indent: -0.125rem;
+    }
+
+    @media only screen and (min-width:31.6802rem) {
+      .c0 {
+        padding: 0 2.2135rem;
+      }
     }
 
     <div>
