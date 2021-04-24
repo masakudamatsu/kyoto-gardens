@@ -78,8 +78,8 @@ function Ryoanji() {
             sense to me. It taught me how to live a happy life, with the layout
             of the fifteen rocks as the “textbook”.
           </P>
+          <Spacer betweenSections aboveFigure />
         </Section>
-        <Spacer betweenSections aboveFigure />
         <Section>
           <H2>Get the Viewpoint Right</H2>
           <Spacer betweenParagraphs belowFigure />
@@ -123,8 +123,8 @@ function Ryoanji() {
             , pp. 58-59). The book says that the whole garden was constructed to
             be seen from this viewpoint.
           </P>
+          <Spacer betweenSections aboveFigure />
         </Section>
-        <Spacer betweenSections aboveFigure />
         <Section>
           <H2>No Focal Point in the Garden</H2>
           <Spacer betweenParagraphs belowFigure />
@@ -196,8 +196,8 @@ function Ryoanji() {
               view, either.
             </P>
           </section>
+          <Spacer betweenSections aboveFigure />
         </Section>
-        <Spacer betweenSections aboveFigure />
         <Section>
           <H2>No Single Rock Dominates</H2>
           <Spacer betweenParagraphs belowFigure />
@@ -297,8 +297,8 @@ function Ryoanji() {
               behind the large rock.
             </P>
           </section>
+          <Spacer betweenSections aboveFigure />
         </Section>
-        <Spacer betweenSections aboveFigure />
         <Section>
           <H2>The Rock Garden’s Message</H2>
           <Spacer betweenParagraphs belowFigure />
@@ -337,8 +337,8 @@ function Ryoanji() {
             be at the center of your mind, just like the arrangement of these
             fifteen rocks within the walled rectangular plot.
           </P>
+          <Spacer betweenSections aboveFigure />
         </Section>{' '}
-        <Spacer betweenSections aboveFigure />
         <Section>
           <H2>Garden as a Reminder</H2>
           <Spacer betweenParagraphs belowFigure />
@@ -373,15 +373,15 @@ function Ryoanji() {
             composition of 15 rocks, Ryoan-ji Rock Garden has been there since
             the early 16th century to reminds us of the teaching of the Buddha.
           </P>
+          <Spacer betweenSections aboveFigure />
         </Section>{' '}
-        <Spacer betweenSections aboveFigure />
         <Section>
           <P>
             Written, photographed, designed, and coded by Masa Kudamatsu in
             2021.
           </P>
+          <Spacer betweenSections aboveFigure />
         </Section>
-        <Spacer betweenSections aboveFigure />
       </article>
     </>
   );
