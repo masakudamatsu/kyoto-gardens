@@ -6,10 +6,12 @@ import remify from 'src/utils/remify';
 
 const Section = styled.section`
   margin: 0 auto;
-  max-width: ${remify(lineLength.max.mobile + whitespace.sideMarginLarge * 2)};
+  max-width: ${remify(
+    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
+  )};
   @media only screen and ${breakpoint.fontSize} {
     max-width: ${remify(
-      lineLength.max.desktop + whitespace.sideMarginLarge * 2,
+      lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
     )};
   }
 `;

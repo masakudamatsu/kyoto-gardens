@@ -17,10 +17,10 @@ const H3 = styled.h3`
   font-size: ${remify(getFontSize(h3.mobile))};
   font-weight: ${h3.mobile.fontWeight};
   line-height: ${getLineHeight(h3.mobile)};
-  padding: 0 ${remify(whitespace.sideMargin)};
+  padding: 0 ${remify(whitespace().sideMargin)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.sideMargin} {
-    padding: 0 ${remify(whitespace.sideMarginLarge)};
+    padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
 `;
 

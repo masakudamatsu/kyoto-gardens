@@ -52,26 +52,50 @@ export const figCaption = {
   },
 };
 
-export const whitespace = {
-  get betweenLines() {
-    const lineHeightRatio = paragraph.mobile.lineHeightRatio;
-    const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
-    return xHeight() * ratio;
-  },
-  scale: 5 / 3,
-  get betweenParagraphs() {
-    return this.betweenLines * this.scale;
-  },
-  get betweenSections() {
-    return this.betweenParagraphs * this.scale;
-  },
-  get sideMargin() {
-    return this.betweenLines;
-  },
-  get sideMarginLarge() {
-    return this.betweenParagraphs;
-  },
-};
+export function whitespace(screenWidth = 'mobile') {
+  let lineHeightRatio;
+  if (screenWidth === 'mobile') {
+    lineHeightRatio = paragraph.mobile.lineHeightRatio;
+  }
+  if (screenWidth === 'desktop') {
+    lineHeightRatio = paragraph.desktop.lineHeightRatio;
+  }
+  const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
+  const betweenLines = xHeight(screenWidth) * ratio;
+  const scale = 5 / 3;
+  const betweenParagraphs = betweenLines * scale;
+  const betweenSections = betweenParagraphs * scale;
+  const sideMargin = betweenLines;
+  const sideMarginLarge = betweenParagraphs;
+  return {
+    betweenLines: betweenLines,
+    betweenParagraphs: betweenParagraphs,
+    betweenSections: betweenSections,
+    sideMargin: sideMargin,
+    sideMarginLarge: sideMarginLarge,
+  };
+}
+
+// export const whitespace = {
+//   get betweenLines() {
+//     const lineHeightRatio = paragraph.mobile.lineHeightRatio;
+//     const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
+//     return xHeight() * ratio;
+//   },
+//   scale: 5 / 3,
+//   get betweenParagraphs() {
+//     return this.betweenLines * this.scale;
+//   },
+//   get betweenSections() {
+//     return this.betweenParagraphs * this.scale;
+//   },
+//   get sideMargin() {
+//     return this.betweenLines;
+//   },
+//   get sideMarginLarge() {
+//     return this.betweenParagraphs;
+//   },
+// };
 
 export const h2 = {
   mobile: {
@@ -104,7 +128,7 @@ export const h3 = {
       xHeight: 402,
       capHeight: 642,
     }, // measured by myself
-    capHeight: whitespace.betweenLines,
+    capHeight: whitespace().betweenLines,
     lineHeightRatio: {
       xHeight: 5,
       betweenLines: 8,
@@ -133,6 +157,6 @@ export const breakpoint = {
   fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
   floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
   sideMargin: `(min-width: ${remify(
-    lineLength.min + whitespace.sideMarginLarge * 2, // remify to be responsive to user's base font size
+    lineLength.min + whitespace().sideMarginLarge * 2, // remify to be responsive to user's base font size
   )})`,
 };

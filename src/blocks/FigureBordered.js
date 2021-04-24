@@ -13,7 +13,7 @@ const FigureBordered = styled.figure`
   @media only screen and ${breakpoint.floorPlan} {
     border-left: 1px solid hsla(193, 50%, 26%, 0.2);
     border-right: 1px solid hsla(193, 50%, 26%, 0.2);
-    margin: 0 ${remify(whitespace.sideMarginLarge)};
+    margin: 0 ${remify(whitespace().sideMarginLarge)};
   }
 `;
 

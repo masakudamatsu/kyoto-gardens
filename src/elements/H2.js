@@ -28,13 +28,13 @@ const defaultStyle = css`
   font-weight: ${h2.mobile.fontWeight};
   line-height: ${getLineHeight(h2.mobile)};
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
-  padding-left: ${remify(whitespace.sideMargin)};
-  padding-right: ${remify(whitespace.sideMargin)};
+  padding-left: ${remify(whitespace().sideMargin)};
+  padding-right: ${remify(whitespace().sideMargin)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.sideMargin} {
-    padding-left: ${remify(whitespace.sideMarginLarge)};
-    padding-right: ${remify(whitespace.sideMarginLarge)};
+    padding-left: ${remify(whitespace().sideMarginLarge)};
+    padding-right: ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
   }

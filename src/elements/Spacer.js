@@ -9,20 +9,20 @@ const Spacer = styled.div`
   height: ${props => {
     let targetHeight;
     if (props.betweenLines) {
-      targetHeight = whitespace.betweenLines;
+      targetHeight = whitespace().betweenLines;
     }
     if (props.betweenParagraphs) {
-      targetHeight = whitespace.betweenParagraphs;
+      targetHeight = whitespace().betweenParagraphs;
     }
     if (props.betweenSections) {
-      targetHeight = whitespace.betweenSections;
+      targetHeight = whitespace().betweenSections;
     }
     if (!targetHeight) {
       throw new Error(`Spacer component does not get any props`);
     }
     if (props.textOnly) {
       const spaceByDefault =
-        whitespace.betweenLines - getCapHeightXHeightDiff(paragraph.mobile);
+        whitespace().betweenLines - getCapHeightXHeightDiff(paragraph.mobile);
       return remify(targetHeight - spaceByDefault);
     }
     if (props.aboveFigure) {

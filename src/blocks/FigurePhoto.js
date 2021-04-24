@@ -6,10 +6,10 @@ import {breakpoint, figureBordered, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 
 const FigurePhoto = styled.figure`
-  margin: 0 -${remify(whitespace.sideMargin)}; /* override the side margins */
+  margin: 0 -${remify(whitespace().sideMargin)}; /* override the side margins */
   overflow: hidden; /* Control the image size by the box size of the figure */
   @media only screen and ${breakpoint.sideMargin} {
-    margin: 0 -${remify(whitespace.sideMarginLarge)}; /* override the side margins */
+    margin: 0 -${remify(whitespace().sideMarginLarge)}; /* override the side margins */
   }
 `;
 

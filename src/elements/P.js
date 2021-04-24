@@ -10,9 +10,9 @@ const P = styled.p`
   font-size: ${remify(getFontSize(paragraph.mobile))};
   font-weight: ${paragraph.mobile.fontWeight};
   line-height: ${getLineHeight(paragraph.mobile)};
-  padding: 0 ${remify(whitespace.sideMargin)};
+  padding: 0 ${remify(whitespace().sideMargin)};
   @media only screen and ${breakpoint.sideMargin} {
-    padding: 0 ${remify(whitespace.sideMarginLarge)};
+    padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(paragraph.desktop))};

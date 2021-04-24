@@ -16,7 +16,7 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          max-width: 47.0636rem;
+          max-width: 48.6522rem;
         }
       }
 
