@@ -24,6 +24,12 @@ test('renders UI correctly', () => {
       }
     }
 
+    @media only screen and (min-width:728px) {
+      .c0 {
+        padding: 0 3.0078rem;
+      }
+    }
+
     <div>
       <h3
         class="c0"

@@ -37,6 +37,8 @@ const defaultStyle = css`
     padding-right: ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
+    padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
+    padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
 

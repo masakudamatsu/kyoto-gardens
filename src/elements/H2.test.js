@@ -59,7 +59,10 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-
+      .c0 {
+        padding-left: 3.0078rem;
+        padding-right: 3.0078rem;
+      }
     }
 
     <div>

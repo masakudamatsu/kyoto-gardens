@@ -22,6 +22,9 @@ const H3 = styled.h3`
   @media only screen and ${breakpoint.sideMargin} {
     padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
+  @media only screen and ${breakpoint.fontSize} {
+    padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
+  }
 `;
 
 H3.propTypes = {

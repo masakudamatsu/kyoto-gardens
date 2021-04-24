@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {paragraph, whitespace} from 'src/utils/designSpec';
+import {breakpoint, paragraph, whitespace} from 'src/utils/designSpec';
 import {getCapHeightXHeightDiff} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
@@ -48,6 +48,11 @@ const Spacer = styled.div`
     return getHeight(props, 'mobile');
   }};
   width: 100%;
+  @media only screen and ${breakpoint.fontSize} {
+    height: ${props => {
+      return getHeight(props, 'desktop');
+    }};
+  }
 `;
 
 Spacer.propTypes = {

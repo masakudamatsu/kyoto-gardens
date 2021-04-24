@@ -16,6 +16,8 @@ const P = styled.p`
   }
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(paragraph.desktop))};
+    line-height: ${getLineHeight(paragraph.desktop)};
+    padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
 

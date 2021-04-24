@@ -24,6 +24,12 @@ test('renders UI correctly', () => {
       }
     }
 
+    @media only screen and (min-width:728px) {
+      .c0 {
+        margin: 0 3.0078rem;
+      }
+    }
+
     <div>
       <figure
         class="c0"

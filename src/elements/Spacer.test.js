@@ -12,6 +12,12 @@ describe('Props work as intended', () => {
         width: 100%;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 1.3047rem;
+        }
+      }
+
       <div>
         <div
           class="c0"
@@ -25,6 +31,12 @@ describe('Props work as intended', () => {
       .c0 {
         height: 0.8918rem;
         width: 100%;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 1.4422rem;
+        }
       }
 
       <div>
@@ -42,6 +54,12 @@ describe('Props work as intended', () => {
         width: 100%;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 1.4297rem;
+        }
+      }
+
       <div>
         <div
           class="c0"
@@ -57,6 +75,12 @@ describe('Props work as intended', () => {
         width: 100%;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 1.5906rem;
+        }
+      }
+
       <div>
         <div
           class="c0"
@@ -70,6 +94,12 @@ describe('Props work as intended', () => {
       .c0 {
         height: 1.7772rem;
         width: 100%;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 2.6453rem;
+        }
       }
 
       <div>
@@ -89,6 +119,12 @@ describe('Props work as intended', () => {
         width: 100%;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 2.1328rem;
+        }
+      }
+
       <div>
         <div
           class="c0"
@@ -102,6 +138,12 @@ describe('Props work as intended', () => {
       .c0 {
         height: 3.1892rem;
         width: 100%;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          height: 4.513rem;
+        }
       }
 
       <div>

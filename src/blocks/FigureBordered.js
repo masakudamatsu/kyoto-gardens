@@ -15,6 +15,9 @@ const FigureBordered = styled.figure`
     border-right: 1px solid hsla(193, 50%, 26%, 0.2);
     margin: 0 ${remify(whitespace().sideMarginLarge)};
   }
+  @media only screen and ${breakpoint.fontSize} {
+    margin: 0 ${remify(whitespace('desktop').sideMarginLarge)};
+  }
 `;
 
 FigureBordered.Img = styled(Img)``;
