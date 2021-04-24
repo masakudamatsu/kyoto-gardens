@@ -8,12 +8,7 @@ function HomePage() {
       <TopAppBar />
       <Main>
         <Main.MarginTop />
-        <Section>
-          <Section.Paragraph>
-            For kick-starting your Next.js project
-          </Section.Paragraph>
-          <Section.Whitespace betweenSections />
-        </Section>
+        <Section></Section>
       </Main>
       <noscript></noscript>
     </>

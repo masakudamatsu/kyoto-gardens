@@ -1,3 +1,4 @@
+import remify from './remify';
 function xHeight(screenWidth = 'mobile') {
   if (screenWidth === 'mobile') {
     return 8.5;
@@ -65,6 +66,9 @@ export const whitespace = {
     return this.betweenParagraphs * this.scale;
   },
   get sideMargin() {
+    return this.betweenLines;
+  },
+  get sideMarginLarge() {
     return this.betweenParagraphs;
   },
 };
@@ -117,7 +121,14 @@ export const figureBordered = {
   padding: 15.564,
 };
 
+export const lineLength = {
+  min: 51.3 * xHeight(), // 436.093px for font-size of 21.3568px
+};
+
 export const breakpoint = {
   fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
   floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
+  sideMargin: `(min-width: ${remify(
+    lineLength.min + whitespace.sideMarginLarge * 2, // remify to be responsive to user's base font size
+  )})`,
 };

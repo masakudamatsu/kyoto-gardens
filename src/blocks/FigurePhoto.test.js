@@ -10,13 +10,13 @@ test('renders UI correctly', () => {
   const {container} = render(<FigurePhoto />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      margin: 0 -2.2135rem;
+      margin: 0 -1.3281rem;
       overflow: hidden;
     }
 
-    @media only screen and (min-width:528.128px) {
+    @media only screen and (min-width:31.6802rem) {
       .c0 {
-        margin: 0;
+        margin: 0 -2.2135rem;
       }
     }
 

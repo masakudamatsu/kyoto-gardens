@@ -11,6 +11,9 @@ const FigureBordered = styled.figure`
   margin: 0 -${remify(whitespace.sideMargin)}; /* override the side margins */
   overflow: hidden; /* Control the image size by the box size of the figure */
   padding: ${figureBordered.padding}px;
+  @media only screen and ${breakpoint.sideMargin} {
+    margin: 0 -${remify(whitespace.sideMarginLarge)}; /* override the side margins */
+  }
   @media only screen and ${breakpoint.floorPlan} {
     border-left: 1px solid hsla(193, 50%, 26%, 0.2);
     border-right: 1px solid hsla(193, 50%, 26%, 0.2);

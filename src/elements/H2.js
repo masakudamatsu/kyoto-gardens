@@ -33,6 +33,11 @@ const defaultStyle = css`
   padding-right: ${remify(whitespace.sideMargin)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
+  @media only screen and ${breakpoint.sideMargin} {
+    margin: 0 -${remify(whitespace.sideMarginLarge)}; /* override the side margins */
+    padding-left: ${remify(whitespace.sideMarginLarge)};
+    padding-right: ${remify(whitespace.sideMarginLarge)};
+  }
   @media only screen and ${breakpoint.fontSize} {
   }
 `;
