@@ -12,7 +12,7 @@ test('renders UI correctly', () => {
     .c0 {
       border-bottom: 1px solid hsla(193,50%,26%,0.2);
       border-top: 1px solid hsla(193,50%,26%,0.2);
-      margin: 0 -2.0859rem;
+      margin: 0 -2.2135rem;
       overflow: hidden;
       padding: 15.564px;
     }

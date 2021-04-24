@@ -11,7 +11,7 @@ test('renders UI correctly', () => {
     .c0 {
       color: hsla(193,50%,26%,0.9);
       font-family: 'Cormorant','Times New Roman',serif;
-      font-size: 1.9495rem;
+      font-size: 2.0687rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
       text-indent: -0.125rem;

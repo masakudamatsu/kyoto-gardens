@@ -1,13 +1,8 @@
 function xHeight(screenWidth = 'mobile') {
-  const mediumFontSize = {
-    mobile: 18,
-    desktop: 21,
-  };
-  const mediumXHeight = 0.445; // Medium.com's body text face, ITC Charter, has a x-height ratio of 0.445 to font-size
   if (screenWidth === 'mobile') {
-    return mediumFontSize.mobile * mediumXHeight;
+    return 8.5;
   } else if (screenWidth === 'desktop') {
-    return mediumFontSize.desktop * mediumXHeight;
+    return 10.5;
   } else {
     throw new Error(`${screenWidth} is an invalid argument for xHeight()`);
   }

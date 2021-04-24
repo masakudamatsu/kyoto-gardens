@@ -8,7 +8,7 @@ describe('Props work as intended', () => {
     const {container} = render(<Spacer betweenParagraphs textOnly />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        height: 1.13rem;
+        height: 1.1991rem;
         width: 100%;
       }
 
@@ -23,7 +23,7 @@ describe('Props work as intended', () => {
     const {container} = render(<Spacer betweenSections textOnly />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        height: 2.5206rem;
+        height: 2.6748rem;
         width: 100%;
       }
 

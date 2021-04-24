@@ -10,14 +10,14 @@ test('renders UI correctly:', () => {
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       font-family: 'Cormorant Garamond','Times New Roman',serif;
-      font-size: 1.2579rem;
+      font-size: 1.3348rem;
       font-weight: 600;
       line-height: 1.393;
     }
 
     @media only screen and (min-width:728px) {
       .c0 {
-        font-size: 1.4675rem;
+        font-size: 1.6489rem;
       }
     }
 

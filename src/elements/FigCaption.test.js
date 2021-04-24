@@ -11,7 +11,7 @@ describe('renders UI correctly', () => {
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
-        font-size: 1.0629rem;
+        font-size: 1.1279rem;
         font-weight: 700;
         margin-right: 5px;
         padding-top: 0.5rem;

@@ -10,7 +10,7 @@ test('renders UI correctly', () => {
   const {container} = render(<FigurePhoto />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      margin: 0 -2.0859rem;
+      margin: 0 -2.2135rem;
       overflow: hidden;
     }
 

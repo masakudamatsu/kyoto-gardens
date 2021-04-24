@@ -10,7 +10,7 @@ describe('renders UI correctly:', () => {
     const {container} = render(<Section {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        padding: 0 2.0859rem;
+        padding: 0 2.2135rem;
       }
 
       <div>
