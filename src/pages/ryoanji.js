@@ -375,10 +375,40 @@ function Ryoanji() {
           </P>
           <Spacer betweenSections aboveFigure />
         </Section>{' '}
-        <Section>
+        <Section as="footer">
           <P>
             Written, photographed, designed, and coded by Masa Kudamatsu in
             2021.
+          </P>
+          <Spacer betweenSections aboveFigure />
+        </Section>
+        <Section as="aside">
+          <H2>References</H2>
+          <Spacer betweenParagraphs belowFigure />
+          <P>
+            Slawson, David A. (1987).{' '}
+            <Italic>
+              <Link
+                href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
+                target="_blank"
+              >
+                Secret Teachings in the Art of Japanese gardens
+              </Link>
+            </Italic>
+            . Tokyo: Kodansha.
+          </P>
+          <Spacer betweenParagraphs textOnly />
+          <P>
+            Tanaka, Shozo. (2002).{' '}
+            <Italic>
+              <Link
+                href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
+                target="_blank"
+              >
+                ‘Nihon Teien’ no Mikata
+              </Link>
+            </Italic>{' '}
+            [The Way of Appreciating ‘Japanese Gardens’]. Tokyo: Shogakukan.
           </P>
           <Spacer betweenSections aboveFigure />
         </Section>
