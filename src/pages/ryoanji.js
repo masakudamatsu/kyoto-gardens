@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import {title, description} from '../metadata/ryoanji';
+import Abbr from '../elements/Abbr';
 import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
@@ -413,26 +414,28 @@ function Ryoanji() {
           <P>
             The best way to appreciate the garden is to arrive early in the
             morning before tourists start flocking to Ryoan-ji Temple. I arrive
-            there when the temple opens its gate at 8am (or at 8:30am from
-            December to February). I sit down at the viewpoint explained above.
-            Then I observe how the rising sun constantly changes its way of
-            illuminating the garden as the time passes by—no fixation on a
-            particular moment.
+            there when the temple opens its gate at 8<Abbr>am</Abbr> (or at 8:30
+            <Abbr>am</Abbr> from December to February). I sit down at the
+            viewpoint explained above. Then I observe how the rising sun
+            constantly changes its way of illuminating the garden as the time
+            passes by—no fixation on a particular moment.
           </P>
           <Spacer betweenParagraphs textOnly />
           <P>
-            By 10am, a flock of tourists start arriving and counting how many
-            rocks there are—which is totally off the point about this garden. I
-            leave the rock garden and take a stroll around the pond garden
-            outside, which I realize also avoids creating any focal point.
+            By 10<Abbr>am</Abbr>, a flock of tourists start arriving and
+            counting how many rocks there are—which is totally off the point
+            about this garden. I leave the rock garden and take a stroll around
+            the pond garden outside, which I realize also avoids creating any
+            focal point.
           </P>
           <Spacer betweenParagraphs textOnly />
           <P>
             With the 21st century's life overloaded with information, it is so
             easy to forget the simple principle of happiness that the Buddha
-            discovered in the 5th century BC. With its minimal, yet profound
-            composition of 15 rocks, Ryoan-ji Rock Garden has been there since
-            the early 16th century to reminds us of the teaching of the Buddha.
+            discovered in the 5th century <Abbr title="before Christ">BC</Abbr>.
+            With its minimal, yet profound composition of 15 rocks, Ryoan-ji
+            Rock Garden has been there since the early 16th century to reminds
+            us of the teaching of the Buddha.
           </P>
           <Spacer betweenSections aboveBox />
         </Section>{' '}
