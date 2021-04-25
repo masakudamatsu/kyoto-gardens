@@ -10,6 +10,10 @@ const Article = styled.article`
   max-width: ${maxPhotoWidth}px;
 `;
 
+Article.Header = styled.header`
+  position: relative;
+`;
+
 Article.propTypes = {};
 
 export default Article;

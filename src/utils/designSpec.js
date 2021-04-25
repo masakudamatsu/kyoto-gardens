@@ -108,6 +108,29 @@ h2.desktop = {
   xHeight: (xHeight('desktop') * 5) / 3,
 };
 
+export const h1 = {
+  mobile: {
+    fontFamily: "'Cormorant SC', 'Times New Roman', serif",
+    fontWeight: 700,
+    fontMetrics: {
+      unitsPerEm: 1000,
+      xHeight: 471,
+      capHeight: 630,
+    }, // measured by myself
+    xHeight: h2.mobile.xHeight * (5 / 3),
+    lineHeightRatio: {
+      xHeight: 2,
+      betweenLines: 1,
+    },
+  },
+  shrinkText: 4 / 9,
+};
+
+h1.desktop = {
+  ...h1.mobile,
+  xHeight: h2.desktop.xHeight * (5 / 3) * (5 / 3),
+};
+
 export const h3 = {
   mobile: {
     fontFamily: "'Cormorant', 'Times New Roman', serif",
@@ -148,6 +171,7 @@ export const lineLength = {
 };
 
 export const maxPhotoWidth = 941;
+export const maxPhotoHeight = 703;
 
 export const breakpoint = {
   floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,

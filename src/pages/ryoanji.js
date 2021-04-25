@@ -7,6 +7,7 @@ import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
 import FigureBordered from '../blocks/FigureBordered';
 import FigurePhoto from '../blocks/FigurePhoto';
+import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import Italic from '../elements/Italic';
@@ -24,53 +25,62 @@ function Ryoanji() {
         <meta name="description" content={description} />
       </Head>
       <Article>
-        <Carousel>
-          <Carousel.Spring
-            src="/images/ryoanji-banner-spring-small.jpg"
-            srcSet={`/images/ryoanji-banner-spring-large.jpg ${
-              maxPhotoWidth * 2
-            }w, 
+        <Article.Header>
+          <H1.Wrapper>
+            <H1 aria-label="Ryoan-ji Rock Garden">
+              <H1.Ryoanji>Ryoan-ji</H1.Ryoanji>
+              <H1.RockGarden>Rock Garden</H1.RockGarden>
+            </H1>
+          </H1.Wrapper>{' '}
+          <Carousel>
+            <Carousel.Spring
+              src="/images/ryoanji-banner-spring-small.jpg"
+              srcSet={`/images/ryoanji-banner-spring-large.jpg ${
+                maxPhotoWidth * 2
+              }w, 
                   /images/ryoanji-banner-spring-small.jpg ${maxPhotoWidth}w`}
-            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-            width="941"
-            height="703"
-            alt="Ryoan-ji Rock Garden in spring"
-          />
-          <Carousel.Summer
-            src="/images/ryoanji-banner-summer-small.jpg"
-            srcSet={`/images/ryoanji-banner-summer-large.jpg ${
-              maxPhotoWidth * 2
-            }w, 
+              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+              width="941"
+              height="703"
+              alt="Ryoan-ji Rock Garden in spring"
+            />
+            <Carousel.Summer
+              src="/images/ryoanji-banner-summer-small.jpg"
+              srcSet={`/images/ryoanji-banner-summer-large.jpg ${
+                maxPhotoWidth * 2
+              }w, 
                   /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
-            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-            width="941"
-            height="703"
-            alt="Ryoan-ji Rock Garden in summer"
-          />
-          <Carousel.Autumn
-            src="/images/ryoanji-banner-autumn-small.jpg"
-            srcSet={`/images/ryoanji-banner-autumn-large.jpg ${
-              maxPhotoWidth * 2
-            }w, 
+              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+              width="941"
+              height="703"
+              alt="Ryoan-ji Rock Garden in summer"
+            />
+            <Carousel.Autumn
+              src="/images/ryoanji-banner-autumn-small.jpg"
+              srcSet={`/images/ryoanji-banner-autumn-large.jpg ${
+                maxPhotoWidth * 2
+              }w, 
                   /images/ryoanji-banner-autumn-small.jpg ${maxPhotoWidth}w`}
-            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-            width="941"
-            height="705"
-            alt="Ryoan-ji Rock Garden in autumn"
-          />
-          <Carousel.Winter
-            src="/images/ryoanji-banner-winter-small.jpg"
-            srcSet={`/images/ryoanji-banner-winter-large.jpg ${
-              maxPhotoWidth * 2
-            }w, 
+              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+              width="941"
+              height="705"
+              alt="Ryoan-ji Rock Garden in autumn"
+            />
+            <Carousel.Winter
+              src="/images/ryoanji-banner-winter-small.jpg"
+              srcSet={`/images/ryoanji-banner-winter-large.jpg ${
+                maxPhotoWidth * 2
+              }w, 
                   /images/ryoanji-banner-winter-small.jpg ${maxPhotoWidth}w`}
-            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-            width="941"
-            height="705"
-            alt="Ryoan-ji Rock Garden in winter"
-          />
-        </Carousel>
+              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+              width="941"
+              height="705"
+              alt="Ryoan-ji Rock Garden in winter"
+            />
+          </Carousel>
+        </Article.Header>
         <Section>
+          <Spacer betweenParagraphs belowFigure />
           <H2 hidden>Introduction</H2>
           <P>
             Pick any travel guide for Kyoto. I'm sure you’ll find Ryoan-ji, a

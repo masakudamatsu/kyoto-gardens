@@ -72,26 +72,17 @@ describe('renders UI correctly', () => {
     const {container} = render(<Header.H1 {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Poppins',Verdana,sans-serif;
-        font-size: 1.3393rem;
-        font-weight: 300;
-        line-height: 1.274;
-      }
-
-      .c0::before,
-      .c0::after {
-        content: '';
-        display: block;
-        height: 0;
-        width: 0;
-      }
-
-      .c0::before {
-        margin-bottom: -0.304em;
-      }
-
-      .c0::after {
-        margin-top: -0.3325em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        font-size: 3.1331rem;
+        font-weight: 700;
+        line-height: 0.7065;
       }
 
       .c1 {
@@ -99,9 +90,25 @@ describe('renders UI correctly', () => {
         padding-top: 0.9375rem;
       }
 
-      @media only screen and (min-width:45.5rem) {
+      @media only screen and (min-width:38.9424rem) {
         .c0 {
-          font-size: 1.6071rem;
+          margin: 0 auto;
+          width: 34.5153rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          font-size: 6.4505rem;
+          margin: 0;
+          width: auto;
+        }
+      }
+
+      @media only screen and (min-width:48.6522rem) {
+        .c0 {
+          margin: 0 auto;
+          width: 42.6366rem;
         }
       }
 

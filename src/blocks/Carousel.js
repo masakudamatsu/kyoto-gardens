@@ -2,13 +2,20 @@ import styled, {keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Img from 'src/elements/Img';
+import {breakpoint, maxPhotoHeight, maxPhotoWidth} from 'src/utils/designSpec';
+import round from 'src/utils/round';
+
+const aspectRatio = maxPhotoWidth / maxPhotoHeight;
 
 const Carousel = styled.figure`
-  height: 703px;
+  height: ${round((1 / aspectRatio) * 100, 4)}vw;
   max-width: 941px;
   overflow: hidden; /* Control the image size by the box size of the figure */
   position: relative;
   width: 100%;
+  @media only screen and ${breakpoint.photo} {
+    height: ${maxPhotoHeight}px;
+  }
 `;
 
 const unit = (1 / 20) * 100;
