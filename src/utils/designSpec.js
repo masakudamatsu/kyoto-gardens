@@ -1,4 +1,5 @@
 import remify from './remify';
+
 function xHeight(screenWidth = 'mobile') {
   if (screenWidth === 'mobile') {
     return 8.5;
@@ -9,15 +10,41 @@ function xHeight(screenWidth = 'mobile') {
   }
 }
 
+const scale = 5 / 3;
+
+const cormorant = {
+  fontFamily: "'Cormorant', 'Times New Roman', serif",
+  fontWeight: 700,
+  fontMetrics: {
+    unitsPerEm: 1000,
+    xHeight: 402,
+    capHeight: 642,
+  }, // measured by myself
+};
+
+const cormorantGaramond = {
+  fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
+  fontWeight: 600,
+  fontMetrics: {
+    unitsPerEm: 1000,
+    xHeight: 398,
+    capHeight: 633,
+  },
+};
+
+const cormorantSC = {
+  fontFamily: "'Cormorant SC', 'Times New Roman', serif",
+  fontWeight: 700,
+  fontMetrics: {
+    unitsPerEm: 1000,
+    xHeight: 471,
+    capHeight: 630,
+  }, // measured by myself
+};
+
 export const paragraph = {
   mobile: {
-    fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
-    fontWeight: 600,
-    fontMetrics: {
-      unitsPerEm: 1000,
-      xHeight: 398,
-      capHeight: 633,
-    },
+    ...cormorantGaramond,
     xHeight: xHeight(),
     lineHeightRatio: {
       xHeight: 2,
@@ -35,15 +62,47 @@ paragraph.desktop = {
   },
 };
 
+export const h2 = {
+  mobile: {
+    ...cormorant,
+    xHeight: xHeight() * scale,
+    lineHeightRatio: {
+      xHeight: 5,
+      betweenLines: 8,
+    }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
+    get padding() {
+      return (
+        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
+      );
+    },
+  },
+};
+
+h2.desktop = {
+  ...h2.mobile,
+  xHeight: xHeight('desktop') * scale,
+};
+
+export const h1 = {
+  mobile: {
+    ...cormorantSC,
+    xHeight: h2.mobile.xHeight * scale,
+    lineHeightRatio: {
+      xHeight: 2,
+      betweenLines: 1,
+    },
+  },
+  shrinkText: 4 / 9,
+};
+
+h1.desktop = {
+  ...h1.mobile,
+  xHeight: h2.desktop.xHeight * scale * scale,
+};
+
 export const figCaption = {
   mobile: {
-    fontFamily: "'Cormorant SC', 'Times New Roman', serif",
-    fontWeight: 700,
-    fontMetrics: {
-      unitsPerEm: 1000,
-      xHeight: 471,
-      capHeight: 630,
-    }, // measured by myself
+    ...cormorantSC,
     xHeight: xHeight(),
     lineHeightRatio: {
       xHeight: 2,
@@ -67,7 +126,6 @@ export function whitespace(screenWidth = 'mobile') {
   }
   const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
   const betweenLines = xHeight(screenWidth) * ratio;
-  const scale = 5 / 3;
   const betweenParagraphs = betweenLines * scale;
   const betweenSections = betweenParagraphs * scale;
   const sideMargin = betweenLines;
@@ -81,65 +139,9 @@ export function whitespace(screenWidth = 'mobile') {
   };
 }
 
-export const h2 = {
-  mobile: {
-    fontFamily: "'Cormorant', 'Times New Roman', serif",
-    fontWeight: 700,
-    fontMetrics: {
-      unitsPerEm: 1000,
-      xHeight: 402,
-      capHeight: 642,
-    }, // measured by myself
-    xHeight: (xHeight() * 5) / 3,
-    lineHeightRatio: {
-      xHeight: 5,
-      betweenLines: 8,
-    }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
-    get padding() {
-      return (
-        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
-      );
-    },
-  },
-};
-
-h2.desktop = {
-  ...h2.mobile,
-  xHeight: (xHeight('desktop') * 5) / 3,
-};
-
-export const h1 = {
-  mobile: {
-    fontFamily: "'Cormorant SC', 'Times New Roman', serif",
-    fontWeight: 700,
-    fontMetrics: {
-      unitsPerEm: 1000,
-      xHeight: 471,
-      capHeight: 630,
-    }, // measured by myself
-    xHeight: h2.mobile.xHeight * (5 / 3),
-    lineHeightRatio: {
-      xHeight: 2,
-      betweenLines: 1,
-    },
-  },
-  shrinkText: 4 / 9,
-};
-
-h1.desktop = {
-  ...h1.mobile,
-  xHeight: h2.desktop.xHeight * (5 / 3) * (5 / 3),
-};
-
 export const h3 = {
   mobile: {
-    fontFamily: "'Cormorant', 'Times New Roman', serif",
-    fontWeight: 700,
-    fontMetrics: {
-      unitsPerEm: 1000,
-      xHeight: 402,
-      capHeight: 642,
-    }, // measured by myself
+    ...cormorant,
     capHeight: whitespace().betweenLines,
     lineHeightRatio: {
       xHeight: 5,
