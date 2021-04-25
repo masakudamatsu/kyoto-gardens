@@ -433,10 +433,10 @@ function Ryoanji() {
           <P>
             With the 21st century's life overloaded with information, it is so
             easy to forget the simple principle of happiness that the Buddha
-            discovered in the 5th century <Abbr title="before Christ">BC</Abbr>.
-            With its minimal, yet profound composition of 15 rocks, Ryoan-ji
-            Rock Garden has been there since the early 16th century to reminds
-            us of the teaching of the Buddha.
+            discovered in the 5th century <Abbr>BC</Abbr>. With its minimal, yet
+            profound composition of 15 rocks, Ryoan-ji Rock Garden has been
+            there since the early 16th century to reminds us of the teaching of
+            the Buddha.
           </P>
           <Spacer betweenSections aboveBox />
         </Section>{' '}
