@@ -103,6 +103,7 @@ h1.desktop = {
 export const figCaption = {
   mobile: {
     ...cormorantSC,
+    fontWeight: 600,
     xHeight: xHeight(),
     lineHeightRatio: {
       xHeight: 2,

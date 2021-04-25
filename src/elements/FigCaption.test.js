@@ -12,7 +12,7 @@ describe('renders UI correctly', () => {
       .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 1.1279rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-right: 5px;
         padding-top: 0.5rem;
         text-align: right;
