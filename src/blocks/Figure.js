@@ -1,25 +1,17 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Img from 'src/elements/Img';
-
 const Figure = styled.figure`
-  ${props =>
-    props.borderColor &&
-    `
-    border-color: ${props.borderColor};
-    border-style: solid;
-    border-width: 1px;
-  `}
-  max-width: 33em;
   overflow: hidden; /* Control the image size by the box size of the figure */
-  width: 100%;
 `;
 
-Figure.Img = Img;
+Figure.Img = styled.img`
+  display: block; /* Prevent images from aligning with other contents */
+  height: auto; /* Preserve the aspect ratio */
+  margin: auto; /* For vertically & horizontally centering the image #2 */
+  max-width: 100%; /* Control the image size by the box size of the figure */
+`;
 
-Figure.propTypes = {
-  borderColor: PropTypes.string,
-};
+Figure.propTypes = {};
 
 export default Figure;

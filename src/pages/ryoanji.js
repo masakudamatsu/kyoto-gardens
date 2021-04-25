@@ -5,6 +5,7 @@ import {title, description} from '../metadata/ryoanji';
 import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
+import Figure from '../blocks/Figure';
 import FigureBordered from '../blocks/FigureBordered';
 import FigurePhoto from '../blocks/FigurePhoto';
 import H1 from '../elements/H1';
@@ -171,8 +172,8 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Straight ahead</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto landscape>
-              <FigurePhoto.Img
+            <Figure>
+              <Figure.Img
                 src="/images/ryoanji-banner-summer-small.jpg"
                 srcSet={`/images/ryoanji-banner-summer-large.jpg ${
                   maxPhotoWidth * 2
@@ -183,7 +184,7 @@ function Ryoanji() {
                 height="703"
                 alt="Central view of Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </Figure>
             <Spacer betweenLines belowFigure />
             <P>
               There is no stone at the center of gaze when I look straight
@@ -195,8 +196,8 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Leftward</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto landscape>
-              <FigurePhoto.Img
+            <Figure>
+              <Figure.Img
                 src="/images/ryoanji-look-left-small.jpg"
                 srcSet={`/images/ryoanji-look-left-large.jpg ${
                   maxPhotoWidth * 2
@@ -207,7 +208,7 @@ function Ryoanji() {
                 height="703"
                 alt="Leftward view of Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </Figure>
             <Spacer betweenLines belowFigure />
             <P>
               Next, I turn my head to the left while sitting in the same
@@ -219,8 +220,8 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Rightward</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto landscape>
-              <FigurePhoto.Img
+            <Figure>
+              <Figure.Img
                 src="/images/ryoanji-look-right-small.jpg"
                 srcSet={`/images/ryoanji-look-right-large.jpg ${
                   maxPhotoWidth * 2
@@ -231,7 +232,7 @@ function Ryoanji() {
                 height="703"
                 alt="Rightward view of Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </Figure>
             <Spacer betweenLines belowFigure />
             <P>
               Finally, I turn my head to the right while still staying at the
