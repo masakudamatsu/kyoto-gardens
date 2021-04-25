@@ -34,21 +34,34 @@ describe('Props work as intended', () => {
 });
 
 test('renders UI correctly', () => {
-  const {container} = render(<H2 {...mockProps} />);
+  const {container} = render(
+    <H2.Wrapper>
+      <H2 {...mockProps} />
+    </H2.Wrapper>,
+  );
   expect(container).toMatchInlineSnapshot(`
-    .c0 {
-      background-color: hsla(193,50%,26%,0.9);
-      background-image: linear-gradient( 35deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,0.5) 55%,hsla(0,0%,100%,0.5) 65%,hsla(0,0%,100%,0) );
+    .c1 {
       color: #eee;
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 2.2025rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
       padding-bottom: 0.9765rem;
-      padding-left: 1.3281rem;
-      padding-right: 1.3281rem;
       padding-top: 1.039rem;
       text-indent: -0.125rem;
+    }
+
+    .c0 {
+      background-color: hsla(193,50%,26%,0.9);
+      background-image: linear-gradient( 35deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,0.5) 55%,hsla(0,0%,100%,0.5) 65%,hsla(0,0%,100%,0) );
+      padding-left: 1.3281rem;
+      padding-right: 1.3281rem;
+    }
+
+    @media only screen and (min-width:728px) {
+      .c1 {
+        font-size: 2.7208rem;
+      }
     }
 
     @media only screen and (min-width:31.6802rem) {
@@ -60,16 +73,19 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c0 {
-        font-size: 2.7208rem;
         padding-left: 3.0078rem;
         padding-right: 3.0078rem;
       }
     }
 
     <div>
-      <h2
+      <div
         class="c0"
-      />
+      >
+        <h2
+          class="c1"
+        />
+      </div>
     </div>
   `);
 });

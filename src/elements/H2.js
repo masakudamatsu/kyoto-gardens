@@ -14,32 +14,16 @@ const defaultSpace = {
 };
 
 const defaultStyle = css`
-  background-color: hsla(193, 50%, 26%, 0.9);
-  background-image: linear-gradient(
-    35deg,
-    hsla(0, 0%, 100%, 0) 0,
-    hsla(0, 0%, 100%, 0.5) 55%,
-    hsla(0, 0%, 100%, 0.5) 65%,
-    hsla(0, 0%, 100%, 0)
-  );
   color: #eee;
   font-family: ${h2.mobile.fontFamily};
   font-size: ${remify(getFontSize(h2.mobile))};
   font-weight: ${h2.mobile.fontWeight};
   line-height: ${getLineHeight(h2.mobile)};
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
-  padding-left: ${remify(whitespace().sideMargin)};
-  padding-right: ${remify(whitespace().sideMargin)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
-  @media only screen and ${breakpoint.sideMargin} {
-    padding-left: ${remify(whitespace().sideMarginLarge)};
-    padding-right: ${remify(whitespace().sideMarginLarge)};
-  }
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(h2.desktop))};
-    padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
-    padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
 
@@ -57,6 +41,27 @@ const visuallyHidden = css`
 
 const H2 = styled.h2`
   ${props => (props.hidden ? visuallyHidden : defaultStyle)}
+`;
+
+H2.Wrapper = styled.div`
+  background-color: hsla(193, 50%, 26%, 0.9);
+  background-image: linear-gradient(
+    35deg,
+    hsla(0, 0%, 100%, 0) 0,
+    hsla(0, 0%, 100%, 0.5) 55%,
+    hsla(0, 0%, 100%, 0.5) 65%,
+    hsla(0, 0%, 100%, 0)
+  );
+  padding-left: ${remify(whitespace().sideMargin)};
+  padding-right: ${remify(whitespace().sideMargin)};
+  @media only screen and ${breakpoint.sideMargin} {
+    padding-left: ${remify(whitespace().sideMarginLarge)};
+    padding-right: ${remify(whitespace().sideMarginLarge)};
+  }
+  @media only screen and ${breakpoint.fontSize} {
+    padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
+    padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
+  }
 `;
 
 H2.propTypes = {

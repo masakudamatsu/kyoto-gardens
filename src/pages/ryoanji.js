@@ -81,7 +81,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>
         <Section>
-          <H2>Get the Viewpoint Right</H2>
+          <H2.Wrapper>
+            <H2>Get the Viewpoint Right</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             The key to understand this cryptic garden is to see it from where
@@ -126,7 +128,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>
         <Section>
-          <H2>No Focal Point in the Garden</H2>
+          <H2.Wrapper>
+            <H2>No Focal Point in the Garden</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             Once I sit down and see the garden from the correct viewpoint, the
@@ -199,7 +203,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>
         <Section>
-          <H2>No Single Rock Dominates</H2>
+          <H2.Wrapper>
+            <H2>No Single Rock Dominates</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             The lack of emphasis, I then notice, penetrates into how fifteen
@@ -300,7 +306,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>
         <Section>
-          <H2>The Rock Garden’s Message</H2>
+          <H2.Wrapper>
+            <H2>The Rock Garden’s Message</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             Now it is clear that nothing is emphasized throughout this garden. I
@@ -340,7 +348,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>{' '}
         <Section>
-          <H2>Garden as a Reminder</H2>
+          <H2.Wrapper>
+            <H2>Garden as a Reminder</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             Ever since I managed to interpret the meaning of Ryoan-ji Rock
@@ -383,7 +393,9 @@ function Ryoanji() {
           <Spacer betweenSections aboveFigure />
         </Section>
         <Section as="aside">
-          <H2>References</H2>
+          <H2.Wrapper>
+            <H2>References</H2>
+          </H2.Wrapper>
           <Spacer betweenParagraphs belowFigure />
           <P>
             Slawson, David A. (1987).{' '}
