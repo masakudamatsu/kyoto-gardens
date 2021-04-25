@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import {maxPhotoWidth} from 'src/utils/designSpec';
 import {title, description} from '../metadata/ryoanji';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
@@ -25,30 +26,38 @@ function Ryoanji() {
         <Carousel>
           <Carousel.Spring
             src="/images/ryoanji-banner-spring-small.jpg"
-            srcSet="/images/ryoanji-banner-spring-large.jpg 1882w, 
-                  /images/ryoanji-banner-spring-small.jpg 941w"
-            sizes="(min-width: 941px) 941px, 100vw"
+            srcSet={`/images/ryoanji-banner-spring-large.jpg ${
+              maxPhotoWidth * 2
+            }w, 
+                  /images/ryoanji-banner-spring-small.jpg ${maxPhotoWidth}w`}
+            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
             alt="Ryoan-ji Rock Garden in spring"
           />
           <Carousel.Summer
             src="/images/ryoanji-banner-summer-small.jpg"
-            srcSet="/images/ryoanji-banner-summer-large.jpg 1882w, 
-                  /images/ryoanji-banner-summer-small.jpg 941w"
-            sizes="(min-width: 941px) 941px, 100vw"
+            srcSet={`/images/ryoanji-banner-summer-large.jpg ${
+              maxPhotoWidth * 2
+            }w, 
+                  /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
+            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
             alt="Ryoan-ji Rock Garden in summer"
           />
           <Carousel.Autumn
             src="/images/ryoanji-banner-autumn-small.jpg"
-            srcSet="/images/ryoanji-banner-autumn-large.jpg 1882w, 
-                  /images/ryoanji-banner-autumn-small.jpg 941w"
-            sizes="(min-width: 941px) 941px, 100vw"
+            srcSet={`/images/ryoanji-banner-autumn-large.jpg ${
+              maxPhotoWidth * 2
+            }w, 
+                  /images/ryoanji-banner-autumn-small.jpg ${maxPhotoWidth}w`}
+            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
             alt="Ryoan-ji Rock Garden in autumn"
           />
           <Carousel.Winter
             src="/images/ryoanji-banner-winter-small.jpg"
-            srcSet="/images/ryoanji-banner-winter-large.jpg 1882w, 
-                  /images/ryoanji-banner-winter-small.jpg 941w"
-            sizes="(min-width: 941px) 941px, 100vw"
+            srcSet={`/images/ryoanji-banner-winter-large.jpg ${
+              maxPhotoWidth * 2
+            }w, 
+                  /images/ryoanji-banner-winter-small.jpg ${maxPhotoWidth}w`}
+            sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
             alt="Ryoan-ji Rock Garden in winter"
           />
         </Carousel>
@@ -144,9 +153,11 @@ function Ryoanji() {
             <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-banner-summer-small.jpg"
-                srcSet="/images/ryoanji-banner-summer-large.jpg 1882w,
-                      /images/ryoanji-banner-summer-small.jpg 941w"
-                sizes="(min-width: 941px) 941px, 100vw"
+                srcSet={`/images/ryoanji-banner-summer-large.jpg ${
+                  maxPhotoWidth * 2
+                }w,
+                      /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
+                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
                 alt="Central view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -164,9 +175,11 @@ function Ryoanji() {
             <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-look-left-small.jpg"
-                srcSet="/images/ryoanji-look-left-large.jpg 1882w,
-                      /images/ryoanji-look-left-small.jpg 941w"
-                sizes="(min-width: 941px) 941px, 100vw"
+                srcSet={`/images/ryoanji-look-left-large.jpg ${
+                  maxPhotoWidth * 2
+                }w,
+                      /images/ryoanji-look-left-small.jpg ${maxPhotoWidth}w`}
+                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
                 alt="Leftward view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -184,9 +197,11 @@ function Ryoanji() {
             <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-look-right-small.jpg"
-                srcSet="/images/ryoanji-look-right-large.jpg 1882w,
-                      /images/ryoanji-look-right-small.jpg 941w"
-                sizes="(min-width: 941px) 941px, 100vw"
+                srcSet={`/images/ryoanji-look-right-large.jpg ${
+                  maxPhotoWidth * 2
+                }w,
+                      /images/ryoanji-look-right-small.jpg ${maxPhotoWidth}w`}
+                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
                 alt="Rightward view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>

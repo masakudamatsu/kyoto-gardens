@@ -147,6 +147,8 @@ export const lineLength = {
   }, // in em: 682.188px for font-size of 26.3824px
 };
 
+export const maxPhotoWidth = 941;
+
 export const breakpoint = {
   floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
   floorPlanWidth: `(min-width: ${remify(
