@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Img from 'src/elements/Img';
-import {breakpoint, figureBordered, whitespace} from 'src/utils/designSpec';
+import {
+  breakpoint,
+  figureBordered,
+  lineLength,
+  whitespace,
+} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 
 const FigureBordered = styled.figure`
@@ -15,8 +20,17 @@ const FigureBordered = styled.figure`
     border-right: 1px solid hsla(193, 50%, 26%, 0.2);
     margin: 0 ${remify(whitespace().sideMarginLarge)};
   }
+  @media only screen and ${breakpoint.floorPlanWidth} {
+    margin: 0 auto;
+    width: ${remify(lineLength.max.mobile)};
+  }
   @media only screen and ${breakpoint.fontSize} {
     margin: 0 ${remify(whitespace('desktop').sideMarginLarge)};
+    width: auto;
+  }
+  @media only screen and ${breakpoint.floorPlanWidthDesktop} {
+    margin: 0 auto;
+    width: ${remify(lineLength.max.desktop)};
   }
 `;
 

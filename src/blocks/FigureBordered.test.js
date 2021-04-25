@@ -24,9 +24,24 @@ test('renders UI correctly', () => {
       }
     }
 
+    @media only screen and (min-width:38.9424rem) {
+      .c0 {
+        margin: 0 auto;
+        width: 34.5153rem;
+      }
+    }
+
     @media only screen and (min-width:728px) {
       .c0 {
         margin: 0 3.0078rem;
+        width: auto;
+      }
+    }
+
+    @media only screen and (min-width:48.6522rem) {
+      .c0 {
+        margin: 0 auto;
+        width: 42.6366rem;
       }
     }
 

@@ -148,8 +148,14 @@ export const lineLength = {
 };
 
 export const breakpoint = {
-  fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
   floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
+  floorPlanWidth: `(min-width: ${remify(
+    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
+  )})`,
+  floorPlanWidthDesktop: `(min-width: ${remify(
+    lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
+  )})`,
+  fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
   sideMargin: `(min-width: ${remify(
     lineLength.min + whitespace().sideMarginLarge * 2, // remify to be responsive to user's base font size
   )})`,

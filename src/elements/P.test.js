@@ -13,6 +13,8 @@ test('renders UI correctly:', () => {
       font-size: 1.3348rem;
       font-weight: 600;
       line-height: 1.393;
+      margin: 0 auto;
+      max-width: 38.9424rem;
       padding: 0 1.3281rem;
     }
 
@@ -26,6 +28,7 @@ test('renders UI correctly:', () => {
       .c0 {
         font-size: 1.6489rem;
         line-height: 1.4925;
+        max-width: 48.6522rem;
         padding: 0 3.0078rem;
       }
     }

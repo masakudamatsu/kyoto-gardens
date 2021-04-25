@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, h3, whitespace} from 'src/utils/designSpec';
+import {breakpoint, h3, lineLength, whitespace} from 'src/utils/designSpec';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
@@ -17,6 +17,10 @@ const H3 = styled.h3`
   font-size: ${remify(getFontSize(h3.mobile))};
   font-weight: ${h3.mobile.fontWeight};
   line-height: ${getLineHeight(h3.mobile)};
+  margin: 0 auto;
+  max-width: ${remify(
+    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
+  )};
   padding: 0 ${remify(whitespace().sideMargin)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.sideMargin} {
@@ -24,6 +28,9 @@ const H3 = styled.h3`
   }
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(h3.desktop))};
+    max-width: ${remify(
+      lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
+    )};
     padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;

@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, paragraph, whitespace} from 'src/utils/designSpec';
+import {
+  breakpoint,
+  lineLength,
+  paragraph,
+  whitespace,
+} from 'src/utils/designSpec';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
@@ -10,6 +15,10 @@ const P = styled.p`
   font-size: ${remify(getFontSize(paragraph.mobile))};
   font-weight: ${paragraph.mobile.fontWeight};
   line-height: ${getLineHeight(paragraph.mobile)};
+  margin: 0 auto;
+  max-width: ${remify(
+    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
+  )};
   padding: 0 ${remify(whitespace().sideMargin)};
   @media only screen and ${breakpoint.sideMargin} {
     padding: 0 ${remify(whitespace().sideMarginLarge)};
@@ -17,6 +26,9 @@ const P = styled.p`
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(paragraph.desktop))};
     line-height: ${getLineHeight(paragraph.desktop)};
+    max-width: ${remify(
+      lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
+    )};
     padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;

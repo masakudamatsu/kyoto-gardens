@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, h2, whitespace} from 'src/utils/designSpec';
+import {breakpoint, h2, lineLength, whitespace} from 'src/utils/designSpec';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
@@ -22,8 +22,18 @@ const defaultStyle = css`
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
+  @media only screen and ${breakpoint.floorPlanWidth} {
+    margin: 0 auto;
+    width: ${remify(lineLength.max.mobile)};
+  }
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(h2.desktop))};
+    margin: 0;
+    width: auto;
+  }
+  @media only screen and ${breakpoint.floorPlanWidthDesktop} {
+    margin: 0 auto;
+    width: ${remify(lineLength.max.desktop)};
   }
 `;
 

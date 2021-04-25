@@ -141,7 +141,7 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Straight ahead</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
+            <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-banner-summer-small.jpg"
                 srcSet="/images/ryoanji-banner-summer-large.jpg 1882w,
@@ -161,7 +161,7 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Leftward</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
+            <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-look-left-small.jpg"
                 srcSet="/images/ryoanji-look-left-large.jpg 1882w,
@@ -181,7 +181,7 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Rightward</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
+            <FigurePhoto landscape>
               <FigurePhoto.Img
                 src="/images/ryoanji-look-right-small.jpg"
                 srcSet="/images/ryoanji-look-right-large.jpg 1882w,

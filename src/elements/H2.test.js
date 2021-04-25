@@ -58,9 +58,25 @@ test('renders UI correctly', () => {
       padding-right: 1.3281rem;
     }
 
+    @media only screen and (min-width:38.9424rem) {
+      .c1 {
+        margin: 0 auto;
+        width: 34.5153rem;
+      }
+    }
+
     @media only screen and (min-width:728px) {
       .c1 {
         font-size: 2.7208rem;
+        margin: 0;
+        width: auto;
+      }
+    }
+
+    @media only screen and (min-width:48.6522rem) {
+      .c1 {
+        margin: 0 auto;
+        width: 42.6366rem;
       }
     }
 
