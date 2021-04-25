@@ -6,8 +6,7 @@ import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
-import FigureBordered from '../blocks/FigureBordered';
-import FigurePhoto from '../blocks/FigurePhoto';
+import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
@@ -121,8 +120,8 @@ function Ryoanji() {
             below:
           </P>
           <Spacer betweenLines aboveFigure />
-          <FigureBordered>
-            <FigureBordered.Img
+          <FigureWithMargin bordered>
+            <FigureWithMargin.Img
               src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
               width="497"
               height="313"
@@ -141,7 +140,7 @@ function Ryoanji() {
                 , p. 96.
               </FigCaption.Footer>
             </FigCaption>
-          </FigureBordered>
+          </FigureWithMargin>
           <Spacer betweenParagraphs belowFigure />
           <P>
             My third visit to the garden was different from the previous ones in
@@ -259,14 +258,14 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Middle-left</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
-              <FigurePhoto.Img
+            <FigureWithMargin>
+              <FigureWithMargin.Img
                 src="/images/ryoanji-middle-left.jpg"
                 width="892"
                 height="442"
                 alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </FigureWithMargin>
             <Spacer betweenLines belowFigure />
             <P>
               The middle-left cluster consists of two rocks. There is no center.
@@ -278,14 +277,14 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Middle</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
-              <FigurePhoto.Img
+            <FigureWithMargin>
+              <FigureWithMargin.Img
                 src="/images/ryoanji-middle-right.jpg"
                 width="747"
                 height="381"
                 alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </FigureWithMargin>
             <Spacer betweenLines belowFigure />
             <P>
               The middle cluster consists of three rocks. One on the left
@@ -297,14 +296,14 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Middle-right</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
-              <FigurePhoto.Img
+            <FigureWithMargin>
+              <FigureWithMargin.Img
                 src="/images/ryoanji-second-right.jpg"
                 width="706"
                 height="388"
                 alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </FigureWithMargin>
             <Spacer betweenLines belowFigure />
             <P>
               The middle-right cluster consists of two rocks, each in a peculiar
@@ -315,14 +314,14 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Leftmost</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
-              <FigurePhoto.Img
+            <FigureWithMargin>
+              <FigureWithMargin.Img
                 src="/images/ryoanji-leftmost.jpg"
                 width="1490"
                 height="695"
                 alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </FigureWithMargin>
             <Spacer betweenLines belowFigure />
             <P>
               The group of rocks furthest to the the left is the most
@@ -338,14 +337,14 @@ function Ryoanji() {
             <Spacer betweenParagraphs aboveSubsectionTitle />
             <H3>Rightmost</H3>
             <Spacer betweenLines belowSubsectionTitle />
-            <FigurePhoto>
-              <FigurePhoto.Img
+            <FigureWithMargin>
+              <FigureWithMargin.Img
                 src="/images/ryoanji-rightmost.jpg"
                 width="1496"
                 height="713"
                 alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
               />
-            </FigurePhoto>
+            </FigureWithMargin>
             <Spacer betweenLines belowFigure />
             <P>
               The group of rocks furthest to the right is made of three rocks.
