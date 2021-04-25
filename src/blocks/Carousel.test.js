@@ -10,22 +10,25 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        overflow: hidden;
+      }
+
+      .c1 {
         height: 74.7078vw;
         max-width: 941px;
-        overflow: hidden;
         position: relative;
         width: 100%;
       }
 
       @media only screen and (min-width:941px) {
-        .c0 {
+        .c1 {
           height: 703px;
         }
       }
 
       <div>
         <figure
-          class="c0"
+          class="c0 c1"
         />
       </div>
     `);

@@ -1,16 +1,15 @@
 import styled, {keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Img from 'src/elements/Img';
+import Figure from 'src/blocks/Figure';
 import {breakpoint, maxPhotoHeight, maxPhotoWidth} from 'src/utils/designSpec';
 import round from 'src/utils/round';
 
 const aspectRatio = maxPhotoWidth / maxPhotoHeight;
 
-const Carousel = styled.figure`
+const Carousel = styled(Figure)`
   height: ${round((1 / aspectRatio) * 100, 4)}vw;
   max-width: 941px;
-  overflow: hidden; /* Control the image size by the box size of the figure */
   position: relative;
   width: 100%;
   @media only screen and ${breakpoint.photo} {
@@ -110,19 +109,19 @@ const winter = keyframes`
   }
 `;
 
-Carousel.Spring = styled(Img)`
+Carousel.Spring = styled(Figure.Img)`
   animation: ${spring} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Summer = styled(Img)`
+Carousel.Summer = styled(Figure.Img)`
   animation: ${summer} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Autumn = styled(Img)`
+Carousel.Autumn = styled(Figure.Img)`
   animation: ${autumn} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Winter = styled(Img)`
+Carousel.Winter = styled(Figure.Img)`
   animation: ${winter} 16s linear infinite;
   position: absolute;
 `;
