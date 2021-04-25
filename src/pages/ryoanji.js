@@ -32,6 +32,8 @@ function Ryoanji() {
             }w, 
                   /images/ryoanji-banner-spring-small.jpg ${maxPhotoWidth}w`}
             sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+            width="941"
+            height="703"
             alt="Ryoan-ji Rock Garden in spring"
           />
           <Carousel.Summer
@@ -41,6 +43,8 @@ function Ryoanji() {
             }w, 
                   /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
             sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+            width="941"
+            height="703"
             alt="Ryoan-ji Rock Garden in summer"
           />
           <Carousel.Autumn
@@ -50,6 +54,8 @@ function Ryoanji() {
             }w, 
                   /images/ryoanji-banner-autumn-small.jpg ${maxPhotoWidth}w`}
             sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+            width="941"
+            height="705"
             alt="Ryoan-ji Rock Garden in autumn"
           />
           <Carousel.Winter
@@ -59,6 +65,8 @@ function Ryoanji() {
             }w, 
                   /images/ryoanji-banner-winter-small.jpg ${maxPhotoWidth}w`}
             sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+            width="941"
+            height="705"
             alt="Ryoan-ji Rock Garden in winter"
           />
         </Carousel>
@@ -105,6 +113,8 @@ function Ryoanji() {
           <FigureBordered>
             <FigureBordered.Img
               src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
+              width="497"
+              height="313"
               alt=""
             />
             <FigCaption>
@@ -159,6 +169,8 @@ function Ryoanji() {
                 }w,
                       /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
                 sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+                width="941"
+                height="703"
                 alt="Central view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -181,6 +193,8 @@ function Ryoanji() {
                 }w,
                       /images/ryoanji-look-left-small.jpg ${maxPhotoWidth}w`}
                 sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+                width="941"
+                height="703"
                 alt="Leftward view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -203,6 +217,8 @@ function Ryoanji() {
                 }w,
                       /images/ryoanji-look-right-small.jpg ${maxPhotoWidth}w`}
                 sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
+                width="941"
+                height="703"
                 alt="Rightward view of Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -235,6 +251,8 @@ function Ryoanji() {
             <FigurePhoto>
               <FigurePhoto.Img
                 src="/images/ryoanji-middle-left.jpg"
+                width="892"
+                height="442"
                 alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -252,6 +270,8 @@ function Ryoanji() {
             <FigurePhoto>
               <FigurePhoto.Img
                 src="/images/ryoanji-middle-right.jpg"
+                width="747"
+                height="381"
                 alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -269,6 +289,8 @@ function Ryoanji() {
             <FigurePhoto>
               <FigurePhoto.Img
                 src="/images/ryoanji-second-right.jpg"
+                width="706"
+                height="388"
                 alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -285,6 +307,8 @@ function Ryoanji() {
             <FigurePhoto>
               <FigurePhoto.Img
                 src="/images/ryoanji-leftmost.jpg"
+                width="1490"
+                height="695"
                 alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
@@ -306,6 +330,8 @@ function Ryoanji() {
             <FigurePhoto>
               <FigurePhoto.Img
                 src="/images/ryoanji-rightmost.jpg"
+                width="1496"
+                height="713"
                 alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigurePhoto>
