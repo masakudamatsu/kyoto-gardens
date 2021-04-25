@@ -4,8 +4,8 @@ import {render, screen} from '@testing-library/react';
 import Spacer from './Spacer';
 
 describe('Props work as intended', () => {
-  test('betweenLines with aboveFigure', () => {
-    const {container} = render(<Spacer betweenLines aboveFigure />);
+  test('betweenLines with aboveBox', () => {
+    const {container} = render(<Spacer betweenLines aboveBox />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 0.8281rem;
@@ -25,8 +25,8 @@ describe('Props work as intended', () => {
       </div>
     `);
   });
-  test('betweenLines with belowFigure', () => {
-    const {container} = render(<Spacer betweenLines belowFigure />);
+  test('betweenLines with belowBox', () => {
+    const {container} = render(<Spacer betweenLines belowBox />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 0.8918rem;
@@ -88,8 +88,8 @@ describe('Props work as intended', () => {
       </div>
     `);
   });
-  test('betweenParagraphs with belowFigure', () => {
-    const {container} = render(<Spacer betweenParagraphs belowFigure />);
+  test('betweenParagraphs with belowBox', () => {
+    const {container} = render(<Spacer betweenParagraphs belowBox />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 1.7772rem;
@@ -132,8 +132,8 @@ describe('Props work as intended', () => {
       </div>
     `);
   });
-  test('betweenSections with aboveFigure', () => {
-    const {container} = render(<Spacer betweenSections aboveFigure />);
+  test('betweenSections with aboveBox', () => {
+    const {container} = render(<Spacer betweenSections aboveBox />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 3.1892rem;

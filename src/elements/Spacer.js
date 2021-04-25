@@ -25,11 +25,11 @@ function getHeight(props, screenWidth = 'mobile') {
       getCapHeightXHeightDiff(paragraph[screenWidth]);
     return remify(targetHeight - spaceByDefault);
   }
-  if (props.aboveFigure) {
+  if (props.aboveBox) {
     const spaceByDefault = 8; // given x-height of 8px and line-height of 28px
     return remify(targetHeight - spaceByDefault);
   }
-  if (props.belowFigure) {
+  if (props.belowBox) {
     const spaceByDefault = 12 - getCapHeightXHeightDiff(paragraph[screenWidth]);
     return remify(targetHeight - spaceByDefault);
   }
@@ -56,7 +56,7 @@ const Spacer = styled.div`
 `;
 
 Spacer.propTypes = {
-  aboveFigure: PropTypes.bool,
+  aboveBox: PropTypes.bool,
   betweenLines: PropTypes.bool,
   betweenParagraphs: PropTypes.bool,
   betweenSections: PropTypes.bool,

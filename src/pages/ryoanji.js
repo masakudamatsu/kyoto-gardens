@@ -80,7 +80,7 @@ function Ryoanji() {
           </Carousel>
         </Article.Header>
         <Section>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <H2 hidden>Introduction</H2>
           <P>
             Pick any travel guide for Kyoto. I'm sure you’ll find Ryoan-ji, a
@@ -106,20 +106,20 @@ function Ryoanji() {
             sense to me. It taught me how to live a happy life, with the layout
             of the fifteen rocks as the “textbook”.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
             <H2>Get the Viewpoint Right</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             The key to understand this cryptic garden is to see it from where
             you're supposed to: halfway between the left and right edges of this
             rectangular garden, indicated with the gray arrow in the floor plan
             below:
           </P>
-          <Spacer betweenLines aboveFigure />
+          <Spacer betweenLines aboveBox />
           <FigureWithMargin bordered>
             <FigureWithMargin.Img
               src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
@@ -141,7 +141,7 @@ function Ryoanji() {
               </FigCaption.Footer>
             </FigCaption>
           </FigureWithMargin>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             My third visit to the garden was different from the previous ones in
             that I had this piece of knowledge, learned from a book on Japanese
@@ -155,13 +155,13 @@ function Ryoanji() {
             , pp. 58-59). The book says that the whole garden was constructed to
             be seen from this viewpoint.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
             <H2>No Focal Point in the Garden</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             Once I sit down and see the garden from the correct viewpoint, the
             layout of fifteen rocks starts taking on its meaning:{' '}
@@ -184,7 +184,7 @@ function Ryoanji() {
                 alt="Central view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               There is no stone at the center of gaze when I look straight
               ahead. The landscape composition is split between two groups of
@@ -208,7 +208,7 @@ function Ryoanji() {
                 alt="Leftward view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               Next, I turn my head to the left while sitting in the same
               viewpoint. There is again nothing in the center of my vision. The
@@ -232,7 +232,7 @@ function Ryoanji() {
                 alt="Rightward view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               Finally, I turn my head to the right while still staying at the
               same viewpoint. There are three groups of rocks, but none of them
@@ -242,13 +242,13 @@ function Ryoanji() {
               view, either.
             </P>
           </section>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
             <H2>No Single Rock Dominates</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             The lack of emphasis, I then notice, penetrates into how fifteen
             rocks are arranged into five clusters, each surrounded by a patch of
@@ -266,7 +266,7 @@ function Ryoanji() {
                 alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               The middle-left cluster consists of two rocks. There is no center.
               The right elongated one dominates, but it is located to the right
@@ -285,7 +285,7 @@ function Ryoanji() {
                 alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               The middle cluster consists of three rocks. One on the left
               dominates, but it is again not located at the center but to the
@@ -304,7 +304,7 @@ function Ryoanji() {
                 alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               The middle-right cluster consists of two rocks, each in a peculiar
               shape. But neither is emphasized more than the other.
@@ -322,7 +322,7 @@ function Ryoanji() {
                 alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               The group of rocks furthest to the the left is the most
               magnificent composition in this garden if seen from the front of
@@ -345,7 +345,7 @@ function Ryoanji() {
                 alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowFigure />
+            <Spacer betweenLines belowBox />
             <P>
               The group of rocks furthest to the right is made of three rocks.
               One large lying stone is flanked by two flat stones. This
@@ -355,13 +355,13 @@ function Ryoanji() {
               behind the large rock.
             </P>
           </section>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
             <H2>The Rock Garden’s Message</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             Now it is clear that nothing is emphasized throughout this garden. I
             start wondering why. The designer of this garden, who remains
@@ -397,13 +397,13 @@ function Ryoanji() {
             be at the center of your mind, just like the arrangement of these
             fifteen rocks within the walled rectangular plot.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>{' '}
         <Section>
           <H2.Wrapper>
             <H2>Garden as a Reminder</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             Ever since I managed to interpret the meaning of Ryoan-ji Rock
             Garden as described above, I've been paying a visit to this zen
@@ -435,20 +435,20 @@ function Ryoanji() {
             composition of 15 rocks, Ryoan-ji Rock Garden has been there since
             the early 16th century to reminds us of the teaching of the Buddha.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>{' '}
         <Section as="footer">
           <P>
             Written, photographed, designed, and coded by Masa Kudamatsu in
             2021.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
         <Section as="aside">
           <H2.Wrapper>
             <H2>References</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowFigure />
+          <Spacer betweenParagraphs belowBox />
           <P>
             Slawson, David A. (1987).{' '}
             <Italic>
@@ -474,7 +474,7 @@ function Ryoanji() {
             </Italic>{' '}
             [The Way of Appreciating ‘Japanese Gardens’]. Tokyo: Shogakukan.
           </P>
-          <Spacer betweenSections aboveFigure />
+          <Spacer betweenSections aboveBox />
         </Section>
       </Article>
     </>
