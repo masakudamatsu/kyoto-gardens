@@ -2,12 +2,15 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 
 import P from './P';
+import {whitespace} from 'src/utils/designSpec';
+import remify from 'src/utils/remify';
 
 const mockProps = {};
 
-test('renders UI correctly:', () => {
-  const {container} = render(<P {...mockProps} />);
-  expect(container).toMatchInlineSnapshot(`
+describe('renders UI correctly:', () => {
+  test('without props', () => {
+    const {container} = render(<P {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
     .c0 {
       font-family: 'Cormorant Garamond','Times New Roman',serif;
       font-size: 1.3348rem;
@@ -16,6 +19,7 @@ test('renders UI correctly:', () => {
       margin: 0 auto;
       max-width: 38.9424rem;
       padding: 0 1.3281rem;
+      text-align: left;
     }
 
     @media only screen and (min-width:31.6802rem) {
@@ -39,4 +43,12 @@ test('renders UI correctly:', () => {
       />
     </div>
   `);
+  });
+  test('with message prop', () => {
+    render(<P message data-testid="paragraph" />);
+    expect(screen.getByTestId('paragraph')).toHaveStyle(`
+      padding: 0px ${remify(whitespace().sideMargin * 2)};
+      text-align: center;
+    `);
+  });
 });

@@ -382,11 +382,10 @@ function Ryoanji() {
             be interpreted as the following message:
           </P>
           <Spacer betweenParagraphs textOnly />
-          <P>
+          <P message>
             <Italic>
-              Don’t fixate on{' '}
-              <span class="message__line2">one particular thing</span>{' '}
-              <span class="message__line3">in our mind.</span>
+              Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
+              <Span nowrap>in our mind.</Span>
             </Italic>
           </P>
           <Spacer betweenParagraphs textOnly />

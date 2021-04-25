@@ -19,7 +19,12 @@ const P = styled.p`
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
   )};
-  padding: 0 ${remify(whitespace().sideMargin)};
+  padding: 0
+    ${props =>
+      props.message
+        ? remify(whitespace().sideMargin * 2)
+        : remify(whitespace().sideMargin)};
+  text-align: ${props => (props.message ? 'center' : 'left')};
   @media only screen and ${breakpoint.sideMargin} {
     padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
