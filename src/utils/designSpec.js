@@ -161,4 +161,5 @@ export const breakpoint = {
   sideMargin: `(min-width: ${remify(
     lineLength.min + whitespace().sideMarginLarge * 2, // remify to be responsive to user's base font size
   )})`,
+  photo: `(min-width: ${maxPhotoWidth}px)`,
 };

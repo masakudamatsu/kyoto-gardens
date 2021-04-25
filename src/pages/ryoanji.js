@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import {title, description} from '../metadata/ryoanji';
+import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
 import FigCaption from '../elements/FigCaption';
 import FigureBordered from '../blocks/FigureBordered';
@@ -22,7 +23,7 @@ function Ryoanji() {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
-      <article>
+      <Article>
         <Carousel>
           <Carousel.Spring
             src="/images/ryoanji-banner-spring-small.jpg"
@@ -439,7 +440,7 @@ function Ryoanji() {
           </P>
           <Spacer betweenSections aboveFigure />
         </Section>
-      </article>
+      </Article>
     </>
   );
 }
