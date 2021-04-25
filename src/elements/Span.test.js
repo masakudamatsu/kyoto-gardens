@@ -20,4 +20,18 @@ describe('Props work as intended', () => {
       </div>
     `);
   });
+  test('smallcaps', () => {
+    const {container} = render(<Span smallcaps />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        font-family: 'Cormorant SC',Times New Roman,serif;
+      }
+
+      <div>
+        <span
+          class="c0"
+        />
+      </div>
+    `);
+  });
 });

@@ -84,8 +84,9 @@ function Ryoanji() {
           <Spacer betweenParagraphs belowBox />
           <H2 hidden>Introduction</H2>
           <P>
-            Pick any travel guide for Kyoto. I'm sure you’ll find Ryoan-ji, a
-            Zen Buddhist temple famous for its Rock Garden (pictured above).
+            <Span smallcaps>Pick any travel</Span> guide for Kyoto. I'm sure
+            you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
+            Garden (pictured above).
           </P>
           <Spacer betweenParagraphs textOnly />
           <P>
