@@ -23,3 +23,5 @@ resources/
 # Uncomment once cloned
 ## template scripts
 #template*.js
+
+sketch/
