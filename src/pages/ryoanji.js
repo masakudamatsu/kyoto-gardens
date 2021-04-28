@@ -82,9 +82,8 @@ export default function Ryoanji() {
           </Carousel>
         </Article.Header>
         <Section>
-          <Spacer betweenParagraphs belowBox />
           <H2 hidden>Introduction</H2>
-          <P>
+          <P belowBoxParagraph>
             <Span smallcaps>Pick any</Span> travel guide for Kyoto. I'm sure
             you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
             Garden (pictured above).
@@ -110,8 +109,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>Get the Viewpoint Right</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             The key to understand this cryptic garden is to see it from where
             you're supposed to: halfway between the left and right edges of this
             rectangular garden, indicated with the gray arrow in the floor plan
@@ -139,8 +137,7 @@ export default function Ryoanji() {
               </FigCaption.Footer>
             </FigCaption>
           </FigureWithMargin>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             My third visit to the garden was different from the previous ones in
             that I had this piece of knowledge, learned from a book on Japanese
             gardens (
@@ -158,8 +155,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>No Focal Point in the Garden</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             Once I sit down and see the garden from the correct viewpoint, the
             layout of fifteen rocks starts taking on its meaning:{' '}
             <Italic>there is nothing emphasized in this garden</Italic>.
@@ -244,8 +240,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>No Single Rock Dominates</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             The lack of emphasis, I then notice, penetrates into how fifteen
             rocks are arranged into five clusters, each surrounded by a patch of
             moss. Let’s start looking at the middle three clusters.
@@ -356,8 +351,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>The Rock Garden’s Message</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             Now it is clear that nothing is emphasized throughout this garden. I
             start wondering why. The designer of this garden, who remains
             anonymous despite many attempts of historians to identify, must have
@@ -393,8 +387,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>Garden as a Reminder</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             Ever since I managed to interpret the meaning of Ryoan-ji Rock
             Garden as described above, I've been paying a visit to this zen
             garden whenever I get too much preoccupied with my unfulfilled
@@ -435,8 +428,7 @@ export default function Ryoanji() {
           <H2.Wrapper>
             <H2>References</H2>
           </H2.Wrapper>
-          <Spacer betweenParagraphs belowBox />
-          <P>
+          <P belowBoxParagraph>
             Slawson, David A. (1987).{' '}
             <Italic>
               <Link
