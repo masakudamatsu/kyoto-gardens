@@ -10,10 +10,9 @@ import {
 } from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 
+// prettier-ignore
 const FigureWithMargin = styled(Figure)`
-  ${props =>
-    props.bordered
-      ? `
+  ${props => props.bordered? `
     border-bottom: 1px solid hsla(193, 50%, 26%, 0.2);
     border-top: 1px solid hsla(193, 50%, 26%, 0.2);
     padding: ${figureBordered.padding}px;
@@ -22,26 +21,24 @@ const FigureWithMargin = styled(Figure)`
       border-right: 1px solid hsla(193, 50%, 26%, 0.2);
       margin: 0 ${remify(whitespace().sideMarginLarge)};
     }
-    `
-      : ` 
+  ` : ` 
     @media only screen and ${breakpoint.sideMargin} {
       padding: 0 ${remify(whitespace().sideMarginLarge)};
-    }`}
+    }
+  `}
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
-    width: ${props =>
-      props.bordered
-        ? remify(lineLength.max.mobile)
-        : remify(lineLength.max.mobile + whitespace().sideMarginLarge * 2)};
+    width: ${
+      props => props.bordered
+      ? remify(lineLength.max.mobile)
+      : remify(lineLength.max.mobile + whitespace().sideMarginLarge * 2)
+    };
   }
   @media only screen and ${breakpoint.fontSize} {
-    ${props =>
-      props.bordered
-        ? `
+    ${props => props.bordered? `
       margin: 0 ${remify(whitespace('desktop').sideMarginLarge)};
       width: auto;
-    `
-        : `
+    ` : `
       margin: 0;
       padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
     `}
@@ -49,12 +46,13 @@ const FigureWithMargin = styled(Figure)`
   }
   @media only screen and ${breakpoint.floorPlanWidthDesktop} {
     margin: 0 auto;
-    width: ${props =>
-      props.bordered
-        ? remify(lineLength.max.desktop)
-        : remify(
-            lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
-          )};
+    width: ${
+      props => props.bordered
+      ? remify(lineLength.max.desktop)
+      : remify(
+        lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
+      )
+    };
   }
 `;
 
