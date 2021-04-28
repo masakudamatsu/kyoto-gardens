@@ -46,6 +46,10 @@ const P = styled.p`
   }
 `;
 
-P.propTypes = {};
+P.propTypes = {
+  belowBoxParagraph: PropTypes.bool,
+  belowTextParagraph: PropTypes.bool,
+  message: PropTypes.bool,
+};
 
 export default P;
