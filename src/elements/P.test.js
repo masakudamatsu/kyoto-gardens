@@ -2,14 +2,15 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 
 import P from './P';
-import {whitespace} from 'src/utils/designSpec';
+import {breakpoint, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
 
 const mockProps = {};
 
 describe('renders UI correctly:', () => {
-  test('without props', () => {
-    const {container} = render(<P {...mockProps} />);
+  test('with belowTextParagraph prop', () => {
+    const {container} = render(<P belowTextParagraph {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         font-family: 'Cormorant Garamond','Times New Roman',serif;
@@ -20,6 +21,7 @@ describe('renders UI correctly:', () => {
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
         padding-right: 1.3281rem;
+        padding-top: 1.1991rem;
         text-align: left;
       }
 
@@ -37,6 +39,7 @@ describe('renders UI correctly:', () => {
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
+          padding-top: 1.5906rem;
         }
       }
 
@@ -55,4 +58,20 @@ describe('renders UI correctly:', () => {
       text-align: center;
     `);
   });
+  // This test doesn't work...
+  // test.skip('with belowTextParagraph prop', () => {
+  //   render(<P message data-testid="paragraph" />);
+  //   const paragraph = screen.getByTestId('paragraph');
+  //   expect(paragraph).toHaveStyleRule(
+  //     `padding-top`,
+  //     getPaddingTop({message: true}, 'mobile'),
+  //   );
+  //   expect(paragraph).toHaveStyleRule(
+  //     `padding-top`,
+  //     getPaddingTop({message: true}, 'desktop'),
+  //     {
+  //       media: breakpoint.fontSize, // This media query doesn't get recognized...
+  //     },
+  //   );
+  // });
 });

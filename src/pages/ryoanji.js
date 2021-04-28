@@ -89,22 +89,18 @@ export default function Ryoanji() {
             you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
             Garden (pictured above).
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             This zen garden is made of fifteen rocks, surrounded by patches of
             moss, laid out in the ocean of gravels on a walled rectangular plot.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>And that's it…</P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>And that's it…</P>
+          <P belowTextParagraph>
             If you have been to this garden, you must have been utterly puzzled
             during your visit. Too abstract and too minimal. I also scratched my
             head during my first visit to the garden. My second visit a year
             later didn’t help me figure out anything, either.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             During the third visit, however, the whole garden started to make
             sense to me. It taught me how to live a happy life, with the layout
             of the fifteen rocks as the “textbook”.
@@ -368,15 +364,13 @@ export default function Ryoanji() {
             had a purpose. What message did he or she try to convey to the
             visitors of this garden?
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             I remember that each rock in a zen garden is often interpreted as an
             unfulfilled desire in our mind. Once I see the rocks in Ryoan-ji
             Rock Garden as my own unfulfilled desires, the walled rectangular
             garden space begins to look like a metaphor of my inner self.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             No emphasis on any of the fifteen rocks, I conclude, can therefore
             be interpreted as the following message:
           </P>
@@ -387,8 +381,7 @@ export default function Ryoanji() {
               <Span nowrap>in our mind.</Span>
             </Italic>
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             This idea is central to the preaching of Zen Buddhism to live a
             happy life. Don’t keep regretting what you’ve done in the past.
             Don’t always be worried about your uncertain future. Nothing should
@@ -407,8 +400,7 @@ export default function Ryoanji() {
             garden whenever I get too much preoccupied with my unfulfilled
             desires.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             The best way to appreciate the garden is to arrive early in the
             morning before tourists start flocking to Ryoan-ji Temple. I arrive
             there when the temple opens its gate at 8<Abbr>am</Abbr> (or at 8:30
@@ -417,16 +409,14 @@ export default function Ryoanji() {
             constantly changes its way of illuminating the garden as the time
             passes by—no fixation on a particular moment.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             By 10<Abbr>am</Abbr>, a flock of tourists start arriving and
             counting how many rocks there are—which is totally off the point
             about this garden. I leave the rock garden and take a stroll around
             the pond garden outside, which I realize also avoids creating any
             focal point.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             With the 21st century's life overloaded with information, it is so
             easy to forget the simple principle of happiness that the Buddha
             discovered in the 5th century <Abbr>BC</Abbr>. With its minimal, yet
@@ -458,8 +448,7 @@ export default function Ryoanji() {
             </Italic>
             . Tokyo: Kodansha.
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P>
+          <P belowTextParagraph>
             Tanaka, Shozo. (2002).{' '}
             <Italic>
               <Link

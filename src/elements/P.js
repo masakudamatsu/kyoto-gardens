@@ -9,6 +9,7 @@ import {
 } from 'src/utils/designSpec';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
+import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
 
 function getSidePadding(props) {
   return props.message
@@ -27,6 +28,7 @@ const P = styled.p`
   )};
   padding-left: ${props => getSidePadding(props)};
   padding-right: ${props => getSidePadding(props)};
+  padding-top: ${props => getPaddingTop(props, 'mobile')};
   text-align: ${props => (props.message ? 'center' : 'left')};
   @media only screen and ${breakpoint.sideMargin} {
     padding-left: ${remify(whitespace().sideMarginLarge)};
@@ -40,6 +42,7 @@ const P = styled.p`
     )};
     padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
     padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
+    padding-top: ${props => getPaddingTop(props, 'desktop')};
   }
 `;
 

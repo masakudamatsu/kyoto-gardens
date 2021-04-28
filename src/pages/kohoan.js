@@ -52,25 +52,25 @@ export default function Kohoan() {
             a moat to enter any temple. A moat is very common for Japanese
             castles, but it is an unusual design feature for a temple.
           </P>
-          <P>
+          <P belowTextParagraph>
             As far as I know, no one tries to understand why there is a moat
             along the walls of Koho-an Temple. One possible reason I’ve come up
             with is that the moat is meant to make the entire temple look like a
             structure built above the water along the shore.
           </P>
-          <P>
+          <P belowTextParagraph>
             Imagine you are visiting a habour. There is a building complex built
             on stilts above the water. When you enter the building, you will
             notice a gap between the shore and the floor of the building,
             through which you see the water beneath. The moat and the stone
             bridge may be intended to create such a scene in a visitor’s mind.
           </P>
-          <P>
+          <P belowTextParagraph>
             This interpretation might sound absurd to you. But it is not totally
             out of the context because the name of the temple, Koho (
             <Kanji>孤篷</Kanji>), means a solitary boat (Enshu Sado Soke 2020a).
           </P>
-          <P>
+          <P belowTextParagraph>
             Koho-an Temple was designed by Kobori Enshu, a 17th-century master
             of tea ceremony who also excelled at architecture and garden design
             — some people liken Enshu as Japan’s equivalent of Leonardo Da Vinci
@@ -79,7 +79,7 @@ export default function Kohoan() {
             on Lake Biwa, Japan’s largest lake near Enshu’s hometown to the east
             of Kyoto.
           </P>
-          <P>
+          <P belowTextParagraph>
             I think the entire site of Koho-an Temple represents a harbour where
             boats arrive and depart. If I see the temple this way, all of its
             design features will start making perfect sense to me. Keep on
@@ -106,13 +106,13 @@ export default function Kohoan() {
             how laborious it must have been. When I saw this footpath, I was
             struck with awe.
           </P>
-          <P>
+          <P belowTextParagraph>
             As you walk, you’ll notice the long and narrow rectangular stones
             rhythmically arranged on both sides: left, right, left, right — as
             if they had responded to the movement of your feet. It made me want
             to walk further ahead.
           </P>
-          <P>
+          <P belowTextParagraph>
             If you look to your right while walking on the pavement, you’ll see
             the inner entrance of Koho-an Temple.
           </P>
@@ -148,7 +148,7 @@ export default function Kohoan() {
             the right on the inner side, inviting your footsteps to the right.
             Did you ever imagine that a pavement can be considerate this much?
           </P>
-          <P>
+          <P belowTextParagraph>
             Just like the empty moat around the temple, no one discusses the
             design intention behind the long, straight stone pavement in the
             entrance garden. If the entire site of Koho-an Temple were a harbour
@@ -158,7 +158,7 @@ export default function Kohoan() {
             straight stretch, but on the side of the pier or at the end of the
             right-angled side stretch.
           </P>
-          <P>
+          <P belowTextParagraph>
             At the very end of the right-angled side stretch, there is indeed
             the main entrance of Koho-an Temple that resembles the entrance of a
             houseboat.
@@ -178,7 +178,7 @@ export default function Kohoan() {
             the straight edge of eaves. The design of the main entrance roof is
             faithful to it.
           </P>
-          <P>
+          <P belowTextParagraph>
             The simple shape disguises how elaborate the roof design actually
             is, however. According to the chief priest, the roof is constructed
             with an unusual method called yoroi-buki, or “armour thatching”. The
@@ -217,7 +217,7 @@ export default function Kohoan() {
             entrance (image source)
           </Figure>
           <P>It looks like the deck of a boat, don’t you think?</P>
-          <P>
+          <P belowTextParagraph>
             Take off your shoes and step up onto the veranda, and see the garden
             on your left again:
           </P>
@@ -235,7 +235,7 @@ export default function Kohoan() {
             against the boat. As you walk on the veranda looking at the garden,
             you can feel as if you were on a boat heading somewhere.
           </P>
-          <P>
+          <P belowTextParagraph>
             The above photo is not accurate colour-wise, by the way. The photo
             below is closer to the real view, taken from an angle looking back
             after walking along the veranda for a while:
@@ -253,19 +253,19 @@ export default function Kohoan() {
             karesansui rock gardens, water surface is represented by the spread
             of gravels, not reddish sand.
           </P>
-          <P>
+          <P belowTextParagraph>
             Personally, red clay reminds me of a wilderness in North America.
             But that’s an association I’ve learned by watching TV. For the
             Japanese people in the 17th century, of course, this association
             cannot be the design intention.
           </P>
-          <P>
+          <P belowTextParagraph>
             I speculate that red clay is meant to represent the water surface of
             Lake Biwa tinted orange at sunset. Again, no one suggests this
             interpretation. But it will make sense later during your visit to
             Koho-an Temple. Bear with me for a moment.
           </P>
-          <P>
+          <P belowTextParagraph>
             One last thing about the Main Hall Front Garden: according to the
             chief priest, Funaoka-yama, a small hill in the neighborhood, was
             originally part of the garden view — a garden design technique known
@@ -283,7 +283,7 @@ export default function Kohoan() {
             view. Today it is impossible to see the “boat floating in the
             distance”.
           </P>
-          <P>
+          <P belowTextParagraph>
             Many gardens with borrowed scenery in Kyoto have suffered from the
             same fate. With high population density typical of East Asia, it is
             not easy to preserve the historical landscape in Japan.
@@ -309,7 +309,7 @@ export default function Kohoan() {
             garden representing the eight best views of Lake Biwa (
             <Kanji>近江八景</Kanji>).
           </P>
-          <P>
+          <P belowTextParagraph>
             But you as a guest to Koho-an Temple are supposed to turn right
             here, and you’ll see a straight line of stepping stones embedded in
             tataki, an earthen floor made of red clay, slaked lime (calcium
@@ -326,16 +326,16 @@ export default function Kohoan() {
             reach this point and turn to the right, you’ll find the entrance to
             the teahouse, where a tea ceremony is going to take place.
           </P>
-          <P>
+          <P belowTextParagraph>
             Laid out on the left of the footpath are the pebbles to represent
             water surface. They made me imagine fine water ripples across the
             surface of water.
           </P>
-          <P>
+          <P belowTextParagraph>
             Although not shown in the photo, the eaves of the roof extend over
             this earthen floor to keep it dry on rainy days.
           </P>
-          <P>
+          <P belowTextParagraph>
             As far as I know, no one tries to interpret this earthen floor with
             embedded stepping stones. In other words, there is room for
             imagination to have fun. :-) I think there are two interpretations.
@@ -346,7 +346,7 @@ export default function Kohoan() {
             make visitors to expect that the entrance to a teahouse is just
             around the corner.
           </P>
-          <P>
+          <P belowTextParagraph>
             Both stepping stones and hand basins are commonly found in Japanese
             gardens. But they were originally invented as scenery to decorate
             the way to a teahouse during the late 16th century (Kozu 2009,
@@ -355,7 +355,7 @@ export default function Kohoan() {
             idea that the stepping stones and the hand basin would signify the
             pathway to a teahouse.
           </P>
-          <P>
+          <P belowTextParagraph>
             As I’ll explain later, the entrance to a teahouse is the climax of
             the spatial experience of Koho-an Temple. At this point, therefore,
             it is necessary to make the guests well-prepared for the impending
@@ -367,7 +367,7 @@ export default function Kohoan() {
             Temple’s spatial design has told us so far? What does walking on the
             earthen floor signify in this context?
           </P>
-          <P>
+          <P belowTextParagraph>
             One interpretation is sailing on a smaller boat. A teahouse is
             typically a small hut. So it cannot be entered by a large boat of
             the scale of the Main Hall. In fact, as we’ll see below, the
@@ -375,13 +375,13 @@ export default function Kohoan() {
             to a water entrance in which a boat can directly enter into the
             building.
           </P>
-          <P>
+          <P belowTextParagraph>
             However, if that were the case, it would be more appropriate to
             place the stepping stones in the midst of the pebbles that resemble
             the rippling surface of water, instead of making them embedded in
             the earthen floor.
           </P>
-          <P>
+          <P belowTextParagraph>
             An alternative interpretation is that the earthen floor represents a
             pier to transfer to another boat called a teahouse. With this
             interpretation, the straight arrangement of stepping stones makes
@@ -390,12 +390,12 @@ export default function Kohoan() {
             the mountain in a visitor’s mind. To represent a pier, therefore, a
             winding path of stepping stones would be inappropriate.
           </P>
-          <P>
+          <P belowTextParagraph>
             As far as I know, however, no one interprets the teahouse of Koho-an
             Temple as a boat. There is no interior design feature in the
             teahouse that evokes a ship.
           </P>
-          <P>
+          <P belowTextParagraph>
             I’ll revisit the question of which interpretation is more
             appropriate, once we sit down in the teahouse.
           </P>
@@ -419,7 +419,7 @@ export default function Kohoan() {
             from the ceiling with the lower half open, through which you can
             enter the teahouse.
           </P>
-          <P>
+          <P belowTextParagraph>
             Some people (e.g. Enshu Sado Soke 2020a) point out that this
             entrance resembles the water entrance hall where visitors get off
             their boat and directly land on the inside of a building. A real
@@ -434,14 +434,14 @@ export default function Kohoan() {
             It is indeed similar-looking. This is why walking on the straight
             stepping stones may be interpreted as sailing on a small boat.
           </P>
-          <P>
+          <P belowTextParagraph>
             The gap under the paper screens is lower than one’s height. This is
             a big deal in the 17th-century feudal society of Japan, where those
             ranked higher than others would never bow his head. To enter
             Teahouse Bosen, even the most powerful samurai would have to bow his
             head.
           </P>
-          <P>
+          <P belowTextParagraph>
             Making guests bow to enter a teahouse was not a new idea. It was the
             idea invented by Sen no Rikyu (<Kanji>千利休</Kanji>) with a
             teahouse entrance known as nijiri-guchi (<Kanji>躙口</Kanji>):
@@ -455,7 +455,7 @@ export default function Kohoan() {
             idea without nijiri-guchi. That is, the hanging paper screens. There
             is no other example of a teahouse entrance like this one.
           </P>
-          <P>
+          <P belowTextParagraph>
             When you bend your head and then look up after passing under the
             hanging paper screens, you’ll see a view of teahouse interior spread
             out:
@@ -470,20 +470,20 @@ export default function Kohoan() {
             same height across the room, including tokonoma (
             <Kanji>床の間</Kanji>) on the right half of the back wall.
           </P>
-          <P>
+          <P belowTextParagraph>
             Tokonoma is an alcove with a tatami floor to display a hanging
             scroll (as shown in the above photo) and/or other ornamental items
             such as ikebana flower arrangement. For a typical Japanese room, the
             alcove’s tie beam is sightly higher up than the rest of the room.
           </P>
-          <P>
+          <P belowTextParagraph>
             According to the chief priest, this special arrangement prevents the
             ceiling from looking too high when you bend your head to enter the
             room. In other words, this teahouse is not a place for the host to
             show off his dignity to the bowing guests, but a place to make them
             feel at ease.
           </P>
-          <P>
+          <P belowTextParagraph>
             After entering the room, the guests turn around to face the entrance
             and purify their hands by scooping water from the hand basin. From
             the porch of the teahouse, the hand basin looks like this:
@@ -520,7 +520,7 @@ export default function Kohoan() {
             The passage reminds us of the importance of remembering the purpose
             (catching fish or rabbits), not the means to achieve it (the trap).
           </P>
-          <P>
+          <P belowTextParagraph>
             Kyotofukoh (2006) suggests that the shape of the tsuyu-musubi hand
             basin resembles a mortar used by rabbits to make mochi (rice cakes)
             on the moon. Since ancient times the Japanese people have likened
@@ -556,7 +556,7 @@ export default function Kohoan() {
             hall”. The stone lantern may be meant to be a lighthouse visible
             offshore.
           </P>
-          <P>
+          <P belowTextParagraph>
             The sky is invisible from this teahouse. It reminds me of how
             Japanese aristocrats during the Heian period (794–1192) would have
             admired the full moon: they wouldn’t look up to see the moon
@@ -565,7 +565,7 @@ export default function Kohoan() {
             be a fan of the Japanese aristocratic culture, such as waka poetry
             (Enshu Sado Soke 2020b).
           </P>
-          <P>
+          <P belowTextParagraph>
             Thinking about it, the top of the hand basin suddenly looks to me
             like the moon reflected on the water surface:
           </P>{' '}
@@ -580,8 +580,8 @@ export default function Kohoan() {
             arrived at this teahouse, the sun would have set with the full moon
             rising in the sky.
           </P>
-          <P>Every dot is connected now.</P>
-          <P>
+          <P belowTextParagraph>Every dot is connected now.</P>
+          <P belowTextParagraph>
             It may be only me who interprets Koho-an Temple this way. But the
             reflection of light on water surface that reaches inside the
             teahouse was indeed the design intention of Enshu. Take another look
@@ -594,7 +594,7 @@ export default function Kohoan() {
             reflection of light from the rippling surface of the water
             represented by the pebbles in the teahouse garden.
           </P>
-          <P>
+          <P belowTextParagraph>
             If you’ve never seen the reflection of water ripples on the ceiling,
             here is a real example:
           </P>
@@ -609,7 +609,7 @@ export default function Kohoan() {
             difficult to imagine that the reflected moonlight reaches the
             ceiling through the water entrance hall.
           </P>
-          <P>
+          <P belowTextParagraph>
             A more natural interpretation is that Teahouse Bosen is meant to be
             a small boat floating on Lake Biwa on a full moon night. The view
             seen from under the hanging paper screens may be the view seen under
@@ -649,7 +649,7 @@ export default function Kohoan() {
             downwards, turned right again to enter Teahouse Bosen (which is
             actually a room in the Koho-an Temple’s Main Hall).
           </P>
-          <P>
+          <P belowTextParagraph>
             I’m more than happy if you now feel like you’ve actually visited
             Koho-an Temple. :-)
           </P>
@@ -662,7 +662,7 @@ export default function Kohoan() {
             2020, and the Chief Priest of Koho-an for explaining various details
             of the spatial design of Koho-an Temple.
           </P>
-          <P>
+          <P belowTextParagraph>
             This article is the English edition of my own article written in
             Japanese on 3 January, 2021.
           </P>
@@ -674,22 +674,24 @@ export default function Kohoan() {
             (“Kobori Enshu — Architecture and Garden Design”), Enshu Sado Soke
             Website.
           </P>
-          <P>
+          <P belowTextParagraph>
             Enshu Sado Soke (2020b) <Kanji>「小堀遠州 — 書画・和歌」</Kanji>{' '}
             (“Kobori Enshu — Calligraphy and Japanese Poetry”), Enshu Sado Soke
             Website.
           </P>
-          <P>
+          <P belowTextParagraph>
             Kozu, Asao (2009) <Kanji>『茶の湯の歴史』</Kanji> (
             <Italic>History of the Tea Ceremony</Italic>). Tokyo: Kadokawa.
           </P>
-          <P>Kyotofukoh (2006) “Koho-an Temple”, Kyotofukoh.</P>
-          <P>
+          <P belowTextParagraph>
+            Kyotofukoh (2006) “Koho-an Temple”, Kyotofukoh.
+          </P>
+          <P belowTextParagraph>
             Kyoto Shunju (2020) <Kanji>『大徳寺孤篷庵』</Kanji> (
             <Italic>Daitoku-ji Koho-an</Italic>), Leaflet given to the visitors
             to Koho-an.
           </P>
-          <P>
+          <P belowTextParagraph>
             {' '}
             Tanakadate, Tetsuhiko (1996)
             <Kanji>『小堀遠州物語 ― 日本のレオナルド・ダ・ヴィンチ』</Kanji> (
@@ -704,17 +706,17 @@ export default function Kohoan() {
             <Italic>Interior and the Japanese people</Italic>). Tokyo:
             Shobun-sha.
           </P>
-          <P>
+          <P belowTextParagraph>
             {' '}
             Vinfo (2012) <Kanji>「大徳寺 孤篷庵 その４」</Kanji> (“Daitoku-ji
             Koho-an Part 4)”,
             <Italic>Memories of Wandering</Italic>, Aug. 11, 2012.
           </P>
-          <P>
+          <P belowTextParagraph>
             Wakamura, Ryo (2012) <Kanji>「観月行事」</Kanji> (“Moon-viewing
             Events)”, <Italic>Okeihan.net</Italic>.
           </P>
-          <P>
+          <P belowTextParagraph>
             Yamaguchi, Sumio (2012) <Kanji>「孤篷庵庭園」</Kanji> (“Koho-an
             Garden”),{' '}
             <Italic>Kyoto Historical Site Walking Association Monthly</Italic>,
