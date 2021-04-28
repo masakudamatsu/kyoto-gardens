@@ -177,8 +177,7 @@ export default function Ryoanji() {
                 alt="Central view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               There is no stone at the center of gaze when I look straight
               ahead. The landscape composition is split between two groups of
               rocks on the right and on the left. Nothing is really emphasized.
@@ -201,8 +200,7 @@ export default function Ryoanji() {
                 alt="Leftward view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               Next, I turn my head to the left while sitting in the same
               viewpoint. There is again nothing in the center of my vision. The
               view is split. Nothing is emphasised.
@@ -225,8 +223,7 @@ export default function Ryoanji() {
                 alt="Rightward view of Ryoan-ji Zen Garden"
               />
             </Figure>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               Finally, I turn my head to the right while still staying at the
               same viewpoint. There are three groups of rocks, but none of them
               stand out clearly. Location in the middle usually casts the
@@ -257,8 +254,7 @@ export default function Ryoanji() {
                 alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               The middle-left cluster consists of two rocks. There is no center.
               The right elongated one dominates, but it is located to the right
               side, not at the center.
@@ -276,8 +272,7 @@ export default function Ryoanji() {
                 alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               The middle cluster consists of three rocks. One on the left
               dominates, but it is again not located at the center but to the
               side.
@@ -295,8 +290,7 @@ export default function Ryoanji() {
                 alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               The middle-right cluster consists of two rocks, each in a peculiar
               shape. But neither is emphasized more than the other.
             </P>
@@ -313,8 +307,7 @@ export default function Ryoanji() {
                 alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               The group of rocks furthest to the the left is the most
               magnificent composition in this garden if seen from the front of
               it. One large, well-shaped rock stands in the middle, flanked by
@@ -336,8 +329,7 @@ export default function Ryoanji() {
                 alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
               />
             </FigureWithMargin>
-            <Spacer betweenLines belowBox />
-            <P>
+            <P belowBoxLine>
               The group of rocks furthest to the right is made of three rocks.
               One large lying stone is flanked by two flat stones. This
               symmetric composition, however, is also marginalized at the edge

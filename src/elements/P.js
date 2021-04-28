@@ -47,6 +47,7 @@ const P = styled.p`
 `;
 
 P.propTypes = {
+  belowBoxLine: PropTypes.bool,
   belowBoxParagraph: PropTypes.bool,
   belowTextParagraph: PropTypes.bool,
   message: PropTypes.bool,

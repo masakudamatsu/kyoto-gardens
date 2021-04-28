@@ -9,6 +9,47 @@ import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
 const mockProps = {};
 
 describe('renders UI correctly:', () => {
+  test('with belowBoxLine prop', () => {
+    const {container} = render(<P belowBoxLine {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        font-family: 'Cormorant Garamond','Times New Roman',serif;
+        font-size: 1.3348rem;
+        font-weight: 600;
+        line-height: 1.393;
+        margin: 0 auto;
+        max-width: 38.9424rem;
+        padding-left: 1.3281rem;
+        padding-right: 1.3281rem;
+        padding-top: 0.5457rem;
+        text-align: left;
+      }
+
+      @media only screen and (min-width:31.6802rem) {
+        .c0 {
+          padding-left: 2.2135rem;
+          padding-right: 2.2135rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          font-size: 1.6489rem;
+          line-height: 1.4925;
+          max-width: 48.6522rem;
+          padding-left: 3.0078rem;
+          padding-right: 3.0078rem;
+          padding-top: 0.761rem;
+        }
+      }
+
+      <div>
+        <p
+          class="c0"
+        />
+      </div>
+    `);
+  });
   test('with belowBoxParagraph prop', () => {
     const {container} = render(<P belowBoxParagraph {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
