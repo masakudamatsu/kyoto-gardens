@@ -360,8 +360,7 @@ export default function Ryoanji() {
             No emphasis on any of the fifteen rocks, I conclude, can therefore
             be interpreted as the following message:
           </P>
-          <Spacer betweenParagraphs textOnly />
-          <P message>
+          <P belowTextParagraph message>
             <Italic>
               Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
               <Span nowrap>in our mind.</Span>
