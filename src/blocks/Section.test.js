@@ -13,6 +13,12 @@ describe('renders UI correctly:', () => {
         padding-bottom: 3.1892rem;
       }
 
+      @media only screen and (min-width:728px) {
+        .c0 {
+          padding-bottom: 4.263rem;
+        }
+      }
+
       <div>
         <section
           class="c0"
