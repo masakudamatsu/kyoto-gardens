@@ -21,7 +21,7 @@ describe('renders UI correctly:', () => {
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
         padding-right: 1.3281rem;
-        padding-top: 1.7772rem;
+        padding-top: 1.7448rem;
         text-align: left;
       }
 
@@ -39,7 +39,7 @@ describe('renders UI correctly:', () => {
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
-          padding-top: 2.6453rem;
+          padding-top: 2.3516rem;
         }
       }
 

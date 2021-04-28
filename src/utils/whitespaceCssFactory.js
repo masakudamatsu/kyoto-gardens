@@ -15,7 +15,7 @@ export function getPaddingTop(props, screenWidth = 'mobile') {
   }
   if (props.belowBoxParagraph) {
     targetHeight = whitespace(screenWidth).betweenParagraphs;
-    spaceByDefault = 12 - getCapHeightXHeightDiff(paragraph[screenWidth]);
+    spaceByDefault = screenWidth === 'mobile' ? 7.5 : 10.5;
   }
   return remify(targetHeight - spaceByDefault);
 }
