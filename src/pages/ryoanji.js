@@ -19,7 +19,7 @@ import Section from '../blocks/Section';
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/metadata';
 
-function Ryoanji() {
+export default function Ryoanji() {
   return (
     <>
       <Head>
@@ -484,5 +484,3 @@ function Ryoanji() {
     </>
   );
 }
-
-export default Ryoanji;
