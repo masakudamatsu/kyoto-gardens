@@ -109,7 +109,6 @@ export default function Ryoanji() {
             sense to me. It taught me how to live a happy life, with the layout
             of the fifteen rocks as the “textbook”.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
@@ -158,7 +157,6 @@ export default function Ryoanji() {
             , pp. 58-59). The book says that the whole garden was constructed to
             be seen from this viewpoint.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
@@ -245,7 +243,6 @@ export default function Ryoanji() {
               view, either.
             </P>
           </section>
-          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
@@ -358,7 +355,6 @@ export default function Ryoanji() {
               behind the large rock.
             </P>
           </section>
-          <Spacer betweenSections aboveBox />
         </Section>
         <Section>
           <H2.Wrapper>
@@ -399,7 +395,6 @@ export default function Ryoanji() {
             be at the center of your mind, just like the arrangement of these
             fifteen rocks within the walled rectangular plot.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>{' '}
         <Section>
           <H2.Wrapper>
@@ -439,14 +434,12 @@ export default function Ryoanji() {
             there since the early 16th century to reminds us of the teaching of
             the Buddha.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>{' '}
         <Section as="footer">
           <P>
             Written, photographed, designed, and coded by Masa Kudamatsu in
             2021.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>
         <Section as="aside">
           <H2.Wrapper>
@@ -478,7 +471,6 @@ export default function Ryoanji() {
             </Italic>{' '}
             [The Way of Appreciating ‘Japanese Gardens’]. Tokyo: Shogakukan.
           </P>
-          <Spacer betweenSections aboveBox />
         </Section>
       </Article>
     </>

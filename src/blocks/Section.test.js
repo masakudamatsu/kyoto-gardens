@@ -9,9 +9,13 @@ describe('renders UI correctly:', () => {
   test('Parent', () => {
     const {container} = render(<Section {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        padding-bottom: 3.1892rem;
+      }
+
       <div>
         <section
-          class="Section-yfzme9-0"
+          class="c0"
         />
       </div>
     `);
