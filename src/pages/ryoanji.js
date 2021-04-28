@@ -115,8 +115,7 @@ export default function Ryoanji() {
             rectangular garden, indicated with the gray arrow in the floor plan
             below:
           </P>
-          <Spacer betweenLines aboveBox />
-          <FigureWithMargin bordered>
+          <FigureWithMargin belowTextLine bordered>
             <FigureWithMargin.Img
               src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
               width="497"
