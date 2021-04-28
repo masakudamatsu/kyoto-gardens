@@ -1,7 +1,5 @@
 import Head from 'next/head';
 
-import {maxPhotoWidth} from 'src/utils/designSpec';
-import {title, description} from '../metadata/ryoanji';
 import Abbr from '../elements/Abbr';
 import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
@@ -18,12 +16,15 @@ import Spacer from '../elements/Spacer';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
 
+import {maxPhotoWidth} from 'src/utils/designSpec';
+import {ryoanji} from 'src/utils/metadata';
+
 function Ryoanji() {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{ryoanji.title}</title>
+        <meta name="description" content={ryoanji.description} />
       </Head>
       <Article>
         <Article.Header>
