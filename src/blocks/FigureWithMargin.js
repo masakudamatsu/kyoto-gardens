@@ -9,14 +9,14 @@ import {
   whitespace,
 } from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
-import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
+import {getPaddingTopAboveBox} from 'src/utils/whitespaceCssFactory';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
   ${props => props.bordered? `
     border-bottom: 1px solid hsla(193, 50%, 26%, 0.2);
     border-top: 1px solid hsla(193, 50%, 26%, 0.2);
-    margin-top: ${getPaddingTop(props, 'mobile')};
+    margin-top: ${getPaddingTopAboveBox(props, 'mobile')};
     padding: ${figureBordered.padding}px;
     @media only screen and ${breakpoint.floorPlan} {
       border-left: 1px solid hsla(193, 50%, 26%, 0.2);
@@ -25,7 +25,7 @@ const FigureWithMargin = styled(Figure)`
       margin-right: ${remify(whitespace().sideMarginLarge)};
     }
   ` : ` 
-    padding-top: ${getPaddingTop(props, 'mobile')};
+    padding-top: ${getPaddingTopAboveBox(props, 'mobile')};
     @media only screen and ${breakpoint.sideMargin} {
       padding-left: ${remify(whitespace().sideMarginLarge)};
       padding-right: ${remify(whitespace().sideMarginLarge)};
@@ -44,13 +44,13 @@ const FigureWithMargin = styled(Figure)`
     ${props => props.bordered? `
       margin-left: ${remify(whitespace('desktop').sideMarginLarge)};
       margin-right: ${remify(whitespace('desktop').sideMarginLarge)};
-      margin-top: ${getPaddingTop(props, 'desktop')};
+      margin-top: ${getPaddingTopAboveBox(props, 'desktop')};
       width: auto;
     ` : `
       margin: 0;
       padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
       padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-      padding-top: ${getPaddingTop(props, 'desktop')};
+      padding-top: ${getPaddingTopAboveBox(props, 'desktop')};
       `}
     width: auto;
   }
