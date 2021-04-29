@@ -34,11 +34,7 @@ describe('Props work as intended', () => {
 });
 
 test('renders UI correctly', () => {
-  const {container} = render(
-    <H2.Wrapper>
-      <H2 {...mockProps} />
-    </H2.Wrapper>,
-  );
+  const {container} = render(<H2 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c1 {
       color: #eee;

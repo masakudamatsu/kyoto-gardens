@@ -49,11 +49,11 @@ const visuallyHidden = css`
   width: 1px;
 `;
 
-const H2 = styled.h2`
+const H2Style = styled.h2`
   ${props => (props.hidden ? visuallyHidden : defaultStyle)}
 `;
 
-H2.Wrapper = styled.div`
+H2Style.Wrapper = styled.div`
   background-color: hsla(193, 50%, 26%, 0.9);
   background-image: linear-gradient(
     35deg,
@@ -73,6 +73,16 @@ H2.Wrapper = styled.div`
     padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
+
+const H2 = props => {
+  return props.hidden ? (
+    <H2Style hidden>{props.children}</H2Style>
+  ) : (
+    <H2Style.Wrapper {...props}>
+      <H2Style {...props}>{props.children}</H2Style>
+    </H2Style.Wrapper>
+  );
+};
 
 H2.propTypes = {
   hidden: PropTypes.bool,

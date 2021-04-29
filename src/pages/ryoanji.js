@@ -106,9 +106,7 @@ export default function Ryoanji() {
           </P>
         </Section>
         <Section>
-          <H2.Wrapper>
-            <H2>Get the Viewpoint Right</H2>
-          </H2.Wrapper>
+          <H2>Get the Viewpoint Right</H2>
           <P belowBoxParagraph>
             The key to understand this cryptic garden is to see it from where
             you're supposed to: halfway between the left and right edges of this
@@ -151,9 +149,7 @@ export default function Ryoanji() {
           </P>
         </Section>
         <Section>
-          <H2.Wrapper>
-            <H2>No Focal Point in the Garden</H2>
-          </H2.Wrapper>
+          <H2>No Focal Point in the Garden</H2>
           <P belowBoxParagraph>
             Once I sit down and see the garden from the correct viewpoint, the
             layout of fifteen rocks starts taking on its meaning:{' '}
@@ -228,9 +224,7 @@ export default function Ryoanji() {
           </Subsection>
         </Section>
         <Section>
-          <H2.Wrapper>
-            <H2>No Single Rock Dominates</H2>
-          </H2.Wrapper>
+          <H2>No Single Rock Dominates</H2>
           <P belowBoxParagraph>
             The lack of emphasis, I then notice, penetrates into how fifteen
             rocks are arranged into five clusters, each surrounded by a patch of
@@ -324,9 +318,7 @@ export default function Ryoanji() {
           </Subsection>
         </Section>
         <Section>
-          <H2.Wrapper>
-            <H2>The Rock Garden’s Message</H2>
-          </H2.Wrapper>
+          <H2>The Rock Garden’s Message</H2>
           <P belowBoxParagraph>
             Now it is clear that nothing is emphasized throughout this garden. I
             start wondering why. The designer of this garden, who remains
@@ -359,9 +351,7 @@ export default function Ryoanji() {
           </P>
         </Section>{' '}
         <Section>
-          <H2.Wrapper>
-            <H2>Garden as a Reminder</H2>
-          </H2.Wrapper>
+          <H2>Garden as a Reminder</H2>
           <P belowBoxParagraph>
             Ever since I managed to interpret the meaning of Ryoan-ji Rock
             Garden as described above, I've been paying a visit to this zen
@@ -400,9 +390,7 @@ export default function Ryoanji() {
           </P>
         </Section>
         <Section as="aside">
-          <H2.Wrapper>
-            <H2>References</H2>
-          </H2.Wrapper>
+          <H2>References</H2>
           <P belowBoxParagraph>
             Slawson, David A. (1987).{' '}
             <Italic>
