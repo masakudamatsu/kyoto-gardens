@@ -12,7 +12,6 @@ import H3 from '../elements/H3';
 import Italic from '../elements/Italic';
 import Link from '../elements/Link';
 import P from '../elements/P';
-import Spacer from '../elements/Spacer';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
 import Subsection from '../blocks/Subsection';
