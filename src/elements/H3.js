@@ -23,6 +23,7 @@ const H3 = styled.h3`
   )};
   padding: 0 ${remify(whitespace().sideMargin)};
   text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
+  text-transform: uppercase;
   @media only screen and ${breakpoint.sideMargin} {
     padding: 0 ${remify(whitespace().sideMarginLarge)};
   }

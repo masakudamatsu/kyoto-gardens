@@ -143,7 +143,8 @@ export function whitespace(screenWidth = 'mobile') {
 export const h3 = {
   mobile: {
     ...cormorant,
-    capHeight: whitespace().betweenLines,
+    // capHeight: whitespace().betweenLines,
+    xHeight: xHeight(),
     lineHeightRatio: {
       xHeight: 5,
       betweenLines: 8,
@@ -158,7 +159,8 @@ export const h3 = {
 
 h3.desktop = {
   ...h3.mobile,
-  capHeight: whitespace('desktop').betweenLines,
+  // capHeight: whitespace('desktop').betweenLines,
+  xHeight: xHeight('desktop'),
 };
 
 export const figureBordered = {

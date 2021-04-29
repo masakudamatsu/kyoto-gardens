@@ -11,13 +11,14 @@ test('renders UI correctly', () => {
     .c0 {
       color: hsla(193,50%,26%,0.9);
       font-family: 'Cormorant','Times New Roman',serif;
-      font-size: 2.0687rem;
+      font-size: 1.3215rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
       margin: 0 auto;
       max-width: 38.9424rem;
       padding: 0 1.3281rem;
       text-indent: -0.125rem;
+      text-transform: uppercase;
     }
 
     @media only screen and (min-width:31.6802rem) {
@@ -28,7 +29,7 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c0 {
-        font-size: 2.811rem;
+        font-size: 1.6325rem;
         max-width: 48.6522rem;
         padding: 0 3.0078rem;
       }
