@@ -84,7 +84,7 @@ export default function Ryoanji() {
         <Section>
           <H2 visuallyHidden>Introduction</H2>
           <P belowBoxParagraph>
-            <Span smallcaps>Pick any</Span> travel guide for Kyoto. I'm sure
+            <Span smallcaps>Pick any</Span> travel guide for Kyoto. I’m sure
             you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
             Garden (pictured above).
           </P>
@@ -92,7 +92,7 @@ export default function Ryoanji() {
             This zen garden is made of fifteen rocks, surrounded by patches of
             moss, laid out in the ocean of gravels on a walled rectangular plot.
           </P>
-          <P belowTextParagraph>And that's it…</P>
+          <P belowTextParagraph>And that’s it…</P>
           <P belowTextParagraph>
             If you have been to this garden, you must have been utterly puzzled
             during your visit. Too abstract and too minimal. I also scratched my
@@ -109,7 +109,7 @@ export default function Ryoanji() {
           <H2>Get the Viewpoint Right</H2>
           <P belowBoxParagraph>
             The key to understand this cryptic garden is to see it from where
-            you're supposed to: halfway between the left and right edges of this
+            You’re supposed to: halfway between the left and right edges of this
             rectangular garden, indicated with the gray arrow in the floor plan
             below:
           </P>
@@ -354,7 +354,7 @@ export default function Ryoanji() {
           <H2>Garden as a Reminder</H2>
           <P belowBoxParagraph>
             Ever since I managed to interpret the meaning of Ryoan-ji Rock
-            Garden as described above, I've been paying a visit to this zen
+            Garden as described above, I’ve been paying a visit to this zen
             garden whenever I get too much preoccupied with my unfulfilled
             desires.
           </P>
@@ -375,7 +375,7 @@ export default function Ryoanji() {
             focal point.
           </P>
           <P belowTextParagraph>
-            With the 21st century's life overloaded with information, it is so
+            With the 21st century’s life overloaded with information, it is so
             easy to forget the simple principle of happiness that the Buddha
             discovered in the 5th century <Abbr>BC</Abbr>. With its minimal, yet
             profound composition of 15 rocks, Ryoan-ji Rock Garden has been
