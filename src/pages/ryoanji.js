@@ -15,6 +15,7 @@ import P from '../elements/P';
 import Spacer from '../elements/Spacer';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
+import Subsection from '../blocks/Subsection';
 
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/metadata';
@@ -159,11 +160,9 @@ export default function Ryoanji() {
             layout of fifteen rocks starts taking on its meaning:{' '}
             <Italic>there is nothing emphasized in this garden</Italic>.
           </P>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          <Subsection>
             <H3>Straight ahead</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <Figure>
+            <Figure belowH3>
               <Figure.Img
                 src="/images/ryoanji-banner-summer-small.jpg"
                 srcSet={`/images/ryoanji-banner-summer-large.jpg ${
@@ -181,12 +180,11 @@ export default function Ryoanji() {
               ahead. The landscape composition is split between two groups of
               rocks on the right and on the left. Nothing is really emphasized.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          </Subsection>
+          <Subsection>
+            {' '}
             <H3>Leftward</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <Figure>
+            <Figure belowH3>
               <Figure.Img
                 src="/images/ryoanji-look-left-small.jpg"
                 srcSet={`/images/ryoanji-look-left-large.jpg ${
@@ -204,12 +202,10 @@ export default function Ryoanji() {
               viewpoint. There is again nothing in the center of my vision. The
               view is split. Nothing is emphasised.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          </Subsection>
+          <Subsection>
             <H3>Rightward</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <Figure>
+            <Figure belowH3>
               <Figure.Img
                 src="/images/ryoanji-look-right-small.jpg"
                 srcSet={`/images/ryoanji-look-right-large.jpg ${
@@ -230,7 +226,7 @@ export default function Ryoanji() {
               modest and are located off the center. Nothing is stressed in this
               view, either.
             </P>
-          </section>
+          </Subsection>
         </Section>
         <Section>
           <H2.Wrapper>
@@ -241,11 +237,9 @@ export default function Ryoanji() {
             rocks are arranged into five clusters, each surrounded by a patch of
             moss. Let’s start looking at the middle three clusters.
           </P>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
-            <H3>Middle-left</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <FigureWithMargin>
+          <Subsection>
+            <H3>Middle left</H3>
+            <FigureWithMargin belowH3>
               <FigureWithMargin.Img
                 src="/images/ryoanji-middle-left.jpg"
                 width="892"
@@ -258,12 +252,10 @@ export default function Ryoanji() {
               The right elongated one dominates, but it is located to the right
               side, not at the center.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          </Subsection>
+          <Subsection>
             <H3>Middle</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <FigureWithMargin>
+            <FigureWithMargin belowH3>
               <FigureWithMargin.Img
                 src="/images/ryoanji-middle-right.jpg"
                 width="747"
@@ -276,12 +268,10 @@ export default function Ryoanji() {
               dominates, but it is again not located at the center but to the
               side.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
-            <H3>Middle-right</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <FigureWithMargin>
+          </Subsection>
+          <Subsection>
+            <H3>Middle right</H3>
+            <FigureWithMargin belowH3>
               <FigureWithMargin.Img
                 src="/images/ryoanji-second-right.jpg"
                 width="706"
@@ -293,12 +283,10 @@ export default function Ryoanji() {
               The middle-right cluster consists of two rocks, each in a peculiar
               shape. But neither is emphasized more than the other.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          </Subsection>
+          <Subsection>
             <H3>Leftmost</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <FigureWithMargin>
+            <FigureWithMargin belowH3>
               <FigureWithMargin.Img
                 src="/images/ryoanji-leftmost.jpg"
                 width="1490"
@@ -315,12 +303,10 @@ export default function Ryoanji() {
               the center. When seen from the viewpoint, the symmetric
               composition is thus destroyed.
             </P>
-          </section>
-          <section>
-            <Spacer betweenParagraphs aboveSubsectionTitle />
+          </Subsection>
+          <Subsection>
             <H3>Rightmost</H3>
-            <Spacer betweenLines belowSubsectionTitle />
-            <FigureWithMargin>
+            <FigureWithMargin belowH3>
               <FigureWithMargin.Img
                 src="/images/ryoanji-rightmost.jpg"
                 width="1496"
@@ -336,7 +322,7 @@ export default function Ryoanji() {
               disappears from sight when seen from the viewpoint, as it hides
               behind the large rock.
             </P>
-          </section>
+          </Subsection>
         </Section>
         <Section>
           <H2.Wrapper>

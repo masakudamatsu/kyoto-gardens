@@ -28,5 +28,11 @@ export function getPaddingTop(props, screenWidth = 'mobile') {
     targetHeight = whitespace(screenWidth).betweenLines;
     spaceByDefault = screenWidth === 'mobile' ? 8 : 12;
   }
+  if (props.belowH3) {
+    targetHeight =
+      whitespace(screenWidth).betweenLines -
+      getCapHeightXHeightDiff(paragraph[screenWidth]); // make it symmetric with the space below the figure and the cap height of next paragraph
+    spaceByDefault = screenWidth === 'mobile' ? 4 : 5; // descender of Cormorant
+  }
   return remify(targetHeight - spaceByDefault);
 }
