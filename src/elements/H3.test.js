@@ -17,7 +17,6 @@ test('renders UI correctly', () => {
       margin: 0 auto;
       max-width: 38.9424rem;
       padding: 0 1.3281rem;
-      text-indent: -0.125rem;
       text-transform: uppercase;
     }
 

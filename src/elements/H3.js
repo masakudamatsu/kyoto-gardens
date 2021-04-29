@@ -5,12 +5,6 @@ import {breakpoint, h3, lineLength, whitespace} from 'src/utils/designSpec';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
-const defaultSpace = {
-  mobile: {
-    left: 2,
-  },
-};
-
 const H3 = styled.h3`
   color: hsla(193, 50%, 26%, 0.9);
   font-family: ${h3.mobile.fontFamily};
@@ -22,7 +16,6 @@ const H3 = styled.h3`
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
   )};
   padding: 0 ${remify(whitespace().sideMargin)};
-  text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   text-transform: uppercase;
   @media only screen and ${breakpoint.sideMargin} {
     padding: 0 ${remify(whitespace().sideMarginLarge)};
@@ -36,7 +29,5 @@ const H3 = styled.h3`
   }
 `;
 
-H3.propTypes = {
-  hidden: PropTypes.bool,
-};
+H3.propTypes = {};
 export default H3;
