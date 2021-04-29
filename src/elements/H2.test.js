@@ -6,8 +6,8 @@ import H2 from './H2';
 const mockProps = {};
 
 describe('Props work as intended', () => {
-  test('hidden', () => {
-    const {container} = render(<H2 hidden />);
+  test('visuallyHidden', () => {
+    const {container} = render(<H2 visuallyHidden />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         -webkit-clip: rect(1px 1px 1px 1px);
@@ -26,7 +26,6 @@ describe('Props work as intended', () => {
       <div>
         <h2
           class="c0"
-          hidden=""
         />
       </div>
     `);

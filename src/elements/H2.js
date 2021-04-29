@@ -50,7 +50,7 @@ const visuallyHidden = css`
 `;
 
 const H2Style = styled.h2`
-  ${props => (props.hidden ? visuallyHidden : defaultStyle)}
+  ${props => (props.visuallyHidden ? visuallyHidden : defaultStyle)}
 `;
 
 H2Style.Wrapper = styled.div`
@@ -75,8 +75,8 @@ H2Style.Wrapper = styled.div`
 `;
 
 const H2 = props => {
-  return props.hidden ? (
-    <H2Style hidden>{props.children}</H2Style>
+  return props.visuallyHidden ? (
+    <H2Style visuallyHidden>{props.children}</H2Style>
   ) : (
     <H2Style.Wrapper {...props}>
       <H2Style {...props}>{props.children}</H2Style>
@@ -85,6 +85,6 @@ const H2 = props => {
 };
 
 H2.propTypes = {
-  hidden: PropTypes.bool,
+  visuallyHidden: PropTypes.bool,
 };
 export default H2;

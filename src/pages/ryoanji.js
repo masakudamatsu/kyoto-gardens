@@ -82,7 +82,7 @@ export default function Ryoanji() {
           </Carousel>
         </Article.Header>
         <Section>
-          <H2 hidden>Introduction</H2>
+          <H2 visuallyHidden>Introduction</H2>
           <P belowBoxParagraph>
             <Span smallcaps>Pick any</Span> travel guide for Kyoto. I'm sure
             you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
