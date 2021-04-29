@@ -81,6 +81,11 @@ export const h2 = {
 h2.desktop = {
   ...h2.mobile,
   xHeight: xHeight('desktop') * scale,
+  get padding() {
+    return (
+      this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
+    );
+  },
 };
 
 export const h1 = {

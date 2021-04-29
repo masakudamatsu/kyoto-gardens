@@ -7,8 +7,13 @@ import remify from 'src/utils/remify';
 
 const defaultSpace = {
   mobile: {
-    ascender: 6,
+    ascender: 6.5,
     descender: 7,
+    left: 2,
+  },
+  desktop: {
+    ascender: 8.5,
+    descender: 9,
     left: 2,
   },
 };
@@ -29,6 +34,10 @@ const defaultStyle = css`
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(getFontSize(h2.desktop))};
     margin: 0;
+    padding-bottom: ${remify(
+      h2.desktop.padding - defaultSpace.desktop.descender,
+    )};
+    padding-top: ${remify(h2.desktop.padding - defaultSpace.desktop.ascender)};
     width: auto;
   }
   @media only screen and ${breakpoint.floorPlanWidthDesktop} {

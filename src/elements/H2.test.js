@@ -42,7 +42,7 @@ test('renders UI correctly', () => {
       font-weight: 700;
       line-height: 1.0452000000000001;
       padding-bottom: 0.9765rem;
-      padding-top: 1.039rem;
+      padding-top: 1.0078rem;
       text-indent: -0.125rem;
     }
 
@@ -64,6 +64,8 @@ test('renders UI correctly', () => {
       .c1 {
         font-size: 2.7208rem;
         margin: 0;
+        padding-bottom: 1.1842rem;
+        padding-top: 1.2155rem;
         width: auto;
       }
     }
