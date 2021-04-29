@@ -34,4 +34,18 @@ describe('Props work as intended', () => {
       </div>
     `);
   });
+  test('source', () => {
+    const {container} = render(<Span source />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        color: rgb(100,100,100);
+      }
+
+      <div>
+        <span
+          class="c0"
+        />
+      </div>
+    `);
+  });
 });

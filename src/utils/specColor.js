@@ -18,6 +18,8 @@ const onBackground = '#0a0a0a';
 const onSurface = '#ffffff';
 const onError = '#0a0a0a';
 
+const gray = 'rgb(100,100,100)';
+
 export const color = {
   body: {
     background: background,
@@ -33,6 +35,7 @@ export const color = {
     },
     font: 'inherit',
   },
+  source: gray,
   section: {
     background: surface,
     font: onSurface,
