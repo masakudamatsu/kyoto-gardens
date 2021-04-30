@@ -7,7 +7,7 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('Parent', () => {
-    const {container} = render(<Carousel {...mockProps} />);
+    const {container} = render(<Carousel />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         overflow: hidden;
@@ -37,21 +37,14 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel.Spring {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: block;
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      .c1 {
         -webkit-animation: dvnCyE 16s linear infinite;
         animation: dvnCyE 16s linear infinite;
         position: absolute;
       }
 
       <div>
-        <img
-          class="c0 c1"
+        <div
+          class="c0"
         />
       </div>
     `);
@@ -60,21 +53,14 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel.Summer {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: block;
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      .c1 {
         -webkit-animation: iIBqBc 16s linear infinite;
         animation: iIBqBc 16s linear infinite;
         position: absolute;
       }
 
       <div>
-        <img
-          class="c0 c1"
+        <div
+          class="c0"
         />
       </div>
     `);
@@ -83,21 +69,14 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel.Autumn {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: block;
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      .c1 {
         -webkit-animation: kMBdxc 16s linear infinite;
         animation: kMBdxc 16s linear infinite;
         position: absolute;
       }
 
       <div>
-        <img
-          class="c0 c1"
+        <div
+          class="c0"
         />
       </div>
     `);
@@ -106,21 +85,14 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel.Winter {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: block;
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      .c1 {
         -webkit-animation: cdzHzA 16s linear infinite;
         animation: cdzHzA 16s linear infinite;
         position: absolute;
       }
 
       <div>
-        <img
-          class="c0 c1"
+        <div
+          class="c0"
         />
       </div>
     `);

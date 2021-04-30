@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import H1 from 'src/elements/H1';
-import Img from 'src/elements/Img';
+import ImageWithPlaceholder from 'src/elements/ImageWithPlaceholder';
 
 import {animation} from 'src/utils/specAnimation';
 import {color} from 'src/utils/specColor';
@@ -89,7 +89,7 @@ Header.ImgWrapper = styled.a`
   width: ${remify(header.logo.width + header.whitespace.betweenLogoAndH1)};
 `;
 
-Header.Img = styled(Img)``;
+Header.Img = styled.img``; // to be replaced with ImageWithPlaceholder
 
 Header.H1 = styled(H1)`
   padding-bottom: ${remify(header.h1.paddingBottom)};

@@ -67,8 +67,6 @@ const FigureWithMargin = styled(Figure)`
   }
 `;
 
-FigureWithMargin.Img = styled(Figure.Img)``;
-
 FigureWithMargin.propTypes = {
   belowTextLine: PropTypes.bool,
   bordered: PropTypes.bool,

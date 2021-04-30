@@ -28,21 +28,4 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
-  test('Figure.Img', () => {
-    const {container} = render(<Figure.Img />);
-    expect(container).toMatchInlineSnapshot(`
-      .c0 {
-        display: block;
-        height: auto;
-        margin: auto;
-        max-width: 100%;
-      }
-
-      <div>
-        <img
-          class="c0"
-        />
-      </div>
-    `);
-  });
 });

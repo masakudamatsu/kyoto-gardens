@@ -16,13 +16,6 @@ const Figure = styled.figure`
   `}
 `;
 
-Figure.Img = styled.img`
-  display: block; /* Prevent images from aligning with other contents */
-  height: auto; /* Preserve the aspect ratio */
-  margin: auto; /* For vertically & horizontally centering the image #2 */
-  max-width: 100%; /* Control the image size by the box size of the figure */
-`;
-
 Figure.propTypes = {
   belowH3: PropTypes.bool,
 };

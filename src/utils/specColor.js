@@ -19,7 +19,7 @@ const onSurface = '#ffffff';
 const onError = '#0a0a0a';
 
 const gray = 'rgb(100,100,100)';
-
+const lightGray = 'rgb(240,240,240)';
 export const color = {
   body: {
     background: background,
@@ -36,6 +36,7 @@ export const color = {
     font: 'inherit',
   },
   source: gray,
+  imagePlaceholder: lightGray,
   section: {
     background: surface,
     font: onSurface,

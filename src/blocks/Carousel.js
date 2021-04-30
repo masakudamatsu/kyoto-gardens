@@ -109,19 +109,19 @@ const winter = keyframes`
   }
 `;
 
-Carousel.Spring = styled(Figure.Img)`
+Carousel.Spring = styled.div`
   animation: ${spring} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Summer = styled(Figure.Img)`
+Carousel.Summer = styled.div`
   animation: ${summer} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Autumn = styled(Figure.Img)`
+Carousel.Autumn = styled.div`
   animation: ${autumn} 16s linear infinite;
   position: absolute;
 `;
-Carousel.Winter = styled(Figure.Img)`
+Carousel.Winter = styled.div`
   animation: ${winter} 16s linear infinite;
   position: absolute;
 `;

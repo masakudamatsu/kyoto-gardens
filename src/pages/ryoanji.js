@@ -9,6 +9,7 @@ import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
+import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import Italic from '../elements/Italic';
 import Link from '../elements/Link';
 import P from '../elements/P';
@@ -35,50 +36,46 @@ export default function Ryoanji() {
             </H1>
           </H1.Wrapper>{' '}
           <Carousel>
-            <Carousel.Spring
-              src="/images/ryoanji-banner-spring-small.jpg"
-              srcSet={`/images/ryoanji-banner-spring-large.jpg ${
-                maxPhotoWidth * 2
-              }w, 
-                  /images/ryoanji-banner-spring-small.jpg ${maxPhotoWidth}w`}
-              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-              width="941"
-              height="703"
-              alt="Ryoan-ji Rock Garden in spring"
-            />
-            <Carousel.Summer
-              src="/images/ryoanji-banner-summer-small.jpg"
-              srcSet={`/images/ryoanji-banner-summer-large.jpg ${
-                maxPhotoWidth * 2
-              }w, 
-                  /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
-              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-              width="941"
-              height="703"
-              alt="Ryoan-ji Rock Garden in summer"
-            />
-            <Carousel.Autumn
-              src="/images/ryoanji-banner-autumn-small.jpg"
-              srcSet={`/images/ryoanji-banner-autumn-large.jpg ${
-                maxPhotoWidth * 2
-              }w, 
-                  /images/ryoanji-banner-autumn-small.jpg ${maxPhotoWidth}w`}
-              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-              width="941"
-              height="705"
-              alt="Ryoan-ji Rock Garden in autumn"
-            />
-            <Carousel.Winter
-              src="/images/ryoanji-banner-winter-small.jpg"
-              srcSet={`/images/ryoanji-banner-winter-large.jpg ${
-                maxPhotoWidth * 2
-              }w, 
-                  /images/ryoanji-banner-winter-small.jpg ${maxPhotoWidth}w`}
-              sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-              width="941"
-              height="705"
-              alt="Ryoan-ji Rock Garden in winter"
-            />
+            <Carousel.Spring>
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-spring-large.jpg"
+                width={1882}
+                height={1405}
+                alt="Ryoan-ji Rock Garden in spring"
+                quality={100}
+                priority
+              />
+            </Carousel.Spring>
+            <Carousel.Summer>
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-summer-large.jpg"
+                width={1882}
+                height={1405}
+                alt="Ryoan-ji Rock Garden in summer"
+                quality={100}
+                priority
+              />
+            </Carousel.Summer>
+            <Carousel.Autumn>
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-autumn-large.jpg"
+                width={1882}
+                height={1411}
+                alt="Ryoan-ji Rock Garden in autumn"
+                quality={100}
+                priority
+              />
+            </Carousel.Autumn>
+            <Carousel.Winter>
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-winter-large.jpg"
+                width={1882}
+                height={1411}
+                alt="Ryoan-ji Rock Garden in winter"
+                quality={100}
+                priority
+              />
+            </Carousel.Winter>
           </Carousel>
         </Article.Header>
         <Section>
@@ -114,10 +111,10 @@ export default function Ryoanji() {
             below:
           </P>
           <FigureWithMargin belowTextLine bordered>
-            <FigureWithMargin.Img
+            <ImageWithPlaceholder
               src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
-              width="497"
-              height="313"
+              width={497}
+              height={313}
               alt=""
             />
             <FigCaption>
@@ -158,16 +155,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Straight ahead</H3>
             <Figure belowH3>
-              <Figure.Img
-                src="/images/ryoanji-banner-summer-small.jpg"
-                srcSet={`/images/ryoanji-banner-summer-large.jpg ${
-                  maxPhotoWidth * 2
-                }w,
-                      /images/ryoanji-banner-summer-small.jpg ${maxPhotoWidth}w`}
-                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-                width="941"
-                height="703"
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-summer-large.jpg"
+                width={1882}
+                height={1405}
                 alt="Central view of Ryoan-ji Zen Garden"
+                quality={100}
               />
             </Figure>
             <P belowBoxLine>
@@ -180,16 +173,12 @@ export default function Ryoanji() {
             {' '}
             <H3>Leftward</H3>
             <Figure belowH3>
-              <Figure.Img
-                src="/images/ryoanji-look-left-small.jpg"
-                srcSet={`/images/ryoanji-look-left-large.jpg ${
-                  maxPhotoWidth * 2
-                }w,
-                      /images/ryoanji-look-left-small.jpg ${maxPhotoWidth}w`}
-                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-                width="941"
-                height="703"
+              <ImageWithPlaceholder
+                src="/images/ryoanji-look-left-large.jpg"
+                width={1882}
+                height={1405}
                 alt="Leftward view of Ryoan-ji Zen Garden"
+                quality={100}
               />
             </Figure>
             <P belowBoxLine>
@@ -201,16 +190,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Rightward</H3>
             <Figure belowH3>
-              <Figure.Img
-                src="/images/ryoanji-look-right-small.jpg"
-                srcSet={`/images/ryoanji-look-right-large.jpg ${
-                  maxPhotoWidth * 2
-                }w,
-                      /images/ryoanji-look-right-small.jpg ${maxPhotoWidth}w`}
-                sizes={`(min-width: ${maxPhotoWidth}px) ${maxPhotoWidth}px, 100vw`}
-                width="941"
-                height="703"
+              <ImageWithPlaceholder
+                src="/images/ryoanji-look-right-large.jpg"
+                width={1882}
+                height={1405}
                 alt="Rightward view of Ryoan-ji Zen Garden"
+                quality={100}
               />
             </Figure>
             <P belowBoxLine>
@@ -233,11 +218,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Middle left</H3>
             <FigureWithMargin belowH3>
-              <FigureWithMargin.Img
+              <ImageWithPlaceholder
                 src="/images/ryoanji-middle-left.jpg"
-                width="892"
-                height="442"
+                width={892}
+                height={442}
                 alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
+                quality={100}
               />
             </FigureWithMargin>
             <P belowBoxLine>
@@ -249,11 +235,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Middle</H3>
             <FigureWithMargin belowH3>
-              <FigureWithMargin.Img
+              <ImageWithPlaceholder
                 src="/images/ryoanji-middle-right.jpg"
-                width="747"
-                height="381"
+                width={747}
+                height={381}
                 alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
+                quality={100}
               />
             </FigureWithMargin>
             <P belowBoxLine>
@@ -265,11 +252,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Middle right</H3>
             <FigureWithMargin belowH3>
-              <FigureWithMargin.Img
+              <ImageWithPlaceholder
                 src="/images/ryoanji-second-right.jpg"
-                width="706"
-                height="388"
+                width={706}
+                height={388}
                 alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
+                quality={100}
               />
             </FigureWithMargin>
             <P belowBoxLine>
@@ -280,11 +268,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Leftmost</H3>
             <FigureWithMargin belowH3>
-              <FigureWithMargin.Img
+              <ImageWithPlaceholder
                 src="/images/ryoanji-leftmost.jpg"
-                width="1490"
-                height="695"
+                width={1490}
+                height={695}
                 alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
+                quality={100}
               />
             </FigureWithMargin>
             <P belowBoxLine>
@@ -300,11 +289,12 @@ export default function Ryoanji() {
           <Subsection>
             <H3>Rightmost</H3>
             <FigureWithMargin belowH3>
-              <FigureWithMargin.Img
+              <ImageWithPlaceholder
                 src="/images/ryoanji-rightmost.jpg"
-                width="1496"
-                height="713"
+                width={1496}
+                height={713}
                 alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
+                quality={100}
               />
             </FigureWithMargin>
             <P belowBoxLine>
