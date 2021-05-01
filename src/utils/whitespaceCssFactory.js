@@ -24,6 +24,10 @@ export function getPaddingTop(props, screenWidth = 'mobile') {
         ? 7.5 + getCapHeightXHeightDiff(paragraph[screenWidth])
         : 10.5 + getCapHeightXHeightDiff(paragraph[screenWidth]); // To subtract the distance from box edge to x-height (not cap-height)
   }
+  if (props.belowH3) {
+    targetHeight = whitespace(screenWidth).betweenParagraphs;
+    spaceByDefault = screenWidth === 'mobile' ? 11.5 : 15; // descender of Cormorant
+  }
   return remify(targetHeight - spaceByDefault);
 }
 
@@ -34,19 +38,16 @@ export function getPaddingTopAboveBox(props, screenWidth = 'mobile') {
     );
   }
   let spaceByDefault, targetHeight;
-  // FigureWithMargin component
   if (props.belowTextLine) {
     targetHeight = whitespace(screenWidth).betweenLines;
     spaceByDefault = screenWidth === 'mobile' ? 8 : 12;
   }
-  // Figure and FigureWithMargin components
   if (props.belowH3) {
     targetHeight =
       whitespace(screenWidth).betweenLines -
       getCapHeightXHeightDiff(paragraph[screenWidth]); // make it symmetric with the space below the figure and the cap height of next paragraph
     spaceByDefault = screenWidth === 'mobile' ? 4 : 5; // descender of Cormorant
   }
-  // FigureWithMargin component
   if (props.belowBoxParagraph) {
     targetHeight = whitespace(screenWidth).betweenParagraphs;
     spaceByDefault = 0; // between boxes
