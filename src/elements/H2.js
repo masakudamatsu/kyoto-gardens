@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, h2, lineLength, whitespace} from 'src/utils/designSpec';
+import {color} from 'src/utils/specColor';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
@@ -63,7 +64,7 @@ const H2Style = styled.h2`
 `;
 
 H2Style.Wrapper = styled.div`
-  background-color: hsla(193, 50%, 26%, 0.9);
+  background-color: ${color.sectionTitle};
   background-image: linear-gradient(
     35deg,
     hsla(0, 0%, 100%, 0) 0,

@@ -1,6 +1,6 @@
 // Color palette (with Material Design as an example: https://material.io/design/color/the-color-system.html)
 
-const primary = '#6200ee';
+const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = '#3700b3';
 const primaryTint = '#bb86fc';
 
@@ -37,6 +37,8 @@ export const color = {
   },
   source: gray,
   imagePlaceholder: lightGray,
+  sectionTitle: primary,
+  sectionBreak: primary,
   section: {
     background: surface,
     font: onSurface,

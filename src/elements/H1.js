@@ -7,6 +7,7 @@ import {
   paragraph,
   whitespace,
 } from 'src/utils/designSpec';
+import {color} from 'src/utils/specColor';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import Span from 'src/elements/Span';
@@ -78,7 +79,7 @@ H1.RockGarden = styled.span`
 `;
 
 H1.Wrapper = styled.div`
-  background-color: hsla(193, 50%, 26%, 0.9);
+  background-color: ${color.sectionTitle};
   background-image: linear-gradient(
     35deg,
     hsla(0, 0%, 100%, 0) 0,

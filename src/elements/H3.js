@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, h3, lineLength, whitespace} from 'src/utils/designSpec';
+import {color} from 'src/utils/specColor';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
 const H3 = styled.h3`
-  color: hsla(193, 50%, 26%, 0.9);
+  color: ${color.sectionTitle};
   font-family: ${h3.mobile.fontFamily};
   font-size: ${remify(getFontSize(h3.mobile))};
   font-weight: ${h3.mobile.fontWeight};
