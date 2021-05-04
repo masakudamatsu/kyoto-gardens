@@ -122,6 +122,11 @@ figCaption.desktop = {
   xHeight: xHeight('desktop'),
 };
 
+export const smallcaps = {
+  fontFamily: cormorantSC.fontFamily,
+  letterSpacing: '0.01em',
+};
+
 export function whitespace(screenWidth = 'mobile') {
   let lineHeightRatio;
   if (screenWidth === 'mobile') {

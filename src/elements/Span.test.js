@@ -24,7 +24,11 @@ describe('Props work as intended', () => {
     const {container} = render(<Span smallcaps />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Cormorant SC',Times New Roman,serif;
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        -webkit-letter-spacing: 0.01em;
+        -moz-letter-spacing: 0.01em;
+        -ms-letter-spacing: 0.01em;
+        letter-spacing: 0.01em;
       }
 
       <div>
