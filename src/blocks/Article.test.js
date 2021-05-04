@@ -10,9 +10,20 @@ describe('Parent chnages UI by prop value', () => {
     const {container} = render(<Article kohoan />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        font-family: 'Libre Baskerville','Verdana',serif;
+        font-size: 0.993rem;
+        font-weight: 400;
+        line-height: 1.8725;
         background-color: #ffffff;
         margin: 0 auto;
         max-width: 941px;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          font-size: 1.2266rem;
+          line-height: 2.00625;
+        }
       }
 
       <div>

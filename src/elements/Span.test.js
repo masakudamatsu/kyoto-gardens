@@ -21,7 +21,7 @@ describe('Props work as intended', () => {
     `);
   });
   test('smallcaps', () => {
-    const {container} = render(<Span smallcaps />);
+    const {container} = render(<Span ryoanji smallcaps />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;

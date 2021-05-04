@@ -6,7 +6,7 @@ import Abbr from './Abbr';
 const mockProps = {};
 
 test('renders UI correctly', () => {
-  const {container} = render(<Abbr title="title" />);
+  const {container} = render(<Abbr ryoanji title="title" />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       font-family: 'Cormorant SC','Times New Roman',serif;

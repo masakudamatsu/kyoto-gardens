@@ -42,6 +42,8 @@ const cormorantSC = {
   }, // measured by myself
 };
 
+const ryoanji = {};
+
 export const paragraph = {
   mobile: {
     ...cormorantGaramond,
@@ -61,6 +63,8 @@ paragraph.desktop = {
     betweenLines: 11,
   },
 };
+
+ryoanji.paragraph = paragraph;
 
 export const h2 = {
   mobile: {
@@ -88,6 +92,8 @@ h2.desktop = {
   },
 };
 
+ryoanji.h2 = h2;
+
 export const h1 = {
   mobile: {
     ...cormorantSC,
@@ -104,6 +110,8 @@ h1.desktop = {
   ...h1.mobile,
   xHeight: h2.desktop.xHeight * scale * scale,
 };
+
+ryoanji.h1 = h1;
 
 export const figCaption = {
   mobile: {
@@ -122,10 +130,14 @@ figCaption.desktop = {
   xHeight: xHeight('desktop'),
 };
 
+ryoanji.figCaption = figCaption;
+
 export const smallcaps = {
   fontFamily: cormorantSC.fontFamily,
   letterSpacing: '0.01em',
 };
+
+ryoanji.smallcaps = smallcaps;
 
 export function whitespace(screenWidth = 'mobile') {
   let lineHeightRatio;
@@ -173,6 +185,8 @@ h3.desktop = {
   xHeight: xHeight('desktop'),
 };
 
+ryoanji.h3 = h3;
+
 export const figureBordered = {
   padding: 15.564,
 };
@@ -201,4 +215,40 @@ export const breakpoint = {
     lineLength.min + whitespace().sideMarginLarge * 2, // remify to be responsive to user's base font size
   )})`,
   photo: `(min-width: ${maxPhotoWidth}px)`,
+};
+
+export {ryoanji};
+
+/* *********  Koho-an   ********** */
+
+export const libreBaskerville = {
+  fontFamily: "'Libre Baskerville', 'Verdana', serif", // Verdana is sans-serif, but its letter height and width matches a lot closer than Georgia, Trebuchet, or Times
+  fontWeight: 400,
+  fontMetrics: {
+    unitsPerEm: 1000,
+    xHeight: 535,
+    capHeight: 775,
+  }, // measured by myself
+};
+
+export const kohoan = {
+  paragraph: {
+    mobile: {
+      ...libreBaskerville,
+      xHeight: xHeight(),
+      lineHeightRatio: {
+        xHeight: 2,
+        betweenLines: 5,
+      },
+    },
+  },
+};
+
+kohoan.paragraph.desktop = {
+  ...kohoan.paragraph.mobile,
+  xHeight: xHeight('desktop'),
+  lineHeightRatio: {
+    xHeight: 4,
+    betweenLines: 11,
+  },
 };

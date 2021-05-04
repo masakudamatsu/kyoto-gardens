@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {
   breakpoint,
-  h1,
   lineLength,
   paragraph,
+  ryoanji,
   whitespace,
 } from 'src/utils/designSpec';
 import {color} from 'src/utils/specColor';
@@ -16,12 +16,12 @@ import Span from 'src/elements/Span';
 
 const fontStyle = {
   ryoanji: css`
-    font-family: ${h1.mobile.fontFamily};
-    font-size: ${remify(getFontSize(h1.mobile))};
-    font-weight: ${h1.mobile.fontWeight};
-    line-height: ${getLineHeight(h1.mobile)};
+    font-family: ${ryoanji.h1.mobile.fontFamily};
+    font-size: ${remify(getFontSize(ryoanji.h1.mobile))};
+    font-weight: ${ryoanji.h1.mobile.fontWeight};
+    line-height: ${getLineHeight(ryoanji.h1.mobile)};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(getFontSize(h1.desktop))};
+      font-size: ${remify(getFontSize(ryoanji.h1.desktop))};
     }
   `,
 };
@@ -78,7 +78,7 @@ H1.Ryoanji = styled.span`
 `;
 
 H1.RockGarden = styled.span`
-  font-size: ${round(h1.shrinkText, 4)}em;
+  font-size: ${round(ryoanji.h1.shrinkText, 4)}em;
   padding-bottom: ${remify(paragraph.mobile.xHeight)};
   @media only screen and ${breakpoint.fontSize} {
     padding-bottom: ${remify(

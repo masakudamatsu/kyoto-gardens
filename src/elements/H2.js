@@ -1,7 +1,12 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, h2, lineLength, whitespace} from 'src/utils/designSpec';
+import {
+  breakpoint,
+  lineLength,
+  ryoanji,
+  whitespace,
+} from 'src/utils/designSpec';
 import {color} from 'src/utils/specColor';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
@@ -21,13 +26,13 @@ const defaultSpace = {
 
 const fontStyle = {
   ryoanji: css`
-    font-family: ${h2.mobile.fontFamily};
-    font-size: ${remify(getFontSize(h2.mobile))};
-    font-weight: ${h2.mobile.fontWeight};
-    line-height: ${getLineHeight(h2.mobile)};
+    font-family: ${ryoanji.h2.mobile.fontFamily};
+    font-size: ${remify(getFontSize(ryoanji.h2.mobile))};
+    font-weight: ${ryoanji.h2.mobile.fontWeight};
+    line-height: ${getLineHeight(ryoanji.h2.mobile)};
     text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(getFontSize(h2.desktop))};
+      font-size: ${remify(getFontSize(ryoanji.h2.desktop))};
     }
   `,
 };
@@ -35,8 +40,12 @@ const fontStyle = {
 const defaultStyle = css`
   ${props => props.ryoanji && fontStyle.ryoanji}
   color: #eee;
-  padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
-  padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
+  padding-bottom: ${remify(
+    ryoanji.h2.mobile.padding - defaultSpace.mobile.descender,
+  )};
+  padding-top: ${remify(
+    ryoanji.h2.mobile.padding - defaultSpace.mobile.ascender,
+  )};
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
     width: ${remify(lineLength.max.mobile)};
@@ -44,9 +53,11 @@ const defaultStyle = css`
   @media only screen and ${breakpoint.fontSize} {
     margin: 0;
     padding-bottom: ${remify(
-      h2.desktop.padding - defaultSpace.desktop.descender,
+      ryoanji.h2.desktop.padding - defaultSpace.desktop.descender,
     )};
-    padding-top: ${remify(h2.desktop.padding - defaultSpace.desktop.ascender)};
+    padding-top: ${remify(
+      ryoanji.h2.desktop.padding - defaultSpace.desktop.ascender,
+    )};
     width: auto;
   }
   @media only screen and ${breakpoint.floorPlanWidthDesktop} {

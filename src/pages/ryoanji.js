@@ -104,9 +104,11 @@ export default function Ryoanji() {
           <Section>
             <H2 visuallyHidden>Introduction</H2>
             <P belowBoxParagraph>
-              <Span smallcaps>Pick any</Span> travel guide for Kyoto. I’m sure
-              you’ll find Ryoan-ji, a Zen Buddhist temple famous for its Rock
-              Garden (pictured above).
+              <Span smallcaps ryoanji>
+                Pick any
+              </Span>{' '}
+              travel guide for Kyoto. I’m sure you’ll find Ryoan-ji, a Zen
+              Buddhist temple famous for its Rock Garden (pictured above).
             </P>
             <P belowTextParagraph>
               This zen garden is made of fifteen rocks, surrounded by patches of
@@ -141,7 +143,7 @@ export default function Ryoanji() {
                 height={313}
                 alt=""
               />
-              <FigCaption>
+              <FigCaption ryoanji>
                 The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
                 <FigCaption.Footer>
                   Adapted from{' '}
@@ -377,27 +379,27 @@ export default function Ryoanji() {
             <P belowTextParagraph>
               The best way to appreciate the garden is to arrive early in the
               morning before tourists start flocking to Ryoan-ji Temple. I
-              arrive there when the temple opens its gate at 8<Abbr>am</Abbr>{' '}
-              (or at 8:30
-              <Abbr>am</Abbr> from December to February). I sit down at the
-              viewpoint explained above. Then I observe how the rising sun
+              arrive there when the temple opens its gate at 8
+              <Abbr ryoanji>am</Abbr> (or at 8:30
+              <Abbr ryoanji>am</Abbr> from December to February). I sit down at
+              the viewpoint explained above. Then I observe how the rising sun
               constantly changes its way of illuminating the garden as the time
               passes by—no fixation on a particular moment.
             </P>
             <P belowTextParagraph>
-              By 10<Abbr>am</Abbr>, a flock of tourists start arriving and
-              counting how many rocks there are—which is totally off the point
-              about this garden. I leave the rock garden and take a stroll
+              By 10<Abbr ryoanji>am</Abbr>, a flock of tourists start arriving
+              and counting how many rocks there are—which is totally off the
+              point about this garden. I leave the rock garden and take a stroll
               around the pond garden outside, which I realize also avoids
               creating any focal point.
             </P>
             <P belowTextParagraph>
               With the 21st century’s life overloaded with information, it is so
               easy to forget the simple principle of happiness that the Buddha
-              discovered in the 5th century <Abbr>BC</Abbr>. With its minimal,
-              yet profound composition of 15 rocks, Ryoan-ji Rock Garden has
-              been there since the early 16th century to reminds us of the
-              teaching of the Buddha.
+              discovered in the 5th century <Abbr ryoanji>BC</Abbr>. With its
+              minimal, yet profound composition of 15 rocks, Ryoan-ji Rock
+              Garden has been there since the early 16th century to reminds us
+              of the teaching of the Buddha.
             </P>
           </Section>{' '}
           <Section as="footer">
