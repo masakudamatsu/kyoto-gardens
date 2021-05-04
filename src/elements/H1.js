@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import PropTypes from 'prop-types';
+
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {
   breakpoint,
@@ -11,6 +13,18 @@ import {color} from 'src/utils/specColor';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import Span from 'src/elements/Span';
+
+const fontStyle = {
+  ryoanji: css`
+    font-family: ${h1.mobile.fontFamily};
+    font-size: ${remify(getFontSize(h1.mobile))};
+    font-weight: ${h1.mobile.fontWeight};
+    line-height: ${getLineHeight(h1.mobile)};
+    @media only screen and ${breakpoint.fontSize} {
+      font-size: ${remify(getFontSize(h1.desktop))};
+    }
+  `,
+};
 
 const defaultSpace = {
   mobile: {
@@ -33,18 +47,14 @@ const defaultSpace = {
 // Font-size 103.208px
 // Word spacing reduced by 0.129em
 const H1 = styled.h1`
+  ${props => props.ryoanji && fontStyle.ryoanji}
   display: flex;
   flex-direction: column;
-  font-family: ${h1.mobile.fontFamily};
-  font-size: ${remify(getFontSize(h1.mobile))};
-  font-weight: ${h1.mobile.fontWeight};
-  line-height: ${getLineHeight(h1.mobile)};
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
     width: ${remify(lineLength.max.mobile)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(h1.desktop))};
     margin: 0;
     width: auto;
   }
@@ -109,5 +119,9 @@ H1.Wrapper = styled.div`
     padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
   }
 `;
+
+H1.propTypes = {
+  ryoanji: PropTypes.bool,
+};
 
 export default H1;

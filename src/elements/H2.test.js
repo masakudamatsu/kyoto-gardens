@@ -33,17 +33,17 @@ describe('Props work as intended', () => {
 });
 
 test('renders UI correctly', () => {
-  const {container} = render(<H2 {...mockProps} />);
+  const {container} = render(<H2 ryoanji {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c1 {
-      color: #eee;
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 2.2025rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
+      text-indent: -0.125rem;
+      color: #eee;
       padding-bottom: 0.9765rem;
       padding-top: 1.0078rem;
-      text-indent: -0.125rem;
     }
 
     .c0 {
@@ -51,6 +51,12 @@ test('renders UI correctly', () => {
       background-image: linear-gradient( 35deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,0.5) 55%,hsla(0,0%,100%,0.5) 65%,hsla(0,0%,100%,0) );
       padding-left: 1.3281rem;
       padding-right: 1.3281rem;
+    }
+
+    @media only screen and (min-width:728px) {
+      .c1 {
+        font-size: 2.7208rem;
+      }
     }
 
     @media only screen and (min-width:38.9424rem) {
@@ -62,7 +68,6 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c1 {
-        font-size: 2.7208rem;
         margin: 0;
         padding-bottom: 1.1842rem;
         padding-top: 1.2155rem;

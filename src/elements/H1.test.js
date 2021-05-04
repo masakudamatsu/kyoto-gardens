@@ -7,9 +7,13 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('Parent', () => {
-    const {container} = render(<H1 {...mockProps} />);
+    const {container} = render(<H1 ryoanji {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        font-size: 3.1331rem;
+        font-weight: 700;
+        line-height: 0.7065;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -17,10 +21,12 @@ describe('renders UI correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        font-family: 'Cormorant SC','Times New Roman',serif;
-        font-size: 3.1331rem;
-        font-weight: 700;
-        line-height: 0.7065;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          font-size: 6.4505rem;
+        }
       }
 
       @media only screen and (min-width:38.9424rem) {
@@ -32,7 +38,6 @@ describe('renders UI correctly', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 6.4505rem;
           margin: 0;
           width: auto;
         }

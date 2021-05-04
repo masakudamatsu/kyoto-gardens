@@ -79,10 +79,6 @@ describe('renders UI correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        font-family: 'Cormorant SC','Times New Roman',serif;
-        font-size: 3.1331rem;
-        font-weight: 700;
-        line-height: 0.7065;
       }
 
       .c1 {
@@ -99,7 +95,6 @@ describe('renders UI correctly', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 6.4505rem;
           margin: 0;
           width: auto;
         }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, h3, lineLength, whitespace} from 'src/utils/designSpec';
@@ -6,12 +6,21 @@ import {color} from 'src/utils/specColor';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
+const fontStyle = {
+  ryoanji: css`
+    font-family: ${h3.mobile.fontFamily};
+    font-size: ${remify(getFontSize(h3.mobile))};
+    font-weight: ${h3.mobile.fontWeight};
+    line-height: ${getLineHeight(h3.mobile)};
+    @media only screen and ${breakpoint.fontSize} {
+      font-size: ${remify(getFontSize(h3.desktop))};
+    }
+  `,
+};
+
 const H3 = styled.h3`
+  ${props => props.ryoanji && fontStyle.ryoanji}
   color: ${color.sectionTitle};
-  font-family: ${h3.mobile.fontFamily};
-  font-size: ${remify(getFontSize(h3.mobile))};
-  font-weight: ${h3.mobile.fontWeight};
-  line-height: ${getLineHeight(h3.mobile)};
   margin: 0 auto;
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
@@ -22,7 +31,6 @@ const H3 = styled.h3`
     padding: 0 ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(h3.desktop))};
     max-width: ${remify(
       lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
     )};
@@ -30,5 +38,7 @@ const H3 = styled.h3`
   }
 `;
 
-H3.propTypes = {};
+H3.propTypes = {
+  ryoanji: PropTypes.bool,
+};
 export default H3;

@@ -19,21 +19,29 @@ const defaultSpace = {
   },
 };
 
+const fontStyle = {
+  ryoanji: css`
+    font-family: ${h2.mobile.fontFamily};
+    font-size: ${remify(getFontSize(h2.mobile))};
+    font-weight: ${h2.mobile.fontWeight};
+    line-height: ${getLineHeight(h2.mobile)};
+    text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
+    @media only screen and ${breakpoint.fontSize} {
+      font-size: ${remify(getFontSize(h2.desktop))};
+    }
+  `,
+};
+
 const defaultStyle = css`
+  ${props => props.ryoanji && fontStyle.ryoanji}
   color: #eee;
-  font-family: ${h2.mobile.fontFamily};
-  font-size: ${remify(getFontSize(h2.mobile))};
-  font-weight: ${h2.mobile.fontWeight};
-  line-height: ${getLineHeight(h2.mobile)};
   padding-bottom: ${remify(h2.mobile.padding - defaultSpace.mobile.descender)};
   padding-top: ${remify(h2.mobile.padding - defaultSpace.mobile.ascender)};
-  text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
     width: ${remify(lineLength.max.mobile)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(h2.desktop))};
     margin: 0;
     padding-bottom: ${remify(
       h2.desktop.padding - defaultSpace.desktop.descender,
@@ -95,6 +103,7 @@ const H2 = props => {
 };
 
 H2.propTypes = {
+  ryoanji: PropTypes.bool,
   visuallyHidden: PropTypes.bool,
 };
 export default H2;
