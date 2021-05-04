@@ -5,11 +5,6 @@ import GlobalStyle from 'src/utils/GlobalStyle';
 const title = 'Template Next.js Site';
 const description = 'Template code for Next.js sites';
 const url = 'https://github.com/masakudamatsu/nextjs-template';
-const webfont = {
-  server: 'https://fonts.gstatic.com',
-  stylesheet:
-    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,700&family=Cormorant+SC:wght@600;700&family=Cormorant:wght@700&family=Shippori+Mincho:wght@500&display=swap',
-}; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
 
 const favicon = {
   svg: '/logo.svg',
@@ -42,22 +37,6 @@ export default function App({Component, pageProps}) {
         {/* This tag would cause an error if it were in _document.js. See https://github.com/vercel/next.js/blob/master/errors/no-document-viewport-meta.md */}
         <title>{title}</title> <meta name="description" content={description} />
         {/* If a single-page app; otherwise add a title to each page instead */}{' '}
-        {/*** Web font loading ***/}
-        <link rel="preconnect" href={webfont.server} />
-        {/* For faster web font loading. */}
-        <link rel="preload" as="style" href={webfont.stylesheet} />
-        {/* For faster web font loading. */}
-        <link
-          rel="stylesheet"
-          href={webfont.stylesheet}
-          media="print"
-          onload="this.media='all'"
-        />
-        {/* For actually reading the @font-face stylesheet. It's also a fallback for browsers incompatible with <link rel="preload" />. */}
-        <noscript>
-          <link rel="stylesheet" href={webfont.stylesheet} />
-        </noscript>
-        {/* Fallback for JavaScript-disabled browsers.  */}
         {/*** Favicon ***/}
         <link rel="icon" type="image/svg+xml" href={favicon.svg} />
         {/* SVG-favicon-compatible browsers */}

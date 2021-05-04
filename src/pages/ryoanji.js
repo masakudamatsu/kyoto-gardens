@@ -22,11 +22,32 @@ import {maxPhotoWidth} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/metadata';
 
 export default function Ryoanji() {
+  const webfont = {
+    server: 'https://fonts.gstatic.com',
+    stylesheet:
+      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,700&family=Cormorant+SC:wght@600;700&family=Cormorant:wght@700&family=Shippori+Mincho:wght@500&display=swap',
+  }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
   return (
     <>
       <Head>
         <title>{ryoanji.title}</title>
         <meta name="description" content={ryoanji.description} />
+        {/*** Web font loading ***/}
+        <link rel="preconnect" href={webfont.server} />
+        {/* For faster web font loading. */}
+        <link rel="preload" as="style" href={webfont.stylesheet} />
+        {/* For faster web font loading. */}
+        <link
+          rel="stylesheet"
+          href={webfont.stylesheet}
+          media="print"
+          onLoad="this.media='all'"
+        />
+        {/* For actually reading the @font-face stylesheet. It's also a fallback for browsers incompatible with <link rel="preload" />. */}
+        <noscript>
+          <link rel="stylesheet" href={webfont.stylesheet} />
+        </noscript>
+        {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
       <Background ryoanji>
         <Article>
