@@ -10,17 +10,38 @@ test('renders UI correctly', () => {
   expect(container).toMatchInlineSnapshot(`
     .c0:link,
     .c0:visited {
-      background: hsla(193,50%,26%,0.1);
-      background: linear-gradient( to bottom,transparent 50%,hsla(193,50%,26%,0.9) 50%,hsla(193,50%,26%,0.9) ) no-repeat 0 0.973em;
+      background: rgb(240,240,240);
+      background: linear-gradient( to bottom,transparent 50%,currentColor 50%,currentColor );
+      background-position: 0 0.9830em;
+      background-repeat: no-repeat;
       background-size: 100% 2px;
       color: inherit;
+      cursor: pointer;
       -webkit-text-decoration: none;
       text-decoration: none;
+      text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
     }
 
-    .c0:hover,
+    .c0:focus,
+    .c0:hover {
+      background: rgb(240,240,240);
+      outline: none;
+      text-shadow: none;
+    }
+
     .c0:active {
-      color: hsla(193,50%,26%,0.9);
+      background: none;
+    }
+
+    .c0:visited:focus,
+    .c0:visited:hover {
+      background: rgb(240,240,240);
+      outline: none;
+      text-shadow: none;
+    }
+
+    .c0:visited:active {
+      background: none;
     }
 
     <div>

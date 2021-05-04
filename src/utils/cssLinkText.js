@@ -17,7 +17,7 @@ export function cssLinkText({
         currentColor
       );
       background-position: 0
-        ${(0.4 + fontMetrics.capHeight / fontMetrics.unitsPerEm).toFixed(4)}em; /* As text crop sets the link text box's height equal to cap height, 0.4(em) measures the distance between baseline and the link text underline */
+        ${(0.35 + fontMetrics.capHeight / fontMetrics.unitsPerEm).toFixed(4)}em; /* As text crop sets the link text box's height equal to cap height, 0.4(em) measures the distance between baseline and the link text underline */
       background-repeat: no-repeat;
       background-size: 100% 2px;
       color: ${linkTextColor};

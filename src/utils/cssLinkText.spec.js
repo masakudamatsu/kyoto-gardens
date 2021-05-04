@@ -28,7 +28,7 @@ test('applies CSS declarations as expected', () => {
     .c0:visited {
       background: #aaaaaa;
       background: linear-gradient( to bottom,transparent 50%,currentColor 50%,currentColor );
-      background-position: 0 1.1000em;
+      background-position: 0 1.0500em;
       background-repeat: no-repeat;
       background-size: 100% 2px;
       color: #ffffff;
