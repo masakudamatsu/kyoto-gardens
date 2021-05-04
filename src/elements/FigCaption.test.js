@@ -7,7 +7,7 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('FigCaption', () => {
-    const {container} = render(<FigCaption {...mockProps} />);
+    const {container} = render(<FigCaption ryoanji {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
