@@ -13,10 +13,6 @@ describe('renders UI correctly:', () => {
     const {container} = render(<P belowBoxLine {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Cormorant Garamond','Times New Roman',serif;
-        font-size: 1.3348rem;
-        font-weight: 600;
-        line-height: 1.393;
         margin: 0 auto;
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
@@ -34,8 +30,6 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 1.6489rem;
-          line-height: 1.4925;
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
@@ -54,10 +48,6 @@ describe('renders UI correctly:', () => {
     const {container} = render(<P belowBoxParagraph {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Cormorant Garamond','Times New Roman',serif;
-        font-size: 1.3348rem;
-        font-weight: 600;
-        line-height: 1.393;
         margin: 0 auto;
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
@@ -75,8 +65,6 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 1.6489rem;
-          line-height: 1.4925;
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
@@ -95,10 +83,6 @@ describe('renders UI correctly:', () => {
     const {container} = render(<P belowTextParagraph {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Cormorant Garamond','Times New Roman',serif;
-        font-size: 1.3348rem;
-        font-weight: 600;
-        line-height: 1.393;
         margin: 0 auto;
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
@@ -116,8 +100,6 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 1.6489rem;
-          line-height: 1.4925;
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;

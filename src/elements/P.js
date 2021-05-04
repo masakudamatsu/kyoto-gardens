@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  breakpoint,
-  lineLength,
-  paragraph,
-  whitespace,
-} from 'src/utils/designSpec';
-import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
+import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
 
@@ -18,10 +12,6 @@ function getSidePadding(props) {
 }
 
 const P = styled.p`
-  font-family: ${paragraph.mobile.fontFamily};
-  font-size: ${remify(getFontSize(paragraph.mobile))};
-  font-weight: ${paragraph.mobile.fontWeight};
-  line-height: ${getLineHeight(paragraph.mobile)};
   margin: 0 auto;
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
@@ -35,8 +25,6 @@ const P = styled.p`
     padding-right: ${remify(whitespace().sideMarginLarge)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(paragraph.desktop))};
-    line-height: ${getLineHeight(paragraph.desktop)};
     max-width: ${remify(
       lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
     )};

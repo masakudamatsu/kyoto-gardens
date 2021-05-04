@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, paragraph, whitespace} from 'src/utils/designSpec';
+import {breakpoint, whitespace} from 'src/utils/designSpec';
 import {color} from 'src/utils/specColor';
-import {getFontSize} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 
 const asteriskHeight = {
@@ -32,13 +31,9 @@ const SectionBreak = styled.hr`
   /* https://stackoverflow.com/a/32146824/11847654 */
   border: none;
   color: ${color.sectionBreak};
-  font-family: ${paragraph.mobile.fontFamily};
-  font-size: ${remify(getFontSize(paragraph.mobile))};
-  font-weight: ${paragraph.mobile.fontWeight};
   padding-bottom: ${getPaddingBottom('mobile')};
   padding-top: ${getPaddingTop('mobile')};
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(paragraph.desktop))};
     padding-bottom: ${getPaddingBottom('desktop')};
     padding-top: ${getPaddingTop('desktop')};
   }

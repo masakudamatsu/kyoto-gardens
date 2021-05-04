@@ -28,10 +28,6 @@ describe('renders the UI correctly during the loading time', () => {
   test('Placeholder', () => {
     expect(screen.getByText('Loading...')).toMatchInlineSnapshot(`
       .c0 {
-        font-family: 'Cormorant Garamond','Times New Roman',serif;
-        font-size: 1.3348rem;
-        font-weight: 600;
-        line-height: 1.393;
         margin: 0 auto;
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
@@ -58,16 +54,12 @@ describe('renders the UI correctly during the loading time', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        font-family: 'Cormorant Garamond','Times New Roman',serif;
-        font-size: 1.3348rem;
-        font-weight: 600;
         height: 100%;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
         left: 0;
-        line-height: 1.393;
         position: absolute;
         right: 0;
         top: 0;
@@ -83,19 +75,10 @@ describe('renders the UI correctly during the loading time', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          font-size: 1.6489rem;
-          line-height: 1.4925;
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
           padding-top: NaNrem;
-        }
-      }
-
-      @media only screen and (min-width:728px) {
-        .c1 {
-          font-size: 1.6489rem;
-          line-height: 1.4925;
         }
       }
 

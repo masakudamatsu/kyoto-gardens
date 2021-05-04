@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import {useState} from 'react';
 import Image from 'next/image';
 
-import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
-import {breakpoint, paragraph} from 'src/utils/designSpec';
-import remify from 'src/utils/remify';
 import {shippoPattern} from 'src/utils/patterns';
 
 import P from 'src/elements/P';
@@ -20,21 +17,13 @@ const Placeholder = styled(P)`
   bottom 0;
   display: flex;
   flex-direction: column;
-  font-family: ${paragraph.mobile.fontFamily};
-  font-size: ${remify(getFontSize(paragraph.mobile))};
-  font-weight: ${paragraph.mobile.fontWeight};
   height: 100%;
   justify-content: center;
   left: 0;
-  line-height: ${getLineHeight(paragraph.mobile)};
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
-  @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(getFontSize(paragraph.desktop))};
-    line-height: ${getLineHeight(paragraph.desktop)};
-  }
 `;
 
 const ImageStyled = styled(({loaded, ...props}) => <Image {...props} />)`
