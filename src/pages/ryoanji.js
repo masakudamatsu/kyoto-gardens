@@ -176,7 +176,10 @@ export default function Ryoanji() {
             <P belowBoxParagraph>
               Once I sit down and see the garden from the correct viewpoint, the
               layout of fifteen rocks starts taking on its meaning:{' '}
-              <Italic>there is nothing emphasized in this garden</Italic>.
+              <Italic as="strong">
+                there is nothing emphasized in this garden
+              </Italic>
+              .
             </P>
             <Subsection>
               <H3 ryoanji>Straight ahead</H3>
@@ -355,7 +358,7 @@ export default function Ryoanji() {
               be interpreted as the following message:
             </P>
             <P belowTextParagraph message>
-              <Italic>
+              <Italic as="strong">
                 Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
                 <Span nowrap>in our mind.</Span>
               </Italic>
@@ -412,7 +415,7 @@ export default function Ryoanji() {
             <H2 ryoanji>References</H2>
             <P belowBoxParagraph>
               Slawson, David A. (1987).{' '}
-              <Italic>
+              <Italic as="cite">
                 <Link
                   href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
                   target="_blank"
@@ -424,7 +427,7 @@ export default function Ryoanji() {
             </P>
             <P belowTextParagraph>
               Tanaka, Shozo. (2002).{' '}
-              <Italic>
+              <Italic as="cite">
                 <Link
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
                   target="_blank"
