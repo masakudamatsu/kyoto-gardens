@@ -1,6 +1,5 @@
 // Color palette (with Material Design as an example: https://material.io/design/color/the-color-system.html)
 
-const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = '#3700b3';
 const primaryTint = '#bb86fc';
 
@@ -8,37 +7,46 @@ const secondary = '#03dac6'; // should be applied sparingly to accent select par
 const secondaryShade = '#018786';
 
 const background = '#f8f8f8'; // to match with the floorplan image background
-const surface = '#ffffff'; // cards, sheets, and menus
 const error = 'rgb(254, 254, 50)'; // errors in components, such as invalid text in a text field
 
 // text, iconography, and stroke
-const onPrimary = '#ffffff';
 const onSecondary = '#000000';
 const onBackground = '#0a0a0a';
 const onSurface = '#ffffff';
 const onError = '#0a0a0a';
 
-const gray = 'rgb(100,100,100)';
 const lightGray = 'rgb(240,240,240)';
+
+const primary = 'hsla(193, 50%, 26%, 0.9)';
+const onPrimary = '#eee';
+const surface = '#ffffff'; // cards, sheets, and menus
+const gray = 'rgb(100,100,100)';
+
 export const color = {
+  article: {
+    background: surface,
+  },
+  source: gray,
+  sectionTitle: {
+    background: primary,
+    font: onPrimary,
+  },
+  subsectionTitle: {
+    font: primary,
+  },
+  sectionBreak: primary,
+  linkText: {
+    background: {
+      default: background,
+      onHover: lightGray, // TODO: replace this with gray 3 times darker than article.background
+    },
+    font: 'inherit',
+  },
   body: {
     background: background,
     font: onBackground,
   },
-  article: {
-    background: surface,
-  },
-  linkText: {
-    background: {
-      default: background,
-      onHover: secondaryShade,
-    },
-    font: 'inherit',
-  },
-  source: gray,
   imagePlaceholder: lightGray,
-  sectionTitle: primary,
-  sectionBreak: primary,
   section: {
     background: surface,
     font: onSurface,

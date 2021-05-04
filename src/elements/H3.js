@@ -25,7 +25,7 @@ const fontStyle = {
 
 const H3 = styled.h3`
   ${props => props.ryoanji && fontStyle.ryoanji}
-  color: ${color.sectionTitle};
+  color: ${color.subsectionTitle.font};
   margin: 0 auto;
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,

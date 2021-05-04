@@ -39,7 +39,7 @@ const fontStyle = {
 
 const defaultStyle = css`
   ${props => props.ryoanji && fontStyle.ryoanji}
-  color: #eee;
+  color: ${color.sectionTitle.font};
   padding-bottom: ${remify(
     ryoanji.h2.mobile.padding - defaultSpace.mobile.descender,
   )};
@@ -83,7 +83,7 @@ const H2Style = styled.h2`
 `;
 
 H2Style.Wrapper = styled.div`
-  background-color: ${color.sectionTitle};
+  background-color: ${color.sectionTitle.background};
   background-image: linear-gradient(
     35deg,
     hsla(0, 0%, 100%, 0) 0,
