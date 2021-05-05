@@ -46,6 +46,16 @@ describe('Parent chnages UI by prop value', () => {
         max-width: 941px;
       }
 
+      .c0 .CiteItalic-aqgrgi-0 {
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      .c0 strong {
+        font-style: italic;
+        font-weight: 600;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;

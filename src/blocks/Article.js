@@ -8,6 +8,8 @@ import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
+import CiteItalic from 'src/elements/CiteItalic';
+
 const fontStyle = {
   kohoan: css`
     font-family: ${kohoan.paragraph.mobile.fontFamily};
@@ -29,6 +31,14 @@ const fontStyle = {
     @media only screen and ${breakpoint.fontSize} {
       font-size: ${remify(ryoanji.article.fontSize.desktop)};
       line-height: ${ryoanji.article.lineHeight.desktop};
+    }
+    & ${CiteItalic} {
+      font-style: italic;
+      font-weight: ${ryoanji.italic.fontWeight};
+    }
+    & strong {
+      font-style: italic;
+      font-weight: ${ryoanji.italic.fontWeight};
     }
   `,
 };

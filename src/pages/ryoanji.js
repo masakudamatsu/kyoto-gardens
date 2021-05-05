@@ -25,7 +25,7 @@ export default function Ryoanji() {
   const webfont = {
     server: 'https://fonts.gstatic.com',
     stylesheet:
-      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,700&family=Cormorant+SC:wght@600;700&family=Cormorant:wght@700&family=Shippori+Mincho:wght@500&display=swap',
+      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Cormorant+SC:wght@600;700&family=Cormorant:wght@700&family=Shippori+Mincho:wght@500&display=swap',
   }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
   return (
     <>
@@ -176,10 +176,7 @@ export default function Ryoanji() {
             <P belowBoxParagraph>
               Once I sit down and see the garden from the correct viewpoint, the
               layout of fifteen rocks starts taking on its meaning:{' '}
-              <Italic as="strong">
-                there is nothing emphasized in this garden
-              </Italic>
-              .
+              <strong>there is nothing emphasized in this garden</strong>.
             </P>
             <Subsection>
               <H3 ryoanji>Straight ahead</H3>
@@ -358,10 +355,10 @@ export default function Ryoanji() {
               be interpreted as the following message:
             </P>
             <P belowTextParagraph message>
-              <Italic as="strong">
+              <strong>
                 Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
                 <Span nowrap>in our mind.</Span>
-              </Italic>
+              </strong>
             </P>
             <P belowTextParagraph>
               This idea is central to the preaching of Zen Buddhism to live a
