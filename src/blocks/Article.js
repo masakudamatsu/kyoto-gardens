@@ -9,6 +9,7 @@ import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 import CiteItalic from 'src/elements/CiteItalic';
+import SectionBreak from 'src/elements/SectionBreak';
 import Strong from 'src/elements/Strong';
 
 const fontStyle = {
@@ -56,6 +57,9 @@ const fontStyle = {
     & ${CiteItalic} {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};
+    }
+    & ${SectionBreak} {
+      color: ${ryoanji.sectionBreak.color};
     }
     & ${Strong} {
       font-style: italic;

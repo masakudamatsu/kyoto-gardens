@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, whitespace} from 'src/utils/designSpec';
-import {color} from 'src/utils/specColor';
 import remify from 'src/utils/remify';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 const asteriskHeight = {
   mobile: 8,
@@ -30,7 +30,6 @@ const getPaddingBottom = screenWidth => {
 const SectionBreak = styled.hr`
   /* https://stackoverflow.com/a/32146824/11847654 */
   border: none;
-  color: ${color.sectionBreak};
   padding-bottom: ${getPaddingBottom('mobile')};
   padding-top: ${getPaddingTop('mobile')};
   @media only screen and ${breakpoint.fontSize} {

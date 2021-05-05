@@ -15,6 +15,7 @@ import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
+import SectionBreak from '../elements/SectionBreak';
 import Strong from '../elements/Strong';
 import Subsection from '../blocks/Subsection';
 
@@ -401,8 +402,7 @@ export default function Ryoanji() {
               Garden has been there since the early 16th century to reminds us
               of the teaching of the Buddha.
             </P>
-          </Section>{' '}
-          <Section as="footer">
+            <SectionBreak />
             <P>
               Written, photographed, designed, and coded by Masa Kudamatsu in
               2021.

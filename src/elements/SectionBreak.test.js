@@ -10,7 +10,6 @@ test('renders UI correctly', () => {
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       border: none;
-      color: hsla(193,50%,26%,0.9);
       padding-bottom: 2.7135rem;
       padding-top: 1.401rem;
     }

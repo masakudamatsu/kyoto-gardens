@@ -87,6 +87,10 @@ describe('Parent chnages UI by prop value', () => {
         font-weight: 600;
       }
 
+      .c0 .SectionBreak-m1vk1l-0 {
+        color: hsla(193,50%,26%,0.9);
+      }
+
       .c0 .Strong-sc-1vpgu6n-0 {
         font-style: italic;
         font-weight: 600;
