@@ -1,12 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  breakpoint,
-  lineLength,
-  paragraph,
-  whitespace,
-} from 'src/utils/designSpec';
+import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';

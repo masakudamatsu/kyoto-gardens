@@ -12,16 +12,6 @@ export function xHeight(screenWidth = 'mobile') {
 
 export const scale = 5 / 3;
 
-const cormorant = {
-  fontFamily: "'Cormorant', 'Times New Roman', serif",
-  fontWeight: 700,
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 402,
-    capHeight: 642,
-  }, // measured by myself
-};
-
 const cormorantGaramond = {
   fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
   fontWeight: 600,
@@ -31,18 +21,6 @@ const cormorantGaramond = {
     capHeight: 633,
   },
 };
-
-const cormorantSC = {
-  fontFamily: "'Cormorant SC', 'Times New Roman', serif",
-  fontWeight: 700,
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 471,
-    capHeight: 630,
-  }, // measured by myself
-};
-
-const ryoanji = {};
 
 export const paragraph = {
   mobile: {
@@ -63,81 +41,6 @@ paragraph.desktop = {
     betweenLines: 11,
   },
 };
-
-ryoanji.paragraph = paragraph;
-
-export const h2 = {
-  mobile: {
-    ...cormorant,
-    xHeight: xHeight() * scale,
-    lineHeightRatio: {
-      xHeight: 5,
-      betweenLines: 8,
-    }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
-    get padding() {
-      return (
-        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
-      );
-    },
-  },
-};
-
-h2.desktop = {
-  ...h2.mobile,
-  xHeight: xHeight('desktop') * scale,
-  get padding() {
-    return (
-      this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
-    );
-  },
-};
-
-ryoanji.h2 = h2;
-
-export const h1 = {
-  mobile: {
-    ...cormorantSC,
-    xHeight: h2.mobile.xHeight * scale,
-    lineHeightRatio: {
-      xHeight: 2,
-      betweenLines: 1,
-    },
-  },
-  shrinkText: 4 / 9,
-};
-
-h1.desktop = {
-  ...h1.mobile,
-  xHeight: h2.desktop.xHeight * scale * scale,
-};
-
-ryoanji.h1 = h1;
-
-export const figCaption = {
-  mobile: {
-    ...cormorantSC,
-    fontWeight: 600,
-    xHeight: xHeight(),
-    lineHeightRatio: {
-      xHeight: 2,
-      betweenLines: 5,
-    },
-  },
-};
-
-figCaption.desktop = {
-  ...figCaption.mobile,
-  xHeight: xHeight('desktop'),
-};
-
-ryoanji.figCaption = figCaption;
-
-export const smallcaps = {
-  fontFamily: cormorantSC.fontFamily,
-  letterSpacing: '0.01em',
-};
-
-ryoanji.smallcaps = smallcaps;
 
 export function whitespace(screenWidth = 'mobile') {
   let lineHeightRatio;
@@ -161,26 +64,6 @@ export function whitespace(screenWidth = 'mobile') {
     sideMarginLarge: sideMarginLarge,
   };
 }
-
-export const h3 = {
-  mobile: {
-    ...cormorant,
-    // capHeight: whitespace().betweenLines,
-    xHeight: xHeight(),
-    lineHeightRatio: {
-      xHeight: 5,
-      betweenLines: 8,
-    }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
-  },
-};
-
-h3.desktop = {
-  ...h3.mobile,
-  // capHeight: whitespace('desktop').betweenLines,
-  xHeight: xHeight('desktop'),
-};
-
-ryoanji.h3 = h3;
 
 export const figureBordered = {
   padding: 15.564,
@@ -211,8 +94,6 @@ export const breakpoint = {
   )})`,
   photo: `(min-width: ${maxPhotoWidth}px)`,
 };
-
-export {ryoanji};
 
 /* *********  Koho-an   ********** */
 
