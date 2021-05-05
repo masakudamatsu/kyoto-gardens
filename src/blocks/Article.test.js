@@ -7,7 +7,7 @@ const mockProps = {};
 
 describe('Parent chnages UI by prop value', () => {
   test('kohoan', () => {
-    const {container} = render(<Article kohoan />);
+    const {container} = render(<Article page="kohoan" />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         font-family: 'Libre Baskerville','Verdana',serif;
@@ -33,7 +33,7 @@ describe('Parent chnages UI by prop value', () => {
     `);
   });
   test('ryoanji', () => {
-    const {container} = render(<Article ryoanji />);
+    const {container} = render(<Article page="ryoanji" />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         background-color: #ffffff;

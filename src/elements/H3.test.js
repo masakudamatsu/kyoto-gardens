@@ -6,7 +6,7 @@ import H3 from './H3';
 const mockProps = {};
 
 test('renders UI correctly', () => {
-  const {container} = render(<H3 ryoanji {...mockProps} />);
+  const {container} = render(<H3 page="ryoanji" {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       color: hsla(193,50%,26%,0.9);

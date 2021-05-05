@@ -52,11 +52,11 @@ export default function Ryoanji() {
         </noscript>
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
-      <Background ryoanji>
-        <Article ryoanji>
+      <Background page="ryoanji">
+        <Article page="ryoanji">
           <Article.Header>
             <H1.Wrapper>
-              <H1 ryoanji aria-label="Ryoan-ji Rock Garden">
+              <H1 page="ryoanji" aria-label="Ryoan-ji Rock Garden">
                 <H1.Ryoanji>Ryoan-ji</H1.Ryoanji>
                 <H1.RockGarden>Rock Garden</H1.RockGarden>
               </H1>
@@ -130,7 +130,7 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section>
-            <H2 ryoanji>Get the Viewpoint Right</H2>
+            <H2 page="ryoanji">Get the Viewpoint Right</H2>
             <P belowBoxParagraph>
               The key to understand this cryptic garden is to see it from where
               You’re supposed to: halfway between the left and right edges of
@@ -144,7 +144,7 @@ export default function Ryoanji() {
                 height={313}
                 alt=""
               />
-              <FigCaption ryoanji>
+              <FigCaption page="ryoanji">
                 The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
                 <Source as="footer">
                   Adapted from{' '}
@@ -177,14 +177,14 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section>
-            <H2 ryoanji>No Focal Point in the Garden</H2>
+            <H2 page="ryoanji">No Focal Point in the Garden</H2>
             <P belowBoxParagraph>
               Once I sit down and see the garden from the correct viewpoint, the
               layout of fifteen rocks starts taking on its meaning:{' '}
               <Strong>there is nothing emphasized in this garden</Strong>.
             </P>
             <Subsection>
-              <H3 ryoanji>Straight ahead</H3>
+              <H3 page="ryoanji">Straight ahead</H3>
               <Figure belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-banner-summer-large.jpg"
@@ -203,7 +203,7 @@ export default function Ryoanji() {
             </Subsection>
             <Subsection>
               {' '}
-              <H3 ryoanji>Leftward</H3>
+              <H3 page="ryoanji">Leftward</H3>
               <Figure belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-left-large.jpg"
@@ -220,7 +220,7 @@ export default function Ryoanji() {
               </P>
             </Subsection>
             <Subsection>
-              <H3 ryoanji>Rightward</H3>
+              <H3 page="ryoanji">Rightward</H3>
               <Figure belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-right-large.jpg"
@@ -241,14 +241,14 @@ export default function Ryoanji() {
             </Subsection>
           </Section>
           <Section>
-            <H2 ryoanji>No Single Rock Dominates</H2>
+            <H2 page="ryoanji">No Single Rock Dominates</H2>
             <P belowBoxParagraph>
               The lack of emphasis, I then notice, penetrates into how fifteen
               rocks are arranged into five clusters, each surrounded by a patch
               of moss. Let’s start looking at the middle three clusters.
             </P>
             <Subsection>
-              <H3 ryoanji>Middle left</H3>
+              <H3 page="ryoanji">Middle left</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-left.jpg"
@@ -265,7 +265,7 @@ export default function Ryoanji() {
               </P>
             </Subsection>
             <Subsection>
-              <H3 ryoanji>Middle</H3>
+              <H3 page="ryoanji">Middle</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-right.jpg"
@@ -282,7 +282,7 @@ export default function Ryoanji() {
               </P>
             </Subsection>
             <Subsection>
-              <H3 ryoanji>Middle right</H3>
+              <H3 page="ryoanji">Middle right</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-second-right.jpg"
@@ -298,7 +298,7 @@ export default function Ryoanji() {
               </P>
             </Subsection>
             <Subsection>
-              <H3 ryoanji>Leftmost</H3>
+              <H3 page="ryoanji">Leftmost</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-leftmost.jpg"
@@ -319,7 +319,7 @@ export default function Ryoanji() {
               </P>
             </Subsection>
             <Subsection>
-              <H3 ryoanji>Rightmost</H3>
+              <H3 page="ryoanji">Rightmost</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-rightmost.jpg"
@@ -340,7 +340,7 @@ export default function Ryoanji() {
             </Subsection>
           </Section>
           <Section>
-            <H2 ryoanji>The Rock Garden’s Message</H2>
+            <H2 page="ryoanji">The Rock Garden’s Message</H2>
             <P belowBoxParagraph>
               Now it is clear that nothing is emphasized throughout this garden.
               I start wondering why. The designer of this garden, who remains
@@ -374,7 +374,7 @@ export default function Ryoanji() {
             </P>
           </Section>{' '}
           <Section>
-            <H2 ryoanji>Garden as a Reminder</H2>
+            <H2 page="ryoanji">Garden as a Reminder</H2>
             <P belowBoxParagraph>
               Ever since I managed to interpret the meaning of Ryoan-ji Rock
               Garden as described above, I’ve been paying a visit to this zen
@@ -413,7 +413,7 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section as="aside">
-            <H2 ryoanji>References</H2>
+            <H2 page="ryoanji">References</H2>
             <P belowBoxParagraph>
               Slawson, David A. (1987).{' '}
               <CiteItalic>

@@ -27,7 +27,7 @@ const fontStyle = {
 };
 
 const defaultStyle = css`
-  ${props => props.ryoanji && fontStyle.ryoanji}
+  ${props => props.page === 'ryoanji' && fontStyle.ryoanji}
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
     width: ${remify(lineLength.max.mobile)};
@@ -60,7 +60,7 @@ const H2Style = styled.h2`
 
 H2Style.Wrapper = styled.div`
   ${props =>
-    props.ryoanji &&
+    props.page === 'ryoanji' &&
     `
     background-color: ${ryoanji.h2.backgroundColor};
     background-image: linear-gradient(
@@ -94,7 +94,7 @@ const H2 = props => {
 };
 
 H2.propTypes = {
-  ryoanji: PropTypes.bool,
+  page: PropTypes.string,
   visuallyHidden: PropTypes.bool,
 };
 export default H2;

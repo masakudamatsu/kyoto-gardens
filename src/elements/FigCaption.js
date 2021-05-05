@@ -43,10 +43,10 @@ const fontStyle = {
 };
 
 const FigCaption = styled.figcaption`
-  ${props => props.ryoanji && fontStyle.ryoanji}
+  ${props => props.page === 'ryoanji' && fontStyle.ryoanji}
 `;
 
 FigCaption.propTypes = {
-  ryoanji: PropTypes.bool,
+  page: PropTypes.string.isRequired,
 };
 export default FigCaption;

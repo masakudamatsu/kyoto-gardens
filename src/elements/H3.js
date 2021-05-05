@@ -21,7 +21,7 @@ const fontStyle = {
 };
 
 const H3 = styled.h3`
-  ${props => props.ryoanji && fontStyle.ryoanji}
+  ${props => (props.page = 'ryoanji' && fontStyle.ryoanji)}
   margin: 0 auto;
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
@@ -39,6 +39,6 @@ const H3 = styled.h3`
 `;
 
 H3.propTypes = {
-  ryoanji: PropTypes.bool,
+  page: PropTypes.string.isRequired,
 };
 export default H3;

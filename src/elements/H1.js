@@ -34,7 +34,7 @@ const fontStyle = {
 // Font-size 103.208px
 // Word spacing reduced by 0.129em
 const H1 = styled.h1`
-  ${props => props.ryoanji && fontStyle.ryoanji}
+  ${({page}) => page === 'ryoanji' && fontStyle.ryoanji}
   display: flex;
   flex-direction: column;
   @media only screen and ${breakpoint.floorPlanWidth} {
@@ -115,7 +115,7 @@ H1.Wrapper = styled.div`
 `;
 
 H1.propTypes = {
-  ryoanji: PropTypes.bool,
+  page: PropTypes.string,
 };
 
 export default H1;

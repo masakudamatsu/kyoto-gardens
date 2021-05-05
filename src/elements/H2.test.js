@@ -33,7 +33,7 @@ describe('Props work as intended', () => {
 });
 
 test('renders UI correctly', () => {
-  const {container} = render(<H2 ryoanji {...mockProps} />);
+  const {container} = render(<H2 page="ryoanji" {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c1 {
       color: #eee;

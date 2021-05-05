@@ -85,8 +85,8 @@ const fontStyle = {
 };
 
 const Article = styled.article`
-  ${props => props.ryoanji && fontStyle.ryoanji}
-  ${props => props.kohoan && fontStyle.kohoan}
+  ${({page}) => (page === 'ryoanji' ? fontStyle.ryoanji : null)}
+  ${({page}) => (page === 'kohoan' ? fontStyle.kohoan : null)}
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
 `;
@@ -96,7 +96,7 @@ Article.Header = styled.header`
 `;
 
 Article.propTypes = {
-  ryoanji: PropTypes.bool,
+  page: PropTypes.string.isRequired,
 };
 
 export default Article;
