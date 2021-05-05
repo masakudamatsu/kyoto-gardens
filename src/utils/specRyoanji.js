@@ -91,7 +91,13 @@ export const ryoanji = {
   },
   smallcaps: {
     ...cormorantSC,
-    letterSpacing: '',
+    letterSpacing: '0.01em',
+  },
+  get abbr() {
+    return {
+      ...this.smallcaps,
+      textTransform: 'lowercase',
+    };
   },
   source: {
     color: onSurfaceShade,

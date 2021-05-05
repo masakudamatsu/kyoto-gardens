@@ -82,6 +82,15 @@ describe('Parent chnages UI by prop value', () => {
         background: none;
       }
 
+      .c0 .Abbr-sc-1i3jv68-0 {
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        -webkit-letter-spacing: 0.01em;
+        -moz-letter-spacing: 0.01em;
+        -ms-letter-spacing: 0.01em;
+        letter-spacing: 0.01em;
+        text-transform: lowercase;
+      }
+
       .c0 .CiteItalic-aqgrgi-0 {
         font-style: italic;
         font-weight: 600;

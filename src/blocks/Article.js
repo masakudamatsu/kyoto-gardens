@@ -8,6 +8,7 @@ import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
+import Abbr from 'src/elements/abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import SectionBreak from 'src/elements/SectionBreak';
 import Strong from 'src/elements/Strong';
@@ -53,6 +54,11 @@ const fontStyle = {
           spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,
         })}
       }
+    }
+    & ${Abbr} {
+      font-family: ${ryoanji.abbr.fontFamily};
+      letter-spacing: ${ryoanji.abbr.letterSpacing};
+      text-transform: ${ryoanji.abbr.textTransform};
     }
     & ${CiteItalic} {
       font-style: italic;
