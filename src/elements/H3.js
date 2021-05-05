@@ -11,6 +11,7 @@ const fontStyle = {
     font-family: ${ryoanji.h3.fontFamily};
     font-size: ${remify(ryoanji.h3.fontSize.mobile)};
     font-weight: ${ryoanji.h3.fontWeight};
+    letter-spacing: ${ryoanji.h3.letterSpacing};
     line-height: ${ryoanji.h3.lineHeight};
     text-transform: ${ryoanji.h3.textTransform};
     @media only screen and ${breakpoint.fontSize} {

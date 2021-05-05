@@ -40,6 +40,10 @@ test('renders UI correctly', () => {
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 2.2025rem;
       font-weight: 700;
+      -webkit-letter-spacing: 0.01em;
+      -moz-letter-spacing: 0.01em;
+      -ms-letter-spacing: 0.01em;
+      letter-spacing: 0.01em;
       line-height: 1.0452000000000001;
       padding-bottom: 0.9765rem;
       padding-top: 1.0078rem;

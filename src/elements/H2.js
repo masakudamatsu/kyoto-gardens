@@ -11,6 +11,7 @@ const fontStyle = {
     font-family: ${ryoanji.h2.fontFamily};
     font-size: ${remify(ryoanji.h2.fontSize.mobile)};
     font-weight: ${ryoanji.h2.fontWeight};
+    letter-spacing: ${ryoanji.h2.letterSpacing};
     line-height: ${ryoanji.h2.lineHeight};
     padding-bottom: ${remify(ryoanji.h2.padding.bottom.mobile)};
     padding-top: ${remify(ryoanji.h2.padding.top.mobile)};

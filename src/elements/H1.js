@@ -16,6 +16,7 @@ const fontStyle = {
     font-family: ${ryoanji.h1.fontFamily};
     font-size: ${remify(ryoanji.h1.fontSize.mobile)};
     font-weight: ${ryoanji.h1.fontWeight};
+    letter-spacing: ${ryoanji.h1.letterSpacig};
     line-height: ${ryoanji.h1.lineHeight};
     @media only screen and ${breakpoint.floorPlanWidth} {
       font-size: ${remify(ryoanji.h1.fontSize.tablet)};
@@ -69,6 +70,7 @@ H1.Ryoanji = styled.span`
 H1.RockGarden = styled.span`
   font-size: ${round(ryoanji.h1.fontSize.rockGarden, 4)}em;
   padding-bottom: ${remify(ryoanji.h1.padding.bottom.mobile)};
+  word-spacing: ${ryoanji.h1.wordSpacing.rockGarden};
   @media only screen and ${breakpoint.floorPlanWidth} {
     text-indent: ${remify(ryoanji.h1.textIndent.rockGarden.tablet)};
   }

@@ -132,6 +132,7 @@ export const ryoanji = {
       };
     },
     fontWeight: 700,
+    letterSpacig: '0.05em',
     get lineHeight() {
       return getLineHeightFromRatio(
         {xHeight: 2, betweenLines: 1}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
@@ -181,6 +182,9 @@ export const ryoanji = {
         desktop: -2,
       },
     },
+    wordSpacing: {
+      rockGarden: '-0.2em',
+    },
   },
   h2: {
     backgroundColor: primary,
@@ -193,6 +197,7 @@ export const ryoanji = {
       };
     },
     fontWeight: 700,
+    letterSpacing: '0.01em',
     get lineHeight() {
       return getLineHeightFromRatio(
         {xHeight: 5, betweenLines: 8}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
@@ -247,6 +252,7 @@ export const ryoanji = {
         this.fontMetrics,
       );
     },
+    letterSpacing: '0.02em',
     textTransform: 'uppercase', // TODO: DRY this code to share it with other pages
   },
   figCaption: {

@@ -13,6 +13,10 @@ test('renders UI correctly', () => {
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 1.3215rem;
       font-weight: 700;
+      -webkit-letter-spacing: 0.02em;
+      -moz-letter-spacing: 0.02em;
+      -ms-letter-spacing: 0.02em;
+      letter-spacing: 0.02em;
       line-height: 1.0452000000000001;
       text-transform: uppercase;
       margin: 0 auto;

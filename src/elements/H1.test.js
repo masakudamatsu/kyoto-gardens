@@ -13,6 +13,10 @@ describe('renders UI correctly', () => {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 3.1331rem;
         font-weight: 700;
+        -webkit-letter-spacing: 0.05em;
+        -moz-letter-spacing: 0.05em;
+        -ms-letter-spacing: 0.05em;
+        letter-spacing: 0.05em;
         line-height: 0.7065;
         display: -webkit-box;
         display: -webkit-flex;
@@ -97,6 +101,7 @@ describe('renders UI correctly', () => {
       .c0 {
         font-size: 0.4444em;
         padding-bottom: 0.5313rem;
+        word-spacing: -0.2em;
       }
 
       @media only screen and (min-width:38.9424rem) {
