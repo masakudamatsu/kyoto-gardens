@@ -13,14 +13,15 @@ describe('renders UI correctly', () => {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 1.1279rem;
         font-weight: 600;
+        line-height: 1.1775;
         margin-right: 5px;
-        padding-top: 0.5rem;
         text-align: right;
       }
 
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.3933rem;
+          line-height: 1.29525;
         }
       }
 

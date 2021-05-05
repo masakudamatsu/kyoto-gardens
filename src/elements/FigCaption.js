@@ -1,31 +1,31 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, ryoanji} from 'src/utils/designSpec';
-import {color} from 'src/utils/specColor';
-import {getFontSize} from 'src/utils/fontCssFactory';
+import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 const fontStyle = {
   ryoanji: css`
-    font-family: ${ryoanji.figCaption.mobile.fontFamily};
-    font-size: ${remify(getFontSize(ryoanji.figCaption.mobile))};
-    font-weight: ${ryoanji.figCaption.mobile.fontWeight};
+    font-family: ${ryoanji.figCaption.fontFamily};
+    font-size: ${remify(ryoanji.figCaption.fontSize.mobile)};
+    font-weight: ${ryoanji.figCaption.fontWeight};
+    line-height: ${ryoanji.figCaption.lineHeight.mobile};
     margin-right: 5px; /* Align with the right-edge of the floor plan */
+    text-align: ${ryoanji.figCaption.textAlign};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(getFontSize(ryoanji.figCaption.desktop))};
+      font-size: ${remify(ryoanji.figCaption.fontSize.desktop)};
+      line-height: ${ryoanji.figCaption.lineHeight.desktop};
     }
   `,
 };
 
 const FigCaption = styled.figcaption`
   ${props => props.ryoanji && fontStyle.ryoanji}
-  padding-top: 0.5rem;
-  text-align: right;
 `;
 
 FigCaption.Footer = styled.footer`
-  color: ${color.source};
+  color: ${ryoanji.source.color};
 `;
 
 FigCaption.propTypes = {
