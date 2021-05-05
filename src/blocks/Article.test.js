@@ -42,9 +42,6 @@ describe('Parent chnages UI by prop value', () => {
         font-size: 1.3348rem;
         font-weight: 600;
         line-height: 1.393;
-      }
-
-      .c0 a {
         margin: 0 auto;
         max-width: 941px;
       }
@@ -85,12 +82,12 @@ describe('Parent chnages UI by prop value', () => {
         background: none;
       }
 
-      .c0 a .CiteItalic-aqgrgi-0 {
+      .c0 .CiteItalic-aqgrgi-0 {
         font-style: italic;
         font-weight: 600;
       }
 
-      .c0 a strong {
+      .c0 .Strong-sc-1vpgu6n-0 {
         font-style: italic;
         font-weight: 600;
       }

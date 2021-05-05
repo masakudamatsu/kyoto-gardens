@@ -9,6 +9,7 @@ import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 import CiteItalic from 'src/elements/CiteItalic';
+import Strong from 'src/elements/Strong';
 
 const fontStyle = {
   kohoan: css`
@@ -51,11 +52,12 @@ const fontStyle = {
           spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,
         })}
       }
+    }
     & ${CiteItalic} {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};
     }
-    & strong {
+    & ${Strong} {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};
     }

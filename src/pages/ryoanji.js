@@ -15,6 +15,7 @@ import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
+import Strong from '../elements/Strong';
 import Subsection from '../blocks/Subsection';
 
 import {maxPhotoWidth} from 'src/utils/designSpec';
@@ -175,7 +176,7 @@ export default function Ryoanji() {
             <P belowBoxParagraph>
               Once I sit down and see the garden from the correct viewpoint, the
               layout of fifteen rocks starts taking on its meaning:{' '}
-              <strong>there is nothing emphasized in this garden</strong>.
+              <Strong>there is nothing emphasized in this garden</Strong>.
             </P>
             <Subsection>
               <H3 ryoanji>Straight ahead</H3>
@@ -354,10 +355,10 @@ export default function Ryoanji() {
               be interpreted as the following message:
             </P>
             <P belowTextParagraph message>
-              <strong>
+              <Strong>
                 Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
                 <Span nowrap>in our mind.</Span>
-              </strong>
+              </Strong>
             </P>
             <P belowTextParagraph>
               This idea is central to the preaching of Zen Buddhism to live a
