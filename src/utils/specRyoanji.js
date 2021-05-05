@@ -2,6 +2,7 @@ import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, xHeight} from './designSpec';
 // Color scheme
 const background = 'rgb(240,240,240)';
+const onBackground = '#ffffff';
 const surface = '#ffffff';
 const onSurface = '#0a0a0a';
 const onSurfaceShade = 'rgb(100,100,100)';
@@ -39,8 +40,9 @@ const cormorantSC = {
 };
 
 export const ryoanji = {
-  body: {
+  background: {
     backgroundColor: background,
+    patternColor: onBackground,
   },
   article: {
     // This sets the default for all the other elements below
