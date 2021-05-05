@@ -106,10 +106,4 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
-  test('FigCaption.Footer', () => {
-    render(<FigCaption.Footer data-testid="footer" />);
-    expect(screen.getByTestId('footer')).toHaveStyle(
-      `color: rgb(100, 100, 100)`,
-    );
-  });
 });

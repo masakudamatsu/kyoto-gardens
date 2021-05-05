@@ -86,18 +86,18 @@ export const ryoanji = {
       },
     },
   },
-  sectionBreak: {
-    color: primary,
-  },
-  smallcaps: {
+  abbr: {
     ...cormorantSC,
     letterSpacing: '0.01em',
+    textTransform: 'lowercase',
   },
-  get abbr() {
-    return {
-      ...this.smallcaps,
-      textTransform: 'lowercase',
-    };
+  leadIn: {
+    ...cormorantSC,
+    letterSpacing: '0.01em',
+    wordSpacing: '-0.05em',
+  },
+  sectionBreak: {
+    color: primary,
   },
   source: {
     color: onSurfaceShade,

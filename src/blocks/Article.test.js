@@ -96,8 +96,21 @@ describe('Parent chnages UI by prop value', () => {
         font-weight: 600;
       }
 
+      .c0 .LeadIn-sc-1qpem54-0 {
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        -webkit-letter-spacing: 0.01em;
+        -moz-letter-spacing: 0.01em;
+        -ms-letter-spacing: 0.01em;
+        letter-spacing: 0.01em;
+        word-spacing: -0.05em;
+      }
+
       .c0 .SectionBreak-m1vk1l-0 {
         color: hsla(193,50%,26%,0.9);
+      }
+
+      .c0 .Source-r09bvo-0 {
+        color: rgb(100,100,100);
       }
 
       .c0 .Strong-sc-1vpgu6n-0 {

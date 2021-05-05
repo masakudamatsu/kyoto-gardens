@@ -18,7 +18,7 @@ const fontStyle = {
       font-size: ${remify(ryoanji.figCaption.fontSize.desktop)};
       line-height: ${ryoanji.figCaption.lineHeight.desktop};
     }
-    a {
+    & a {
       ${cssLinkText({
         backgroundColor: ryoanji.article.backgroundColor,
         backgroundColorOnHover: ryoanji.link.backgroundOnHover,
@@ -44,10 +44,6 @@ const fontStyle = {
 
 const FigCaption = styled.figcaption`
   ${props => props.ryoanji && fontStyle.ryoanji}
-`;
-
-FigCaption.Footer = styled.footer`
-  color: ${ryoanji.source.color};
 `;
 
 FigCaption.propTypes = {

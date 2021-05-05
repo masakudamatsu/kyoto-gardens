@@ -8,9 +8,11 @@ import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
-import Abbr from 'src/elements/abbr';
+import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
+import LeadIn from 'src/elements/LeadIn';
 import SectionBreak from 'src/elements/SectionBreak';
+import Source from 'src/elements/Source';
 import Strong from 'src/elements/Strong';
 
 const fontStyle = {
@@ -64,8 +66,16 @@ const fontStyle = {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};
     }
+    & ${LeadIn} {
+      font-family: ${ryoanji.leadIn.fontFamily};
+      letter-spacing: ${ryoanji.leadIn.letterSpacing};
+      word-spacing: ${ryoanji.leadIn.wordSpacing};
+    }
     & ${SectionBreak} {
       color: ${ryoanji.sectionBreak.color};
+    }
+    & ${Source} {
+      color: ${ryoanji.source.color};
     }
     & ${Strong} {
       font-style: italic;

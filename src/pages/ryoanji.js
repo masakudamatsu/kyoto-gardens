@@ -12,10 +12,12 @@ import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
+import LeadIn from '../elements/LeadIn';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
 import SectionBreak from '../elements/SectionBreak';
+import Source from '../elements/Source';
 import Strong from '../elements/Strong';
 import Subsection from '../blocks/Subsection';
 
@@ -105,11 +107,9 @@ export default function Ryoanji() {
           <Section>
             <H2 visuallyHidden>Introduction</H2>
             <P belowBoxParagraph>
-              <Span smallcaps ryoanji>
-                Pick any
-              </Span>{' '}
-              travel guide for Kyoto. I’m sure you’ll find Ryoan-ji, a Zen
-              Buddhist temple famous for its Rock Garden (pictured above).
+              <LeadIn>Pick any</LeadIn> travel guide for Kyoto. I’m sure you’ll
+              find Ryoan-ji, a Zen Buddhist temple famous for its Rock Garden
+              (pictured above).
             </P>
             <P belowTextParagraph>
               This zen garden is made of fifteen rocks, surrounded by patches of
@@ -146,7 +146,7 @@ export default function Ryoanji() {
               />
               <FigCaption ryoanji>
                 The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
-                <FigCaption.Footer>
+                <Source as="footer">
                   Adapted from{' '}
                   <a
                     href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
@@ -155,21 +155,25 @@ export default function Ryoanji() {
                     Slawson (1987)
                   </a>
                   , p. 96.
-                </FigCaption.Footer>
+                </Source>
               </FigCaption>
             </FigureWithMargin>
             <P belowBoxParagraph>
               My third visit to the garden was different from the previous ones
               in that I had this piece of knowledge, learned from a book on
-              Japanese gardens (
-              <a
-                href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
-                target="_blank"
-              >
-                Tanaka 2002
-              </a>
-              , pp. 58-59). The book says that the whole garden was constructed
-              to be seen from this viewpoint.
+              Japanese gardens{' '}
+              <Source>
+                (
+                <a
+                  href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
+                  target="_blank"
+                >
+                  Tanaka 2002
+                </a>
+                , pp. 58-59)
+              </Source>
+              . The book says that the whole garden was constructed to be seen
+              from this viewpoint.
             </P>
           </Section>
           <Section>
