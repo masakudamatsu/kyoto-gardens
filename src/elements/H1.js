@@ -1,43 +1,29 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {
   breakpoint,
   lineLength,
   paragraph,
-  ryoanji,
   whitespace,
 } from 'src/utils/designSpec';
-import {color} from 'src/utils/specColor';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
-import Span from 'src/elements/Span';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 const fontStyle = {
   ryoanji: css`
-    font-family: ${ryoanji.h1.mobile.fontFamily};
-    font-size: ${remify(getFontSize(ryoanji.h1.mobile))};
-    font-weight: ${ryoanji.h1.mobile.fontWeight};
-    line-height: ${getLineHeight(ryoanji.h1.mobile)};
+    font-family: ${ryoanji.h1.fontFamily};
+    font-size: ${remify(ryoanji.h1.fontSize.mobile)};
+    font-weight: ${ryoanji.h1.fontWeight};
+    line-height: ${ryoanji.h1.lineHeight};
+    @media only screen and ${breakpoint.floorPlanWidth} {
+      font-size: ${remify(ryoanji.h1.fontSize.tablet)};
+    }
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(getFontSize(ryoanji.h1.desktop))};
+      font-size: ${remify(ryoanji.h1.fontSize.desktop)};
     }
   `,
-};
-
-const defaultSpace = {
-  mobile: {
-    between: 3, // between Ryoan-ji and Rock Garden when vertically stacked
-    bottom: 0, // below Rock Garden
-    left: 3,
-  },
-  desktop: {
-    between: 5,
-    bottom: 1, // below Rock Garden
-    left: 8, // left space of Ryoan-ji
-    leftBottom: 2, // left space of Rock Garden
-  },
 };
 
 // Space between J and I: 28px for desktop
@@ -65,31 +51,37 @@ const H1 = styled.h1`
 `;
 
 H1.Ryoanji = styled.span`
-  padding-bottom: ${remify(
-    paragraph.mobile.xHeight - defaultSpace.mobile.between,
-  )};
-  text-indent: -${remify(defaultSpace.mobile.left)}; /* Optical alignment with paragraphs */
+  padding-bottom: ${remify(ryoanji.h1.padding.between.mobile)};
+  text-indent: ${remify(
+    ryoanji.h1.textIndent.mobile,
+  )}; /* Optical alignment with paragraphs */
+  @media only screen and ${breakpoint.floorPlanWidth} {
+    text-indent: ${remify(ryoanji.h1.textIndent.tablet)};
+  }
   @media only screen and ${breakpoint.fontSize} {
-    padding-bottom: ${remify(
-      paragraph.desktop.xHeight - defaultSpace.desktop.between,
-    )};
-    text-indent: -${remify(defaultSpace.desktop.left)}; /* Optical alignment with paragraphs */
+    padding-bottom: ${remify(ryoanji.h1.padding.between.desktop)};
+    text-indent: ${remify(
+      ryoanji.h1.textIndent.desktop,
+    )}; /* Optical alignment with paragraphs */
   }
 `;
 
 H1.RockGarden = styled.span`
-  font-size: ${round(ryoanji.h1.shrinkText, 4)}em;
-  padding-bottom: ${remify(paragraph.mobile.xHeight)};
+  font-size: ${round(ryoanji.h1.fontSize.rockGarden, 4)}em;
+  padding-bottom: ${remify(ryoanji.h1.padding.bottom.mobile)};
+  @media only screen and ${breakpoint.floorPlanWidth} {
+    text-indent: ${remify(ryoanji.h1.textIndent.rockGarden.tablet)};
+  }
   @media only screen and ${breakpoint.fontSize} {
-    padding-bottom: ${remify(
-      paragraph.desktop.xHeight - defaultSpace.desktop.bottom,
-    )};
-    text-indent: -${remify(defaultSpace.desktop.leftBottom)}; /* Optical alignment with paragraphs */
+    padding-bottom: ${remify(ryoanji.h1.padding.bottom.desktop)};
+    text-indent: ${remify(
+      ryoanji.h1.textIndent.rockGarden.desktop,
+    )}; /* Optical alignment with paragraphs */
   }
 `;
 
 H1.Wrapper = styled.div`
-  background-color: ${color.sectionTitle.background};
+  background-color: ${ryoanji.h1.backgroundColor.mobile};
   background-image: linear-gradient(
     35deg,
     hsla(0, 0%, 100%, 0) 0,
@@ -97,20 +89,20 @@ H1.Wrapper = styled.div`
     hsla(0, 0%, 100%, 0.5) 65%,
     hsla(0, 0%, 100%, 0)
   );
-  color: ${color.sectionTitle.font};
+  color: ${ryoanji.h1.color.mobile};
   padding-left: ${remify(whitespace().sideMargin)};
   padding-right: ${remify(whitespace().sideMargin)};
-  padding-top: ${remify(paragraph.mobile.xHeight)};
+  padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
   width: 100%;
   @media only screen and ${breakpoint.sideMargin} {
-    background-color: transparent;
+    background-color: ${ryoanji.h1.backgroundColor.desktop};
     background-image: none;
     bottom: 0;
-    color: #000;
+    color: ${ryoanji.h1.color.desktop};
     left: 0;
     padding-left: ${remify(whitespace().sideMarginLarge)};
     padding-right: ${remify(whitespace().sideMarginLarge)};
-    padding-top: 0;
+    padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
     position: absolute;
     z-index: 1;
   }

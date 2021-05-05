@@ -1,11 +1,12 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, kohoan, ryoanji} from 'src/utils/designSpec';
+import {breakpoint, kohoan} from 'src/utils/designSpec';
 import {color} from 'src/utils/specColor';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 const fontStyle = {
   kohoan: css`
@@ -19,13 +20,15 @@ const fontStyle = {
     }
   `,
   ryoanji: css`
-    font-family: ${ryoanji.paragraph.mobile.fontFamily};
-    font-size: ${remify(getFontSize(ryoanji.paragraph.mobile))};
-    font-weight: ${ryoanji.paragraph.mobile.fontWeight};
-    line-height: ${getLineHeight(ryoanji.paragraph.mobile)};
+    background-color: ${ryoanji.article.backgroundColor};
+    color: ${ryoanji.article.color};
+    font-family: ${ryoanji.article.fontFamily};
+    font-size: ${remify(ryoanji.article.fontSize.mobile)};
+    font-weight: ${ryoanji.article.fontWeight};
+    line-height: ${ryoanji.article.lineHeight.mobile};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(getFontSize(ryoanji.paragraph.desktop))};
-      line-height: ${getLineHeight(ryoanji.paragraph.desktop)};
+      font-size: ${remify(ryoanji.article.fontSize.desktop)};
+      line-height: ${ryoanji.article.lineHeight.desktop};
     }
   `,
 };
@@ -33,7 +36,6 @@ const fontStyle = {
 const Article = styled.article`
   ${props => props.ryoanji && fontStyle.ryoanji}
   ${props => props.kohoan && fontStyle.kohoan}
-  background-color: ${color.article.background};
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
 `;

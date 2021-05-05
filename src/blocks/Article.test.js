@@ -14,7 +14,6 @@ describe('Parent chnages UI by prop value', () => {
         font-size: 0.993rem;
         font-weight: 400;
         line-height: 1.8725;
-        background-color: #ffffff;
         margin: 0 auto;
         max-width: 941px;
       }
@@ -37,11 +36,12 @@ describe('Parent chnages UI by prop value', () => {
     const {container} = render(<Article ryoanji />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        background-color: #ffffff;
+        color: #0a0a0a;
         font-family: 'Cormorant Garamond','Times New Roman',serif;
         font-size: 1.3348rem;
         font-weight: 600;
         line-height: 1.393;
-        background-color: #ffffff;
         margin: 0 auto;
         max-width: 941px;
       }

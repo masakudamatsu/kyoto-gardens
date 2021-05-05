@@ -9,15 +9,15 @@ test('renders UI correctly', () => {
   const {container} = render(<H3 ryoanji {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
+      color: hsla(193,50%,26%,0.9);
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 1.3215rem;
       font-weight: 700;
       line-height: 1.0452000000000001;
-      color: hsla(193,50%,26%,0.9);
+      text-transform: uppercase;
       margin: 0 auto;
       max-width: 38.9424rem;
       padding: 0 1.3281rem;
-      text-transform: uppercase;
     }
 
     @media only screen and (min-width:728px) {

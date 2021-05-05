@@ -9,6 +9,30 @@ export const getFontSize = typeface => {
   return fontSize;
 };
 
+export const getFontSizeFromX = (xHeight, fontMetrics) => {
+  if (typeof xHeight !== 'number') {
+    throw new Error(
+      `getFontSizeFromX() received x-height as ${typeof xHeight}, not as number`,
+    );
+  }
+  if (!fontMetrics) {
+    throw new Error(`getFontSizeFromX() received no fontMetrics`);
+  }
+  return xHeightToBe(xHeight, fontMetrics);
+};
+
+export const getFontSizeFromCap = (capHeight, fontMetrics) => {
+  if (typeof capHeight !== 'number') {
+    throw new Error(
+      `getFontSizeFromX() received cap-height as ${typeof capHeight}, not as number`,
+    );
+  }
+  if (!fontMetrics) {
+    throw new Error(`getFontSizeFromX() received no fontMetrics`);
+  }
+  return capHeightToBe(capHeight, fontMetrics);
+};
+
 export const getLineHeight = typeface => {
   if (!typeface.lineHeightRatio) {
     return 'normal';
@@ -22,6 +46,18 @@ export const getLineHeight = typeface => {
   );
 };
 
+export const getLineHeightFromRatio = (lineHeightRatio, fontMetrics) => {
+  if (!fontMetrics.unitsPerEm) {
+    throw new Error(`getLineHeightFromRatio() received no fontMetrics`);
+  }
+  const lineHeightToXHeightRatio =
+    (lineHeightRatio.xHeight + lineHeightRatio.betweenLines) /
+    lineHeightRatio.xHeight;
+  return (
+    (fontMetrics.xHeight * lineHeightToXHeightRatio) / fontMetrics.unitsPerEm
+  );
+};
+
 export const getCapHeightXHeightDiff = typeface => {
   let unit;
   if (typeface.xHeight) {
@@ -32,6 +68,16 @@ export const getCapHeightXHeightDiff = typeface => {
   }
   return unit * (typeface.fontMetrics.capHeight - typeface.fontMetrics.xHeight);
 };
+
+// export const getCapToXDistFromXHeight = (xHeight, designSpec) => {
+//   const unit = xHeight / designSpec.fontMetrics.xHeight;
+//   return unit * (designSpec.fontMetrics.capHeight - designSpec.fontMetrics.xHeight);
+// };
+
+// export const getCapToXDistFromCapHeight = (capHeight, designSpec) => {
+//   const unit = capHeight / designSpec.fontMetrics.capHeight;
+//   return unit * (designSpec.fontMetrics.capHeight - designSpec.fontMetrics.xHeight);
+// };
 
 // helper functions
 

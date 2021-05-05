@@ -320,11 +320,6 @@ input {
 :root { /* The background-color on the body element won't spread over the entire page for some reason. */
   background-color: ${color.body.background};
 }
-
-body {
-  color: ${color.body.font};
-}
-
 `;
 
 export default GlobalStyle;

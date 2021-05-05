@@ -23,6 +23,12 @@ describe('renders UI correctly', () => {
         flex-direction: column;
       }
 
+      @media only screen and (min-width:38.9424rem) {
+        .c0 {
+          font-size: 5.2218rem;
+        }
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 6.4505rem;
@@ -65,6 +71,12 @@ describe('renders UI correctly', () => {
         text-indent: -0.1875rem;
       }
 
+      @media only screen and (min-width:38.9424rem) {
+        .c0 {
+          text-indent: -0.375rem;
+        }
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           padding-bottom: 0.3438rem;
@@ -85,6 +97,12 @@ describe('renders UI correctly', () => {
       .c0 {
         font-size: 0.4444em;
         padding-bottom: 0.5313rem;
+      }
+
+      @media only screen and (min-width:38.9424rem) {
+        .c0 {
+          text-indent: -0.125rem;
+        }
       }
 
       @media only screen and (min-width:728px) {
@@ -123,7 +141,7 @@ describe('renders UI correctly', () => {
           left: 0;
           padding-left: 2.2135rem;
           padding-right: 2.2135rem;
-          padding-top: 0;
+          padding-top: 0rem;
           position: absolute;
           z-index: 1;
         }

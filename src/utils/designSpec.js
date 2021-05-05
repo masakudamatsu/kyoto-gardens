@@ -1,6 +1,6 @@
 import remify from './remify';
 
-function xHeight(screenWidth = 'mobile') {
+export function xHeight(screenWidth = 'mobile') {
   if (screenWidth === 'mobile') {
     return 8.5;
   } else if (screenWidth === 'desktop') {
@@ -10,7 +10,7 @@ function xHeight(screenWidth = 'mobile') {
   }
 }
 
-const scale = 5 / 3;
+export const scale = 5 / 3;
 
 const cormorant = {
   fontFamily: "'Cormorant', 'Times New Roman', serif",
@@ -171,11 +171,6 @@ export const h3 = {
       xHeight: 5,
       betweenLines: 8,
     }, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
-    get padding() {
-      return (
-        this.xHeight * (this.fontMetrics.capHeight / this.fontMetrics.xHeight)
-      );
-    },
   },
 };
 
