@@ -4,6 +4,7 @@ import Abbr from '../elements/Abbr';
 import Article from '../blocks/Article';
 import Background from '../blocks/Background';
 import Carousel from '../blocks/Carousel';
+import CiteItalic from '../elements/CiteItalic';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
 import FigureWithMargin from '../blocks/FigureWithMargin';
@@ -11,8 +12,6 @@ import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
-import Italic from '../elements/Italic';
-import Link from '../elements/Link';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
@@ -147,12 +146,12 @@ export default function Ryoanji() {
                 The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
                 <FigCaption.Footer>
                   Adapted from{' '}
-                  <Link
+                  <a
                     href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
                     target="_blank"
                   >
                     Slawson (1987)
-                  </Link>
+                  </a>
                   , p. 96.
                 </FigCaption.Footer>
               </FigCaption>
@@ -161,12 +160,12 @@ export default function Ryoanji() {
               My third visit to the garden was different from the previous ones
               in that I had this piece of knowledge, learned from a book on
               Japanese gardens (
-              <Link
+              <a
                 href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
                 target="_blank"
               >
                 Tanaka 2002
-              </Link>
+              </a>
               , pp. 58-59). The book says that the whole garden was constructed
               to be seen from this viewpoint.
             </P>
@@ -412,26 +411,26 @@ export default function Ryoanji() {
             <H2 ryoanji>References</H2>
             <P belowBoxParagraph>
               Slawson, David A. (1987).{' '}
-              <Italic as="cite">
-                <Link
+              <CiteItalic>
+                <a
                   href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
                   target="_blank"
                 >
                   Secret Teachings in the Art of Japanese gardens
-                </Link>
-              </Italic>
+                </a>
+              </CiteItalic>
               . Tokyo: Kodansha.
             </P>
             <P belowTextParagraph>
               Tanaka, Shozo. (2002).{' '}
-              <Italic as="cite">
-                <Link
+              <CiteItalic>
+                <a
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
                   target="_blank"
                 >
                   ‘Nihon Teien’ no Mikata
-                </Link>
-              </Italic>{' '}
+                </a>
+              </CiteItalic>{' '}
               [The Way of Appreciating ‘Japanese Gardens’]. Tokyo: Shogakukan.
             </P>
           </Section>

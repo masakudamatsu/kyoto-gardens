@@ -42,16 +42,55 @@ describe('Parent chnages UI by prop value', () => {
         font-size: 1.3348rem;
         font-weight: 600;
         line-height: 1.393;
+      }
+
+      .c0 a {
         margin: 0 auto;
         max-width: 941px;
       }
 
-      .c0 .CiteItalic-aqgrgi-0 {
+      .c0 a:link,
+      .c0 a:visited {
+        background: rgb(240,240,240);
+        background: linear-gradient( to bottom,currentColor 100%,currentColor );
+        background-position: 0 1.3125rem;
+        background-repeat: no-repeat;
+        background-size: 100% 1px;
+        color: inherit;
+        cursor: pointer;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+      }
+
+      .c0 a:focus,
+      .c0 a:hover {
+        background: rgb(240,240,240);
+        outline: none;
+        text-shadow: none;
+      }
+
+      .c0 a:active {
+        background: none;
+      }
+
+      .c0 a:visited:focus,
+      .c0 a:visited:hover {
+        background: rgb(240,240,240);
+        outline: none;
+        text-shadow: none;
+      }
+
+      .c0 a:visited:active {
+        background: none;
+      }
+
+      .c0 a .CiteItalic-aqgrgi-0 {
         font-style: italic;
         font-weight: 600;
       }
 
-      .c0 strong {
+      .c0 a strong {
         font-style: italic;
         font-weight: 600;
       }
@@ -60,6 +99,44 @@ describe('Parent chnages UI by prop value', () => {
         .c0 {
           font-size: 1.6489rem;
           line-height: 1.4925;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 a:link,
+        .c0 a:visited {
+          background: rgb(240,240,240);
+          background: linear-gradient( to bottom,currentColor 100%,currentColor );
+          background-position: 0 1.625rem;
+          background-repeat: no-repeat;
+          background-size: 100% 1px;
+          color: inherit;
+          cursor: pointer;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+        }
+
+        .c0 a:focus,
+        .c0 a:hover {
+          background: rgb(240,240,240);
+          outline: none;
+          text-shadow: none;
+        }
+
+        .c0 a:active {
+          background: none;
+        }
+
+        .c0 a:visited:focus,
+        .c0 a:visited:hover {
+          background: rgb(240,240,240);
+          outline: none;
+          text-shadow: none;
+        }
+
+        .c0 a:visited:active {
+          background: none;
         }
       }
 

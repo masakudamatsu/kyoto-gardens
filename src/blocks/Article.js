@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, kohoan} from 'src/utils/designSpec';
-import {color} from 'src/utils/specColor';
+import {cssLinkText} from 'src/utils/cssLinkText';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
@@ -32,6 +32,25 @@ const fontStyle = {
       font-size: ${remify(ryoanji.article.fontSize.desktop)};
       line-height: ${ryoanji.article.lineHeight.desktop};
     }
+    & a {
+      ${cssLinkText({
+        backgroundColor: ryoanji.article.backgroundColor,
+        backgroundColorOnHover: ryoanji.link.backgroundOnHover,
+        linkTextColor: ryoanji.link.color,
+        baselinePosition: ryoanji.article.baselinePosition.mobile,
+        lineWidth: ryoanji.link.lineWidth,
+        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+      })}
+      @media only screen and ${breakpoint.fontSize} {
+        ${cssLinkText({
+          backgroundColor: ryoanji.article.backgroundColor,
+          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
+          linkTextColor: ryoanji.link.color,
+          baselinePosition: ryoanji.article.baselinePosition.desktop,
+          lineWidth: ryoanji.link.lineWidth,
+          spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,
+        })}
+      }
     & ${CiteItalic} {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};

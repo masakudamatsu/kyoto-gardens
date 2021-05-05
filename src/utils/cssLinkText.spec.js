@@ -10,10 +10,9 @@ const inputs = {
   backgroundColor: '#000000',
   backgroundColorOnHover: '#aaaaaa',
   linkTextColor: '#ffffff',
-  fontMetrics: {
-    capHeight: 700,
-    unitsPerEm: 1000,
-  },
+  baselinePosition: 20,
+  lineWidth: 1,
+  spaceBelowBaseline: 1,
 };
 
 test('applies CSS declarations as expected', () => {
@@ -27,10 +26,10 @@ test('applies CSS declarations as expected', () => {
     .c0:link,
     .c0:visited {
       background: #aaaaaa;
-      background: linear-gradient( to bottom,transparent 50%,currentColor 50%,currentColor );
-      background-position: 0 1.0500em;
+      background: linear-gradient( to bottom,currentColor 100%,currentColor );
+      background-position: 0 1.3125rem;
       background-repeat: no-repeat;
-      background-size: 100% 2px;
+      background-size: 100% 1px;
       color: #ffffff;
       cursor: pointer;
       -webkit-text-decoration: none;

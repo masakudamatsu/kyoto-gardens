@@ -1,10 +1,13 @@
 import {css} from 'styled-components';
+import remify from './remify';
 
 export function cssLinkText({
   backgroundColor,
   backgroundColorOnHover,
   linkTextColor,
-  fontMetrics,
+  baselinePosition,
+  lineWidth,
+  spaceBelowBaseline,
 }) {
   return css`
     &:link,
@@ -12,14 +15,12 @@ export function cssLinkText({
       background: ${backgroundColorOnHover}; /* Fallback for browsers incompatible with CSS Gradient (https://caniuse.com/css-gradients) */
       background: linear-gradient(
         to bottom,
-        transparent 50%,
-        currentColor 50%,
+        currentColor 100%,
         currentColor
-      );
-      background-position: 0
-        ${(0.35 + fontMetrics.capHeight / fontMetrics.unitsPerEm).toFixed(4)}em; /* As text crop sets the link text box's height equal to cap height, 0.4(em) measures the distance between baseline and the link text underline */
+      ); /* make the upper half transparent, to explicitly control the distance between the baseline and the underline. */
+      background-position: 0 ${remify(baselinePosition + spaceBelowBaseline)};
       background-repeat: no-repeat;
-      background-size: 100% 2px;
+      background-size: 100% ${lineWidth}px;
       color: ${linkTextColor};
       cursor: pointer;
       text-decoration: none;

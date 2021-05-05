@@ -66,12 +66,25 @@ export const ryoanji = {
         ),
       };
     },
+    baselinePosition: {
+      mobile: 20,
+      desktop: 24,
+    },
   },
   italic: {
-    fontWeight: 700,
+    fontWeight: 600,
   },
   link: {
     backgroundOnHover: onSurfaceSecondShade,
+    color: 'inherit',
+    lineWidth: 1,
+    spaceBelowBaseline: {
+      mobile: 1,
+      desktop: 2,
+      figCaption: {
+        desktop: 1,
+      },
+    },
   },
   sectionBreak: {
     color: primary,
@@ -250,5 +263,9 @@ export const ryoanji = {
       };
     },
     textAlign: 'right', // TODO: Dry this code to share with other pages
+    baselinePosition: {
+      mobile: 17,
+      desktop: 21,
+    },
   },
 };

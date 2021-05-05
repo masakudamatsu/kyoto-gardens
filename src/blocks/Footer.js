@@ -17,15 +17,6 @@ const Footer = styled.footer`
   color: ${color.footer.font};
   max-width: 33em; /* One character is on average 0.5em, and 66 is regarded as the ideal number of characters per line (source: http://webtypography.net/2.1.2) */
   width: 100%;
-
-  a {
-    ${cssLinkText({
-      backgroundColor: color.footer.background,
-      backgroundColorOnHover: color.footer.linkText.background,
-      linkTextColor: color.footer.linkText.font,
-      fontMetrics: font.footer.fontMetrics,
-    })}
-  }
 `;
 
 Footer.Paragraph = styled(P)``;

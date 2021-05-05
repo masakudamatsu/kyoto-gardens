@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint} from 'src/utils/designSpec';
+import {cssLinkText} from 'src/utils/cssLinkText';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 
@@ -16,6 +17,27 @@ const fontStyle = {
     @media only screen and ${breakpoint.fontSize} {
       font-size: ${remify(ryoanji.figCaption.fontSize.desktop)};
       line-height: ${ryoanji.figCaption.lineHeight.desktop};
+    }
+    a {
+      ${cssLinkText({
+        backgroundColor: ryoanji.article.backgroundColor,
+        backgroundColorOnHover: ryoanji.link.backgroundOnHover,
+        linkTextColor: ryoanji.link.color,
+        baselinePosition: ryoanji.figCaption.baselinePosition.mobile,
+        lineWidth: ryoanji.link.lineWidth,
+        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+      })}
+      @media only screen and ${breakpoint.fontSize} {
+        ${cssLinkText({
+          backgroundColor: ryoanji.article.backgroundColor,
+          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
+          linkTextColor: ryoanji.link.color,
+          baselinePosition: ryoanji.figCaption.baselinePosition.desktop,
+          lineWidth: ryoanji.link.lineWidth,
+          spaceBelowBaseline:
+            ryoanji.link.spaceBelowBaseline.figCaption.desktop,
+        })}
+      }
     }
   `,
 };

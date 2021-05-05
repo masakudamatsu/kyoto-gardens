@@ -27,42 +27,6 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .c0 a:link,
-      .c0 a:visited {
-        background: #03dac6;
-        background: linear-gradient( to bottom,transparent 50%,currentColor 50%,currentColor );
-        background-position: 0 1.0500em;
-        background-repeat: no-repeat;
-        background-size: 100% 2px;
-        color: #000000;
-        cursor: pointer;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-        text-shadow: 0.03em 0 #018786,-0.03em 0 #018786,0 0.03em #018786,0 -0.03em #018786;
-      }
-
-      .c0 a:focus,
-      .c0 a:hover {
-        background: #03dac6;
-        outline: none;
-        text-shadow: none;
-      }
-
-      .c0 a:active {
-        background: none;
-      }
-
-      .c0 a:visited:focus,
-      .c0 a:visited:hover {
-        background: #03dac6;
-        outline: none;
-        text-shadow: none;
-      }
-
-      .c0 a:visited:active {
-        background: none;
-      }
-
       <div>
         <footer
           class="c0"
