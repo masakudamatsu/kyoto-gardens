@@ -19,7 +19,7 @@ import Section from '../blocks/Section';
 import SectionBreak from '../elements/SectionBreak';
 import Source from '../elements/Source';
 import Strong from '../elements/Strong';
-import Subsection from '../blocks/Subsection';
+import SubSection from '../blocks/SubSection';
 
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/metadata';
@@ -183,7 +183,7 @@ export default function Ryoanji() {
               layout of fifteen rocks starts taking on its meaning:{' '}
               <Strong>there is nothing emphasized in this garden</Strong>.
             </P>
-            <Subsection>
+            <SubSection>
               <H3 page="ryoanji">Straight ahead</H3>
               <Figure belowH3>
                 <ImageWithPlaceholder
@@ -200,8 +200,8 @@ export default function Ryoanji() {
                 rocks on the right and on the left. Nothing is really
                 emphasized.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               {' '}
               <H3 page="ryoanji">Leftward</H3>
               <Figure belowH3>
@@ -218,8 +218,8 @@ export default function Ryoanji() {
                 viewpoint. There is again nothing in the center of my vision.
                 The view is split. Nothing is emphasised.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               <H3 page="ryoanji">Rightward</H3>
               <Figure belowH3>
                 <ImageWithPlaceholder
@@ -238,7 +238,7 @@ export default function Ryoanji() {
                 modest and are located off the center. Nothing is stressed in
                 this view, either.
               </P>
-            </Subsection>
+            </SubSection>
           </Section>
           <Section>
             <H2 page="ryoanji">No Single Rock Dominates</H2>
@@ -247,7 +247,7 @@ export default function Ryoanji() {
               rocks are arranged into five clusters, each surrounded by a patch
               of moss. Let’s start looking at the middle three clusters.
             </P>
-            <Subsection>
+            <SubSection>
               <H3 page="ryoanji">Middle left</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
@@ -263,8 +263,8 @@ export default function Ryoanji() {
                 center. The right elongated one dominates, but it is located to
                 the right side, not at the center.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               <H3 page="ryoanji">Middle</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
@@ -280,8 +280,8 @@ export default function Ryoanji() {
                 dominates, but it is again not located at the center but to the
                 side.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               <H3 page="ryoanji">Middle right</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
@@ -296,8 +296,8 @@ export default function Ryoanji() {
                 The middle-right cluster consists of two rocks, each in a
                 peculiar shape. But neither is emphasized more than the other.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               <H3 page="ryoanji">Leftmost</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
@@ -317,8 +317,8 @@ export default function Ryoanji() {
                 not at the center. When seen from the viewpoint, the symmetric
                 composition is thus destroyed.
               </P>
-            </Subsection>
-            <Subsection>
+            </SubSection>
+            <SubSection>
               <H3 page="ryoanji">Rightmost</H3>
               <FigureWithMargin belowH3>
                 <ImageWithPlaceholder
@@ -337,7 +337,7 @@ export default function Ryoanji() {
                 disappears from sight when seen from the viewpoint, as it hides
                 behind the large rock.
               </P>
-            </Subsection>
+            </SubSection>
           </Section>
           <Section>
             <H2 page="ryoanji">The Rock Garden’s Message</H2>

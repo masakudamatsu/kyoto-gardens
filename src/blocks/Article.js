@@ -15,6 +15,7 @@ import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
 import Strong from 'src/elements/Strong';
+import SubSection from 'src/blocks/SubSection';
 
 const fontStyle = {
   kohoan: css`
@@ -96,6 +97,20 @@ const spacing = {
         padding-bottom: ${remify(
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenSections - ryoanji.article.descender.desktop,
+        )};
+      }
+    }
+    & ${SubSection} {
+      padding-top: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenParagraphs -
+          (ryoanji.article.descender.mobile + ryoanji.h3.ascender.mobile),
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        padding-top: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenParagraphs -
+            (ryoanji.article.descender.desktop + ryoanji.h3.ascender.desktop),
         )};
       }
     }

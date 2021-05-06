@@ -122,6 +122,10 @@ describe('Parent chnages UI by prop value', () => {
         padding-bottom: 3.1892rem;
       }
 
+      .c0 .SubSection-gjxtor-0 {
+        padding-top: 1.4323rem;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;
@@ -170,6 +174,12 @@ describe('Parent chnages UI by prop value', () => {
       @media only screen and (min-width:728px) {
         .c0 .Section-yfzme9-0 {
           padding-bottom: 4.263rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .SubSection-gjxtor-0 {
+          padding-top: 1.9141rem;
         }
       }
 

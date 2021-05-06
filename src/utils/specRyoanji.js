@@ -263,6 +263,11 @@ export const ryoanji = {
     },
     letterSpacing: '0.02em',
     textTransform: 'uppercase', // TODO: DRY this code to share it with other pages
+    ascender: {
+      // for between paragraph spacing above h3
+      mobile: 4.5, // 12.5 minus article.descender.mobile
+      desktop: 5.5, //17.5 minus article.descender.desktop,
+    },
   },
   figCaption: {
     ...cormorantSC,
