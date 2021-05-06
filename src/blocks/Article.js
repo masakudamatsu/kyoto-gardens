@@ -11,6 +11,9 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
+import ParaBelowBoxLine from 'src/elements/ParaBelowBoxLine';
+import ParaBelowBoxPara from 'src/elements/ParaBelowBoxPara';
+import ParaBelowTextPara from 'src/elements/ParaBelowTextPara';
 import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
@@ -111,6 +114,54 @@ const spacing = {
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenParagraphs -
             (ryoanji.article.descender.desktop + ryoanji.h3.ascender.desktop),
+        )};
+      }
+    }
+    & ${ParaBelowTextPara} {
+      padding-top: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenParagraphs -
+          setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+            .betweenLines +
+          ryoanji.article.capToX.mobile,
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        padding-top: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenParagraphs -
+            setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+              .betweenLines +
+            ryoanji.article.capToX.desktop,
+        )};
+      }
+    }
+    & ${ParaBelowBoxPara} {
+      padding-top: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenParagraphs - ryoanji.article.ascender.mobile,
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        padding-top: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenParagraphs - ryoanji.article.ascender.desktop,
+        )};
+      }
+    }
+    & ${ParaBelowBoxLine} {
+      padding-top: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenLines -
+          ryoanji.article.ascender.mobile -
+          ryoanji.article.capToX.mobile -
+          ryoanji.figure.spaceBelowByBug.mobile, // see issue #29
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        padding-top: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenLines -
+            ryoanji.article.ascender.desktop -
+            ryoanji.article.capToX.desktop -
+            ryoanji.figure.spaceBelowByBug.desktop, // see issue #29
         )};
       }
     }

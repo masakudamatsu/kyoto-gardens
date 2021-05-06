@@ -77,10 +77,24 @@ export const ryoanji = {
       mobile: 20,
       desktop: 24,
     },
+    ascender: {
+      // for space between box and paragraph
+      mobile: 7.5,
+      desktop: 10.5,
+    },
     descender: {
       // for between Sections
       mobile: 8,
       desktop: 12,
+    },
+    get capToX() {
+      const ratioToFontSize =
+        (this.fontMetrics.capHeight - this.fontMetrics.xHeight) /
+        this.fontMetrics.unitsPerEm;
+      return {
+        mobile: this.fontSize.mobile * ratioToFontSize,
+        desktop: this.fontSize.desktop * ratioToFontSize,
+      };
     },
   },
   italic: {

@@ -126,6 +126,18 @@ describe('Parent chnages UI by prop value', () => {
         padding-top: 1.4323rem;
       }
 
+      .c0 .ParaBelowTextPara-fp0lgu-0 {
+        padding-top: 1.1991rem;
+      }
+
+      .c0 .ParaBelowBoxPara-sc-1r97b9c-0 {
+        padding-top: 1.7448rem;
+      }
+
+      .c0 .ParaBelowBoxLine-wuj758-0 {
+        padding-top: 0.0457rem;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;
@@ -180,6 +192,24 @@ describe('Parent chnages UI by prop value', () => {
       @media only screen and (min-width:728px) {
         .c0 .SubSection-gjxtor-0 {
           padding-top: 1.9141rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .ParaBelowTextPara-fp0lgu-0 {
+          padding-top: 1.5906rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .ParaBelowBoxPara-sc-1r97b9c-0 {
+          padding-top: 2.3516rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .ParaBelowBoxLine-wuj758-0 {
+          padding-top: 0.011rem;
         }
       }
 

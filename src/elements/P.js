@@ -18,7 +18,6 @@ const P = styled.p`
   )};
   padding-left: ${props => getSidePadding(props)};
   padding-right: ${props => getSidePadding(props)};
-  padding-top: ${props => getPaddingTop(props, 'mobile')};
   text-align: ${props => (props.message ? 'center' : 'left')};
   @media only screen and ${breakpoint.sideMargin} {
     padding-left: ${remify(whitespace().sideMarginLarge)};
@@ -30,14 +29,10 @@ const P = styled.p`
     )};
     padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
     padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-    padding-top: ${props => getPaddingTop(props, 'desktop')};
   }
 `;
 
 P.propTypes = {
-  belowBoxLine: PropTypes.bool,
-  belowBoxParagraph: PropTypes.bool,
-  belowTextParagraph: PropTypes.bool,
   message: PropTypes.bool,
 };
 

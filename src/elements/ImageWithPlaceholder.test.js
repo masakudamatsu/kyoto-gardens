@@ -32,7 +32,6 @@ describe('renders the UI correctly during the loading time', () => {
         max-width: 38.9424rem;
         padding-left: 1.3281rem;
         padding-right: 1.3281rem;
-        padding-top: NaNrem;
         text-align: left;
       }
 
@@ -78,7 +77,6 @@ describe('renders the UI correctly during the loading time', () => {
           max-width: 48.6522rem;
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
-          padding-top: NaNrem;
         }
       }
 
