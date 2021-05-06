@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, kohoan} from 'src/utils/designSpec';
+import {breakpoint, kohoan, setSpace} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {maxPhotoWidth} from 'src/utils/designSpec';
@@ -11,6 +11,7 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
+import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
 import Strong from 'src/elements/Strong';
@@ -84,8 +85,26 @@ const fontStyle = {
   `,
 };
 
+const spacing = {
+  ryoanji: css`
+    & ${Section} {
+      padding-bottom: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenSections - ryoanji.article.descender.mobile,
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        padding-bottom: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenSections - ryoanji.article.descender.desktop,
+        )};
+      }
+    }
+  `,
+};
+
 const Article = styled.article`
   ${({page}) => fontStyle[page]}
+  ${({page}) => spacing[page]}
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
 `;

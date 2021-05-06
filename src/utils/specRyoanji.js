@@ -76,6 +76,11 @@ export const ryoanji = {
       mobile: 20,
       desktop: 24,
     },
+    descender: {
+      // for between Sections
+      mobile: 8,
+      desktop: 12,
+    },
   },
   italic: {
     fontWeight: 600,

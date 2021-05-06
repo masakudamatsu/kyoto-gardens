@@ -118,6 +118,10 @@ describe('Parent chnages UI by prop value', () => {
         font-weight: 600;
       }
 
+      .c0 .Section-yfzme9-0 {
+        padding-bottom: 3.1892rem;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;
@@ -160,6 +164,12 @@ describe('Parent chnages UI by prop value', () => {
 
         .c0 a:visited:active {
           background: none;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .Section-yfzme9-0 {
+          padding-bottom: 4.263rem;
         }
       }
 
