@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
-import {getPaddingTop} from 'src/utils/whitespaceCssFactory';
 
 function getSidePadding(props) {
   return props.message
