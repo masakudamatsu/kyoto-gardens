@@ -22,6 +22,7 @@ import Source from '../elements/Source';
 import {
   SpacerBoxLineToText,
   SpacerBoxParagraphToText,
+  SpacerH3LineToBox,
   SpacerTextLineToBox,
   SpacerTextParagraphToText,
 } from 'src/elements/Spacer';
@@ -201,7 +202,8 @@ export default function Ryoanji() {
             </P>
             <SubSection>
               <H3 page="ryoanji">Straight ahead</H3>
-              <Figure belowH3>
+              <SpacerH3LineToBox />
+              <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-banner-summer-large.jpg"
                   width={1882}
@@ -221,7 +223,8 @@ export default function Ryoanji() {
             <SubSection>
               {' '}
               <H3 page="ryoanji">Leftward</H3>
-              <Figure belowH3>
+              <SpacerH3LineToBox />
+              <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-left-large.jpg"
                   width={1882}
@@ -239,7 +242,8 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3 page="ryoanji">Rightward</H3>
-              <Figure belowH3>
+              <SpacerH3LineToBox />
+              <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-right-large.jpg"
                   width={1882}
@@ -269,7 +273,8 @@ export default function Ryoanji() {
             </P>
             <SubSection>
               <H3 page="ryoanji">Middle left</H3>
-              <FigureWithMargin belowH3>
+              <SpacerH3LineToBox />
+              <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-left.jpg"
                   width={892}
@@ -287,7 +292,8 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3 page="ryoanji">Middle</H3>
-              <FigureWithMargin belowH3>
+              <SpacerH3LineToBox />
+              <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-right.jpg"
                   width={747}
@@ -305,7 +311,8 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3 page="ryoanji">Middle right</H3>
-              <FigureWithMargin belowH3>
+              <SpacerH3LineToBox />
+              <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-second-right.jpg"
                   width={706}
@@ -322,7 +329,8 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3 page="ryoanji">Leftmost</H3>
-              <FigureWithMargin belowH3>
+              <SpacerH3LineToBox />
+              <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-leftmost.jpg"
                   width={1490}
@@ -344,7 +352,8 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3 page="ryoanji">Rightmost</H3>
-              <FigureWithMargin belowH3>
+              <SpacerH3LineToBox />
+              <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-rightmost.jpg"
                   width={1496}

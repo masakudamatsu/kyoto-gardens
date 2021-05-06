@@ -14,7 +14,7 @@ export const SpacerTextLineToBox = styled.div`
 `;
 export const SpacerTextParagraphToBox = styled.div`
   width: 100%;
-`;
+`; // not used for Ryoan-ji
 export const SpacerTextParagraphToText = styled.div`
   width: 100%;
 `;

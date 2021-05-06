@@ -17,6 +17,7 @@ import Source from 'src/elements/Source';
 import {
   SpacerBoxLineToText,
   SpacerBoxParagraphToText,
+  SpacerH3LineToBox,
   SpacerTextLineToBox,
   SpacerTextParagraphToText,
 } from 'src/elements/Spacer';
@@ -177,6 +178,22 @@ const verticalSpacing = {
         height: ${remify(
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenLines - ryoanji.article.descender.desktop,
+        )};
+      }
+    }
+    & ${SpacerH3LineToBox} {
+      height: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenLines -
+          ryoanji.h3.descender.mobile -
+          ryoanji.article.capToX.mobile, // make it symmetric with the space below the figure and the cap height of next paragraph
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        height: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenLines -
+            ryoanji.h3.descender.desktop -
+            ryoanji.article.capToX.desktop, // make it symmetric with the space below the figure and the cap height of next paragraph
         )};
       }
     }

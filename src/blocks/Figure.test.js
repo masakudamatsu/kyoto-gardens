@@ -8,17 +8,10 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('Figure with belowH3 prop', () => {
-    const {container} = render(<Figure belowH3 />);
+    const {container} = render(<Figure />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         overflow: hidden;
-        padding-top: 0.7644rem;
-      }
-
-      @media only screen and (min-width:728px) {
-        .c0 {
-          padding-top: 1.1047rem;
-        }
       }
 
       <div>

@@ -283,6 +283,11 @@ export const ryoanji = {
       mobile: 4.5, // 12.5 minus article.descender.mobile
       desktop: 5.5, //17.5 minus article.descender.desktop,
     },
+    descender: {
+      // for between h3 and figure below
+      mobile: 4,
+      desktop: 5,
+    },
   },
   figCaption: {
     ...cormorantSC,

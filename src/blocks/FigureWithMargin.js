@@ -13,9 +13,6 @@ import {getPaddingTopAboveBox} from 'src/utils/whitespaceCssFactory';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
-  ${props => `
-    padding-top: ${getPaddingTopAboveBox(props, 'mobile')};
-  `}
   @media only screen and ${breakpoint.sideMargin} {
     padding-left: ${remify(whitespace().sideMarginLarge)};
     padding-right: ${remify(whitespace().sideMarginLarge)};
@@ -29,9 +26,6 @@ const FigureWithMargin = styled(Figure)`
     margin: 0;
     padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
     padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-    ${props => `
-      padding-top: ${getPaddingTopAboveBox(props, 'desktop')};
-      `}
     width: auto;
   }
   @media only screen and ${breakpoint.floorPlanWidthDesktop} {
@@ -41,8 +35,6 @@ const FigureWithMargin = styled(Figure)`
   }
 `;
 
-FigureWithMargin.propTypes = {
-  belowTextLine: PropTypes.bool,
-};
+FigureWithMargin.propTypes = {};
 
 export default FigureWithMargin;
