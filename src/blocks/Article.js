@@ -17,6 +17,7 @@ import Source from 'src/elements/Source';
 import {
   SpacerBoxLineToText,
   SpacerBoxParagraphToText,
+  SpacerTextLineToBox,
   SpacerTextParagraphToText,
 } from 'src/elements/Spacer';
 import Strong from 'src/elements/Strong';
@@ -164,6 +165,18 @@ const verticalSpacing = {
             ryoanji.article.ascender.desktop -
             ryoanji.article.capToX.desktop -
             ryoanji.figure.spaceBelowByBug.desktop, // see issue #29
+        )};
+      }
+    }
+    & ${SpacerTextLineToBox} {
+      height: ${remify(
+        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+          .betweenLines - ryoanji.article.descender.mobile,
+      )};
+      @media only screen and ${breakpoint.fontSize} {
+        height: ${remify(
+          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+            .betweenLines - ryoanji.article.descender.desktop,
         )};
       }
     }

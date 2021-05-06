@@ -17,7 +17,6 @@ describe('renders UI correctly', () => {
       .c1 {
         border-bottom: 1px solid hsla(193,50%,26%,0.2);
         border-top: 1px solid hsla(193,50%,26%,0.2);
-        margin-top: 0.8281rem;
         padding: 15.564px;
       }
 
@@ -42,7 +41,6 @@ describe('renders UI correctly', () => {
         .c1 {
           margin-left: 3.0078rem;
           margin-right: 3.0078rem;
-          margin-top: 1.0547rem;
           width: auto;
         }
       }

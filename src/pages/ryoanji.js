@@ -22,6 +22,7 @@ import Source from '../elements/Source';
 import {
   SpacerBoxLineToText,
   SpacerBoxParagraphToText,
+  SpacerTextLineToBox,
   SpacerTextParagraphToText,
 } from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
@@ -149,7 +150,8 @@ export default function Ryoanji() {
               this rectangular garden, indicated with the gray arrow in the
               floor plan below:
             </P>
-            <FigureBordered belowTextLine>
+            <SpacerTextLineToBox />
+            <FigureBordered>
               <ImageWithPlaceholder
                 src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
                 width={497}

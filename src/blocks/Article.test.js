@@ -138,6 +138,10 @@ describe('Parent chnages UI by prop value', () => {
         height: 0.0457rem;
       }
 
+      .c0 .Spacer__SpacerTextLineToBox-sc-1ug26uc-3 {
+        height: 0.8281rem;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;
@@ -210,6 +214,12 @@ describe('Parent chnages UI by prop value', () => {
       @media only screen and (min-width:728px) {
         .c0 .Spacer__SpacerBoxLineToText-sc-1ug26uc-0 {
           height: 0.011rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .Spacer__SpacerTextLineToBox-sc-1ug26uc-3 {
+          height: 1.0547rem;
         }
       }
 
