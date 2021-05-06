@@ -56,14 +56,18 @@ export const ryoanji = {
       };
     },
     fontWeight: 600,
+    lineHeightRatio: {
+      mobile: {xHeight: 2, betweenLines: 5},
+      desktop: {xHeight: 4, betweenLines: 11},
+    },
     get lineHeight() {
       return {
         mobile: getLineHeightFromRatio(
-          {xHeight: 2, betweenLines: 5},
+          this.lineHeightRatio.mobile,
           this.fontMetrics,
         ),
         desktop: getLineHeightFromRatio(
-          {xHeight: 4, betweenLines: 11},
+          this.lineHeightRatio.desktop,
           this.fontMetrics,
         ),
       };
