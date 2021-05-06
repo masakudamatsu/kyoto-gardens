@@ -11,12 +11,14 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
-import ParaBelowBoxLine from 'src/elements/ParaBelowBoxLine';
-import ParaBelowBoxPara from 'src/elements/ParaBelowBoxPara';
-import ParaBelowTextPara from 'src/elements/ParaBelowTextPara';
 import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
+import {
+  SpacerBoxLineToText,
+  SpacerBoxParagraphToText,
+  SpacerTextParagraphToText,
+} from 'src/elements/Spacer';
 import Strong from 'src/elements/Strong';
 import SubSection from 'src/blocks/SubSection';
 
@@ -89,7 +91,7 @@ const fontStyle = {
   `,
 };
 
-const spacing = {
+const verticalSpacing = {
   ryoanji: css`
     & ${Section} {
       padding-bottom: ${remify(
@@ -117,8 +119,8 @@ const spacing = {
         )};
       }
     }
-    & ${ParaBelowTextPara} {
-      padding-top: ${remify(
+    & ${SpacerTextParagraphToText} {
+      height: ${remify(
         setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
           .betweenParagraphs -
           setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
@@ -126,7 +128,7 @@ const spacing = {
           ryoanji.article.capToX.mobile,
       )};
       @media only screen and ${breakpoint.fontSize} {
-        padding-top: ${remify(
+        height: ${remify(
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenParagraphs -
             setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
@@ -135,20 +137,20 @@ const spacing = {
         )};
       }
     }
-    & ${ParaBelowBoxPara} {
-      padding-top: ${remify(
+    & ${SpacerBoxParagraphToText} {
+      height: ${remify(
         setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
           .betweenParagraphs - ryoanji.article.ascender.mobile,
       )};
       @media only screen and ${breakpoint.fontSize} {
-        padding-top: ${remify(
+        height: ${remify(
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenParagraphs - ryoanji.article.ascender.desktop,
         )};
       }
     }
-    & ${ParaBelowBoxLine} {
-      padding-top: ${remify(
+    & ${SpacerBoxLineToText} {
+      height: ${remify(
         setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
           .betweenLines -
           ryoanji.article.ascender.mobile -
@@ -156,7 +158,7 @@ const spacing = {
           ryoanji.figure.spaceBelowByBug.mobile, // see issue #29
       )};
       @media only screen and ${breakpoint.fontSize} {
-        padding-top: ${remify(
+        height: ${remify(
           setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
             .betweenLines -
             ryoanji.article.ascender.desktop -
@@ -170,7 +172,7 @@ const spacing = {
 
 const Article = styled.article`
   ${({page}) => fontStyle[page]}
-  ${({page}) => spacing[page]}
+  ${({page}) => verticalSpacing[page]}
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
 `;

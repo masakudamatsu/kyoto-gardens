@@ -126,16 +126,16 @@ describe('Parent chnages UI by prop value', () => {
         padding-top: 1.4323rem;
       }
 
-      .c0 .ParaBelowTextPara-fp0lgu-0 {
-        padding-top: 1.1991rem;
+      .c0 .Spacer__SpacerTextParagraphToText-sc-1ug26uc-5 {
+        height: 1.1991rem;
       }
 
-      .c0 .ParaBelowBoxPara-sc-1r97b9c-0 {
-        padding-top: 1.7448rem;
+      .c0 .Spacer__SpacerBoxParagraphToText-sc-1ug26uc-1 {
+        height: 1.7448rem;
       }
 
-      .c0 .ParaBelowBoxLine-wuj758-0 {
-        padding-top: 0.0457rem;
+      .c0 .Spacer__SpacerBoxLineToText-sc-1ug26uc-0 {
+        height: 0.0457rem;
       }
 
       @media only screen and (min-width:728px) {
@@ -196,20 +196,20 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       @media only screen and (min-width:728px) {
-        .c0 .ParaBelowTextPara-fp0lgu-0 {
-          padding-top: 1.5906rem;
+        .c0 .Spacer__SpacerTextParagraphToText-sc-1ug26uc-5 {
+          height: 1.5906rem;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .c0 .ParaBelowBoxPara-sc-1r97b9c-0 {
-          padding-top: 2.3516rem;
+        .c0 .Spacer__SpacerBoxParagraphToText-sc-1ug26uc-1 {
+          height: 2.3516rem;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .c0 .ParaBelowBoxLine-wuj758-0 {
-          padding-top: 0.011rem;
+        .c0 .Spacer__SpacerBoxLineToText-sc-1ug26uc-0 {
+          height: 0.011rem;
         }
       }
 
