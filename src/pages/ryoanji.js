@@ -7,6 +7,7 @@ import Carousel from '../blocks/Carousel';
 import CiteItalic from '../elements/CiteItalic';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
+import FigureBordered from '../blocks/FigureBordered';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
 import H2 from '../elements/H2';
@@ -137,7 +138,7 @@ export default function Ryoanji() {
               this rectangular garden, indicated with the gray arrow in the
               floor plan below:
             </P>
-            <FigureWithMargin belowTextLine bordered>
+            <FigureBordered belowTextLine>
               <ImageWithPlaceholder
                 src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
                 width={497}
@@ -157,7 +158,7 @@ export default function Ryoanji() {
                   , p. 96.
                 </Source>
               </FigCaption>
-            </FigureWithMargin>
+            </FigureBordered>
             <P belowBoxParagraph>
               My third visit to the garden was different from the previous ones
               in that I had this piece of knowledge, learned from a book on

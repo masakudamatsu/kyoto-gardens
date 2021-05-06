@@ -8,6 +8,7 @@ const onSurface = '#0a0a0a';
 const onSurfaceShade = 'rgb(100,100,100)';
 const onSurfaceSecondShade = 'rgb(240,240,240)'; /* TODO: Darken this */
 const primary = 'hsla(193, 50%, 26%, 0.9)';
+const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
 const onPrimary = '#eee';
 const onPhoto = '#000';
 
@@ -295,5 +296,8 @@ export const ryoanji = {
       mobile: 17,
       desktop: 21,
     },
+  },
+  figure: {
+    borderColor: primaryShade,
   },
 };
