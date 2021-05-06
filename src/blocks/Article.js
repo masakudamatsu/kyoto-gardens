@@ -85,8 +85,7 @@ const fontStyle = {
 };
 
 const Article = styled.article`
-  ${({page}) => (page === 'ryoanji' ? fontStyle.ryoanji : null)}
-  ${({page}) => (page === 'kohoan' ? fontStyle.kohoan : null)}
+  ${({page}) => fontStyle[page]}
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
 `;

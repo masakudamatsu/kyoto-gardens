@@ -27,7 +27,7 @@ const fontStyle = {
 };
 
 const defaultStyle = css`
-  ${props => props.page === 'ryoanji' && fontStyle.ryoanji}
+  ${({page}) => fontStyle[page]}
   @media only screen and ${breakpoint.floorPlanWidth} {
     margin: 0 auto;
     width: ${remify(lineLength.max.mobile)};

@@ -29,7 +29,7 @@ const fontStyle = {
 // Font-size 103.208px
 // Word spacing reduced by 0.129em
 const H1 = styled.h1`
-  ${({page}) => page === 'ryoanji' && fontStyle.ryoanji}
+  ${({page}) => fontStyle[page]}
   display: flex;
   flex-direction: column;
   @media only screen and ${breakpoint.floorPlanWidth} {
