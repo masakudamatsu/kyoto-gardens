@@ -6,10 +6,12 @@ import {shippoPattern} from 'src/utils/patterns';
 
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
+import {ryoanji} from 'src/utils/specRyoanji';
+import {breakpoint} from 'src/utils/designSpec';
 
 const Wrapper = styled.div`
   position: relative;
-`;
+`; // for some reason, this element adds 12px to the height...
 
 const Placeholder = styled(P)`
   ${shippoPattern}
@@ -17,13 +19,16 @@ const Placeholder = styled(P)`
   bottom 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: calc(100% - ${ryoanji.figure.spaceBelowByBug.mobile}px);
   justify-content: center;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
+  @media only screen and ${breakpoint.fontSize} {
+    height: calc(100% - ${ryoanji.figure.spaceBelowByBug.desktop}px);
+  }
 `;
 
 const ImageStyled = styled(({loaded, ...props}) => <Image {...props} />)`

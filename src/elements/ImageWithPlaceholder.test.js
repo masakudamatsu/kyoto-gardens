@@ -54,7 +54,7 @@ describe('renders the UI correctly during the loading time', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        height: 100%;
+        height: calc(100% - 8px);
         -webkit-box-pack: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -79,6 +79,12 @@ describe('renders the UI correctly during the loading time', () => {
           padding-left: 3.0078rem;
           padding-right: 3.0078rem;
           padding-top: NaNrem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c1 {
+          height: calc(100% - 12px);
         }
       }
 

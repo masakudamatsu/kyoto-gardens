@@ -299,5 +299,9 @@ export const ryoanji = {
   },
   figure: {
     borderColor: primaryShade,
+    spaceBelowByBug: {
+      mobile: 8,
+      desktop: 12,
+    }, // See issue #29
   },
 };

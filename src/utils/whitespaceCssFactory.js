@@ -21,8 +21,8 @@ export function getPaddingTop(props, screenWidth = 'mobile') {
     targetHeight = whitespace(screenWidth).betweenLines;
     spaceByDefault =
       screenWidth === 'mobile'
-        ? 7.5 + getCapHeightXHeightDiff(paragraph[screenWidth])
-        : 10.5 + getCapHeightXHeightDiff(paragraph[screenWidth]); // To subtract the distance from box edge to x-height (not cap-height)
+        ? 8 + 7.5 + getCapHeightXHeightDiff(paragraph[screenWidth])
+        : 12 + 10.5 + getCapHeightXHeightDiff(paragraph[screenWidth]); // To subtract the distance from box edge to x-height (not cap-height)
   }
   if (props.belowH3) {
     targetHeight = whitespace(screenWidth).betweenParagraphs;
