@@ -2,17 +2,18 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Figure from 'src/blocks/Figure';
-import {
-  breakpoint,
-  figureBordered,
-  lineLength,
-  whitespace,
-} from 'src/utils/designSpec';
+import {breakpoint, figureBordered} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
+import MainRyoanji from 'src/blocks/MainRyoanji';
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
+  ${MainRyoanji} & {
+    ${horizontalSpacing.figure['ryoanji'].innerMerged}
+    ${horizontalSpacing.figure['ryoanji'].outer}
+  }
 `;
 
 FigureWithMargin.Border = styled.div`

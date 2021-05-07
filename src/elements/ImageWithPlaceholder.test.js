@@ -27,11 +27,17 @@ describe('renders the UI correctly during the loading time', () => {
   });
   test('Placeholder', () => {
     expect(screen.getByText('Loading...')).toMatchInlineSnapshot(`
-      .c0 {
+      .c1 {
         text-align: left;
       }
 
-      .c1 {
+      .MainRyoanji-sc-11d35pr-0 .c0 {
+        margin: 0 auto;
+        max-width: 38.9424rem;
+        padding: 0 1.3281rem;
+      }
+
+      .c2 {
         background-color: rgb(240,240,240);
         background-image: radial-gradient( circle closest-side,transparent 91%,#ffffff 100%,transparent ),radial-gradient( circle closest-side,rgb(240,240,240) 91%,#ffffff 100%,rgb(240,240,240) );
         background-position: 0 0,1.75rem 1.75rem;
@@ -62,13 +68,31 @@ describe('renders the UI correctly during the loading time', () => {
       }
 
       @media only screen and (min-width:728px) {
-        .c1 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
+          max-width: 48.6522rem;
+        }
+      }
+
+      @media only screen and (min-width:31.6802rem) {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
+          padding: 0 2.2135rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
+          padding: 0 3.0078rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c2 {
           height: calc(100% - 12px);
         }
       }
 
       <p
-        class="c0 c1"
+        class="c0 c1 c2"
       >
         Loading...
       </p>

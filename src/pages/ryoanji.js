@@ -60,7 +60,7 @@ export default function Ryoanji() {
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
       <MainRyoanji>
-        <Article page="ryoanji">
+        <Article>
           <Article.Header>
             <H1.Wrapper page="ryoanji">
               <H1 page="ryoanji" aria-label="Ryoan-ji Rock Garden">

@@ -1,30 +1,19 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, kohoan, setSpace} from 'src/utils/designSpec';
+import {breakpoint, kohoan} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
-import FigureWithMargin from 'src/blocks/FigureWithMargin';
-import P from 'src/elements/P';
-import Section from 'src/blocks/Section';
+import MainRyoanji from 'src/blocks/MainRyoanji';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
-import {
-  SpacerBoxLineToText,
-  SpacerBoxParagraphToText,
-  SpacerH3LineToBox,
-  SpacerTextLineToBox,
-  SpacerTextParagraphToText,
-} from 'src/elements/Spacer';
 import Strong from 'src/elements/Strong';
-import SubSection from 'src/blocks/SubSection';
 
 const fontStyle = {
   kohoan: css`
@@ -37,7 +26,12 @@ const fontStyle = {
       line-height: ${getLineHeight(kohoan.paragraph.desktop)};
     }
   `,
-  ryoanji: css`
+};
+
+const Article = styled.article`
+  margin: 0 auto;
+  max-width: ${maxPhotoWidth}px;
+  ${MainRyoanji} & {
     background-color: ${ryoanji.article.backgroundColor};
     color: ${ryoanji.article.color};
     font-family: ${ryoanji.article.fontFamily};
@@ -92,128 +86,6 @@ const fontStyle = {
       font-style: italic;
       font-weight: ${ryoanji.italic.fontWeight};
     }
-  `,
-};
-
-const verticalSpacing = {
-  ryoanji: css`
-    & ${Section} {
-      padding-bottom: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenSections - ryoanji.article.descender.mobile,
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        padding-bottom: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenSections - ryoanji.article.descender.desktop,
-        )};
-      }
-    }
-    & ${SubSection} {
-      padding-top: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenParagraphs -
-          (ryoanji.article.descender.mobile + ryoanji.h3.ascender.mobile),
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        padding-top: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenParagraphs -
-            (ryoanji.article.descender.desktop + ryoanji.h3.ascender.desktop),
-        )};
-      }
-    }
-    & ${SpacerTextParagraphToText} {
-      height: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenParagraphs -
-          setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-            .betweenLines +
-          ryoanji.article.capToX.mobile,
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        height: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenParagraphs -
-            setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-              .betweenLines +
-            ryoanji.article.capToX.desktop,
-        )};
-      }
-    }
-    & ${SpacerBoxParagraphToText} {
-      height: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenParagraphs - ryoanji.article.ascender.mobile,
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        height: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenParagraphs - ryoanji.article.ascender.desktop,
-        )};
-      }
-    }
-    & ${SpacerBoxLineToText} {
-      height: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenLines -
-          ryoanji.article.ascender.mobile -
-          ryoanji.article.capToX.mobile -
-          ryoanji.figure.spaceBelowByBug.mobile, // see issue #29
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        height: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenLines -
-            ryoanji.article.ascender.desktop -
-            ryoanji.article.capToX.desktop -
-            ryoanji.figure.spaceBelowByBug.desktop, // see issue #29
-        )};
-      }
-    }
-    & ${SpacerTextLineToBox} {
-      height: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenLines - ryoanji.article.descender.mobile,
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        height: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenLines - ryoanji.article.descender.desktop,
-        )};
-      }
-    }
-    & ${SpacerH3LineToBox} {
-      height: ${remify(
-        setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
-          .betweenLines -
-          ryoanji.h3.descender.mobile -
-          ryoanji.article.capToX.mobile, // make it symmetric with the space below the figure and the cap height of next paragraph
-      )};
-      @media only screen and ${breakpoint.fontSize} {
-        height: ${remify(
-          setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
-            .betweenLines -
-            ryoanji.h3.descender.desktop -
-            ryoanji.article.capToX.desktop, // make it symmetric with the space below the figure and the cap height of next paragraph
-        )};
-      }
-    }
-  `,
-};
-
-const Article = styled.article`
-  ${({page}) => fontStyle[page]}
-  ${({page}) => verticalSpacing[page]}
-  margin: 0 auto;
-  max-width: ${maxPhotoWidth}px;
-  & ${P} {
-    ${({page}) => horizontalSpacing.text[page].innerMerged}
-    ${({page}) => horizontalSpacing.text[page].outer}
-  }
-  & ${FigureWithMargin} {
-    ${({page}) => horizontalSpacing.figure[page].innerMerged}
-    ${({page}) => horizontalSpacing.figure[page].outer}
   }
 `;
 
@@ -221,8 +93,6 @@ Article.Header = styled.header`
   position: relative;
 `;
 
-Article.propTypes = {
-  page: PropTypes.string.isRequired,
-};
+Article.propTypes = {};
 
 export default Article;
