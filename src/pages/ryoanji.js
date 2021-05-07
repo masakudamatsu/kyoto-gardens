@@ -2,7 +2,6 @@ import Head from 'next/head';
 
 import Abbr from '../elements/Abbr';
 import Article from '../blocks/Article';
-import Background from '../blocks/Background';
 import Carousel from '../blocks/Carousel';
 import CiteItalic from '../elements/CiteItalic';
 import FigCaption from '../elements/FigCaption';
@@ -13,6 +12,7 @@ import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import LeadIn from '../elements/LeadIn';
+import MainRyoanji from '../blocks/MainRyoanji';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
@@ -59,7 +59,7 @@ export default function Ryoanji() {
         </noscript>
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
-      <Background page="ryoanji">
+      <MainRyoanji>
         <Article page="ryoanji">
           <Article.Header>
             <H1.Wrapper page="ryoanji">
@@ -486,7 +486,7 @@ export default function Ryoanji() {
             </P>
           </Section>
         </Article>
-      </Background>
+      </MainRyoanji>
     </>
   );
 }
