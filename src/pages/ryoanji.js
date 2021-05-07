@@ -398,7 +398,7 @@ export default function Ryoanji() {
               be interpreted as the following message:
             </P>
             <SpacerTextParagraphToText />
-            <P message>
+            <P centerAligned>
               <Strong>
                 Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
                 <Span nowrap>in our mind.</Span>

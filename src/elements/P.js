@@ -5,7 +5,7 @@ import MainRyoanji from 'src/blocks/MainRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const P = styled.p`
-  text-align: ${props => (props.message ? 'center' : 'left')};
+  text-align: ${props => (props.centerAligned ? 'center' : 'left')};
   ${MainRyoanji} & {
     ${horizontalSpacing.text['ryoanji'].innerMerged}
     ${horizontalSpacing.text['ryoanji'].outer}
@@ -13,7 +13,7 @@ const P = styled.p`
 `;
 
 P.propTypes = {
-  message: PropTypes.bool,
+  centerAligned: PropTypes.bool,
 };
 
 export default P;

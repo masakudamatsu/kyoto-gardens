@@ -44,8 +44,8 @@ describe('renders UI correctly:', () => {
       </div>
     `);
   });
-  test('with message prop', () => {
-    render(<P message data-testid="paragraph" />);
+  test('with centerAligned prop', () => {
+    render(<P centerAligned data-testid="paragraph" />);
     expect(screen.getByTestId('paragraph')).toHaveStyle(`
       text-align: center;
     `);
