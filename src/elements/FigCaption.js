@@ -5,6 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
+import MainRyoanji from 'src/blocks/MainRyoanji';
 
 const fontStyle = {
   ryoanji: css`
@@ -43,10 +44,10 @@ const fontStyle = {
 };
 
 const FigCaption = styled.figcaption`
-  ${({page}) => fontStyle[page]}
+  ${MainRyoanji} & {
+    ${fontStyle['ryoanji']}
+  }
 `;
 
-FigCaption.propTypes = {
-  page: PropTypes.string.isRequired,
-};
+FigCaption.propTypes = {};
 export default FigCaption;

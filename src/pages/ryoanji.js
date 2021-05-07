@@ -62,8 +62,8 @@ export default function Ryoanji() {
       <MainRyoanji>
         <Article>
           <Article.Header>
-            <H1.Wrapper page="ryoanji">
-              <H1 page="ryoanji" aria-label="Ryoan-ji Rock Garden">
+            <H1.Wrapper>
+              <H1 aria-label="Ryoan-ji Rock Garden">
                 <H1.Ryoanji>Ryoan-ji</H1.Ryoanji>
                 <H1.RockGarden>Rock Garden</H1.RockGarden>
               </H1>
@@ -142,7 +142,7 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section>
-            <H2 page="ryoanji">Get the Viewpoint Right</H2>
+            <H2>Get the Viewpoint Right</H2>
             <SpacerBoxParagraphToText />
             <P>
               The key to understand this cryptic garden is to see it from where
@@ -159,7 +159,7 @@ export default function Ryoanji() {
                   height={313}
                   alt=""
                 />
-                <FigCaption page="ryoanji">
+                <FigCaption>
                   The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
                   <Source as="footer">
                     Adapted from{' '}
@@ -194,7 +194,7 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section>
-            <H2 page="ryoanji">No Focal Point in the Garden</H2>
+            <H2>No Focal Point in the Garden</H2>
             <SpacerBoxParagraphToText />
             <P>
               Once I sit down and see the garden from the correct viewpoint, the
@@ -202,7 +202,7 @@ export default function Ryoanji() {
               <Strong>there is nothing emphasized in this garden</Strong>.
             </P>
             <SubSection>
-              <H3 page="ryoanji">Straight ahead</H3>
+              <H3>Straight ahead</H3>
               <SpacerH3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
@@ -223,7 +223,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               {' '}
-              <H3 page="ryoanji">Leftward</H3>
+              <H3>Leftward</H3>
               <SpacerH3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
@@ -242,7 +242,7 @@ export default function Ryoanji() {
               </P>
             </SubSection>
             <SubSection>
-              <H3 page="ryoanji">Rightward</H3>
+              <H3>Rightward</H3>
               <SpacerH3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
@@ -265,7 +265,7 @@ export default function Ryoanji() {
             </SubSection>
           </Section>
           <Section>
-            <H2 page="ryoanji">No Single Rock Dominates</H2>
+            <H2>No Single Rock Dominates</H2>
             <SpacerBoxParagraphToText />
             <P>
               The lack of emphasis, I then notice, penetrates into how fifteen
@@ -273,7 +273,7 @@ export default function Ryoanji() {
               of moss. Let’s start looking at the middle three clusters.
             </P>
             <SubSection>
-              <H3 page="ryoanji">Middle left</H3>
+              <H3>Middle left</H3>
               <SpacerH3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
@@ -292,7 +292,7 @@ export default function Ryoanji() {
               </P>
             </SubSection>
             <SubSection>
-              <H3 page="ryoanji">Middle</H3>
+              <H3>Middle</H3>
               <SpacerH3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
@@ -311,7 +311,7 @@ export default function Ryoanji() {
               </P>
             </SubSection>
             <SubSection>
-              <H3 page="ryoanji">Middle right</H3>
+              <H3>Middle right</H3>
               <SpacerH3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
@@ -329,7 +329,7 @@ export default function Ryoanji() {
               </P>
             </SubSection>
             <SubSection>
-              <H3 page="ryoanji">Leftmost</H3>
+              <H3>Leftmost</H3>
               <SpacerH3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
@@ -352,7 +352,7 @@ export default function Ryoanji() {
               </P>
             </SubSection>
             <SubSection>
-              <H3 page="ryoanji">Rightmost</H3>
+              <H3>Rightmost</H3>
               <SpacerH3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
@@ -375,7 +375,7 @@ export default function Ryoanji() {
             </SubSection>
           </Section>
           <Section>
-            <H2 page="ryoanji">The Rock Garden’s Message</H2>
+            <H2>The Rock Garden’s Message</H2>
             <SpacerBoxParagraphToText />
             <P>
               Now it is clear that nothing is emphasized throughout this garden.
@@ -414,7 +414,7 @@ export default function Ryoanji() {
             </P>
           </Section>{' '}
           <Section>
-            <H2 page="ryoanji">Garden as a Reminder</H2>
+            <H2>Garden as a Reminder</H2>
             <SpacerBoxParagraphToText />
             <P>
               Ever since I managed to interpret the meaning of Ryoan-ji Rock
@@ -457,7 +457,7 @@ export default function Ryoanji() {
             </P>
           </Section>
           <Section as="aside">
-            <H2 page="ryoanji">References</H2>
+            <H2>References</H2>
             <SpacerBoxParagraphToText />
             <P>
               Slawson, David A. (1987).{' '}

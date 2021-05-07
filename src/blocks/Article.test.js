@@ -6,34 +6,8 @@ import Article from './Article';
 const mockProps = {};
 
 describe('Parent chnages UI by prop value', () => {
-  test.skip('kohoan', () => {
-    const {container} = render(<Article page="kohoan" />);
-    expect(container).toMatchInlineSnapshot(`
-      .c0 {
-        font-family: 'Libre Baskerville','Verdana',serif;
-        font-size: 0.993rem;
-        font-weight: 400;
-        line-height: 1.8725;
-        margin: 0 auto;
-        max-width: 941px;
-      }
-
-      @media only screen and (min-width:728px) {
-        .c0 {
-          font-size: 1.2266rem;
-          line-height: 2.00625;
-        }
-      }
-
-      <div>
-        <article
-          class="c0"
-        />
-      </div>
-    `);
-  });
   test('ryoanji', () => {
-    const {container} = render(<Article page="ryoanji" />);
+    const {container} = render(<Article />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         margin: 0 auto;

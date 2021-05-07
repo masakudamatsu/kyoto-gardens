@@ -5,6 +5,7 @@ import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import MainRyoanji from 'src/blocks/MainRyoanji';
 
 const fontStyle = {
   ryoanji: css`
@@ -22,12 +23,12 @@ const fontStyle = {
 };
 
 const H3 = styled.h3`
-  ${({page}) => fontStyle[page]}
-  ${({page}) => horizontalSpacing.text[page].innerMerged}
-  ${({page}) => horizontalSpacing.text[page].outer}
+  ${MainRyoanji} & {
+    ${fontStyle['ryoanji']}
+    ${horizontalSpacing.text['ryoanji'].innerMerged}
+    ${horizontalSpacing.text['ryoanji'].outer}
+  }
 `;
 
-H3.propTypes = {
-  page: PropTypes.string.isRequired,
-};
+H3.propTypes = {};
 export default H3;

@@ -7,9 +7,19 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('Parent', () => {
-    const {container} = render(<H1 page="ryoanji" {...mockProps} />);
+    const {container} = render(<H1 {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
+      .c1 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      .MainRyoanji-sc-11d35pr-0 .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 3.1331rem;
         font-weight: 700;
@@ -18,38 +28,31 @@ describe('renders UI correctly', () => {
         -ms-letter-spacing: 0.05em;
         letter-spacing: 0.05em;
         line-height: 0.7065;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
         margin: 0 auto;
         max-width: 34.5153rem;
       }
 
       @media only screen and (min-width:38.9424rem) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           font-size: 5.2218rem;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           font-size: 6.4505rem;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           max-width: 42.6366rem;
         }
       }
 
       <div>
         <h1
-          class="c0"
+          class="c0 c1"
         />
       </div>
     `);
@@ -112,9 +115,9 @@ describe('renders UI correctly', () => {
     `);
   });
   test('Wrapper', () => {
-    const {container} = render(<H1.Wrapper page="ryoanji" {...mockProps} />);
+    const {container} = render(<H1.Wrapper {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
+      .MainRyoanji-sc-11d35pr-0 .c0 {
         padding: 0 1.3281rem;
         background-color: hsla(193,50%,26%,0.9);
         background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
@@ -124,19 +127,19 @@ describe('renders UI correctly', () => {
       }
 
       @media only screen and (min-width:31.6802rem) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           padding: 0 2.2135rem;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           padding: 0 3.0078rem;
         }
       }
 
       @media only screen and (min-width:31.6802rem) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           background-color: transparent;
           background-image: none;
           bottom: 0;
@@ -150,7 +153,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0"
+          class="c0 "
         />
       </div>
     `);

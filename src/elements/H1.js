@@ -1,11 +1,12 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, lineLength} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import MainRyoanji from 'src/blocks/MainRyoanji';
 
 const fontStyle = {
   ryoanji: css`
@@ -22,18 +23,20 @@ const fontStyle = {
     }
   `,
 };
-
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
 // 28px * (5/3) = 46.666px
 // Word spacing reduced by 13.333px
 // Font-size 103.208px
 // Word spacing reduced by 0.129em
+
 const H1 = styled.h1`
-  ${({page}) => fontStyle[page]}
+  ${MainRyoanji} & {
+    ${fontStyle.ryoanji}
+    ${horizontalSpacing.text['ryoanji'].inner}
+  }
   display: flex;
   flex-direction: column;
-  ${({page}) => horizontalSpacing.text[page].inner}
 `;
 
 H1.Ryoanji = styled.span`
@@ -68,26 +71,26 @@ H1.RockGarden = styled.span`
 `;
 
 H1.Wrapper = styled.div`
-  ${({page}) => horizontalSpacing.text[page].outer}
-  background-color: ${ryoanji.h1.backgroundColor.mobile};
-  background-image: ${ryoanji.h1.backgroundImage.mobile};
-  color: ${ryoanji.h1.color.mobile};
-  padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
-  width: 100%;
-  @media only screen and ${breakpoint.sideMargin} {
-    background-color: ${ryoanji.h1.backgroundColor.desktop};
-    background-image: ${ryoanji.h1.backgroundImage.desktop};
-    bottom: 0;
-    color: ${ryoanji.h1.color.desktop};
-    left: 0;
-    padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
-    position: absolute;
-    z-index: 1;
+  ${MainRyoanji} & {
+    ${horizontalSpacing.text['ryoanji'].outer}
+    background-color: ${ryoanji.h1.backgroundColor.mobile};
+    background-image: ${ryoanji.h1.backgroundImage.mobile};
+    color: ${ryoanji.h1.color.mobile};
+    padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
+    width: 100%;
+    @media only screen and ${breakpoint.sideMargin} {
+      background-color: ${ryoanji.h1.backgroundColor.desktop};
+      background-image: ${ryoanji.h1.backgroundImage.desktop};
+      bottom: 0;
+      color: ${ryoanji.h1.color.desktop};
+      left: 0;
+      padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
+      position: absolute;
+      z-index: 1;
+    }
   }
 `;
 
-H1.propTypes = {
-  page: PropTypes.string,
-};
+H1.propTypes = {};
 
 export default H1;
