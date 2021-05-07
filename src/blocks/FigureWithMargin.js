@@ -13,15 +13,6 @@ import {ryoanji} from 'src/utils/specRyoanji';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
-  margin: 0 auto;
-  max-width: ${remify(lineLength.max.mobile + whitespace().sideMarginLarge * 2)};
-  @media only screen and ${breakpoint.sideMargin} {
-    padding: 0 ${remify(whitespace().sideMarginLarge)};
-  }
-  @media only screen and ${breakpoint.fontSize} {
-    max-width: ${remify(lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,)};
-    padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
-  }
 `;
 
 FigureWithMargin.Border = styled.div`

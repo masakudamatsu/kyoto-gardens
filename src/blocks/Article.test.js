@@ -152,6 +152,11 @@ describe('Parent chnages UI by prop value', () => {
         padding: 0 1.3281rem;
       }
 
+      .c0 .FigureWithMargin-gp5wnz-0 {
+        margin: 0 auto;
+        max-width: 38.9424rem;
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
           font-size: 1.6489rem;
@@ -253,6 +258,24 @@ describe('Parent chnages UI by prop value', () => {
 
       @media only screen and (min-width:728px) {
         .c0 .P-sc-1wtxz9h-0 {
+          padding: 0 3.0078rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .FigureWithMargin-gp5wnz-0 {
+          max-width: 48.6522rem;
+        }
+      }
+
+      @media only screen and (min-width:31.6802rem) {
+        .c0 .FigureWithMargin-gp5wnz-0 {
+          padding: 0 2.2135rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 .FigureWithMargin-gp5wnz-0 {
           padding: 0 3.0078rem;
         }
       }

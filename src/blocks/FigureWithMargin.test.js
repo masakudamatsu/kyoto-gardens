@@ -13,27 +13,9 @@ describe('renders UI correctly', () => {
         overflow: hidden;
       }
 
-      .c1 {
-        margin: 0 auto;
-        max-width: 38.9424rem;
-      }
-
-      @media only screen and (min-width:31.6802rem) {
-        .c1 {
-          padding: 0 2.2135rem;
-        }
-      }
-
-      @media only screen and (min-width:728px) {
-        .c1 {
-          max-width: 48.6522rem;
-          padding: 0 3.0078rem;
-        }
-      }
-
       <div>
         <figure
-          class="c0 c1"
+          class="FigureWithMargin-gp5wnz-0 c0"
         />
       </div>
     `);

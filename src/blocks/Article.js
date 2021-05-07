@@ -10,8 +10,9 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
-import P from 'src/elements/P';
 import LeadIn from 'src/elements/LeadIn';
+import FigureWithMargin from 'src/blocks/FigureWithMargin';
+import P from 'src/elements/P';
 import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
@@ -209,6 +210,10 @@ const Article = styled.article`
   & ${P} {
     ${({page}) => horizontalSpacing.text[page].innerMerged}
     ${({page}) => horizontalSpacing.text[page].outer}
+  }
+  & ${FigureWithMargin} {
+    ${({page}) => horizontalSpacing.figure[page].innerMerged}
+    ${({page}) => horizontalSpacing.figure[page].outer}
   }
 `;
 
