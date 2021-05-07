@@ -79,13 +79,7 @@ H1.RockGarden = styled.span`
 
 H1.Wrapper = styled.div`
   background-color: ${ryoanji.h1.backgroundColor.mobile};
-  background-image: linear-gradient(
-    35deg,
-    hsla(0, 0%, 100%, 0) 0,
-    hsla(0, 0%, 100%, 0.5) 55%,
-    hsla(0, 0%, 100%, 0.5) 65%,
-    hsla(0, 0%, 100%, 0)
-  );
+  background-image: ${ryoanji.h1.backgroundImage.mobile};
   color: ${ryoanji.h1.color.mobile};
   padding-left: ${remify(whitespace().sideMargin)};
   padding-right: ${remify(whitespace().sideMargin)};
@@ -93,7 +87,7 @@ H1.Wrapper = styled.div`
   width: 100%;
   @media only screen and ${breakpoint.sideMargin} {
     background-color: ${ryoanji.h1.backgroundColor.desktop};
-    background-image: none;
+    background-image: ${ryoanji.h1.backgroundImage.desktop};
     bottom: 0;
     color: ${ryoanji.h1.color.desktop};
     left: 0;

@@ -11,6 +11,14 @@ const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
 const onPrimary = '#eee';
 const onPhoto = '#000';
+// Patterns
+const lightingOverlay = `linear-gradient(
+  35deg,
+  hsla(0, 0%, 100%, 0) 0,
+  hsla(0, 0%, 100%, 0.5) 55%,
+  hsla(0, 0%, 100%, 0.5) 65%,
+  hsla(0, 0%, 100%, 0)
+)`;
 
 // Font scheme
 const cormorant = {
@@ -133,6 +141,10 @@ export const ryoanji = {
       mobile: primary,
       desktop: 'transparent',
     },
+    backgroundImage: {
+      mobile: lightingOverlay,
+      desktop: 'none',
+    },
     color: {
       mobile: onPrimary,
       desktop: onPhoto,
@@ -212,13 +224,7 @@ export const ryoanji = {
   },
   h2: {
     backgroundColor: primary,
-    backgroundImage: `linear-gradient(
-      35deg,
-      hsla(0, 0%, 100%, 0) 0,
-      hsla(0, 0%, 100%, 0.5) 55%,
-      hsla(0, 0%, 100%, 0.5) 65%,
-      hsla(0, 0%, 100%, 0)
-    )`,
+    backgroundImage: lightingOverlay,
     color: onPrimary,
     ...cormorant,
     get fontSize() {
