@@ -338,6 +338,7 @@ export const ryoanji = {
   },
   figure: {
     borderColor: primaryShade,
+    paddingInsideBorder: 15.564,
     spaceBelowByBug: {
       mobile: 8,
       desktop: 12,

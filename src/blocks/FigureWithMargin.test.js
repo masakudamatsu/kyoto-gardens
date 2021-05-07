@@ -47,14 +47,14 @@ describe('renders UI correctly', () => {
   test('Border', () => {
     const {container} = render(<FigureWithMargin.Border />);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
+      .MainRyoanji-sc-11d35pr-0 .c0 {
         border-bottom: 1px solid hsla(193,50%,26%,0.2);
         border-top: 1px solid hsla(193,50%,26%,0.2);
         padding: 15.564px;
       }
 
       @media only screen and (min-width:31.6802rem) {
-        .c0 {
+        .MainRyoanji-sc-11d35pr-0 .c0 {
           border-left: 1px solid hsla(193,50%,26%,0.2);
           border-right: 1px solid hsla(193,50%,26%,0.2);
         }
@@ -62,7 +62,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0"
+          class="c0 "
         />
       </div>
     `);

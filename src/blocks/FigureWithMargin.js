@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Figure from 'src/blocks/Figure';
-import {breakpoint, figureBordered} from 'src/utils/designSpec';
-import remify from 'src/utils/remify';
+import {breakpoint} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/specRyoanji';
 import MainRyoanji from 'src/blocks/MainRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
@@ -17,12 +16,14 @@ const FigureWithMargin = styled(Figure)`
 `;
 
 FigureWithMargin.Border = styled.div`
-  border-bottom: 1px solid ${ryoanji.figure.borderColor};
-  border-top: 1px solid ${ryoanji.figure.borderColor};
-  padding: ${figureBordered.padding}px;
-  @media only screen and ${breakpoint.sideMargin} {
-    border-left: 1px solid ${ryoanji.figure.borderColor};
-    border-right: 1px solid ${ryoanji.figure.borderColor};
+  ${MainRyoanji} & {
+    border-bottom: 1px solid ${ryoanji.figure.borderColor};
+    border-top: 1px solid ${ryoanji.figure.borderColor};
+    padding: ${ryoanji.figure.paddingInsideBorder}px;
+    @media only screen and ${breakpoint.sideMargin} {
+      border-left: 1px solid ${ryoanji.figure.borderColor};
+      border-right: 1px solid ${ryoanji.figure.borderColor};
+    }
   }
 `;
 

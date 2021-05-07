@@ -96,10 +96,6 @@ export function setSpace(screenWidth, lineHeightRatio) {
   };
 }
 
-export const figureBordered = {
-  padding: 15.564,
-};
-
 export const lineLength = {
   min: 51.3 * xHeight(), // 436.093px for font-size of 21.3568px
   max: {
