@@ -1,9 +1,10 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
+import {breakpoint, lineLength} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const fontStyle = {
   ryoanji: css`
@@ -30,21 +31,6 @@ const backgroundStyle = {
   ryoanji: css`
     background-color: ${ryoanji.h2.backgroundColor};
     background-image: ${ryoanji.h2.backgroundImage};
-  `,
-};
-
-const horizontalSpacing = {
-  ryoanji: css`
-    padding-left: ${remify(whitespace().sideMargin)};
-    padding-right: ${remify(whitespace().sideMargin)};
-    @media only screen and ${breakpoint.sideMargin} {
-      padding-left: ${remify(whitespace().sideMarginLarge)};
-      padding-right: ${remify(whitespace().sideMarginLarge)};
-    }
-    @media only screen and ${breakpoint.fontSize} {
-      padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
-      padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-    }
   `,
 };
 
