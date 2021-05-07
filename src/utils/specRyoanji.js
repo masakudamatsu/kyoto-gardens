@@ -212,6 +212,13 @@ export const ryoanji = {
   },
   h2: {
     backgroundColor: primary,
+    backgroundImage: `linear-gradient(
+      35deg,
+      hsla(0, 0%, 100%, 0) 0,
+      hsla(0, 0%, 100%, 0.5) 55%,
+      hsla(0, 0%, 100%, 0.5) 65%,
+      hsla(0, 0%, 100%, 0)
+    )`,
     color: onPrimary,
     ...cormorant,
     get fontSize() {

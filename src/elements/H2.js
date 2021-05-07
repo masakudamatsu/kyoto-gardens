@@ -26,6 +26,28 @@ const fontStyle = {
   `,
 };
 
+const backgroundStyle = {
+  ryoanji: css`
+    background-color: ${ryoanji.h2.backgroundColor};
+    background-image: ${ryoanji.h2.backgroundImage};
+  `,
+};
+
+const horizontalSpacing = {
+  ryoanji: css`
+    padding-left: ${remify(whitespace().sideMargin)};
+    padding-right: ${remify(whitespace().sideMargin)};
+    @media only screen and ${breakpoint.sideMargin} {
+      padding-left: ${remify(whitespace().sideMarginLarge)};
+      padding-right: ${remify(whitespace().sideMarginLarge)};
+    }
+    @media only screen and ${breakpoint.fontSize} {
+      padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
+      padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
+    }
+  `,
+};
+
 const defaultStyle = css`
   ${({page}) => fontStyle[page]}
   @media only screen and ${breakpoint.floorPlanWidth} {
@@ -59,28 +81,8 @@ const H2Style = styled.h2`
 `;
 
 H2Style.Wrapper = styled.div`
-  ${props =>
-    props.page === 'ryoanji' &&
-    `
-    background-color: ${ryoanji.h2.backgroundColor};
-    background-image: linear-gradient(
-      35deg,
-      hsla(0, 0%, 100%, 0) 0,
-      hsla(0, 0%, 100%, 0.5) 55%,
-      hsla(0, 0%, 100%, 0.5) 65%,
-      hsla(0, 0%, 100%, 0)
-    );
-  `}
-  padding-left: ${remify(whitespace().sideMargin)};
-  padding-right: ${remify(whitespace().sideMargin)};
-  @media only screen and ${breakpoint.sideMargin} {
-    padding-left: ${remify(whitespace().sideMarginLarge)};
-    padding-right: ${remify(whitespace().sideMarginLarge)};
-  }
-  @media only screen and ${breakpoint.fontSize} {
-    padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
-    padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-  }
+  ${({page}) => backgroundStyle[page]}
+  ${({page}) => horizontalSpacing[page]}
 `;
 
 const H2 = props => {
