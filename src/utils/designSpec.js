@@ -96,9 +96,6 @@ export function setSpace(screenWidth, lineHeightRatio) {
   };
 }
 
-export const maxPhotoWidth = 941;
-export const maxPhotoHeight = 703;
-
 export const breakpoint = {
   // floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`, // merged to the sideMargin breakpoint
   fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device

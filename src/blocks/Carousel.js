@@ -2,15 +2,15 @@ import styled, {keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Figure from 'src/blocks/Figure';
-import {maxPhotoHeight, maxPhotoWidth} from 'src/utils/designSpec';
 import round from 'src/utils/round';
+import {ryoanji} from 'src/utils/specRyoanji';
 
-const aspectRatio = maxPhotoWidth / maxPhotoHeight;
+const aspectRatio = ryoanji.figure.maxWidth / ryoanji.figure.maxHeight;
 
 const Carousel = styled(Figure)`
   height: ${round((1 / aspectRatio) * 100, 4)}vw;
-  max-height: ${maxPhotoHeight}px;
-  max-width: ${maxPhotoWidth}px;
+  max-height: ${ryoanji.figure.maxHeight}px;
+  max-width: ${ryoanji.figure.maxWidth}px;
   position: relative;
   width: 100%;
 `;

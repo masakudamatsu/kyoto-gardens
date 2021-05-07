@@ -340,6 +340,8 @@ export const ryoanji = {
   },
   figure: {
     borderColor: primaryShade,
+    maxHeight: 703, // half the height of spring/summer photos
+    maxWidth: 941, // half the width of spring/summer/autumn/winter photos
     paddingInsideBorder: 15.564,
     spaceBelowByBug: {
       mobile: 8,

@@ -28,7 +28,6 @@ import {
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 
-import {maxPhotoWidth} from 'src/utils/designSpec';
 import {ryoanji} from 'src/utils/metadata';
 
 export default function Ryoanji() {
