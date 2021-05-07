@@ -7,7 +7,6 @@ import Carousel from '../blocks/Carousel';
 import CiteItalic from '../elements/CiteItalic';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
-import FigureBordered from '../blocks/FigureBordered';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
 import H2 from '../elements/H2';
@@ -152,27 +151,29 @@ export default function Ryoanji() {
               floor plan below:
             </P>
             <SpacerTextLineToBox />
-            <FigureBordered>
-              <ImageWithPlaceholder
-                src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
-                width={497}
-                height={313}
-                alt=""
-              />
-              <FigCaption page="ryoanji">
-                The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
-                <Source as="footer">
-                  Adapted from{' '}
-                  <a
-                    href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
-                    target="_blank"
-                  >
-                    Slawson (1987)
-                  </a>
-                  , p. 96.
-                </Source>
-              </FigCaption>
-            </FigureBordered>
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
+                  width={497}
+                  height={313}
+                  alt=""
+                />
+                <FigCaption page="ryoanji">
+                  The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
+                  <Source as="footer">
+                    Adapted from{' '}
+                    <a
+                      href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
+                      target="_blank"
+                    >
+                      Slawson (1987)
+                    </a>
+                    , p. 96.
+                  </Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
+            </FigureWithMargin>
             <SpacerBoxParagraphToText />
             <P>
               My third visit to the garden was different from the previous ones

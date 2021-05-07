@@ -112,7 +112,7 @@ export const maxPhotoWidth = 941;
 export const maxPhotoHeight = 703;
 
 export const breakpoint = {
-  floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`,
+  // floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`, // merged to the sideMargin breakpoint
   floorPlanWidth: `(min-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
   )})`,
