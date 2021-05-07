@@ -55,9 +55,7 @@ export function setHorizontalSpace(elementType, lineHeightRatio, lineLength) {
     `,
     outer: css`
       ${styleTextOnly}
-      @media only screen and (min-width: ${remify(
-        lineLength.min + sideMargin.mobile * 2,
-      )}) {
+      @media only screen and ${ryoanji.breakpoint.sideMargin} {
         padding: 0 ${remify(sideMargin.mobile)};
       }
       @media only screen and ${breakpoint.fontSize} {

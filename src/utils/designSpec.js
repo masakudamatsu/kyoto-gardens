@@ -96,29 +96,12 @@ export function setSpace(screenWidth, lineHeightRatio) {
   };
 }
 
-export const lineLength = {
-  min: 51.3 * xHeight(), // 436.093px for font-size of 21.3568px
-  max: {
-    mobile: 64.97 * xHeight('mobile'),
-    desktop: 64.97 * xHeight('desktop'),
-  }, // in em: 682.188px for font-size of 26.3824px
-};
-
 export const maxPhotoWidth = 941;
 export const maxPhotoHeight = 703;
 
 export const breakpoint = {
   // floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`, // merged to the sideMargin breakpoint
-  floorPlanWidth: `(min-width: ${remify(
-    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
-  )})`,
-  floorPlanWidthDesktop: `(min-width: ${remify(
-    lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
-  )})`,
   fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
-  sideMargin: `(min-width: ${remify(
-    lineLength.min + whitespace().sideMarginLarge * 2, // remify to be responsive to user's base font size
-  )})`,
 };
 
 /* *********  Koho-an   ********** */

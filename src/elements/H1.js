@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint, setSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
@@ -15,7 +15,7 @@ const fontStyle = {
     font-weight: ${ryoanji.h1.fontWeight};
     letter-spacing: ${ryoanji.h1.letterSpacig};
     line-height: ${ryoanji.h1.lineHeight};
-    @media only screen and ${breakpoint.floorPlanWidth} {
+    @media only screen and ${ryoanji.breakpoint.h1} {
       font-size: ${remify(ryoanji.h1.fontSize.tablet)};
     }
     @media only screen and ${breakpoint.fontSize} {
@@ -44,7 +44,7 @@ H1.Ryoanji = styled.span`
   text-indent: ${remify(
     ryoanji.h1.textIndent.mobile,
   )}; /* Optical alignment with paragraphs */
-  @media only screen and ${breakpoint.floorPlanWidth} {
+  @media only screen and ${ryoanji.breakpoint.h1} {
     text-indent: ${remify(ryoanji.h1.textIndent.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
@@ -59,7 +59,7 @@ H1.RockGarden = styled.span`
   font-size: ${round(ryoanji.h1.fontSize.rockGarden, 4)}em;
   padding-bottom: ${remify(ryoanji.h1.padding.bottom.mobile)};
   word-spacing: ${ryoanji.h1.wordSpacing.rockGarden};
-  @media only screen and ${breakpoint.floorPlanWidth} {
+  @media only screen and ${ryoanji.breakpoint.h1} {
     text-indent: ${remify(ryoanji.h1.textIndent.rockGarden.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
@@ -78,7 +78,7 @@ H1.Wrapper = styled.div`
     color: ${ryoanji.h1.color.mobile};
     padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
     width: 100%;
-    @media only screen and ${breakpoint.sideMargin} {
+    @media only screen and ${ryoanji.breakpoint.sideMargin} {
       background-color: ${ryoanji.h1.backgroundColor.desktop};
       background-image: ${ryoanji.h1.backgroundImage.desktop};
       bottom: 0;
