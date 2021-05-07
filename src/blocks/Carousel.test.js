@@ -15,15 +15,10 @@ describe('renders UI correctly', () => {
 
       .c1 {
         height: 74.7078vw;
+        max-height: 703px;
         max-width: 941px;
         position: relative;
         width: 100%;
-      }
-
-      @media only screen and (min-width:941px) {
-        .c1 {
-          height: 703px;
-        }
       }
 
       <div>
