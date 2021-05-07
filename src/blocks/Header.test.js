@@ -72,43 +72,12 @@ describe('renders UI correctly', () => {
     const {container} = render(<Header.H1 {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-      }
-
-      .c1 {
         padding-bottom: 0.9375rem;
         padding-top: 0.9375rem;
       }
 
-      @media only screen and (min-width:38.9424rem) {
-        .c0 {
-          margin: 0 auto;
-          width: 34.5153rem;
-        }
-      }
-
-      @media only screen and (min-width:728px) {
-        .c0 {
-          margin: 0;
-          width: auto;
-        }
-      }
-
-      @media only screen and (min-width:48.6522rem) {
-        .c0 {
-          margin: 0 auto;
-          width: 42.6366rem;
-        }
-      }
-
       @media only screen and (min-width:45.5rem) {
-        .c1 {
+        .c0 {
           padding-bottom: 1.125rem;
           padding-top: 1.125rem;
         }
@@ -116,7 +85,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <h1
-          class="c0 c1"
+          class="c0"
         />
       </div>
     `);

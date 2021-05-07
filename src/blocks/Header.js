@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import H1 from 'src/elements/H1';
 import ImageWithPlaceholder from 'src/elements/ImageWithPlaceholder';
 
 import {animation} from 'src/utils/specAnimation';
@@ -91,7 +90,7 @@ Header.ImgWrapper = styled.a`
 
 Header.Img = styled.img``; // to be replaced with ImageWithPlaceholder
 
-Header.H1 = styled(H1)`
+Header.H1 = styled.h1`
   padding-bottom: ${remify(header.h1.paddingBottom)};
   padding-top: ${remify(header.h1.paddingTop)};
   @media only screen and ${mediaQuery.font} {
