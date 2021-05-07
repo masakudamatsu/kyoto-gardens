@@ -7,9 +7,10 @@ import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import {maxPhotoWidth} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
-
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
+import P from 'src/elements/P';
 import LeadIn from 'src/elements/LeadIn';
 import Section from 'src/blocks/Section';
 import SectionBreak from 'src/elements/SectionBreak';
@@ -205,6 +206,10 @@ const Article = styled.article`
   ${({page}) => verticalSpacing[page]}
   margin: 0 auto;
   max-width: ${maxPhotoWidth}px;
+  & ${P} {
+    ${({page}) => horizontalSpacing.text[page].innerMerged}
+    ${({page}) => horizontalSpacing.text[page].outer}
+  }
 `;
 
 Article.Header = styled.header`
