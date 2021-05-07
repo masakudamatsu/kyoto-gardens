@@ -1,10 +1,11 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
+import {breakpoint, lineLength} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const fontStyle = {
   ryoanji: css`
@@ -81,8 +82,6 @@ H1.Wrapper = styled.div`
   background-color: ${ryoanji.h1.backgroundColor.mobile};
   background-image: ${ryoanji.h1.backgroundImage.mobile};
   color: ${ryoanji.h1.color.mobile};
-  padding-left: ${remify(whitespace().sideMargin)};
-  padding-right: ${remify(whitespace().sideMargin)};
   padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
   width: 100%;
   @media only screen and ${breakpoint.sideMargin} {
@@ -91,16 +90,11 @@ H1.Wrapper = styled.div`
     bottom: 0;
     color: ${ryoanji.h1.color.desktop};
     left: 0;
-    padding-left: ${remify(whitespace().sideMarginLarge)};
-    padding-right: ${remify(whitespace().sideMarginLarge)};
     padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
     position: absolute;
     z-index: 1;
   }
-  @media only screen and ${breakpoint.fontSize} {
-    padding-left: ${remify(whitespace('desktop').sideMarginLarge)};
-    padding-right: ${remify(whitespace('desktop').sideMarginLarge)};
-  }
+  ${({page}) => horizontalSpacing[page]}
 `;
 
 H1.propTypes = {

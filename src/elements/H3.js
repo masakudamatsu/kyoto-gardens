@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {breakpoint, lineLength, whitespace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const fontStyle = {
   ryoanji: css`
@@ -26,16 +27,12 @@ const H3 = styled.h3`
   max-width: ${remify(
     lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
   )};
-  padding: 0 ${remify(whitespace().sideMargin)};
-  @media only screen and ${breakpoint.sideMargin} {
-    padding: 0 ${remify(whitespace().sideMarginLarge)};
-  }
   @media only screen and ${breakpoint.fontSize} {
     max-width: ${remify(
       lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
     )};
-    padding: 0 ${remify(whitespace('desktop').sideMarginLarge)};
   }
+  ${({page}) => horizontalSpacing[page]}
 `;
 
 H3.propTypes = {

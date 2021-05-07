@@ -125,16 +125,15 @@ describe('renders UI correctly', () => {
     `);
   });
   test('Wrapper', () => {
-    const {container} = render(<H1.Wrapper {...mockProps} />);
+    const {container} = render(<H1.Wrapper page="ryoanji" {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         background-color: hsla(193,50%,26%,0.9);
         background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
         color: #eee;
-        padding-left: 1.3281rem;
-        padding-right: 1.3281rem;
         padding-top: 0.5313rem;
         width: 100%;
+        padding: 0 1.3281rem;
       }
 
       @media only screen and (min-width:31.6802rem) {
@@ -144,18 +143,21 @@ describe('renders UI correctly', () => {
           bottom: 0;
           color: #000;
           left: 0;
-          padding-left: 2.2135rem;
-          padding-right: 2.2135rem;
           padding-top: 0rem;
           position: absolute;
           z-index: 1;
         }
       }
 
+      @media only screen and (min-width:31.6802rem) {
+        .c0 {
+          padding: 0 2.2135rem;
+        }
+      }
+
       @media only screen and (min-width:728px) {
         .c0 {
-          padding-left: 3.0078rem;
-          padding-right: 3.0078rem;
+          padding: 0 3.0078rem;
         }
       }
 

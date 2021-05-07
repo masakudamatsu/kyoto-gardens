@@ -30,6 +30,12 @@ test('renders UI correctly', () => {
       }
     }
 
+    @media only screen and (min-width:728px) {
+      .c0 {
+        max-width: 48.6522rem;
+      }
+    }
+
     @media only screen and (min-width:31.6802rem) {
       .c0 {
         padding: 0 2.2135rem;
@@ -38,7 +44,6 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c0 {
-        max-width: 48.6522rem;
         padding: 0 3.0078rem;
       }
     }
