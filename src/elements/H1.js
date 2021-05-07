@@ -33,18 +33,7 @@ const H1 = styled.h1`
   ${({page}) => fontStyle[page]}
   display: flex;
   flex-direction: column;
-  @media only screen and ${breakpoint.floorPlanWidth} {
-    margin: 0 auto;
-    width: ${remify(lineLength.max.mobile)};
-  }
-  @media only screen and ${breakpoint.fontSize} {
-    margin: 0;
-    width: auto;
-  }
-  @media only screen and ${breakpoint.floorPlanWidthDesktop} {
-    margin: 0 auto;
-    width: ${remify(lineLength.max.desktop)};
-  }
+  ${({page}) => horizontalSpacing.text[page].inner}
 `;
 
 H1.Ryoanji = styled.span`
@@ -79,6 +68,7 @@ H1.RockGarden = styled.span`
 `;
 
 H1.Wrapper = styled.div`
+  ${({page}) => horizontalSpacing.text[page].outer}
   background-color: ${ryoanji.h1.backgroundColor.mobile};
   background-image: ${ryoanji.h1.backgroundImage.mobile};
   color: ${ryoanji.h1.color.mobile};
@@ -94,7 +84,6 @@ H1.Wrapper = styled.div`
     position: absolute;
     z-index: 1;
   }
-  ${({page}) => horizontalSpacing[page]}
 `;
 
 H1.propTypes = {

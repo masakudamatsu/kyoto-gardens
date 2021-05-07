@@ -36,18 +36,7 @@ const backgroundStyle = {
 
 const defaultStyle = css`
   ${({page}) => fontStyle[page]}
-  @media only screen and ${breakpoint.floorPlanWidth} {
-    margin: 0 auto;
-    width: ${remify(lineLength.max.mobile)};
-  }
-  @media only screen and ${breakpoint.fontSize} {
-    margin: 0;
-    width: auto;
-  }
-  @media only screen and ${breakpoint.floorPlanWidthDesktop} {
-    margin: 0 auto;
-    width: ${remify(lineLength.max.desktop)};
-  }
+  ${({page}) => horizontalSpacing.text[page].inner}
 `;
 
 const visuallyHidden = css`
@@ -68,7 +57,7 @@ const H2Style = styled.h2`
 
 H2Style.Wrapper = styled.div`
   ${({page}) => backgroundStyle[page]}
-  ${({page}) => horizontalSpacing[page]}
+  ${({page}) => horizontalSpacing.text[page].outer}
 `;
 
 const H2 = props => {

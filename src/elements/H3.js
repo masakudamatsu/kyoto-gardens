@@ -23,16 +23,8 @@ const fontStyle = {
 
 const H3 = styled.h3`
   ${({page}) => fontStyle[page]}
-  margin: 0 auto;
-  max-width: ${remify(
-    lineLength.max.mobile + whitespace('mobile').sideMarginLarge * 2,
-  )};
-  @media only screen and ${breakpoint.fontSize} {
-    max-width: ${remify(
-      lineLength.max.desktop + whitespace('desktop').sideMarginLarge * 2,
-    )};
-  }
-  ${({page}) => horizontalSpacing[page]}
+  ${({page}) => horizontalSpacing.text[page].innerMerged}
+  ${({page}) => horizontalSpacing.text[page].outer}
 `;
 
 H3.propTypes = {

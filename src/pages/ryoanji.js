@@ -62,7 +62,7 @@ export default function Ryoanji() {
       <Background page="ryoanji">
         <Article page="ryoanji">
           <Article.Header>
-            <H1.Wrapper>
+            <H1.Wrapper page="ryoanji">
               <H1 page="ryoanji" aria-label="Ryoan-ji Rock Garden">
                 <H1.Ryoanji>Ryoan-ji</H1.Ryoanji>
                 <H1.RockGarden>Rock Garden</H1.RockGarden>

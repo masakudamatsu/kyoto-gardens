@@ -25,6 +25,8 @@ describe('renders UI correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        margin: 0 auto;
+        max-width: 34.5153rem;
       }
 
       @media only screen and (min-width:38.9424rem) {
@@ -39,24 +41,9 @@ describe('renders UI correctly', () => {
         }
       }
 
-      @media only screen and (min-width:38.9424rem) {
-        .c0 {
-          margin: 0 auto;
-          width: 34.5153rem;
-        }
-      }
-
       @media only screen and (min-width:728px) {
         .c0 {
-          margin: 0;
-          width: auto;
-        }
-      }
-
-      @media only screen and (min-width:48.6522rem) {
-        .c0 {
-          margin: 0 auto;
-          width: 42.6366rem;
+          max-width: 42.6366rem;
         }
       }
 
@@ -128,12 +115,24 @@ describe('renders UI correctly', () => {
     const {container} = render(<H1.Wrapper page="ryoanji" {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        padding: 0 1.3281rem;
         background-color: hsla(193,50%,26%,0.9);
         background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
         color: #eee;
         padding-top: 0.5313rem;
         width: 100%;
-        padding: 0 1.3281rem;
+      }
+
+      @media only screen and (min-width:31.6802rem) {
+        .c0 {
+          padding: 0 2.2135rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          padding: 0 3.0078rem;
+        }
       }
 
       @media only screen and (min-width:31.6802rem) {
@@ -146,18 +145,6 @@ describe('renders UI correctly', () => {
           padding-top: 0rem;
           position: absolute;
           z-index: 1;
-        }
-      }
-
-      @media only screen and (min-width:31.6802rem) {
-        .c0 {
-          padding: 0 2.2135rem;
-        }
-      }
-
-      @media only screen and (min-width:728px) {
-        .c0 {
-          padding: 0 3.0078rem;
         }
       }
 
