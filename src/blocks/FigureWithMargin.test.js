@@ -12,6 +12,11 @@ test('renders UI correctly', () => {
       overflow: hidden;
     }
 
+    .c1 {
+      margin: 0 auto;
+      max-width: 38.9424rem;
+    }
+
     @media only screen and (min-width:31.6802rem) {
       .c1 {
         padding-left: 2.2135rem;
@@ -19,28 +24,11 @@ test('renders UI correctly', () => {
       }
     }
 
-    @media only screen and (min-width:38.9424rem) {
-      .c1 {
-        margin-left: auto;
-        margin-right: auto;
-        width: 38.9424rem;
-      }
-    }
-
     @media only screen and (min-width:728px) {
       .c1 {
-        margin: 0;
+        max-width: 48.6522rem;
         padding-left: 3.0078rem;
         padding-right: 3.0078rem;
-        width: auto;
-      }
-    }
-
-    @media only screen and (min-width:48.6522rem) {
-      .c1 {
-        margin-left: auto;
-        margin-right: auto;
-        width: 48.6522rem;
       }
     }
 
