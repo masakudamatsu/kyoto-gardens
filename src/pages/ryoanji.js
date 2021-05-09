@@ -22,7 +22,7 @@ import {Spacer} from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 
-import {ryoanji} from 'src/utils/metadata';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 export default function Ryoanji() {
   const webfont = {
