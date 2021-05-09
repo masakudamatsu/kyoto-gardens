@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
+
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 
 const Section = styled.section`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     padding-bottom: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
         .betweenSections - ryoanji.article.descender.mobile,

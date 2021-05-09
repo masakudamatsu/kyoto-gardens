@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
+
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
@@ -9,7 +10,7 @@ export const Spacer = styled.div`
 `;
 
 Spacer.BoxLineToText = styled(Spacer)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
         ryoanji.article.ascender.mobile -
@@ -28,7 +29,7 @@ Spacer.BoxLineToText = styled(Spacer)`
   }
 `;
 Spacer.BoxParagraphToText = styled(Spacer)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
         .betweenParagraphs - ryoanji.article.ascender.mobile,
@@ -42,7 +43,7 @@ Spacer.BoxParagraphToText = styled(Spacer)`
   }
 `;
 Spacer.H3LineToBox = styled(Spacer)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
         ryoanji.h3.descender.mobile -
@@ -59,7 +60,7 @@ Spacer.H3LineToBox = styled(Spacer)`
   }
 `;
 Spacer.TextLineToBox = styled(Spacer)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
         ryoanji.article.descender.mobile,
@@ -75,7 +76,7 @@ Spacer.TextLineToBox = styled(Spacer)`
 Spacer.TextParagraphToBox = styled(Spacer)``; // not used for Ryoan-ji
 
 Spacer.TextParagraphToText = styled(Spacer)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
         .betweenParagraphs -

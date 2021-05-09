@@ -13,12 +13,12 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 0.0457rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 0.011rem;
         }
       }
@@ -37,12 +37,12 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 1.7448rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 2.3516rem;
         }
       }
@@ -61,12 +61,12 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 0.7644rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 1.1047rem;
         }
       }
@@ -85,12 +85,12 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 0.8281rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 1.0547rem;
         }
       }
@@ -123,12 +123,12 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 1.1991rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 1.5906rem;
         }
       }

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
+
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const P = styled.p`
   text-align: ${props => (props.centerAligned ? 'center' : 'left')};
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${horizontalSpacing.text['ryoanji'].innerMerged}
     ${horizontalSpacing.text['ryoanji'].outer}
   }

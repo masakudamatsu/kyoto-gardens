@@ -1,16 +1,9 @@
-import Main from 'src/blocks/Main';
-import Section from 'src/blocks/Section';
-import TopAppBar from 'src/components/TopAppBar';
+import {Main} from 'src/blocks/Main';
 
 function HomePage() {
   return (
     <>
-      <TopAppBar />
-      <Main>
-        <Main.MarginTop />
-        <Section></Section>
-      </Main>
-      <noscript></noscript>
+      <Main></Main>
     </>
   );
 }

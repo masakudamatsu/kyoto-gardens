@@ -8,7 +8,7 @@ const mockProps = {};
 test('renders UI correctly', () => {
   const {container} = render(<H3 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
-    .MainRyoanji-sc-11d35pr-0 .c0 {
+    .Main__Ryoanji-sc-126eniy-1 .c0 {
       color: hsla(193,50%,26%,0.9);
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 1.3215rem;
@@ -25,25 +25,25 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         font-size: 1.6325rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         max-width: 48.6522rem;
       }
     }
 
     @media only screen and (min-width:31.6802rem) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding: 0 2.2135rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding: 0 3.0078rem;
       }
     }

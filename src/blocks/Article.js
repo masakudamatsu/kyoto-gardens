@@ -9,7 +9,8 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
+
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
 import Strong from 'src/elements/Strong';
@@ -29,7 +30,7 @@ const fontStyle = {
 
 const Article = styled.article`
   margin: 0 auto;
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     background-color: ${ryoanji.article.backgroundColor};
     color: ${ryoanji.article.color};
     font-family: ${ryoanji.article.fontFamily};
