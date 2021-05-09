@@ -30,4 +30,6 @@ Main.Ryoanji = styled(Main)`
   ${shippoPattern}
 `;
 
+Main.Index = styled(Main)``;
+
 Main.propTypes = {};
