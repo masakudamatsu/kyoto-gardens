@@ -1,6 +1,7 @@
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
+import {cormorant, cormorantGaramond, cormorantSC} from './fontMetrics';
 
 // Color scheme
 const background = 'rgb(240,240,240)';
@@ -21,34 +22,6 @@ const lightingOverlay = `linear-gradient(
   hsla(0, 0%, 100%, 0.5) 65%,
   hsla(0, 0%, 100%, 0)
 )`;
-
-// Font scheme
-const cormorant = {
-  fontFamily: "'Cormorant', 'Times New Roman', serif",
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 402,
-    capHeight: 642,
-  }, // measured by myself
-};
-
-const cormorantGaramond = {
-  fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 398,
-    capHeight: 633,
-  },
-};
-
-const cormorantSC = {
-  fontFamily: "'Cormorant SC', 'Times New Roman', serif",
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 471,
-    capHeight: 630,
-  }, // measured by myself
-};
 
 export const ryoanji = {
   title: 'Ryoan-ji Rock Garden | 龍安寺石庭',
