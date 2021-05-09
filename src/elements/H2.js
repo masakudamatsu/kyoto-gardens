@@ -5,7 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
 
 const fontStyle = {
   ryoanji: css`
@@ -36,7 +36,7 @@ const backgroundStyle = {
 };
 
 const defaultStyle = css`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${fontStyle['ryoanji']}
     ${horizontalSpacing.text['ryoanji'].inner}
   }
@@ -59,7 +59,7 @@ const H2Style = styled.h2`
 `;
 
 H2Style.Wrapper = styled.div`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${backgroundStyle['ryoanji']}
     ${horizontalSpacing.text['ryoanji'].outer}
   }

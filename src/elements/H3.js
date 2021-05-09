@@ -5,7 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
 
 const fontStyle = {
   ryoanji: css`
@@ -23,7 +23,7 @@ const fontStyle = {
 };
 
 const H3 = styled.h3`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${fontStyle['ryoanji']}
     ${horizontalSpacing.text['ryoanji'].innerMerged}
     ${horizontalSpacing.text['ryoanji'].outer}

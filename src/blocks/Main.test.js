@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import Main from './Main';
+import {Main} from './Main';
 
 const mockProps = {};
 
@@ -13,27 +13,26 @@ const mockProps = {};
 // });
 
 describe('renders UI correctly', () => {
-  test('Parent', () => {
-    const {container} = render(<Main {...mockProps} />);
+  test('Ryoanji', () => {
+    const {container} = render(<Main.Ryoanji {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        padding-top: 2.875rem;
-      }
-
-      @media only screen and (min-width:45.5rem) {
-        .c0 {
-          padding-top: 3.4375rem;
-        }
+        background-color: rgb(240,240,240);
+        background-image: radial-gradient( circle closest-side,transparent 91%,#ffffff 100%,transparent ),radial-gradient( circle closest-side,rgb(240,240,240) 91%,#ffffff 100%,rgb(240,240,240) );
+        background-position: 0 0,1.75rem 1.75rem;
+        background-repeat: repeat;
+        background-size: 3.5rem 3.5rem;
       }
 
       <div>
         <main
-          class="c0"
+          class="Main-sc-126eniy-0  c0"
         />
       </div>
     `);
   });
-  test('MarginTop', () => {
+  // unskipp once top bar is introduced
+  test.skip('MarginTop', () => {
     const {container} = render(<Main.MarginTop {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {

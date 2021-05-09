@@ -6,7 +6,7 @@ import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
 
 const fontStyle = {
   ryoanji: css`
@@ -31,7 +31,7 @@ const fontStyle = {
 // Word spacing reduced by 0.129em
 
 const H1 = styled.h1`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${fontStyle.ryoanji}
     ${horizontalSpacing.text['ryoanji'].inner}
   }
@@ -71,7 +71,7 @@ H1.RockGarden = styled.span`
 `;
 
 H1.Wrapper = styled.div`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${horizontalSpacing.text['ryoanji'].outer}
     background-color: ${ryoanji.h1.backgroundColor.mobile};
     background-image: ${ryoanji.h1.backgroundImage.mobile};

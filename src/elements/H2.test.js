@@ -35,7 +35,7 @@ describe('Props work as intended', () => {
 test('renders UI correctly', () => {
   const {container} = render(<H2 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
-    .MainRyoanji-sc-11d35pr-0 .c1 {
+    .Main__Ryoanji-sc-126eniy-1 .c1 {
       color: #eee;
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 2.2025rem;
@@ -52,14 +52,14 @@ test('renders UI correctly', () => {
       max-width: 34.5153rem;
     }
 
-    .MainRyoanji-sc-11d35pr-0 .c0 {
+    .Main__Ryoanji-sc-126eniy-1 .c0 {
       background-color: hsla(193,50%,26%,0.9);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding: 0 1.3281rem;
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c1 {
+      .Main__Ryoanji-sc-126eniy-1 .c1 {
         font-size: 2.7208rem;
         padding-bottom: 1.1842rem;
         padding-top: 1.2155rem;
@@ -67,19 +67,19 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c1 {
+      .Main__Ryoanji-sc-126eniy-1 .c1 {
         max-width: 42.6366rem;
       }
     }
 
     @media only screen and (min-width:31.6802rem) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding: 0 2.2135rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding: 0 3.0078rem;
       }
     }

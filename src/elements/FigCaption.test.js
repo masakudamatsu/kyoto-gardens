@@ -9,7 +9,7 @@ describe('renders UI correctly', () => {
   test('FigCaption', () => {
     const {container} = render(<FigCaption {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 1.1279rem;
         font-weight: 600;
@@ -18,8 +18,8 @@ describe('renders UI correctly', () => {
         text-align: right;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 a:link,
-      .MainRyoanji-sc-11d35pr-0 .c0 a:visited {
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:link,
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:visited {
         background: rgb(240,240,240);
         background: linear-gradient( to bottom,currentColor 100%,currentColor );
         background-position: 0 1.125rem;
@@ -32,38 +32,38 @@ describe('renders UI correctly', () => {
         text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 a:focus,
-      .MainRyoanji-sc-11d35pr-0 .c0 a:hover {
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:hover {
         background: rgb(240,240,240);
         outline: none;
         text-shadow: none;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 a:active {
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:active {
         background: none;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 a:visited:focus,
-      .MainRyoanji-sc-11d35pr-0 .c0 a:visited:hover {
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:focus,
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:hover {
         background: rgb(240,240,240);
         outline: none;
         text-shadow: none;
       }
 
-      .MainRyoanji-sc-11d35pr-0 .c0 a:visited:active {
+      .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:active {
         background: none;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           font-size: 1.3933rem;
           line-height: 1.29525;
         }
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 a:link,
-        .MainRyoanji-sc-11d35pr-0 .c0 a:visited {
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:link,
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:visited {
           background: rgb(240,240,240);
           background: linear-gradient( to bottom,currentColor 100%,currentColor );
           background-position: 0 1.375rem;
@@ -76,25 +76,25 @@ describe('renders UI correctly', () => {
           text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
         }
 
-        .MainRyoanji-sc-11d35pr-0 .c0 a:focus,
-        .MainRyoanji-sc-11d35pr-0 .c0 a:hover {
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:hover {
           background: rgb(240,240,240);
           outline: none;
           text-shadow: none;
         }
 
-        .MainRyoanji-sc-11d35pr-0 .c0 a:active {
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:active {
           background: none;
         }
 
-        .MainRyoanji-sc-11d35pr-0 .c0 a:visited:focus,
-        .MainRyoanji-sc-11d35pr-0 .c0 a:visited:hover {
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:focus,
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:hover {
           background: rgb(240,240,240);
           outline: none;
           text-shadow: none;
         }
 
-        .MainRyoanji-sc-11d35pr-0 .c0 a:visited:active {
+        .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:active {
           background: none;
         }
       }

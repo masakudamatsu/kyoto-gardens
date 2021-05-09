@@ -9,12 +9,12 @@ describe('renders UI correctly:', () => {
   test('Parent', () => {
     const {container} = render(<Section {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .MainRyoanji-sc-11d35pr-0 .c0 {
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding-bottom: 3.1892rem;
       }
 
       @media only screen and (min-width:728px) {
-        .MainRyoanji-sc-11d35pr-0 .c0 {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
           padding-bottom: 4.263rem;
         }
       }

@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 
 import Figure from 'src/blocks/Figure';
 import {ryoanji} from 'src/utils/specRyoanji';
-import MainRyoanji from 'src/blocks/MainRyoanji';
+import {Main} from 'src/blocks/Main';
+
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     ${horizontalSpacing.figure['ryoanji'].innerMerged}
     ${horizontalSpacing.figure['ryoanji'].outer}
   }
 `;
 
 FigureWithMargin.Border = styled.div`
-  ${MainRyoanji} & {
+  ${Main.Ryoanji} & {
     border-bottom: 1px solid ${ryoanji.figure.borderColor};
     border-top: 1px solid ${ryoanji.figure.borderColor};
     padding: ${ryoanji.figure.paddingInsideBorder}px;
