@@ -1,20 +1,13 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import {
-  SpacerBoxLineToText,
-  SpacerBoxParagraphToText,
-  SpacerH3LineToBox,
-  SpacerTextLineToBox,
-  SpacerTextParagraphToBox,
-  SpacerTextParagraphToText,
-} from './Spacer';
+import {Spacer} from './Spacer';
 
 const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('BoxLineToText', () => {
-    const {container} = render(<SpacerBoxLineToText {...mockProps} />);
+    const {container} = render(<Spacer.BoxLineToText {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
@@ -32,13 +25,13 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0 c1"
+          class="c0 c1 "
         />
       </div>
     `);
   });
   test('BoxParagraphToText', () => {
-    const {container} = render(<SpacerBoxParagraphToText {...mockProps} />);
+    const {container} = render(<Spacer.BoxParagraphToText {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
@@ -56,13 +49,13 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0 c1"
+          class="c0 c1 "
         />
       </div>
     `);
   });
   test('H3LineToBox', () => {
-    const {container} = render(<SpacerH3LineToBox {...mockProps} />);
+    const {container} = render(<Spacer.H3LineToBox {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
@@ -80,13 +73,13 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0 c1"
+          class="c0 c1 "
         />
       </div>
     `);
   });
   test('TextLineToBox', () => {
-    const {container} = render(<SpacerTextLineToBox {...mockProps} />);
+    const {container} = render(<Spacer.TextLineToBox {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
@@ -104,13 +97,13 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0 c1"
+          class="c0 c1 "
         />
       </div>
     `);
   });
   test('TextParagraphToBox', () => {
-    const {container} = render(<SpacerTextParagraphToBox {...mockProps} />);
+    const {container} = render(<Spacer.TextParagraphToBox {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         width: 100%;
@@ -118,13 +111,13 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0"
+          class="Spacer__TextParagraphToBox-sc-1ug26uc-5 c0"
         />
       </div>
     `);
   });
   test('TextParagraphToText', () => {
-    const {container} = render(<SpacerTextParagraphToText {...mockProps} />);
+    const {container} = render(<Spacer.TextParagraphToText {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
@@ -142,7 +135,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="c0 c1"
+          class="c0 c1 "
         />
       </div>
     `);

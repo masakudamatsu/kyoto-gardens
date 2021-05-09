@@ -4,8 +4,11 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 
-export const SpacerBoxLineToText = styled.div`
+export const Spacer = styled.div`
   width: 100%;
+`;
+
+Spacer.BoxLineToText = styled(Spacer)`
   ${MainRyoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
@@ -24,8 +27,7 @@ export const SpacerBoxLineToText = styled.div`
     }
   }
 `;
-export const SpacerBoxParagraphToText = styled.div`
-  width: 100%;
+Spacer.BoxParagraphToText = styled(Spacer)`
   ${MainRyoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
@@ -39,8 +41,7 @@ export const SpacerBoxParagraphToText = styled.div`
     }
   }
 `;
-export const SpacerH3LineToBox = styled.div`
-  width: 100%;
+Spacer.H3LineToBox = styled(Spacer)`
   ${MainRyoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
@@ -57,8 +58,7 @@ export const SpacerH3LineToBox = styled.div`
     }
   }
 `;
-export const SpacerTextLineToBox = styled.div`
-  width: 100%;
+Spacer.TextLineToBox = styled(Spacer)`
   ${MainRyoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile).betweenLines -
@@ -72,11 +72,9 @@ export const SpacerTextLineToBox = styled.div`
     }
   }
 `;
-export const SpacerTextParagraphToBox = styled.div`
-  width: 100%;
-`; // not used for Ryoan-ji
-export const SpacerTextParagraphToText = styled.div`
-  width: 100%;
+Spacer.TextParagraphToBox = styled(Spacer)``; // not used for Ryoan-ji
+
+Spacer.TextParagraphToText = styled(Spacer)`
   ${MainRyoanji} & {
     height: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)

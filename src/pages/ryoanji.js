@@ -18,13 +18,7 @@ import Span from '../elements/Span';
 import Section from '../blocks/Section';
 import SectionBreak from '../elements/SectionBreak';
 import Source from '../elements/Source';
-import {
-  SpacerBoxLineToText,
-  SpacerBoxParagraphToText,
-  SpacerH3LineToBox,
-  SpacerTextLineToBox,
-  SpacerTextParagraphToText,
-} from 'src/elements/Spacer';
+import {Spacer} from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 
@@ -112,28 +106,28 @@ export default function Ryoanji() {
           </Article.Header>
           <Section>
             <H2 visuallyHidden>Introduction</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               <LeadIn>Pick any</LeadIn> travel guide for Kyoto. I’m sure you’ll
               find Ryoan-ji, a Zen Buddhist temple famous for its Rock Garden
               (pictured above).
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               This zen garden is made of fifteen rocks, surrounded by patches of
               moss, laid out in the ocean of gravels on a walled rectangular
               plot.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>And that’s it…</P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               If you have been to this garden, you must have been utterly
               puzzled during your visit. Too abstract and too minimal. I also
               scratched my head during my first visit to the garden. My second
               visit a year later didn’t help me figure out anything, either.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               During the third visit, however, the whole garden started to make
               sense to me. It taught me how to live a happy life, with the
@@ -142,14 +136,14 @@ export default function Ryoanji() {
           </Section>
           <Section>
             <H2>Get the Viewpoint Right</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               The key to understand this cryptic garden is to see it from where
               You’re supposed to: halfway between the left and right edges of
               this rectangular garden, indicated with the gray arrow in the
               floor plan below:
             </P>
-            <SpacerTextLineToBox />
+            <Spacer.TextLineToBox />
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
@@ -173,7 +167,7 @@ export default function Ryoanji() {
                 </FigCaption>
               </FigureWithMargin.Border>
             </FigureWithMargin>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               My third visit to the garden was different from the previous ones
               in that I had this piece of knowledge, learned from a book on
@@ -194,7 +188,7 @@ export default function Ryoanji() {
           </Section>
           <Section>
             <H2>No Focal Point in the Garden</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Once I sit down and see the garden from the correct viewpoint, the
               layout of fifteen rocks starts taking on its meaning:{' '}
@@ -202,7 +196,7 @@ export default function Ryoanji() {
             </P>
             <SubSection>
               <H3>Straight ahead</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-banner-summer-large.jpg"
@@ -212,7 +206,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 There is no stone at the center of gaze when I look straight
                 ahead. The landscape composition is split between two groups of
@@ -223,7 +217,7 @@ export default function Ryoanji() {
             <SubSection>
               {' '}
               <H3>Leftward</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-left-large.jpg"
@@ -233,7 +227,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 Next, I turn my head to the left while sitting in the same
                 viewpoint. There is again nothing in the center of my vision.
@@ -242,7 +236,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3>Rightward</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <Figure>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-right-large.jpg"
@@ -252,7 +246,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 Finally, I turn my head to the right while still staying at the
                 same viewpoint. There are three groups of rocks, but none of
@@ -265,7 +259,7 @@ export default function Ryoanji() {
           </Section>
           <Section>
             <H2>No Single Rock Dominates</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               The lack of emphasis, I then notice, penetrates into how fifteen
               rocks are arranged into five clusters, each surrounded by a patch
@@ -273,7 +267,7 @@ export default function Ryoanji() {
             </P>
             <SubSection>
               <H3>Middle left</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-left.jpg"
@@ -283,7 +277,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 The middle-left cluster consists of two rocks. There is no
                 center. The right elongated one dominates, but it is located to
@@ -292,7 +286,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3>Middle</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-middle-right.jpg"
@@ -302,7 +296,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 The middle cluster consists of three rocks. One on the left
                 dominates, but it is again not located at the center but to the
@@ -311,7 +305,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3>Middle right</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-second-right.jpg"
@@ -321,7 +315,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 The middle-right cluster consists of two rocks, each in a
                 peculiar shape. But neither is emphasized more than the other.
@@ -329,7 +323,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3>Leftmost</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-leftmost.jpg"
@@ -339,7 +333,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 The group of rocks furthest to the the left is the most
                 magnificent composition in this garden if seen from the front of
@@ -352,7 +346,7 @@ export default function Ryoanji() {
             </SubSection>
             <SubSection>
               <H3>Rightmost</H3>
-              <SpacerH3LineToBox />
+              <Spacer.H3LineToBox />
               <FigureWithMargin>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-rightmost.jpg"
@@ -362,7 +356,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <SpacerBoxLineToText />
+              <Spacer.BoxLineToText />
               <P>
                 The group of rocks furthest to the right is made of three rocks.
                 One large lying stone is flanked by two flat stones. This
@@ -375,7 +369,7 @@ export default function Ryoanji() {
           </Section>
           <Section>
             <H2>The Rock Garden’s Message</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Now it is clear that nothing is emphasized throughout this garden.
               I start wondering why. The designer of this garden, who remains
@@ -383,7 +377,7 @@ export default function Ryoanji() {
               have had a purpose. What message did he or she try to convey to
               the visitors of this garden?
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               I remember that each rock in a zen garden is often interpreted as
               an unfulfilled desire in our mind. Once I see the rocks in
@@ -391,19 +385,19 @@ export default function Ryoanji() {
               rectangular garden space begins to look like a metaphor of my
               inner self.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               No emphasis on any of the fifteen rocks, I conclude, can therefore
               be interpreted as the following message:
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P centerAligned>
               <Strong>
                 Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
                 <Span nowrap>in our mind.</Span>
               </Strong>
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               This idea is central to the preaching of Zen Buddhism to live a
               happy life. Don’t keep regretting what you’ve done in the past.
@@ -414,14 +408,14 @@ export default function Ryoanji() {
           </Section>{' '}
           <Section>
             <H2>Garden as a Reminder</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Ever since I managed to interpret the meaning of Ryoan-ji Rock
               Garden as described above, I’ve been paying a visit to this zen
               garden whenever I get too much preoccupied with my unfulfilled
               desires.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               The best way to appreciate the garden is to arrive early in the
               morning before tourists start flocking to Ryoan-ji Temple. I
@@ -432,7 +426,7 @@ export default function Ryoanji() {
               constantly changes its way of illuminating the garden as the time
               passes by—no fixation on a particular moment.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               By 10<Abbr>am</Abbr>, a flock of tourists start arriving and
               counting how many rocks there are—which is totally off the point
@@ -440,7 +434,7 @@ export default function Ryoanji() {
               around the pond garden outside, which I realize also avoids
               creating any focal point.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               With the 21st century’s life overloaded with information, it is so
               easy to forget the simple principle of happiness that the Buddha
@@ -457,7 +451,7 @@ export default function Ryoanji() {
           </Section>
           <Section as="aside">
             <H2>References</H2>
-            <SpacerBoxParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Slawson, David A. (1987).{' '}
               <CiteItalic>
@@ -470,7 +464,7 @@ export default function Ryoanji() {
               </CiteItalic>
               . Tokyo: Kodansha.
             </P>
-            <SpacerTextParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               Tanaka, Shozo. (2002).{' '}
               <CiteItalic>
