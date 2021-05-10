@@ -9,8 +9,8 @@ test('renders UI correctly', () => {
   const {container} = render(<H2Index {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      font-family: 'Cormorant Garamond','Times New Roman',serif;
-      font-size: 1.3348rem;
+      font-family: 'Reforma 1918',serif;
+      font-size: 1.8218rem;
       font-weight: 600;
       font-style: italic;
       display: -webkit-box;

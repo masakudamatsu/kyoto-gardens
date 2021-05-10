@@ -24,3 +24,12 @@ export const cormorantSC = {
     capHeight: 630,
   }, // measured by myself
 };
+
+export const reforma1918 = {
+  fontFamily: "'Reforma 1918', serif",
+  fontMetrics: {
+    unitsPerEm: 1000,
+    xHeight: 486,
+    capHeight: 750,
+  }, // measured by opentype.js
+};

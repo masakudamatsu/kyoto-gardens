@@ -3,6 +3,15 @@ import {createGlobalStyle} from 'styled-components';
 import {color} from './specColor';
 
 const GlobalStyle = createGlobalStyle`
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'Reforma 1918';
+  src: url('/fonts/Reforma1918-Blanca.woff2');
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+  
 /*!
  * ress.css • v3.0.1
  * MIT License
