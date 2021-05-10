@@ -1,28 +1,15 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, setSpace} from 'src/utils/designSpec';
+import {Main} from 'src/blocks/Main';
+
+import {breakpoint} from 'src/utils/designSpec';
+import {h1FontStyle} from 'src/utils/h1FontStyle';
+import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
-import {Main} from 'src/blocks/Main';
 
-const fontStyle = {
-  ryoanji: css`
-    font-family: ${ryoanji.h1.fontFamily};
-    font-size: ${remify(ryoanji.h1.fontSize.mobile)};
-    font-weight: ${ryoanji.h1.fontWeight};
-    letter-spacing: ${ryoanji.h1.letterSpacig};
-    line-height: ${ryoanji.h1.lineHeight};
-    @media only screen and ${ryoanji.breakpoint.h1} {
-      font-size: ${remify(ryoanji.h1.fontSize.tablet)};
-    }
-    @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(ryoanji.h1.fontSize.desktop)};
-    }
-  `,
-};
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
 // 28px * (5/3) = 46.666px
@@ -32,7 +19,7 @@ const fontStyle = {
 
 const H1 = styled.h1`
   ${Main.Ryoanji} & {
-    ${fontStyle.ryoanji}
+    ${h1FontStyle.ryoanji}
     ${horizontalSpacing.text['ryoanji'].inner}
   }
   display: flex;
