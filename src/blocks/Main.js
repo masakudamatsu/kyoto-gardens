@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {header, main} from 'src/utils/specLayout';
+import {index} from 'src/utils/specIndex';
 import {mediaQuery} from 'src/utils/mediaQuery';
 import remify from 'src/utils/remify';
 import {scale} from 'src/utils/specFont';
@@ -30,6 +31,9 @@ Main.Ryoanji = styled(Main)`
   ${shippoPattern}
 `;
 
-Main.Index = styled(Main)``;
+Main.Index = styled(Main)`
+  margin: 0 auto;
+  max-width: ${remify(index.main.maxWidth)};
+`;
 
 Main.propTypes = {};

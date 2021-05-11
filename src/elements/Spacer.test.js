@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import {Spacer} from './Spacer';
+import Spacer from './Spacer';
 
 const mockProps = {};
 

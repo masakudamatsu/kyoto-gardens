@@ -8,15 +8,6 @@ import {breakpoint, setSpace} from 'src/utils/designSpec';
 import {index} from 'src/utils/specIndex';
 
 const Section = styled.section`
-  ${Main.Index} & {
-    display: flex;
-    &:nth-child(odd) {
-      flex-direction: row;
-    }
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-  }
   ${Main.Ryoanji} & {
     padding-bottom: ${remify(
       setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)

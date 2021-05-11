@@ -18,7 +18,7 @@ import Span from '../elements/Span';
 import Section from '../blocks/Section';
 import SectionBreak from '../elements/SectionBreak';
 import Source from '../elements/Source';
-import {Spacer} from 'src/elements/Spacer';
+import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 

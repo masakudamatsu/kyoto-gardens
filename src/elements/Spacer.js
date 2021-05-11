@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import {Main} from 'src/blocks/Main';
 
+import {index} from 'src/utils/specIndex';
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 
-export const Spacer = styled.div`
+const Spacer = styled.div`
   width: 100%;
 `;
 
@@ -95,3 +96,9 @@ Spacer.TextParagraphToText = styled(Spacer)`
     }
   }
 `;
+
+Spacer.Index = styled(Spacer)`
+  height: ${index.spacer.height}px;
+`;
+
+export default Spacer;

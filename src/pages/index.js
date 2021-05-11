@@ -1,16 +1,16 @@
 import Head from 'next/head';
 
 import {Main} from 'src/blocks/Main';
-import Figure from 'src/blocks/Figure';
-import H2Index from 'src/elements/H2Index';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
-import Section from 'src/blocks/Section';
+import IndexSection from 'src/blocks/IndexSection';
 import {index} from 'src/utils/specIndex';
-
+import Spacer from 'src/elements/Spacer';
+import P from 'src/elements/P';
+import Span from 'src/elements/Span';
 const webfont = {
   server: 'https://fonts.gstatic.com',
   stylesheet:
-    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Shippori+Mincho:wght@500&display=swap',
+    'https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Playfair+Display+SC:wght@400&family=Shippori+Mincho+B1:wght@500&display=swap',
 }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
 
 function HomePage() {
@@ -37,30 +37,48 @@ function HomePage() {
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
       <Main.Index>
-        <Section>
-          <H2Index>
+        <IndexSection>
+          <IndexSection.H2>
             <span>circa</span> 1480
-          </H2Index>
-          <Figure>
-            <ImageWithPlaceholder
-              src="/images/ryoanji-banner-spring-large.jpg"
-              width={1882}
-              height={1405}
-              alt="A view of Ryoanji Rock Garden"
-            />
-          </Figure>
-        </Section>
-        <Section>
-          <H2Index>1643</H2Index>
-          <Figure>
-            <ImageWithPlaceholder
-              src="/kohoan/bosen-garden-view.jpg"
-              width={1200}
-              height={800}
-              alt="A view of Kohoan Bosen Teahouse Garden"
-            />
-          </Figure>
-        </Section>
+          </IndexSection.H2>
+          <IndexSection.Card>
+            <IndexSection.Figure>
+              <ImageWithPlaceholder
+                src="/images/ryoanji-banner-spring-large.jpg"
+                width={1882}
+                height={1405}
+                alt="A view of Ryoanji Rock Garden"
+              />
+            </IndexSection.Figure>
+            <IndexSection.Kanji>龍安寺</IndexSection.Kanji>
+            <IndexSection.Latin gardenName="ryoanji">
+              Ryoan-ji
+            </IndexSection.Latin>
+            <IndexSection.P>
+              <a href="ryoanji">Reminding us of the principle of Zen </a>
+            </IndexSection.P>
+          </IndexSection.Card>
+        </IndexSection>
+        <Spacer.Index />
+        <IndexSection>
+          <IndexSection.H2>1643</IndexSection.H2>
+          <IndexSection.Card>
+            <IndexSection.Figure>
+              <ImageWithPlaceholder
+                src="/kohoan/bosen-garden-view.jpg"
+                width={1200}
+                height={800}
+                alt="A view of Kohoan Bosen Teahouse Garden"
+              />
+            </IndexSection.Figure>
+            <IndexSection.Latin gardenName="kohoan">Koho-an</IndexSection.Latin>
+            <IndexSection.Kanji>孤篷庵</IndexSection.Kanji>
+            <IndexSection.P>
+              Letting us sail at sunset{' '}
+              <Span nowrap>to see the full moon offshore</Span>
+            </IndexSection.P>
+          </IndexSection.Card>
+        </IndexSection>
       </Main.Index>
     </>
   ); // see https://codepen.io/masakudamatsu/pen/QWpbELb

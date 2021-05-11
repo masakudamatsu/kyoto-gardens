@@ -31,6 +31,21 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
+  test('Index', () => {
+    const {container} = render(<Main.Index {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        margin: 0 auto;
+        max-width: 51.875rem;
+      }
+
+      <div>
+        <main
+          class="Main-sc-126eniy-0  c0"
+        />
+      </div>
+    `);
+  });
   // unskipp once top bar is introduced
   test.skip('MarginTop', () => {
     const {container} = render(<Main.MarginTop {...mockProps} />);
