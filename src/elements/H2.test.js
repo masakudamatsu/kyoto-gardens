@@ -54,7 +54,7 @@ test('renders UI correctly', () => {
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
       background-color: hsla(193,50%,26%,0.9);
-      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
+      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0) );
       padding: 0 1.3281rem;
     }
 

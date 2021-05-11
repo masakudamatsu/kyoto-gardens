@@ -2,39 +2,20 @@ import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
 import {cormorant, cormorantGaramond, cormorantSC} from './fontMetrics';
-
-// Color scheme
-const background = 'rgb(240,240,240)';
-const onBackground = '#ffffff';
-const surface = '#ffffff';
-const onSurface = '#0a0a0a';
-const onSurfaceShade = 'rgb(100,100,100)';
-const onSurfaceSecondShade = 'rgb(240,240,240)'; /* TODO: Darken this */
-const primary = 'hsla(193, 50%, 26%, 0.9)';
-const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
-const onPrimary = '#eee';
-const onPhoto = '#000';
-// Patterns
-const lightingOverlay = `linear-gradient(
-  35deg,
-  hsla(0, 0%, 100%, 0) 0,
-  hsla(0, 0%, 100%, 0.5) 55%,
-  hsla(0, 0%, 100%, 0.5) 65%,
-  hsla(0, 0%, 100%, 0)
-)`;
+import {color} from './colorScheme';
 
 export const ryoanji = {
   title: 'Ryoan-ji Rock Garden | 龍安寺石庭',
   description:
     'Ryoan-ji Rock Garden teaches us the principle of Zen Buddhism to live happily, with the layout of 15 rocks as a textbook.',
   background: {
-    backgroundColor: background,
-    patternColor: onBackground,
+    backgroundColor: color.background,
+    patternColor: color.onBackground,
   },
   article: {
     // This sets the default for all the other elements below
-    backgroundColor: surface,
-    color: onSurface,
+    backgroundColor: color.surface,
+    color: color.onSurface,
     ...cormorantGaramond, // {fontFamily, fontMetrics}
     get fontSize() {
       return {
@@ -94,7 +75,7 @@ export const ryoanji = {
     fontWeight: 600,
   },
   link: {
-    backgroundOnHover: onSurfaceSecondShade,
+    backgroundOnHover: color.onSurfaceSecondShade,
     color: 'inherit',
     lineWidth: 1,
     spaceBelowBaseline: {
@@ -116,23 +97,23 @@ export const ryoanji = {
     wordSpacing: '-0.05em',
   },
   sectionBreak: {
-    color: primary,
+    color: color.primary,
   },
   source: {
-    color: onSurfaceShade,
+    color: color.onSurfaceShade,
   },
   h1: {
     backgroundColor: {
-      mobile: primary,
+      mobile: color.primary,
       desktop: 'transparent',
     },
     backgroundImage: {
-      mobile: lightingOverlay,
+      mobile: color.lightingOverlay,
       desktop: 'none',
     },
     color: {
-      mobile: onPrimary,
-      desktop: onPhoto,
+      mobile: color.onPrimary,
+      desktop: color.onPhoto,
     },
     ...cormorantSC,
     get fontSize() {
@@ -208,9 +189,9 @@ export const ryoanji = {
     },
   },
   h2: {
-    backgroundColor: primary,
-    backgroundImage: lightingOverlay,
-    color: onPrimary,
+    backgroundColor: color.primary,
+    backgroundImage: color.lightingOverlay,
+    color: color.onPrimary,
     ...cormorant,
     get fontSize() {
       return {
@@ -259,7 +240,7 @@ export const ryoanji = {
     textIndent: -2,
   },
   h3: {
-    color: primary,
+    color: color.primary,
     ...cormorant,
     get fontSize() {
       return {
@@ -315,7 +296,7 @@ export const ryoanji = {
     },
   },
   figure: {
-    borderColor: primaryShade,
+    borderColor: color.primaryShade,
     maxHeight: 703, // half the height of spring/summer photos
     maxWidth: 941, // half the width of spring/summer/autumn/winter photos
     paddingInsideBorder: 15.564,
