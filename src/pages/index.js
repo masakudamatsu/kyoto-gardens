@@ -51,11 +51,13 @@ function HomePage() {
               />
             </IndexSection.Figure>
             <IndexSection.Kanji>龍安寺</IndexSection.Kanji>
-            <IndexSection.Latin gardenName="ryoanji">
-              Ryoan-ji
-            </IndexSection.Latin>
+            <a href="ryoanji">
+              <IndexSection.Latin gardenName="ryoanji">
+                Ryoan-ji
+              </IndexSection.Latin>
+            </a>
             <IndexSection.P>
-              <a href="ryoanji">Reminding us of the principle of Zen </a>
+              Reminding us of the principle of Zen
             </IndexSection.P>
           </IndexSection.Card>
         </IndexSection>
@@ -71,7 +73,11 @@ function HomePage() {
                 alt="A view of Kohoan Bosen Teahouse Garden"
               />
             </IndexSection.Figure>
-            <IndexSection.Latin gardenName="kohoan">Koho-an</IndexSection.Latin>
+            <a href="kohoan">
+              <IndexSection.Latin gardenName="kohoan">
+                Koho-an
+              </IndexSection.Latin>
+            </a>
             <IndexSection.Kanji>孤篷庵</IndexSection.Kanji>
             <IndexSection.P>
               Letting us sail at sunset{' '}

@@ -47,6 +47,26 @@ IndexSection.Card = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  & a {
+    text-decoration: none;
+  }
+  & a:focus,
+  & a:hover {
+    outline: none;
+  }
+  & a::after {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3; /* To overlay over Kanji and Latin */
+  }
+  & a:focus::after,
+  & a:hover::after {
+    background-color: ${index.card.backgroundColorOnHover};
+  }
 `;
 
 IndexSection.Kanji = styled(Kanji)`

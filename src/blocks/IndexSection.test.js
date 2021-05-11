@@ -86,6 +86,31 @@ describe('renders UI correctly:', () => {
         position: relative;
       }
 
+      .c0 a {
+        -webkit-text-decoration: none;
+        text-decoration: none;
+      }
+
+      .c0 a:focus,
+      .c0 a:hover {
+        outline: none;
+      }
+
+      .c0 a::after {
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .c0 a:focus::after,
+      .c0 a:hover::after {
+        background-color: rgba(0,0,0,0.1);
+      }
+
       <div>
         <div
           class="c0"

@@ -27,6 +27,9 @@ export const index = {
     fontStyle: 'italic',
     paddingSide: sideMargin,
   },
+  card: {
+    backgroundColorOnHover: `rgba(0, 0, 0, 0.1)`, // TODO: Incorporate into color scheme
+  },
   figure: {
     scrim: {
       odd: `linear-gradient(
