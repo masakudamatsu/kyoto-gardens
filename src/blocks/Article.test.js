@@ -82,10 +82,6 @@ describe('Parent chnages UI by prop value', () => {
         word-spacing: -0.05em;
       }
 
-      .Main__Ryoanji-sc-126eniy-1 .c0 .SectionBreak-m1vk1l-0 {
-        color: hsla(193,50%,26%,0.9);
-      }
-
       .Main__Ryoanji-sc-126eniy-1 .c0 .Source-r09bvo-0 {
         color: rgb(100,100,100);
       }

@@ -42,29 +42,6 @@ paragraph.desktop = {
   },
 };
 
-export function whitespace(screenWidth = 'mobile') {
-  let lineHeightRatio;
-  if (screenWidth === 'mobile') {
-    lineHeightRatio = paragraph.mobile.lineHeightRatio;
-  }
-  if (screenWidth === 'desktop') {
-    lineHeightRatio = paragraph.desktop.lineHeightRatio;
-  }
-  const ratio = lineHeightRatio.betweenLines / lineHeightRatio.xHeight;
-  const betweenLines = xHeight(screenWidth) * ratio;
-  const betweenParagraphs = betweenLines * scale;
-  const betweenSections = betweenParagraphs * scale;
-  const sideMargin = betweenLines;
-  const sideMarginLarge = betweenParagraphs;
-  return {
-    betweenLines: betweenLines,
-    betweenParagraphs: betweenParagraphs,
-    betweenSections: betweenSections,
-    sideMargin: sideMargin,
-    sideMarginLarge: sideMarginLarge,
-  };
-}
-
 export function setSpace(screenWidth, lineHeightRatio) {
   if (screenWidth !== 'mobile' && screenWidth !== 'desktop') {
     throw new Error(

@@ -34,7 +34,7 @@ export const color = {
   subsectionTitle: {
     font: primary,
   },
-  sectionBreak: primary,
+  Hr: primary,
   linkText: {
     background: {
       default: background,

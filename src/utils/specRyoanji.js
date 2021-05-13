@@ -96,8 +96,16 @@ export const ryoanji = {
     letterSpacing: '0.01em',
     wordSpacing: '-0.05em',
   },
-  sectionBreak: {
+  hr: {
+    asteriskHeight: {
+      mobile: 8,
+      desktop: 10,
+    },
     color: color.primary,
+    spaceAboveByDefault: {
+      mobile: 13,
+      desktop: 17.5,
+    },
   },
   source: {
     color: color.onSurfaceShade,

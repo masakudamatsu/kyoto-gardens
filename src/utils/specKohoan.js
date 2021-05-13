@@ -120,7 +120,7 @@ export const kohoan = {
     letterSpacing: '0.01em',
     wordSpacing: '-0.05em',
   },
-  sectionBreak: {
+  Hr: {
     color: primary,
   },
   source: {

@@ -16,7 +16,7 @@ import Main from '../blocks/Main';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
-import SectionBreak from '../elements/SectionBreak';
+import Hr from '../elements/Hr';
 import Source from '../elements/Source';
 import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
@@ -443,7 +443,7 @@ export default function Ryoanji() {
               been there since the early 16th century to reminds us of the
               teaching of the Buddha.
             </P>
-            <SectionBreak />
+            <Hr />
             <P>
               Written, photographed, designed, and coded by Masa Kudamatsu in
               2021.

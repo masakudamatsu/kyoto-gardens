@@ -11,7 +11,6 @@ import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
 import Main from 'src/blocks/Main';
 
-import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';
 import Strong from 'src/elements/Strong';
 
@@ -75,9 +74,6 @@ const Article = styled.article`
       font-family: ${ryoanji.leadIn.fontFamily};
       letter-spacing: ${ryoanji.leadIn.letterSpacing};
       word-spacing: ${ryoanji.leadIn.wordSpacing};
-    }
-    & ${SectionBreak} {
-      color: ${ryoanji.sectionBreak.color};
     }
     & ${Source} {
       color: ${ryoanji.source.color};
