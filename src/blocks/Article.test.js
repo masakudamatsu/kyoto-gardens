@@ -59,38 +59,6 @@ describe('Parent chnages UI by prop value', () => {
         background: none;
       }
 
-      .Main__Ryoanji-sc-126eniy-1 .c0 .Abbr-sc-1i3jv68-0 {
-        font-family: 'Cormorant SC','Times New Roman',serif;
-        -webkit-letter-spacing: 0.01em;
-        -moz-letter-spacing: 0.01em;
-        -ms-letter-spacing: 0.01em;
-        letter-spacing: 0.01em;
-        text-transform: lowercase;
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 .CiteItalic-aqgrgi-0 {
-        font-style: italic;
-        font-weight: 600;
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 .LeadIn-sc-1qpem54-0 {
-        font-family: 'Cormorant SC','Times New Roman',serif;
-        -webkit-letter-spacing: 0.01em;
-        -moz-letter-spacing: 0.01em;
-        -ms-letter-spacing: 0.01em;
-        letter-spacing: 0.01em;
-        word-spacing: -0.05em;
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 .Source-r09bvo-0 {
-        color: rgb(100,100,100);
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 .Strong-sc-1vpgu6n-0 {
-        font-style: italic;
-        font-weight: 600;
-      }
-
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           font-size: 1.6489rem;

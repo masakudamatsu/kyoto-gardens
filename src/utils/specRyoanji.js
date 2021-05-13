@@ -71,9 +71,6 @@ export const ryoanji = {
       };
     },
   },
-  italic: {
-    fontWeight: 600,
-  },
   link: {
     backgroundOnHover: color.onSurfaceSecondShade,
     color: 'inherit',

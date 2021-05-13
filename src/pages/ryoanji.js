@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Abbr from '../elements/Abbr';
 import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
-import CiteItalic from '../elements/CiteItalic';
+import Cite from '../elements/Cite';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
 import FigureWithMargin from '../blocks/FigureWithMargin';
@@ -11,13 +11,11 @@ import H1 from '../elements/H1';
 import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
-import LeadIn from '../elements/LeadIn';
 import Main from '../blocks/Main';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';
 import Hr from '../elements/Hr';
-import Source from '../elements/Source';
 import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
@@ -108,9 +106,9 @@ export default function Ryoanji() {
             <H2 visuallyHidden>Introduction</H2>
             <Spacer.BoxParagraphToText />
             <P>
-              <LeadIn>Pick any</LeadIn> travel guide for Kyoto. I’m sure you’ll
-              find Ryoan-ji, a Zen Buddhist temple famous for its Rock Garden
-              (pictured above).
+              <Span.LeadIn>Pick any</Span.LeadIn> travel guide for Kyoto. I’m
+              sure you’ll find Ryoan-ji, a Zen Buddhist temple famous for its
+              Rock Garden (pictured above).
             </P>
             <Spacer.TextParagraphToText />
             <P>
@@ -153,17 +151,15 @@ export default function Ryoanji() {
                   alt=""
                 />
                 <FigCaption>
-                  The floor plan of Ryoan-ji <Span nowrap>Rock Garden</Span>
-                  <Source as="footer">
+                  The floor plan of{' '}
+                  <Span.NoWrap>Ryoan-ji Rock Garden</Span.NoWrap>
+                  <Span.Source as="footer">
                     Adapted from{' '}
-                    <a
-                      href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
-                      target="_blank"
-                    >
+                    <a href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ">
                       Slawson (1987)
                     </a>
                     , p. 96.
-                  </Source>
+                  </Span.Source>
                 </FigCaption>
               </FigureWithMargin.Border>
             </FigureWithMargin>
@@ -172,7 +168,7 @@ export default function Ryoanji() {
               My third visit to the garden was different from the previous ones
               in that I had this piece of knowledge, learned from a book on
               Japanese gardens{' '}
-              <Source>
+              <Span.Source>
                 (
                 <a
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
@@ -181,7 +177,7 @@ export default function Ryoanji() {
                   Tanaka 2002
                 </a>
                 , pp. 58-59)
-              </Source>
+              </Span.Source>
               . The book says that the whole garden was constructed to be seen
               from this viewpoint.
             </P>
@@ -393,8 +389,8 @@ export default function Ryoanji() {
             <Spacer.TextParagraphToText />
             <P centerAligned>
               <Strong>
-                Don’t fixate on <Span nowrap>one particular thing</Span>{' '}
-                <Span nowrap>in our mind.</Span>
+                Don’t fixate on <Span.NoWrap>one particular thing</Span.NoWrap>{' '}
+                <Span.NoWrap>in our mind.</Span.NoWrap>
               </Strong>
             </P>
             <Spacer.TextParagraphToText />
@@ -454,27 +450,27 @@ export default function Ryoanji() {
             <Spacer.BoxParagraphToText />
             <P>
               Slawson, David A. (1987).{' '}
-              <CiteItalic>
+              <Cite.Italic>
                 <a
                   href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
                   target="_blank"
                 >
                   Secret Teachings in the Art of Japanese gardens
                 </a>
-              </CiteItalic>
+              </Cite.Italic>
               . Tokyo: Kodansha.
             </P>
             <Spacer.TextParagraphToText />
             <P>
               Tanaka, Shozo. (2002).{' '}
-              <CiteItalic>
+              <Cite.Italic>
                 <a
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
                   target="_blank"
                 >
                   ‘Nihon Teien’ no Mikata
                 </a>
-              </CiteItalic>{' '}
+              </Cite.Italic>{' '}
               [The Way of Appreciating ‘Japanese Gardens’]. Tokyo: Shogakukan.
             </P>
           </Section>

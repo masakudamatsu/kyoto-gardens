@@ -6,13 +6,7 @@ import {cssLinkText} from 'src/utils/cssLinkText';
 import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
-import Abbr from 'src/elements/Abbr';
-import CiteItalic from 'src/elements/CiteItalic';
-import LeadIn from 'src/elements/LeadIn';
 import Main from 'src/blocks/Main';
-
-import Source from 'src/elements/Source';
-import Strong from 'src/elements/Strong';
 
 const fontStyle = {
   kohoan: css`
@@ -60,27 +54,6 @@ const Article = styled.article`
           spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,
         })}
       }
-    }
-    & ${Abbr} {
-      font-family: ${ryoanji.abbr.fontFamily};
-      letter-spacing: ${ryoanji.abbr.letterSpacing};
-      text-transform: ${ryoanji.abbr.textTransform};
-    }
-    & ${CiteItalic} {
-      font-style: italic;
-      font-weight: ${ryoanji.italic.fontWeight};
-    }
-    & ${LeadIn} {
-      font-family: ${ryoanji.leadIn.fontFamily};
-      letter-spacing: ${ryoanji.leadIn.letterSpacing};
-      word-spacing: ${ryoanji.leadIn.wordSpacing};
-    }
-    & ${Source} {
-      color: ${ryoanji.source.color};
-    }
-    & ${Strong} {
-      font-style: italic;
-      font-weight: ${ryoanji.italic.fontWeight};
     }
   }
 `;

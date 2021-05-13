@@ -8,9 +8,13 @@ const mockProps = {};
 test('renders UI as expected', () => {
   const {container} = render(<Strong />);
   expect(container).toMatchInlineSnapshot(`
+    .Main__Ryoanji-sc-126eniy-1 .c0 {
+      font-style: italic;
+    }
+
     <div>
       <strong
-        class="Strong-sc-1vpgu6n-0"
+        class="c0 "
       />
     </div>
   `);
