@@ -9,7 +9,7 @@ import {scale} from 'src/utils/specFont';
 
 import {shippoPattern} from 'src/utils/patterns';
 
-export const Main = styled.main`
+const Main = styled.main`
   /* uncomment these once the top bar is introduced
   padding-top: ${remify(header.height + header.borderBottomWidth)};
   @media only screen and ${mediaQuery.font} {
@@ -37,3 +37,5 @@ Main.Index = styled(Main)`
 `;
 
 Main.propTypes = {};
+
+export default Main;

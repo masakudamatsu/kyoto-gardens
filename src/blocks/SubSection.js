@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';

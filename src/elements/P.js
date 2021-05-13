@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import {index} from 'src/utils/specIndex';
 import {ryoanji} from 'src/utils/specRyoanji';

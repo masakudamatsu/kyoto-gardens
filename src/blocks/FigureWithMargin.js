@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Figure from 'src/blocks/Figure';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 

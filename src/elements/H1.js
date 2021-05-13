@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import {breakpoint} from 'src/utils/designSpec';
 import {h1FontStyle} from 'src/utils/h1FontStyle';

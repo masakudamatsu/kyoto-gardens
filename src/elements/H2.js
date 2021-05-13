@@ -5,7 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 const fontStyle = {
   ryoanji: css`

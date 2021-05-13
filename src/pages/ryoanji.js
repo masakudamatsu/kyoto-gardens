@@ -12,7 +12,7 @@ import H2 from '../elements/H2';
 import H3 from '../elements/H3';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import LeadIn from '../elements/LeadIn';
-import {Main} from '../blocks/Main';
+import Main from '../blocks/Main';
 import P from '../elements/P';
 import Span from '../elements/Span';
 import Section from '../blocks/Section';

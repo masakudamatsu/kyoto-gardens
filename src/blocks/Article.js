@@ -9,7 +9,7 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Abbr from 'src/elements/Abbr';
 import CiteItalic from 'src/elements/CiteItalic';
 import LeadIn from 'src/elements/LeadIn';
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 
 import SectionBreak from 'src/elements/SectionBreak';
 import Source from 'src/elements/Source';

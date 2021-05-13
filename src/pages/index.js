@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import {Main} from 'src/blocks/Main';
+import Main from 'src/blocks/Main';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import IndexSection from 'src/blocks/IndexSection';
 import {index} from 'src/utils/specIndex';
