@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
@@ -8,20 +8,26 @@ import {breakpoint, setSpace} from 'src/utils/designSpec';
 
 const SubSection = styled.section`
   ${Main.Ryoanji} & {
+    ${getPaddingTop(ryoanji)}
+  }
+`;
+
+function getPaddingTop(spec) {
+  return css`
     padding-top: ${remify(
-      setSpace('mobile', ryoanji.article.lineHeightRatio.mobile)
+      setSpace('mobile', spec.article.lineHeightRatio.mobile)
         .betweenParagraphs -
-        (ryoanji.article.descender.mobile + ryoanji.h3.ascender.mobile),
+        (spec.article.descender.mobile + spec.h3.ascender.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-top: ${remify(
-        setSpace('desktop', ryoanji.article.lineHeightRatio.desktop)
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
           .betweenParagraphs -
-          (ryoanji.article.descender.desktop + ryoanji.h3.ascender.desktop),
+          (spec.article.descender.desktop + spec.h3.ascender.desktop),
       )};
     }
-  }
-`;
+  `;
+}
 
 SubSection.propTypes = {};
 
