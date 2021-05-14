@@ -12,11 +12,40 @@ If we need the list of all declarations for a selector, see snapshot tests (or C
 
       This includes `color` and `background-color`, both of which are essential for the legibility of letters. They are also one of the means to make headings stand out (just like `font-family` and `font-weight` do)
   
-  2. Side margin/padding
-  3. Vertical margin/padding beyond `line-height`
+  2. Vertical margin/padding beyond `line-height`
+  3. Side margin/padding
 
 ### How each CSS property value is derived
 
 #### Font style
 
+#### Vertical spacing
+
+#### Side margin/padding
+
+1. **Narrowest screens (from 320px)**
+
+   For text, the left/right margins are equal to the space between lines in a paragraph (i.e., the baseline to the top of x-height in the line below).
+
+   For figures, there is no left and right margin. The image spreads across the screen.
+
+2. **Beyond the minimum line length**
+
+   Minimum line length is set beyond which the word wrapping won't make it difficult to read a paragraph 
+
+   For text, the left/right margins are equal to the space between paragraphs.
+
+   For figures, unless the image is of high quality and of large size, the left and right margins follow the text.
+
+3. **Beyond the maximum line length**
+
+   Maximum line length is set beyond which reading a paragraph will become difficult due to too long a line of text
+
+   Both text and figures are center-aligned
+
+4. **Beyond the font-size breakpoint**
+
+   Go back to the spacing for "Beyond the minimum line length", with spacing adjusted to a larger font size (which means a larger space between paragraphs). 
+
+   Beyond the maximum line length, both text and figures are center-aligned.
 
