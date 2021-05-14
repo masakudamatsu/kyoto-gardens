@@ -1,10 +1,21 @@
 export const color = {
   background: 'rgb(240,240,240)',
   onBackground: '#ffffff',
-  surface: '#ffffff',
-  onSurface: '#0a0a0a',
+  surface: {
+    index: '#ffffff',
+    kohoan: '#6f6662',
+    ryoanji: '#ffffff',
+  },
+  onSurface: {
+    index: '#0a0a0a',
+    kohoan: '#ffffff',
+    ryoanji: '#0a0a0a',
+  },
   onSurfaceShade: 'rgb(100,100,100)',
-  onSurfaceSecondShade: 'rgb(240,240,240)' /* TODO: Darken this */,
+  onSurfaceSecondShade: {
+    kohoan: '#9c938f',
+    ryoanji: 'rgb(240,240,240)' /* TODO: Darken this */,
+  },
   primary: 'hsla(193, 50%, 26%, 0.9)',
   primaryShade: 'hsla(193, 50%, 26%, 0.2)',
   onPrimary: '#eee',

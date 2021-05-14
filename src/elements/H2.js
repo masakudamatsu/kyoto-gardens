@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import Main from 'src/blocks/Main';
@@ -36,6 +37,10 @@ function backgroundStyle(spec) {
 }
 
 const defaultStyle = css`
+  ${Main.Kohoan} & {
+    ${fontStyle(kohoan)}
+    ${horizontalSpacing.text['kohoan'].inner}
+  }
   ${Main.Ryoanji} & {
     ${fontStyle(ryoanji)}
     ${horizontalSpacing.text['ryoanji'].inner}
@@ -61,6 +66,10 @@ const H2Style = styled.h2`
 `;
 
 H2Style.Wrapper = styled.div`
+  ${Main.Kohoan} & {
+    ${backgroundStyle(kohoan)}
+    ${horizontalSpacing.text['kohoan'].outer}
+  }
   ${Main.Ryoanji} & {
     ${backgroundStyle(ryoanji)}
     ${horizontalSpacing.text['ryoanji'].outer}

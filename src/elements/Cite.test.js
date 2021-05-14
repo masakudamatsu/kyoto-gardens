@@ -9,13 +9,13 @@ describe('renders UI as expected', () => {
   test('Italic', () => {
     const {container} = render(<Cite.Italic />);
     expect(container).toMatchInlineSnapshot(`
-      .Main__Ryoanji-sc-126eniy-1 .c0 {
+      .c0 {
         font-style: italic;
       }
 
       <div>
         <cite
-          class="c0 "
+          class="c0"
         />
       </div>
     `);

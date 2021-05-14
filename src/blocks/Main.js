@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {header, main} from 'src/utils/specLayout';
+import {header} from 'src/utils/specLayout';
 import {index} from 'src/utils/specIndex';
 import {mediaQuery} from 'src/utils/mediaQuery';
 import remify from 'src/utils/remify';
 import {scale} from 'src/utils/specFont';
 
-import {shippoPattern} from 'src/utils/patterns';
+import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
 const Main = styled.main`
   /* uncomment these once the top bar is introduced
@@ -29,6 +29,10 @@ const Main = styled.main`
 
 Main.Ryoanji = styled(Main)`
   ${shippoPattern}
+`;
+
+Main.Kohoan = styled(Main)`
+  ${seigaihaPattern}
 `;
 
 Main.Index = styled(Main)`

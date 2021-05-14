@@ -1,10 +1,16 @@
 import {css} from 'styled-components';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 export const horizontalSpacing = {
   figure: {
+    kohoan: setHorizontalSpace(
+      'figure',
+      kohoan.article.lineHeightRatio,
+      kohoan.article.lineLength,
+    ),
     ryoanji: setHorizontalSpace(
       'figure',
       ryoanji.article.lineHeightRatio,
@@ -12,6 +18,11 @@ export const horizontalSpacing = {
     ),
   },
   text: {
+    kohoan: setHorizontalSpace(
+      'text',
+      kohoan.article.lineHeightRatio,
+      kohoan.article.lineLength,
+    ),
     ryoanji: setHorizontalSpace(
       'text',
       ryoanji.article.lineHeightRatio,

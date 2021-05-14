@@ -37,8 +37,18 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 1.4271rem;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 1.7448rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 1.9297rem;
+        }
       }
 
       @media only screen and (min-width:728px) {
@@ -78,6 +88,30 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
+  test('H3ParagrahToText', () => {
+    const {container} = render(<Spacer.H3ParagraphToText {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 1.2513rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 1.8228rem;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
   test('TextLineToBox', () => {
     const {container} = render(<Spacer.TextLineToBox {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
@@ -85,8 +119,18 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 0.625rem;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 0.8281rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 0.8516rem;
+        }
       }
 
       @media only screen and (min-width:728px) {
@@ -111,7 +155,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="Spacer__TextParagraphToBox-sc-1ug26uc-5 c0"
+          class="Spacer__TextParagraphToBox-sc-1ug26uc-6 c0"
         />
       </div>
     `);
@@ -123,8 +167,18 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 0.9467rem;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 1.1991rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 1.2788rem;
+        }
       }
 
       @media only screen and (min-width:728px) {

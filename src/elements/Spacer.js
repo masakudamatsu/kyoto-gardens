@@ -2,6 +2,7 @@ import styled, {css} from 'styled-components';
 import Main from 'src/blocks/Main';
 
 import {index} from 'src/utils/specIndex';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
@@ -40,6 +41,9 @@ function spaceBoxLineToText(spec) {
 ////////////////////////////////////////////
 
 Spacer.BoxParagraphToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceBoxParagraphToText(kohoan)}
+  }
   ${Main.Ryoanji} & {
     ${spaceBoxParagraphToText(ryoanji)}
   }
@@ -84,9 +88,37 @@ function spaceH3LineToBox(spec) {
   `;
 }
 
+////////////////////////////////////////
+
+Spacer.H3ParagraphToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceH3ParagraphToText(kohoan)}
+  }
+`;
+function spaceH3ParagraphToText(spec) {
+  return css`
+    height: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile)
+        .betweenParagraphs -
+        spec.h3.descender.mobile -
+        spec.article.capToX.mobile, // make it symmetric with the space below the figure and the cap height of next paragraph
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      height: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
+          .betweenParagraphs -
+          spec.h3.descender.desktop -
+          spec.article.capToX.desktop, // make it symmetric with the space below the figure and the cap height of next paragraph
+      )};
+    }
+  `;
+}
 ////////////////////////////////////////////
 
 Spacer.TextLineToBox = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceTextLineToBox(kohoan)}
+  }
   ${Main.Ryoanji} & {
     ${spaceTextLineToBox(ryoanji)}
   }
@@ -113,6 +145,9 @@ Spacer.TextParagraphToBox = styled(Spacer)``; // not used for Ryoan-ji
 ////////////////////////////////////////////
 
 Spacer.TextParagraphToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceTextParagraphToText(kohoan)}
+  }
   ${Main.Ryoanji} & {
     ${spaceTextParagraphToText(ryoanji)}
   }

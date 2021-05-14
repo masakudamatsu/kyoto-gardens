@@ -1,3 +1,4 @@
+import {color} from './colorScheme';
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
@@ -5,14 +6,14 @@ import {
   cormorant,
   cormorantSC,
   libreBaskerville,
+  playfairDisplay,
   playfairDisplaySC,
 } from './fontMetrics';
 
 // Color scheme
 const background = 'rgb(240,240,240)';
 const onBackground = '#ffffff';
-const surface = '#ffffff';
-const onSurface = '#0a0a0a';
+const onSurface = '#ffffff';
 const onSurfaceShade = 'rgb(100,100,100)';
 const onSurfaceSecondShade = 'rgb(240,240,240)'; /* TODO: Darken this */
 const primary = 'hsla(193, 50%, 26%, 0.9)';
@@ -38,8 +39,8 @@ export const kohoan = {
   },
   article: {
     // This sets the default for all the other elements below
-    backgroundColor: surface,
-    color: onSurface,
+    backgroundColor: color.surface.kohoan,
+    color: color.onSurface.kohoan,
     ...libreBaskerville, // {fontFamily, fontMetrics}
     get fontSize() {
       return {
@@ -47,10 +48,10 @@ export const kohoan = {
         desktop: getFontSizeFromX(xHeight('desktop'), this.fontMetrics),
       };
     },
-    fontWeight: 600,
+    fontWeight: 400,
     lineHeightRatio: {
-      mobile: {xHeight: 2, betweenLines: 5},
-      desktop: {xHeight: 4, betweenLines: 11},
+      mobile: {xHeight: 1, betweenLines: 2},
+      desktop: {xHeight: 4, betweenLines: 9},
     },
     get lineHeight() {
       return {
@@ -72,18 +73,19 @@ export const kohoan = {
       }, // 682.188px for font-size of 26.3824px
     },
     baselinePosition: {
-      mobile: 20,
-      desktop: 24,
+      mobile: 16, // TODO: measure it properly
+      desktop: 19, // TODO: measure it properly
     },
     ascender: {
+      // from top of the text box to the top of capital letters
       // for space between box and paragraph
-      mobile: 7.5,
-      desktop: 10.5,
+      mobile: 5.5,
+      desktop: 8.5,
     },
     descender: {
       // for between Sections
-      mobile: 8,
-      desktop: 12,
+      mobile: 7,
+      desktop: 10,
     },
     get capToX() {
       const ratioToFontSize =
@@ -95,11 +97,8 @@ export const kohoan = {
       };
     },
   },
-  italic: {
-    fontWeight: 600,
-  },
   link: {
-    backgroundOnHover: onSurfaceSecondShade,
+    backgroundOnHover: color.onSurfaceSecondShade.kohoan,
     color: 'inherit',
     lineWidth: 1,
     spaceBelowBaseline: {
@@ -120,8 +119,16 @@ export const kohoan = {
     letterSpacing: '0.01em',
     wordSpacing: '-0.05em',
   },
-  Hr: {
-    color: primary,
+  hr: {
+    asteriskHeight: {
+      mobile: 8,
+      desktop: 10,
+    },
+    color: color.onSurface.kohoan,
+    spaceAboveByDefault: {
+      mobile: 13,
+      desktop: 17.5,
+    },
   },
   source: {
     color: onSurfaceShade,
@@ -216,18 +223,18 @@ export const kohoan = {
     backgroundColor: primary,
     backgroundImage: lightingOverlay,
     color: onPrimary,
-    ...cormorant,
+    ...playfairDisplay,
     get fontSize() {
       return {
         mobile: getFontSizeFromX(xHeight('mobile') * scale, this.fontMetrics),
         desktop: getFontSizeFromX(xHeight('desktop') * scale, this.fontMetrics),
       };
     },
-    fontWeight: 700,
+    fontWeight: 600,
     letterSpacing: '0.01em',
     get lineHeight() {
       return getLineHeightFromRatio(
-        {xHeight: 5, betweenLines: 8}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
+        {xHeight: 5, betweenLines: 7}, // For the space from baseline to cap top to be larger than word space
         this.fontMetrics,
       );
     },
@@ -242,12 +249,12 @@ export const kohoan = {
       };
       const defaultSpace = {
         mobile: {
-          ascender: 6.5,
-          descender: 7,
+          ascender: 8,
+          descender: 6,
         },
         desktop: {
-          ascender: 8.5,
-          descender: 9,
+          ascender: 10.5,
+          descender: 7,
         },
       };
       return {
@@ -264,8 +271,8 @@ export const kohoan = {
     textIndent: -2,
   },
   h3: {
-    color: primary,
-    ...cormorant,
+    color: color.onSurface.kohoan,
+    ...playfairDisplay,
     get fontSize() {
       return {
         mobile: getFontSizeFromX(xHeight('mobile'), this.fontMetrics),
@@ -275,7 +282,7 @@ export const kohoan = {
     fontWeight: 700,
     get lineHeight() {
       return getLineHeightFromRatio(
-        {xHeight: 5, betweenLines: 8}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
+        {xHeight: 5, betweenLines: 8}, // For baseline to cap top to be larger than word space
         this.fontMetrics,
       );
     },
@@ -283,13 +290,13 @@ export const kohoan = {
     textTransform: 'uppercase', // TODO: DRY this code to share it with other pages
     ascender: {
       // for between paragraph spacing above h3
-      mobile: 4.5, // 12.5 minus article.descender.mobile
-      desktop: 5.5, //17.5 minus article.descender.desktop,
+      mobile: 6, // 13 minus article.descender.mobile
+      desktop: 7.5, //17.5 minus article.descender.desktop,
     },
     descender: {
-      // for between h3 and figure below
-      mobile: 4,
-      desktop: 5,
+      // for between h3 and text below
+      mobile: 4.5, // 10 minus article.ascender.mobile
+      desktop: 5.5, // 14 minus article.ascender.mobile
     },
   },
   figCaption: {
@@ -320,13 +327,14 @@ export const kohoan = {
     },
   },
   figure: {
-    borderColor: primaryShade,
+    borderColor: color.onSurface.kohoan,
+    color: color.primary, // TODO: we may want to darken the seigaiha pattern
     maxHeight: 703, // half the height of spring/summer photos
     maxWidth: 941, // half the width of spring/summer/autumn/winter photos
     paddingInsideBorder: 15.564,
     spaceBelowByBug: {
-      mobile: 8,
-      desktop: 12,
+      mobile: 7,
+      desktop: 10,
     }, // See issue #29
   },
   get breakpoint() {

@@ -55,7 +55,7 @@ export const index = {
     },
   },
   kanji: {
-    color: color.onSurface,
+    color: color.onSurface.index,
     fontFamily: shipporiMinchoB1.fontFamily,
     fontSize: '3em', // TODO: Set this value to match the latin counterpart's size
     fontWeight: 500, // TODO: Set this value to match the latin counterpart's storke width
@@ -64,7 +64,7 @@ export const index = {
     top: -60,
   },
   latin: {
-    color: color.onSurface,
+    color: color.onSurface.index,
     marginTop: -40,
     paddingSide: sideMargin,
   },

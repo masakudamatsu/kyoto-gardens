@@ -2,11 +2,15 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 
 const SubSection = styled.section`
+  ${Main.Kohoan} & {
+    ${getPaddingTop(kohoan)}
+  }
   ${Main.Ryoanji} & {
     ${getPaddingTop(ryoanji)}
   }

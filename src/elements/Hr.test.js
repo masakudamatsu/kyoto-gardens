@@ -18,10 +18,23 @@ test('renders UI correctly', () => {
       text-align: center;
     }
 
+    .Main__Kohoan-sc-126eniy-2 .c0 {
+      color: #ffffff;
+      padding-bottom: 2.2708rem;
+      padding-top: 0.9583rem;
+    }
+
     .Main__Ryoanji-sc-126eniy-1 .c0 {
       color: hsla(193,50%,26%,0.9);
       padding-bottom: 2.7135rem;
       padding-top: 1.401rem;
+    }
+
+    @media only screen and (min-width:728px) {
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        padding-bottom: 3.0859rem;
+        padding-top: 1.3672rem;
+      }
     }
 
     @media only screen and (min-width:728px) {

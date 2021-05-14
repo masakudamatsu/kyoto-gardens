@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {breakpoint, setSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
@@ -28,6 +29,16 @@ const Hr = styled.hr`
     content: '* * *';
     display: block;
     text-align: center;
+  }
+  ${Main.Kohoan} & {
+    /* https://stackoverflow.com/a/32146824/11847654 */
+    color: ${kohoan.hr.color};
+    padding-bottom: ${getPaddingBottom('mobile', kohoan)};
+    padding-top: ${getPaddingTop('mobile', kohoan)};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${getPaddingBottom('desktop', kohoan)};
+      padding-top: ${getPaddingTop('desktop', kohoan)};
+    }
   }
   ${Main.Ryoanji} & {
     /* https://stackoverflow.com/a/32146824/11847654 */

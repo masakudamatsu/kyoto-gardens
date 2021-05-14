@@ -14,8 +14,8 @@ export const ryoanji = {
   },
   article: {
     // This sets the default for all the other elements below
-    backgroundColor: color.surface,
-    color: color.onSurface,
+    backgroundColor: color.surface.ryoanji,
+    color: color.onSurface.ryoanji,
     ...cormorantGaramond, // {fontFamily, fontMetrics}
     get fontSize() {
       return {
@@ -72,7 +72,7 @@ export const ryoanji = {
     },
   },
   link: {
-    backgroundOnHover: color.onSurfaceSecondShade,
+    backgroundOnHover: color.onSurfaceSecondShade.ryoanji,
     color: 'inherit',
     lineWidth: 1,
     spaceBelowBaseline: {

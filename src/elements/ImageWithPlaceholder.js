@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import {useState} from 'react';
 import Image from 'next/image';
 
-import {shippoPattern} from 'src/utils/patterns';
+import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
+import Main from 'src/blocks/Main';
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import {breakpoint} from 'src/utils/designSpec';
 
@@ -14,7 +16,6 @@ const Wrapper = styled.div`
 `; // for some reason, this element adds 12px to the height...
 
 const Placeholder = styled(P)`
-  ${shippoPattern}
   align-items: center;
   bottom 0;
   display: flex;
@@ -28,6 +29,13 @@ const Placeholder = styled(P)`
   width: 100%;
   @media only screen and ${breakpoint.fontSize} {
     height: calc(100% - ${ryoanji.figure.spaceBelowByBug.desktop}px);
+  }
+  ${Main.Kohoan} & {
+    color: ${kohoan.figure.color};
+    ${seigaihaPattern}
+  }
+  ${Main.Ryoanji} & {
+    ${shippoPattern}
   }
 `;
 

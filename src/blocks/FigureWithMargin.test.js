@@ -13,9 +13,32 @@ describe('renders UI correctly', () => {
         overflow: hidden;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        margin: 0 auto;
+        max-width: 38.9424rem;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         margin: 0 auto;
         max-width: 38.9424rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          max-width: 48.6522rem;
+        }
+      }
+
+      @media only screen and (min-width:31.6802rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 2.2135rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 3.0078rem;
+        }
       }
 
       @media only screen and (min-width:728px) {
@@ -47,10 +70,23 @@ describe('renders UI correctly', () => {
   test('Border', () => {
     const {container} = render(<FigureWithMargin.Border />);
     expect(container).toMatchInlineSnapshot(`
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        padding: 15.564px;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         border-bottom: 1px solid hsla(193,50%,26%,0.2);
         border-top: 1px solid hsla(193,50%,26%,0.2);
         padding: 15.564px;
+      }
+
+      @media only screen and (min-width:30.7948rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          border-left: 1px solid #ffffff;
+          border-right: 1px solid #ffffff;
+        }
       }
 
       @media only screen and (min-width:31.6802rem) {

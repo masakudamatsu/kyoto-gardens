@@ -7,6 +7,10 @@ import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 
 const P = styled.p`
   text-align: ${props => (props.centerAligned ? 'center' : 'left')};
+  ${Main.Kohoan} & {
+    ${horizontalSpacing.text['kohoan'].innerMerged}
+    ${horizontalSpacing.text['kohoan'].outer}
+  }
   ${Main.Ryoanji} & {
     ${horizontalSpacing.text['ryoanji'].innerMerged}
     ${horizontalSpacing.text['ryoanji'].outer}

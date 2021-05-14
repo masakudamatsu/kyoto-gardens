@@ -13,6 +13,52 @@ describe('Parent chnages UI by prop value', () => {
         margin: 0 auto;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        background-color: #6f6662;
+        color: #ffffff;
+        font-family: 'Libre Baskerville','Verdana',serif;
+        font-size: 0.993rem;
+        font-weight: 400;
+        line-height: 1.605;
+        max-width: 941px;
+      }
+
+      .c1 a:link,
+      .c1 a:visited {
+        background: #9c938f;
+        background: linear-gradient( to bottom,currentColor 100%,currentColor );
+        background-position: 0 1.0625rem;
+        background-repeat: no-repeat;
+        background-size: 100% 1px;
+        color: inherit;
+        cursor: pointer;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+      }
+
+      .c1 a:focus,
+      .c1 a:hover {
+        background: #9c938f;
+        outline: none;
+        text-shadow: none;
+      }
+
+      .c1 a:active {
+        background: none;
+      }
+
+      .c1 a:visited:focus,
+      .c1 a:visited:hover {
+        background: #9c938f;
+        outline: none;
+        text-shadow: none;
+      }
+
+      .c1 a:visited:active {
+        background: none;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         background-color: #ffffff;
         color: #0a0a0a;
@@ -57,6 +103,51 @@ describe('Parent chnages UI by prop value', () => {
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:active {
         background: none;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          font-size: 1.2266rem;
+          line-height: 1.73875;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c1 a:link,
+        .c1 a:visited {
+          background: #9c938f;
+          background: linear-gradient( to bottom,currentColor 100%,currentColor );
+          background-position: 0 1.3125rem;
+          background-repeat: no-repeat;
+          background-size: 100% 1px;
+          color: inherit;
+          cursor: pointer;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+        }
+
+        .c1 a:focus,
+        .c1 a:hover {
+          background: #9c938f;
+          outline: none;
+          text-shadow: none;
+        }
+
+        .c1 a:active {
+          background: none;
+        }
+
+        .c1 a:visited:focus,
+        .c1 a:visited:hover {
+          background: #9c938f;
+          outline: none;
+          text-shadow: none;
+        }
+
+        .c1 a:visited:active {
+          background: none;
+        }
       }
 
       @media only screen and (min-width:728px) {
