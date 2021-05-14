@@ -22,26 +22,6 @@ const cormorantGaramond = {
   },
 };
 
-export const paragraph = {
-  mobile: {
-    ...cormorantGaramond,
-    xHeight: xHeight(),
-    lineHeightRatio: {
-      xHeight: 2,
-      betweenLines: 5,
-    },
-  },
-};
-
-paragraph.desktop = {
-  ...paragraph.mobile,
-  xHeight: xHeight('desktop'),
-  lineHeightRatio: {
-    xHeight: 4,
-    betweenLines: 11,
-  },
-};
-
 export function setSpace(screenWidth, lineHeightRatio) {
   if (screenWidth !== 'mobile' && screenWidth !== 'desktop') {
     throw new Error(
