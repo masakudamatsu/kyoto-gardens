@@ -7,37 +7,37 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import {horizontalSpacing} from 'src/utils/horizontalSpacing';
 import Main from 'src/blocks/Main';
 
-const fontStyle = {
-  ryoanji: css`
-    color: ${ryoanji.h2.color};
-    font-family: ${ryoanji.h2.fontFamily};
-    font-size: ${remify(ryoanji.h2.fontSize.mobile)};
-    font-weight: ${ryoanji.h2.fontWeight};
-    letter-spacing: ${ryoanji.h2.letterSpacing};
-    line-height: ${ryoanji.h2.lineHeight};
-    padding-bottom: ${remify(ryoanji.h2.padding.bottom.mobile)};
-    padding-top: ${remify(ryoanji.h2.padding.top.mobile)};
+function fontStyle(spec) {
+  return css`
+    color: ${spec.h2.color};
+    font-family: ${spec.h2.fontFamily};
+    font-size: ${remify(spec.h2.fontSize.mobile)};
+    font-weight: ${spec.h2.fontWeight};
+    letter-spacing: ${spec.h2.letterSpacing};
+    line-height: ${spec.h2.lineHeight};
+    padding-bottom: ${remify(spec.h2.padding.bottom.mobile)};
+    padding-top: ${remify(spec.h2.padding.top.mobile)};
     text-indent: ${remify(
-      ryoanji.h2.textIndent,
+      spec.h2.textIndent,
     )}; /* Optical alignment with paragraphs */
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(ryoanji.h2.fontSize.desktop)};
-      padding-bottom: ${remify(ryoanji.h2.padding.bottom.desktop)};
-      padding-top: ${remify(ryoanji.h2.padding.top.desktop)};
+      font-size: ${remify(spec.h2.fontSize.desktop)};
+      padding-bottom: ${remify(spec.h2.padding.bottom.desktop)};
+      padding-top: ${remify(spec.h2.padding.top.desktop)};
     }
-  `,
-};
+  `;
+}
 
-const backgroundStyle = {
-  ryoanji: css`
-    background-color: ${ryoanji.h2.backgroundColor};
-    background-image: ${ryoanji.h2.backgroundImage};
-  `,
-};
+function backgroundStyle(spec) {
+  return css`
+    background-color: ${spec.h2.backgroundColor};
+    background-image: ${spec.h2.backgroundImage};
+  `;
+}
 
 const defaultStyle = css`
   ${Main.Ryoanji} & {
-    ${fontStyle['ryoanji']}
+    ${fontStyle(ryoanji)}
     ${horizontalSpacing.text['ryoanji'].inner}
   }
 `;
@@ -54,13 +54,15 @@ const visuallyHidden = css`
   width: 1px;
 `;
 
+/* Styled Components */
+
 const H2Style = styled.h2`
   ${props => (props.visuallyHidden ? visuallyHidden : defaultStyle)}
 `;
 
 H2Style.Wrapper = styled.div`
   ${Main.Ryoanji} & {
-    ${backgroundStyle['ryoanji']}
+    ${backgroundStyle(ryoanji)}
     ${horizontalSpacing.text['ryoanji'].outer}
   }
 `;
