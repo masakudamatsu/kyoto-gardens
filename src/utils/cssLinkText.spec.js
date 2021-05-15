@@ -67,3 +67,17 @@ test('applies CSS declarations as expected', () => {
     </div>
   `);
 });
+
+test('changes the underline color by the underlineColor prop value', () => {
+  const newInputs = {
+    ...inputs,
+    underlineColor: 'rgb(200, 200, 200)',
+  };
+  const UpdatedComponent = styled.a`
+    ${cssLinkText(newInputs)}
+  `;
+  render(<UpdatedComponent data-testid="mock-component" />);
+  expect(screen.getByTestId('mock-component')).toHaveStyle(`
+    background: linear-gradient( to bottom, ${newInputs.underlineColor} 100%, ${newInputs.underlineColor} );
+  `);
+});

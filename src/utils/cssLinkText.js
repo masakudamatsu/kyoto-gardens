@@ -5,6 +5,7 @@ export function cssLinkText({
   backgroundColor,
   backgroundColorOnHover,
   linkTextColor,
+  underlineColor = 'currentColor',
   baselinePosition,
   lineWidth,
   spaceBelowBaseline,
@@ -15,8 +16,8 @@ export function cssLinkText({
       background: ${backgroundColorOnHover}; /* Fallback for browsers incompatible with CSS Gradient (https://caniuse.com/css-gradients) */
       background: linear-gradient(
         to bottom,
-        currentColor 100%,
-        currentColor
+        ${underlineColor} 100%,
+        ${underlineColor}
       ); /* make the upper half transparent, to explicitly control the distance between the baseline and the underline. */
       background-position: 0 ${remify(baselinePosition + spaceBelowBaseline)};
       background-repeat: no-repeat;
