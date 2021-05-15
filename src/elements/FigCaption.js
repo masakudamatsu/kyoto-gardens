@@ -7,45 +7,44 @@ import remify from 'src/utils/remify';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
-const fontStyle = {
-  ryoanji: css`
-    font-family: ${ryoanji.figCaption.fontFamily};
-    font-size: ${remify(ryoanji.figCaption.fontSize.mobile)};
-    font-weight: ${ryoanji.figCaption.fontWeight};
-    line-height: ${ryoanji.figCaption.lineHeight.mobile};
-    margin-right: 5px; /* Align with the right-edge of the floor plan */
-    text-align: ${ryoanji.figCaption.textAlign};
+function fontStyle(spec) {
+  return css`
+    font-family: ${spec.figCaption.fontFamily};
+    font-size: ${remify(spec.figCaption.fontSize.mobile)};
+    font-weight: ${spec.figCaption.fontWeight};
+    line-height: ${spec.figCaption.lineHeight.mobile};
+    margin-right: ${spec.figCaption.marginRight || 0}px;
+    text-align: ${spec.figCaption.textAlign};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(ryoanji.figCaption.fontSize.desktop)};
-      line-height: ${ryoanji.figCaption.lineHeight.desktop};
+      font-size: ${remify(spec.figCaption.fontSize.desktop)};
+      line-height: ${spec.figCaption.lineHeight.desktop};
     }
     & a {
       ${cssLinkText({
-        backgroundColor: ryoanji.article.backgroundColor,
-        backgroundColorOnHover: ryoanji.link.backgroundOnHover,
-        linkTextColor: ryoanji.link.color,
-        baselinePosition: ryoanji.figCaption.baselinePosition.mobile,
-        lineWidth: ryoanji.link.lineWidth,
-        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+        backgroundColor: spec.article.backgroundColor,
+        backgroundColorOnHover: spec.link.backgroundOnHover,
+        linkTextColor: spec.link.color,
+        baselinePosition: spec.figCaption.baselinePosition.mobile,
+        lineWidth: spec.link.lineWidth,
+        spaceBelowBaseline: spec.link.spaceBelowBaseline.mobile,
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
-          backgroundColor: ryoanji.article.backgroundColor,
-          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
-          linkTextColor: ryoanji.link.color,
-          baselinePosition: ryoanji.figCaption.baselinePosition.desktop,
-          lineWidth: ryoanji.link.lineWidth,
-          spaceBelowBaseline:
-            ryoanji.link.spaceBelowBaseline.figCaption.desktop,
+          backgroundColor: spec.article.backgroundColor,
+          backgroundColorOnHover: spec.link.backgroundOnHover,
+          linkTextColor: spec.link.color,
+          baselinePosition: spec.figCaption.baselinePosition.desktop,
+          lineWidth: spec.link.lineWidth,
+          spaceBelowBaseline: spec.link.spaceBelowBaseline.figCaption.desktop,
         })}
       }
     }
-  `,
-};
+  `;
+}
 
 const FigCaption = styled.figcaption`
   ${Main.Ryoanji} & {
-    ${fontStyle['ryoanji']}
+    ${fontStyle(ryoanji)}
   }
 `;
 

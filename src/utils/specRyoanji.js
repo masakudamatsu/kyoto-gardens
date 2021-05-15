@@ -295,6 +295,7 @@ export const ryoanji = {
       };
     },
     textAlign: 'right', // TODO: Dry this code to share with other pages
+    marginRight: 5, // Align with the right-edge of the floor plan for narrowest screens
     baselinePosition: {
       mobile: 17,
       desktop: 21,
