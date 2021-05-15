@@ -15,7 +15,7 @@ describe('renders UI correctly', () => {
         font-weight: 400;
         line-height: 1.525;
         margin-right: 0px;
-        text-align: right;
+        text-align: left;
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 a:link,

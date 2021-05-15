@@ -321,7 +321,7 @@ export const kohoan = {
         ),
       };
     },
-    textAlign: 'right', // TODO: Dry this code to share with other pages
+    textAlign: 'left',
     descender: {
       mobile: 5, // 10.5 - article.ascender.mobile
       desktop: 7, // 15.5 - article.ascender.desktop
