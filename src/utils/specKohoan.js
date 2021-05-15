@@ -327,7 +327,7 @@ export const kohoan = {
     },
   },
   figure: {
-    borderColor: color.onSurface.kohoan,
+    borderColor: color.onSurfaceShade.kohoan,
     color: color.primary, // TODO: we may want to darken the seigaiha pattern
     maxHeight: 703, // half the height of spring/summer photos
     maxWidth: 941, // half the width of spring/summer/autumn/winter photos

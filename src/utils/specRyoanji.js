@@ -105,7 +105,7 @@ export const ryoanji = {
     },
   },
   source: {
-    color: color.onSurfaceShade,
+    color: color.onSurfaceShade.ryoanji,
   },
   h1: {
     backgroundColor: {

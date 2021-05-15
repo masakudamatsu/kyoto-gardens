@@ -858,23 +858,26 @@ export default function Kohoan() {
               <Kanji>躙口</Kanji>
               ):
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/nijiri-guchi.png"
-                width={1000}
-                height={419}
-              />
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/nijiri-guchi.png"
+                  width={1000}
+                  height={419}
+                />
 
-              <FigCaption>
-                How to enter a teahouse through nijiri-guchi
-                <Span.Source>
-                  [Image source:{' '}
-                  <a href="https://www.japan-architecture.org/nijiri-guchi/">
-                    Japan Architecture (2021)
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+                <FigCaption>
+                  How to enter a teahouse through nijiri-guchi
+                  <Span.Source>
+                    [Image source:{' '}
+                    <a href="https://www.japan-architecture.org/nijiri-guchi/">
+                      Japan Architecture (2021)
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <P belowBoxLine>
               It is an architectural device that makes everyone—noble and
@@ -929,24 +932,27 @@ export default function Kohoan() {
               arrangement. For a typical Japanese room, the alcove’s tie beam is
               sightly higher up than the rest of the room:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/tokonoma.jpg"
-                width={640}
-                height={427}
-              />
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/tokonoma.jpg"
+                  width={640}
+                  height={427}
+                />
 
-              <FigCaption>
-                An example of the Japanese architectural interior with a
-                tokonoma alcove
-                <Span.Source>
-                  [Image source:{' '}
-                  <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
-                    663highland (2010) via Wikimedia Commons
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+                <FigCaption>
+                  An example of the Japanese architectural interior with a
+                  tokonoma alcove
+                  <Span.Source>
+                    [Image source:{' '}
+                    <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
+                      663highland (2010) via Wikimedia Commons
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Spacer.BoxParagraphToText />
             <P>
@@ -986,23 +992,26 @@ export default function Kohoan() {
               The inscribed Chinese characters read <a>tsuyu-musubi</a>, meaning
               a form of knots that resemble the ear of a rabbit:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/tsuyu-musubi.png"
-                width={217}
-                height={300}
-              />
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/tsuyu-musubi.png"
+                  width={217}
+                  height={300}
+                />
 
-              <FigCaption>
-                Tsuyu-musubi knots
-                <Span.Source>
-                  [Image source:{' '}
-                  <a href="https://kotobank.jp/word/%E9%9C%B2%E7%B5%90-2064295">
-                    Shogakukan (2006) via Kotobank
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+                <FigCaption>
+                  Tsuyu-musubi knots
+                  <Span.Source>
+                    [Image source:{' '}
+                    <a href="https://kotobank.jp/word/%E9%9C%B2%E7%B5%90-2064295">
+                      Shogakukan (2006) via Kotobank
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Spacer.BoxParagraphToText />
             <P>
@@ -1049,43 +1058,49 @@ export default function Kohoan() {
               craters to a rabbit making{' '}
               <ForeignPhrase as="i">mochi</ForeignPhrase>:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/moon-rabbit.png"
-                width={579}
-                height={234}
-              />
-              <FigCaption>
-                The Moon and an imaginary rabbit on the moon
-                <Span.Source>
-                  Adapted from{' '}
-                  <a href="https://allabout.co.jp/gm/gc/220559/">
-                    Miura (2020)
-                  </a>
-                </Span.Source>
-              </FigCaption>
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/moon-rabbit.png"
+                  width={579}
+                  height={234}
+                />
+                <FigCaption>
+                  The Moon and an imaginary rabbit on the moon
+                  <Span.Source>
+                    Adapted from{' '}
+                    <a href="https://allabout.co.jp/gm/gc/220559/">
+                      Miura (2020)
+                    </a>
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <P belowBoxLine>
               In case you have no idea how{' '}
               <ForeignPhrase as="i">mochi</ForeignPhrase> is traditionally made
               in Japan:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/mochi-tsuki.jpeg"
-                width={570}
-                height={427}
-              />
-              <FigCaption>
-                Traditional mochi-making
-                <Span.Source>
-                  [Image source:{' '}
-                  <a href="https://h-takarajima.com/detail/index/4879">
-                    Hokkaido Taiken (2018)
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+            <Spacer.TextLineToBox />{' '}
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/mochi-tsuki.jpeg"
+                  width={570}
+                  height={427}
+                />
+                <FigCaption>
+                  Traditional mochi-making
+                  <Span.Source>
+                    [Image source:{' '}
+                    <a href="https://h-takarajima.com/detail/index/4879">
+                      Hokkaido Taiken (2018)
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Spacer.BoxParagraphToText />
             <P>
@@ -1223,27 +1238,30 @@ export default function Kohoan() {
               If you’ve never seen the reflection of water ripples on the
               ceiling, here is a real example:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/VQaoRnDjZMw"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <FigCaption>
-                The reflection of water ripples on the ceiling of Ukimi-do on a
-                pond in Nara Park
-                <Span.Source>
-                  [Source:{' '}
-                  <a href="https://www.youtube.com/watch?v=VQaoRnDjZMw">
-                    hallhorns (2010)
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/VQaoRnDjZMw"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <FigCaption>
+                  The reflection of water ripples on the ceiling of Ukimi-do on
+                  a pond in Nara Park
+                  <Span.Source>
+                    [Source:{' '}
+                    <a href="https://www.youtube.com/watch?v=VQaoRnDjZMw">
+                      hallhorns (2010)
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Spacer.BoxParagraphToText />
             <P>
@@ -1263,22 +1281,26 @@ export default function Kohoan() {
               Festival at Osawa Pond, a massive garden pond built in west Kyoto
               in 810:
             </P>
-            <FigureWithMargin bordered belowTextLine>
-              <ImageWithPlaceholder
-                src="/kohoan/osawa-pond.jpg"
-                width={350}
-                height={240}
-              />
-              <FigCaption>
-                The moon-viewing event at Osawa Pond on the Mid-autumn Festival
-                <Span.Source>
-                  [Image source:{' '}
-                  <a href="https://www.okeihan.net/navi/kyoto_tsu/tsu201209.php">
-                    Wakamura (2012)
-                  </a>
-                  ]
-                </Span.Source>
-              </FigCaption>
+            <Spacer.TextLineToBox />
+            <FigureWithMargin>
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/osawa-pond.jpg"
+                  width={350}
+                  height={240}
+                />
+                <FigCaption>
+                  The moon-viewing event at Osawa Pond on the Mid-autumn
+                  Festival
+                  <Span.Source>
+                    [Image source:{' '}
+                    <a href="https://www.okeihan.net/navi/kyoto_tsu/tsu201209.php">
+                      Wakamura (2012)
+                    </a>
+                    ]
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Hr />
             <P>

@@ -11,7 +11,7 @@ export const color = {
     kohoan: '#ffffff',
     ryoanji: '#0a0a0a',
   },
-  onSurfaceShade: 'rgb(100,100,100)',
+  onSurfaceShade: {kohoan: 'rgb(200,200,200)', ryoanji: 'rgb(100,100,100)'},
   onSurfaceSecondShade: {
     kohoan: '#9c938f',
     ryoanji: 'rgb(240,240,240)' /* TODO: Darken this */,

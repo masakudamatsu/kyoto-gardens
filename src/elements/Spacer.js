@@ -14,6 +14,9 @@ const Spacer = styled.div`
 ////////////////////////////////////////////
 
 Spacer.BoxLineToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceBoxLineToText(kohoan)}
+  }
   ${Main.Ryoanji} & {
     ${spaceBoxLineToText(ryoanji)}
   }

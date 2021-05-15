@@ -13,8 +13,18 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 0.0429rem;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         height: 0.0457rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 0.0259rem;
+        }
       }
 
       @media only screen and (min-width:728px) {
