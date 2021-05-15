@@ -90,7 +90,7 @@ describe('renders the UI correctly during the loading time', () => {
         }
       }
 
-      @media only screen and (min-width:31.6802rem) {
+      @media only screen and (min-width:30.7948rem) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
           padding: 0 1.7708rem;
         }

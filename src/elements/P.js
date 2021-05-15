@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
 
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
+import {kohoan} from 'src/utils/specKohoan';
+import {ryoanji} from 'src/utils/specRyoanji';
 
 const P = styled.p`
   text-align: ${props => (props.centerAligned ? 'center' : 'left')};
   ${Main.Kohoan} & {
-    ${horizontalSpacing.text['kohoan'].innerMerged}
-    ${horizontalSpacing.text['kohoan'].outer}
+    ${setHorizontalSpace('text', kohoan).innerMerged}
+    ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
-    ${horizontalSpacing.text['ryoanji'].innerMerged}
-    ${horizontalSpacing.text['ryoanji'].outer}
+    ${setHorizontalSpace('text', ryoanji).innerMerged}
+    ${setHorizontalSpace('text', ryoanji).outer}
   }
 `;
 

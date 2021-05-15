@@ -5,7 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
 import Main from 'src/blocks/Main';
 
 function fontStyle(spec) {
@@ -26,13 +26,13 @@ function fontStyle(spec) {
 const H3 = styled.h3`
   ${Main.Kohoan} & {
     ${fontStyle(kohoan)}
-    ${horizontalSpacing.text['kohoan'].innerMerged}
-    ${horizontalSpacing.text['kohoan'].outer}
+    ${setHorizontalSpace('text', kohoan).innerMerged}
+    ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
     ${fontStyle(ryoanji)}
-    ${horizontalSpacing.text['ryoanji'].innerMerged}
-    ${horizontalSpacing.text['ryoanji'].outer}
+    ${setHorizontalSpace('text', ryoanji).innerMerged}
+    ${setHorizontalSpace('text', ryoanji).outer}
   }
 `;
 

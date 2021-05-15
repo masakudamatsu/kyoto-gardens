@@ -6,17 +6,17 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
   ${Main.Kohoan} & {
-    ${horizontalSpacing.figure['ryoanji'].innerMerged}
-    ${horizontalSpacing.figure['ryoanji'].outer}
+    ${setHorizontalSpace('figure', ryoanji).innerMerged}
+    ${setHorizontalSpace('figure', ryoanji).outer}
   }
   ${Main.Ryoanji} & {
-    ${horizontalSpacing.figure['ryoanji'].innerMerged}
-    ${horizontalSpacing.figure['ryoanji'].outer}
+    ${setHorizontalSpace('figure', ryoanji).innerMerged}
+    ${setHorizontalSpace('figure', ryoanji).outer}
   }
 `;
 

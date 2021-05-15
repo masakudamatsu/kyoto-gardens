@@ -5,7 +5,7 @@ import Main from 'src/blocks/Main';
 
 import {breakpoint} from 'src/utils/designSpec';
 import {h1FontStyle} from 'src/utils/h1FontStyle';
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';
@@ -20,7 +20,7 @@ import {ryoanji} from 'src/utils/specRyoanji';
 const H1 = styled.h1`
   ${Main.Ryoanji} & {
     ${h1FontStyle.ryoanji}
-    ${horizontalSpacing.text['ryoanji'].inner}
+    ${setHorizontalSpace('text', ryoanji).inner}
   }
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ H1.RockGarden = styled.span`
 
 H1.Wrapper = styled.div`
   ${Main.Ryoanji} & {
-    ${horizontalSpacing.text['ryoanji'].outer}
+    ${setHorizontalSpace('text', ryoanji).outer}
     background-color: ${ryoanji.h1.backgroundColor.mobile};
     background-image: ${ryoanji.h1.backgroundImage.mobile};
     color: ${ryoanji.h1.color.mobile};

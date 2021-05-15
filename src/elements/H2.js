@@ -5,7 +5,7 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {horizontalSpacing} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
 import Main from 'src/blocks/Main';
 
 function fontStyle(spec) {
@@ -39,11 +39,11 @@ function backgroundStyle(spec) {
 const defaultStyle = css`
   ${Main.Kohoan} & {
     ${fontStyle(kohoan)}
-    ${horizontalSpacing.text['kohoan'].inner}
+    ${setHorizontalSpace('text', kohoan).inner}
   }
   ${Main.Ryoanji} & {
     ${fontStyle(ryoanji)}
-    ${horizontalSpacing.text['ryoanji'].inner}
+    ${setHorizontalSpace('text', ryoanji).inner}
   }
 `;
 
@@ -68,11 +68,11 @@ const H2Style = styled.h2`
 H2Style.Wrapper = styled.div`
   ${Main.Kohoan} & {
     ${backgroundStyle(kohoan)}
-    ${horizontalSpacing.text['kohoan'].outer}
+    ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
     ${backgroundStyle(ryoanji)}
-    ${horizontalSpacing.text['ryoanji'].outer}
+    ${setHorizontalSpace('text', ryoanji).outer}
   }
 `;
 
