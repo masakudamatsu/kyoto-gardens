@@ -12,16 +12,6 @@ export function xHeight(screenWidth = 'mobile') {
 
 export const scale = 5 / 3;
 
-const cormorantGaramond = {
-  fontFamily: "'Cormorant Garamond', 'Times New Roman', serif",
-  fontWeight: 600,
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 398,
-    capHeight: 633,
-  },
-};
-
 export function setSpace(screenWidth, lineHeightRatio) {
   if (screenWidth !== 'mobile' && screenWidth !== 'desktop') {
     throw new Error(
@@ -56,38 +46,4 @@ export function setSpace(screenWidth, lineHeightRatio) {
 export const breakpoint = {
   // floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`, // merged to the sideMargin breakpoint
   fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
-};
-
-/* *********  Koho-an   ********** */
-
-export const libreBaskerville = {
-  fontFamily: "'Libre Baskerville', 'Verdana', serif", // Verdana is sans-serif, but its letter height and width matches a lot closer than Georgia, Trebuchet, or Times
-  fontWeight: 400,
-  fontMetrics: {
-    unitsPerEm: 1000,
-    xHeight: 535,
-    capHeight: 775,
-  }, // measured by myself
-};
-
-export const kohoan = {
-  paragraph: {
-    mobile: {
-      ...libreBaskerville,
-      xHeight: xHeight(),
-      lineHeightRatio: {
-        xHeight: 2,
-        betweenLines: 5,
-      },
-    },
-  },
-};
-
-kohoan.paragraph.desktop = {
-  ...kohoan.paragraph.mobile,
-  xHeight: xHeight('desktop'),
-  lineHeightRatio: {
-    xHeight: 4,
-    betweenLines: 11,
-  },
 };
