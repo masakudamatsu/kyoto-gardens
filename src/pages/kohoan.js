@@ -1341,22 +1341,24 @@ export default function Kohoan() {
             </P>
             <Spacer.TextLineToBox />
             <FigureWithMargin>
-              <ImageWithPlaceholder
-                src="/kohoan/kohoan-floor-plan.png"
-                width={745}
-                height={700}
-              />
+              <FigureWithMargin.Border>
+                <ImageWithPlaceholder
+                  src="/kohoan/kohoan-floor-plan.png"
+                  width={745}
+                  height={700}
+                />
 
-              <FigCaption>
-                Plan of Koho-an Temple with the indication of how this article
-                walked you through{' '}
-                <Span.Source>
-                  (Adapted from{' '}
-                  <a href="http://www.pauch.com/kss/g063.html">
-                    Yamaguchi 2012)
-                  </a>
-                </Span.Source>
-              </FigCaption>
+                <FigCaption>
+                  Plan of Koho-an Temple with the indication of how this article
+                  walked you through{' '}
+                  <Span.Source>
+                    (Adapted from{' '}
+                    <a href="http://www.pauch.com/kss/g063.html">
+                      Yamaguchi 2012)
+                    </a>
+                  </Span.Source>
+                </FigCaption>
+              </FigureWithMargin.Border>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
