@@ -1,23 +1,33 @@
 import {css} from 'styled-components';
-import {color} from 'src/utils/specColor';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 const circleDiameter = 3.5;
+const lightWidth = 0.5;
 const concentricCircle = (scale = 1) => {
+  // prettier-ignore
   return `
-    ${color.imagePlaceholder} ${12.5 * scale}%, white ${12.5 * scale}%, 
-    white ${25 * scale}%, ${color.imagePlaceholder} ${25 * scale}%, 
-    ${color.imagePlaceholder} ${37.5 * scale}%, white ${37.5 * scale}%, 
-    white ${50 * scale}%, ${color.imagePlaceholder} ${50 * scale}%, 
-    ${color.imagePlaceholder} ${62.5 * scale}%, white ${62.5 * scale}%, 
-    white ${75 * scale}%, ${color.imagePlaceholder} ${75 * scale}%, 
-    ${color.imagePlaceholder} ${87.5 * scale}%, white ${87.5 * scale}%, 
-    white ${100 * scale}%, transparent ${100 * scale}%, 
+    ${kohoan.background.backgroundColor} ${25 * scale}%, 
+    ${kohoan.background.patternColor} ${(31.25 - lightWidth /2) * scale}%, 
+    ${kohoan.background.patternColor} ${(31.25 + lightWidth / 2) * scale}%, 
+    ${kohoan.background.backgroundColor} ${37.5 * scale}%, 
+    ${kohoan.background.backgroundColor} ${50 * scale}%, 
+    ${kohoan.background.patternColor} ${(56.25 - lightWidth /2) * scale}%, 
+    ${kohoan.background.patternColor} ${(56.25 + lightWidth / 2) * scale}%, 
+    ${kohoan.background.backgroundColor} ${62.5 * scale}%, 
+    ${kohoan.background.backgroundColor} ${75 * scale}%, 
+    ${kohoan.background.patternColor} ${(81.25 - lightWidth / 2) * scale}%, 
+    ${kohoan.background.patternColor} ${(81.25 + lightWidth / 2) * scale}%,
+    ${kohoan.background.backgroundColor} ${87.5 * scale}%, 
+    ${kohoan.background.backgroundColor} ${100 * scale}%, 
+    transparent ${100 * scale}%, 
     transparent
   `;
 };
+
 export const seigaihaPattern = css`
-  background-color: ${color.imagePlaceholder}; /* fall back for Opera Mini */
+  background-color: ${kohoan.background
+    .backgroundColor}; /* fall back for Opera Mini */
   background-image: radial-gradient(
       circle farthest-side at 50% 150%,
       ${concentricCircle(2 / 3)}

@@ -34,8 +34,8 @@ export const kohoan = {
   description:
     'Koho-an Temple in Kyoto is a 17th-century masterpiece of spatial design, seemingly integrating architecture with gardens to take the visitor to an imaginary boat trip at sunset.',
   background: {
-    backgroundColor: background,
-    patternColor: onBackground,
+    backgroundColor: '#111',
+    patternColor: '#7c7c7c', // 4.52 * #111
   },
   article: {
     // This sets the default for all the other elements below
