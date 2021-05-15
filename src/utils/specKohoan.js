@@ -326,8 +326,8 @@ export const kohoan = {
       desktop: 7, // 15.5 - article.ascender.desktop
     },
     baselinePosition: {
-      mobile: 17,
-      desktop: 21,
+      mobile: 16,
+      desktop: 20,
     },
   },
   figure: {

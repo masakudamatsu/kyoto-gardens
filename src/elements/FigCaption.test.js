@@ -22,7 +22,7 @@ describe('renders UI correctly', () => {
       .Main__Kohoan-sc-126eniy-2 .c0 a:visited {
         background: #9c938f;
         background: linear-gradient( to bottom,currentColor 100%,currentColor );
-        background-position: 0 1.125rem;
+        background-position: 0 1.0625rem;
         background-repeat: no-repeat;
         background-size: 100% 1px;
         color: inherit;
@@ -111,7 +111,7 @@ describe('renders UI correctly', () => {
         .Main__Kohoan-sc-126eniy-2 .c0 a:visited {
           background: #9c938f;
           background: linear-gradient( to bottom,currentColor 100%,currentColor );
-          background-position: 0 1.375rem;
+          background-position: 0 1.3125rem;
           background-repeat: no-repeat;
           background-size: 100% 1px;
           color: inherit;
