@@ -6,7 +6,7 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
-import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/designSpec';
 
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`

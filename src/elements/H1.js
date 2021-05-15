@@ -5,7 +5,7 @@ import Main from 'src/blocks/Main';
 
 import {breakpoint} from 'src/utils/designSpec';
 import {h1FontStyle} from 'src/utils/h1FontStyle';
-import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {ryoanji} from 'src/utils/specRyoanji';

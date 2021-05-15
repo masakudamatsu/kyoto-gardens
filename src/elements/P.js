@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
 
-import {setHorizontalSpace} from 'src/utils/horizontalSpacing';
+import {setHorizontalSpace} from 'src/utils/designSpec';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
