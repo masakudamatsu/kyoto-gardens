@@ -321,6 +321,10 @@ export const kohoan = {
       };
     },
     textAlign: 'right', // TODO: Dry this code to share with other pages
+    descender: {
+      mobile: 5, // 10.5 - article.ascender.mobile
+      desktop: 7, // 15.5 - article.ascender.desktop
+    },
     baselinePosition: {
       mobile: 17,
       desktop: 21,

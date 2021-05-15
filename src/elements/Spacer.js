@@ -59,6 +59,28 @@ function spaceBoxLineToText(spec, image = false) {
 
 ////////////////////////////////////////////
 
+Spacer.BoxParagraphToBox = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceBoxParagraphToBox(kohoan)}
+  }
+`;
+
+function spaceBoxParagraphToBox(spec) {
+  return css`
+    height: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenParagraphs,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      height: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
+          .betweenParagraphs,
+      )};
+    }
+  `;
+}
+
+////////////////////////////////////////////
+
 Spacer.BoxParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
     ${spaceBoxParagraphToText(kohoan)}
@@ -78,6 +100,55 @@ function spaceBoxParagraphToText(spec) {
       height: ${remify(
         setSpace('desktop', spec.article.lineHeightRatio.desktop)
           .betweenParagraphs - spec.article.ascender.desktop,
+      )};
+    }
+  `;
+}
+
+////////////
+Spacer.CaptionLineToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceCaptionLineToText(kohoan)}
+  }
+`;
+
+/////////////
+Spacer.CaptionParagraphToText = styled(Spacer)`
+  ${Main.Kohoan} & {
+    ${spaceCaptionParagraphToText(kohoan)}
+  }
+`;
+function spaceCaptionLineToText(spec) {
+  return css`
+    height: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
+        spec.figCaption.descender.mobile -
+        spec.article.ascender.mobile,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      height: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
+          spec.figCaption.descender.desktop -
+          spec.article.ascender.desktop,
+      )};
+    }
+  `;
+}
+
+function spaceCaptionParagraphToText(spec) {
+  return css`
+    height: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile)
+        .betweenParagraphs -
+        spec.figCaption.descender.mobile -
+        spec.article.ascender.mobile,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      height: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
+          .betweenParagraphs -
+          spec.figCaption.descender.desktop -
+          spec.article.ascender.desktop,
       )};
     }
   `;

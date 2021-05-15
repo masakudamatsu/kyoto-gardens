@@ -7,29 +7,29 @@ const mockProps = {};
 
 describe('renders UI correctly', () => {
   test('BoxLineToText without prop', () => {
-    const {container} = render(<Spacer.BoxParagraphToText {...mockProps} />);
+    const {container} = render(<Spacer.BoxLineToText {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        height: 1.4271rem;
+        height: 0.4804rem;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        height: 1.7448rem;
+        height: 0.5457rem;
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
-          height: 1.9297rem;
+          height: 0.6509rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
-          height: 2.3516rem;
+          height: 0.761rem;
         }
       }
 
@@ -64,6 +64,30 @@ describe('renders UI correctly', () => {
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 0.011rem;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
+  test('BoxParagraphToBox', () => {
+    const {container} = render(<Spacer.BoxParagraphToBox {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 1.7708rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 2.4609rem;
         }
       }
 
@@ -122,6 +146,56 @@ describe('renders UI correctly', () => {
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           height: 1.1047rem;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
+  test('CaptionLineToText', () => {
+    const {container} = render(<Spacer.CaptionLineToText {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 0.4063rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 0.5078rem;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
+  test('CaptionParagraphToText', () => {
+    const {container} = render(
+      <Spacer.CaptionParagraphToText {...mockProps} />,
+    );
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 1.1146rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 1.4922rem;
         }
       }
 
@@ -199,7 +273,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="Spacer__TextParagraphToBox-sc-1ug26uc-6 c0"
+          class="Spacer__TextParagraphToBox-sc-1ug26uc-9 c0"
         />
       </div>
     `);
