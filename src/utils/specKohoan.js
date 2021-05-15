@@ -131,7 +131,7 @@ export const kohoan = {
     },
   },
   source: {
-    color: onSurfaceShade,
+    color: color.onSurfaceShade.kohoan,
   },
   h1: {
     backgroundColor: {
@@ -300,14 +300,14 @@ export const kohoan = {
     },
   },
   figCaption: {
-    ...cormorantSC,
+    ...playfairDisplaySC,
     get fontSize() {
       return {
         mobile: getFontSizeFromX(xHeight('mobile'), this.fontMetrics),
         desktop: getFontSizeFromX(xHeight('desktop'), this.fontMetrics),
       };
     },
-    fontWeight: 600,
+    fontWeight: 400,
     get lineHeight() {
       return {
         mobile: getLineHeightFromRatio(

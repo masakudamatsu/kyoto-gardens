@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
+
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 const Span = styled.span`
@@ -12,6 +14,9 @@ Span.NoWrap = styled.span`
 `;
 
 Span.Source = styled.span`
+  ${Main.Kohoan} & {
+    color: ${kohoan.source.color};
+  }
   ${Main.Ryoanji} & {
     color: ${ryoanji.source.color};
   }

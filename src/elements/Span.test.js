@@ -42,6 +42,10 @@ describe('Props work as intended', () => {
   test('Source', () => {
     const {container} = render(<Span.Source />);
     expect(container).toMatchInlineSnapshot(`
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        color: rgb(200,200,200);
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         color: rgb(100,100,100);
       }

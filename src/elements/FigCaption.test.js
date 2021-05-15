@@ -9,6 +9,51 @@ describe('renders UI correctly', () => {
   test('FigCaption', () => {
     const {container} = render(<FigCaption {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        font-family: 'Playfair Display SC',serif;
+        font-size: 0.8709rem;
+        font-weight: 400;
+        line-height: 1.525;
+        margin-right: 0px;
+        text-align: right;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 a:link,
+      .Main__Kohoan-sc-126eniy-2 .c0 a:visited {
+        background: #9c938f;
+        background: linear-gradient( to bottom,currentColor 100%,currentColor );
+        background-position: 0 1.125rem;
+        background-repeat: no-repeat;
+        background-size: 100% 1px;
+        color: inherit;
+        cursor: pointer;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 a:focus,
+      .Main__Kohoan-sc-126eniy-2 .c0 a:hover {
+        background: #9c938f;
+        outline: none;
+        text-shadow: none;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 a:active {
+        background: none;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 a:visited:focus,
+      .Main__Kohoan-sc-126eniy-2 .c0 a:visited:hover {
+        background: #9c938f;
+        outline: none;
+        text-shadow: none;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 a:visited:active {
+        background: none;
+      }
+
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 1.1279rem;
@@ -52,6 +97,51 @@ describe('renders UI correctly', () => {
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:active {
         background: none;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          font-size: 1.0758rem;
+          line-height: 1.6775;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 a:link,
+        .Main__Kohoan-sc-126eniy-2 .c0 a:visited {
+          background: #9c938f;
+          background: linear-gradient( to bottom,currentColor 100%,currentColor );
+          background-position: 0 1.375rem;
+          background-repeat: no-repeat;
+          background-size: 100% 1px;
+          color: inherit;
+          cursor: pointer;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+        }
+
+        .Main__Kohoan-sc-126eniy-2 .c0 a:focus,
+        .Main__Kohoan-sc-126eniy-2 .c0 a:hover {
+          background: #9c938f;
+          outline: none;
+          text-shadow: none;
+        }
+
+        .Main__Kohoan-sc-126eniy-2 .c0 a:active {
+          background: none;
+        }
+
+        .Main__Kohoan-sc-126eniy-2 .c0 a:visited:focus,
+        .Main__Kohoan-sc-126eniy-2 .c0 a:visited:hover {
+          background: #9c938f;
+          outline: none;
+          text-shadow: none;
+        }
+
+        .Main__Kohoan-sc-126eniy-2 .c0 a:visited:active {
+          background: none;
+        }
       }
 
       @media only screen and (min-width:728px) {
