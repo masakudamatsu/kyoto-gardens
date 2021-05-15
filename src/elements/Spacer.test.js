@@ -6,8 +6,42 @@ import Spacer from './Spacer';
 const mockProps = {};
 
 describe('renders UI correctly', () => {
-  test('BoxLineToText', () => {
-    const {container} = render(<Spacer.BoxLineToText {...mockProps} />);
+  test('BoxLineToText without prop', () => {
+    const {container} = render(<Spacer.BoxParagraphToText {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        width: 100%;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        height: 1.4271rem;
+      }
+
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
+        height: 1.7448rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          height: 1.9297rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
+          height: 2.3516rem;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
+  test('BoxLineToText with image prop', () => {
+    const {container} = render(<Spacer.BoxLineToText image />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         width: 100%;

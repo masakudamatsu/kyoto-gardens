@@ -202,7 +202,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 There is no stone at the center of gaze when I look straight
                 ahead. The landscape composition is split between two groups of
@@ -223,7 +223,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 Next, I turn my head to the left while sitting in the same
                 viewpoint. There is again nothing in the center of my vision.
@@ -242,7 +242,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </Figure>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 Finally, I turn my head to the right while still staying at the
                 same viewpoint. There are three groups of rocks, but none of
@@ -273,7 +273,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 The middle-left cluster consists of two rocks. There is no
                 center. The right elongated one dominates, but it is located to
@@ -292,7 +292,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 The middle cluster consists of three rocks. One on the left
                 dominates, but it is again not located at the center but to the
@@ -311,7 +311,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 The middle-right cluster consists of two rocks, each in a
                 peculiar shape. But neither is emphasized more than the other.
@@ -329,7 +329,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 The group of rocks furthest to the the left is the most
                 magnificent composition in this garden if seen from the front of
@@ -352,7 +352,7 @@ export default function Ryoanji() {
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText />
+              <Spacer.BoxLineToText image />
               <P>
                 The group of rocks furthest to the right is made of three rocks.
                 One large lying stone is flanked by two flat stones. This

@@ -1,4 +1,6 @@
 import styled, {css} from 'styled-components';
+import PropTypes from 'prop-types';
+
 import Main from 'src/blocks/Main';
 
 import {index} from 'src/utils/specIndex';
@@ -15,27 +17,41 @@ const Spacer = styled.div`
 
 Spacer.BoxLineToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceBoxLineToText(kohoan)}
+    ${({image}) => spaceBoxLineToText(kohoan, image)}
   }
   ${Main.Ryoanji} & {
-    ${spaceBoxLineToText(ryoanji)}
+    ${({image}) => spaceBoxLineToText(ryoanji, image)}
   }
 `;
 
-function spaceBoxLineToText(spec) {
+Spacer.BoxLineToText.propTypes = {
+  image: PropTypes.bool,
+};
+
+function spaceBoxLineToText(spec, image = false) {
+  const bugFix = image
+    ? {
+        // see issue #29
+        mobile: spec.figure.spaceBelowByBug.mobile,
+        desktop: spec.figure.spaceBelowByBug.desktop,
+      }
+    : {
+        mobile: 0,
+        desktop: 0,
+      };
   return css`
     height: ${remify(
       setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
         spec.article.ascender.mobile -
         spec.article.capToX.mobile -
-        spec.figure.spaceBelowByBug.mobile, // see issue #29
+        bugFix.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
         setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
           spec.article.ascender.desktop -
           spec.article.capToX.desktop -
-          spec.figure.spaceBelowByBug.desktop, // see issue #29
+          bugFix.desktop,
       )};
     }
   `;
