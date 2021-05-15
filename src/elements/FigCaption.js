@@ -22,7 +22,7 @@ function fontStyle(spec) {
     }
     & a {
       ${cssLinkText({
-        backgroundColor: spec.article.backgroundColor,
+        backgroundColor: 'transparent',
         backgroundColorOnHover: spec.link.backgroundOnHover,
         linkTextColor: spec.link.color,
         baselinePosition: spec.figCaption.baselinePosition.mobile,
@@ -31,7 +31,7 @@ function fontStyle(spec) {
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
-          backgroundColor: spec.article.backgroundColor,
+          backgroundColor: 'transparent',
           backgroundColorOnHover: spec.link.backgroundOnHover,
           linkTextColor: spec.link.color,
           baselinePosition: spec.figCaption.baselinePosition.desktop,

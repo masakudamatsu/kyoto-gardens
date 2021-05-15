@@ -3,7 +3,7 @@ export const color = {
   onBackground: '#ffffff',
   surface: {
     index: '#ffffff',
-    kohoan: '#6f6662',
+    kohoan: 'linear-gradient(to bottom, #636363, #2C2C2C)', // #636363 x 4.54 = link.color, #000 * 1.5 = #2c2c2c
     ryoanji: '#ffffff',
   },
   onSurface: {

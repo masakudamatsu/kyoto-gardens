@@ -14,7 +14,7 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        background-color: #6f6662;
+        background-image: linear-gradient(to bottom,#636363,#2C2C2C);
         color: #ffffff;
         font-family: 'Libre Baskerville','Verdana',serif;
         font-size: 0.993rem;
@@ -26,7 +26,7 @@ describe('Parent chnages UI by prop value', () => {
       .c1 a:link,
       .c1 a:visited {
         background: #9c938f;
-        background: linear-gradient( to bottom,currentColor 100%,currentColor );
+        background: linear-gradient( to bottom,rgba(255,255,255,0.8) 100%,rgba(255,255,255,0.8) );
         background-position: 0 1.0625rem;
         background-repeat: no-repeat;
         background-size: 100% 1px;
@@ -34,7 +34,7 @@ describe('Parent chnages UI by prop value', () => {
         cursor: pointer;
         -webkit-text-decoration: none;
         text-decoration: none;
-        text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+        text-shadow: 0.03em 0 trasparent,-0.03em 0 trasparent,0 0.03em trasparent,0 -0.03em trasparent;
       }
 
       .c1 a:focus,
@@ -124,7 +124,7 @@ describe('Parent chnages UI by prop value', () => {
           cursor: pointer;
           -webkit-text-decoration: none;
           text-decoration: none;
-          text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+          text-shadow: 0.03em 0 transparent,-0.03em 0 transparent,0 0.03em transparent,0 -0.03em transparent;
         }
 
         .c1 a:focus,

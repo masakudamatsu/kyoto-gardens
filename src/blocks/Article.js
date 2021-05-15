@@ -12,7 +12,7 @@ import Main from 'src/blocks/Main';
 const Article = styled.article`
   margin: 0 auto;
   ${Main.Kohoan} & {
-    background-color: ${kohoan.article.backgroundColor};
+    background-image: ${kohoan.article.backgroundImage};
     color: ${kohoan.article.color};
     font-family: ${kohoan.article.fontFamily};
     font-size: ${remify(kohoan.article.fontSize.mobile)};
@@ -26,16 +26,17 @@ const Article = styled.article`
   }
   & a {
     ${cssLinkText({
-      backgroundColor: kohoan.article.backgroundColor,
+      backgroundColor: 'trasparent', // disable text-shadow
       backgroundColorOnHover: kohoan.link.backgroundOnHover,
       linkTextColor: kohoan.link.color,
+      underlineColor: kohoan.link.underlineColor,
       baselinePosition: kohoan.article.baselinePosition.mobile,
       lineWidth: kohoan.link.lineWidth,
       spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
     })}
     @media only screen and ${breakpoint.fontSize} {
       ${cssLinkText({
-        backgroundColor: kohoan.article.backgroundColor,
+        backgroundColor: 'transparent',
         backgroundColorOnHover: kohoan.link.backgroundOnHover,
         linkTextColor: kohoan.link.color,
         baselinePosition: kohoan.article.baselinePosition.desktop,

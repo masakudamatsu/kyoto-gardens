@@ -39,7 +39,7 @@ export const kohoan = {
   },
   article: {
     // This sets the default for all the other elements below
-    backgroundColor: color.surface.kohoan,
+    backgroundImage: color.surface.kohoan,
     color: color.onSurface.kohoan,
     ...libreBaskerville, // {fontFamily, fontMetrics}
     get fontSize() {
@@ -100,6 +100,7 @@ export const kohoan = {
   link: {
     backgroundOnHover: color.onSurfaceSecondShade.kohoan,
     color: 'inherit',
+    underlineColor: 'rgba(255, 255, 255, 0.8)',
     lineWidth: 1,
     spaceBelowBaseline: {
       mobile: 1,

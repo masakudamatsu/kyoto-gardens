@@ -29,7 +29,7 @@ describe('renders UI correctly', () => {
         cursor: pointer;
         -webkit-text-decoration: none;
         text-decoration: none;
-        text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+        text-shadow: 0.03em 0 transparent,-0.03em 0 transparent,0 0.03em transparent,0 -0.03em transparent;
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 a:focus,
@@ -74,7 +74,7 @@ describe('renders UI correctly', () => {
         cursor: pointer;
         -webkit-text-decoration: none;
         text-decoration: none;
-        text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+        text-shadow: 0.03em 0 transparent,-0.03em 0 transparent,0 0.03em transparent,0 -0.03em transparent;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
@@ -118,7 +118,7 @@ describe('renders UI correctly', () => {
           cursor: pointer;
           -webkit-text-decoration: none;
           text-decoration: none;
-          text-shadow: 0.03em 0 #6f6662,-0.03em 0 #6f6662,0 0.03em #6f6662,0 -0.03em #6f6662;
+          text-shadow: 0.03em 0 transparent,-0.03em 0 transparent,0 0.03em transparent,0 -0.03em transparent;
         }
 
         .Main__Kohoan-sc-126eniy-2 .c0 a:focus,
@@ -163,7 +163,7 @@ describe('renders UI correctly', () => {
           cursor: pointer;
           -webkit-text-decoration: none;
           text-decoration: none;
-          text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+          text-shadow: 0.03em 0 transparent,-0.03em 0 transparent,0 0.03em transparent,0 -0.03em transparent;
         }
 
         .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
