@@ -121,7 +121,13 @@ export default function Kohoan() {
               side of the bridge are errected at an angle, rather than straight
               up. Second, the stone pavement beyond the gate does not form a
               straight line from the bridge: it slightly bends rightwards{' '}
-              <Span.Source>(as pointed out by Tanaka 2012, p. 126)</Span.Source>
+              <Span.Source>
+                (as pointed out by{' '}
+                <a href="https://www.amazon.co.jp/gp/product/4091035493/">
+                  Tanaka 2012
+                </a>
+                , p. 126)
+              </Span.Source>
               .
             </P>
             <Spacer.TextParagraphToText />
