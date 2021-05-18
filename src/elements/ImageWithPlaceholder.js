@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 import {useState} from 'react';
 import Image from 'next/image';
 
@@ -9,11 +11,24 @@ import P from 'src/elements/P';
 import Span from 'src/elements/Span';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
+import remify from 'src/utils/remify';
 
 const Wrapper = styled.div`
   position: relative;
 `; // for some reason, this element adds 12px to the height...
+
+Wrapper.Kohoan = styled(Wrapper)`
+  ${({width}) => `
+    @media only screen and (min-width: ${width + 1}px) {
+      padding: 0 ${remify(
+        setSpace('mobile', kohoan.article.lineHeightRatio.mobile).sideMargin,
+      )};
+    }
+    `}
+  ${setHorizontalSpace('figure', kohoan).innerMerged}
+  ${setHorizontalSpace('figure', kohoan).outer}
+`;
 
 const Placeholder = styled(P)`
   align-items: center;
@@ -44,7 +59,7 @@ const ImageStyled = styled(({loaded, ...props}) => <Image {...props} />)`
   transition: opacity 500ms linear;
 `; // https://github.com/styled-components/styled-components/issues/1198#issuecomment-425650423
 
-const ImageWithPlaceholder = ({src, alt, ...props}) => {
+const ImageWithPlaceholder = ({src, alt, width, height, kohoan, ...props}) => {
   // https://codebrahma.com/how-to-smoothly-render-images-in-react-app/
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isSrcValid, setIsSrcValid] = useState(!!src);
@@ -54,19 +69,42 @@ const ImageWithPlaceholder = ({src, alt, ...props}) => {
       {alt} <Span smallcaps>(We’re sorry for failing to load the image.)</Span>
     </Placeholder>
   );
-  return (
-    <Wrapper data-testid="image-wrapper">
-      <ImageStyled
-        loaded={imageLoaded}
-        onError={() => setIsSrcValid(false)}
-        onLoad={() => setImageLoaded(true)}
-        src={src}
-        alt={alt}
-        {...props}
-      />
-      {imageLoaded ? null : isSrcValid ? loadingMessage : errorMessage}
-    </Wrapper>
+  const imageStyled = (
+    <ImageStyled
+      loaded={imageLoaded}
+      onError={() => setIsSrcValid(false)}
+      onLoad={() => setImageLoaded(true)}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      {...props}
+    />
   );
+  const placeholder = imageLoaded
+    ? null
+    : isSrcValid
+    ? loadingMessage
+    : errorMessage;
+  if (kohoan) {
+    return (
+      <Wrapper.Kohoan width={width} data-testid="image-wrapper">
+        {imageStyled}
+        {placeholder}
+      </Wrapper.Kohoan>
+    );
+  } else {
+    return (
+      <Wrapper width={width} data-testid="image-wrapper">
+        {imageStyled}
+        {placeholder}
+      </Wrapper>
+    );
+  }
+};
+
+ImageWithPlaceholder.propTypes = {
+  kohoan: PropTypes.bool,
 };
 
 export default ImageWithPlaceholder;

@@ -13,32 +13,9 @@ describe('renders UI correctly', () => {
         overflow: hidden;
       }
 
-      .Main__Kohoan-sc-126eniy-2 .c0 {
-        margin: 0 auto;
-        max-width: 38.057rem;
-      }
-
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         margin: 0 auto;
         max-width: 38.9424rem;
-      }
-
-      @media only screen and (min-width:728px) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          max-width: 47.5584rem;
-        }
-      }
-
-      @media only screen and (min-width:30.7948rem) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          padding: 0 1.7708rem;
-        }
-      }
-
-      @media only screen and (min-width:728px) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          padding: 0 2.4609rem;
-        }
       }
 
       @media only screen and (min-width:728px) {

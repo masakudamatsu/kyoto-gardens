@@ -11,8 +11,6 @@ import {setHorizontalSpace} from 'src/utils/designSpec';
 // prettier-ignore
 const FigureWithMargin = styled(Figure)`
   ${Main.Kohoan} & {
-    ${setHorizontalSpace('figure', kohoan).innerMerged}
-    ${setHorizontalSpace('figure', kohoan).outer}
   }
   ${Main.Ryoanji} & {
     ${setHorizontalSpace('figure', ryoanji).innerMerged}

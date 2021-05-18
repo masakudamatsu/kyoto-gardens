@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint, setHorizontalSpace} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
@@ -46,6 +46,8 @@ function fontStyle(spec) {
 const FigCaption = styled.figcaption`
   ${Main.Kohoan} & {
     ${fontStyle(kohoan)}
+    ${setHorizontalSpace('text', kohoan).innerMerged}
+    ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
     ${fontStyle(ryoanji)}

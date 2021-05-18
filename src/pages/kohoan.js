@@ -50,10 +50,11 @@ export default function Kohoan() {
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
       <Main.Kohoan>
-        <Article kohoan style={{backgroundColor: '#', color: '#eee'}}>
+        <Article>
           <H1>Koho-an Temple</H1>
           <Figure>
             <ImageWithPlaceholder
+              kohoan
               src="/kohoan/bosen-garden-view.jpg"
               width={1200}
               height={800}
@@ -81,6 +82,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-moat.jpeg"
                 width={400}
                 height={300}
@@ -100,6 +102,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-frontgate.jpeg"
                 width={640}
                 height={458}
@@ -206,6 +209,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-stone-pavement.jpeg"
                 width={427}
                 height={640}
@@ -244,6 +248,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-inner-entrance.jpeg"
                 width={640}
                 height={480}
@@ -268,6 +273,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-stone-pavement-middle.jpg"
                 width={1260}
                 height={1680}
@@ -286,6 +292,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-stone-pavement-end.jpeg"
                 width={1316}
                 height={2248}
@@ -347,6 +354,7 @@ export default function Kohoan() {
             <Spacer.BoxParagraphToBox />
             <FigureWithMargin belowBoxParagraph>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-entrance.jpeg"
                 width={1280}
                 height={851}
@@ -397,6 +405,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-entrance-roof.png"
                 width={1260}
                 height={1141}
@@ -429,6 +438,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-hall-garden-from-entrance.jpeg"
                 width={1323}
                 height={1803}
@@ -453,6 +463,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-hall-veranda.jpeg"
                 width={270}
                 height={360}
@@ -475,6 +486,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-hall-garden-on-left.jpeg"
                 width={350}
                 height={225}
@@ -520,6 +532,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-main-hall-garden-on-right.jpeg"
                 width={1200}
                 height={800}
@@ -572,6 +585,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/funaoka-yama.jpg"
                 width={800}
                 height={216}
@@ -616,6 +630,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-southwest-garden.jpeg"
                 width={1470}
                 height={1126}
@@ -652,6 +667,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/kohoan-tea-house-garden.jpeg"
                 width={1143}
                 height={1428}
@@ -788,6 +804,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/bosen-entrance.png"
                 width={509}
                 height={640}
@@ -831,6 +848,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/hiun-kaku-water-entrance.jpg"
                   width={570}
                   height={380}
@@ -881,6 +899,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/nijiri-guchi.png"
                   width={1000}
                   height={419}
@@ -920,6 +939,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/bosen-interior.jpeg"
                 width={1200}
                 height={805}
@@ -956,6 +976,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/tokonoma.jpg"
                   width={640}
                   height={427}
@@ -992,6 +1013,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/bosen-chozubachi.jpg"
                 width={256}
                 height={368}
@@ -1017,6 +1039,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/tsuyu-musubi.png"
                   width={217}
                   height={300}
@@ -1083,6 +1106,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/moon-rabbit.png"
                   width={579}
                   height={234}
@@ -1108,6 +1132,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/mochi-tsuki.jpeg"
                   width={570}
                   height={427}
@@ -1146,6 +1171,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <Figure>
               <ImageWithPlaceholder
+                kohoan={false} // Emphasis
                 src="/kohoan/bosen-garden-view.jpg"
                 width={1200}
                 height={800}
@@ -1200,6 +1226,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/bosen-garden-view-zoomed.jpg"
                 width={570}
                 height={360}
@@ -1236,6 +1263,7 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <ImageWithPlaceholder
+                kohoan
                 src="/kohoan/bosen-interior.jpeg"
                 width={1200}
                 height={805}
@@ -1310,6 +1338,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/osawa-pond.jpg"
                   width={350}
                   height={240}
@@ -1349,6 +1378,7 @@ export default function Kohoan() {
             <FigureWithMargin>
               <FigureWithMargin.Border>
                 <ImageWithPlaceholder
+                  kohoan
                   src="/kohoan/kohoan-floor-plan.png"
                   width={745}
                   height={700}

@@ -16,6 +16,9 @@ describe('renders UI correctly', () => {
         line-height: 1.525;
         margin-right: 0px;
         text-align: left;
+        margin: 0 auto;
+        max-width: 38.057rem;
+        padding: 0 1.0625rem;
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 a:link,
@@ -141,6 +144,24 @@ describe('renders UI correctly', () => {
 
         .Main__Kohoan-sc-126eniy-2 .c0 a:visited:active {
           background: none;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          max-width: 47.5584rem;
+        }
+      }
+
+      @media only screen and (min-width:30.7948rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 1.7708rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 2.4609rem;
         }
       }
 
