@@ -13,6 +13,7 @@ describe('renders UI correctly', () => {
         font-family: 'Playfair Display SC',serif;
         font-size: 0.8709rem;
         font-weight: 400;
+        font-variant-ligatures: none;
         line-height: 1.525;
         margin-right: 0px;
         text-align: left;
@@ -61,6 +62,7 @@ describe('renders UI correctly', () => {
         font-family: 'Cormorant SC','Times New Roman',serif;
         font-size: 1.1279rem;
         font-weight: 600;
+        font-variant-ligatures: normal;
         line-height: 1.1775;
         margin-right: 5px;
         text-align: right;

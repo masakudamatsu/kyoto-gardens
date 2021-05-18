@@ -322,6 +322,7 @@ export const kohoan = {
       };
     },
     textAlign: 'left',
+    ligature: 'none', // Fix the bug that the fl ligature will be shown in lowercase...
     descender: {
       mobile: 5, // 10.5 - article.ascender.mobile
       desktop: 7, // 15.5 - article.ascender.desktop

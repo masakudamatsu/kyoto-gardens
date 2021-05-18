@@ -13,6 +13,7 @@ function fontStyle(spec) {
     font-family: ${spec.figCaption.fontFamily};
     font-size: ${remify(spec.figCaption.fontSize.mobile)};
     font-weight: ${spec.figCaption.fontWeight};
+    font-variant-ligatures: ${spec.figCaption.ligature || 'normal'};
     line-height: ${spec.figCaption.lineHeight.mobile};
     margin-right: ${spec.figCaption.marginRight || 0}px;
     text-align: ${spec.figCaption.textAlign};
