@@ -18,6 +18,7 @@ import Hr from '../elements/Hr';
 import Spacer from '../elements/Spacer';
 import Span from '../elements/Span';
 import SubSection from '../blocks/SubSection';
+import Youtube from '../blocks/Youtube';
 
 import {kohoan} from 'src/utils/specKohoan';
 
@@ -1294,21 +1295,21 @@ export default function Kohoan() {
             <Spacer.TextLineToBox />
             <FigureWithMargin>
               <FigureWithMargin.Border>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/VQaoRnDjZMw"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <Youtube
+                  height={480}
+                  title="YouTube video showing the reflection of water ripples on the ceiling of Ukimi-do, a structure built on a pond in Nara Park, Japan"
+                  videoId="VQaoRnDjZMw"
+                  width={640}
+                />
                 <FigCaption>
-                  The reflection of water ripples on the ceiling of Ukimi-do on
-                  a pond in Nara Park
+                  The reflection of water ripples on the ceiling of{' '}
+                  <a href="https://narashikanko.or.jp/en/spot/structure/ukimido/">
+                    Ukimi-do
+                  </a>{' '}
+                  on a pond in Nara Park, Japan{' '}
                   <Span.Source>
                     (
-                    <a href="https://www.youtube.com/watch?v=VQaoRnDjZMw">
+                    <a href="https://www.youtube.com/channel/UC1rA6WEl0nLnh-shWDfhb0Q">
                       hallhorns 2010
                     </a>
                     )
