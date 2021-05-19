@@ -55,23 +55,59 @@ export default function Kohoan() {
           <H1>Koho-an Temple</H1>
           <Figure>
             <ImageWithPlaceholder
-              kohoan
+              kohoan={false}
               src="/kohoan/bosen-garden-view.jpg"
               width={1200}
               height={800}
+              alt="A garden view from the inside of Teahouse Bosen at Koho-an Temple"
             />
             <FigCaption>
-              A view of teahouse garden from inside Teahouse Bosen
               <Span.Source>
-                (
+                Image source:{' '}
                 <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
-                  Kyoto Shunju 2020b
+                  Kyoto Shunju (2020b)
                 </a>
-                )
               </Span.Source>
             </FigCaption>
           </Figure>
-
+          <Section>
+            <Spacer.BoxParagraphToText />
+            <P>
+              Koho-an Temple is a hidden gem in Kyoto. It is hidden because it
+              rarely opens its door to the general public (only once in five
+              years or so). It is a gem because its interior and garden design
+              is regarded as the masterpiece of{' '}
+              <a href="https://en.wikipedia.org/wiki/Kobori_Ensh%C5%AB">
+                Kobori Enshu
+              </a>{' '}
+              (<Kanji>小堀遠州</Kanji>), an architect, garden designer, and tea
+              ceremony master (as well as being a samurai lord, or{' '}
+              <a href="https://en.wikipedia.org/wiki/Daimyo">
+                <ForeignPhrase>daimyo</ForeignPhrase>
+              </a>
+              ) in 17th-century Japan.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              In December 2020, I had a precious opportunity to visit Koho-an
+              Temple and attend a little tea ceremony at its teahouse Bosen.
+              Based on this personal experience as well as several accounts of
+              Koho-an Temple's design, I've figured out what Enshu attempted to
+              deliever through his design of Koho-an Temple: it simulates a
+              sailing trip, starting at sunset, to see the full moon reflected
+              on the water surface of{' '}
+              <a href="https://en.wikipedia.org/wiki/Lake_Biwa">Lake Biwa</a>,
+              the ocean-like massive lake in Enshu's hometown.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Koho-an Temple's garden is fully integrated into the building that
+              it surrounds, more than any other Japanese gardens. In this
+              article, I'll take you to a virtual visit to the temple, with
+              pictures mostly collected throughout the web (taking photo wasn't
+              allowed during my visit, except for the entrance garden).
+            </P>
+          </Section>
           <Section>
             <H2>The Front Gate</H2>
             <Spacer.BoxParagraphToText />
