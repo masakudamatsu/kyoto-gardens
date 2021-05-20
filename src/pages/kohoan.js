@@ -59,7 +59,7 @@ export default function Kohoan() {
               src="/kohoan/bosen-garden-view.jpg"
               width={1200}
               height={800}
-              alt="A garden view from the inside of Teahouse Bosen at Koho-an Temple"
+              alt="A garden is picture-framed with a hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below."
             />
             <FigCaption>
               <Span.Source>
@@ -123,6 +123,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-moat.jpeg"
                 width={400}
                 height={300}
+                alt="An empty moat surrounds the walls of Koho-an Temple."
               />
               <FigCaption>
                 The moat around Koho-an Temple{' '}
@@ -143,6 +144,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-frontgate.jpeg"
                 width={640}
                 height={458}
+                alt="A stone bridge is seen in front of the roofed gate with its doors open."
               />
               <FigCaption>
                 The front gate and stone bridge of Koho-an Temple{' '}
@@ -250,6 +252,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-stone-pavement.jpeg"
                 width={427}
                 height={640}
+                alt="A straight stone pavement is made of the patchwork of flat-top stones in various shapes, leading to the back wall of the temple's entrance garden."
               />
               <FigCaption>
                 Stone pavement in the entrance garden of Koho-an Temple{' '}
@@ -289,6 +292,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-inner-entrance.jpeg"
                 width={640}
                 height={480}
+                alt="A branched-out straight stone pavement leads to the inner entrance of the temple's building."
               />
               <FigCaption>
                 The inner entrance of Koho-an Temple{' '}
@@ -314,6 +318,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-stone-pavement-middle.jpg"
                 width={1260}
                 height={1680}
+                alt="The straight stone pavement leads to a pine tree at its end."
               />
               <FigCaption>
                 A view at halfway up of the stone pavement in the entrance
@@ -333,6 +338,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-stone-pavement-end.jpeg"
                 width={1316}
                 height={2248}
+                alt="Flat-top stones are laid out to form a right-angled footpath, turning to the right in front of the pine tree behind which a roofed bench is seen."
               />
               <FigCaption>
                 Stone pavement turns at a right angle in the entrance garden of
@@ -395,6 +401,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-entrance.jpeg"
                 width={1280}
                 height={851}
+                alt="A roofed gate with its doors closed is seen in between pine trees. Seen behind the gate is the top of the gable roof of the temple building."
               />
               <FigCaption>
                 Main Entrance of Koho-an Temple
@@ -446,6 +453,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-entrance-roof.png"
                 width={1260}
                 height={1141}
+                alt="The roof of the gate, when zoomed up, shows the horizontal layers of two materials in different texture alternating one after another"
               />
               <FigCaption>
                 The “armour-thatching” roof of Koho-an Temple’s Main Entrance
@@ -479,6 +487,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-hall-garden-from-entrance.jpeg"
                 width={1323}
                 height={1803}
+                alt="A sand-floored garden is seen through between the wooden pillars of the entrance hall."
               />
               <FigCaption>
                 A view of Koho-an Temple’s Main Hall Front Garden from inside
@@ -504,6 +513,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-hall-veranda.jpeg"
                 width={270}
                 height={360}
+                alt="A wooden veranda streches out to the rear of the main hall with the sand-floored garden seen on the left."
               />
               <FigCaption>
                 The veranda of Koho-an Temple’s Main Hall, viewed from the main
@@ -527,6 +537,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-hall-garden-on-left.jpeg"
                 width={350}
                 height={225}
+                alt="The sand-floored garden is rectangular, sandwiched with a rectangularly-trimmed, long and very low hedge on the near side and a pair of rectangularly-trimmed taller hedges, forming a shape like a very wide staircase, on the far side."
               />
               <FigCaption>
                 Main Hall Front Garden of Koho-an Temple
@@ -573,6 +584,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-main-hall-garden-on-right.jpeg"
                 width={1200}
                 height={800}
+                alt="The sand-floored garden, now seen on the right, is made of red clay sand in the colour of light red-brown."
               />
               <FigCaption>
                 Main Hall Front Garden of Koho-an Temple
@@ -626,6 +638,7 @@ export default function Kohoan() {
                 src="/kohoan/funaoka-yama.jpg"
                 width={800}
                 height={216}
+                alt="A tree-covered, horizontally elongated hill in the midst of concrete buildings in Kyoto City."
               />
               <FigCaption>
                 Funaoka-yama, a hill in northwest Kyoto
@@ -671,6 +684,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-southwest-garden.jpeg"
                 width={1470}
                 height={1126}
+                alt="Small pebbles in dark blue grey are packed on the near side of the garden while a winding sequence of larger flat-top stones leads the way to a garden on the far side."
               />
               <FigCaption>
                 The garden on the southwest of Koho-an Temple’s Main Hall
@@ -708,6 +722,7 @@ export default function Kohoan() {
                 src="/kohoan/kohoan-tea-house-garden.jpeg"
                 width={1143}
                 height={1428}
+                alt="A straight sequence of flat-top stones, embedded in the rectangular tataki floor, leads to a cylindrical stone furniture with a wooden ladle on its top. The dark blue gray pebbles are packed along the straight edge of the tataki floor on the left."
               />
 
               <FigCaption>
@@ -845,6 +860,7 @@ export default function Kohoan() {
                 src="/kohoan/bosen-entrance.png"
                 width={509}
                 height={640}
+                alt="A paper screen hangs from the ceiling to the middle of the teahouse pillars to partly partition a wooden veranda of the teahouse, seen on the right, from the garden with the cylindrical stone hand basin, seen on the left, with the open space below the hanging screen keeping the two spaces together."
               />
 
               <FigCaption>
@@ -889,6 +905,7 @@ export default function Kohoan() {
                   src="/kohoan/hiun-kaku-water-entrance.jpg"
                   width={570}
                   height={380}
+                  alt="An anchored, wooden boat of the size for a couple of people is seen below through the water entrance from the inside of the raised-floor of the pavilion."
                 />
 
                 <FigCaption>
@@ -940,6 +957,7 @@ export default function Kohoan() {
                   src="/kohoan/nijiri-guchi.png"
                   width={1000}
                   height={419}
+                  alt="A person enters a teahouse through nijiri-guchi by crouching down and sticking his/her head and hands into the teahouse first, seen from the front and from the side in a black and white architetural illustration."
                 />
 
                 <FigCaption>
@@ -980,9 +998,10 @@ export default function Kohoan() {
                 src="/kohoan/bosen-interior.jpeg"
                 width={1200}
                 height={805}
+                alt="A tatami-floored spacious room is seen from a low angle, with the right half of the back wall as an alcove displayiing a hanging scroll of calligraphy."
               />
               <FigCaption>
-                The interior of Teahouse Bosen
+                The interior of Teahouse Bosen{' '}
                 <Span.Source>
                   (
                   <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
@@ -1017,6 +1036,7 @@ export default function Kohoan() {
                   src="/kohoan/tokonoma.jpg"
                   width={640}
                   height={427}
+                  alt="A tatami-floored room with its backwall partitioned into the wood-floored alcove on the right and the tatami-floored alcove on the left, the latter of which has a tie beam at a higher position and displays a hanging scroll of calligraphy."
                 />
 
                 <FigCaption>
@@ -1054,8 +1074,8 @@ export default function Kohoan() {
                 src="/kohoan/bosen-chozubachi.jpg"
                 width={256}
                 height={368}
+                alt="The stone hand basin, with a circular hole on top to keep water, has an inscription of two Chinese characters, meaning dew and knot, respectively."
               />
-
               <FigCaption>
                 Tsuyu-musubi hand basin seen from the inside of Bosen
                 <Span.Source>
@@ -1080,6 +1100,7 @@ export default function Kohoan() {
                   src="/kohoan/tsuyu-musubi.png"
                   width={217}
                   height={300}
+                  alt="A pair of strings is each knotted in the shape of an elongated circle, similar to a rabbit's ear, shown in a black-and-white illustration."
                 />
 
                 <FigCaption>
@@ -1147,6 +1168,7 @@ export default function Kohoan() {
                   src="/kohoan/moon-rabbit.png"
                   width={579}
                   height={234}
+                  alt="The moon is shown side by side with an illustration of a white circle of the same size in which a rabbit holding a pestle and sitting in front of a mortal is drawn in black silhouette."
                 />
                 <FigCaption>
                   The Moon and an imaginary rabbit on the moon.{' '}
@@ -1173,6 +1195,7 @@ export default function Kohoan() {
                   src="/kohoan/mochi-tsuki.jpeg"
                   width={570}
                   height={427}
+                  alt="A Japanese lady is holding a wooden pestle of her arm's length that just landed on mochi in a mortal."
                 />
                 <FigCaption>
                   Traditional mochi-making
@@ -1212,6 +1235,7 @@ export default function Kohoan() {
                 src="/kohoan/bosen-garden-view.jpg"
                 width={1200}
                 height={800}
+                alt="The teahouse garden is picture-framed with the hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below. The garden is floored with the pebbles on the near side and an expanse of moss and a hedge on the far side. A stone lantern stands in between. The circular hole on the top of the stone hand basin is seen on the near side."
               />
               <FigCaption>
                 A view of teahouse garden from inside Teahouse Bosen
@@ -1267,10 +1291,11 @@ export default function Kohoan() {
                 src="/kohoan/bosen-garden-view-zoomed.jpg"
                 width={570}
                 height={360}
+                alt="The teahouse garden is picture-framed with the hanging paper screen from above and the wooden veranda from below. The stone hand basin is seen only with its circular hole on top; the rest is hidden beneath the veranda."
               />
               <FigCaption>
                 A zoomed view of the teahouse garden of Koho-an Temple, seen
-                from Teahouse Bosen
+                from Teahouse Bosen{' '}
                 <Span.Source>
                   [Image source: Masaki Miyano via{' '}
                   <a href="http://www.kyobunka.or.jp/tearoom/part_02/index.html">
@@ -1304,9 +1329,10 @@ export default function Kohoan() {
                 src="/kohoan/bosen-interior.jpeg"
                 width={1200}
                 height={805}
+                alt="The tatami-floored spacious room is seen from a low angle with the tokonoma alcove at the back wall and the ceiling rich in wood grains."
               />
               <FigCaption>
-                The interior of Teahouse Bosen (reproduced)
+                The interior of Teahouse Bosen (reproduced){' '}
                 <Span.Source>
                   (
                   <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
@@ -1333,7 +1359,7 @@ export default function Kohoan() {
               <FigureWithMargin.Border>
                 <Youtube
                   height={480}
-                  title="YouTube video showing the reflection of water ripples on the ceiling of Ukimi-do, a structure built on a pond in Nara Park, Japan"
+                  title="Constantly moving reflected light on the ceiling"
                   videoId="VQaoRnDjZMw"
                   width={640}
                 />
@@ -1379,6 +1405,7 @@ export default function Kohoan() {
                   src="/kohoan/osawa-pond.jpg"
                   width={350}
                   height={240}
+                  alt="A dragon-headed, roofed boat, with a dozen of people on board, is sailing on a lake, with the rising full moon seen in the night sky and its reflection on the lake surface."
                 />
                 <FigCaption>
                   The moon-viewing event at Osawa Pond on the Mid-autumn
@@ -1419,6 +1446,7 @@ export default function Kohoan() {
                   src="/kohoan/kohoan-floor-plan.png"
                   width={745}
                   height={700}
+                  alt="An architectural drawing of Koho-an seen from above, with arrows overlaid over the stone bridge and the front gate at bottom-left, the straight stone pavement on the left side, the main hall's veranda on the top side, the narrow teahouse garden between the main hall on the left and the temple's bigger garden on the right, and the veranda and the inside of Teahouse Bosen to the left of the end of the teahouse garden."
                 />
 
                 <FigCaption>
