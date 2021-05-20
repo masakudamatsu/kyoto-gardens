@@ -42,6 +42,10 @@ describe('Props work as intended', () => {
   test('Source', () => {
     const {container} = render(<Span.Source />);
     expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        white-space: nowrap;
+      }
+
       .Main__Kohoan-sc-126eniy-2 .c0 {
         color: rgb(200,200,200);
       }
@@ -52,7 +56,7 @@ describe('Props work as intended', () => {
 
       <div>
         <span
-          class="c0 "
+          class="c0 c1"
         />
       </div>
     `);

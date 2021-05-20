@@ -14,6 +14,7 @@ Span.NoWrap = styled.span`
 `;
 
 Span.Source = styled.span`
+  white-space: nowrap;
   ${Main.Kohoan} & {
     color: ${kohoan.source.color};
   }
