@@ -4,27 +4,25 @@ import PropTypes from 'prop-types';
 import Figure from 'src/blocks/Figure';
 import FigCaption from 'src/elements/FigCaption';
 import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {setHorizontalSpace} from 'src/utils/designSpec';
 
 // prettier-ignore
-const FigureWithMargin = styled(Figure)`
+const FigureWithBorder = styled(Figure)`
   ${Main.Kohoan} & {
+    ${setHorizontalSpace('text', kohoan).innerMerged}
+    ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
-    ${setHorizontalSpace('figure', ryoanji).innerMerged}
-    ${setHorizontalSpace('figure', ryoanji).outer}
   }
 `;
 
-FigureWithMargin.Border = styled.div`
+FigureWithBorder.Border = styled.div`
   ${Main.Kohoan} & {
     ${getBorder(kohoan)}
   }
   ${Main.Ryoanji} & {
-    ${getBorder(ryoanji)}
   }
 `;
 
@@ -34,21 +32,12 @@ function getBorder(spec) {
     border-top: 1px solid ${spec.figure.borderColor};
     padding: ${spec.figure.paddingInsideBorder}px;
     @media only screen and ${spec.breakpoint.sideMargin} {
-      border-left: 1px solid ${spec.figure.borderColor};
-      border-right: 1px solid ${spec.figure.borderColor};
     }
   `;
 }
 
-FigureWithMargin.FigCaption = styled(FigCaption)`
-  ${Main.Kohoan} & {
-    ${setHorizontalSpace('text', kohoan).innerMerged}
-    ${setHorizontalSpace('text', kohoan).outer}
-  }
-`;
+FigureWithBorder.FigCaption = styled(FigCaption)``;
 
-FigureWithMargin.propTypes = {
-  diagram: PropTypes.bool,
-};
+FigureWithBorder.propTypes = {};
 
-export default FigureWithMargin;
+export default FigureWithBorder;

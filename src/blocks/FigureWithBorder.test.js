@@ -1,13 +1,71 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import FigCaption from './FigCaption';
+import FigureWithBorder from './FigureWithBorder';
 
 const mockProps = {};
 
 describe('renders UI correctly', () => {
+  test('Parent', () => {
+    const {container} = render(<FigureWithBorder />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        overflow: hidden;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        margin: 0 auto;
+        max-width: 38.057rem;
+        padding: 0 1.0625rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          max-width: 47.5584rem;
+        }
+      }
+
+      @media only screen and (min-width:30.7948rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 1.7708rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 2.4609rem;
+        }
+      }
+
+      <div>
+        <figure
+          class="c0 c1 "
+        />
+      </div>
+    `);
+  });
+  test('Border', () => {
+    const {container} = render(<FigureWithBorder.Border />);
+    expect(container).toMatchInlineSnapshot(`
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        border-bottom: 1px solid rgb(200,200,200);
+        border-top: 1px solid rgb(200,200,200);
+        padding: 15.564px;
+      }
+
+      @media only screen and (min-width:30.7948rem) {
+
+      }
+
+      <div>
+        <div
+          class="c0 "
+        />
+      </div>
+    `);
+  });
   test('FigCaption', () => {
-    const {container} = render(<FigCaption {...mockProps} />);
+    const {container} = render(<FigureWithBorder.FigCaption />);
     expect(container).toMatchInlineSnapshot(`
       .Main__Kohoan-sc-126eniy-2 .c0 {
         font-family: 'Playfair Display SC',serif;
@@ -193,7 +251,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <figcaption
-          class="c0 "
+          class="c0 FigureWithBorder__FigCaption-oyzkri-2 "
         />
       </div>
     `);

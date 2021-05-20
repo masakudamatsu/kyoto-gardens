@@ -4,6 +4,7 @@ import Article from '../blocks/Article';
 import Cite from '../elements/Cite';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
+import FigureWithBorder from '../blocks/FigureWithBorder';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import ForeignPhrase from '../elements/ForeignPhrase';
 import H1 from '../elements/H1';
@@ -61,14 +62,14 @@ export default function Kohoan() {
               height={800}
               alt="A garden is picture-framed with a hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below."
             />
-            <FigCaption>
+            <FigureWithMargin.FigCaption>
               <Span.Source>
                 Image source:{' '}
                 <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
                   Kyoto Shunju (2020b)
                 </a>
               </Span.Source>
-            </FigCaption>
+            </FigureWithMargin.FigCaption>
           </Figure>
           <Section>
             <Spacer.BoxParagraphToText />
@@ -125,12 +126,12 @@ export default function Kohoan() {
                 height={300}
                 alt="An empty moat surrounds the walls of Koho-an Temple."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The moat around Koho-an Temple{' '}
                 <Span.Source>
                   (<a href="http://rabbitah.jugem.jp/?eid=671">Usagi 2015</a>)
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -146,7 +147,7 @@ export default function Kohoan() {
                 height={458}
                 alt="A stone bridge is seen in front of the roofed gate with its doors open."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The front gate and stone bridge of Koho-an Temple{' '}
                 <Span.Source>
                   (
@@ -155,7 +156,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>
@@ -254,7 +255,7 @@ export default function Kohoan() {
                 height={640}
                 alt="A straight stone pavement is made of the patchwork of flat-top stones in various shapes, leading to the back wall of the temple's entrance garden."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Stone pavement in the entrance garden of Koho-an Temple{' '}
                 <Span.Source>
                   (
@@ -263,7 +264,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>{' '}
             <Spacer.CaptionLineToText />
             <P>
@@ -294,7 +295,7 @@ export default function Kohoan() {
                 height={480}
                 alt="A branched-out straight stone pavement leads to the inner entrance of the temple's building."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The inner entrance of Koho-an Temple{' '}
                 <Span.Source>
                   (
@@ -303,7 +304,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>{' '}
             <Spacer.CaptionParagraphToText />
             <P>
@@ -320,11 +321,11 @@ export default function Kohoan() {
                 height={1680}
                 alt="The straight stone pavement leads to a pine tree at its end."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 A view at halfway up of the stone pavement in the entrance
                 garden of Koho-an Temple{' '}
                 <Span.Source>(Photo by author, 13 December, 2020)</Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -340,7 +341,7 @@ export default function Kohoan() {
                 height={2248}
                 alt="Flat-top stones are laid out to form a right-angled footpath, turning to the right in front of the pine tree behind which a roofed bench is seen."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Stone pavement turns at a right angle in the entrance garden of
                 Koho-an Temple{' '}
                 <Span.Source>
@@ -350,7 +351,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>
@@ -403,7 +404,7 @@ export default function Kohoan() {
                 height={851}
                 alt="A roofed gate with its doors closed is seen in between pine trees. Seen behind the gate is the top of the gable roof of the temple building."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Main Entrance of Koho-an Temple
                 <Span.Source>
                   (
@@ -412,7 +413,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>{' '}
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>{' '}
             <Spacer.CaptionLineToText />
             <P>
@@ -455,7 +456,7 @@ export default function Kohoan() {
                 height={1141}
                 alt="The roof of the gate, when zoomed up, shows the horizontal layers of two materials in different texture alternating one after another"
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The “armour-thatching” roof of Koho-an Temple’s Main Entrance
                 <Span.Source>
                   (
@@ -464,7 +465,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -489,7 +490,7 @@ export default function Kohoan() {
                 height={1803}
                 alt="A sand-floored garden is seen through between the wooden pillars of the entrance hall."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 A view of Koho-an Temple’s Main Hall Front Garden from inside
                 the main entrance
                 <Span.Source>
@@ -499,7 +500,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -515,13 +516,13 @@ export default function Kohoan() {
                 height={360}
                 alt="A wooden veranda streches out to the rear of the main hall with the sand-floored garden seen on the left."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The veranda of Koho-an Temple’s Main Hall, viewed from the main
                 entrance
                 <Span.Source>
                   (<a href="https://knaw.exblog.jp/15349309/">Nakao 2010</a>)
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>It looks like the deck of a boat, don’t you think?</P>
@@ -539,7 +540,7 @@ export default function Kohoan() {
                 height={225}
                 alt="The sand-floored garden is rectangular, sandwiched with a rectangularly-trimmed, long and very low hedge on the near side and a pair of rectangularly-trimmed taller hedges, forming a shape like a very wide staircase, on the far side."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Main Hall Front Garden of Koho-an Temple
                 <Span.Source>
                   (
@@ -548,7 +549,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -586,7 +587,7 @@ export default function Kohoan() {
                 height={800}
                 alt="The sand-floored garden, now seen on the right, is made of red clay sand in the colour of light red-brown."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Main Hall Front Garden of Koho-an Temple
                 <Span.Source>
                   (
@@ -595,7 +596,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -640,7 +641,7 @@ export default function Kohoan() {
                 height={216}
                 alt="A tree-covered, horizontally elongated hill in the midst of concrete buildings in Kyoto City."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Funaoka-yama, a hill in northwest Kyoto
                 <Span.Source>
                   (
@@ -649,7 +650,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -686,7 +687,7 @@ export default function Kohoan() {
                 height={1126}
                 alt="Small pebbles in dark blue grey are packed on the near side of the garden while a winding sequence of larger flat-top stones leads the way to a garden on the far side."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The garden on the southwest of Koho-an Temple’s Main Hall
                 <Span.Source>
                   {' '}
@@ -696,7 +697,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>
@@ -725,7 +726,7 @@ export default function Kohoan() {
                 alt="A straight sequence of flat-top stones, embedded in the rectangular tataki floor, leads to a cylindrical stone furniture with a wooden ladle on its top. The dark blue gray pebbles are packed along the straight edge of the tataki floor on the left."
               />
 
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Stepping stones leading to the teahouse of Koho-an Temple
                 <Span.Source>
                   {' '}
@@ -735,7 +736,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>
@@ -863,7 +864,7 @@ export default function Kohoan() {
                 alt="A paper screen hangs from the ceiling to the middle of the teahouse pillars to partly partition a wooden veranda of the teahouse, seen on the right, from the garden with the cylindrical stone hand basin, seen on the left, with the open space below the hanging screen keeping the two spaces together."
               />
 
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Entrance to Teahouse Bosen
                 <Span.Source>
                   (
@@ -872,7 +873,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionLineToText />
             <P>
@@ -898,18 +899,17 @@ export default function Kohoan() {
               Nishi-Hongwanji Temple, also in Kyoto:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/hiun-kaku-water-entrance.jpg"
                   width={570}
                   height={380}
                   alt="An anchored, wooden boat of the size for a couple of people is seen below through the water entrance from the inside of the raised-floor of the pavilion."
                 />
 
-                <FigCaption>
-                  The water entrance hall of Hiun-kaku Pavilion
+                <FigureWithBorder.FigCaption>
+                  The water entrance hall of Hiun-kaku Pavilion{' '}
                   <Span.Source>
                     (
                     <a href="https://www.hongwanji.kyoto/see/hiunkaku.html">
@@ -917,9 +917,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionLineToText />
             <P>
               It is indeed similar-looking. This is why walking on the straight
@@ -950,18 +950,17 @@ export default function Kohoan() {
               ):
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/nijiri-guchi.png"
                   width={1000}
                   height={419}
                   alt="A person enters a teahouse through nijiri-guchi by crouching down and sticking his/her head and hands into the teahouse first, seen from the front and from the side in a black and white architetural illustration."
                 />
 
-                <FigCaption>
-                  How to enter a teahouse through nijiri-guchi
+                <FigureWithBorder.FigCaption>
+                  How to enter a teahouse through nijiri-guchi{' '}
                   <Span.Source>
                     (
                     <a href="https://www.japan-architecture.org/nijiri-guchi/">
@@ -969,9 +968,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionLineToText />
             <P>
               It is an architectural device that makes everyone—noble and
@@ -1000,7 +999,7 @@ export default function Kohoan() {
                 height={805}
                 alt="A tatami-floored spacious room is seen from a low angle, with the right half of the back wall as an alcove displayiing a hanging scroll of calligraphy."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The interior of Teahouse Bosen{' '}
                 <Span.Source>
                   (
@@ -1009,7 +1008,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -1029,19 +1028,18 @@ export default function Kohoan() {
               sightly higher up than the rest of the room:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/tokonoma.jpg"
                   width={640}
                   height={427}
                   alt="A tatami-floored room with its backwall partitioned into the wood-floored alcove on the right and the tatami-floored alcove on the left, the latter of which has a tie beam at a higher position and displays a hanging scroll of calligraphy."
                 />
 
-                <FigCaption>
+                <FigureWithBorder.FigCaption>
                   An example of the Japanese architectural interior with a
-                  tokonoma alcove
+                  tokonoma alcove{' '}
                   <Span.Source>
                     (
                     <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
@@ -1049,9 +1047,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
               According to the chief priest, this special arrangement prevents
@@ -1076,7 +1074,7 @@ export default function Kohoan() {
                 height={368}
                 alt="The stone hand basin, with a circular hole on top to keep water, has an inscription of two Chinese characters, meaning dew and knot, respectively."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 Tsuyu-musubi hand basin seen from the inside of Bosen
                 <Span.Source>
                   (
@@ -1085,7 +1083,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -1093,18 +1091,17 @@ export default function Kohoan() {
               a form of knots that resemble the ear of a rabbit:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/tsuyu-musubi.png"
                   width={217}
                   height={300}
                   alt="A pair of strings is each knotted in the shape of an elongated circle, similar to a rabbit's ear, shown in a black-and-white illustration."
                 />
 
-                <FigCaption>
-                  Tsuyu-musubi knots
+                <FigureWithBorder.FigCaption>
+                  Tsuyu-musubi knots{' '}
                   <Span.Source>
                     (
                     <a href="https://kotobank.jp/word/%E9%9C%B2%E7%B5%90-2064295">
@@ -1112,9 +1109,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
               Why rabbit ear knots? It refers to the rabbits that appear in a
@@ -1161,16 +1158,15 @@ export default function Kohoan() {
               <ForeignPhrase as="i">mochi</ForeignPhrase>:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/moon-rabbit.png"
                   width={579}
                   height={234}
                   alt="The moon is shown side by side with an illustration of a white circle of the same size in which a rabbit holding a pestle and sitting in front of a mortal is drawn in black silhouette."
                 />
-                <FigCaption>
+                <FigureWithBorder.FigCaption>
                   The Moon and an imaginary rabbit on the moon.{' '}
                   <Span.Source>
                     Adapted from{' '}
@@ -1178,9 +1174,9 @@ export default function Kohoan() {
                       Miura (2020)
                     </a>
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionLineToText />
             <P>
               In case you have no idea how{' '}
@@ -1188,17 +1184,16 @@ export default function Kohoan() {
               in Japan:
             </P>
             <Spacer.TextLineToBox />{' '}
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/mochi-tsuki.jpeg"
                   width={570}
                   height={427}
                   alt="A Japanese lady is holding a wooden pestle of her arm's length that just landed on mochi in a mortal."
                 />
-                <FigCaption>
-                  Traditional mochi-making
+                <FigureWithBorder.FigCaption>
+                  Traditional mochi-making{' '}
                   <Span.Source>
                     (
                     <a href="https://h-takarajima.com/detail/index/4879">
@@ -1206,9 +1201,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
               If you carefully watch the full moon rising to the southern sky,
@@ -1237,8 +1232,8 @@ export default function Kohoan() {
                 height={800}
                 alt="The teahouse garden is picture-framed with the hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below. The garden is floored with the pebbles on the near side and an expanse of moss and a hedge on the far side. A stone lantern stands in between. The circular hole on the top of the stone hand basin is seen on the near side."
               />
-              <FigCaption>
-                A view of teahouse garden from inside Teahouse Bosen
+              <FigureWithMargin.FigCaption>
+                A view of teahouse garden from inside Teahouse Bosen{' '}
                 <Span.Source>
                   (
                   <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
@@ -1246,7 +1241,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </Figure>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -1293,17 +1288,11 @@ export default function Kohoan() {
                 height={360}
                 alt="The teahouse garden is picture-framed with the hanging paper screen from above and the wooden veranda from below. The stone hand basin is seen only with its circular hole on top; the rest is hidden beneath the veranda."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 A zoomed view of the teahouse garden of Koho-an Temple, seen
                 from Teahouse Bosen{' '}
-                <Span.Source>
-                  [Image source: Masaki Miyano via{' '}
-                  <a href="http://www.kyobunka.or.jp/tearoom/part_02/index.html">
-                    Kirisako (undated)
-                  </a>
-                  )
-                </Span.Source>
-              </FigCaption>
+                <Span.Source>Photo by Masaki Miyano</Span.Source>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -1331,7 +1320,7 @@ export default function Kohoan() {
                 height={805}
                 alt="The tatami-floored spacious room is seen from a low angle with the tokonoma alcove at the back wall and the ceiling rich in wood grains."
               />
-              <FigCaption>
+              <FigureWithMargin.FigCaption>
                 The interior of Teahouse Bosen (reproduced){' '}
                 <Span.Source>
                   (
@@ -1340,7 +1329,7 @@ export default function Kohoan() {
                   </a>
                   )
                 </Span.Source>
-              </FigCaption>
+              </FigureWithMargin.FigCaption>
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
@@ -1355,15 +1344,15 @@ export default function Kohoan() {
               ceiling, here is a real example:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <Youtube
                   height={480}
                   title="Constantly moving reflected light on the ceiling"
                   videoId="VQaoRnDjZMw"
                   width={640}
                 />
-                <FigCaption>
+                <FigureWithBorder.FigCaption>
                   The reflection of water ripples on the ceiling of{' '}
                   <a href="https://narashikanko.or.jp/en/spot/structure/ukimido/">
                     Ukimi-do
@@ -1376,9 +1365,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
               After seeing all these, it now seems a bit unreasonable to liken
@@ -1398,18 +1387,17 @@ export default function Kohoan() {
               in 810:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/osawa-pond.jpg"
                   width={350}
                   height={240}
                   alt="A dragon-headed, roofed boat, with a dozen of people on board, is sailing on a lake, with the rising full moon seen in the night sky and its reflection on the lake surface."
                 />
-                <FigCaption>
+                <FigureWithBorder.FigCaption>
                   The moon-viewing event at Osawa Pond on the Mid-autumn
-                  Festival
+                  Festival{' '}
                   <Span.Source>
                     (
                     <a href="https://www.okeihan.net/navi/kyoto_tsu/tsu201209.php">
@@ -1417,9 +1405,9 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Hr /> {/* TODO: Fix the space above the asterisks */}
             <P>
               Perhaps you’re fully satisfied with your virtual visit to Koho-an
@@ -1439,17 +1427,16 @@ export default function Kohoan() {
               of Koho-an Temple:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
-                  kohoan
                   src="/kohoan/kohoan-floor-plan.png"
                   width={745}
                   height={700}
                   alt="An architectural drawing of Koho-an seen from above, with arrows overlaid over the stone bridge and the front gate at bottom-left, the straight stone pavement on the left side, the main hall's veranda on the top side, the narrow teahouse garden between the main hall on the left and the temple's bigger garden on the right, and the veranda and the inside of Teahouse Bosen to the left of the end of the teahouse garden."
                 />
 
-                <FigCaption>
+                <FigureWithBorder.FigCaption>
                   Plan of Koho-an Temple with the indication of how this article
                   walked you through{' '}
                   <Span.Source>
@@ -1458,9 +1445,9 @@ export default function Kohoan() {
                       Yamaguchi 2012)
                     </a>
                   </Span.Source>
-                </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+                </FigureWithBorder.FigCaption>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
               We started our journey from the black triangle at the bottom left.
@@ -1666,6 +1653,9 @@ export default function Kohoan() {
             </a>
             <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
               663highland 2010 via Wikimedia Commons
+            </a>
+            <a href="http://www.kyobunka.or.jp/tearoom/part_02/index.html">
+              Kirisako, n.d.
             </a>
           </Section>
         </Article>
