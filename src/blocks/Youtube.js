@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import round from 'src/utils/round';
 
 // Adapated from https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
 
@@ -14,13 +15,13 @@ const Iframe = styled.iframe`
 Iframe.Wrapper = styled.div`
   height: 0;
   overflow: hidden;
-  padding-bottom: 56.25%;
+  padding-bottom: ${({height, width}) => round((height / width) * 100, 3)}%;
   position: relative;
 `;
 
 const Youtube = ({height, title, videoId, width}) => {
   return (
-    <Iframe.Wrapper>
+    <Iframe.Wrapper height={height} width={width}>
       <Iframe
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
         frameBorder={0}

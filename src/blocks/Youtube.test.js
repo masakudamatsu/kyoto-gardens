@@ -25,13 +25,15 @@ describe('renders UI correctly', () => {
       .c0 {
         height: 0;
         overflow: hidden;
-        padding-bottom: 56.25%;
+        padding-bottom: 75%;
         position: relative;
       }
 
       <div>
         <div
           class="c0"
+          height="480"
+          width="640"
         >
           <iframe
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
