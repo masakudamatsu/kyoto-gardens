@@ -134,7 +134,7 @@ export const kohoan = {
     fontFamily: shipporiMincho.fontFamily,
     fontSize: '1em', // Baseline 1px below LibreBaskerville's, Height 2px above Libre Baskerville's cap height
     fontWeight: 500, // Match Libre Baskerville 400
-    lineHeight: 1, // to control side margins
+    lineHeight: 'normal', // line height doesn't change up to around 1.5
   },
   source: {
     color: color.onSurfaceShade.kohoan,

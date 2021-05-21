@@ -161,6 +161,7 @@ describe('renders UI correctly:', () => {
         font-family: 'Shippori Mincho',serif;
         font-size: 1em;
         font-weight: 500;
+        line-height: normal;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {

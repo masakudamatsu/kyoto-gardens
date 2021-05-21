@@ -1116,33 +1116,36 @@ export default function Kohoan() {
             </FigureWithBorder>
             <Spacer.CaptionParagraphToText />
             <P>
-              Why rabbit ear knots? It refers to the rabbits that appear in a
-              passage from an ancient Chinese philosophy book called{' '}
+              Why rabbit ears? It refers to the rabbits that appear in a passage
+              from an ancient Chinese philosophy book called{' '}
               <a href="https://en.wikipedia.org/wiki/Zhuangzi_(book)">
                 <Cite.Italic>Zhuangzi</Cite.Italic>
               </a>
               , from which the name of the teahouse — Bosen (<Kanji>忘筌</Kanji>
-              ) — is also derived:
+              ) — is also derived (see the end of the first line):
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithBorder as="blockquote">
+            <FigureWithBorder>
               <FigureWithBorder.Border>
-                <p>
-                  <Kanji>筌者所以在魚、</Kanji>
-                </p>
-                <p>[A fish trap exists to catch fish]</p>
-                <p>
-                  <Kanji>得魚而忘筌。</Kanji>
-                </p>
-                <p>[Thus, once you catch fish, forget about the trap]</p>
-                <p>
-                  <Kanji>蹄者所以在兔、</Kanji>
-                </p>
-                <p>[A rabbit trap exists to catch rabbits]</p>
-                <p>
-                  <Kanji>得兔而忘蹄。</Kanji>
-                </p>
-                <p>[Thus, once you catch rabbits, forget about the trap.]</p>
+                <blockquote>
+                  <p>
+                    <Kanji>筌者所以在魚、得魚而忘筌。</Kanji>
+                  </p>
+                  <p>
+                    <Kanji>蹄者所以在兔、得兔而忘蹄。</Kanji>
+                  </p>
+                  <Spacer.BoxLineToText />
+                  <p style={{textIndent: '-0.35em'}}>
+                    “A fish trap exists to catch fish; thus, once you catch
+                    fish, forget about the trap. A rabbit trap exists to catch
+                    rabbits; thus, once you catch rabbits, forget about the
+                    trap.”
+                  </p>
+                </blockquote>
+                <Spacer.BoxLineToText />
+                <FigureWithBorder.FigCaption>
+                  (Translation by author)
+                </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxLineToText />
