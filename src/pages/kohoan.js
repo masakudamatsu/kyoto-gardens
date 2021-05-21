@@ -27,7 +27,7 @@ export default function Kohoan() {
   const webfont = {
     server: 'https://fonts.gstatic.com',
     stylesheet:
-      'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Playfair+Display:wght@600&display=swap',
+      'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400&family=Playfair+Display:wght@600&family=Shippori+Mincho:wght@500&display=swap',
   }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
   return (
     <>

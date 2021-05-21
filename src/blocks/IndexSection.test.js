@@ -157,7 +157,13 @@ describe('renders UI correctly:', () => {
   test('Kanji', () => {
     const {container} = render(<IndexSection.Kanji {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        font-family: 'Shippori Mincho',serif;
+        font-size: 1.025em;
+        font-weight: 500;
+      }
+
+      .Main__Ryoanji-sc-126eniy-1 .c0 {
         font-family: 'Shippori Mincho',serif;
         font-size: 0.85em;
         font-weight: 500;
@@ -178,12 +184,12 @@ describe('renders UI correctly:', () => {
         z-index: 2;
       }
 
-      .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
+      .IndexSection-ff5g7u-0:nth-of-type(odd) .c1 {
         left: auto;
         right: 0;
       }
 
-      .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
+      .IndexSection-ff5g7u-0:nth-of-type(even) .c1 {
         left: 0;
         right: auto;
       }
@@ -194,7 +200,7 @@ describe('renders UI correctly:', () => {
           lang="ja"
         />
       </div>
-      `);
+    `);
   });
   test('Latin', () => {
     const {container} = render(<IndexSection.Latin />);

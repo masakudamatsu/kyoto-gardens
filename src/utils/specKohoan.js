@@ -8,6 +8,7 @@ import {
   libreBaskerville,
   playfairDisplay,
   playfairDisplaySC,
+  shipporiMincho,
 } from './fontMetrics';
 
 // Color scheme
@@ -130,6 +131,12 @@ export const kohoan = {
       mobile: 13,
       desktop: 17.5,
     },
+  },
+  kanji: {
+    fontFamily: shipporiMincho.fontFamily,
+    fontSize: '1.025em', // Baseline 1px below LibreBaskerville's, Height 2px above Libre Baskerville's cap height
+    fontWeight: 500, // Match Libre Baskerville 400
+    lineHeight: 1, // to control side margins
   },
   source: {
     color: color.onSurfaceShade.kohoan,

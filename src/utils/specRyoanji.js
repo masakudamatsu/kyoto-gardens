@@ -1,7 +1,12 @@
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
-import {cormorant, cormorantGaramond, cormorantSC} from './fontMetrics';
+import {
+  cormorant,
+  cormorantGaramond,
+  cormorantSC,
+  shipporiMincho,
+} from './fontMetrics';
 import {color} from './colorScheme';
 
 export const ryoanji = {
@@ -103,6 +108,11 @@ export const ryoanji = {
       mobile: 13,
       desktop: 17.5,
     },
+  },
+  kanji: {
+    fontFamily: shipporiMincho.fontFamily,
+    fontSize: '0.85em' /* to match with Cormorant Garamond body text */,
+    fontWeight: 500 /* to match with stroke width of Cormorant Garamond SemiBold (600) */,
   },
   source: {
     color: color.onSurfaceShade.ryoanji,

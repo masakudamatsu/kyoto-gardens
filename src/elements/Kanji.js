@@ -1,12 +1,23 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import Main from 'src/blocks/Main';
+import {kohoan} from 'src/utils/specKohoan';
+import {ryoanji} from 'src/utils/specRyoanji';
+
 const Kanji = styled.span.attrs(props => ({
   lang: 'ja',
 }))`
-  font-family: 'Shippori Mincho', serif;
-  font-size: 0.85em; /* to match with Cormorant Garamond body text */
-  font-weight: 500; /* to match with stroke width of Cormorant Garamond SemiBold (600) */
+  ${Main.Kohoan} & {
+    font-family: ${kohoan.kanji.fontFamily};
+    font-size: ${kohoan.kanji.fontSize};
+    font-weight: ${kohoan.kanji.fontWeight};
+  }
+  ${Main.Ryoanji} & {
+    font-family: ${ryoanji.kanji.fontFamily};
+    font-size: ${ryoanji.kanji.fontSize};
+    font-weight: ${ryoanji.kanji.fontWeight};
+  }
 `;
 
 Kanji.propTypes = {};

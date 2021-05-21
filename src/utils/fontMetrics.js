@@ -62,6 +62,10 @@ export const reforma1918 = {
   }, // measured by opentype.js
 };
 
+export const shipporiMincho = {
+  fontFamily: "'Shippori Mincho', serif",
+};
+
 export const shipporiMinchoB1 = {
   fontFamily: "'Shippori Mincho B1', serif",
 };
