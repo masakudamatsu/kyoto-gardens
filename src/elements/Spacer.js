@@ -105,35 +105,12 @@ function spaceBoxParagraphToText(spec) {
   `;
 }
 
-////////////
-Spacer.CaptionLineToText = styled(Spacer)`
-  ${Main.Kohoan} & {
-    ${spaceCaptionLineToText(kohoan)}
-  }
-`;
-
 /////////////
 Spacer.CaptionParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
     ${spaceCaptionParagraphToText(kohoan)}
   }
 `;
-function spaceCaptionLineToText(spec) {
-  return css`
-    height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
-        spec.figCaption.descender.mobile -
-        spec.article.ascender.mobile,
-    )};
-    @media only screen and ${breakpoint.fontSize} {
-      height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
-          spec.figCaption.descender.desktop -
-          spec.article.ascender.desktop,
-      )};
-    }
-  `;
-}
 
 function spaceCaptionParagraphToText(spec) {
   return css`

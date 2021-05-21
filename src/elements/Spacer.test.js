@@ -156,30 +156,6 @@ describe('renders UI correctly', () => {
       </div>
     `);
   });
-  test('CaptionLineToText', () => {
-    const {container} = render(<Spacer.CaptionLineToText {...mockProps} />);
-    expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        width: 100%;
-      }
-
-      .Main__Kohoan-sc-126eniy-2 .c0 {
-        height: 0.4063rem;
-      }
-
-      @media only screen and (min-width:728px) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          height: 0.5078rem;
-        }
-      }
-
-      <div>
-        <div
-          class="c0 c1 "
-        />
-      </div>
-    `);
-  });
   test('CaptionParagraphToText', () => {
     const {container} = render(
       <Spacer.CaptionParagraphToText {...mockProps} />,
@@ -273,7 +249,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <div
-          class="Spacer__TextParagraphToBox-sc-1ug26uc-9 c0"
+          class="Spacer__TextParagraphToBox-sc-1ug26uc-8 c0"
         />
       </div>
     `);

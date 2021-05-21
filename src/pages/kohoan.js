@@ -160,7 +160,7 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               Notice two things in the above photo. First, the stones on each
               side of the bridge are errected at an angle, rather than straight
@@ -268,7 +268,7 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>{' '}
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               Stones of various shapes and textures are laid out with as narrow
               gaps as possible, to make a long rectangle. Imagine you yourself
@@ -355,14 +355,14 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               The structure behind the pine tree is{' '}
               <ForeignPhrase>soto-machiai</ForeignPhrase> (a roofed bench where
               the invited guests to a tea ceremony would take a rest until the
               host comes to greet them).
             </P>
-            <Spacer.BoxParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               As pointed out by{' '}
               <a href="https://vinfo06.at.webry.info/201208/article_4.html">
@@ -398,7 +398,7 @@ export default function Kohoan() {
           <Section>
             <H2>Main Entrance</H2>
             <Spacer.BoxParagraphToBox />
-            <FigureWithMargin belowBoxParagraph>
+            <FigureWithMargin>
               <ImageWithPlaceholder
                 kohoan
                 src="/kohoan/kohoan-main-entrance.jpeg"
@@ -407,17 +407,17 @@ export default function Kohoan() {
                 alt="A roofed gate with its doors closed is seen in between pine trees. Seen behind the gate is the top of the gable roof of the temple building."
               />
               <FigureWithMargin.FigCaption>
-                Main Entrance of Koho-an Temple
+                Main Entrance of Koho-an Temple{' '}
                 <Span.Source>
                   (
                   <a href="https://commons.wikimedia.org/wiki/File:Daitokuji_Koho-an140524NI3.JPG">
-                    Atelier Verde via Wikimedia Commons
+                    Photo by Atelier Verde, May 24, 2014
                   </a>
                   )
                 </Span.Source>{' '}
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>{' '}
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               According to the chief priest of Koho-an Temple, the roof of the
               main entrance is meant to be that of a{' '}
@@ -459,7 +459,7 @@ export default function Kohoan() {
                 alt="The roof of the gate, when zoomed up, shows the horizontal layers of two materials in different texture alternating one after another"
               />
               <FigureWithMargin.FigCaption>
-                The “armour-thatching” roof of Koho-an Temple’s Main Entrance
+                The “armour-thatching” roof of Koho-an Temple’s Main Entrance{' '}
                 <Span.Source>
                   (
                   <a href="https://commons.wikimedia.org/wiki/File:Daitokuji_Koho-an140524NI3.JPG">
@@ -494,7 +494,7 @@ export default function Kohoan() {
               />
               <FigureWithMargin.FigCaption>
                 A view of Koho-an Temple’s Main Hall Front Garden from inside
-                the main entrance
+                the main entrance{' '}
                 <Span.Source>
                   (
                   <a href="http://www.pauch.com/kss/g063.html">
@@ -520,13 +520,13 @@ export default function Kohoan() {
               />
               <FigureWithMargin.FigCaption>
                 The veranda of Koho-an Temple’s Main Hall, viewed from the main
-                entrance
+                entrance{' '}
                 <Span.Source>
                   (<a href="https://knaw.exblog.jp/15349309/">Nakao 2010</a>)
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>It looks like the deck of a boat, don’t you think?</P>
             <Spacer.TextParagraphToText />
             <P>
@@ -644,11 +644,11 @@ export default function Kohoan() {
                 alt="A tree-covered, horizontally elongated hill in the midst of concrete buildings in Kyoto City."
               />
               <FigureWithMargin.FigCaption>
-                Funaoka-yama, a hill in northwest Kyoto
+                Funaoka-yama, a hill in northwest Kyoto{' '}
                 <Span.Source>
                   (
                   <a href="https://commons.wikimedia.org/wiki/File:Mt.Funaoka_(Kyoto,_Japan).jpg">
-                    Ilovekyoto via Wikimedia Commons
+                    Photo by Ilovekyoto, August 2008
                   </a>
                   )
                 </Span.Source>
@@ -701,13 +701,13 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               According to the chief priest, the pebbles in the foreground are
               meant to resemble water surface. Stepping stones lead to the
               private garden representing the Eight Best Views of Lake Biwa (
-              <ForeignPhrase as="i">Oumi hakkei</ForeignPhrase>{' '}
-              <Kanji>近江八景</Kanji>).
+              <ForeignPhrase>Oumi hakkei</ForeignPhrase> <Kanji>近江八景</Kanji>
+              ).
             </P>
             <Spacer.TextParagraphToText />
             <P>
@@ -740,7 +740,7 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               At the end of the earthen floor stands{' '}
               <ForeignPhrase as="i">chozu-bachi</ForeignPhrase>, a hand basin
@@ -880,7 +880,7 @@ export default function Kohoan() {
                 </Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
-            <Spacer.CaptionLineToText />
+            <Spacer.CaptionParagraphToText />
             <P>
               The cylindrical hand basin in this photo is the one you saw at the
               end of the straight stepping stones. Therefore, when you reach the
@@ -925,7 +925,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionLineToText />
+            <Spacer.BoxParagraphToText />
             <P>
               It is indeed similar-looking. This is why walking on the straight
               stepping stones before entering Bosen may be interpreted as
@@ -976,13 +976,13 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionLineToText />
+            <Spacer.BoxParagraphToText />
             <P>
               It is an architectural device that makes everyone—noble and
               humble—equal inside the teahouse. A revolutionary idea of the
               time.
             </P>
-            <Spacer.BoxParagraphToText />
+            <Spacer.TextParagraphToText />
             <P>
               What makes Teahouse Bosen unique is the way it achieves the same
               idea, not with the use of{' '}
@@ -1055,7 +1055,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               According to the chief priest, this special arrangement prevents
               the ceiling from looking too high when you bend your head to enter
@@ -1117,7 +1117,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Why rabbit ears? It refers to the rabbits that appear in a passage
               from an ancient Chinese philosophy book called{' '}
@@ -1151,7 +1151,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.BoxLineToText />
+            <Spacer.BoxParagraphToText />
             <P>
               The passage reminds us of the importance of remembering the
               purpose (catching fish or rabbits), not the means to achieve it
@@ -1195,7 +1195,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionLineToText />
+            <Spacer.BoxParagraphToText />
             <P>
               In case you have no idea how{' '}
               <ForeignPhrase as="i">mochi</ForeignPhrase> is traditionally made
@@ -1222,7 +1222,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               If you carefully watch the full moon rising to the southern sky,
               you'll notice that the moon slowly rotates clockwise. I imagine
@@ -1389,7 +1389,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               After seeing all these, it now seems a bit unreasonable to liken
               the entrance to the teahouse as the water entrance hall. The view
@@ -1469,7 +1469,7 @@ export default function Kohoan() {
                 </FigureWithBorder.FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Spacer.CaptionParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               We started our journey from the black triangle at the bottom left.
               We walked straight up from there, turned right at 90 degrees,
