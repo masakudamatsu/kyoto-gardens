@@ -771,8 +771,11 @@ export default function Kohoan() {
               Japanese gardens. But they were originally invented as scenery to
               decorate the footpath to a teahouse during the late 16th century{' '}
               <Span source>
-                (<a href="https://www.amazon.co.jp/dp/404703455X">Kozu 2009</a>,
-                Ch.4 Sec.4 and Ch.5 Sec.5)
+                (
+                <a href="https://www.google.co.jp/books/edition/_/jsZMAQAAIAAJ">
+                  Kozu 2009
+                </a>
+                , Ch.4 Sec.4 and Ch.5 Sec.5)
               </Span>
               . Koho-an Temple was built in the mid-17th century, when people
               must have had the idea that the stepping stones and the hand basin
@@ -1045,7 +1048,7 @@ export default function Kohoan() {
                   <Span.Source>
                     (
                     <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
-                      663highland 2010
+                      Photo by 663highland, Jul. 24, 2010
                     </a>
                     )
                   </Span.Source>
@@ -1211,8 +1214,8 @@ export default function Kohoan() {
                   Traditional mochi-making{' '}
                   <Span.Source>
                     (
-                    <a href="https://h-takarajima.com/detail/index/4879">
-                      Hokkaido Taiken 2018
+                    <a href="https://www.photo-ac.com/main/detail/836686">
+                      Photo by cheetah
                     </a>
                     )
                   </Span.Source>
@@ -1497,93 +1500,109 @@ export default function Kohoan() {
           </Section>
           <Section>
             <H2>References</H2>
-            <P>
-              Enshu Sado Soke (2020a){' '}
-              <cite>“Kobori Enshu – kenchiku & sakutei”</cite>{' '}
-              <Kanji>小堀遠州 — 建築・作庭</Kanji> [Kobori Enshu — architecture
-              and garden design], Enshu Sado Soke Website.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Enshu Sado Soke (2020b) <cite>“Kobori Enshu – shoga & waka”</cite>{' '}
-              <Kanji>小堀遠州 — 書画・和歌</Kanji> [Kobori Enshu — calligraphy
-              and Japanese poetry], Enshu Sado Soke Website.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Kozu, Asao (2009) <cite italic>Chanoyu no rekisi</cite>{' '}
-              <Kanji>茶の湯の歴史</Kanji>
-              [History of the tea ceremony]. Tokyo: Kadokawa.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>Kyotofukoh (2006) “Koho-an Temple”, Kyotofukoh.</P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Kyoto Shunju (2020) <cite>“Daitoku-ji Koho-an”</cite>{' '}
-              <Kanji>大徳寺孤篷庵</Kanji>
-              [Daitoku-ji Koho-an], Leaflet given to the visitors to Koho-an.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              {' '}
-              Tanaka, Shozo (2012){' '}
-              <cite italic>Sarai no “Nihon no niwa” kanzen gaido</cite>
-              <Kanji>サライの「日本の庭」完全ガイド</Kanji> [The complete guide
-              of “Japan's gardens” by <Cite.Italic>Serai</Cite.Italic>{' '}
-              magazine]. Tokyo: Shogakukan.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              {' '}
-              Tanakadate, Tetsuhiko (1996){' '}
-              <cite italic>
-                Kobori Enshu monogatari – nihon no Reonarudo Da Vinchi
-              </cite>
-              <Kanji>小堀遠州物語 ― 日本のレオナルド・ダ・ヴィンチ</Kanji> [The
-              Story of Kobori Enshu — Japan’s equivalent of Leonardo Da Vinci].
-              Tokyo: Chobun-sha.
-            </P>
-            <P>
-              Uchida, Shigeru (2000) <cite italic>Interia to nihonjin</cite>{' '}
-              <Kanji>インテリアと日本人</Kanji> [Interior and the Japanese
-              people]. Tokyo: Shobun-sha.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              {' '}
-              Vinfo (2012) <cite>“Daitoku-ji Koho-an sono 4”</cite>{' '}
-              <Kanji>大徳寺 孤篷庵 その４</Kanji> [Daitoku-ji Koho-an Part 4],
-              <cite italic>Memories of Wandering</cite>, Aug. 11, 2012.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Wakamura, Ryo (2012) <cite>“Kangetsu gyoji”</cite>{' '}
-              <Kanji>観月行事</Kanji> [Moon-viewing Events],{' '}
-              <cite italic>Okeihan.net</cite>.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Yamaguchi, Sumio (2012) <cite>“Koho-an teien”</cite>
-              <Kanji>孤篷庵庭園</Kanji> [Koho-an Garden],{' '}
-              <cite italic>
-                Kyoto Historical Site Walking Association Monthly
-              </cite>
-              , issue 63, Feb. 19, 2012.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Usagi (2015) “
-              <a href="http://rabbitah.jugem.jp/?eid=671">Daitoku-ji Koho-an</a>
-              ”, <Cite.Italic>Usagi no Blog</Cite.Italic>, Aug. 3, 2015.
-            </P>
-            <Spacer.TextParagraphToText />
+            <Spacer.BoxParagraphToText />
             <P>
               Anonymous (2014) “
               <a href="https://30047809.at.webry.info/201410/article_10.html">
                 Kobori Enshu ga konryu shita Daitoku-ji Tacchu Koho-an he
               </a>
-              ”, <Cite.Italic>Kodera to oshiro no tabi nikki II</Cite.Italic>,
-              Oct. 17, 2014.
+              ” [Visiting Koho-an, the sub-temple of Daigoku-ji built by Kobori
+              Enshu],{' '}
+              <Cite.Italic>Kodera to oshiro no tabi nikki II</Cite.Italic>, Oct.
+              17, 2014.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              ayayay0003 (2014) “
+              <Cite.Roman>
+                <a href="https://arischan.exblog.jp/23115582/">
+                  Daitoku-ji Tacchu Koho-an
+                </a>
+              </Cite.Roman>
+              ” [Koho-an, the sub-temple of Daitoku-ji],{' '}
+              <Cite.Italic>Arisu no Trip</Cite.Italic>, Oct. 14, 2014.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Enshu Sado Soke (2020a){' '}
+              <Cite.Roman>
+                “
+                <a href="http://www.enshuryu.com/enshuryu/enshu/kenchiku/">
+                  Kobori Enshu – kenchiku & sakutei
+                </a>
+                ”
+              </Cite.Roman>{' '}
+              [Kobori Enshu — architecture and garden design], the website for
+              Enshu Sado Soke.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              ⸻ (2020b){' '}
+              <Cite.Roman>
+                “
+                <a href="https://www.enshuryu.com/enshuryu/enshu/shoga/">
+                  Kobori Enshu – shoga & waka
+                </a>
+                ”
+              </Cite.Roman>{' '}
+              [Kobori Enshu — calligraphy and Japanese poetry], the website for
+              Enshu Sado Soke.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Japan Architecture (2021) “
+              <Cite.Roman>
+                <a href="https://www.japan-architecture.org/nijiri-guchi/">
+                  Nijiri-guchi
+                </a>
+              </Cite.Roman>
+              ”, Japan-architecture.org.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Kozu, Asao (2009){' '}
+              <Cite.Italic>
+                <a href="https://www.google.co.jp/books/edition/_/jsZMAQAAIAAJ">
+                  Chanoyu no rekisi
+                </a>
+              </Cite.Italic>{' '}
+              [History of the tea ceremony]. Tokyo: Kadokawa.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Kyotofukoh (2006) “
+              <a href="https://kyotofukoh.jp/report703.html">Koho-an Temple</a>
+              ”, Kyotofukoh.jp.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Kyoto Shunju (2020a) <Cite.Roman>“Daitoku-ji Koho-an”</Cite.Roman>
+              , Leaflet given to the visitors to Koho-an.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              ⸻ (2020b) “
+              <Cite.Roman>
+                <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
+                  Daitoku-ji Koho-an tokubetsu haikan to juyo bunkazai ‘Bosen’
+                  deno ochakai
+                </a>
+              </Cite.Roman>
+              ” [A special visit to Daitoku-ji Kohoan and a tea party at Bosen,
+              an Important Cultural Property], the website for Kyoto Shunju
+              Kotonari Juku.
+            </P>
+            <Spacer.TextParagraphToText />{' '}
+            <P>
+              Miura, Yasuko (2020) “
+              <Cite.Roman>
+                <a href="https://allabout.co.jp/gm/gc/220559/">
+                  Tsuki de usagi ga mochi-tsuki shiteiru nowa naze? Kaigai deno
+                  tsuki no moyo no mirare-kata
+                </a>
+              </Cite.Roman>
+              ” [Why is a rabbit making rice cakes on the moon? How people
+              outside Japan see the craters on the moon], Allabout.co.jp.
             </P>
             <Spacer.TextParagraphToText />
             <P>
@@ -1599,47 +1618,115 @@ export default function Kohoan() {
             </P>
             <Spacer.TextParagraphToText />
             <P>
-              ayayay0003 (2014) “
-              <a href="https://arischan.exblog.jp/23115582/">
-                Daitoku-ji Tacchu Koho-an
-              </a>
-              ”, <Cite.Italic>Arisu no Trip</Cite.Italic>, Oct. 14, 2014.
-            </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Kyoto Shunju (2020b) “
-              <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
-                Daitoku-ji Koho-an tokubetsu haikan to juyo bunkazai ‘Bozen’
-                deno ochakai
-              </a>
-              ”, <Cite.Italic>Kyoto Shunju Kotonari Juku</Cite.Italic>, Oct. 14,
-              2014.
+              Nishi-Hongwan-ji (2021) “
+              <Cite.Roman>
+                <a href="https://www.hongwanji.kyoto/see/hiunkaku.html">
+                  Hiun-kaku
+                </a>
+              </Cite.Roman>
+              ”, the website for Nishi-Hongwan-ji Temple.
             </P>
             <Spacer.TextParagraphToText />
             <P>
               Shimoyama, Shinji (2019) “
-              <a href="https://blog.goo.ne.jp/gooogami/e/390c896448b5606e95904b450cc7d822">
-                Daitoku-ji Koho-an
-              </a>
+              <Cite.Roman>
+                <a href="https://blog.goo.ne.jp/gooogami/e/390c896448b5606e95904b450cc7d822">
+                  Daitoku-ji Koho-an
+                </a>
+              </Cite.Roman>
               ”,{' '}
               <Cite.Italic>Nihon no mokuzo kenchiku koho no tenkai</Cite.Italic>{' '}
-              [<Kanji>日本の木造建築工法の展開</Kanji>], Chap. 4, Sec. 2-3.
+              [The evolution of wooden construction methods in Japan], Chap. 4,
+              Sec. 2-3.
             </P>
             <Spacer.TextParagraphToText />
             <P>
-              Nishi-Hongwan-ji (2021) “
-              <a href="https://www.hongwanji.kyoto/see/hiunkaku.html">
-                Hiun-kaku
-              </a>
-              ”, The website for Nishi-Hongwan-ji Temple.
+              Shogakukan (2006) "
+              <Cite.Roman>
+                <a href="https://kotobank.jp/word/%E9%9C%B2%E7%B5%90-2064295">
+                  Tsuyu-musubi
+                </a>
+              </Cite.Roman>
+              " , <Cite.Italic>Seisen-ban Nihon Kokugo Dai-jiten</Cite.Italic>{' '}
+              [Japanese language dictionary: concise edition], Tokyo:
+              Shogakukan.
             </P>
             <Spacer.TextParagraphToText />
             <P>
-              Japan Architecture (2021) “
-              <a href="https://www.japan-architecture.org/nijiri-guchi/">
-                Nijiri-guchi
-              </a>
-              ”, Japan Architecture.
+              {' '}
+              Tanaka, Shozo (2012){' '}
+              <Cite.Italic>
+                <a href="https://www.amazon.co.jp/gp/product/4091035493/">
+                  Sarai no “Nihon no niwa” kanzen gaido
+                </a>
+              </Cite.Italic>{' '}
+              [The complete guide of “Japan's gardens” by{' '}
+              <Cite.Italic>Serai</Cite.Italic> magazine]. Tokyo: Shogakukan.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              {' '}
+              Tanakadate, Tetsuhiko (1996){' '}
+              <Cite.Italic>
+                <a href="https://www.amazon.co.jp/dp/4811303105">
+                  Kobori Enshu monogatari – nihon no Reonarudo Da Vinchi
+                </a>
+              </Cite.Italic>{' '}
+              [The Story of Kobori Enshu — Japan’s equivalent of Leonardo Da
+              Vinci]. Tokyo: Chobun-sha.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Uchida, Shigeru (2000){' '}
+              <Cite.Italic>
+                <a href="https://www.amazon.co.jp/dp/4794964269">
+                  Interia to nihon-jin
+                </a>
+              </Cite.Italic>{' '}
+              [Interior and the Japanese people]. Tokyo: Shobun-sha.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Usagi (2015) “
+              <a href="http://rabbitah.jugem.jp/?eid=671">Daitoku-ji Koho-an</a>
+              ”, <Cite.Italic>Usagi no Blog</Cite.Italic>, Aug. 3, 2015.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              {' '}
+              Vinfo (2012){' '}
+              <Cite.Roman>
+                “
+                <a href="https://vinfo06.at.webry.info/201208/article_4.html">
+                  Daitoku-ji Koho-an sono 4
+                </a>
+                ”
+              </Cite.Roman>{' '}
+              [Daitoku-ji Koho-an Part 4],{' '}
+              <Cite.Italic>Haikai no Kioku</Cite.Italic>, Aug. 11, 2012.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Wakamura, Ryo (2012){' '}
+              <Cite.Roman>
+                “
+                <a href="https://www.okeihan.net/navi/kyoto_tsu/tsu201209.php">
+                  Kangetsu gyoji
+                </a>
+                ”
+              </Cite.Roman>{' '}
+              [Moon-viewing Events],{' '}
+              <Cite.Italic>Kyoto-tsu no Susume</Cite.Italic>, August, 2012.
+            </P>
+            <Spacer.TextParagraphToText />
+            <P>
+              Yamaguchi, Sumio (2012){' '}
+              <Cite.Roman>
+                “<a href="http://www.pauch.com/kss/g063.html">Koho-an teien</a>”
+              </Cite.Roman>{' '}
+              [Koho-an Garden],{' '}
+              <Cite.Italic>Gekkan Kyoto Shiseki Sansaku Kai</Cite.Italic>, Issue
+              63, Feb. 19, 2012.
             </P>
             <Spacer.TextParagraphToText />
             <P>
@@ -1651,30 +1738,6 @@ export default function Kohoan() {
               </Cite.Italic>
               , Tokyo: Graphic-sha.
             </P>
-            <Spacer.TextParagraphToText />
-            <P>
-              Miura, Yasuko (2020) “
-              <a href="https://allabout.co.jp/gm/gc/220559/">
-                Tsuki de usagi ga mochi-tsuki shiteiru nowa naze? Kaigai deno
-                tsuki no moyo no mirare-kata
-              </a>
-              ”, All About.
-            </P>
-            <a href="https://h-takarajima.com/detail/index/4879">
-              Hokkaido Taiken (2018)
-            </a>
-            <a href="https://www.okeihan.net/navi/kyoto_tsu/tsu201209.php">
-              Wakamura (2012)
-            </a>{' '}
-            <a href="https://kotobank.jp/word/%E9%9C%B2%E7%B5%90-2064295">
-              Shogakukan 2006 via Kotobank
-            </a>
-            <a href="https://commons.wikimedia.org/wiki/File:Kannonin_Tottori16s4470.jpg">
-              663highland 2010 via Wikimedia Commons
-            </a>
-            <a href="http://www.kyobunka.or.jp/tearoom/part_02/index.html">
-              Kirisako, n.d.
-            </a>
           </Section>
         </Article>
       </Main.Kohoan>{' '}
