@@ -1264,7 +1264,10 @@ export default function Kohoan() {
                 )
               </Span>
               . Enshu, the designer of Koho-an Temple, is known to be a fan of
-              the Japanese aristocratic culture, such as waka poetry{' '}
+              the Japanese aristocratic culture, such as{' '}
+              <a href="https://en.wikipedia.org/wiki/Waka_(poetry)">
+                <ForeignPhrase>waka</ForeignPhrase> poetry
+              </a>{' '}
               <Span source>
                 (
                 <a href="https://www.enshuryu.com/enshuryu/enshu/shoga/">
@@ -1290,7 +1293,7 @@ export default function Kohoan() {
               />
               <FigureWithMargin.FigCaption>
                 A zoomed view of the teahouse garden of Koho-an Temple, seen
-                from Teahouse Bosen{' '}
+                from Teahouse Bosen.{' '}
                 <Span.Source>Photo by Masaki Miyano</Span.Source>
               </FigureWithMargin.FigCaption>
             </FigureWithMargin>
