@@ -14,7 +14,7 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        background-image: linear-gradient(to bottom,#636363,#2C2C2C);
+        background-image: linear-gradient(to bottom,#575757,#111111);
         color: #ffffff;
         font-family: 'Libre Baskerville','Verdana',serif;
         font-size: 0.993rem;

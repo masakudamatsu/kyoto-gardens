@@ -3,7 +3,9 @@ export const color = {
   onBackground: '#ffffff',
   surface: {
     index: '#ffffff',
-    kohoan: 'linear-gradient(to bottom, #636363, #2C2C2C)', // #636363 x 4.54 = link.color, #000 * 1.5 = #2c2c2c
+    kohoan: 'linear-gradient(to bottom, #575757, #111111)',
+    // To create the feel of the sun setting and the moon rises in night sky
+    // Libre Baskervill does not look great on lighter gray background or on pure black.
     ryoanji: '#ffffff',
   },
   onSurface: {

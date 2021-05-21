@@ -1119,24 +1119,34 @@ export default function Kohoan() {
               Why rabbit ear knots? It refers to the rabbits that appear in a
               passage from an ancient Chinese philosophy book called{' '}
               <a href="https://en.wikipedia.org/wiki/Zhuangzi_(book)">
-                Zhuangzi
+                <Cite.Italic>Zhuangzi</Cite.Italic>
               </a>
               , from which the name of the teahouse — Bosen (<Kanji>忘筌</Kanji>
               ) — is also derived:
             </P>
-            <blockquote>
-              <p>
-                <Kanji>
-                  筌者所以在魚、得魚而忘筌。蹄者所以在兔、得兔而忘蹄。
-                </Kanji>
-                [A fish trap [<Kanji>筌</Kanji>] exists to catch fish; thus,
-                once you catch fish, you will forget about the trap [
-                <Kanji>忘筌</Kanji>]. A rabbit trap exists to catch rabbits;
-                thus, once you catch rabbits, you will forget about the rabbit
-                trap (my translation).]
-              </p>{' '}
-            </blockquote>
-            <P belowTextParagraph>
+            <Spacer.TextLineToBox />
+            <FigureWithBorder as="blockquote">
+              <FigureWithBorder.Border>
+                <p>
+                  <Kanji>筌者所以在魚、</Kanji>
+                </p>
+                <p>[A fish trap exists to catch fish]</p>
+                <p>
+                  <Kanji>得魚而忘筌。</Kanji>
+                </p>
+                <p>[Thus, once you catch fish, forget about the trap]</p>
+                <p>
+                  <Kanji>蹄者所以在兔、</Kanji>
+                </p>
+                <p>[A rabbit trap exists to catch rabbits]</p>
+                <p>
+                  <Kanji>得兔而忘蹄。</Kanji>
+                </p>
+                <p>[Thus, once you catch rabbits, forget about the trap.]</p>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
+            <Spacer.BoxLineToText />
+            <P>
               The passage reminds us of the importance of remembering the
               purpose (catching fish or rabbits), not the means to achieve it
               (the trap).
