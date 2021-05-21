@@ -3,8 +3,6 @@ import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
 import {
-  cormorant,
-  cormorantSC,
   libreBaskerville,
   playfairDisplay,
   playfairDisplaySC,
@@ -112,14 +110,14 @@ export const kohoan = {
     },
   },
   abbr: {
-    ...cormorantSC,
+    ...playfairDisplaySC,
     letterSpacing: '0.01em',
     textTransform: 'lowercase',
   },
   leadIn: {
-    ...cormorantSC,
-    letterSpacing: '0.01em',
-    wordSpacing: '-0.05em',
+    ...playfairDisplaySC,
+    letterSpacing: '0.01em', // TODO: Adjust this value
+    wordSpacing: '-0.05em', // TODO: Adjust this value
   },
   hr: {
     asteriskHeight: {

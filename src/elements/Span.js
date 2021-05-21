@@ -29,6 +29,11 @@ Span.LeadIn = styled.span`
     letter-spacing: ${ryoanji.leadIn.letterSpacing};
     word-spacing: ${ryoanji.leadIn.wordSpacing};
   }
+  ${Main.Kohoan} & {
+    font-family: ${kohoan.leadIn.fontFamily};
+    letter-spacing: ${kohoan.leadIn.letterSpacing};
+    word-spacing: ${kohoan.leadIn.wordSpacing};
+  }
 `;
 
 Span.propTypes = {

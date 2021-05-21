@@ -18,6 +18,15 @@ describe('Props work as intended', () => {
         word-spacing: -0.05em;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        font-family: 'Playfair Display SC',serif;
+        -webkit-letter-spacing: 0.01em;
+        -moz-letter-spacing: 0.01em;
+        -ms-letter-spacing: 0.01em;
+        letter-spacing: 0.01em;
+        word-spacing: -0.05em;
+      }
+
       <div>
         <span
           class="c0 "

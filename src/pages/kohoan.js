@@ -74,10 +74,12 @@ export default function Kohoan() {
           <Section>
             <Spacer.BoxParagraphToText />
             <P>
-              Koho-an Temple is a hidden gem in Kyoto. It is hidden because it
-              rarely opens its door to the general public (only once in five
-              years or so). It is a gem because its interior and garden design
-              is regarded as the masterpiece of{' '}
+              <Span.LeadIn>
+                Koho-an Temple is a hidden gem in Kyoto.
+              </Span.LeadIn>{' '}
+              It is hidden because it rarely opens its door to the general
+              public (only once in five years or so). It is a gem because its
+              interior and garden design is regarded as the masterpiece of{' '}
               <a href="https://en.wikipedia.org/wiki/Kobori_Ensh%C5%AB">
                 Kobori Enshu
               </a>{' '}
