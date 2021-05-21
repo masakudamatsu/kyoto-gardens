@@ -132,7 +132,7 @@ export const kohoan = {
   },
   kanji: {
     fontFamily: shipporiMincho.fontFamily,
-    fontSize: '1.025em', // Baseline 1px below LibreBaskerville's, Height 2px above Libre Baskerville's cap height
+    fontSize: '1em', // Baseline 1px below LibreBaskerville's, Height 2px above Libre Baskerville's cap height
     fontWeight: 500, // Match Libre Baskerville 400
     lineHeight: 1, // to control side margins
   },

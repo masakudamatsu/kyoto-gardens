@@ -10,7 +10,7 @@ test('renders UI correctly', () => {
   expect(container).toMatchInlineSnapshot(`
     .Main__Kohoan-sc-126eniy-2 .c0 {
       font-family: 'Shippori Mincho',serif;
-      font-size: 1.025em;
+      font-size: 1em;
       font-weight: 500;
     }
 
