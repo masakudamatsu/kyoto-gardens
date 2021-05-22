@@ -155,7 +155,11 @@ export default function Ryoanji() {
                   <Span.NoWrap>Ryoan-ji Rock Garden</Span.NoWrap>
                   <Span.Source as="footer">
                     Adapted from{' '}
-                    <a href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ">
+                    <a
+                      href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
                       Slawson (1987)
                     </a>
                     , p. 96.
@@ -172,6 +176,7 @@ export default function Ryoanji() {
                 (
                 <a
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   Tanaka 2002
@@ -453,6 +458,7 @@ export default function Ryoanji() {
               <Cite.Italic>
                 <a
                   href="https://www.google.co.jp/books/edition/_/M_k4AQAAIAAJ"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   Secret Teachings in the Art of Japanese gardens
@@ -466,6 +472,7 @@ export default function Ryoanji() {
               <Cite.Italic>
                 <a
                   href="https://www.google.co.jp/books/edition/_/rIjoPQAACAAJ?hl=en"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   ‘Nihon Teien’ no Mikata
