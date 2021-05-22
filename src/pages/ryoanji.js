@@ -149,7 +149,7 @@ export default function Ryoanji() {
                   src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
                   width={497}
                   height={313}
-                  alt=""
+                  alt="An architectural drawing shows a bird‘s-eye view of Ryoanji Rock Garden with the temple's veranda below. The gray arrow is drawn on the veranda, pointing vertically towards the center of the garden."
                 />
                 <FigCaption>
                   The floor plan of{' '}
@@ -204,7 +204,7 @@ export default function Ryoanji() {
                   src="/images/ryoanji-banner-summer-large.jpg"
                   width={1882}
                   height={1405}
-                  alt="Central view of Ryoan-ji Zen Garden"
+                  alt="The garden's ground is covered with light gray gravels on which two rocks are placed on a patch of moss on the left, three on the right, and nothing in between."
                   quality={100}
                 />
               </FigureFullbleed>
@@ -225,11 +225,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-look-left-large.jpg"
                   width={1882}
                   height={1405}
-                  alt="Leftward view of Ryoan-ji Zen Garden"
+                  alt="The garden's ground is covered with gravels on which the two rocks are placed on the right, another set of five rocks on the left, and nothing in between."
                   quality={100}
                 />
               </FigureFullbleed>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 Next, I turn my head to the left while sitting in the same
                 viewpoint. There is again nothing in the center of my vision.
@@ -244,11 +244,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-look-right-large.jpg"
                   width={1882}
                   height={1405}
-                  alt="Rightward view of Ryoan-ji Zen Garden"
+                  alt="The garden's ground is covered with gravels on which the three rocks are placed on the left, a pair of rocks on the middle-left, and another group of rocks on the right."
                   quality={100}
                 />
               </FigureFullbleed>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 Finally, I turn my head to the right while still staying at the
                 same viewpoint. There are three groups of rocks, but none of
@@ -275,11 +275,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-middle-left.jpg"
                   width={892}
                   height={442}
-                  alt="The front view of the middle-left group of two rocks in Ryoan-ji Zen Garden"
+                  alt="An elongated large rock on the right and a small one on the middle-left, both on a patch of moth."
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 The middle-left cluster consists of two rocks. There is no
                 center. The right elongated one dominates, but it is located to
@@ -294,11 +294,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-middle-right.jpg"
                   width={747}
                   height={381}
-                  alt="The front view of the middle-right group of three rocks in Ryoan-ji Zen Garden"
+                  alt="A squarish rock stands on the middle left, a smaller rock lies on the back right, an even smaller rock sits on the front right, all on a patch of moss."
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 The middle cluster consists of three rocks. One on the left
                 dominates, but it is again not located at the center but to the
@@ -313,11 +313,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-second-right.jpg"
                   width={706}
                   height={388}
-                  alt="The front view of the second-from-right group of two rocks in Ryoan-ji Zen Garden"
+                  alt="A long medium-sized rock on the left, a smaller angular rock on the right, both on a patch of moss."
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 The middle-right cluster consists of two rocks, each in a
                 peculiar shape. But neither is emphasized more than the other.
@@ -331,11 +331,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-leftmost.jpg"
                   width={1490}
                   height={695}
-                  alt="The front view of the leftmost group of five rocks in Ryoan-ji Zen Garden"
+                  alt="A large rough-looking rock in the middle, flanked by a pair of smaller rocks, all of which sit on a patch of moss. One flat-top rock embedded in the gravel ground to the left of the moss patch, and another to the right."
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 The group of rocks furthest to the the left is the most
                 magnificent composition in this garden if seen from the front of
@@ -354,11 +354,11 @@ export default function Ryoanji() {
                   src="/images/ryoanji-rightmost.jpg"
                   width={1496}
                   height={713}
-                  alt="The front view of the rightmost group of three rocks in Ryoan-ji Zen Garden"
+                  alt="A medium-sized rock sits in the center of a moss patch, flanked by a pair of flat-top rocks embedded in the moss."
                   quality={100}
                 />
               </FigureWithMargin>
-              <Spacer.BoxLineToText image />
+              <Spacer.BoxLineToText />
               <P>
                 The group of rocks furthest to the right is made of three rocks.
                 One large lying stone is flanked by two flat stones. This
