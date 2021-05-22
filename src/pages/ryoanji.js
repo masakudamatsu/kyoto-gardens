@@ -6,6 +6,7 @@ import Carousel from '../blocks/Carousel';
 import Cite from '../elements/Cite';
 import FigCaption from '../elements/FigCaption';
 import Figure from '../blocks/Figure';
+import FigureWithBorder from '../blocks/FigureWithBorder';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
 import H2 from '../elements/H2';
@@ -142,8 +143,8 @@ export default function Ryoanji() {
               floor plan below:
             </P>
             <Spacer.TextLineToBox />
-            <FigureWithMargin>
-              <FigureWithMargin.Border>
+            <FigureWithBorder>
+              <FigureWithBorder.Border>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-jardin-seco-plano-mapa.jpg"
                   width={497}
@@ -165,8 +166,8 @@ export default function Ryoanji() {
                     , p. 96.
                   </Span.Source>
                 </FigCaption>
-              </FigureWithMargin.Border>
-            </FigureWithMargin>
+              </FigureWithBorder.Border>
+            </FigureWithBorder>
             <Spacer.BoxParagraphToText />
             <P>
               My third visit to the garden was different from the previous ones

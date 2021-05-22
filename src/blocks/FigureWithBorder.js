@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Figure from 'src/blocks/Figure';
 import FigCaption from 'src/elements/FigCaption';
 import {kohoan} from 'src/utils/specKohoan';
+import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {setHorizontalSpace} from 'src/utils/designSpec';
@@ -15,26 +16,27 @@ const FigureWithBorder = styled(Figure)`
     ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
+    ${setHorizontalSpace('figure', ryoanji).innerMerged}
+    ${setHorizontalSpace('figure', ryoanji).outer}
   }
 `;
 
 FigureWithBorder.Border = styled.div`
   ${Main.Kohoan} & {
-    ${getBorder(kohoan)}
+    border-bottom: 1px solid ${kohoan.figure.borderColor};
+    border-top: 1px solid ${kohoan.figure.borderColor};
+    padding: ${kohoan.figure.paddingInsideBorder}px;
   }
   ${Main.Ryoanji} & {
+    border-bottom: 1px solid ${ryoanji.figure.borderColor};
+    border-top: 1px solid ${ryoanji.figure.borderColor};
+    padding: ${ryoanji.figure.paddingInsideBorder}px;
+    @media only screen and ${ryoanji.breakpoint.sideMargin} {
+      border-left: 1px solid ${ryoanji.figure.borderColor};
+      border-right: 1px solid ${ryoanji.figure.borderColor};
+    }
   }
 `;
-
-function getBorder(spec) {
-  return css`
-    border-bottom: 1px solid ${spec.figure.borderColor};
-    border-top: 1px solid ${spec.figure.borderColor};
-    padding: ${spec.figure.paddingInsideBorder}px;
-    @media only screen and ${spec.breakpoint.sideMargin} {
-    }
-  `;
-}
 
 FigureWithBorder.FigCaption = styled(FigCaption)``;
 

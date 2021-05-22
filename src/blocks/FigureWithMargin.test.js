@@ -43,42 +43,6 @@ describe('renders UI correctly', () => {
       </div>
       `);
   });
-  test('Border', () => {
-    const {container} = render(<FigureWithMargin.Border />);
-    expect(container).toMatchInlineSnapshot(`
-      .Main__Kohoan-sc-126eniy-2 .c0 {
-        border-bottom: 1px solid rgb(200,200,200);
-        border-top: 1px solid rgb(200,200,200);
-        padding: 15.564px;
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 {
-        border-bottom: 1px solid hsla(193,50%,26%,0.2);
-        border-top: 1px solid hsla(193,50%,26%,0.2);
-        padding: 15.564px;
-      }
-
-      @media only screen and (min-width:30.7948rem) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          border-left: 1px solid rgb(200,200,200);
-          border-right: 1px solid rgb(200,200,200);
-        }
-      }
-
-      @media only screen and (min-width:31.6802rem) {
-        .Main__Ryoanji-sc-126eniy-1 .c0 {
-          border-left: 1px solid hsla(193,50%,26%,0.2);
-          border-right: 1px solid hsla(193,50%,26%,0.2);
-        }
-      }
-
-      <div>
-        <div
-          class="c0 "
-        />
-      </div>
-    `);
-  });
   test('FigCaption', () => {
     const {container} = render(<FigureWithMargin.FigCaption />);
     expect(container).toMatchInlineSnapshot(`

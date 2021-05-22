@@ -19,27 +19,6 @@ const FigureWithMargin = styled(Figure)`
   }
 `;
 
-FigureWithMargin.Border = styled.div`
-  ${Main.Kohoan} & {
-    ${getBorder(kohoan)}
-  }
-  ${Main.Ryoanji} & {
-    ${getBorder(ryoanji)}
-  }
-`;
-
-function getBorder(spec) {
-  return css`
-    border-bottom: 1px solid ${spec.figure.borderColor};
-    border-top: 1px solid ${spec.figure.borderColor};
-    padding: ${spec.figure.paddingInsideBorder}px;
-    @media only screen and ${spec.breakpoint.sideMargin} {
-      border-left: 1px solid ${spec.figure.borderColor};
-      border-right: 1px solid ${spec.figure.borderColor};
-    }
-  `;
-}
-
 FigureWithMargin.FigCaption = styled(FigCaption)`
   ${Main.Kohoan} & {
     ${setHorizontalSpace('text', kohoan).innerMerged}
