@@ -9,10 +9,6 @@ describe('renders UI correctly', () => {
   test('Parent', () => {
     const {container} = render(<FigureWithMargin />);
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        overflow: hidden;
-      }
-
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         margin: 0 auto;
         max-width: 38.9424rem;
@@ -38,10 +34,10 @@ describe('renders UI correctly', () => {
 
       <div>
         <figure
-          class="c0 c1 "
+          class="c0 "
         />
       </div>
-      `);
+    `);
   });
   test('FigCaption', () => {
     const {container} = render(<FigureWithMargin.FigCaption />);

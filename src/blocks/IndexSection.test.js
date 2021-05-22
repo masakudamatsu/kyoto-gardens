@@ -122,15 +122,11 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.Figure {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        overflow: hidden;
-      }
-
-      .c2 {
         margin-top: 60px;
         position: relative;
       }
 
-      .c2::before {
+      .c1::before {
         content: '';
         display: block;
         height: 100%;
@@ -149,7 +145,7 @@ describe('renders UI correctly:', () => {
 
       <div>
         <figure
-          class="c0 c1 c2"
+          class="c0 c1"
         />
       </div>
     `);

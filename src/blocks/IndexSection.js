@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Figure from 'src/blocks/Figure';
 import Kanji from 'src/elements/Kanji';
 
 import {h1FontStyle} from 'src/utils/h1FontStyle';
@@ -91,7 +90,7 @@ IndexSection.Kanji = styled(Kanji)`
   }
 `;
 
-IndexSection.Figure = styled(Figure)`
+IndexSection.Figure = styled.figure`
   margin-top: ${-index.kanji.top}px;
   position: relative;
   /* Scrim */

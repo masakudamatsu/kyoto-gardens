@@ -10,20 +10,17 @@ describe('renders UI correctly', () => {
     const {container} = render(<Carousel />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        overflow: hidden;
-      }
-
-      .c1 {
         height: 74.7078vw;
         max-height: 703px;
         max-width: 941px;
+        overflow: hidden;
         position: relative;
         width: 100%;
       }
 
       <div>
         <figure
-          class="c0 c1"
+          class="c0"
         />
       </div>
     `);

@@ -9,10 +9,6 @@ describe('renders UI correctly', () => {
   test('Parent', () => {
     const {container} = render(<FigureWithBorder />);
     expect(container).toMatchInlineSnapshot(`
-      .c1 {
-        overflow: hidden;
-      }
-
       .Main__Kohoan-sc-126eniy-2 .c0 {
         margin: 0 auto;
         max-width: 38.057rem;
@@ -62,7 +58,7 @@ describe('renders UI correctly', () => {
 
       <div>
         <figure
-          class="c0 c1 "
+          class="c0 "
         />
       </div>
     `);

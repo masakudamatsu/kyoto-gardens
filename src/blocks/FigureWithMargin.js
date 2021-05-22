@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Figure from 'src/blocks/Figure';
 import FigCaption from 'src/elements/FigCaption';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
@@ -10,7 +9,7 @@ import Main from 'src/blocks/Main';
 import {setHorizontalSpace} from 'src/utils/designSpec';
 
 // prettier-ignore
-const FigureWithMargin = styled(Figure)`
+const FigureWithMargin = styled.figure`
   ${Main.Kohoan} & {
   }
   ${Main.Ryoanji} & {
