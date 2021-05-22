@@ -5,7 +5,7 @@ import Article from '../blocks/Article';
 import Carousel from '../blocks/Carousel';
 import Cite from '../elements/Cite';
 import FigCaption from '../elements/FigCaption';
-import Figure from '../blocks/Figure';
+import FigureFullbleed from '../blocks/FigureFullbleed';
 import FigureWithBorder from '../blocks/FigureWithBorder';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import H1 from '../elements/H1';
@@ -199,7 +199,7 @@ export default function Ryoanji() {
             <SubSection>
               <H3>Straight ahead</H3>
               <Spacer.H3LineToBox />
-              <Figure>
+              <FigureFullbleed>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-banner-summer-large.jpg"
                   width={1882}
@@ -207,7 +207,7 @@ export default function Ryoanji() {
                   alt="Central view of Ryoan-ji Zen Garden"
                   quality={100}
                 />
-              </Figure>
+              </FigureFullbleed>
               <Spacer.BoxLineToText image />
               <P>
                 There is no stone at the center of gaze when I look straight
@@ -220,7 +220,7 @@ export default function Ryoanji() {
               {' '}
               <H3>Leftward</H3>
               <Spacer.H3LineToBox />
-              <Figure>
+              <FigureFullbleed>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-left-large.jpg"
                   width={1882}
@@ -228,7 +228,7 @@ export default function Ryoanji() {
                   alt="Leftward view of Ryoan-ji Zen Garden"
                   quality={100}
                 />
-              </Figure>
+              </FigureFullbleed>
               <Spacer.BoxLineToText image />
               <P>
                 Next, I turn my head to the left while sitting in the same
@@ -239,7 +239,7 @@ export default function Ryoanji() {
             <SubSection>
               <H3>Rightward</H3>
               <Spacer.H3LineToBox />
-              <Figure>
+              <FigureFullbleed>
                 <ImageWithPlaceholder
                   src="/images/ryoanji-look-right-large.jpg"
                   width={1882}
@@ -247,7 +247,7 @@ export default function Ryoanji() {
                   alt="Rightward view of Ryoan-ji Zen Garden"
                   quality={100}
                 />
-              </Figure>
+              </FigureFullbleed>
               <Spacer.BoxLineToText image />
               <P>
                 Finally, I turn my head to the right while still staying at the

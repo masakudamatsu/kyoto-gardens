@@ -1,14 +1,14 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import Figure from './Figure';
+import FigureFullbleed from './FigureFullbleed';
 import {color} from 'src/utils/specColor';
 
 const mockProps = {};
 
 describe('renders UI correctly', () => {
-  test('Figure with belowH3 prop', () => {
-    const {container} = render(<Figure />);
+  test('Parent', () => {
+    const {container} = render(<FigureFullbleed />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         overflow: hidden;

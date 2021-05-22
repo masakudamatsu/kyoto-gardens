@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Article from '../blocks/Article';
 import Cite from '../elements/Cite';
 import FigCaption from '../elements/FigCaption';
-import Figure from '../blocks/Figure';
+import FigureFullbleed from '../blocks/FigureFullbleed';
 import FigureWithBorder from '../blocks/FigureWithBorder';
 import FigureWithMargin from '../blocks/FigureWithMargin';
 import ForeignPhrase from '../elements/ForeignPhrase';
@@ -54,7 +54,7 @@ export default function Kohoan() {
       <Main.Kohoan>
         <Article>
           <H1>Koho-an Temple</H1>
-          <Figure>
+          <FigureFullbleed>
             <ImageWithPlaceholder
               kohoan={false}
               src="/kohoan/bosen-garden-view.jpg"
@@ -70,7 +70,7 @@ export default function Kohoan() {
                 </a>
               </Span.Source>
             </FigureWithMargin.FigCaption>
-          </Figure>
+          </FigureFullbleed>
           <Section>
             <Spacer.BoxParagraphToText />
             <P>
@@ -1243,7 +1243,7 @@ export default function Kohoan() {
               the direction they came from, they will see this view:
             </P>
             <Spacer.TextLineToBox />
-            <Figure>
+            <FigureFullbleed>
               <ImageWithPlaceholder
                 kohoan={false} // Emphasis
                 src="/kohoan/bosen-garden-view.jpg"
@@ -1261,7 +1261,7 @@ export default function Kohoan() {
                   )
                 </Span.Source>
               </FigureWithMargin.FigCaption>
-            </Figure>
+            </FigureFullbleed>
             <Spacer.CaptionParagraphToText />
             <P>
               Water surface, represented by the pebbles, and the land beyond,
