@@ -913,7 +913,7 @@ export default function Kohoan() {
                   alt="An anchored, wooden boat of the size for a couple of people is seen below through the water entrance from the inside of the raised-floor of the pavilion."
                 />
 
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   The water entrance hall of Hiun-kaku Pavilion{' '}
                   <Span.Source>
                     (
@@ -922,7 +922,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -964,7 +964,7 @@ export default function Kohoan() {
                   alt="A person enters a teahouse through nijiri-guchi by crouching down and sticking his/her head and hands into the teahouse first, seen from the front and from the side in a black and white architetural illustration."
                 />
 
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   How to enter a teahouse through nijiri-guchi{' '}
                   <Span.Source>
                     (
@@ -973,7 +973,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1042,7 +1042,7 @@ export default function Kohoan() {
                   alt="A tatami-floored room with its backwall partitioned into the wood-floored alcove on the right and the tatami-floored alcove on the left, the latter of which has a tie beam at a higher position and displays a hanging scroll of calligraphy."
                 />
 
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   An example of the Japanese architectural interior with a
                   tokonoma alcove{' '}
                   <Span.Source>
@@ -1052,7 +1052,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1106,7 +1106,7 @@ export default function Kohoan() {
                   alt="A pair of strings is each knotted in the shape of an elongated circle, similar to a rabbit's ear, shown in a black-and-white illustration."
                 />
 
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   Tsuyu-musubi knots{' '}
                   <Span.Source>
                     (
@@ -1115,7 +1115,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1147,9 +1147,7 @@ export default function Kohoan() {
                   </p>
                 </blockquote>
                 <Spacer.BoxLineToText />
-                <FigureWithBorder.FigCaption>
-                  (Translation by author)
-                </FigureWithBorder.FigCaption>
+                <FigCaption>(Translation by author)</FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1185,7 +1183,7 @@ export default function Kohoan() {
                   height={234}
                   alt="The moon is shown side by side with an illustration of a white circle of the same size in which a rabbit holding a pestle and sitting in front of a mortal is drawn in black silhouette."
                 />
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   The Moon and an imaginary rabbit on the moon.{' '}
                   <Span.Source>
                     Adapted from{' '}
@@ -1193,7 +1191,7 @@ export default function Kohoan() {
                       Miura (2020)
                     </a>
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1211,7 +1209,7 @@ export default function Kohoan() {
                   height={427}
                   alt="A Japanese lady is holding a wooden pestle of her arm's length that just landed on mochi in a mortal."
                 />
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   Traditional mochi-making{' '}
                   <Span.Source>
                     (
@@ -1220,7 +1218,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1374,7 +1372,7 @@ export default function Kohoan() {
                   videoId="VQaoRnDjZMw"
                   width={640}
                 />
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   The reflection of water ripples on the ceiling of{' '}
                   <a href="https://narashikanko.or.jp/en/spot/structure/ukimido/">
                     Ukimi-do
@@ -1387,7 +1385,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />
@@ -1417,7 +1415,7 @@ export default function Kohoan() {
                   height={240}
                   alt="A dragon-headed, roofed boat, with a dozen of people on board, is sailing on a lake, with the rising full moon seen in the night sky and its reflection on the lake surface."
                 />
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   The moon-viewing event at Osawa Pond on the Mid-autumn
                   Festival{' '}
                   <Span.Source>
@@ -1427,7 +1425,7 @@ export default function Kohoan() {
                     </a>
                     )
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Hr /> {/* TODO: Fix the space above the asterisks */}
@@ -1458,7 +1456,7 @@ export default function Kohoan() {
                   alt="An architectural drawing of Koho-an seen from above, with arrows overlaid over the stone bridge and the front gate at bottom-left, the straight stone pavement on the left side, the main hall's veranda on the top side, the narrow teahouse garden between the main hall on the left and the temple's bigger garden on the right, and the veranda and the inside of Teahouse Bosen to the left of the end of the teahouse garden."
                 />
 
-                <FigureWithBorder.FigCaption>
+                <FigCaption>
                   Plan of Koho-an Temple with the indication of how this article
                   walked you through{' '}
                   <Span.Source>
@@ -1467,7 +1465,7 @@ export default function Kohoan() {
                       Yamaguchi 2012)
                     </a>
                   </Span.Source>
-                </FigureWithBorder.FigCaption>
+                </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
             <Spacer.BoxParagraphToText />

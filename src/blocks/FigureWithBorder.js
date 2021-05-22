@@ -37,8 +37,6 @@ FigureWithBorder.Border = styled.div`
   }
 `;
 
-FigureWithBorder.FigCaption = styled(FigCaption)``;
-
 FigureWithBorder.propTypes = {};
 
 export default FigureWithBorder;
