@@ -1092,8 +1092,9 @@ export default function Kohoan() {
             </FigureWithMargin>
             <Spacer.CaptionParagraphToText />
             <P>
-              The inscribed Chinese characters read <a>tsuyu-musubi</a>, meaning
-              a form of knots that resemble the ear of a rabbit:
+              The inscribed Chinese characters read{' '}
+              <ForeignPhrase>tsuyu-musubi</ForeignPhrase>, meaning a form of
+              knots that resemble the ear of a rabbit:
             </P>
             <Spacer.TextLineToBox />
             <FigureWithBorder>
