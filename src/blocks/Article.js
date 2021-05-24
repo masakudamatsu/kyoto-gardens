@@ -1,9 +1,8 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint, setSpace} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
-import {getFontSize, getLineHeight} from 'src/utils/fontCssFactory';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
@@ -82,6 +81,20 @@ const Article = styled.article`
 
 Article.Header = styled.header`
   position: relative;
+  ${Main.Kohoan} & {
+    padding-bottom: ${remify(
+      setSpace('mobile', kohoan.article.lineHeightRatio.mobile)
+        .betweenSections -
+        (kohoan.h1.descender.mobile + kohoan.article.ascender.mobile),
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(
+        setSpace('desktop', kohoan.article.lineHeightRatio.desktop)
+          .betweenSections -
+          (kohoan.h1.descender.desktop + kohoan.article.ascender.desktop),
+      )};
+    }
+  }
 `;
 
 Article.propTypes = {};

@@ -208,13 +208,23 @@ describe('renders UI correctly', () => {
   test('Header', () => {
     const {container} = render(<Article.Header />);
     expect(container).toMatchInlineSnapshot(`
-      .c0 {
+      .c1 {
         position: relative;
+      }
+
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        padding-bottom: 2.2951rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding-bottom: 3.1328rem;
+        }
       }
 
       <div>
         <header
-          class="c0"
+          class="c0 c1"
         />
       </div>
     `);

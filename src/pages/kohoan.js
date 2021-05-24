@@ -53,26 +53,31 @@ export default function Kohoan() {
       </Head>
       <Main.Kohoan>
         <Article>
-          <H1>Koho-an Temple</H1>
-          <FigureFullbleed>
-            <ImageWithPlaceholder
-              kohoan={false}
-              src="/kohoan/bosen-garden-view.jpg"
-              width={1200}
-              height={800}
-              alt="A garden is picture-framed with a hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below."
-            />
-            <FigureWithMargin.FigCaption>
-              <Span.Source>
-                Image source:{' '}
-                <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
-                  Kyoto Shunju (2020b)
-                </a>
-              </Span.Source>
-            </FigureWithMargin.FigCaption>
-          </FigureFullbleed>
+          <Article.Header>
+            <FigureFullbleed>
+              <ImageWithPlaceholder
+                kohoan={false}
+                src="/kohoan/bosen-garden-view.jpg"
+                width={1200}
+                height={800}
+                alt="A garden is picture-framed with a hanging paper screen from above, sliding paper screens on both sides, and the wooden veranda from below."
+              />
+              {/*
+              <FigureWithMargin.FigCaption>
+                <Span.Source>
+                  Image source:{' '}
+                  <a href="https://kotonarijuku.kyotoshunju.com/experience/286.html">
+                    Kyoto Shunju (2020b)
+                  </a>
+                </Span.Source>
+              </FigureWithMargin.FigCaption>
+ */}{' '}
+            </FigureFullbleed>
+            <H1.Wrapper>
+              <H1>Koho-an Temple</H1>
+            </H1.Wrapper>
+          </Article.Header>{' '}
           <Section>
-            <Spacer.BoxParagraphToText />
             <P>
               <Span.LeadIn>
                 Koho-an Temple is a hidden gem in Kyoto.
