@@ -18,7 +18,7 @@ const onSurfaceSecondShade = 'rgb(240,240,240)'; /* TODO: Darken this */
 const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
 const onPrimary = '#eee';
-const onPhoto = '#000';
+const onPhoto = '#eee';
 // Patterns
 const lightingOverlay = `linear-gradient(
   35deg,
@@ -149,18 +149,18 @@ export const kohoan = {
       desktop: 'none',
     },
     color: {
-      mobile: onPrimary,
+      mobile: onPhoto,
       desktop: onPhoto,
     },
-    ...playfairDisplaySC,
+    ...playfairDisplay,
     get fontSize() {
       return {
         mobile: getFontSizeFromX(
-          xHeight('mobile') * Math.pow(scale, 2),
+          xHeight('mobile') * Math.pow(scale, 1),
           this.fontMetrics,
         ),
         tablet: getFontSizeFromX(
-          xHeight('mobile') * Math.pow(scale, 3),
+          xHeight('mobile') * Math.pow(scale, 2),
           this.fontMetrics,
         ),
         desktop: getFontSizeFromX(
@@ -174,7 +174,7 @@ export const kohoan = {
     letterSpacig: '0.05em',
     get lineHeight() {
       return getLineHeightFromRatio(
-        {xHeight: 2, betweenLines: 1}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
+        {xHeight: 1, betweenLines: 1},
         this.fontMetrics,
       );
     },
@@ -212,17 +212,20 @@ export const kohoan = {
       };
     },
     textIndent: {
-      mobile: -3,
-      tablet: -6, // Stem is 7px off, but -7 will make it look sticking out
-      desktop: -8,
-      rockGarden: {
-        mobile: 0,
-        tablet: -2,
-        desktop: -2,
-      },
+      mobile: -1,
+      desktop: -3,
     },
     wordSpacing: {
       rockGarden: '-0.2em',
+    },
+    hyphen: {
+      // distance from text box top to the bottom of hyphen
+      mobile: 18.5,
+      desktop: 31.5,
+    },
+    descender: {
+      mobile: 5,
+      desktop: 7,
     },
   },
   h2: {

@@ -15,9 +15,6 @@ export const h1FontStyle = {
     @media only screen and ${kohoan.breakpoint.h1} {
       font-size: ${remify(kohoan.h1.fontSize.tablet)};
     }
-    @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(kohoan.h1.fontSize.desktop)};
-    }
   `,
   ryoanji: css`
     font-family: ${ryoanji.h1.fontFamily};

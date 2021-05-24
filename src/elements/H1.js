@@ -8,6 +8,7 @@ import {h1FontStyle} from 'src/utils/h1FontStyle';
 import {setHorizontalSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
+import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 // Space between J and I: 28px for desktop
@@ -21,6 +22,14 @@ const H1 = styled.h1`
   ${Main.Ryoanji} & {
     ${h1FontStyle.ryoanji}
     ${setHorizontalSpace('text', ryoanji).inner}
+  }
+  ${Main.Kohoan} & {
+    ${h1FontStyle.kohoan}
+    ${setHorizontalSpace('text', kohoan).inner}
+    text-indent: ${remify(kohoan.h1.textIndent.mobile)};
+    @media only screen and ${kohoan.breakpoint.h1} {
+      text-indent: ${remify(kohoan.h1.textIndent.desktop)};
+    }
   }
   display: flex;
   flex-direction: column;
@@ -74,6 +83,21 @@ H1.Wrapper = styled.div`
       padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
       position: absolute;
       z-index: 1;
+    }
+  }
+  ${Main.Kohoan} & {
+    ${setHorizontalSpace('text', kohoan).outer}
+    position: relative;
+    width: 100%;
+    top: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
+    margin-bottom: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
+    @media only screen and ${kohoan.breakpoint.h1} {
+      top: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
+      margin-bottom: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
+    }
+    @media only screen and ${breakpoint.fontSize} {
+      top: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.desktop)};
+      margin-bottom: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.desktop)};
     }
   }
 `;

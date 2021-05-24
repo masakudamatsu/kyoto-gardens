@@ -32,6 +32,20 @@ describe('renders UI correctly', () => {
         max-width: 34.5153rem;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        font-family: 'Playfair Display',serif;
+        font-size: 1.7193rem;
+        font-weight: 400;
+        -webkit-letter-spacing: 0.05em;
+        -moz-letter-spacing: 0.05em;
+        -ms-letter-spacing: 0.05em;
+        letter-spacing: 0.05em;
+        line-height: 1.03;
+        margin: 0 auto;
+        max-width: 34.5153rem;
+        text-indent: -0.0625rem;
+      }
+
       @media only screen and (min-width:38.9424rem) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           font-size: 5.2218rem;
@@ -47,6 +61,24 @@ describe('renders UI correctly', () => {
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           max-width: 42.6366rem;
+        }
+      }
+
+      @media only screen and (min-width:38.057rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          font-size: 2.8654rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          max-width: 42.6366rem;
+        }
+      }
+
+      @media only screen and (min-width:38.057rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          text-indent: -0.1875rem;
         }
       }
 
@@ -126,6 +158,14 @@ describe('renders UI correctly', () => {
         width: 100%;
       }
 
+      .Main__Kohoan-sc-126eniy-2 .c0 {
+        padding: 0 1.0625rem;
+        position: relative;
+        width: 100%;
+        top: -1.5938rem;
+        margin-bottom: -1.5938rem;
+      }
+
       @media only screen and (min-width:31.6802rem) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           padding: 0 2.2135rem;
@@ -148,6 +188,32 @@ describe('renders UI correctly', () => {
           padding-top: 0rem;
           position: absolute;
           z-index: 1;
+        }
+      }
+
+      @media only screen and (min-width:30.7948rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 1.7708rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 0 2.4609rem;
+        }
+      }
+
+      @media only screen and (min-width:38.057rem) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          top: -2.4063rem;
+          margin-bottom: -2.4063rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          top: -2.5938rem;
+          margin-bottom: -2.5938rem;
         }
       }
 
