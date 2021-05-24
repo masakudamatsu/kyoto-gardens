@@ -33,6 +33,7 @@ describe('renders UI correctly', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
+        color: #eee;
         font-family: 'Playfair Display',serif;
         font-size: 1.7193rem;
         font-weight: 400;

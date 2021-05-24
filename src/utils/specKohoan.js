@@ -148,10 +148,7 @@ export const kohoan = {
       mobile: lightingOverlay,
       desktop: 'none',
     },
-    color: {
-      mobile: onPhoto,
-      desktop: onPhoto,
-    },
+    color: '#eee', // match color with body text; #fff will look too bright compared to body text
     ...playfairDisplay,
     get fontSize() {
       return {
