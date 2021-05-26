@@ -4,9 +4,12 @@ import Main from 'src/blocks/Main';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import IndexSection from 'src/blocks/IndexSection';
 import {index} from 'src/utils/specIndex';
+import SiteTitle from 'src/components/SiteTitle';
 import Spacer from 'src/elements/Spacer';
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
+import VisuallyHidden from 'src/elements/VisuallyHidden';
+
 const webfont = {
   server: 'https://fonts.gstatic.com',
   stylesheet:
@@ -37,6 +40,8 @@ function HomePage() {
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
       <Main.Index>
+        <VisuallyHidden as="h1">Translating Japanese Gardens</VisuallyHidden>
+        <SiteTitle ariaHidden />
         <IndexSection>
           <IndexSection.H2>
             <span>circa</span> 1499

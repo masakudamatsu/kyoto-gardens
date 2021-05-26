@@ -6,12 +6,28 @@ const GlobalStyle = createGlobalStyle`
 /* Self-hosted fonts */
 @font-face {
   font-family: 'Reforma 1918';
-  src: url('/fonts/Reforma1918-Blanca.woff2');
-  font-weight: regular;
+  src: url('Reforma1918/Reforma1918-Blanca.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('Reforma1918/Reforma1918-Blanca.woff') format('woff'), /* Modern Browsers */
+       url('Reforma1918/Reforma1918-Blanca.eot') format('woff'),
+       url('Reforma1918/Reforma1918-Blanca.ttf') format('truetype');	 /* Safari, Android, iOS */
   font-style: normal;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
   font-display: swap;
 }
-  
+
+@font-face {
+  font-family: 'Reforma 1918';
+  src: url('Reforma1918/Reforma1918-Gris.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('Reforma1918/Reforma1918-Gris.woff') format('woff'), /* Modern Browsers */
+       url('Reforma1918/Reforma1918-Gris.eot') format('woff'),
+       url('Reforma1918/Reforma1918-Gris.ttf') format('truetype');	 /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
 /*!
  * ress.css • v3.0.1
  * MIT License
