@@ -1,16 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import {render, screen} from '@testing-library/react';
+import {render} from '@testing-library/react';
 
-import {cssVisuallyHidden} from './cssVisuallyHidden';
+import VisuallyHidden from './VisuallyHidden';
 
-test('applies CSS declarations as expected', () => {
-  const MockComponent = styled.h1`
-    ${cssVisuallyHidden}
-  `;
-
-  const {container} = render(<MockComponent data-testid="mock-component" />);
-
+test('renders UI correctly', () => {
+  const {container} = render(<VisuallyHidden />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       -webkit-clip: rect(1px 1px 1px 1px);
@@ -29,7 +23,6 @@ test('applies CSS declarations as expected', () => {
     <div>
       <h1
         class="c0"
-        data-testid="mock-component"
       />
     </div>
   `);

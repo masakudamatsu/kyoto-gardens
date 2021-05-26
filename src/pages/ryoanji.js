@@ -20,7 +20,7 @@ import Hr from '../elements/Hr';
 import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
-
+import VisuallyHidden from '../elements/VisuallyHidden';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 export default function Ryoanji() {
@@ -104,7 +104,7 @@ export default function Ryoanji() {
             </Carousel>
           </Article.Header>
           <Section>
-            <H2 visuallyHidden>Introduction</H2>
+            <VisuallyHidden as="h2">Introduction</VisuallyHidden>
             <Spacer.BoxParagraphToText />
             <P>
               <Span.LeadIn>Pick any</Span.LeadIn> travel guide for Kyoto. I’m
