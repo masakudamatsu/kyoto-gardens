@@ -2,10 +2,43 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Kanji from 'src/elements/Kanji';
-
-import {h1FontStyle} from 'src/utils/h1FontStyle';
+import {getFontSizeFromX} from 'src/utils/fontCssFactory';
+import {scale, xHeight} from 'src/utils/designSpec';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
+import {kohoan} from 'src/utils/specKohoan';
+import {ryoanji} from 'src/utils/specRyoanji';
+
+const latinFontStyle = {
+  kohoan: css`
+    font-family: ${kohoan.h1.fontFamily};
+    font-size: ${remify(
+      getFontSizeFromX(
+        xHeight('mobile') * Math.pow(scale, 2),
+        kohoan.h1.fontMetrics,
+      ),
+    )};
+    font-weight: ${kohoan.h1.fontWeight};
+    letter-spacing: ${kohoan.h1.letterSpacig};
+    line-height: ${kohoan.h1.lineHeight};
+    transform: translateX(
+      5px
+    ); /* text-indent won't work with right-aligned text */
+  `,
+  ryoanji: css`
+    font-family: ${ryoanji.h1.fontFamily};
+    font-size: ${remify(
+      getFontSizeFromX(
+        xHeight('mobile') * Math.pow(scale, 2),
+        ryoanji.h1.fontMetrics,
+      ),
+    )};
+    font-weight: ${ryoanji.h1.fontWeight};
+    letter-spacing: ${ryoanji.h1.letterSpacig};
+    line-height: ${ryoanji.h1.lineHeight};
+    text-indent: -5px;
+  `,
+};
 
 const IndexSection = styled.section`
   display: flex;
@@ -27,6 +60,7 @@ const IndexSection = styled.section`
 `;
 
 const h2FontStyle = css`
+  color: ${index.h2.color};
   font-family: ${index.h2.fontFamily};
   font-size: ${remify(index.h2.fontSize.mobile)};
   font-weight: ${index.h2.fontWeight};
@@ -38,7 +72,11 @@ IndexSection.H2 = styled.h2`
   padding-bottom: 0;
   padding-left: ${index.h2.paddingSide}px;
   padding-right: ${index.h2.paddingSide}px;
-  padding-top: ${-index.kanji.top}px;
+  padding-top: ${-index.kanji.top.mobile - index.h2.ascender.mobile}px;
+  @media only screen and ${index.kanji.breakpoint} {
+    font-size: ${remify(index.h2.fontSize.tablet)};
+    padding-top: ${-index.kanji.top.tablet - index.h2.ascender.tablet}px;
+  }
 `;
 
 IndexSection.Card = styled.div`
@@ -70,7 +108,7 @@ IndexSection.Card = styled.div`
 IndexSection.Kanji = styled(Kanji)`
   color: ${index.kanji.color};
   font-family: ${index.kanji.fontFamily};
-  font-size: ${index.kanji.fontSize};
+  font-size: ${index.kanji.fontSize.mobile};
   font-weight: ${index.kanji
     .fontWeight}; /* to match with stroke width of Cormorant Garamond SemiBold (600) */
   line-height: ${index.kanji.lineHeight};
@@ -87,11 +125,17 @@ IndexSection.Kanji = styled(Kanji)`
     left: 0;
     right: auto;
   }
+  @media only screen and ${index.kanji.breakpoint} {
+    font-size: ${index.kanji.fontSize.tablet};
+  }
 `;
 
 IndexSection.Figure = styled.figure`
-  margin-top: ${-index.kanji.top}px;
+  margin-top: ${-index.kanji.top.mobile}px;
   position: relative;
+  @media only screen and ${index.kanji.breakpoint} {
+    margin-top: ${-index.kanji.top.tablet}px;
+  }
   /* Scrim */
   &::before {
     content: '';
@@ -114,12 +158,13 @@ IndexSection.Figure = styled.figure`
 `;
 
 IndexSection.Latin = styled.p`
+  /* Font */
   color: ${index.latin.color};
+  ${({gardenName}) => latinFontStyle[gardenName]}
+  /* Layout */
   margin-top: ${index.latin.marginTop}px;
-  padding: 0 ${index.latin.paddingSide}px;
   position: relative;
   z-index: 2; /* above scrim */
-  ${({gardenName}) => h1FontStyle[gardenName]}
   ${IndexSection}:nth-of-type(odd) & {
     text-align: left;
   }
@@ -133,13 +178,15 @@ IndexSection.Latin.propTypes = {
 };
 
 IndexSection.P = styled.p`
-  font-family: ${index.p.fontFamily};
-  font-size: ${remify(index.p.fontSize.mobile)};
-  padding: 0 ${index.p.paddingSide}px;
+  font-family: ${index.article.fontFamily};
+  font-size: ${remify(index.article.fontSize.mobile)};
+  line-height: ${index.article.lineHeight.mobile};
   ${IndexSection}:nth-of-type(odd) & {
+    padding-right: ${index.p.paddingSide}px;
     text-align: left;
   }
   ${IndexSection}:nth-of-type(even) & {
+    padding-left: ${index.p.paddingSide}px;
     text-align: right;
   }
 `;

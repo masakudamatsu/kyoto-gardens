@@ -55,14 +55,22 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.H2 {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        color: hsla(193,50%,26%,0.9);
         font-family: 'Reforma 1918',serif;
-        font-size: 1.8218rem;
+        font-size: 1.0931rem;
         font-weight: 600;
         font-style: italic;
         padding-bottom: 0;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 60px;
+        padding-top: 54px;
+      }
+
+      @media only screen and (min-width:25.625rem) {
+        .c0 {
+          font-size: 1.8218rem;
+          padding-top: 72px;
+        }
       }
 
       <div>
@@ -108,7 +116,7 @@ describe('renders UI correctly:', () => {
 
       .c0 a:focus::after,
       .c0 a:hover::after {
-        background-color: rgba(0,0,0,0.1);
+        background-color: hsla(193,50%,26%,0.2);
       }
 
       <div>
@@ -122,7 +130,7 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.Figure {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        margin-top: 60px;
+        margin-top: 65px;
         position: relative;
       }
 
@@ -136,11 +144,17 @@ describe('renders UI correctly:', () => {
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(odd) .c0::before {
-        background-image: linear-gradient( to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 98% ), linear-gradient( to top right, rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) );
+        background-image: linear-gradient( to top right, rgba(255,255,255,0) 75%, rgba(255,255,255,0.8) );
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0::before {
-        background-image: linear-gradient( to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 98% ), linear-gradient( to top left, rgba(255,255,255,0) 80%, rgba(255,255,255,0.8) );
+        background-image: linear-gradient( to top left, rgba(255,255,255,0) 75%, rgba(255,255,255,0.8) );
+      }
+
+      @media only screen and (min-width:25.625rem) {
+        .c1 {
+          margin-top: 90px;
+        }
       }
 
       <div>
@@ -169,7 +183,7 @@ describe('renders UI correctly:', () => {
       .c2 {
         color: #0a0a0a;
         font-family: 'Shippori Mincho B1',serif;
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 500;
         line-height: 1;
         padding: 10px;
@@ -191,6 +205,12 @@ describe('renders UI correctly:', () => {
         right: auto;
       }
 
+      @media only screen and (min-width:25.625rem) {
+        .c2 {
+          font-size: 3em;
+        }
+      }
+
       <div>
         <span
           class="c0 c1 c2"
@@ -204,8 +224,7 @@ describe('renders UI correctly:', () => {
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         color: #0a0a0a;
-        margin-top: -40px;
-        padding: 0 10px;
+        margin-top: 0px;
         position: relative;
         z-index: 2;
       }
@@ -231,14 +250,16 @@ describe('renders UI correctly:', () => {
       .c1 {
         font-family: 'Reforma 1918',serif;
         font-size: 1.0931rem;
-        padding: 0 10px;
+        line-height: 1.5795;
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
+        padding-right: 10px;
         text-align: left;
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
+        padding-left: 10px;
         text-align: right;
       }
 

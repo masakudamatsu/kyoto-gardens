@@ -28,6 +28,18 @@ const GlobalStyle = createGlobalStyle`
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Reforma 1918';
+  src: url('Reforma1918/Reforma1918-GrisItalica.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('Reforma1918/Reforma1918-GrisItalica.woff') format('woff'), /* Modern Browsers */
+       url('Reforma1918/Reforma1918-GrisItalica.eot') format('woff'),
+       url('Reforma1918/Reforma1918-GrisItalica.ttf') format('truetype');	 /* Safari, Android, iOS */
+  font-style: italic;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
 /*!
  * ress.css • v3.0.1
  * MIT License

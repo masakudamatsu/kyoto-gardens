@@ -1,0 +1,99 @@
+import React from 'react';
+import styled, {css} from 'styled-components';
+import PropTypes from 'prop-types';
+import {index} from 'src/utils/specIndex';
+import remify from 'src/utils/remify';
+import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
+
+import SiteTitle from 'src/components/SiteTitle';
+
+const FooterStyled = styled.footer`
+  background-color: ${index.article.backgroundColor};
+  clear: both;
+  margin: 0 auto;
+  padding-top: ${index.article.paddingTop};
+  ${getPaddingBottom(index)}
+`;
+
+const DropCap = styled(SiteTitle)`
+  fill: ${index.article.color};
+  float: left;
+  transform: translate(-8px, 15px);
+  width: 160px;
+  @media only screen and ${index.breakpoint.sideMargin} {
+    width: 253px;
+    transform: translate(-10px, 0px);
+  }
+  @media only screen and ${breakpoint.fontSize} {
+    width: 364px;
+    transform: translate(-10px, 0px);
+  }
+`;
+
+const ParagraphStyled = styled.p`
+  /* font */
+  color: ${index.article.color};
+  font-family: ${index.article.fontFamily};
+  font-size: ${remify(index.article.fontSize.mobile)};
+  font-weight: ${index.article.fontWeight};
+  line-height: ${index.article.lineHeight.mobile};
+  @media only screen and ${breakpoint.fontSize} {
+    font-size: ${remify(index.article.fontSize.desktop)};
+  }
+  ${setHorizontalSpace('text', index).innerMerged}
+  ${setHorizontalSpace('text', index).outer}
+  text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
+  & + & {
+    padding-top: ${remify(
+      setSpace('mobile', index.article.lineHeightRatio.mobile)
+        .betweenParagraphs - index.article.descender.mobile,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-top: ${remify(
+        setSpace('desktop', index.article.lineHeightRatio.desktop)
+          .betweenParagraphs - index.article.descender.desktop,
+      )};
+    }
+  }
+`;
+
+const Small = styled.small`
+  font-size: ${index.small.fontSize};
+`;
+
+const Footer = () => {
+  return (
+    <FooterStyled>
+      <ParagraphStyled>
+        <DropCap /> presents alternative takes on historical gardens in Japan,
+        attempting to uncover the intentions of their design. It is a one-person
+        project: articles are written, photographs taken (unless otherwise
+        indicated), and web pages designed and coded, by Masa Kudamatsu, a
+        native Japanese speaker who loves living in Kyoto for its amazing
+        gardens.
+      </ParagraphStyled>
+      <ParagraphStyled centerAligned>
+        <Small>&copy; 2021 Masayuki Kudamatsu. All rights reserved.</Small>
+      </ParagraphStyled>
+    </FooterStyled>
+  );
+};
+
+Footer.propTypes = {};
+
+export default Footer;
+
+function getPaddingBottom(spec) {
+  return css`
+    padding-bottom: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenSections -
+        spec.article.descender.mobile,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
+          .betweenSections - spec.article.descender.desktop,
+      )};
+    }
+  `;
+}

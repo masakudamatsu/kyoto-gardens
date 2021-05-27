@@ -1,5 +1,6 @@
 import Head from 'next/head';
 
+import Footer from 'src/components/Footer';
 import Main from 'src/blocks/Main';
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import IndexSection from 'src/blocks/IndexSection';
@@ -43,9 +44,7 @@ function HomePage() {
         <VisuallyHidden as="h1">Translating Japanese Gardens</VisuallyHidden>
         <SiteTitle ariaHidden />
         <IndexSection>
-          <IndexSection.H2>
-            <span>circa</span> 1499
-          </IndexSection.H2>
+          <IndexSection.H2>c.1499</IndexSection.H2>
           <IndexSection.Card>
             <IndexSection.Figure>
               <ImageWithPlaceholder
@@ -91,6 +90,7 @@ function HomePage() {
           </IndexSection.Card>
         </IndexSection>
       </Main.Index>
+      <Footer />
     </>
   ); // see https://codepen.io/masakudamatsu/pen/QWpbELb
 }
