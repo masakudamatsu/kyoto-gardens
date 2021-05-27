@@ -97,23 +97,21 @@ export default function Kohoan() {
             </P>
             <Spacer.TextParagraphToText />
             <P>
-              In December 2020, I had a precious opportunity to visit Koho-an
-              Temple and attend a little tea ceremony at its teahouse Bosen.
-              Based on this personal experience as well as several accounts of
-              Koho-an Temple's design, I've figured out what Enshu attempted to
-              deliever through his design of Koho-an Temple: it simulates a
-              sailing trip, starting at sunset, to see the full moon reflected
-              on the water surface of{' '}
-              <a href="https://en.wikipedia.org/wiki/Lake_Biwa">Lake Biwa</a>,
-              the ocean-like massive lake in Enshu's hometown.
+              In December 2020, I had a rare opportunity to visit Koho-an Temple
+              and attend a tea ceremony at its teahouse Bosen. I found the
+              temple's garden fully integrated into the building that it
+              surrounds, more than any other Japanese gardens I have ever seen.
             </P>
             <Spacer.TextParagraphToText />
             <P>
-              Koho-an Temple's garden is fully integrated into the building that
-              it surrounds, more than any other Japanese gardens. In this
-              article, I'll take you to a virtual visit to the temple, with
+              Below I'll take you to a virtual visit to the temple, with
               pictures mostly collected throughout the web (taking photo wasn't
-              allowed during my visit, except for the entrance garden).
+              allowed during my visit, except for the entrance garden). At the
+              same time, I'll explain what I think is the intention behind the
+              temple's design: simulating a sailing trip to see the full moon
+              reflected on the water surface of{' '}
+              <a href="https://en.wikipedia.org/wiki/Lake_Biwa">Lake Biwa</a>,
+              the ocean-like massive lake in Enshu's hometown.
             </P>
           </Section>
           <Section>
