@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Kanji from 'src/elements/Kanji';
 
 import {h1FontStyle} from 'src/utils/h1FontStyle';
-import {breakpoint, setSpace} from 'src/utils/designSpec';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
 

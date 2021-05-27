@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {header} from 'src/utils/specLayout';
@@ -6,6 +6,7 @@ import {index} from 'src/utils/specIndex';
 import {mediaQuery} from 'src/utils/mediaQuery';
 import remify from 'src/utils/remify';
 import {scale} from 'src/utils/specFont';
+import {breakpoint, setSpace} from 'src/utils/designSpec';
 
 import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
@@ -38,7 +39,23 @@ Main.Kohoan = styled(Main)`
 Main.Index = styled(Main)`
   margin: 0 auto;
   max-width: ${remify(index.main.maxWidth)};
+  ${getPaddingBottom(index)}
 `;
+
+function getPaddingBottom(spec) {
+  return css`
+    padding-bottom: ${remify(
+      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenSections -
+        spec.article.descender.mobile,
+    )};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(
+        setSpace('desktop', spec.article.lineHeightRatio.desktop)
+          .betweenSections - spec.article.descender.desktop,
+      )};
+    }
+  `;
+}
 
 Main.propTypes = {};
 

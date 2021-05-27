@@ -54,6 +54,13 @@ describe('renders UI correctly', () => {
       .c0 {
         margin: 0 auto;
         max-width: 51.875rem;
+        padding-bottom: 3.6892rem;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          padding-bottom: 5.013rem;
+        }
       }
 
       <div>
