@@ -29,26 +29,31 @@ test('renders UI correctly', () => {
         >
           Translating Japanese Gardens
         </title>
-        <text
-          id="Translating"
-          x="19"
-          y="58"
-        >
-          Translating
-        </text>
-        <text
-          id="Japanese"
-          x="109.896"
-          y="107"
-        >
-          Japanese
-        </text>
-        <text
-          id="Gardens"
-          x="47.12"
-          y="163"
-        >
-          Gardens
+        <text>
+          <tspan
+            dx="0 1 2 -2 -2 0 0 -1 1 -1 -2"
+            id="Translating"
+            x="19"
+            y="58"
+          >
+            Translating
+          </tspan>
+          <tspan
+            dx="0 -1 -1 -1 -2 -2 0 -1"
+            id="Japanese"
+            x="109.896"
+            y="107"
+          >
+            Japanese
+          </tspan>
+          <tspan
+            dx="0 -1 -1 0 -2 -1 -2"
+            id="Gardens"
+            x="47.12"
+            y="163"
+          >
+            Gardens
+          </tspan>
         </text>
       </svg>
     </div>
