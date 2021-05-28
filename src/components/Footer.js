@@ -5,17 +5,19 @@ import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
 import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
 
+import {colour} from 'src/utils/colorScheme';
+
 import SiteTitle from 'src/components/SiteTitle';
 
 const FooterStyled = styled.footer`
-  background-color: ${index.article.backgroundColor};
+  background-color: ${colour.index.footer.background};
   margin: 0 auto;
   padding-top: ${index.article.paddingTop};
   ${getPaddingBottom(index)}
 `;
 
 const DropCap = styled(SiteTitle)`
-  fill: ${index.article.color};
+  fill: ${colour.index.footer.color};
   float: left;
   transform: translate(-8px, 15px);
   width: 160px;
@@ -31,7 +33,7 @@ const DropCap = styled(SiteTitle)`
 
 const ParagraphStyled = styled.p`
   /* font */
-  color: ${index.article.color};
+  color: ${colour.index.footer.color};
   font-family: ${index.article.fontFamily};
   font-size: ${remify(index.article.fontSize.mobile)};
   font-weight: ${index.article.fontWeight};

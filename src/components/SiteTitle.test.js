@@ -10,7 +10,7 @@ test('renders UI correctly', () => {
   const {container} = render(<SiteTitle {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      fill: #215563;
+      fill: hsla(193,50%,26%,0.9);
       font-family: 'Reforma 1918';
       font-size: 48px;
       font-weight: 500;

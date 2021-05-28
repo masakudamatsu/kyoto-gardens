@@ -52,10 +52,17 @@ describe('renders UI correctly', () => {
     const {container} = render(<Main.Index {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
+        background-color: rgb(255,255,255);
+        color: rgb(10,10,10);
         margin: 0 auto;
         max-width: 51.875rem;
         overflow: hidden;
         padding-bottom: 3.3203rem;
+      }
+
+      .c0 a,
+      .c0 a:visited {
+        color: rgb(10,10,10);
       }
 
       @media only screen and (min-width:728px) {

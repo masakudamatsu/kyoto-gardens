@@ -50,7 +50,43 @@ const lighting = `linear-gradient(
 )`;
 
 export const colour = {
-  index: {},
+  global: {
+    background: background, // TODO: change this to match with header/footer's background
+  },
+  index: {
+    figure: {
+      scrim: {
+        right: `linear-gradient(
+          to top right,
+          rgba(255, 255, 255, 0) 75%,
+          rgba(255, 255, 255, 0.8)
+        )`,
+        left: `linear-gradient(
+          to top left,
+          rgba(255, 255, 255, 0) 75%,
+          rgba(255, 255, 255, 0.8)
+        )`,
+      },
+    },
+    footer: {
+      background: primary,
+      color: onPrimary,
+      overlay: lighting,
+    },
+    h1: {
+      color: primary,
+    },
+    h2: {
+      color: primary,
+    },
+    link: {
+      onHoverBackground: primaryShade,
+    },
+    main: {
+      background: surface,
+      color: onSurface,
+    },
+  },
   kohoan: {},
   ryoanji: {
     article: {

@@ -55,7 +55,6 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.H2 {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        color: hsla(193,50%,26%,0.9);
         font-family: 'Reforma 1918',serif;
         font-size: 1.0931rem;
         font-weight: 600;
@@ -181,7 +180,6 @@ describe('renders UI correctly:', () => {
       }
 
       .c2 {
-        color: #0a0a0a;
         font-family: 'Shippori Mincho B1',serif;
         font-size: 2em;
         font-weight: 500;
@@ -223,7 +221,6 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.Latin />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        color: #0a0a0a;
         margin-top: 0px;
         position: relative;
         z-index: 2;

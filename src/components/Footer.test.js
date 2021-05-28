@@ -11,7 +11,7 @@ test('renders UI correctly', () => {
   const {container} = render(<Footer {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c3 {
-      fill: #215563;
+      fill: hsla(193,50%,26%,0.9);
       font-family: 'Reforma 1918';
       font-size: 48px;
       font-weight: 500;
@@ -30,7 +30,7 @@ test('renders UI correctly', () => {
     }
 
     .c4 {
-      fill: #fff;
+      fill: rgb(238,238,238);
       float: left;
       -webkit-transform: translate(-8px,15px);
       -ms-transform: translate(-8px,15px);
@@ -39,7 +39,7 @@ test('renders UI correctly', () => {
     }
 
     .c2 {
-      color: #fff;
+      color: rgb(238,238,238);
       font-family: 'Reforma 1918',serif;
       font-size: 1.0931rem;
       font-weight: 300;
@@ -55,7 +55,7 @@ test('renders UI correctly', () => {
     }
 
     .c6 {
-      color: #fff;
+      color: rgb(238,238,238);
       font-family: 'Reforma 1918',serif;
       font-size: 1.0931rem;
       font-weight: 300;

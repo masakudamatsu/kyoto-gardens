@@ -10,6 +10,8 @@ import {breakpoint, setSpace} from 'src/utils/designSpec';
 
 import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
+import {colour} from 'src/utils/colorScheme';
+
 const Main = styled.main`
   /* uncomment these once the top bar is introduced
   padding-top: ${remify(header.height + header.borderBottomWidth)};
@@ -37,10 +39,16 @@ Main.Kohoan = styled(Main)`
 `;
 
 Main.Index = styled(Main)`
+  background-color: ${colour.index.main.background};
+  color: ${colour.index.main.color};
   margin: 0 auto;
   max-width: ${remify(index.main.maxWidth)};
   overflow: hidden; /* to set height large enough to contain floated child elements; see https://www.internetingishard.com/html-and-css/floats/#floats-for-grids */
   ${getPaddingBottom(index)}
+  & a,
+  & a:visited {
+    color: ${colour.index.main.color};
+  }
 `;
 
 function getPaddingBottom(spec) {

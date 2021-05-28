@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import {colour} from 'src/utils/colorScheme';
+
 const Svg = styled.svg`
-  fill: #215563;
+  fill: ${colour.index.h1.color};
   font-family: 'Reforma 1918';
   font-size: 48px;
   font-weight: 500;

@@ -9,6 +9,8 @@ import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
+import {colour} from 'src/utils/colorScheme';
+
 const latinFontStyle = {
   kohoan: css`
     font-family: ${kohoan.h1.fontFamily};
@@ -60,7 +62,6 @@ const IndexSection = styled.section`
 `;
 
 const h2FontStyle = css`
-  color: ${index.h2.color};
   font-family: ${index.h2.fontFamily};
   font-size: ${remify(index.h2.fontSize.mobile)};
   font-weight: ${index.h2.fontWeight};
@@ -101,12 +102,11 @@ IndexSection.Card = styled.div`
   }
   & a:focus::after,
   & a:hover::after {
-    background-color: ${index.card.backgroundColorOnHover};
+    background-color: ${colour.index.link.onHoverBackground};
   }
 `;
 
 IndexSection.Kanji = styled(Kanji)`
-  color: ${index.kanji.color};
   font-family: ${index.kanji.fontFamily};
   font-size: ${index.kanji.fontSize.mobile};
   font-weight: ${index.kanji
@@ -147,19 +147,18 @@ IndexSection.Figure = styled.figure`
   }
   ${IndexSection}:nth-of-type(odd) & {
     &::before {
-      background-image: ${index.figure.scrim.odd};
+      background-image: ${colour.index.figure.scrim.right};
     }
   }
   ${IndexSection}:nth-of-type(even) & {
     &::before {
-      background-image: ${index.figure.scrim.even};
+      background-image: ${colour.index.figure.scrim.left};
     }
   }
 `;
 
 IndexSection.Latin = styled.p`
   /* Font */
-  color: ${index.latin.color};
   ${({gardenName}) => latinFontStyle[gardenName]}
   /* Layout */
   margin-top: ${index.latin.marginTop}px;

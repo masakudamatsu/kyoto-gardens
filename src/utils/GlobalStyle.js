@@ -1,6 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-
-import {color} from './specColor';
+import {colour} from 'src/utils/colorScheme';
 
 const GlobalStyle = createGlobalStyle`
 /* Self-hosted fonts */
@@ -355,7 +354,7 @@ input {
 }
 
 :root { /* The background-color on the body element won't spread over the entire page for some reason. */
-  background-color: ${color.body.background};
+  background-color: ${colour.global.background};
 }
 `;
 
