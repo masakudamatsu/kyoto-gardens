@@ -32,8 +32,8 @@ const FigCaption = styled.figcaption`
     & a {
       ${cssLinkText({
         backgroundColor: 'transparent',
-        backgroundColorOnHover: kohoan.link.backgroundOnHover,
-        linkTextColor: kohoan.link.color,
+        backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
+        linkTextColor: colour.kohoan.link.color,
         baselinePosition: kohoan.figCaption.baselinePosition.mobile,
         lineWidth: kohoan.link.lineWidth,
         spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
@@ -41,8 +41,8 @@ const FigCaption = styled.figcaption`
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
           backgroundColor: 'transparent',
-          backgroundColorOnHover: kohoan.link.backgroundOnHover,
-          linkTextColor: kohoan.link.color,
+          backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
+          linkTextColor: colour.kohoan.link.color,
           baselinePosition: kohoan.figCaption.baselinePosition.desktop,
           lineWidth: kohoan.link.lineWidth,
           spaceBelowBaseline: kohoan.link.spaceBelowBaseline.figCaption.desktop,
@@ -56,7 +56,7 @@ const FigCaption = styled.figcaption`
       ${cssLinkText({
         backgroundColor: 'transparent',
         backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
-        linkTextColor: ryoanji.link.color,
+        linkTextColor: colour.ryoanji.link.color,
         baselinePosition: ryoanji.figCaption.baselinePosition.mobile,
         lineWidth: ryoanji.link.lineWidth,
         spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
@@ -64,8 +64,8 @@ const FigCaption = styled.figcaption`
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
           backgroundColor: 'transparent',
-          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
-          linkTextColor: ryoanji.link.color,
+          backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
+          linkTextColor: colour.ryoanji.link.color,
           baselinePosition: ryoanji.figCaption.baselinePosition.desktop,
           lineWidth: ryoanji.link.lineWidth,
           spaceBelowBaseline:

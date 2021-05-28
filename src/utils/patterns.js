@@ -1,6 +1,4 @@
 import {css} from 'styled-components';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 
 import {colour} from 'src/utils/colorScheme';
 
@@ -28,8 +26,8 @@ const concentricCircle = (scale = 1) => {
 };
 
 export const seigaihaPattern = css`
-  background-color: ${kohoan.background
-    .backgroundColor}; /* fall back for Opera Mini */
+  background-color: ${colour.kohoan.pattern
+    .background}; /* fall back for Opera Mini */
   background-image: radial-gradient(
       circle farthest-side at 50% 150%,
       ${concentricCircle(2 / 3)}

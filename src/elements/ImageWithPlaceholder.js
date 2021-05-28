@@ -46,7 +46,6 @@ const Placeholder = styled(P)`
     height: calc(100% - ${ryoanji.figure.spaceBelowByBug.desktop}px);
   }
   ${Main.Kohoan} & {
-    color: ${kohoan.figure.color};
     ${seigaihaPattern}
   }
   ${Main.Ryoanji} & {
