@@ -71,7 +71,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:link,
       .Main__Ryoanji-sc-126eniy-1 .c0 a:visited {
-        background: rgb(240,240,240);
+        background: hsla(193,50%,26%,0.2);
         background: linear-gradient( to bottom,currentColor 100%,currentColor );
         background-position: 0 1.3125rem;
         background-repeat: no-repeat;
@@ -85,7 +85,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
       .Main__Ryoanji-sc-126eniy-1 .c0 a:hover {
-        background: rgb(240,240,240);
+        background: hsla(193,50%,26%,0.2);
         outline: none;
         text-shadow: none;
       }
@@ -96,7 +96,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:focus,
       .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:hover {
-        background: rgb(240,240,240);
+        background: hsla(193,50%,26%,0.2);
         outline: none;
         text-shadow: none;
       }
@@ -160,7 +160,7 @@ describe('Parent chnages UI by prop value', () => {
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 a:link,
         .Main__Ryoanji-sc-126eniy-1 .c0 a:visited {
-          background: rgb(240,240,240);
+          background: hsla(193,50%,26%,0.2);
           background: linear-gradient( to bottom,currentColor 100%,currentColor );
           background-position: 0 1.625rem;
           background-repeat: no-repeat;
@@ -174,7 +174,7 @@ describe('Parent chnages UI by prop value', () => {
 
         .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
         .Main__Ryoanji-sc-126eniy-1 .c0 a:hover {
-          background: rgb(240,240,240);
+          background: hsla(193,50%,26%,0.2);
           outline: none;
           text-shadow: none;
         }
@@ -185,7 +185,7 @@ describe('Parent chnages UI by prop value', () => {
 
         .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:focus,
         .Main__Ryoanji-sc-126eniy-1 .c0 a:visited:hover {
-          background: rgb(240,240,240);
+          background: hsla(193,50%,26%,0.2);
           outline: none;
           text-shadow: none;
         }

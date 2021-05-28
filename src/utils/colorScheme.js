@@ -123,7 +123,7 @@ export const colour = {
     },
     link: {
       color: 'inherit',
-      onHoverBackground: surfaceShade,
+      onHoverBackground: primaryShade,
     },
     pattern: {
       background: background,

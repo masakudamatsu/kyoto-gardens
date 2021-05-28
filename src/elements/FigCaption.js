@@ -8,6 +8,8 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
+import {colour} from 'src/utils/colorScheme';
+
 function fontStyle(spec) {
   return css`
     font-family: ${spec.figCaption.fontFamily};
@@ -21,35 +23,56 @@ function fontStyle(spec) {
       font-size: ${remify(spec.figCaption.fontSize.desktop)};
       line-height: ${spec.figCaption.lineHeight.desktop};
     }
-    & a {
-      ${cssLinkText({
-        backgroundColor: 'transparent',
-        backgroundColorOnHover: spec.link.backgroundOnHover,
-        linkTextColor: spec.link.color,
-        baselinePosition: spec.figCaption.baselinePosition.mobile,
-        lineWidth: spec.link.lineWidth,
-        spaceBelowBaseline: spec.link.spaceBelowBaseline.mobile,
-      })}
-      @media only screen and ${breakpoint.fontSize} {
-        ${cssLinkText({
-          backgroundColor: 'transparent',
-          backgroundColorOnHover: spec.link.backgroundOnHover,
-          linkTextColor: spec.link.color,
-          baselinePosition: spec.figCaption.baselinePosition.desktop,
-          lineWidth: spec.link.lineWidth,
-          spaceBelowBaseline: spec.link.spaceBelowBaseline.figCaption.desktop,
-        })}
-      }
-    }
   `;
 }
 
 const FigCaption = styled.figcaption`
   ${Main.Kohoan} & {
     ${fontStyle(kohoan)}
+    & a {
+      ${cssLinkText({
+        backgroundColor: 'transparent',
+        backgroundColorOnHover: kohoan.link.backgroundOnHover,
+        linkTextColor: kohoan.link.color,
+        baselinePosition: kohoan.figCaption.baselinePosition.mobile,
+        lineWidth: kohoan.link.lineWidth,
+        spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
+      })}
+      @media only screen and ${breakpoint.fontSize} {
+        ${cssLinkText({
+          backgroundColor: 'transparent',
+          backgroundColorOnHover: kohoan.link.backgroundOnHover,
+          linkTextColor: kohoan.link.color,
+          baselinePosition: kohoan.figCaption.baselinePosition.desktop,
+          lineWidth: kohoan.link.lineWidth,
+          spaceBelowBaseline: kohoan.link.spaceBelowBaseline.figCaption.desktop,
+        })}
+      }
+    }
   }
   ${Main.Ryoanji} & {
     ${fontStyle(ryoanji)}
+    & a {
+      ${cssLinkText({
+        backgroundColor: 'transparent',
+        backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
+        linkTextColor: ryoanji.link.color,
+        baselinePosition: ryoanji.figCaption.baselinePosition.mobile,
+        lineWidth: ryoanji.link.lineWidth,
+        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+      })}
+      @media only screen and ${breakpoint.fontSize} {
+        ${cssLinkText({
+          backgroundColor: 'transparent',
+          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
+          linkTextColor: ryoanji.link.color,
+          baselinePosition: ryoanji.figCaption.baselinePosition.desktop,
+          lineWidth: ryoanji.link.lineWidth,
+          spaceBelowBaseline:
+            ryoanji.link.spaceBelowBaseline.figCaption.desktop,
+        })}
+      }
+    }
   }
 `;
 
