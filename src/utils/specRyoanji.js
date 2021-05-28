@@ -7,20 +7,13 @@ import {
   cormorantSC,
   shipporiMincho,
 } from './fontMetrics';
-import {color} from './colorScheme';
 
 export const ryoanji = {
   title: 'Ryoan-ji Rock Garden | 龍安寺石庭',
   description:
     'Ryoan-ji Rock Garden teaches us the principle of Zen Buddhism to live happily, with the layout of 15 rocks as a textbook.',
-  background: {
-    backgroundColor: color.background,
-    patternColor: color.onBackground,
-  },
   article: {
     // This sets the default for all the other elements below
-    backgroundColor: color.surface.ryoanji,
-    color: color.onSurface.ryoanji,
     ...cormorantGaramond, // {fontFamily, fontMetrics}
     get fontSize() {
       return {
@@ -77,8 +70,6 @@ export const ryoanji = {
     },
   },
   link: {
-    backgroundOnHover: color.onSurfaceSecondShade.ryoanji,
-    color: 'inherit',
     lineWidth: 1,
     spaceBelowBaseline: {
       mobile: 1,
@@ -103,7 +94,6 @@ export const ryoanji = {
       mobile: 8,
       desktop: 10,
     },
-    color: color.primary,
     spaceAboveByDefault: {
       mobile: 13,
       desktop: 17.5,
@@ -114,22 +104,7 @@ export const ryoanji = {
     fontSize: '0.85em' /* to match with Cormorant Garamond body text */,
     fontWeight: 500 /* to match with stroke width of Cormorant Garamond SemiBold (600) */,
   },
-  source: {
-    color: color.onSurfaceShade.ryoanji,
-  },
   h1: {
-    backgroundColor: {
-      mobile: color.primary,
-      desktop: 'transparent',
-    },
-    backgroundImage: {
-      mobile: color.lightingOverlay,
-      desktop: 'none',
-    },
-    color: {
-      mobile: color.onPrimary,
-      desktop: color.onPhoto,
-    },
     ...cormorantSC,
     get fontSize() {
       return {
@@ -204,9 +179,6 @@ export const ryoanji = {
     },
   },
   h2: {
-    backgroundColor: color.primary,
-    backgroundImage: color.lightingOverlay,
-    color: color.onPrimary,
     ...cormorant,
     get fontSize() {
       return {
@@ -255,7 +227,6 @@ export const ryoanji = {
     textIndent: -2,
   },
   h3: {
-    color: color.primary,
     ...cormorant,
     get fontSize() {
       return {
@@ -312,7 +283,6 @@ export const ryoanji = {
     },
   },
   figure: {
-    borderColor: color.primaryShade,
     maxHeight: 703, // half the height of spring/summer photos
     maxWidth: 941, // half the width of spring/summer/autumn/winter photos
     paddingInsideBorder: 15.564,

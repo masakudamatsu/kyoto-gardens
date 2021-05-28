@@ -1,7 +1,6 @@
 import {reforma1918, shipporiMinchoB1} from './fontMetrics';
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
-import {color} from './colorScheme';
 import remify from './remify';
 
 const sideMargin = 10; // TODO: Redefine this in relation to between line space
@@ -17,7 +16,6 @@ export const index = {
     maxWidth: 500, // TODO: Adjust this value
   },
   h2: {
-    color: color.primary,
     ...reforma1918,
     get fontSize() {
       return {
@@ -33,9 +31,6 @@ export const index = {
       mobile: 11,
       tablet: 18,
     },
-  },
-  card: {
-    backgroundColorOnHover: color.primaryShade, // TODO: Incorporate into color scheme
   },
   figure: {
     scrim: {
@@ -53,7 +48,6 @@ export const index = {
   },
   kanji: {
     breakpoint: `(min-width: ${remify(410)})`,
-    color: color.onSurface.index,
     fontFamily: shipporiMinchoB1.fontFamily,
     fontSize: {
       mobile: '2em',
@@ -68,7 +62,6 @@ export const index = {
     },
   },
   latin: {
-    color: color.onSurface.index,
     marginTop: 0, // TODO: Adjust this value
     paddingSide: sideMargin,
   },
@@ -80,8 +73,6 @@ export const index = {
   },
   article: {
     // for Footer. To use `setHorizontalSpace()` we need to name it `article`
-    backgroundColor: color.primary,
-    color: '#fff',
     ...reforma1918,
     get fontSize() {
       return {

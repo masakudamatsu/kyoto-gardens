@@ -1,4 +1,3 @@
-import {color} from './colorScheme';
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
@@ -13,14 +12,8 @@ export const kohoan = {
   title: 'Koho-an Temple | 孤篷庵',
   description:
     'Koho-an Temple in Kyoto is a 17th-century masterpiece of spatial design, seemingly integrating architecture with gardens to take the visitor to an imaginary boat trip at sunset.',
-  background: {
-    backgroundColor: '#111',
-    patternColor: '#7c7c7c', // 4.52 * #111
-  },
   article: {
     // This sets the default for all the other elements below
-    backgroundImage: color.surface.kohoan,
-    color: color.onSurface.kohoan,
     ...libreBaskerville, // {fontFamily, fontMetrics}
     get fontSize() {
       return {
@@ -78,9 +71,6 @@ export const kohoan = {
     },
   },
   link: {
-    backgroundOnHover: color.onSurfaceSecondShade.kohoan,
-    color: 'inherit',
-    underlineColor: 'rgba(255, 255, 255, 0.8)',
     lineWidth: 1,
     spaceBelowBaseline: {
       mobile: 1,
@@ -105,7 +95,6 @@ export const kohoan = {
       mobile: 8,
       desktop: 10,
     },
-    color: color.onSurface.kohoan,
     spaceAboveByDefault: {
       mobile: 13,
       desktop: 17.5,
@@ -117,19 +106,7 @@ export const kohoan = {
     fontWeight: 500, // Match Libre Baskerville 400
     lineHeight: 'normal', // line height doesn't change up to around 1.5
   },
-  source: {
-    color: color.onSurfaceShade.kohoan,
-  },
   h1: {
-    backgroundColor: {
-      mobile: color.primary,
-      desktop: 'transparent',
-    },
-    backgroundImage: {
-      mobile: color.lightingOverlay,
-      desktop: 'none',
-    },
-    color: '#eee', // match color with body text; #fff will look too bright compared to body text
     ...playfairDisplay,
     get fontSize() {
       return {
@@ -207,9 +184,6 @@ export const kohoan = {
     },
   },
   h2: {
-    backgroundColor: color.primary,
-    backgroundImage: color.lightingOverlay,
-    color: color.onPrimary,
     ...playfairDisplay,
     get fontSize() {
       return {
@@ -258,7 +232,6 @@ export const kohoan = {
     textIndent: -2,
   },
   h3: {
-    color: color.onSurface.kohoan,
     ...playfairDisplay,
     get fontSize() {
       return {
@@ -319,8 +292,6 @@ export const kohoan = {
     },
   },
   figure: {
-    borderColor: color.onSurfaceShade.kohoan,
-    color: color.primary, // TODO: we may want to darken the seigaiha pattern
     maxHeight: 703, // half the height of spring/summer photos
     maxWidth: 941, // half the width of spring/summer/autumn/winter photos
     paddingInsideBorder: 15.564,
