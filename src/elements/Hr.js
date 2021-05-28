@@ -7,6 +7,8 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
+import {colour} from 'src/utils/colorScheme';
+
 const getPaddingTop = (screenWidth, spec) => {
   const targetHeight = setSpace(
     screenWidth,
@@ -42,7 +44,7 @@ const Hr = styled.hr`
   }
   ${Main.Ryoanji} & {
     /* https://stackoverflow.com/a/32146824/11847654 */
-    color: ${ryoanji.hr.color};
+    color: ${colour.ryoanji.hr.color};
     padding-bottom: ${getPaddingBottom('mobile', ryoanji)};
     padding-top: ${getPaddingTop('mobile', ryoanji)};
     @media only screen and ${breakpoint.fontSize} {

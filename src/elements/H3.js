@@ -8,9 +8,10 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
+import {colour} from 'src/utils/colorScheme';
+
 function fontStyle(spec) {
   return css`
-    color: ${spec.h3.color};
     font-family: ${spec.h3.fontFamily};
     font-size: ${remify(spec.h3.fontSize.mobile)};
     font-weight: ${spec.h3.fontWeight};
@@ -25,11 +26,13 @@ function fontStyle(spec) {
 
 const H3 = styled.h3`
   ${Main.Kohoan} & {
+    color: ${kohoan.h3.color};
     ${fontStyle(kohoan)}
     ${setHorizontalSpace('text', kohoan).innerMerged}
     ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
+    color: ${colour.ryoanji.h3.color};
     ${fontStyle(ryoanji)}
     ${setHorizontalSpace('text', ryoanji).innerMerged}
     ${setHorizontalSpace('text', ryoanji).outer}

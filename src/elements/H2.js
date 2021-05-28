@@ -8,9 +8,10 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
+import {colour} from 'src/utils/colorScheme';
+
 function fontStyle(spec) {
   return css`
-    color: ${spec.h2.color};
     font-family: ${spec.h2.fontFamily};
     font-size: ${remify(spec.h2.fontSize.mobile)};
     font-weight: ${spec.h2.fontWeight};
@@ -29,20 +30,15 @@ function fontStyle(spec) {
   `;
 }
 
-function backgroundStyle(spec) {
-  return css`
-    background-color: ${spec.h2.backgroundColor};
-    background-image: ${spec.h2.backgroundImage};
-  `;
-}
-
 /* Styled Components */
 const H2Style = styled.h2`
   ${Main.Kohoan} & {
+    color: ${kohoan.h2.color};
     ${fontStyle(kohoan)}
     ${setHorizontalSpace('text', kohoan).inner}
   }
   ${Main.Ryoanji} & {
+    color: ${colour.ryoanji.h2.color};
     ${fontStyle(ryoanji)}
     ${setHorizontalSpace('text', ryoanji).inner}
   }
@@ -50,11 +46,13 @@ const H2Style = styled.h2`
 
 H2Style.Wrapper = styled.div`
   ${Main.Kohoan} & {
-    ${backgroundStyle(kohoan)}
+    background-color: ${kohoan.h2.backgroundColor};
+    background-image: ${kohoan.h2.backgroundImage};
     ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
-    ${backgroundStyle(ryoanji)}
+    background-color: ${colour.ryoanji.h2.background};
+    background-image: ${colour.ryoanji.h2.overlay};
     ${setHorizontalSpace('text', ryoanji).outer}
   }
 `;

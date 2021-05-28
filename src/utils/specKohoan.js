@@ -9,25 +9,6 @@ import {
   shipporiMincho,
 } from './fontMetrics';
 
-// Color scheme
-const background = 'rgb(240,240,240)';
-const onBackground = '#ffffff';
-const onSurface = '#ffffff';
-const onSurfaceShade = 'rgb(100,100,100)';
-const onSurfaceSecondShade = 'rgb(240,240,240)'; /* TODO: Darken this */
-const primary = 'hsla(193, 50%, 26%, 0.9)';
-const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
-const onPrimary = '#eee';
-const onPhoto = '#eee';
-// Patterns
-const lightingOverlay = `linear-gradient(
-  35deg,
-  hsla(0, 0%, 100%, 0) 0,
-  hsla(0, 0%, 100%, 0.5) 55%,
-  hsla(0, 0%, 100%, 0.5) 65%,
-  hsla(0, 0%, 100%, 0)
-)`;
-
 export const kohoan = {
   title: 'Koho-an Temple | 孤篷庵',
   description:
@@ -141,11 +122,11 @@ export const kohoan = {
   },
   h1: {
     backgroundColor: {
-      mobile: primary,
+      mobile: color.primary,
       desktop: 'transparent',
     },
     backgroundImage: {
-      mobile: lightingOverlay,
+      mobile: color.lightingOverlay,
       desktop: 'none',
     },
     color: '#eee', // match color with body text; #fff will look too bright compared to body text
@@ -226,9 +207,9 @@ export const kohoan = {
     },
   },
   h2: {
-    backgroundColor: primary,
-    backgroundImage: lightingOverlay,
-    color: onPrimary,
+    backgroundColor: color.primary,
+    backgroundImage: color.lightingOverlay,
+    color: color.onPrimary,
     ...playfairDisplay,
     get fontSize() {
       return {

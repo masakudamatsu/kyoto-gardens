@@ -1,4 +1,4 @@
-import {cormorantGaramond, reforma1918, shipporiMinchoB1} from './fontMetrics';
+import {reforma1918, shipporiMinchoB1} from './fontMetrics';
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import {color} from './colorScheme';

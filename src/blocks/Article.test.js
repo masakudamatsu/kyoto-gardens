@@ -60,8 +60,8 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        background-color: #ffffff;
-        color: #0a0a0a;
+        background-color: rgb(255,255,255);
+        color: rgb(10,10,10);
         font-family: 'Cormorant Garamond','Times New Roman',serif;
         font-size: 1.3348rem;
         font-weight: 600;
@@ -80,7 +80,7 @@ describe('Parent chnages UI by prop value', () => {
         cursor: pointer;
         -webkit-text-decoration: none;
         text-decoration: none;
-        text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+        text-shadow: 0.03em 0 rgb(255,255,255),-0.03em 0 rgb(255,255,255),0 0.03em rgb(255,255,255),0 -0.03em rgb(255,255,255);
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,
@@ -169,7 +169,7 @@ describe('Parent chnages UI by prop value', () => {
           cursor: pointer;
           -webkit-text-decoration: none;
           text-decoration: none;
-          text-shadow: 0.03em 0 #ffffff,-0.03em 0 #ffffff,0 0.03em #ffffff,0 -0.03em #ffffff;
+          text-shadow: 0.03em 0 rgb(255,255,255),-0.03em 0 rgb(255,255,255),0 0.03em rgb(255,255,255),0 -0.03em rgb(255,255,255);
         }
 
         .Main__Ryoanji-sc-126eniy-1 .c0 a:focus,

@@ -31,3 +31,70 @@ export const color = {
                       hsla(0, 0%, 100%, 0)
                     )`,
 };
+
+const primary = 'hsla(193, 50%, 26%, 0.9)';
+const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
+const onPrimary = 'rgb(238,238,238)';
+const surface = 'rgb(255,255,255)';
+const surfaceShade = 'rgb(240,240,240)';
+const onSurface = 'rgb(10,10,10)';
+const onSurfaceShade = 'rgb(100,100,100)';
+const background = 'rgb(240,240,240)';
+const onBackground = surface;
+const lighting = `linear-gradient(
+  35deg,
+  hsla(0, 0%, 100%, 0) 0,
+  hsla(0, 0%, 100%, 0.5) 55%,
+  hsla(0, 0%, 100%, 0.5) 65%,
+  hsla(0, 0%, 100%, 0)
+)`;
+
+export const colour = {
+  index: {},
+  kohoan: {},
+  ryoanji: {
+    article: {
+      background: surface,
+      color: onSurface,
+    },
+    figure: {
+      border: primaryShade,
+    },
+    h1: {
+      background: {
+        mobile: primary,
+        desktop: 'transparent',
+      },
+      color: {
+        mobile: onPrimary,
+        desktop: onSurface,
+      },
+      overlay: {
+        mobile: lighting,
+        desktop: 'none',
+      },
+    },
+    h2: {
+      background: primary,
+      color: onPrimary,
+      overlay: lighting,
+    },
+    h3: {
+      color: primary,
+    },
+    hr: {
+      color: primary,
+    },
+    link: {
+      color: 'inherit',
+      onHoverBackground: surfaceShade,
+    },
+    pattern: {
+      background: background,
+      figure: onBackground,
+    },
+    source: {
+      color: onSurfaceShade,
+    },
+  },
+};

@@ -8,6 +8,8 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
+import {colour} from 'src/utils/colorScheme';
+
 const Article = styled.article`
   margin: 0 auto;
   ${Main.Kohoan} & {
@@ -45,8 +47,8 @@ const Article = styled.article`
     }
   }
   ${Main.Ryoanji} & {
-    background-color: ${ryoanji.article.backgroundColor};
-    color: ${ryoanji.article.color};
+    background-color: ${colour.ryoanji.article.background};
+    color: ${colour.ryoanji.article.color};
     font-family: ${ryoanji.article.fontFamily};
     font-size: ${remify(ryoanji.article.fontSize.mobile)};
     font-weight: ${ryoanji.article.fontWeight};
@@ -58,18 +60,18 @@ const Article = styled.article`
     }
     & a {
       ${cssLinkText({
-        backgroundColor: ryoanji.article.backgroundColor,
-        backgroundColorOnHover: ryoanji.link.backgroundOnHover,
-        linkTextColor: ryoanji.link.color,
+        backgroundColor: colour.ryoanji.article.background,
+        backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
+        linkTextColor: colour.ryoanji.link.color,
         baselinePosition: ryoanji.article.baselinePosition.mobile,
         lineWidth: ryoanji.link.lineWidth,
         spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
-          backgroundColor: ryoanji.article.backgroundColor,
-          backgroundColorOnHover: ryoanji.link.backgroundOnHover,
-          linkTextColor: ryoanji.link.color,
+          backgroundColor: colour.ryoanji.article.background,
+          backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
+          linkTextColor: colour.ryoanji.link.color,
           baselinePosition: ryoanji.article.baselinePosition.desktop,
           lineWidth: ryoanji.link.lineWidth,
           spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,

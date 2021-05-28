@@ -5,6 +5,8 @@ import Main from 'src/blocks/Main';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
+import {colour} from 'src/utils/colorScheme';
+
 const Span = styled.span`
   ${props => props.nowrap && ''}
 `;
@@ -19,7 +21,7 @@ Span.Source = styled.span`
     color: ${kohoan.source.color};
   }
   ${Main.Ryoanji} & {
-    color: ${ryoanji.source.color};
+    color: ${colour.ryoanji.source.color};
   }
 `;
 

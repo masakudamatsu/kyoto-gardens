@@ -11,6 +11,7 @@ import round from 'src/utils/round';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
+import {colour} from 'src/utils/colorScheme';
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
 // 28px * (5/3) = 46.666px
@@ -69,16 +70,16 @@ H1.RockGarden = styled.span`
 H1.Wrapper = styled.div`
   ${Main.Ryoanji} & {
     ${setHorizontalSpace('text', ryoanji).outer}
-    background-color: ${ryoanji.h1.backgroundColor.mobile};
-    background-image: ${ryoanji.h1.backgroundImage.mobile};
-    color: ${ryoanji.h1.color.mobile};
+    background-color: ${colour.ryoanji.h1.background.mobile};
+    background-image: ${colour.ryoanji.h1.overlay.mobile};
+    color: ${colour.ryoanji.h1.color.mobile};
     padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
     width: 100%;
     @media only screen and ${ryoanji.breakpoint.sideMargin} {
-      background-color: ${ryoanji.h1.backgroundColor.desktop};
-      background-image: ${ryoanji.h1.backgroundImage.desktop};
+      background-color: ${colour.ryoanji.h1.background.desktop};
+      background-image: ${colour.ryoanji.h1.overlay.desktop};
       bottom: 0;
-      color: ${ryoanji.h1.color.desktop};
+      color: ${colour.ryoanji.h1.color.desktop};
       left: 0;
       padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
       position: absolute;

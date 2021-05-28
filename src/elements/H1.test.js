@@ -153,8 +153,8 @@ describe('renders UI correctly', () => {
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding: 0 1.3281rem;
         background-color: hsla(193,50%,26%,0.9);
-        background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0) );
-        color: #eee;
+        background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
+        color: rgb(238,238,238);
         padding-top: 0.5313rem;
         width: 100%;
       }
@@ -184,7 +184,7 @@ describe('renders UI correctly', () => {
           background-color: transparent;
           background-image: none;
           bottom: 0;
-          color: #000;
+          color: rgb(10,10,10);
           left: 0;
           padding-top: 0rem;
           position: absolute;
