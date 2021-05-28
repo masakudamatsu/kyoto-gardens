@@ -873,7 +873,7 @@ export default function Kohoan() {
               />
 
               <FigureWithMargin.FigCaption>
-                Entrance to Teahouse Bosen
+                Entrance to Teahouse Bosen{' '}
                 <Span.Source>
                   (
                   <a href="https://blog.goo.ne.jp/gooogami/e/390c896448b5606e95904b450cc7d822">
