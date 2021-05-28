@@ -36,7 +36,6 @@ const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
 const onPrimary = 'rgb(238,238,238)';
 const surface = 'rgb(255,255,255)';
-const surfaceShade = 'rgb(240,240,240)';
 const onSurface = 'rgb(10,10,10)';
 const onSurfaceShade = 'rgb(100,100,100)';
 const background = 'rgb(240,240,240)';
@@ -48,6 +47,15 @@ const lighting = `linear-gradient(
   hsla(0, 0%, 100%, 0.5) 65%,
   hsla(0, 0%, 100%, 0)
 )`;
+
+const kohoan = {
+  surface: 'linear-gradient(to bottom, rgb(87,87,87), rgb(17,17,17))',
+  onSurface: 'rgb(255,255,255)',
+  onSurfaceShade1: 'rgb(238,238,238)',
+  onSurfaceShade2: 'rgb(200,200,200)',
+  background: 'rgb(17,17,17)',
+  onBackground: 'rgb(124,124,124)', // 4.52 * rgb(17,17,17)
+};
 
 export const colour = {
   global: {
@@ -87,7 +95,41 @@ export const colour = {
       color: onSurface,
     },
   },
-  kohoan: {},
+  kohoan: {
+    article: {
+      background: kohoan.surface,
+      color: kohoan.onSurface,
+    },
+    figure: {
+      border: kohoan.onSurfaceShade2,
+    },
+    h1: {
+      color: kohoan.onSurfaceShade1,
+    },
+    h2: {
+      background: primary,
+      color: onPrimary,
+      overlay: lighting,
+    },
+    h3: {
+      color: kohoan.onSurface,
+    },
+    hr: {
+      color: kohoan.onSurface,
+    },
+    link: {
+      color: 'inherit',
+      onHoverBackground: 'rgb(156,147,143)', // TODO: Choose this color logically
+      underline: 'rgba(255, 255, 255, 0.8)',
+    },
+    pattern: {
+      background: kohoan.background,
+      figure: kohoan.onBackground,
+    },
+    source: {
+      color: kohoan.onSurfaceShade2,
+    },
+  },
   ryoanji: {
     article: {
       background: surface,

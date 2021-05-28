@@ -34,7 +34,7 @@ const Hr = styled.hr`
   }
   ${Main.Kohoan} & {
     /* https://stackoverflow.com/a/32146824/11847654 */
-    color: ${kohoan.hr.color};
+    color: ${colour.kohoan.hr.color};
     padding-bottom: ${getPaddingBottom('mobile', kohoan)};
     padding-top: ${getPaddingTop('mobile', kohoan)};
     @media only screen and ${breakpoint.fontSize} {

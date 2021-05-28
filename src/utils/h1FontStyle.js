@@ -7,7 +7,6 @@ import {ryoanji} from 'src/utils/specRyoanji';
 
 export const h1FontStyle = {
   kohoan: css`
-    color: ${kohoan.h1.color};
     font-family: ${kohoan.h1.fontFamily};
     font-size: ${remify(kohoan.h1.fontSize.mobile)};
     font-weight: ${kohoan.h1.fontWeight};

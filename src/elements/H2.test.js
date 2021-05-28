@@ -9,7 +9,7 @@ test('renders UI correctly', () => {
   const {container} = render(<H2 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .Main__Kohoan-sc-126eniy-2 .c1 {
-      color: #eee;
+      color: rgb(238,238,238);
       font-family: 'Playfair Display',serif;
       font-size: 1.7193rem;
       font-weight: 600;
@@ -44,7 +44,7 @@ test('renders UI correctly', () => {
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
       background-color: hsla(193,50%,26%,0.9);
-      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0) );
+      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding: 0 1.0625rem;
     }
 

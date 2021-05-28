@@ -25,6 +25,7 @@ const H1 = styled.h1`
     ${setHorizontalSpace('text', ryoanji).inner}
   }
   ${Main.Kohoan} & {
+    color: ${colour.kohoan.h1.color};
     ${h1FontStyle.kohoan}
     ${setHorizontalSpace('text', kohoan).inner}
     text-indent: ${remify(kohoan.h1.textIndent.mobile)};

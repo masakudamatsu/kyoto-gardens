@@ -9,7 +9,7 @@ test('renders UI correctly', () => {
   const {container} = render(<H3 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .Main__Kohoan-sc-126eniy-2 .c0 {
-      color: #ffffff;
+      color: rgb(255,255,255);
       font-family: 'Playfair Display',serif;
       font-size: 1.0316rem;
       font-weight: 700;

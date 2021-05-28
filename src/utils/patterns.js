@@ -9,19 +9,19 @@ const lightWidth = 0.5;
 const concentricCircle = (scale = 1) => {
   // prettier-ignore
   return `
-    ${kohoan.background.backgroundColor} ${25 * scale}%, 
-    ${kohoan.background.patternColor} ${(31.25 - lightWidth /2) * scale}%, 
-    ${kohoan.background.patternColor} ${(31.25 + lightWidth / 2) * scale}%, 
-    ${kohoan.background.backgroundColor} ${37.5 * scale}%, 
-    ${kohoan.background.backgroundColor} ${50 * scale}%, 
-    ${kohoan.background.patternColor} ${(56.25 - lightWidth /2) * scale}%, 
-    ${kohoan.background.patternColor} ${(56.25 + lightWidth / 2) * scale}%, 
-    ${kohoan.background.backgroundColor} ${62.5 * scale}%, 
-    ${kohoan.background.backgroundColor} ${75 * scale}%, 
-    ${kohoan.background.patternColor} ${(81.25 - lightWidth / 2) * scale}%, 
-    ${kohoan.background.patternColor} ${(81.25 + lightWidth / 2) * scale}%,
-    ${kohoan.background.backgroundColor} ${87.5 * scale}%, 
-    ${kohoan.background.backgroundColor} ${100 * scale}%, 
+    ${colour.kohoan.pattern.background} ${25 * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(31.25 - lightWidth /2) * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(31.25 + lightWidth / 2) * scale}%, 
+    ${colour.kohoan.pattern.background} ${37.5 * scale}%, 
+    ${colour.kohoan.pattern.background} ${50 * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(56.25 - lightWidth /2) * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(56.25 + lightWidth / 2) * scale}%, 
+    ${colour.kohoan.pattern.background} ${62.5 * scale}%, 
+    ${colour.kohoan.pattern.background} ${75 * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(81.25 - lightWidth / 2) * scale}%, 
+    ${colour.kohoan.pattern.figure} ${(81.25 + lightWidth / 2) * scale}%,
+    ${colour.kohoan.pattern.background} ${87.5 * scale}%, 
+    ${colour.kohoan.pattern.background} ${100 * scale}%, 
     transparent ${100 * scale}%, 
     transparent
   `;

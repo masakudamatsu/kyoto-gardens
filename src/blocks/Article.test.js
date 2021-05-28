@@ -14,8 +14,8 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        background-image: linear-gradient(to bottom,#575757,#111111);
-        color: #ffffff;
+        background-image: linear-gradient(to bottom,rgb(87,87,87),rgb(17,17,17));
+        color: rgb(255,255,255);
         font-family: 'Libre Baskerville','Verdana',serif;
         font-size: 0.993rem;
         font-weight: 400;
@@ -25,7 +25,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .c1 a:link,
       .c1 a:visited {
-        background: #9c938f;
+        background: rgb(156,147,143);
         background: linear-gradient( to bottom,rgba(255,255,255,0.8) 100%,rgba(255,255,255,0.8) );
         background-position: 0 1.0625rem;
         background-repeat: no-repeat;
@@ -39,7 +39,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .c1 a:focus,
       .c1 a:hover {
-        background: #9c938f;
+        background: rgb(156,147,143);
         outline: none;
         text-shadow: none;
       }
@@ -50,7 +50,7 @@ describe('Parent chnages UI by prop value', () => {
 
       .c1 a:visited:focus,
       .c1 a:visited:hover {
-        background: #9c938f;
+        background: rgb(156,147,143);
         outline: none;
         text-shadow: none;
       }
@@ -115,7 +115,7 @@ describe('Parent chnages UI by prop value', () => {
       @media only screen and (min-width:728px) {
         .c1 a:link,
         .c1 a:visited {
-          background: #9c938f;
+          background: rgb(156,147,143);
           background: linear-gradient( to bottom,currentColor 100%,currentColor );
           background-position: 0 1.3125rem;
           background-repeat: no-repeat;
@@ -129,7 +129,7 @@ describe('Parent chnages UI by prop value', () => {
 
         .c1 a:focus,
         .c1 a:hover {
-          background: #9c938f;
+          background: rgb(156,147,143);
           outline: none;
           text-shadow: none;
         }
@@ -140,7 +140,7 @@ describe('Parent chnages UI by prop value', () => {
 
         .c1 a:visited:focus,
         .c1 a:visited:hover {
-          background: #9c938f;
+          background: rgb(156,147,143);
           outline: none;
           text-shadow: none;
         }

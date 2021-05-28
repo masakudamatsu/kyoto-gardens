@@ -33,7 +33,7 @@ function fontStyle(spec) {
 /* Styled Components */
 const H2Style = styled.h2`
   ${Main.Kohoan} & {
-    color: ${kohoan.h2.color};
+    color: ${colour.kohoan.h2.color};
     ${fontStyle(kohoan)}
     ${setHorizontalSpace('text', kohoan).inner}
   }
@@ -46,8 +46,8 @@ const H2Style = styled.h2`
 
 H2Style.Wrapper = styled.div`
   ${Main.Kohoan} & {
-    background-color: ${kohoan.h2.backgroundColor};
-    background-image: ${kohoan.h2.backgroundImage};
+    background-color: ${colour.kohoan.h2.background};
+    background-image: ${colour.kohoan.h2.overlay};
     ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {

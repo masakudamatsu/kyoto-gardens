@@ -13,8 +13,8 @@ import {colour} from 'src/utils/colorScheme';
 const Article = styled.article`
   margin: 0 auto;
   ${Main.Kohoan} & {
-    background-image: ${kohoan.article.backgroundImage};
-    color: ${kohoan.article.color};
+    background-image: ${colour.kohoan.article.background};
+    color: ${colour.kohoan.article.color};
     font-family: ${kohoan.article.fontFamily};
     font-size: ${remify(kohoan.article.fontSize.mobile)};
     font-weight: ${kohoan.article.fontWeight};
@@ -28,18 +28,18 @@ const Article = styled.article`
   & a {
     ${cssLinkText({
       backgroundColor: 'trasparent', // disable text-shadow
-      backgroundColorOnHover: kohoan.link.backgroundOnHover,
-      linkTextColor: kohoan.link.color,
-      underlineColor: kohoan.link.underlineColor,
+      backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
+      linkTextColor: colour.kohoan.link.color,
+      underlineColor: colour.kohoan.link.underline,
       baselinePosition: kohoan.article.baselinePosition.mobile,
       lineWidth: kohoan.link.lineWidth,
       spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
     })}
     @media only screen and ${breakpoint.fontSize} {
       ${cssLinkText({
-        backgroundColor: 'transparent',
-        backgroundColorOnHover: kohoan.link.backgroundOnHover,
-        linkTextColor: kohoan.link.color,
+        backgroundColor: 'transparent', // disable text-shadow
+        backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
+        linkTextColor: colour.kohoan.link.color,
         baselinePosition: kohoan.article.baselinePosition.desktop,
         lineWidth: kohoan.link.lineWidth,
         spaceBelowBaseline: kohoan.link.spaceBelowBaseline.desktop,

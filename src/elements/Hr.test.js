@@ -19,7 +19,7 @@ test('renders UI correctly', () => {
     }
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
-      color: #ffffff;
+      color: rgb(255,255,255);
       padding-bottom: 2.2708rem;
       padding-top: 0.9583rem;
     }

@@ -23,8 +23,8 @@ const FigureWithBorder = styled.figure`
 
 FigureWithBorder.Border = styled.div`
   ${Main.Kohoan} & {
-    border-bottom: 1px solid ${kohoan.figure.borderColor};
-    border-top: 1px solid ${kohoan.figure.borderColor};
+    border-bottom: 1px solid ${colour.kohoan.figure.border};
+    border-top: 1px solid ${colour.kohoan.figure.border};
     padding: ${kohoan.figure.paddingInsideBorder}px;
   }
   ${Main.Ryoanji} & {

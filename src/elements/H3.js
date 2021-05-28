@@ -26,7 +26,7 @@ function fontStyle(spec) {
 
 const H3 = styled.h3`
   ${Main.Kohoan} & {
-    color: ${kohoan.h3.color};
+    color: ${colour.kohoan.h3.color};
     ${fontStyle(kohoan)}
     ${setHorizontalSpace('text', kohoan).innerMerged}
     ${setHorizontalSpace('text', kohoan).outer}
