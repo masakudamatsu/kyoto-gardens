@@ -10,6 +10,10 @@ const Svg = styled.svg`
   width: 100%;
 `;
 
+const AlternateCap = styled.tspan`
+  font-feature-settings: 'salt';
+`;
+
 const SiteTitle = ({ariaHidden, className}) => {
   return (
     <Svg
@@ -22,7 +26,7 @@ const SiteTitle = ({ariaHidden, className}) => {
       <title id="alt-text">Translating Japanese Gardens</title>
       <text>
         <tspan id="Translating" dx="0 1 2 -2 -2 0 0 -1 1 -1 -2" x="19" y="58">
-          Translating
+          <AlternateCap>T</AlternateCap>ranslating
         </tspan>
         <tspan id="Japanese" dx="0 -1 -1 -1 -2 -2 0 -1" x="109.896" y="107">
           Japanese

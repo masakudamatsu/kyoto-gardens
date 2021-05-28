@@ -18,6 +18,10 @@ test('renders UI correctly', () => {
       width: 100%;
     }
 
+    .c5 {
+      font-feature-settings: 'salt';
+    }
+
     .c0 {
       background-color: hsla(193,50%,26%,0.9);
       clear: both;
@@ -51,7 +55,7 @@ test('renders UI correctly', () => {
       padding-top: 1.9922rem;
     }
 
-    .c5 {
+    .c6 {
       color: #fff;
       font-family: 'Reforma 1918',serif;
       font-size: 1.0931rem;
@@ -67,7 +71,7 @@ test('renders UI correctly', () => {
       padding-top: 1.9922rem;
     }
 
-    .c6 {
+    .c7 {
       font-size: 80%;
     }
 
@@ -126,25 +130,25 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-      .c5 {
+      .c6 {
         font-size: 1.3503rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c5 {
+      .c6 {
         max-width: 48.6522rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
-      .c5 {
+      .c6 {
         padding: 0 1.9922rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c5 {
+      .c6 {
         padding: 0 3.0078rem;
       }
     }
@@ -180,7 +184,12 @@ test('renders UI correctly', () => {
                 x="19"
                 y="58"
               >
-                Translating
+                <tspan
+                  class="c5"
+                >
+                  T
+                </tspan>
+                ranslating
               </tspan>
               <tspan
                 dx="0 -1 -1 -1 -2 -2 0 -1"
@@ -203,10 +212,10 @@ test('renders UI correctly', () => {
            presents alternative takes on historical gardens in Japan, attempting to uncover the intentions of their design. It is a one-person project: articles are written, photographs taken (unless otherwise indicated), and web pages designed and coded, by Masa Kudamatsu, a native Japanese speaker who loves living in Kyoto for its amazing gardens.
         </p>
         <p
-          class="c1 c5"
+          class="c1 c6"
         >
           <small
-            class="c6"
+            class="c7"
           >
             © 2021 Masayuki Kudamatsu. All rights reserved.
           </small>

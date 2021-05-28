@@ -17,6 +17,10 @@ test('renders UI correctly', () => {
       width: 100%;
     }
 
+    .c1 {
+      font-feature-settings: 'salt';
+    }
+
     <div>
       <svg
         aria-labelledby="alt-text"
@@ -36,7 +40,12 @@ test('renders UI correctly', () => {
             x="19"
             y="58"
           >
-            Translating
+            <tspan
+              class="c1"
+            >
+              T
+            </tspan>
+            ranslating
           </tspan>
           <tspan
             dx="0 -1 -1 -1 -2 -2 0 -1"
