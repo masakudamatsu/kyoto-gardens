@@ -24,7 +24,6 @@ test('renders UI correctly', () => {
 
     .c0 {
       background-color: hsla(193,50%,26%,0.9);
-      clear: both;
       margin: 0 auto;
       padding-top: 15px;
       padding-bottom: 3.3203rem;

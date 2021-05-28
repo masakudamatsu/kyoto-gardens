@@ -39,6 +39,7 @@ Main.Kohoan = styled(Main)`
 Main.Index = styled(Main)`
   margin: 0 auto;
   max-width: ${remify(index.main.maxWidth)};
+  overflow: hidden; /* to set height large enough to contain floated child elements; see https://www.internetingishard.com/html-and-css/floats/#floats-for-grids */
   ${getPaddingBottom(index)}
 `;
 

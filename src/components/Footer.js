@@ -9,7 +9,6 @@ import SiteTitle from 'src/components/SiteTitle';
 
 const FooterStyled = styled.footer`
   background-color: ${index.article.backgroundColor};
-  clear: both;
   margin: 0 auto;
   padding-top: ${index.article.paddingTop};
   ${getPaddingBottom(index)}

@@ -54,6 +54,7 @@ describe('renders UI correctly', () => {
       .c0 {
         margin: 0 auto;
         max-width: 51.875rem;
+        overflow: hidden;
         padding-bottom: 3.3203rem;
       }
 
