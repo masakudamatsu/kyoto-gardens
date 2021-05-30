@@ -36,7 +36,7 @@ describe('renders UI correctly', () => {
         color: rgb(238,238,238);
         font-family: 'Playfair Display',serif;
         font-size: 1.7193rem;
-        font-weight: 400;
+        font-weight: 600;
         -webkit-letter-spacing: 0.05em;
         -moz-letter-spacing: 0.05em;
         -ms-letter-spacing: 0.05em;

@@ -116,7 +116,7 @@ export const font = {
         mobile: xHeight('mobile') * Math.pow(scale, 1),
         tablet: xHeight('mobile') * Math.pow(scale, 2),
       },
-      weight: 400,
+      weight: 600,
       lineHeightRatio: {
         mobile: {xHeight: 1, betweenLines: 1},
       },
