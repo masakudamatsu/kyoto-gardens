@@ -1,43 +1,44 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Kanji from 'src/elements/Kanji';
-import {getFontSizeFromX} from 'src/utils/fontCssFactory';
-import {scale, xHeight} from 'src/utils/designSpec';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
+import {breakpoint} from 'src/utils/designSpec';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
 const latinFontStyle = {
   kohoan: css`
-    font-family: ${kohoan.h1.fontFamily};
+    font-family: ${font.kohoan.h1.family};
     font-size: ${remify(
-      getFontSizeFromX(
-        xHeight('mobile') * Math.pow(scale, 2),
-        kohoan.h1.fontMetrics,
-      ),
+      makeXHeightToBe(font.kohoan.h1.xHeight.tablet, font.kohoan.h1.metrics),
     )};
-    font-weight: ${kohoan.h1.fontWeight};
-    letter-spacing: ${kohoan.h1.letterSpacig};
-    line-height: ${kohoan.h1.lineHeight};
+    font-weight: ${font.kohoan.h1.weight};
+    letter-spacing: ${font.kohoan.h1.letterSpacing};
+    line-height: ${makeLineHeightRatioToBe(
+      font.kohoan.h1.lineHeightRatio.mobile,
+      font.kohoan.h1.metrics,
+    )};
     transform: translateX(
       5px
     ); /* text-indent won't work with right-aligned text */
   `,
   ryoanji: css`
-    font-family: ${ryoanji.h1.fontFamily};
+    font-family: ${font.ryoanji.h1.family};
     font-size: ${remify(
-      getFontSizeFromX(
-        xHeight('mobile') * Math.pow(scale, 2),
-        ryoanji.h1.fontMetrics,
-      ),
+      makeXHeightToBe(font.ryoanji.h1.xHeight.mobile, font.ryoanji.h1.metrics),
     )};
-    font-weight: ${ryoanji.h1.fontWeight};
-    letter-spacing: ${ryoanji.h1.letterSpacig};
-    line-height: ${ryoanji.h1.lineHeight};
+    font-weight: ${font.ryoanji.h1.weight};
+    letter-spacing: ${font.ryoanji.h1.letterSpacig};
+    line-height: ${makeLineHeightRatioToBe(
+      font.ryoanji.h1.lineHeightRatio.mobile,
+      font.ryoanji.h1.metrics,
+    )};
     text-indent: -5px;
   `,
 };
@@ -62,10 +63,17 @@ const IndexSection = styled.section`
 `;
 
 const h2FontStyle = css`
-  font-family: ${index.h2.fontFamily};
-  font-size: ${remify(index.h2.fontSize.mobile)};
-  font-weight: ${index.h2.fontWeight};
-  font-style: ${index.h2.fontStyle};
+  font-family: ${font.index.h2.family};
+  font-size: ${remify(
+    makeXHeightToBe(font.index.h2.xHeight.mobile, font.index.h2.metrics),
+  )};
+  font-weight: ${font.index.h2.weight};
+  font-style: ${font.index.h2.style};
+  @media only screen and ${index.kanji.breakpoint} {
+    font-size: ${remify(
+      makeXHeightToBe(font.index.h2.xHeight.tablet, font.index.h2.metrics),
+    )};
+  }
 `;
 
 IndexSection.H2 = styled.h2`
@@ -75,7 +83,6 @@ IndexSection.H2 = styled.h2`
   padding-right: ${index.h2.paddingSide}px;
   padding-top: ${-index.kanji.top.mobile - index.h2.ascender.mobile}px;
   @media only screen and ${index.kanji.breakpoint} {
-    font-size: ${remify(index.h2.fontSize.tablet)};
     padding-top: ${-index.kanji.top.tablet - index.h2.ascender.tablet}px;
   }
 `;
@@ -106,16 +113,17 @@ IndexSection.Card = styled.div`
   }
 `;
 
-IndexSection.Kanji = styled(Kanji)`
-  font-family: ${index.kanji.fontFamily};
-  font-size: ${index.kanji.fontSize.mobile};
-  font-weight: ${index.kanji
-    .fontWeight}; /* to match with stroke width of Cormorant Garamond SemiBold (600) */
-  line-height: ${index.kanji.lineHeight};
+IndexSection.Kanji = styled.span.attrs(props => ({
+  lang: 'ja',
+}))`
+  font-family: ${font.index.kanji.family};
+  font-size: ${font.index.kanji.size.mobile};
+  font-weight: ${font.index.kanji.weight};
+  line-height: ${font.index.kanji.lineHeight};
   padding: ${index.kanji.paddingTop}px;
   position: absolute;
   top: 0;
-  writing-mode: vertical-rl;
+  writing-mode: ${font.index.kanji.writingMode};
   z-index: 2; /* above scrim */
   ${IndexSection}:nth-of-type(odd) & {
     left: auto;
@@ -126,7 +134,7 @@ IndexSection.Kanji = styled(Kanji)`
     right: auto;
   }
   @media only screen and ${index.kanji.breakpoint} {
-    font-size: ${index.kanji.fontSize.tablet};
+    font-size: ${font.index.kanji.size.tablet};
   }
 `;
 
@@ -177,9 +185,24 @@ IndexSection.Latin.propTypes = {
 };
 
 IndexSection.P = styled.p`
-  font-family: ${index.article.fontFamily};
-  font-size: ${remify(index.article.fontSize.mobile)};
-  line-height: ${index.article.lineHeight.mobile};
+  font-family: ${font.index.p.family};
+  font-size: ${remify(
+    makeXHeightToBe(font.index.p.xHeight.mobile, font.index.p.metrics),
+  )};
+  font-weight: ${font.index.p.weight};
+  line-height: ${makeLineHeightRatioToBe(
+    font.index.p.lineHeightRatio.mobile,
+    font.index.p.metrics,
+  )};
+  @media only screen and ${breakpoint.fontSize} {
+    font-size: ${remify(
+      makeXHeightToBe(font.index.p.xHeight.desktop, font.index.p.metrics),
+    )};
+    line-height: ${makeLineHeightRatioToBe(
+      font.index.p.lineHeightRatio.desktop,
+      font.index.p.metrics,
+    )};
+  }
   ${IndexSection}:nth-of-type(odd) & {
     padding-right: ${index.p.paddingSide}px;
     text-align: left;

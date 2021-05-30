@@ -9,26 +9,44 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
-function fontStyle(spec) {
+function figCaptionFontStyle(spec) {
   return css`
-    font-family: ${spec.figCaption.fontFamily};
-    font-size: ${remify(spec.figCaption.fontSize.mobile)};
-    font-weight: ${spec.figCaption.fontWeight};
+    font-family: ${spec.figCaption.family};
+    font-size: ${remify(
+      makeXHeightToBe(spec.figCaption.xHeight.mobile, spec.figCaption.metrics),
+    )};
+    font-weight: ${spec.figCaption.weight};
     font-variant-ligatures: ${spec.figCaption.ligature || 'normal'};
-    line-height: ${spec.figCaption.lineHeight.mobile};
+    line-height: ${makeLineHeightRatioToBe(
+      spec.figCaption.lineHeightRatio.mobile,
+      spec.figCaption.metrics,
+    )};
     margin-right: ${spec.figCaption.marginRight || 0}px;
     text-align: ${spec.figCaption.textAlign};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(spec.figCaption.fontSize.desktop)};
-      line-height: ${spec.figCaption.lineHeight.desktop};
+      font-size: ${remify(
+        makeXHeightToBe(
+          spec.figCaption.xHeight.desktop,
+          spec.figCaption.metrics,
+        ),
+      )};
+      line-height: ${makeLineHeightRatioToBe(
+        spec.figCaption.lineHeightRatio.desktop,
+        spec.figCaption.metrics,
+      )};
     }
   `;
 }
 
 const FigCaption = styled.figcaption`
   ${Main.Kohoan} & {
-    ${fontStyle(kohoan)}
+    ${figCaptionFontStyle(font.kohoan)}
     & a {
       ${cssLinkText({
         backgroundColor: 'transparent',
@@ -51,7 +69,7 @@ const FigCaption = styled.figcaption`
     }
   }
   ${Main.Ryoanji} & {
-    ${fontStyle(ryoanji)}
+    ${figCaptionFontStyle(font.ryoanji)}
     & a {
       ${cssLinkText({
         backgroundColor: 'transparent',

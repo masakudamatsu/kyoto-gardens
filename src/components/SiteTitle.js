@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {colour} from 'src/utils/colorScheme';
+import {font} from 'src/utils/fontScheme';
 
 const Svg = styled.svg`
   fill: ${colour.index.h1.color};
-  font-family: 'Reforma 1918';
-  font-size: 48px;
-  font-weight: 500;
+  font-family: ${font.index.siteTitle.family};
+  font-size: ${font.index.siteTitle.size};
+  font-weight: ${font.index.siteTitle.weight};
   width: 100%;
 `;
 

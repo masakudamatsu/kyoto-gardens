@@ -42,9 +42,9 @@ describe('renders UI correctly', () => {
         -ms-letter-spacing: 0.05em;
         letter-spacing: 0.05em;
         line-height: 1.03;
+        text-indent: -0.0625rem;
         margin: 0 auto;
         max-width: 34.5153rem;
-        text-indent: -0.0625rem;
       }
 
       @media only screen and (min-width:38.9424rem) {
@@ -68,18 +68,13 @@ describe('renders UI correctly', () => {
       @media only screen and (min-width:38.057rem) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
           font-size: 2.8654rem;
+          text-indent: -0.1875rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
           max-width: 42.6366rem;
-        }
-      }
-
-      @media only screen and (min-width:38.057rem) {
-        .Main__Kohoan-sc-126eniy-2 .c0 {
-          text-indent: -0.1875rem;
         }
       }
 

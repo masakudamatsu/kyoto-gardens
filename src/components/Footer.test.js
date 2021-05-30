@@ -12,7 +12,7 @@ test('renders UI correctly', () => {
   expect(container).toMatchInlineSnapshot(`
     .c3 {
       fill: hsla(193,50%,26%,0.9);
-      font-family: 'Reforma 1918';
+      font-family: 'Reforma 1918',serif;
       font-size: 48px;
       font-weight: 500;
       width: 100%;
@@ -101,6 +101,7 @@ test('renders UI correctly', () => {
     @media only screen and (min-width:728px) {
       .c2 {
         font-size: 1.3503rem;
+        line-height: 1.701;
       }
     }
 
@@ -131,6 +132,7 @@ test('renders UI correctly', () => {
     @media only screen and (min-width:728px) {
       .c6 {
         font-size: 1.3503rem;
+        line-height: 1.701;
       }
     }
 

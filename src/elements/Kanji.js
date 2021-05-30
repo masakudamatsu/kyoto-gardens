@@ -2,22 +2,22 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
+
+import {font} from 'src/utils/fontScheme';
 
 const Kanji = styled.span.attrs(props => ({
   lang: 'ja',
 }))`
   ${Main.Kohoan} & {
-    font-family: ${kohoan.kanji.fontFamily};
-    font-size: ${kohoan.kanji.fontSize};
-    font-weight: ${kohoan.kanji.fontWeight};
-    line-height: ${kohoan.kanji.lineHeight};
+    font-family: ${font.kohoan.kanji.family};
+    font-size: ${font.kohoan.kanji.size};
+    font-weight: ${font.kohoan.kanji.weight};
+    line-height: ${font.kohoan.kanji.lineHeight};
   }
   ${Main.Ryoanji} & {
-    font-family: ${ryoanji.kanji.fontFamily};
-    font-size: ${ryoanji.kanji.fontSize};
-    font-weight: ${ryoanji.kanji.fontWeight};
+    font-family: ${font.ryoanji.kanji.family};
+    font-size: ${font.ryoanji.kanji.size};
+    font-weight: ${font.ryoanji.kanji.weight};
   }
 `;
 

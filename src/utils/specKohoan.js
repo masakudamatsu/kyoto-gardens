@@ -5,7 +5,6 @@ import {
   libreBaskerville,
   playfairDisplay,
   playfairDisplaySC,
-  shipporiMincho,
 } from './fontMetrics';
 
 export const kohoan = {
@@ -80,16 +79,6 @@ export const kohoan = {
       },
     },
   },
-  abbr: {
-    ...playfairDisplaySC,
-    letterSpacing: '0.01em',
-    textTransform: 'lowercase',
-  },
-  leadIn: {
-    ...playfairDisplaySC,
-    letterSpacing: '0.01em', // TODO: Adjust this value
-    wordSpacing: '-0.05em', // TODO: Adjust this value
-  },
   hr: {
     asteriskHeight: {
       mobile: 8,
@@ -99,12 +88,6 @@ export const kohoan = {
       mobile: 13,
       desktop: 17.5,
     },
-  },
-  kanji: {
-    fontFamily: shipporiMincho.fontFamily,
-    fontSize: '1em', // Baseline 1px below LibreBaskerville's, Height 2px above Libre Baskerville's cap height
-    fontWeight: 500, // Match Libre Baskerville 400
-    lineHeight: 'normal', // line height doesn't change up to around 1.5
   },
   h1: {
     ...playfairDisplay,
@@ -169,9 +152,6 @@ export const kohoan = {
     textIndent: {
       mobile: -1,
       desktop: -3,
-    },
-    wordSpacing: {
-      rockGarden: '-0.2em',
     },
     hyphen: {
       // distance from text box top to the bottom of hyphen

@@ -9,23 +9,31 @@ import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
-function fontStyle(spec) {
+function h2FontStyle(spec) {
   return css`
-    font-family: ${spec.h2.fontFamily};
-    font-size: ${remify(spec.h2.fontSize.mobile)};
-    font-weight: ${spec.h2.fontWeight};
+    font-family: ${spec.h2.family};
+    font-size: ${remify(
+      makeXHeightToBe(spec.h2.xHeight.mobile, spec.h2.metrics),
+    )};
+    font-weight: ${spec.h2.weight};
     letter-spacing: ${spec.h2.letterSpacing};
-    line-height: ${spec.h2.lineHeight};
-    padding-bottom: ${remify(spec.h2.padding.bottom.mobile)};
-    padding-top: ${remify(spec.h2.padding.top.mobile)};
+    line-height: ${makeLineHeightRatioToBe(
+      spec.h2.lineHeightRatio.mobile,
+      spec.h2.metrics,
+    )};
     text-indent: ${remify(
       spec.h2.textIndent,
     )}; /* Optical alignment with paragraphs */
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(spec.h2.fontSize.desktop)};
-      padding-bottom: ${remify(spec.h2.padding.bottom.desktop)};
-      padding-top: ${remify(spec.h2.padding.top.desktop)};
+      font-size: ${remify(
+        makeXHeightToBe(spec.h2.xHeight.desktop, spec.h2.metrics),
+      )};
     }
   `;
 }
@@ -34,12 +42,24 @@ function fontStyle(spec) {
 const H2Style = styled.h2`
   ${Main.Kohoan} & {
     color: ${colour.kohoan.h2.color};
-    ${fontStyle(kohoan)}
+    ${h2FontStyle(font.kohoan)}
+    padding-bottom: ${remify(kohoan.h2.padding.bottom.mobile)};
+    padding-top: ${remify(kohoan.h2.padding.top.mobile)};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(kohoan.h2.padding.bottom.desktop)};
+      padding-top: ${remify(kohoan.h2.padding.top.desktop)};
+    }
     ${setHorizontalSpace('text', kohoan).inner}
   }
   ${Main.Ryoanji} & {
     color: ${colour.ryoanji.h2.color};
-    ${fontStyle(ryoanji)}
+    ${h2FontStyle(font.ryoanji)}
+    padding-bottom: ${remify(ryoanji.h2.padding.bottom.mobile)};
+    padding-top: ${remify(ryoanji.h2.padding.top.mobile)};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(ryoanji.h2.padding.bottom.desktop)};
+      padding-top: ${remify(ryoanji.h2.padding.top.desktop)};
+    }
     ${setHorizontalSpace('text', ryoanji).inner}
   }
 `;

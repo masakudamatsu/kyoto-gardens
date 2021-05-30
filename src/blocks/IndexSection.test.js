@@ -68,6 +68,11 @@ describe('renders UI correctly:', () => {
       @media only screen and (min-width:25.625rem) {
         .c0 {
           font-size: 1.8218rem;
+        }
+      }
+
+      @media only screen and (min-width:25.625rem) {
+        .c0 {
           padding-top: 72px;
         }
       }
@@ -166,20 +171,7 @@ describe('renders UI correctly:', () => {
   test('Kanji', () => {
     const {container} = render(<IndexSection.Kanji {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
-      .Main__Kohoan-sc-126eniy-2 .c0 {
-        font-family: 'Shippori Mincho',serif;
-        font-size: 1em;
-        font-weight: 500;
-        line-height: normal;
-      }
-
-      .Main__Ryoanji-sc-126eniy-1 .c0 {
-        font-family: 'Shippori Mincho',serif;
-        font-size: 0.85em;
-        font-weight: 500;
-      }
-
-      .c2 {
+      .c1 {
         font-family: 'Shippori Mincho B1',serif;
         font-size: 2em;
         font-weight: 500;
@@ -193,25 +185,25 @@ describe('renders UI correctly:', () => {
         z-index: 2;
       }
 
-      .IndexSection-ff5g7u-0:nth-of-type(odd) .c1 {
+      .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
         left: auto;
         right: 0;
       }
 
-      .IndexSection-ff5g7u-0:nth-of-type(even) .c1 {
+      .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
         left: 0;
         right: auto;
       }
 
       @media only screen and (min-width:25.625rem) {
-        .c2 {
+        .c1 {
           font-size: 3em;
         }
       }
 
       <div>
         <span
-          class="c0 c1 c2"
+          class="c0 c1"
           lang="ja"
         />
       </div>
@@ -247,6 +239,7 @@ describe('renders UI correctly:', () => {
       .c1 {
         font-family: 'Reforma 1918',serif;
         font-size: 1.0931rem;
+        font-weight: 300;
         line-height: 1.5795;
       }
 
@@ -258,6 +251,13 @@ describe('renders UI correctly:', () => {
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
         padding-left: 10px;
         text-align: right;
+      }
+
+      @media only screen and (min-width:728px) {
+        .c1 {
+          font-size: 1.3503rem;
+          line-height: 1.701;
+        }
       }
 
       <div>

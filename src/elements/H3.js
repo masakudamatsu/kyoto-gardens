@@ -9,17 +9,29 @@ import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
-function fontStyle(spec) {
+function h3FontStyle(spec) {
   return css`
-    font-family: ${spec.h3.fontFamily};
-    font-size: ${remify(spec.h3.fontSize.mobile)};
-    font-weight: ${spec.h3.fontWeight};
+    font-family: ${spec.h3.family};
+    font-size: ${remify(
+      makeXHeightToBe(spec.h3.xHeight.mobile, spec.h3.metrics),
+    )};
+    font-weight: ${spec.h3.weight};
     letter-spacing: ${spec.h3.letterSpacing};
-    line-height: ${spec.h3.lineHeight};
+    line-height: ${makeLineHeightRatioToBe(
+      spec.h3.lineHeightRatio.mobile,
+      spec.h3.metrics,
+    )};
     text-transform: ${spec.h3.textTransform};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(spec.h3.fontSize.desktop)};
+      font-size: ${remify(
+        makeXHeightToBe(spec.h3.xHeight.desktop, spec.h3.metrics),
+      )};
     }
   `;
 }
@@ -27,13 +39,13 @@ function fontStyle(spec) {
 const H3 = styled.h3`
   ${Main.Kohoan} & {
     color: ${colour.kohoan.h3.color};
-    ${fontStyle(kohoan)}
+    ${h3FontStyle(font.kohoan)}
     ${setHorizontalSpace('text', kohoan).innerMerged}
     ${setHorizontalSpace('text', kohoan).outer}
   }
   ${Main.Ryoanji} & {
     color: ${colour.ryoanji.h3.color};
-    ${fontStyle(ryoanji)}
+    ${h3FontStyle(font.ryoanji)}
     ${setHorizontalSpace('text', ryoanji).innerMerged}
     ${setHorizontalSpace('text', ryoanji).outer}
   }

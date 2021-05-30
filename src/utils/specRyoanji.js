@@ -1,12 +1,7 @@
 import {getFontSizeFromX, getLineHeightFromRatio} from './fontCssFactory';
 import {scale, setSpace, xHeight} from './designSpec';
 import remify from './remify';
-import {
-  cormorant,
-  cormorantGaramond,
-  cormorantSC,
-  shipporiMincho,
-} from './fontMetrics';
+import {cormorant, cormorantGaramond, cormorantSC} from './fontMetrics';
 
 export const ryoanji = {
   title: 'Ryoan-ji Rock Garden | 龍安寺石庭',
@@ -79,16 +74,6 @@ export const ryoanji = {
       },
     },
   },
-  abbr: {
-    ...cormorantSC,
-    letterSpacing: '0.01em',
-    textTransform: 'lowercase',
-  },
-  leadIn: {
-    ...cormorantSC,
-    letterSpacing: '0.01em',
-    wordSpacing: '-0.05em',
-  },
   hr: {
     asteriskHeight: {
       mobile: 8,
@@ -98,11 +83,6 @@ export const ryoanji = {
       mobile: 13,
       desktop: 17.5,
     },
-  },
-  kanji: {
-    fontFamily: shipporiMincho.fontFamily,
-    fontSize: '0.85em' /* to match with Cormorant Garamond body text */,
-    fontWeight: 500 /* to match with stroke width of Cormorant Garamond SemiBold (600) */,
   },
   h1: {
     ...cormorantSC,

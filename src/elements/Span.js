@@ -6,6 +6,7 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 
 import {colour} from 'src/utils/colorScheme';
+import {font} from 'src/utils/fontScheme';
 
 const Span = styled.span`
   ${props => props.nowrap && ''}
@@ -27,14 +28,14 @@ Span.Source = styled.span`
 
 Span.LeadIn = styled.span`
   ${Main.Ryoanji} & {
-    font-family: ${ryoanji.leadIn.fontFamily};
-    letter-spacing: ${ryoanji.leadIn.letterSpacing};
-    word-spacing: ${ryoanji.leadIn.wordSpacing};
+    font-family: ${font.ryoanji.spanLeadIn.family};
+    letter-spacing: ${font.ryoanji.spanLeadIn.letterSpacing};
+    word-spacing: ${font.ryoanji.spanLeadIn.wordSpacing};
   }
   ${Main.Kohoan} & {
-    font-family: ${kohoan.leadIn.fontFamily};
-    letter-spacing: ${kohoan.leadIn.letterSpacing};
-    word-spacing: ${kohoan.leadIn.wordSpacing};
+    font-family: ${font.kohoan.spanLeadIn.family};
+    letter-spacing: ${font.kohoan.spanLeadIn.letterSpacing};
+    word-spacing: ${font.kohoan.spanLeadIn.wordSpacing};
   }
 `;
 

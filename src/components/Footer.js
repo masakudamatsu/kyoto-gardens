@@ -6,6 +6,11 @@ import remify from 'src/utils/remify';
 import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
 import SiteTitle from 'src/components/SiteTitle';
 
@@ -34,12 +39,29 @@ const DropCap = styled(SiteTitle)`
 const ParagraphStyled = styled.p`
   /* font */
   color: ${colour.index.footer.color};
-  font-family: ${index.article.fontFamily};
-  font-size: ${remify(index.article.fontSize.mobile)};
-  font-weight: ${index.article.fontWeight};
-  line-height: ${index.article.lineHeight.mobile};
+  font-family: ${font.index.footer.family};
+  font-size: ${remify(
+    makeXHeightToBe(
+      font.index.footer.xHeight.mobile,
+      font.index.footer.metrics,
+    ),
+  )};
+  font-weight: ${font.index.footer.weight};
+  line-height: ${makeLineHeightRatioToBe(
+    font.index.footer.lineHeightRatio.mobile,
+    font.index.footer.metrics,
+  )};
   @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(index.article.fontSize.desktop)};
+    font-size: ${remify(
+      makeXHeightToBe(
+        font.index.footer.xHeight.desktop,
+        font.index.footer.metrics,
+      ),
+    )};
+    line-height: ${makeLineHeightRatioToBe(
+      font.index.footer.lineHeightRatio.desktop,
+      font.index.footer.metrics,
+    )};
   }
   ${setHorizontalSpace('text', index).innerMerged}
   ${setHorizontalSpace('text', index).outer}
@@ -59,7 +81,7 @@ const ParagraphStyled = styled.p`
 `;
 
 const Small = styled.small`
-  font-size: ${index.small.fontSize};
+  font-size: ${font.index.footerSmall.size};
 `;
 
 const Footer = () => {

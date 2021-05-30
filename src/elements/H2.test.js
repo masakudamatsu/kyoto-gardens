@@ -18,9 +18,9 @@ test('renders UI correctly', () => {
       -ms-letter-spacing: 0.01em;
       letter-spacing: 0.01em;
       line-height: 1.236;
+      text-indent: -0.125rem;
       padding-bottom: 0.8457rem;
       padding-top: 0.7207rem;
-      text-indent: -0.125rem;
       margin: 0 auto;
       max-width: 34.5153rem;
     }
@@ -35,9 +35,9 @@ test('renders UI correctly', () => {
       -ms-letter-spacing: 0.01em;
       letter-spacing: 0.01em;
       line-height: 1.0452000000000001;
+      text-indent: -0.125rem;
       padding-bottom: 0.9765rem;
       padding-top: 1.0078rem;
-      text-indent: -0.125rem;
       margin: 0 auto;
       max-width: 34.5153rem;
     }
@@ -57,6 +57,11 @@ test('renders UI correctly', () => {
     @media only screen and (min-width:728px) {
       .Main__Kohoan-sc-126eniy-2 .c1 {
         font-size: 2.1238rem;
+      }
+    }
+
+    @media only screen and (min-width:728px) {
+      .Main__Kohoan-sc-126eniy-2 .c1 {
         padding-bottom: 1.0704rem;
         padding-top: 0.8516rem;
       }
@@ -71,6 +76,11 @@ test('renders UI correctly', () => {
     @media only screen and (min-width:728px) {
       .Main__Ryoanji-sc-126eniy-1 .c1 {
         font-size: 2.7208rem;
+      }
+    }
+
+    @media only screen and (min-width:728px) {
+      .Main__Ryoanji-sc-126eniy-1 .c1 {
         padding-bottom: 1.1842rem;
         padding-top: 1.2155rem;
       }

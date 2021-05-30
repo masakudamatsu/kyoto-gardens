@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, setSpace} from 'src/utils/designSpec';
@@ -9,20 +9,41 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
+import {
+  font,
+  makeLineHeightRatioToBe,
+  makeXHeightToBe,
+} from 'src/utils/fontScheme';
 
 const Article = styled.article`
   margin: 0 auto;
   ${Main.Kohoan} & {
     background-image: ${colour.kohoan.article.background};
     color: ${colour.kohoan.article.color};
-    font-family: ${kohoan.article.fontFamily};
-    font-size: ${remify(kohoan.article.fontSize.mobile)};
-    font-weight: ${kohoan.article.fontWeight};
-    line-height: ${kohoan.article.lineHeight.mobile};
-    max-width: ${ryoanji.figure.maxWidth}px; // TODO: to be replaced
+    font-family: ${font.kohoan.article.family};
+    font-size: ${remify(
+      makeXHeightToBe(
+        font.kohoan.article.xHeight.mobile,
+        font.kohoan.article.metrics,
+      ),
+    )};
+    font-weight: ${font.kohoan.article.weight};
+    line-height: ${makeLineHeightRatioToBe(
+      font.kohoan.article.lineHeightRatio.mobile,
+      font.kohoan.article.metrics,
+    )};
+    max-width: ${kohoan.figure.maxWidth}px; // TODO: to be replaced
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(kohoan.article.fontSize.desktop)};
-      line-height: ${kohoan.article.lineHeight.desktop};
+      font-size: ${remify(
+        makeXHeightToBe(
+          font.kohoan.article.xHeight.desktop,
+          font.kohoan.article.metrics,
+        ),
+      )};
+      line-height: ${makeLineHeightRatioToBe(
+        font.kohoan.article.lineHeightRatio.desktop,
+        font.kohoan.article.metrics,
+      )};
     }
   }
   & a {
@@ -49,15 +70,31 @@ const Article = styled.article`
   ${Main.Ryoanji} & {
     background-color: ${colour.ryoanji.article.background};
     color: ${colour.ryoanji.article.color};
-    font-family: ${ryoanji.article.fontFamily};
-    font-size: ${remify(ryoanji.article.fontSize.mobile)};
-    font-weight: ${ryoanji.article.fontWeight};
-    line-height: ${ryoanji.article.lineHeight.mobile};
-    max-width: ${ryoanji.figure.maxWidth}px;
+    font-family: ${font.ryoanji.article.family};
+    font-size: ${remify(
+      makeXHeightToBe(
+        font.ryoanji.article.xHeight.mobile,
+        font.ryoanji.article.metrics,
+      ),
+    )};
+    font-weight: ${font.ryoanji.article.weight};
+    line-height: ${makeLineHeightRatioToBe(
+      font.ryoanji.article.lineHeightRatio.mobile,
+      font.ryoanji.article.metrics,
+    )};
     @media only screen and ${breakpoint.fontSize} {
-      font-size: ${remify(ryoanji.article.fontSize.desktop)};
-      line-height: ${ryoanji.article.lineHeight.desktop};
+      font-size: ${remify(
+        makeXHeightToBe(
+          font.ryoanji.article.xHeight.desktop,
+          font.ryoanji.article.metrics,
+        ),
+      )};
+      line-height: ${makeLineHeightRatioToBe(
+        font.ryoanji.article.lineHeightRatio.desktop,
+        font.ryoanji.article.metrics,
+      )};
     }
+    max-width: ${ryoanji.figure.maxWidth}px;
     & a {
       ${cssLinkText({
         backgroundColor: colour.ryoanji.article.background,
