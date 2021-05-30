@@ -6,7 +6,7 @@ import {colour} from 'src/utils/colorScheme';
 import {font} from 'src/utils/fontScheme';
 
 const Svg = styled.svg`
-  fill: ${colour.index.h1.color};
+  fill: ${colour.index.siteTitle.color};
   font-family: ${font.index.siteTitle.family};
   font-size: ${font.index.siteTitle.size};
   font-weight: ${font.index.siteTitle.weight};

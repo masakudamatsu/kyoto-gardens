@@ -49,7 +49,7 @@ export const colour = {
       color: onPrimary,
       overlay: lighting,
     },
-    h1: {
+    siteTitle: {
       color: primary,
     },
     h2: {
