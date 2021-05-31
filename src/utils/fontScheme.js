@@ -32,7 +32,7 @@ export const breakpoint = {
 
 export const font = {
   index: {
-    footer: {
+    main: {
       family: reforma1918.fontFamily,
       metrics: reforma1918.fontMetrics,
       xHeight: {
@@ -69,9 +69,9 @@ export const font = {
       lineHeight: 1, // to control side margins
       writingMode: 'vertical-rl',
     },
-    get p() {
+    get footer() {
       return {
-        ...this.footer,
+        ...this.main,
       };
     },
     siteTitle: {

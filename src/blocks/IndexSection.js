@@ -185,22 +185,22 @@ IndexSection.Latin.propTypes = {
 };
 
 IndexSection.P = styled.p`
-  font-family: ${font.index.p.family};
+  font-family: ${font.index.main.family};
   font-size: ${remify(
-    makeXHeightToBe(font.index.p.xHeight.mobile, font.index.p.metrics),
+    makeXHeightToBe(font.index.main.xHeight.mobile, font.index.main.metrics),
   )};
-  font-weight: ${font.index.p.weight};
+  font-weight: ${font.index.main.weight};
   line-height: ${makeLineHeightRatioToBe(
-    font.index.p.lineHeightRatio.mobile,
-    font.index.p.metrics,
+    font.index.main.lineHeightRatio.mobile,
+    font.index.main.metrics,
   )};
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(
-      makeXHeightToBe(font.index.p.xHeight.desktop, font.index.p.metrics),
+      makeXHeightToBe(font.index.main.xHeight.desktop, font.index.main.metrics),
     )};
     line-height: ${makeLineHeightRatioToBe(
-      font.index.p.lineHeightRatio.desktop,
-      font.index.p.metrics,
+      font.index.main.lineHeightRatio.desktop,
+      font.index.main.metrics,
     )};
   }
   ${IndexSection}:nth-of-type(odd) & {
