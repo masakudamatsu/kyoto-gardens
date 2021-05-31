@@ -6,11 +6,12 @@ import {index} from 'src/utils/specIndex';
 import {mediaQuery} from 'src/utils/mediaQuery';
 import remify from 'src/utils/remify';
 import {scale} from 'src/utils/specFont';
-import {breakpoint, setSpace} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
 
 import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
 import {colour} from 'src/utils/colorScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const Main = styled.main`
   /* uncomment these once the top bar is introduced
@@ -44,23 +45,23 @@ Main.Index = styled(Main)`
   margin: 0 auto;
   max-width: ${remify(index.main.maxWidth)};
   overflow: hidden; /* to set height large enough to contain floated child elements; see https://www.internetingishard.com/html-and-css/floats/#floats-for-grids */
-  ${getPaddingBottom(index)}
+  ${getPaddingBottom('index')}
   & a,
   & a:visited {
     color: ${colour.index.main.color};
   }
 `;
 
-function getPaddingBottom(spec) {
+function getPaddingBottom(pageName) {
   return css`
     padding-bottom: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenSections -
-        spec.article.descender.mobile,
+      vspace[pageName].betweenSections.mobile -
+        spaceToTrim[pageName].main.bottom.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-bottom: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenSections - spec.article.descender.desktop,
+        vspace[pageName].betweenSections.desktop -
+          spaceToTrim[pageName].main.bottom.desktop,
       )};
     }
   `;

@@ -10,7 +10,7 @@ const mockProps = {};
 test('renders UI correctly', () => {
   const {container} = render(<Footer {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
-    .c3 {
+    .c2 {
       fill: hsla(193,50%,26%,0.9);
       font-family: 'Reforma 1918',serif;
       font-size: 48px;
@@ -18,7 +18,7 @@ test('renders UI correctly', () => {
       width: 100%;
     }
 
-    .c5 {
+    .c4 {
       font-feature-settings: 'salt';
     }
 
@@ -29,7 +29,7 @@ test('renders UI correctly', () => {
       padding-bottom: 3.3203rem;
     }
 
-    .c4 {
+    .c3 {
       fill: rgb(238,238,238);
       float: left;
       -webkit-transform: translate(-8px,15px);
@@ -38,7 +38,7 @@ test('renders UI correctly', () => {
       width: 160px;
     }
 
-    .c2 {
+    .c1 {
       color: rgb(238,238,238);
       font-family: 'Reforma 1918',serif;
       font-size: 1.0931rem;
@@ -50,11 +50,7 @@ test('renders UI correctly', () => {
       text-align: left;
     }
 
-    .c1 + .c1 {
-      padding-top: 1.9922rem;
-    }
-
-    .c6 {
+    .c5 {
       color: rgb(238,238,238);
       font-family: 'Reforma 1918',serif;
       font-size: 1.0931rem;
@@ -66,22 +62,18 @@ test('renders UI correctly', () => {
       text-align: center;
     }
 
-    .c1 + .c1 {
-      padding-top: 1.9922rem;
-    }
-
-    .c7 {
+    .c6 {
       font-size: 80%;
     }
 
     @media only screen and (min-width:728px) {
       .c0 {
-        padding-bottom: 5.013rem;
+        padding-bottom: 4.5573rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
-      .c4 {
+      .c3 {
         width: 253px;
         -webkit-transform: translate(-10px,0px);
         -ms-transform: translate(-10px,0px);
@@ -90,7 +82,7 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-      .c4 {
+      .c3 {
         width: 364px;
         -webkit-transform: translate(-10px,0px);
         -ms-transform: translate(-10px,0px);
@@ -99,64 +91,52 @@ test('renders UI correctly', () => {
     }
 
     @media only screen and (min-width:728px) {
-      .c2 {
+      .c1 {
         font-size: 1.3503rem;
         line-height: 1.701;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c2 {
+      .c1 {
         max-width: 48.6522rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
-      .c2 {
+      .c1 {
         padding: 0 1.9922rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c2 {
+      .c1 {
         padding: 0 3.0078rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c1 + .c1 {
-        padding-top: 3.0078rem;
-      }
-    }
-
-    @media only screen and (min-width:728px) {
-      .c6 {
+      .c5 {
         font-size: 1.3503rem;
         line-height: 1.701;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c6 {
+      .c5 {
         max-width: 48.6522rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
-      .c6 {
+      .c5 {
         padding: 0 1.9922rem;
       }
     }
 
     @media only screen and (min-width:728px) {
-      .c6 {
+      .c5 {
         padding: 0 3.0078rem;
-      }
-    }
-
-    @media only screen and (min-width:728px) {
-      .c1 + .c1 {
-        padding-top: 3.0078rem;
       }
     }
 
@@ -165,11 +145,11 @@ test('renders UI correctly', () => {
         class="c0"
       >
         <p
-          class="c1 c2"
+          class="c1"
         >
           <svg
             aria-labelledby="alt-text"
-            class="c3 c4"
+            class="c2 c3"
             role="img"
             viewBox="0 0 320 181"
           >
@@ -186,7 +166,7 @@ test('renders UI correctly', () => {
                 y="58"
               >
                 <tspan
-                  class="c5"
+                  class="c4"
                 >
                   T
                 </tspan>
@@ -213,10 +193,10 @@ test('renders UI correctly', () => {
            presents alternative takes on historical gardens in Japan, attempting to uncover the intentions of their design. It is a one-person project: articles are written, photographs taken (unless otherwise indicated), and web pages designed and coded, by Masa Kudamatsu, a native Japanese speaker who loves living in Kyoto for its amazing gardens.
         </p>
         <p
-          class="c1 c6"
+          class="c5"
         >
           <small
-            class="c7"
+            class="c6"
           >
             © 2021 Masayuki Kudamatsu. All rights reserved.
           </small>

@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
+import {breakpoint, setHorizontalSpace} from 'src/utils/designSpec';
 
 import {colour} from 'src/utils/colorScheme';
 import {
@@ -11,6 +11,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 import SiteTitle from 'src/components/SiteTitle';
 
@@ -18,7 +19,7 @@ const FooterStyled = styled.footer`
   background-color: ${colour.index.footer.background};
   margin: 0 auto;
   padding-top: ${index.article.paddingTop};
-  ${getPaddingBottom(index)}
+  ${getPaddingBottom('index')}
 `;
 
 const DropCap = styled(SiteTitle)`
@@ -66,18 +67,6 @@ const ParagraphStyled = styled.p`
   ${setHorizontalSpace('text', index).innerMerged}
   ${setHorizontalSpace('text', index).outer}
   text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
-  & + & {
-    padding-top: ${remify(
-      setSpace('mobile', index.article.lineHeightRatio.mobile)
-        .betweenParagraphs - index.article.descender.mobile,
-    )};
-    @media only screen and ${breakpoint.fontSize} {
-      padding-top: ${remify(
-        setSpace('desktop', index.article.lineHeightRatio.desktop)
-          .betweenParagraphs - index.article.descender.desktop,
-      )};
-    }
-  }
 `;
 
 const Small = styled.small`
@@ -106,16 +95,17 @@ Footer.propTypes = {};
 
 export default Footer;
 
-function getPaddingBottom(spec) {
+function getPaddingBottom(pageName) {
+  // same as in Main.js
   return css`
     padding-bottom: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenSections -
-        spec.article.descender.mobile,
+      vspace[pageName].betweenSections.mobile -
+        spaceToTrim[pageName].main.bottom.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-bottom: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenSections - spec.article.descender.desktop,
+        vspace[pageName].betweenSections.desktop -
+          spaceToTrim[pageName].main.bottom.desktop,
       )};
     }
   `;

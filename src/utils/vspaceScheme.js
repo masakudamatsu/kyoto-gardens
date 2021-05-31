@@ -1,7 +1,12 @@
 import {font, scale} from './fontScheme';
 
 export const vspace = {
-  index: {},
+  index: {
+    betweenSections: {
+      mobile: getSpaceBetweenLines('mobile', font.index.main) * scale * scale,
+      desktop: getSpaceBetweenLines('desktop', font.index.main) * scale * scale,
+    },
+  },
   kohoan: {
     betweenLines: {
       mobile: getSpaceBetweenLines('mobile', font.kohoan.article),
@@ -37,7 +42,14 @@ export const vspace = {
 };
 
 export const spaceToTrim = {
-  index: {},
+  index: {
+    main: {
+      bottom: {
+        mobile: 0, // TODO
+        desktop: 0, // TODO
+      },
+    },
+  },
   kohoan: {
     article: {
       top: {
