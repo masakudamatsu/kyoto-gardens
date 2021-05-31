@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
 import {breakpoint} from 'src/utils/designSpec';
-import {setHorizontalSpace} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {kohoan} from 'src/utils/specKohoan';
@@ -16,6 +15,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
@@ -52,7 +52,7 @@ const H1 = styled.h1`
         ),
       )};
     }
-    ${setHorizontalSpace('text', ryoanji).inner}
+    ${hspace.ryoanji.maxWidth.heading}
   }
   ${Main.Kohoan} & {
     color: ${colour.kohoan.h1.color};
@@ -73,7 +73,7 @@ const H1 = styled.h1`
       )};
       text-indent: ${remify(font.kohoan.h1.textIndent.tablet)};
     }
-    ${setHorizontalSpace('text', kohoan).inner}
+    ${hspace.kohoan.maxWidth.heading}
   }
   display: flex;
   flex-direction: column;
@@ -112,7 +112,9 @@ H1.RockGarden = styled.span`
 
 H1.Wrapper = styled.div`
   ${Main.Ryoanji} & {
-    ${setHorizontalSpace('text', ryoanji).outer}
+    ${hspace.ryoanji.paddingSide.mobile}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
     background-color: ${colour.ryoanji.h1.background.mobile};
     background-image: ${colour.ryoanji.h1.overlay.mobile};
     color: ${colour.ryoanji.h1.color.mobile};
@@ -130,7 +132,9 @@ H1.Wrapper = styled.div`
     }
   }
   ${Main.Kohoan} & {
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
     position: relative;
     width: 100%;
     top: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};

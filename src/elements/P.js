@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
 
-import {setHorizontalSpace} from 'src/utils/designSpec';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
+import {hspace} from 'src/utils/hspaceScheme';
 
 const P = styled.p`
   text-align: ${props => (props.centerAligned ? 'center' : 'left')};
   ${Main.Kohoan} & {
-    ${setHorizontalSpace('text', kohoan).innerMerged}
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.maxWidth.body}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
   }
   ${Main.Ryoanji} & {
-    ${setHorizontalSpace('text', ryoanji).innerMerged}
-    ${setHorizontalSpace('text', ryoanji).outer}
+    ${hspace.ryoanji.maxWidth.body}
+    ${hspace.ryoanji.paddingSide.mobile}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
   }
 `;
 

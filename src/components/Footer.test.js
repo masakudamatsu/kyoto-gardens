@@ -46,7 +46,8 @@ test('renders UI correctly', () => {
       line-height: 1.5795;
       margin: 0 auto;
       max-width: 38.4997rem;
-      padding: 0 1.1953rem;
+      padding-left: 1.1953rem;
+      padding-right: 1.1953rem;
       text-align: left;
     }
 
@@ -58,7 +59,8 @@ test('renders UI correctly', () => {
       line-height: 1.5795;
       margin: 0 auto;
       max-width: 38.4997rem;
-      padding: 0 1.1953rem;
+      padding-left: 1.1953rem;
+      padding-right: 1.1953rem;
       text-align: center;
     }
 
@@ -99,19 +101,21 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c1 {
-        max-width: 48.6522rem;
+        max-width: 48.1053rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
       .c1 {
-        padding: 0 1.9922rem;
+        padding-left: 1.9922rem;
+        padding-right: 1.9922rem;
       }
     }
 
     @media only screen and (min-width:728px) {
       .c1 {
-        padding: 0 3.0078rem;
+        padding-left: 2.7344rem;
+        padding-right: 2.7344rem;
       }
     }
 
@@ -124,19 +128,21 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:728px) {
       .c5 {
-        max-width: 48.6522rem;
+        max-width: 48.1053rem;
       }
     }
 
     @media only screen and (min-width:31.2375rem) {
       .c5 {
-        padding: 0 1.9922rem;
+        padding-left: 1.9922rem;
+        padding-right: 1.9922rem;
       }
     }
 
     @media only screen and (min-width:728px) {
       .c5 {
-        padding: 0 3.0078rem;
+        padding-left: 2.7344rem;
+        padding-right: 2.7344rem;
       }
     }
 

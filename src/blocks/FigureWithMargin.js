@@ -1,27 +1,28 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import FigCaption from 'src/elements/FigCaption';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
-import {setHorizontalSpace} from 'src/utils/designSpec';
+import {hspace} from 'src/utils/hspaceScheme';
 
 // prettier-ignore
 const FigureWithMargin = styled.figure`
   ${Main.Kohoan} & {
   }
   ${Main.Ryoanji} & {
-    ${setHorizontalSpace('figure', ryoanji).innerMerged}
-    ${setHorizontalSpace('figure', ryoanji).outer}
+    ${hspace.ryoanji.maxWidth.body}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
   }
 `;
 
 FigureWithMargin.FigCaption = styled(FigCaption)`
   ${Main.Kohoan} & {
-    ${setHorizontalSpace('text', kohoan).innerMerged}
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.maxWidth.body}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
   }
 `;
 

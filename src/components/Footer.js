@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint, setHorizontalSpace} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
 
 import {colour} from 'src/utils/colorScheme';
 import {
@@ -12,6 +12,7 @@ import {
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 
 import SiteTitle from 'src/components/SiteTitle';
 
@@ -64,9 +65,11 @@ const ParagraphStyled = styled.p`
       font.index.footer.metrics,
     )};
   }
-  ${setHorizontalSpace('text', index).innerMerged}
-  ${setHorizontalSpace('text', index).outer}
-  text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
+  ${hspace.index.maxWidth.body}
+  ${hspace.index.paddingSide.mobile}
+  ${hspace.index.paddingSide.tablet}
+  ${hspace.index.paddingSide.desktop}
+text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
 `;
 
 const Small = styled.small`

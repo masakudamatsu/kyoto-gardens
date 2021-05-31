@@ -5,19 +5,21 @@ import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
-import {setHorizontalSpace} from 'src/utils/designSpec';
-
 import {colour} from 'src/utils/colorScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 
 // prettier-ignore
 const FigureWithBorder = styled.figure`
   ${Main.Kohoan} & {
-    ${setHorizontalSpace('text', kohoan).innerMerged}
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.maxWidth.body}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
   }
   ${Main.Ryoanji} & {
-    ${setHorizontalSpace('figure', ryoanji).innerMerged}
-    ${setHorizontalSpace('figure', ryoanji).outer}
+    ${hspace.ryoanji.maxWidth.body}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
   }
 `;
 

@@ -45,13 +45,15 @@ test('renders UI correctly', () => {
     .Main__Kohoan-sc-126eniy-2 .c0 {
       background-color: hsla(193,50%,26%,0.9);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
-      padding: 0 1.0625rem;
+      padding-left: 1.0625rem;
+      padding-right: 1.0625rem;
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
       background-color: hsla(193,50%,26%,0.9);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
-      padding: 0 1.3281rem;
+      padding-left: 1.3281rem;
+      padding-right: 1.3281rem;
     }
 
     @media only screen and (min-width:728px) {
@@ -94,25 +96,29 @@ test('renders UI correctly', () => {
 
     @media only screen and (min-width:30.7948rem) {
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        padding: 0 1.7708rem;
+        padding-left: 1.7708rem;
+        padding-right: 1.7708rem;
       }
     }
 
     @media only screen and (min-width:728px) {
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        padding: 0 2.4609rem;
+        padding-left: 2.4609rem;
+        padding-right: 2.4609rem;
       }
     }
 
     @media only screen and (min-width:31.6802rem) {
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        padding: 0 2.2135rem;
+        padding-left: 2.2135rem;
+        padding-right: 2.2135rem;
       }
     }
 
     @media only screen and (min-width:728px) {
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        padding: 0 3.0078rem;
+        padding-left: 3.0078rem;
+        padding-right: 3.0078rem;
       }
     }
 

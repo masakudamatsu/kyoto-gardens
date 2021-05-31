@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 
 import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
-import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
@@ -14,6 +11,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 
 function h3FontStyle(spec) {
   return css`
@@ -40,14 +38,18 @@ const H3 = styled.h3`
   ${Main.Kohoan} & {
     color: ${colour.kohoan.h3.color};
     ${h3FontStyle(font.kohoan)}
-    ${setHorizontalSpace('text', kohoan).innerMerged}
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.maxWidth.body}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
   }
   ${Main.Ryoanji} & {
     color: ${colour.ryoanji.h3.color};
     ${h3FontStyle(font.ryoanji)}
-    ${setHorizontalSpace('text', ryoanji).innerMerged}
-    ${setHorizontalSpace('text', ryoanji).outer}
+    ${hspace.ryoanji.maxWidth.body}
+    ${hspace.ryoanji.paddingSide.mobile}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
   }
 `;
 

@@ -2,6 +2,14 @@ import {font, scale} from './fontScheme';
 
 export const vspace = {
   index: {
+    betweenLines: {
+      mobile: getSpaceBetweenLines('mobile', font.index.main),
+      desktop: getSpaceBetweenLines('desktop', font.index.main),
+    },
+    betweenParagraphs: {
+      mobile: getSpaceBetweenLines('mobile', font.index.main) * scale,
+      desktop: getSpaceBetweenLines('desktop', font.index.main) * scale,
+    },
     betweenSections: {
       mobile: getSpaceBetweenLines('mobile', font.index.main) * scale * scale,
       desktop: getSpaceBetweenLines('desktop', font.index.main) * scale * scale,

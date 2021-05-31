@@ -34,13 +34,15 @@ describe('renders the UI correctly during the loading time', () => {
       .Main__Kohoan-sc-126eniy-2 .c0 {
         margin: 0 auto;
         max-width: 38.057rem;
-        padding: 0 1.0625rem;
+        padding-left: 1.0625rem;
+        padding-right: 1.0625rem;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         margin: 0 auto;
         max-width: 38.9424rem;
-        padding: 0 1.3281rem;
+        padding-left: 1.3281rem;
+        padding-right: 1.3281rem;
       }
 
       .c3 {
@@ -91,13 +93,15 @@ describe('renders the UI correctly during the loading time', () => {
 
       @media only screen and (min-width:30.7948rem) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
-          padding: 0 1.7708rem;
+          padding-left: 1.7708rem;
+          padding-right: 1.7708rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
-          padding: 0 2.4609rem;
+          padding-left: 2.4609rem;
+          padding-right: 2.4609rem;
         }
       }
 
@@ -109,13 +113,15 @@ describe('renders the UI correctly during the loading time', () => {
 
       @media only screen and (min-width:31.6802rem) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
-          padding: 0 2.2135rem;
+          padding-left: 2.2135rem;
+          padding-right: 2.2135rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
-          padding: 0 3.0078rem;
+          padding-left: 3.0078rem;
+          padding-right: 3.0078rem;
         }
       }
 
@@ -174,13 +180,15 @@ describe('changes UI by prop values', () => {
       .Main__Kohoan-sc-126eniy-2 .c3 {
         margin: 0 auto;
         max-width: 38.057rem;
-        padding: 0 1.0625rem;
+        padding-left: 1.0625rem;
+        padding-right: 1.0625rem;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c3 {
         margin: 0 auto;
         max-width: 38.9424rem;
-        padding: 0 1.3281rem;
+        padding-left: 1.3281rem;
+        padding-right: 1.3281rem;
       }
 
       .c0 {
@@ -246,13 +254,15 @@ describe('changes UI by prop values', () => {
 
       @media only screen and (min-width:30.7948rem) {
         .Main__Kohoan-sc-126eniy-2 .c3 {
-          padding: 0 1.7708rem;
+          padding-left: 1.7708rem;
+          padding-right: 1.7708rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c3 {
-          padding: 0 2.4609rem;
+          padding-left: 2.4609rem;
+          padding-right: 2.4609rem;
         }
       }
 
@@ -264,19 +274,22 @@ describe('changes UI by prop values', () => {
 
       @media only screen and (min-width:31.6802rem) {
         .Main__Ryoanji-sc-126eniy-1 .c3 {
-          padding: 0 2.2135rem;
+          padding-left: 2.2135rem;
+          padding-right: 2.2135rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c3 {
-          padding: 0 3.0078rem;
+          padding-left: 3.0078rem;
+          padding-right: 3.0078rem;
         }
       }
 
       @media only screen and (min-width:101px) {
         .c1 {
-          padding: 0 1.0625rem;
+          padding-left: 1.0625rem;
+          padding-right: 1.0625rem;
         }
       }
 
@@ -288,13 +301,15 @@ describe('changes UI by prop values', () => {
 
       @media only screen and (min-width:30.7948rem) {
         .c1 {
-          padding: 0 1.7708rem;
+          padding-left: 1.7708rem;
+          padding-right: 1.7708rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .c1 {
-          padding: 0 2.4609rem;
+          padding-left: 2.4609rem;
+          padding-right: 2.4609rem;
         }
       }
 

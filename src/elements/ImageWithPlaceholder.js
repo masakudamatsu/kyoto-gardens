@@ -9,10 +9,9 @@ import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 import Main from 'src/blocks/Main';
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
-import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {breakpoint, setSpace, setHorizontalSpace} from 'src/utils/designSpec';
-import remify from 'src/utils/remify';
+import {breakpoint} from 'src/utils/designSpec';
+import {hspace} from 'src/utils/hspaceScheme';
 
 const Wrapper = styled.div`
   position: relative;
@@ -21,13 +20,12 @@ const Wrapper = styled.div`
 Wrapper.Kohoan = styled(Wrapper)`
   ${({width}) => `
     @media only screen and (min-width: ${width + 1}px) {
-      padding: 0 ${remify(
-        setSpace('mobile', kohoan.article.lineHeightRatio.mobile).sideMargin,
-      )};
+      ${hspace.kohoan.paddingSide.mobile}
     }
     `}
-  ${setHorizontalSpace('figure', kohoan).innerMerged}
-  ${setHorizontalSpace('figure', kohoan).outer}
+  ${hspace.kohoan.maxWidth.body}
+  ${hspace.kohoan.paddingSide.tablet}
+  ${hspace.kohoan.paddingSide.desktop}
 `;
 
 const Placeholder = styled(P)`

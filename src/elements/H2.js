@@ -5,7 +5,6 @@ import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {setHorizontalSpace} from 'src/utils/designSpec';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
@@ -14,6 +13,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 
 function h2FontStyle(spec) {
   return css`
@@ -49,7 +49,7 @@ const H2Style = styled.h2`
       padding-bottom: ${remify(kohoan.h2.padding.bottom.desktop)};
       padding-top: ${remify(kohoan.h2.padding.top.desktop)};
     }
-    ${setHorizontalSpace('text', kohoan).inner}
+    ${hspace.kohoan.maxWidth.heading}
   }
   ${Main.Ryoanji} & {
     color: ${colour.ryoanji.h2.color};
@@ -60,7 +60,7 @@ const H2Style = styled.h2`
       padding-bottom: ${remify(ryoanji.h2.padding.bottom.desktop)};
       padding-top: ${remify(ryoanji.h2.padding.top.desktop)};
     }
-    ${setHorizontalSpace('text', ryoanji).inner}
+    ${hspace.ryoanji.maxWidth.heading}
   }
 `;
 
@@ -68,12 +68,16 @@ H2Style.Wrapper = styled.div`
   ${Main.Kohoan} & {
     background-color: ${colour.kohoan.h2.background};
     background-image: ${colour.kohoan.h2.overlay};
-    ${setHorizontalSpace('text', kohoan).outer}
+    ${hspace.kohoan.paddingSide.mobile}
+    ${hspace.kohoan.paddingSide.tablet}
+    ${hspace.kohoan.paddingSide.desktop}
   }
   ${Main.Ryoanji} & {
     background-color: ${colour.ryoanji.h2.background};
     background-image: ${colour.ryoanji.h2.overlay};
-    ${setHorizontalSpace('text', ryoanji).outer}
+    ${hspace.ryoanji.paddingSide.mobile}
+    ${hspace.ryoanji.paddingSide.tablet}
+    ${hspace.ryoanji.paddingSide.desktop}
   }
 `;
 
