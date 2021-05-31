@@ -49,3 +49,19 @@ If we need the list of all declarations for a selector, see snapshot tests (or C
 
    Beyond the maximum line length, both text and figures are center-aligned.
 
+
+## Vertical spacing
+
+Space between components within `<Section>` is controlled by `<Spacer>` components.
+
+In Koho-an page, the space between H1 text and the 1st paragraph is set by `<Article.Header>`.
+
+Space between sections is set by `<Section>` component.
+
+Space above H3 text is set by `<SubSection>` component.
+
+Space above and below Hr is set by `<Hr>` component.
+
+In Index page, the space between Main and Footer is set by `<Main>` component.
+
+In Index page, the space between Footer and the bottom of the page is set by `<Footer>` component.
