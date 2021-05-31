@@ -52,16 +52,16 @@ If we need the list of all declarations for a selector, see snapshot tests (or C
 
 ## Vertical spacing
 
-Space between components within `<Section>` is controlled by `<Spacer>` components.
+Space between components within `<Section>` is controlled by `<Spacer>` components' `height`.
 
-In Koho-an page, the space between H1 text and the 1st paragraph is set by `<Article.Header>`.
+In Koho-an page, the space between H1 text and the 1st paragraph is set by `<Article.Header>`'s `padding-bottom`.
 
-Space between sections is set by `<Section>` component.
+Space between sections is set by `<Section>` component's `padding-bottom`.
 
-Space above H3 text is set by `<SubSection>` component.
+Space above H3 text is set by `<SubSection>` component's `padding-top`.
 
-Space above and below Hr is set by `<Hr>` component.
+Space above and below Hr is set by `<Hr>` component's `padding-top` and `padding-bottom`.
 
-In Index page, the space between Main and Footer is set by `<Main>` component.
+In Index page, the space between Main and Footer is set by `<Main>` component's `padding-bottom`.
 
-In Index page, the space between Footer and the bottom of the page is set by `<Footer>` component.
+In Index page, the space between Footer and the bottom of the page is set by `<Footer>` component's `padding-bottom`.
