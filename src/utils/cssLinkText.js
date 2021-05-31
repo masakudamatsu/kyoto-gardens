@@ -7,7 +7,7 @@ export function cssLinkText({
   linkTextColor,
   underlineColor = 'currentColor',
   baselinePosition,
-  lineWidth,
+  underlineWidth,
   spaceBelowBaseline,
 }) {
   return css`
@@ -21,7 +21,7 @@ export function cssLinkText({
       ); /* make the upper half transparent, to explicitly control the distance between the baseline and the underline. */
       background-position: 0 ${remify(baselinePosition + spaceBelowBaseline)};
       background-repeat: no-repeat;
-      background-size: 100% ${lineWidth}px;
+      background-size: 100% ${underlineWidth}px;
       color: ${linkTextColor};
       cursor: pointer;
       text-decoration: none;

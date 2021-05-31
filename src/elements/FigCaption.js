@@ -52,18 +52,21 @@ const FigCaption = styled.figcaption`
         backgroundColor: 'transparent',
         backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
         linkTextColor: colour.kohoan.link.color,
-        baselinePosition: kohoan.figCaption.baselinePosition.mobile,
-        lineWidth: kohoan.link.lineWidth,
-        spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
+        baselinePosition: font.kohoan.figCaption.link.baselinePosition.mobile,
+        underlineWidth: font.kohoan.figCaption.link.underlineWidth,
+        spaceBelowBaseline:
+          font.kohoan.figCaption.link.spaceBelowBaseline.mobile,
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
           backgroundColor: 'transparent',
           backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
           linkTextColor: colour.kohoan.link.color,
-          baselinePosition: kohoan.figCaption.baselinePosition.desktop,
-          lineWidth: kohoan.link.lineWidth,
-          spaceBelowBaseline: kohoan.link.spaceBelowBaseline.figCaption.desktop,
+          baselinePosition:
+            font.kohoan.figCaption.link.baselinePosition.desktop,
+          underlineWidth: font.kohoan.figCaption.link.underlineWidth,
+          spaceBelowBaseline:
+            font.kohoan.figCaption.link.spaceBelowBaseline.desktop,
         })}
       }
     }
@@ -75,19 +78,21 @@ const FigCaption = styled.figcaption`
         backgroundColor: 'transparent',
         backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
         linkTextColor: colour.ryoanji.link.color,
-        baselinePosition: ryoanji.figCaption.baselinePosition.mobile,
-        lineWidth: ryoanji.link.lineWidth,
-        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+        baselinePosition: font.ryoanji.figCaption.link.baselinePosition.mobile,
+        underlineWidth: font.ryoanji.figCaption.link.underlineWidth,
+        spaceBelowBaseline:
+          font.ryoanji.figCaption.link.spaceBelowBaseline.mobile,
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
           backgroundColor: 'transparent',
           backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
           linkTextColor: colour.ryoanji.link.color,
-          baselinePosition: ryoanji.figCaption.baselinePosition.desktop,
-          lineWidth: ryoanji.link.lineWidth,
+          baselinePosition:
+            font.ryoanji.figCaption.link.baselinePosition.desktop,
+          underlineWidth: font.ryoanji.figCaption.link.underlineWidth,
           spaceBelowBaseline:
-            ryoanji.link.spaceBelowBaseline.figCaption.desktop,
+            font.ryoanji.figCaption.link.spaceBelowBaseline.desktop,
         })}
       }
     }

@@ -44,10 +44,6 @@ export const kohoan = {
         desktop: 64.97 * xHeight('desktop'),
       }, // 682.188px for font-size of 26.3824px
     },
-    baselinePosition: {
-      mobile: 16, // TODO: measure it properly
-      desktop: 19, // TODO: measure it properly
-    },
     ascender: {
       // from top of the text box to the top of capital letters
       // for space between box and paragraph
@@ -67,16 +63,6 @@ export const kohoan = {
         mobile: this.fontSize.mobile * ratioToFontSize,
         desktop: this.fontSize.desktop * ratioToFontSize,
       };
-    },
-  },
-  link: {
-    lineWidth: 1,
-    spaceBelowBaseline: {
-      mobile: 1,
-      desktop: 2,
-      figCaption: {
-        desktop: 1,
-      },
     },
   },
   hr: {
@@ -265,10 +251,6 @@ export const kohoan = {
     descender: {
       mobile: 5, // 10.5 - article.ascender.mobile
       desktop: 7, // 15.5 - article.ascender.desktop
-    },
-    baselinePosition: {
-      mobile: 16,
-      desktop: 20,
     },
   },
   figure: {

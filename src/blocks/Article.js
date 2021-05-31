@@ -53,18 +53,18 @@ const Article = styled.article`
       backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
       linkTextColor: colour.kohoan.link.color,
       underlineColor: colour.kohoan.link.underline,
-      baselinePosition: kohoan.article.baselinePosition.mobile,
-      lineWidth: kohoan.link.lineWidth,
-      spaceBelowBaseline: kohoan.link.spaceBelowBaseline.mobile,
+      baselinePosition: font.kohoan.article.link.baselinePosition.mobile,
+      underlineWidth: font.kohoan.article.link.underlineWidth,
+      spaceBelowBaseline: font.kohoan.article.link.spaceBelowBaseline.mobile,
     })}
     @media only screen and ${breakpoint.fontSize} {
       ${cssLinkText({
         backgroundColor: 'transparent', // disable text-shadow
         backgroundColorOnHover: colour.kohoan.link.onHoverBackground,
         linkTextColor: colour.kohoan.link.color,
-        baselinePosition: kohoan.article.baselinePosition.desktop,
-        lineWidth: kohoan.link.lineWidth,
-        spaceBelowBaseline: kohoan.link.spaceBelowBaseline.desktop,
+        baselinePosition: font.kohoan.article.link.baselinePosition.desktop,
+        underlineWidth: font.kohoan.article.link.underlineWidth,
+        spaceBelowBaseline: font.kohoan.article.link.spaceBelowBaseline.desktop,
       })}
     }
   }
@@ -101,18 +101,19 @@ const Article = styled.article`
         backgroundColor: colour.ryoanji.article.background,
         backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
         linkTextColor: colour.ryoanji.link.color,
-        baselinePosition: ryoanji.article.baselinePosition.mobile,
-        lineWidth: ryoanji.link.lineWidth,
-        spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.mobile,
+        baselinePosition: font.ryoanji.article.link.baselinePosition.mobile,
+        underlineWidth: font.ryoanji.article.link.underlineWidth,
+        spaceBelowBaseline: font.ryoanji.article.link.spaceBelowBaseline.mobile,
       })}
       @media only screen and ${breakpoint.fontSize} {
         ${cssLinkText({
           backgroundColor: colour.ryoanji.article.background,
           backgroundColorOnHover: colour.ryoanji.link.onHoverBackground,
           linkTextColor: colour.ryoanji.link.color,
-          baselinePosition: ryoanji.article.baselinePosition.desktop,
-          lineWidth: ryoanji.link.lineWidth,
-          spaceBelowBaseline: ryoanji.link.spaceBelowBaseline.desktop,
+          baselinePosition: font.ryoanji.article.link.baselinePosition.desktop,
+          underlineWidth: font.ryoanji.article.link.underlineWidth,
+          spaceBelowBaseline:
+            font.ryoanji.article.link.spaceBelowBaseline.desktop,
         })}
       }
     }

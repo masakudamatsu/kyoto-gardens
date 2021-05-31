@@ -40,10 +40,6 @@ export const ryoanji = {
         desktop: 64.97 * xHeight('desktop'),
       }, // 682.188px for font-size of 26.3824px
     },
-    baselinePosition: {
-      mobile: 20,
-      desktop: 24,
-    },
     ascender: {
       // for space between box and paragraph
       mobile: 7.5,
@@ -62,16 +58,6 @@ export const ryoanji = {
         mobile: this.fontSize.mobile * ratioToFontSize,
         desktop: this.fontSize.desktop * ratioToFontSize,
       };
-    },
-  },
-  link: {
-    lineWidth: 1,
-    spaceBelowBaseline: {
-      mobile: 1,
-      desktop: 2,
-      figCaption: {
-        desktop: 1,
-      },
     },
   },
   hr: {
@@ -257,10 +243,6 @@ export const ryoanji = {
     },
     textAlign: 'right', // TODO: Dry this code to share with other pages
     marginRight: 5, // Align with the right-edge of the floor plan for narrowest screens
-    baselinePosition: {
-      mobile: 17,
-      desktop: 21,
-    },
   },
   figure: {
     maxHeight: 703, // half the height of spring/summer photos

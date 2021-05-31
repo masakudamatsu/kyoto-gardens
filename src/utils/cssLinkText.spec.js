@@ -11,7 +11,7 @@ const inputs = {
   backgroundColorOnHover: '#aaaaaa',
   linkTextColor: '#ffffff',
   baselinePosition: 20,
-  lineWidth: 1,
+  underlineWidth: 1,
   spaceBelowBaseline: 1,
 };
 

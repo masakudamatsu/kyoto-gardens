@@ -89,6 +89,18 @@ export const font = {
         mobile: {xHeight: 1, betweenLines: 2},
         desktop: {xHeight: 4, betweenLines: 9},
       },
+      link: {
+        baselinePosition: {
+          // for link underlines
+          mobile: 16, // TODO: measure it properly
+          desktop: 19, // TODO: measure it properly
+        },
+        spaceBelowBaseline: {
+          mobile: 1,
+          desktop: 2,
+        },
+        underlineWidth: 1,
+      },
     },
     figCaption: {
       family: playfairDisplaySC.fontFamily,
@@ -101,6 +113,18 @@ export const font = {
       lineHeightRatio: {
         mobile: {xHeight: 2, betweenLines: 3},
         desktop: {xHeight: 4, betweenLines: 7},
+      },
+      link: {
+        baselinePosition: {
+          // for link underlines
+          mobile: 16,
+          desktop: 20,
+        },
+        spaceBelowBaseline: {
+          mobile: 1,
+          desktop: 1,
+        },
+        underlineWidth: 1,
       },
       ligature: 'none', // Fix the bug that the fl ligature will be shown in lowercase...
       textAlign: 'left',
@@ -175,6 +199,17 @@ export const font = {
         mobile: {xHeight: 2, betweenLines: 5},
         desktop: {xHeight: 4, betweenLines: 11},
       },
+      link: {
+        baselinePosition: {
+          mobile: 20,
+          desktop: 24,
+        },
+        spaceBelowBaseline: {
+          mobile: 1,
+          desktop: 2,
+        },
+        underlineWidth: 1,
+      },
     },
     abbr: {
       family: cormorantSC.fontFamily,
@@ -192,6 +227,17 @@ export const font = {
       lineHeightRatio: {
         mobile: {xHeight: 2, betweenLines: 3},
         desktop: {xHeight: 4, betweenLines: 7},
+      },
+      link: {
+        baselinePosition: {
+          mobile: 17,
+          desktop: 21,
+        },
+        spaceBelowBaseline: {
+          mobile: 1,
+          desktop: 1,
+        },
+        underlineWidth: 1,
       },
       marginRight: 5, // Align with the right-edge of the floor plan for narrowest screens
       textAlign: 'right',
