@@ -5,7 +5,7 @@ import Main from 'src/blocks/Main';
 
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 

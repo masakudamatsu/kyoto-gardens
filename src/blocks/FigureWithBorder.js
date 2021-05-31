@@ -6,7 +6,7 @@ import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
-import {hspace} from 'src/utils/hspaceScheme';
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
 
 // prettier-ignore
 const FigureWithBorder = styled.figure`
@@ -33,7 +33,7 @@ FigureWithBorder.Border = styled.div`
     border-bottom: 1px solid ${colour.ryoanji.figure.border};
     border-top: 1px solid ${colour.ryoanji.figure.border};
     padding: ${ryoanji.figure.paddingInsideBorder}px;
-    @media only screen and ${ryoanji.breakpoint.sideMargin} {
+    @media only screen and ${breakpoint.sideMargin('ryoanji')} {
       border-left: 1px solid ${colour.ryoanji.figure.border};
       border-right: 1px solid ${colour.ryoanji.figure.border};
     }

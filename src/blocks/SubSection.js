@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {colour} from 'src/utils/colorScheme';
 import {

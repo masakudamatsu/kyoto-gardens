@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {colour} from 'src/utils/colorScheme';
 import {
@@ -28,7 +28,7 @@ const DropCap = styled(SiteTitle)`
   float: left;
   transform: translate(-8px, 15px);
   width: 160px;
-  @media only screen and ${index.breakpoint.sideMargin} {
+  @media only screen and ${breakpoint.sideMargin('index')} {
     width: 253px;
     transform: translate(-10px, 0px);
   }

@@ -10,7 +10,7 @@ import Main from 'src/blocks/Main';
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
 import {ryoanji} from 'src/utils/specRyoanji';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 import {hspace} from 'src/utils/hspaceScheme';
 
 const Wrapper = styled.div`

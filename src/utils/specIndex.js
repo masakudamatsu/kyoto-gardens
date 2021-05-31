@@ -111,20 +111,6 @@ export const index = {
       desktop: 0, // TODO measure this properly
     },
   },
-  get breakpoint() {
-    const sideMarginLarge = setSpace(
-      'mobile',
-      this.article.lineHeightRatio.mobile,
-    ).sideMarginLarge;
-    return {
-      h1: `(min-width: ${remify(
-        this.article.lineLength.max.mobile + 2 * sideMarginLarge,
-      )})`,
-      sideMargin: `(min-width: ${remify(
-        this.article.lineLength.min + 2 * sideMarginLarge,
-      )})`,
-    };
-  },
   small: {
     fontSize: `80%`, // TODO: set this number more systematically (80% is <small>'s default style)
   },

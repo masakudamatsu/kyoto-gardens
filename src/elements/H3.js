@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 import remify from 'src/utils/remify';
 import Main from 'src/blocks/Main';
 

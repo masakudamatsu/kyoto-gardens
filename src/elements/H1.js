@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
 
-import {breakpoint} from 'src/utils/designSpec';
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
 import {kohoan} from 'src/utils/specKohoan';
@@ -15,7 +14,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
-import {hspace} from 'src/utils/hspaceScheme';
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
 
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
@@ -36,7 +35,7 @@ const H1 = styled.h1`
       font.ryoanji.h1.lineHeightRatio.mobile,
       font.ryoanji.h1.metrics,
     )};
-    @media only screen and ${ryoanji.breakpoint.h1} {
+    @media only screen and ${breakpoint.h1('ryoanji')} {
       font-size: ${remify(
         makeXHeightToBe(
           font.ryoanji.h1.xHeight.tablet,
@@ -67,7 +66,7 @@ const H1 = styled.h1`
       font.kohoan.h1.metrics,
     )};
     text-indent: ${remify(font.kohoan.h1.textIndent.mobile)};
-    @media only screen and ${kohoan.breakpoint.h1} {
+    @media only screen and ${breakpoint.h1('kohoan')} {
       font-size: ${remify(
         makeXHeightToBe(font.kohoan.h1.xHeight.tablet, font.kohoan.h1.metrics),
       )};
@@ -84,7 +83,7 @@ H1.Ryoanji = styled.span`
   text-indent: ${remify(
     font.ryoanji.h1.textIndent.mobile,
   )}; /* Optical alignment with paragraphs */
-  @media only screen and ${ryoanji.breakpoint.h1} {
+  @media only screen and ${breakpoint.h1('ryoanji')} {
     text-indent: ${remify(font.ryoanji.h1.textIndent.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
@@ -99,7 +98,7 @@ H1.RockGarden = styled.span`
   font-size: ${round(font.ryoanji.h1Sub.size, 4)}em;
   padding-bottom: ${remify(ryoanji.h1.padding.bottom.mobile)};
   word-spacing: ${font.ryoanji.h1Sub.wordSpacing};
-  @media only screen and ${ryoanji.breakpoint.h1} {
+  @media only screen and ${breakpoint.h1('ryoanji')} {
     text-indent: ${remify(font.ryoanji.h1Sub.textIndent.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
@@ -120,7 +119,7 @@ H1.Wrapper = styled.div`
     color: ${colour.ryoanji.h1.color.mobile};
     padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
     width: 100%;
-    @media only screen and ${ryoanji.breakpoint.sideMargin} {
+    @media only screen and ${breakpoint.sideMargin('ryoanji')} {
       background-color: ${colour.ryoanji.h1.background.desktop};
       background-image: ${colour.ryoanji.h1.overlay.desktop};
       bottom: 0;
@@ -139,7 +138,7 @@ H1.Wrapper = styled.div`
     width: 100%;
     top: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
     margin-bottom: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
-    @media only screen and ${kohoan.breakpoint.h1} {
+    @media only screen and ${breakpoint.h1('kohoan')} {
       top: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
       margin-bottom: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
     }

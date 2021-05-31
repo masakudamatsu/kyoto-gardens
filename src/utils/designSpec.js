@@ -13,11 +13,6 @@ export function xHeight(screenWidth = 'mobile') {
 
 export const scale = 5 / 3;
 
-export const breakpoint = {
-  // floorPlan: `(min-width: ${497 + figureBordered.padding * 2}px)`, // merged to the sideMargin breakpoint
-  fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
-};
-
 export function setSpace(screenWidth, lineHeightRatio) {
   if (screenWidth !== 'mobile' && screenWidth !== 'desktop') {
     throw new Error(

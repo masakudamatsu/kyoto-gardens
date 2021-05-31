@@ -24,10 +24,6 @@ export function xHeight(screenWidth = 'mobile') {
 
 export const scale = 5 / 3;
 
-export const breakpoint = {
-  fontSize: `(min-width: ${728}px)`, // not in rem, because it proxies the physical distance between the user and the device
-};
-
 // Page-specific parameters
 
 export const font = {

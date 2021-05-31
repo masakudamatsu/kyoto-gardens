@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
 import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
+import {breakpoint} from 'src/utils/hspaceScheme';
 import {colour} from 'src/utils/colorScheme';
 import {
   font,

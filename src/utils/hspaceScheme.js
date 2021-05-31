@@ -2,7 +2,7 @@ import remify from './remify';
 import {vspace} from './vspaceScheme';
 import {xHeight} from './fontScheme';
 
-export const lineLength = {
+const lineLength = {
   ryoanji: {
     min: 51.3 * xHeight('mobile'), // 436.093px for font-size of 21.3568px
     max: {

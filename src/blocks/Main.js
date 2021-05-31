@@ -6,7 +6,7 @@ import {index} from 'src/utils/specIndex';
 import {mediaQuery} from 'src/utils/mediaQuery';
 import remify from 'src/utils/remify';
 import {scale} from 'src/utils/specFont';
-import {breakpoint} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 

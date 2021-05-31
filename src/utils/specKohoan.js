@@ -280,18 +280,4 @@ export const kohoan = {
       desktop: 10,
     }, // See issue #29
   },
-  get breakpoint() {
-    const sideMarginLarge = setSpace(
-      'mobile',
-      this.article.lineHeightRatio.mobile,
-    ).sideMarginLarge;
-    return {
-      h1: `(min-width: ${remify(
-        this.article.lineLength.max.mobile + 2 * sideMarginLarge,
-      )})`,
-      sideMargin: `(min-width: ${remify(
-        this.article.lineLength.min + 2 * sideMarginLarge,
-      )})`,
-    };
-  },
 };
