@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, setSpace} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
 import {cssLinkText} from 'src/utils/cssLinkText';
 import remify from 'src/utils/remify';
 import {kohoan} from 'src/utils/specKohoan';
@@ -14,6 +14,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const Article = styled.article`
   margin: 0 auto;
@@ -122,15 +123,15 @@ Article.Header = styled.header`
   position: relative;
   ${Main.Kohoan} & {
     padding-bottom: ${remify(
-      setSpace('mobile', kohoan.article.lineHeightRatio.mobile)
-        .betweenSections -
-        (kohoan.h1.descender.mobile + kohoan.article.ascender.mobile),
+      vspace['kohoan'].betweenSections.mobile -
+        (spaceToTrim['kohoan'].h1.bottom.mobile +
+          spaceToTrim['kohoan'].article.top.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-bottom: ${remify(
-        setSpace('desktop', kohoan.article.lineHeightRatio.desktop)
-          .betweenSections -
-          (kohoan.h1.descender.desktop + kohoan.article.ascender.desktop),
+        vspace['kohoan'].betweenSections.desktop -
+          (spaceToTrim['kohoan'].h1.bottom.desktop +
+            spaceToTrim['kohoan'].article.top.desktop),
       )};
     }
   }

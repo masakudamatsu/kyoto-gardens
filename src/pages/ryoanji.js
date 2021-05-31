@@ -445,11 +445,6 @@ export default function Ryoanji() {
               been there since the early 16th century to reminds us of the
               teaching of the Buddha.
             </P>
-            <Hr />
-            <P>
-              Written, photographed, designed, and coded by Masa Kudamatsu in
-              2021.
-            </P>
           </Section>
           <Section as="aside">
             <H2>References</H2>

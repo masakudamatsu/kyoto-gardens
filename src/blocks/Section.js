@@ -2,31 +2,30 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
-import {breakpoint, setSpace} from 'src/utils/designSpec';
-import {index} from 'src/utils/specIndex';
+import {breakpoint} from 'src/utils/designSpec';
+
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const Section = styled.section`
   ${Main.Kohoan} & {
-    ${getPaddingBottom(kohoan)}
+    ${getPaddingBottom('kohoan')}
   }
   ${Main.Ryoanji} & {
-    ${getPaddingBottom(ryoanji)}
+    ${getPaddingBottom('ryoanji')}
   }
 `;
 
-function getPaddingBottom(spec) {
+function getPaddingBottom(pageName) {
   return css`
     padding-bottom: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenSections -
-        spec.article.descender.mobile,
+      vspace[pageName].betweenSections.mobile -
+        spaceToTrim[pageName].article.bottom.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-bottom: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenSections - spec.article.descender.desktop,
+        vspace[pageName].betweenSections.desktop -
+          spaceToTrim[pageName].article.bottom.desktop,
       )};
     }
   `;

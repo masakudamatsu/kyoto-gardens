@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
 import {index} from 'src/utils/specIndex';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
-import {breakpoint, setSpace} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
+
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const Spacer = styled.div`
   width: 100%;
@@ -17,10 +17,10 @@ const Spacer = styled.div`
 
 Spacer.BoxLineToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${({image}) => spaceBoxLineToText(kohoan, image)}
+    ${({image}) => spaceBoxLineToText('kohoan', image)}
   }
   ${Main.Ryoanji} & {
-    ${({image}) => spaceBoxLineToText(ryoanji, image)}
+    ${({image}) => spaceBoxLineToText('ryoanji', image)}
   }
 `;
 
@@ -28,12 +28,12 @@ Spacer.BoxLineToText.propTypes = {
   image: PropTypes.bool,
 };
 
-function spaceBoxLineToText(spec, image = false) {
+function spaceBoxLineToText(pageName, image = false) {
   const bugFix = image
     ? {
         // see issue #29
-        mobile: spec.figure.spaceBelowByBug.mobile,
-        desktop: spec.figure.spaceBelowByBug.desktop,
+        mobile: spaceToTrim[pageName].figure.bottom.mobile,
+        desktop: spaceToTrim[pageName].figure.bottom.desktop,
       }
     : {
         mobile: 0,
@@ -41,16 +41,16 @@ function spaceBoxLineToText(spec, image = false) {
       };
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
-        spec.article.ascender.mobile -
-        spec.article.capToX.mobile -
+      vspace[pageName].betweenLines.mobile -
+        spaceToTrim[pageName].article.top.mobile -
+        spaceToTrim[pageName].article.capToX.mobile -
         bugFix.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
-          spec.article.ascender.desktop -
-          spec.article.capToX.desktop -
+        vspace[pageName].betweenLines.desktop -
+          spaceToTrim[pageName].article.top.desktop -
+          spaceToTrim[pageName].article.capToX.desktop -
           bugFix.desktop,
       )};
     }
@@ -61,20 +61,15 @@ function spaceBoxLineToText(spec, image = false) {
 
 Spacer.BoxParagraphToBox = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceBoxParagraphToBox(kohoan)}
+    ${spaceBoxParagraphToBox('kohoan')}
   }
 `;
 
-function spaceBoxParagraphToBox(spec) {
+function spaceBoxParagraphToBox(pageName) {
   return css`
-    height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenParagraphs,
-    )};
+    height: ${remify(vspace[pageName].betweenParagraphs.mobile)};
     @media only screen and ${breakpoint.fontSize} {
-      height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs,
-      )};
+      height: ${remify(vspace[pageName].betweenParagraphs.desktop)};
     }
   `;
 }
@@ -83,23 +78,23 @@ function spaceBoxParagraphToBox(spec) {
 
 Spacer.BoxParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceBoxParagraphToText(kohoan)}
+    ${spaceBoxParagraphToText('kohoan')}
   }
   ${Main.Ryoanji} & {
-    ${spaceBoxParagraphToText(ryoanji)}
+    ${spaceBoxParagraphToText('ryoanji')}
   }
 `;
 
-function spaceBoxParagraphToText(spec) {
+function spaceBoxParagraphToText(pageName) {
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile)
-        .betweenParagraphs - spec.article.ascender.mobile,
+      vspace[pageName].betweenParagraphs.mobile -
+        spaceToTrim[pageName].article.top.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs - spec.article.ascender.desktop,
+        vspace[pageName].betweenParagraphs.desktop -
+          spaceToTrim[pageName].article.top.desktop,
       )};
     }
   `;
@@ -108,24 +103,22 @@ function spaceBoxParagraphToText(spec) {
 /////////////
 Spacer.CaptionParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceCaptionParagraphToText(kohoan)}
+    ${spaceCaptionParagraphToText('kohoan')}
   }
 `;
 
-function spaceCaptionParagraphToText(spec) {
+function spaceCaptionParagraphToText(pageName) {
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile)
-        .betweenParagraphs -
-        spec.figCaption.descender.mobile -
-        spec.article.ascender.mobile,
+      vspace[pageName].betweenParagraphs.mobile -
+        (spaceToTrim[pageName].figCaption.bottom.mobile +
+          spaceToTrim[pageName].article.top.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs -
-          spec.figCaption.descender.desktop -
-          spec.article.ascender.desktop,
+        vspace[pageName].betweenParagraphs.desktop -
+          (spaceToTrim[pageName].figCaption.bottom.desktop +
+            spaceToTrim[pageName].article.top.desktop),
       )};
     }
   `;
@@ -135,21 +128,25 @@ function spaceCaptionParagraphToText(spec) {
 
 Spacer.H3LineToBox = styled(Spacer)`
   ${Main.Ryoanji} & {
-    ${spaceH3LineToBox(ryoanji)}
+    ${spaceH3LineToBox('ryoanji')}
   }
 `;
-function spaceH3LineToBox(spec) {
+function spaceH3LineToBox(pageName) {
+  // We subtract capToX so
+  // the space above (to the bottom of H3 text)
+  // and below (to the top of the capital letter at the beginning)
+  // the figure appears symmetric
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
-        spec.h3.descender.mobile -
-        spec.article.capToX.mobile, // make it symmetric with the space below the figure and the cap height of next paragraph
+      vspace[pageName].betweenLines.mobile -
+        (spaceToTrim[pageName].h3.bottom.mobile +
+          spaceToTrim[pageName].article.capToX.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
-          spec.h3.descender.desktop -
-          spec.article.capToX.desktop, // make it symmetric with the space below the figure and the cap height of next paragraph
+        vspace[pageName].betweenLines.desktop -
+          (spaceToTrim[pageName].h3.bottom.desktop +
+            spaceToTrim[pageName].article.capToX.desktop),
       )};
     }
   `;
@@ -159,23 +156,25 @@ function spaceH3LineToBox(spec) {
 
 Spacer.H3ParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceH3ParagraphToText(kohoan)}
+    ${spaceH3ParagraphToText('kohoan')}
   }
 `;
-function spaceH3ParagraphToText(spec) {
+function spaceH3ParagraphToText(pageName) {
+  // We subtract capToX so whitespace above and below H3 looks symmetric
+  // Otherwise, the paragraph below appears more distant than the one above
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile)
-        .betweenParagraphs -
-        spec.h3.descender.mobile -
-        spec.article.capToX.mobile, // make it symmetric with the space below the figure and the cap height of next paragraph
+      vspace[pageName].betweenParagraphs.mobile -
+        (spaceToTrim[pageName].h3.bottom.mobile +
+          spaceToTrim[pageName].article.top.mobile +
+          spaceToTrim[pageName].article.capToX.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs -
-          spec.h3.descender.desktop -
-          spec.article.capToX.desktop, // make it symmetric with the space below the figure and the cap height of next paragraph
+        vspace[pageName].betweenParagraphs.desktop -
+          (spaceToTrim[pageName].h3.bottom.desktop +
+            spaceToTrim[pageName].article.top.desktop +
+            spaceToTrim[pageName].article.capToX.desktop),
       )};
     }
   `;
@@ -184,22 +183,22 @@ function spaceH3ParagraphToText(spec) {
 
 Spacer.TextLineToBox = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceTextLineToBox(kohoan)}
+    ${spaceTextLineToBox('kohoan')}
   }
   ${Main.Ryoanji} & {
-    ${spaceTextLineToBox(ryoanji)}
+    ${spaceTextLineToBox('ryoanji')}
   }
 `;
-function spaceTextLineToBox(spec) {
+function spaceTextLineToBox(pageName) {
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines -
-        spec.article.descender.mobile,
+      vspace[pageName].betweenLines.mobile -
+        spaceToTrim[pageName].article.bottom.mobile,
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop).betweenLines -
-          spec.article.descender.desktop,
+        vspace[pageName].betweenLines.desktop -
+          spaceToTrim[pageName].article.bottom.desktop,
       )};
     }
   `;
@@ -213,28 +212,25 @@ Spacer.TextParagraphToBox = styled(Spacer)``; // not used for Ryoan-ji
 
 Spacer.TextParagraphToText = styled(Spacer)`
   ${Main.Kohoan} & {
-    ${spaceTextParagraphToText(kohoan)}
+    ${spaceTextParagraphToText('kohoan')}
   }
   ${Main.Ryoanji} & {
-    ${spaceTextParagraphToText(ryoanji)}
+    ${spaceTextParagraphToText('ryoanji')}
   }
 `;
 
-function spaceTextParagraphToText(spec) {
+function spaceTextParagraphToText(pageName) {
   return css`
     height: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile)
-        .betweenParagraphs -
-        setSpace('mobile', spec.article.lineHeightRatio.mobile).betweenLines +
-        spec.article.capToX.mobile,
+      vspace[pageName].betweenParagraphs.mobile -
+        (spaceToTrim[pageName].article.bottom.mobile +
+          spaceToTrim[pageName].article.top.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       height: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs -
-          setSpace('desktop', spec.article.lineHeightRatio.desktop)
-            .betweenLines +
-          spec.article.capToX.desktop,
+        vspace[pageName].betweenParagraphs.desktop -
+          (spaceToTrim[pageName].article.bottom.desktop +
+            spaceToTrim[pageName].article.top.desktop),
       )};
     }
   `;

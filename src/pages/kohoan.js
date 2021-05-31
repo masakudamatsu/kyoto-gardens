@@ -1431,14 +1431,6 @@ export default function Kohoan() {
                 </FigCaption>
               </FigureWithBorder.Border>
             </FigureWithBorder>
-            <Hr /> {/* TODO: Fix the space above the asterisks */}
-            <P>
-              Perhaps you’re fully satisfied with your virtual visit to Koho-an
-              Temple by now. For those who practice tea ceremony, however, there
-              is one more special feature in this teahouse. Maybe it’s too much
-              for you to read any further. So I will discuss it in another
-              article.
-            </P>
           </Section>
           <Section>
             <H2>Plan of Koho-an Temple</H2>

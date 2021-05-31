@@ -190,12 +190,12 @@ describe('renders UI correctly', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        height: 1.2513rem;
+        height: 0.9075rem;
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
-          height: 1.8228rem;
+          height: 1.2915rem;
         }
       }
 
@@ -262,22 +262,22 @@ describe('renders UI correctly', () => {
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        height: 0.9467rem;
+        height: 0.9896rem;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        height: 1.1991rem;
+        height: 1.2448rem;
       }
 
       @media only screen and (min-width:728px) {
         .Main__Kohoan-sc-126eniy-2 .c0 {
-          height: 1.2788rem;
+          height: 1.3047rem;
         }
       }
 
       @media only screen and (min-width:728px) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
-          height: 1.5906rem;
+          height: 1.6016rem;
         }
       }
 

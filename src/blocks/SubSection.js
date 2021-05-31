@@ -2,32 +2,32 @@ import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 import Main from 'src/blocks/Main';
 
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import remify from 'src/utils/remify';
-import {breakpoint, setSpace} from 'src/utils/designSpec';
+import {breakpoint} from 'src/utils/designSpec';
+
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const SubSection = styled.section`
   ${Main.Kohoan} & {
-    ${getPaddingTop(kohoan)}
+    ${getPaddingTop('kohoan')}
   }
   ${Main.Ryoanji} & {
-    ${getPaddingTop(ryoanji)}
+    ${getPaddingTop('ryoanji')}
   }
 `;
 
-function getPaddingTop(spec) {
+function getPaddingTop(pageName) {
   return css`
     padding-top: ${remify(
-      setSpace('mobile', spec.article.lineHeightRatio.mobile)
-        .betweenParagraphs -
-        (spec.article.descender.mobile + spec.h3.ascender.mobile),
+      vspace[pageName].betweenParagraphs.mobile -
+        (spaceToTrim[pageName].article.bottom.mobile +
+          spaceToTrim[pageName].h3.top.mobile),
     )};
     @media only screen and ${breakpoint.fontSize} {
       padding-top: ${remify(
-        setSpace('desktop', spec.article.lineHeightRatio.desktop)
-          .betweenParagraphs -
-          (spec.article.descender.desktop + spec.h3.ascender.desktop),
+        vspace[pageName].betweenParagraphs.desktop -
+          (spaceToTrim[pageName].article.bottom.desktop +
+            spaceToTrim[pageName].h3.top.desktop),
       )};
     }
   `;

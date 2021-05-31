@@ -20,27 +20,14 @@ test('renders UI correctly', () => {
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
       color: rgb(255,255,255);
-      padding-bottom: 2.2708rem;
-      padding-top: 0.9583rem;
-    }
-
-    .Main__Ryoanji-sc-126eniy-1 .c0 {
-      color: hsla(193,50%,26%,0.9);
-      padding-bottom: 2.7135rem;
-      padding-top: 1.401rem;
+      padding-bottom: 1.97rem;
+      padding-top: 0.9896rem;
     }
 
     @media only screen and (min-width:728px) {
       .Main__Kohoan-sc-126eniy-2 .c0 {
-        padding-bottom: 3.0859rem;
+        padding-bottom: 2.6353rem;
         padding-top: 1.3672rem;
-      }
-    }
-
-    @media only screen and (min-width:728px) {
-      .Main__Ryoanji-sc-126eniy-1 .c0 {
-        padding-bottom: 3.6328rem;
-        padding-top: 1.9141rem;
       }
     }
 
