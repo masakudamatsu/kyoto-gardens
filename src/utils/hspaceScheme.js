@@ -2,6 +2,12 @@ import remify from './remify';
 import {vspace} from './vspaceScheme';
 import {xHeight} from './fontScheme';
 
+export const maxColumnWidth = 941;
+// Ryoan-ji's top image's width is 1882px.
+// To ensure high quality images, then half the value is the maximum colum width
+// It's best to use this value for all the pages;
+// otherwise moving back and forth across pages causes a layout shift, compromising the unity of the site as a whole
+
 const lineLength = {
   ryoanji: {
     min: 51.3 * xHeight('mobile'), // 436.093px for font-size of 21.3568px

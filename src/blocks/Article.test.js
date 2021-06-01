@@ -11,6 +11,7 @@ describe('Parent chnages UI by prop value', () => {
     expect(container).toMatchInlineSnapshot(`
       .c1 {
         margin: 0 auto;
+        max-width: 941px;
       }
 
       .Main__Kohoan-sc-126eniy-2 .c0 {
@@ -20,7 +21,6 @@ describe('Parent chnages UI by prop value', () => {
         font-size: 0.993rem;
         font-weight: 400;
         line-height: 1.605;
-        max-width: 941px;
       }
 
       .c1 a:link,
@@ -66,7 +66,6 @@ describe('Parent chnages UI by prop value', () => {
         font-size: 1.3348rem;
         font-weight: 600;
         line-height: 1.393;
-        max-width: 941px;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 a:link,
