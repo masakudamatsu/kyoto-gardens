@@ -7,6 +7,7 @@ import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
 import {breakpoint, hspace} from 'src/utils/hspaceScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 // prettier-ignore
 const FigureWithBorder = styled.figure`
@@ -23,19 +24,36 @@ const FigureWithBorder = styled.figure`
   }
 `;
 
+function getPadding(pageName, screenWidth) {
+  if (pageName === 'ryoanji') {
+    return (
+      vspace['ryoanji'].betweenLines[screenWidth] -
+      spaceToTrim['ryoanji'].floorplan.top
+    ); // make the top of the floor plan symmetric with the baseline of the previous paragraph across the figure border
+  } else if (pageName === 'kohoan') {
+    return vspace['kohoan'].betweenLines[screenWidth];
+  }
+}
+
 FigureWithBorder.Border = styled.div`
   ${Main.Kohoan} & {
     border-bottom: 1px solid ${colour.kohoan.figure.border};
     border-top: 1px solid ${colour.kohoan.figure.border};
-    padding: ${kohoan.figure.paddingInsideBorder}px;
+    padding: ${getPadding('kohoan', 'mobile')}px;
+    @media only screen and ${breakpoint.fontSize} {
+      padding: ${getPadding('kohoan', 'desktop')}px;
+    }
   }
   ${Main.Ryoanji} & {
     border-bottom: 1px solid ${colour.ryoanji.figure.border};
     border-top: 1px solid ${colour.ryoanji.figure.border};
-    padding: ${ryoanji.figure.paddingInsideBorder}px;
+    padding: ${getPadding('ryoanji', 'mobile')}px;
     @media only screen and ${breakpoint.sideMargin('ryoanji')} {
       border-left: 1px solid ${colour.ryoanji.figure.border};
       border-right: 1px solid ${colour.ryoanji.figure.border};
+    }
+    @media only screen and ${breakpoint.fontSize} {
+      padding: ${getPadding('ryoanji', 'desktop')}px;
     }
   }
 `;

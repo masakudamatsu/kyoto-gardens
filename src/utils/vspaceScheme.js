@@ -160,6 +160,9 @@ export const spaceToTrim = {
         desktop: 12,
       }, // See issue #29
     },
+    floorplan: {
+      top: 6,
+    },
     h1: {
       top: {
         // = h1.top

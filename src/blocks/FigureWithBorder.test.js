@@ -74,19 +74,31 @@ describe('renders UI correctly', () => {
       .Main__Kohoan-sc-126eniy-2 .c0 {
         border-bottom: 1px solid rgb(200,200,200);
         border-top: 1px solid rgb(200,200,200);
-        padding: 15.564px;
+        padding: 17px;
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         border-bottom: 1px solid hsla(193,50%,26%,0.2);
         border-top: 1px solid hsla(193,50%,26%,0.2);
-        padding: 15.564px;
+        padding: 15.25px;
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Kohoan-sc-126eniy-2 .c0 {
+          padding: 23.625px;
+        }
       }
 
       @media only screen and (min-width:31.6802rem) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           border-left: 1px solid hsla(193,50%,26%,0.2);
           border-right: 1px solid hsla(193,50%,26%,0.2);
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
+          padding: 22.875px;
         }
       }
 
