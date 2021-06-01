@@ -30,6 +30,10 @@ export const vspace = {
       desktop:
         getSpaceBetweenLines('desktop', font.kohoan.article) * scale * scale,
     },
+    h2CapHeight: {
+      mobile: getCapHeight(font.kohoan.h2).mobile,
+      desktop: getCapHeight(font.kohoan.h2).desktop,
+    },
   },
   ryoanji: {
     betweenLines: {
@@ -45,6 +49,10 @@ export const vspace = {
         getSpaceBetweenLines('mobile', font.ryoanji.article) * scale * scale,
       desktop:
         getSpaceBetweenLines('desktop', font.ryoanji.article) * scale * scale,
+    },
+    h2CapHeight: {
+      mobile: getCapHeight(font.ryoanji.h2).mobile,
+      desktop: getCapHeight(font.ryoanji.h2).desktop,
     },
   },
 };
@@ -91,6 +99,16 @@ export const spaceToTrim = {
         desktop: 7,
       },
     },
+    h2: {
+      top: {
+        mobile: 8,
+        desktop: 10.5,
+      },
+      bottom: {
+        mobile: 6,
+        desktop: 7,
+      },
+    },
     h3: {
       top: {
         mobile: 6, // 13 minus article.descender.mobile
@@ -132,6 +150,16 @@ export const spaceToTrim = {
         mobile: 8,
         desktop: 12,
       }, // See issue #29
+    },
+    h2: {
+      top: {
+        mobile: 6.5,
+        desktop: 8.5,
+      },
+      bottom: {
+        mobile: 7,
+        desktop: 9,
+      },
     },
     h3: {
       top: {
@@ -182,20 +210,42 @@ function getSpaceBetweenLines(screenWidth, spec) {
 }
 
 function getCapToX(spec) {
-  if (!spec.metrics) {
+  if (spec.metrics && spec.xHeight) {
+    const ratioToX =
+      (spec.metrics.capHeight - spec.metrics.xHeight) / spec.metrics.xHeight;
+    return {
+      mobile: spec.xHeight.mobile * ratioToX,
+      desktop: spec.xHeight.desktop * ratioToX,
+    };
+  } else if (!spec.metrics) {
     throw new Error(
       'getCapToX() requires an object with metrics property as an argument',
     );
-  }
-  if (!spec.xHeight) {
+  } else if (!spec.xHeight) {
     throw new Error(
       'getCapToX() requires an object with xHeight property as an argument',
     );
+  } else {
+    throw new Error(`getCapToX() gets an impossible error`);
   }
-  const ratioToX =
-    (spec.metrics.capHeight - spec.metrics.xHeight) / spec.metrics.xHeight;
-  return {
-    mobile: spec.xHeight.mobile * ratioToX,
-    desktop: spec.xHeight.desktop * ratioToX,
-  };
+}
+
+function getCapHeight(spec) {
+  if (spec.metrics && spec.xHeight) {
+    const ratioToX = spec.metrics.capHeight / spec.metrics.xHeight;
+    return {
+      mobile: spec.xHeight.mobile * ratioToX,
+      desktop: spec.xHeight.desktop * ratioToX,
+    };
+  } else if (!spec.metrics) {
+    throw new Error(
+      'getCapHeight() requires an object with metrics property as an argument',
+    );
+  } else if (!spec.xHeight) {
+    throw new Error(
+      'getCapHeight() requires an object with xHeight property as an argument',
+    );
+  } else {
+    throw new Error(`getCapHeight() gets an impossible error`);
+  }
 }

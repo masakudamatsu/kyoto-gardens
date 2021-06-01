@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import {breakpoint} from 'src/utils/hspaceScheme';
 import remify from 'src/utils/remify';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
@@ -14,6 +12,7 @@ import {
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
 import {hspace} from 'src/utils/hspaceScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 function h2FontStyle(spec) {
   return css`
@@ -38,27 +37,39 @@ function h2FontStyle(spec) {
   `;
 }
 
+function getPaddingBottom(pageName, screenWidth) {
+  return (
+    vspace[pageName].h2CapHeight[screenWidth] -
+    spaceToTrim[pageName].h2.bottom[screenWidth]
+  );
+}
+function getPaddingTop(pageName, screenWidth) {
+  return (
+    vspace[pageName].h2CapHeight[screenWidth] -
+    spaceToTrim[pageName].h2.top[screenWidth]
+  );
+}
 /* Styled Components */
 const H2Style = styled.h2`
   ${Main.Kohoan} & {
     color: ${colour.kohoan.h2.color};
     ${h2FontStyle(font.kohoan)}
-    padding-bottom: ${remify(kohoan.h2.padding.bottom.mobile)};
-    padding-top: ${remify(kohoan.h2.padding.top.mobile)};
+    padding-bottom: ${remify(getPaddingBottom('kohoan', 'mobile'))};
+    padding-top: ${remify(getPaddingTop('kohoan', 'mobile'))};
     @media only screen and ${breakpoint.fontSize} {
-      padding-bottom: ${remify(kohoan.h2.padding.bottom.desktop)};
-      padding-top: ${remify(kohoan.h2.padding.top.desktop)};
+      padding-bottom: ${remify(getPaddingBottom('kohoan', 'desktop'))};
+      padding-top: ${remify(getPaddingTop('kohoan', 'desktop'))};
     }
     ${hspace.kohoan.maxWidth.heading}
   }
   ${Main.Ryoanji} & {
     color: ${colour.ryoanji.h2.color};
     ${h2FontStyle(font.ryoanji)}
-    padding-bottom: ${remify(ryoanji.h2.padding.bottom.mobile)};
-    padding-top: ${remify(ryoanji.h2.padding.top.mobile)};
+    padding-bottom: ${remify(getPaddingBottom('ryoanji', 'mobile'))};
+    padding-top: ${remify(getPaddingTop('ryoanji', 'mobile'))};
     @media only screen and ${breakpoint.fontSize} {
-      padding-bottom: ${remify(ryoanji.h2.padding.bottom.desktop)};
-      padding-top: ${remify(ryoanji.h2.padding.top.desktop)};
+      padding-bottom: ${remify(getPaddingBottom('ryoanji', 'desktop'))};
+      padding-top: ${remify(getPaddingTop('ryoanji', 'desktop'))};
     }
     ${hspace.ryoanji.maxWidth.heading}
   }

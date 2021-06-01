@@ -144,54 +144,6 @@ export const ryoanji = {
       rockGarden: '-0.2em',
     },
   },
-  h2: {
-    ...cormorant,
-    get fontSize() {
-      return {
-        mobile: getFontSizeFromX(xHeight('mobile') * scale, this.fontMetrics),
-        desktop: getFontSizeFromX(xHeight('desktop') * scale, this.fontMetrics),
-      };
-    },
-    fontWeight: 700,
-    letterSpacing: '0.01em',
-    get lineHeight() {
-      return getLineHeightFromRatio(
-        {xHeight: 5, betweenLines: 8}, // Set the line height to be [ x-height +  cap-height ], assuming the cap-to-x height ratio is 8:5.
-        this.fontMetrics,
-      );
-    },
-    get padding() {
-      const target = {
-        mobile:
-          (this.fontSize.mobile / this.fontMetrics.unitsPerEm) *
-          this.fontMetrics.capHeight,
-        desktop:
-          (this.fontSize.desktop / this.fontMetrics.unitsPerEm) *
-          this.fontMetrics.capHeight,
-      };
-      const defaultSpace = {
-        mobile: {
-          ascender: 6.5,
-          descender: 7,
-        },
-        desktop: {
-          ascender: 8.5,
-          descender: 9,
-        },
-      };
-      return {
-        top: {
-          mobile: target.mobile - defaultSpace.mobile.ascender,
-          desktop: target.desktop - defaultSpace.desktop.ascender,
-        },
-        bottom: {
-          mobile: target.mobile - defaultSpace.mobile.descender,
-          desktop: target.desktop - defaultSpace.desktop.descender,
-        },
-      };
-    },
-    textIndent: -2,
-  },
   h3: {
     ...cormorant,
     get fontSize() {

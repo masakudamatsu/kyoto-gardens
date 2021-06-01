@@ -149,54 +149,6 @@ export const kohoan = {
       desktop: 7,
     },
   },
-  h2: {
-    ...playfairDisplay,
-    get fontSize() {
-      return {
-        mobile: getFontSizeFromX(xHeight('mobile') * scale, this.fontMetrics),
-        desktop: getFontSizeFromX(xHeight('desktop') * scale, this.fontMetrics),
-      };
-    },
-    fontWeight: 600,
-    letterSpacing: '0.01em',
-    get lineHeight() {
-      return getLineHeightFromRatio(
-        {xHeight: 5, betweenLines: 7}, // For the space from baseline to cap top to be larger than word space
-        this.fontMetrics,
-      );
-    },
-    get padding() {
-      const target = {
-        mobile:
-          (this.fontSize.mobile / this.fontMetrics.unitsPerEm) *
-          this.fontMetrics.capHeight,
-        desktop:
-          (this.fontSize.desktop / this.fontMetrics.unitsPerEm) *
-          this.fontMetrics.capHeight,
-      };
-      const defaultSpace = {
-        mobile: {
-          ascender: 8,
-          descender: 6,
-        },
-        desktop: {
-          ascender: 10.5,
-          descender: 7,
-        },
-      };
-      return {
-        top: {
-          mobile: target.mobile - defaultSpace.mobile.ascender,
-          desktop: target.desktop - defaultSpace.desktop.ascender,
-        },
-        bottom: {
-          mobile: target.mobile - defaultSpace.mobile.descender,
-          desktop: target.desktop - defaultSpace.desktop.descender,
-        },
-      };
-    },
-    textIndent: -2,
-  },
   h3: {
     ...playfairDisplay,
     get fontSize() {
