@@ -21,7 +21,7 @@ import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 import VisuallyHidden from '../elements/VisuallyHidden';
-import {ryoanji} from 'src/utils/specRyoanji';
+import {ryoanji} from 'src/utils/metadata';
 
 export default function Ryoanji() {
   const webfont = {

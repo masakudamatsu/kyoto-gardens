@@ -21,7 +21,7 @@ import Span from '../elements/Span';
 import SubSection from '../blocks/SubSection';
 import Youtube from '../blocks/Youtube';
 
-import {kohoan} from 'src/utils/specKohoan';
+import {kohoan} from 'src/utils/metadata';
 
 export default function Kohoan() {
   const webfont = {

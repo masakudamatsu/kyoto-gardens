@@ -5,8 +5,6 @@ import Main from 'src/blocks/Main';
 
 import remify from 'src/utils/remify';
 import round from 'src/utils/round';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 
 import {colour} from 'src/utils/colorScheme';
 import {

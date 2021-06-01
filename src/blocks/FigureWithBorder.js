@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
 import Main from 'src/blocks/Main';
 
 import {colour} from 'src/utils/colorScheme';
