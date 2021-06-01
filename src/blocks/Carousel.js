@@ -2,14 +2,18 @@ import styled, {keyframes} from 'styled-components';
 import PropTypes from 'prop-types';
 
 import round from 'src/utils/round';
-import {ryoanji} from 'src/utils/specRyoanji';
 
-const aspectRatio = ryoanji.figure.maxWidth / ryoanji.figure.maxHeight;
+const imageDimension = {
+  height: 703, // half the height of spring/summer photos
+  width: 941, // half the width of spring/summer/autumn/winter photos
+};
+
+const aspectRatio = imageDimension.width / imageDimension.height;
 
 const Carousel = styled.figure`
   height: ${round((1 / aspectRatio) * 100, 4)}vw;
-  max-height: ${ryoanji.figure.maxHeight}px;
-  max-width: ${ryoanji.figure.maxWidth}px;
+  max-height: ${imageDimension.height}px;
+  max-width: ${imageDimension.width}px;
   overflow: hidden;
   position: relative;
   width: 100%;
