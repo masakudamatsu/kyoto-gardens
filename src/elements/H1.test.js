@@ -185,7 +185,7 @@ describe('renders UI correctly', () => {
           bottom: 0;
           color: rgb(10,10,10);
           left: 0;
-          padding-top: 0rem;
+          padding-top: 0;
           position: absolute;
           z-index: 1;
         }

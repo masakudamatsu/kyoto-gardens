@@ -15,6 +15,7 @@ import {
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
 import {breakpoint, hspace} from 'src/utils/hspaceScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 // Space between J and I: 28px for desktop
 // Space between words: 60px for desktop
@@ -78,8 +79,29 @@ const H1 = styled.h1`
   flex-direction: column;
 `;
 
+function getPaddingTop(pageName, screenWidth) {
+  return (
+    vspace[pageName].xHeight[screenWidth] -
+    spaceToTrim[pageName].h1.top[screenWidth]
+  );
+}
+
+function getPaddingBetween(pageName, screenWidth) {
+  return (
+    vspace[pageName].xHeight[screenWidth] -
+    spaceToTrim[pageName].h1.between[screenWidth]
+  );
+}
+
+function getPaddingBottom(pageName, screenWidth) {
+  return (
+    vspace[pageName].xHeight[screenWidth] -
+    spaceToTrim[pageName].h1.bottom[screenWidth]
+  );
+}
+
 H1.Ryoanji = styled.span`
-  padding-bottom: ${remify(ryoanji.h1.padding.between.mobile)};
+  padding-bottom: ${remify(getPaddingBetween('ryoanji', 'mobile'))};
   text-indent: ${remify(
     font.ryoanji.h1.textIndent.mobile,
   )}; /* Optical alignment with paragraphs */
@@ -87,7 +109,7 @@ H1.Ryoanji = styled.span`
     text-indent: ${remify(font.ryoanji.h1.textIndent.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    padding-bottom: ${remify(ryoanji.h1.padding.between.desktop)};
+    padding-bottom: ${remify(getPaddingBetween('ryoanji', 'desktop'))};
     text-indent: ${remify(
       font.ryoanji.h1.textIndent.desktop,
     )}; /* Optical alignment with paragraphs */
@@ -96,13 +118,13 @@ H1.Ryoanji = styled.span`
 
 H1.RockGarden = styled.span`
   font-size: ${round(font.ryoanji.h1Sub.size, 4)}em;
-  padding-bottom: ${remify(ryoanji.h1.padding.bottom.mobile)};
+  padding-bottom: ${remify(getPaddingBottom('ryoanji', 'mobile'))};
   word-spacing: ${font.ryoanji.h1Sub.wordSpacing};
   @media only screen and ${breakpoint.h1('ryoanji')} {
     text-indent: ${remify(font.ryoanji.h1Sub.textIndent.tablet)};
   }
   @media only screen and ${breakpoint.fontSize} {
-    padding-bottom: ${remify(ryoanji.h1.padding.bottom.desktop)};
+    padding-bottom: ${remify(getPaddingBottom('ryoanji', 'desktop'))};
     text-indent: ${remify(
       font.ryoanji.h1Sub.textIndent.desktop,
     )}; /* Optical alignment with paragraphs */
@@ -117,7 +139,7 @@ H1.Wrapper = styled.div`
     background-color: ${colour.ryoanji.h1.background.mobile};
     background-image: ${colour.ryoanji.h1.overlay.mobile};
     color: ${colour.ryoanji.h1.color.mobile};
-    padding-top: ${remify(ryoanji.h1.padding.top.mobile)};
+    padding-top: ${remify(getPaddingTop('ryoanji', 'mobile'))};
     width: 100%;
     @media only screen and ${breakpoint.sideMargin('ryoanji')} {
       background-color: ${colour.ryoanji.h1.background.desktop};
@@ -125,7 +147,7 @@ H1.Wrapper = styled.div`
       bottom: 0;
       color: ${colour.ryoanji.h1.color.desktop};
       left: 0;
-      padding-top: ${remify(ryoanji.h1.padding.top.desktop)};
+      padding-top: 0;
       position: absolute;
       z-index: 1;
     }
@@ -136,18 +158,36 @@ H1.Wrapper = styled.div`
     ${hspace.kohoan.paddingSide.desktop}
     position: relative;
     width: 100%;
-    top: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
-    margin-bottom: -${remify(kohoan.h1.hyphen.mobile + kohoan.figure.spaceBelowByBug.mobile)};
+    top: -${remify(getPullupDistance('kohoan', 'mobile'))};
+    margin-bottom: -${remify(getPullupDistance('kohoan', 'mobile'))};
     @media only screen and ${breakpoint.h1('kohoan')} {
-      top: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
-      margin-bottom: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.mobile)};
+      top: -${remify(getPullupDistance('kohoan', 'tablet'))};
+      margin-bottom: -${remify(getPullupDistance('kohoan', 'tablet'))};
     }
     @media only screen and ${breakpoint.fontSize} {
-      top: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.desktop)};
-      margin-bottom: -${remify(kohoan.h1.hyphen.desktop + kohoan.figure.spaceBelowByBug.desktop)};
+      top: -${remify(getPullupDistance('kohoan', 'desktop'))};
+      margin-bottom: -${remify(getPullupDistance('kohoan', 'desktop'))};
     }
   }
 `;
+
+function getPullupDistance(pageName, screenWidth) {
+  if (screenWidth === 'mobile' || screenWidth === 'desktop') {
+    return (
+      vspace[pageName].h1HyphenBottom[screenWidth] +
+      spaceToTrim[pageName].figure.bottom[screenWidth]
+    );
+  } else if (screenWidth === 'tablet') {
+    return (
+      vspace[pageName].h1HyphenBottom['desktop'] +
+      spaceToTrim[pageName].figure.bottom['mobile']
+    );
+  } else {
+    throw new Error(
+      `getPullupDistance() gets its second argument other than 'mobile', 'tablet', or 'desktop'.`,
+    );
+  }
+}
 
 H1.propTypes = {};
 

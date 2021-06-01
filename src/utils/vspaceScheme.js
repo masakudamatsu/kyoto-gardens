@@ -1,4 +1,4 @@
-import {font, scale} from './fontScheme';
+import {font, scale, xHeight} from './fontScheme';
 
 export const vspace = {
   index: {
@@ -30,6 +30,11 @@ export const vspace = {
       desktop:
         getSpaceBetweenLines('desktop', font.kohoan.article) * scale * scale,
     },
+    h1HyphenBottom: {
+      // distance from text box top to the bottom of hyphen
+      mobile: 18.5,
+      desktop: 31.5,
+    },
     h2CapHeight: {
       mobile: getCapHeight(font.kohoan.h2).mobile,
       desktop: getCapHeight(font.kohoan.h2).desktop,
@@ -53,6 +58,10 @@ export const vspace = {
     h2CapHeight: {
       mobile: getCapHeight(font.ryoanji.h2).mobile,
       desktop: getCapHeight(font.ryoanji.h2).desktop,
+    },
+    xHeight: {
+      mobile: xHeight('mobile'),
+      desktop: xHeight('desktop'),
     },
   },
 };
@@ -150,6 +159,22 @@ export const spaceToTrim = {
         mobile: 8,
         desktop: 12,
       }, // See issue #29
+    },
+    h1: {
+      top: {
+        // = h1.top
+        mobile: 0,
+      },
+      between: {
+        // = h1.bottom + h1Sub.top
+        mobile: 3,
+        desktop: 5,
+      },
+      bottom: {
+        // = h1Sub.bottom
+        mobile: 0,
+        desktop: 1,
+      },
     },
     h2: {
       top: {
