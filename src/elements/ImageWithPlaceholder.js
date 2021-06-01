@@ -9,9 +9,8 @@ import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 import Main from 'src/blocks/Main';
 import P from 'src/elements/P';
 import Span from 'src/elements/Span';
-import {ryoanji} from 'src/utils/specRyoanji';
-import {breakpoint} from 'src/utils/hspaceScheme';
-import {hspace} from 'src/utils/hspaceScheme';
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
+import {spaceToTrim} from 'src/utils/vspaceScheme';
 
 const Wrapper = styled.div`
   position: relative;
@@ -33,20 +32,24 @@ const Placeholder = styled(P)`
   bottom 0;
   display: flex;
   flex-direction: column;
-  height: calc(100% - ${ryoanji.figure.spaceBelowByBug.mobile}px);
   justify-content: center;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
-  @media only screen and ${breakpoint.fontSize} {
-    height: calc(100% - ${ryoanji.figure.spaceBelowByBug.desktop}px);
-  }
   ${Main.Kohoan} & {
+    height: calc(100% - ${spaceToTrim['kohoan'].figure.bottom.mobile}px);
+    @media only screen and ${breakpoint.fontSize} {
+      height: calc(100% - ${spaceToTrim['kohoan'].figure.bottom.desktop}px);
+    }
     ${seigaihaPattern}
   }
   ${Main.Ryoanji} & {
+    height: calc(100% - ${spaceToTrim['ryoanji'].figure.bottom.mobile}px);
+    @media only screen and ${breakpoint.fontSize} {
+      height: calc(100% - ${spaceToTrim['ryoanji'].figure.bottom.desktop}px);
+    }
     ${shippoPattern}
   }
 `;
