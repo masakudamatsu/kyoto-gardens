@@ -2,8 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 
 import IndexSection from './IndexSection';
-import {kohoan} from 'src/utils/specKohoan';
-import {ryoanji} from 'src/utils/specRyoanji';
+import {font} from 'src/utils/fontScheme';
 
 const mockProps = {};
 
@@ -275,11 +274,11 @@ describe('props work as expected', () => {
       <IndexSection.Latin gardenName="kohoan" data-testid="section" />,
     );
     expect(screen.getByTestId('section')).toHaveStyle(`
-      font-family: ${kohoan.h1.fontFamily.replace(/,\s/g, ',')}
+      font-family: ${font.kohoan.h1.family.replace(/,\s/g, ',')}
     `);
     rerender(<IndexSection.Latin gardenName="ryoanji" data-testid="section" />);
     expect(screen.getByTestId('section')).toHaveStyle(`
-      font-family: ${ryoanji.h1.fontFamily.replace(/,\s/g, ',')}
+      font-family: ${font.ryoanji.h1.family.replace(/,\s/g, ',')}
     `);
   });
 });
