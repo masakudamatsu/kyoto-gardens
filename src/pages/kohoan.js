@@ -149,7 +149,7 @@ export default function Kohoan() {
                 kohoan
                 src="/kohoan/kohoan-frontgate.jpeg"
                 width={640}
-                height={458}
+                height={455}
                 alt="A stone bridge is seen in front of the roofed gate with its doors open."
               />
               <FigureWithMargin.FigCaption>
