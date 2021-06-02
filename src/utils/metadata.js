@@ -1,7 +1,7 @@
 export const index = {
-  title: 'Japanese Gardens: Timeline',
+  title: 'Trasnlating Japanese Gardens',
   description:
-    'List of years when well-known Japanese gardens were designed, with links to the detail of each garden',
+    'A collection of essays that offers alternative takes on historical Japanese gardens, attempting to uncover the messages delivered with garden design',
 };
 export const kohoan = {
   title: 'Koho-an Temple | 孤篷庵',
