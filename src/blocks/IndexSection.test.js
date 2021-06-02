@@ -58,10 +58,9 @@ describe('renders UI correctly:', () => {
         font-size: 1.0931rem;
         font-weight: 600;
         font-style: italic;
-        padding-bottom: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 54px;
+        padding-left: 0.5313rem;
+        padding-right: 0.5313rem;
+        padding-top: 48px;
       }
 
       @media only screen and (min-width:25.625rem) {
@@ -72,7 +71,7 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:25.625rem) {
         .c0 {
-          padding-top: 72px;
+          padding-top: 67px;
         }
       }
 
@@ -133,7 +132,7 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.Figure {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        margin-top: 65px;
+        margin-top: 59px;
         position: relative;
       }
 
@@ -156,7 +155,7 @@ describe('renders UI correctly:', () => {
 
       @media only screen and (min-width:25.625rem) {
         .c1 {
-          margin-top: 90px;
+          margin-top: 85px;
         }
       }
 
@@ -175,7 +174,9 @@ describe('renders UI correctly:', () => {
         font-size: 2em;
         font-weight: 500;
         line-height: 1;
-        padding: 10px;
+        padding-left: 0.5313rem;
+        padding-right: 0.5313rem;
+        padding-top: 0.5313rem;
         position: absolute;
         top: 0;
         -webkit-writing-mode: vertical-rl;
@@ -208,11 +209,63 @@ describe('renders UI correctly:', () => {
       </div>
     `);
   });
-  test('Latin', () => {
-    const {container} = render(<IndexSection.Latin />);
+  test('Latin for Koho-an', () => {
+    const {container} = render(<IndexSection.Latin gardenName="kohoan" />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        margin-top: 0px;
+        font-family: 'Playfair Display',serif;
+        font-size: 2.8654rem;
+        font-weight: 600;
+        -webkit-letter-spacing: 0.05em;
+        -moz-letter-spacing: 0.05em;
+        -ms-letter-spacing: 0.05em;
+        letter-spacing: 0.05em;
+        line-height: 1.03;
+        margin-bottom: -5px;
+        margin-top: -9.5px;
+        -webkit-transform: translateX( 5px );
+        -ms-transform: translateX( 5px );
+        transform: translateX( 5px );
+        padding-left: 0.5313rem;
+        padding-right: 0.5313rem;
+        padding-top: 0.2813rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
+        text-align: left;
+      }
+
+      .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
+        text-align: right;
+      }
+
+      <div>
+        <p
+          class="c0 c1"
+        />
+      </div>
+    `);
+  });
+  test('Latin for Ryoan-ji', () => {
+    const {container} = render(<IndexSection.Latin gardenName="ryoanji" />);
+    expect(container).toMatchInlineSnapshot(`
+      .c1 {
+        font-family: 'Cormorant SC','Times New Roman',serif;
+        font-size: 3.1331rem;
+        font-weight: 700;
+        -webkit-letter-spacing: 0.05em;
+        -moz-letter-spacing: 0.05em;
+        -ms-letter-spacing: 0.05em;
+        letter-spacing: 0.05em;
+        line-height: 0.7065;
+        margin-bottom: -2px;
+        margin-top: -1.5px;
+        text-indent: -5px;
+        padding-left: 0.5313rem;
+        padding-right: 0.5313rem;
+        padding-top: 0.2813rem;
         position: relative;
         z-index: 2;
       }
@@ -239,16 +292,17 @@ describe('renders UI correctly:', () => {
         font-family: 'Reforma 1918',serif;
         font-size: 1.0931rem;
         font-weight: 300;
-        line-height: 1.5795;
+        line-height: 1.3365;
+        padding-left: 0.5313rem;
+        padding-right: 0.5313rem;
+        padding-top: 0.5859rem;
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
-        padding-right: 10px;
         text-align: left;
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
-        padding-left: 10px;
         text-align: right;
       }
 

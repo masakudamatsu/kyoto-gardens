@@ -106,8 +106,8 @@ export const hspace = {
     },
     paddingSide: {
       mobile: `
-        padding-left: ${remify(sideMargin('index').mobile)};
-        padding-right: ${remify(sideMargin('index').mobile)};
+        padding-left: ${remify(vspace['index'].xHeight.mobile)};
+        padding-right: ${remify(vspace['index'].xHeight.mobile)};
       `,
       tablet: `
         @media only screen and ${breakpoint.sideMargin('index')} {

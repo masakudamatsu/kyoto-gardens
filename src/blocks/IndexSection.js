@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {colour} from 'src/utils/colorScheme';
 import {
@@ -11,6 +10,8 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
+import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const latinFontStyle = {
   kohoan: css`
@@ -24,6 +25,8 @@ const latinFontStyle = {
       font.kohoan.h1.lineHeightRatio.mobile,
       font.kohoan.h1.metrics,
     )};
+    margin-bottom: -${spaceToTrim.index.kohoan.bottom.mobile}px;
+    margin-top: -${spaceToTrim.index.kohoan.top.mobile}px;
     transform: translateX(
       5px
     ); /* text-indent won't work with right-aligned text */
@@ -34,11 +37,13 @@ const latinFontStyle = {
       makeXHeightToBe(font.ryoanji.h1.xHeight.mobile, font.ryoanji.h1.metrics),
     )};
     font-weight: ${font.ryoanji.h1.weight};
-    letter-spacing: ${font.ryoanji.h1.letterSpacig};
+    letter-spacing: ${font.ryoanji.h1.letterSpacing};
     line-height: ${makeLineHeightRatioToBe(
       font.ryoanji.h1.lineHeightRatio.mobile,
       font.ryoanji.h1.metrics,
     )};
+    margin-bottom: -${spaceToTrim.index.ryoanji.bottom.mobile}px;
+    margin-top: -${spaceToTrim.index.ryoanji.top.mobile}px;
     text-indent: -5px;
   `,
 };
@@ -78,12 +83,10 @@ const h2FontStyle = css`
 
 IndexSection.H2 = styled.h2`
   ${h2FontStyle}
-  padding-bottom: 0;
-  padding-left: ${index.h2.paddingSide}px;
-  padding-right: ${index.h2.paddingSide}px;
-  padding-top: ${-index.kanji.top.mobile - index.h2.ascender.mobile}px;
+  ${hspace.index.paddingSide.mobile}
+  padding-top: ${-vspace.index.kanji.mobile - index.h2.ascender.mobile}px;
   @media only screen and ${index.kanji.breakpoint} {
-    padding-top: ${-index.kanji.top.tablet - index.h2.ascender.tablet}px;
+    padding-top: ${-vspace.index.kanji.tablet - index.h2.ascender.tablet}px;
   }
 `;
 
@@ -120,7 +123,8 @@ IndexSection.Kanji = styled.span.attrs(props => ({
   font-size: ${font.index.kanji.size.mobile};
   font-weight: ${font.index.kanji.weight};
   line-height: ${font.index.kanji.lineHeight};
-  padding: ${index.kanji.paddingTop}px;
+  ${hspace.index.paddingSide.mobile}
+  padding-top: ${remify(vspace.index.xHeight.mobile)};
   position: absolute;
   top: 0;
   writing-mode: ${font.index.kanji.writingMode};
@@ -139,10 +143,10 @@ IndexSection.Kanji = styled.span.attrs(props => ({
 `;
 
 IndexSection.Figure = styled.figure`
-  margin-top: ${-index.kanji.top.mobile}px;
+  margin-top: ${-vspace.index.kanji.mobile}px;
   position: relative;
   @media only screen and ${index.kanji.breakpoint} {
-    margin-top: ${-index.kanji.top.tablet}px;
+    margin-top: ${-vspace.index.kanji.tablet}px;
   }
   /* Scrim */
   &::before {
@@ -169,7 +173,10 @@ IndexSection.Latin = styled.p`
   /* Font */
   ${({gardenName}) => latinFontStyle[gardenName]}
   /* Layout */
-  margin-top: ${index.latin.marginTop}px;
+  ${hspace.index.paddingSide.mobile}
+  padding-top: ${remify(
+    vspace.index.xHeight.mobile - spaceToTrim.index.figure.bottom.mobile,
+  )};
   position: relative;
   z-index: 2; /* above scrim */
   ${IndexSection}:nth-of-type(odd) & {
@@ -203,12 +210,14 @@ IndexSection.P = styled.p`
       font.index.main.metrics,
     )};
   }
+  ${hspace.index.paddingSide.mobile}
+  padding-top: ${remify(
+    vspace.index.betweenLines.mobile - spaceToTrim.index.main.top.mobile,
+  )};
   ${IndexSection}:nth-of-type(odd) & {
-    padding-right: ${index.p.paddingSide}px;
     text-align: left;
   }
   ${IndexSection}:nth-of-type(even) & {
-    padding-left: ${index.p.paddingSide}px;
     text-align: right;
   }
 `;

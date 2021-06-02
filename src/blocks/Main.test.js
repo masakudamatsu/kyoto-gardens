@@ -70,7 +70,7 @@ describe('renders UI correctly', () => {
         margin: 0 auto;
         max-width: 51.875rem;
         overflow: hidden;
-        padding-bottom: 3.3203rem;
+        padding-bottom: 2.5825rem;
       }
 
       .c0 a,

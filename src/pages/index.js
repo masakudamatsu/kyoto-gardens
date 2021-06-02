@@ -15,7 +15,7 @@ import VisuallyHidden from 'src/elements/VisuallyHidden';
 const webfont = {
   server: 'https://fonts.gstatic.com',
   stylesheet:
-    'https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Playfair+Display+SC:wght@400&family=Shippori+Mincho+B1:wght@500&display=swap',
+    'https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Playfair+Display:wght@600&family=Shippori+Mincho+B1:wght@500&display=swap',
 }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
 
 function HomePage() {

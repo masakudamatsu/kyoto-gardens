@@ -53,7 +53,7 @@ export const font = {
       },
       weight: 300,
       lineHeightRatio: {
-        mobile: {xHeight: 4, betweenLines: 9},
+        mobile: {xHeight: 4, betweenLines: 7},
         desktop: {xHeight: 2, betweenLines: 5},
       },
     },

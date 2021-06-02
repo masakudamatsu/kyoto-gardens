@@ -35,6 +35,14 @@ export const vspace = {
       mobile: getSpaceBetweenLines('mobile', font.index.main) * scale * scale,
       desktop: getSpaceBetweenLines('desktop', font.index.main) * scale * scale,
     },
+    kanji: {
+      mobile: -59,
+      tablet: -85,
+    },
+    xHeight: {
+      mobile: xHeight('mobile'),
+      desktop: xHeight('desktop'),
+    },
   },
   kohoan: {
     betweenLines: {
@@ -99,10 +107,34 @@ export const spaceToTrim = {
     },
   },
   index: {
+    figure: {
+      bottom: {
+        mobile: 4,
+      }, // See issue #29
+    },
+    kohoan: {
+      top: {
+        mobile: 9.5,
+      },
+      bottom: {
+        mobile: 5,
+      },
+    },
     main: {
+      top: {
+        mobile: 5.5,
+      },
       bottom: {
         mobile: 0, // TODO
         desktop: 0, // TODO
+      },
+    },
+    ryoanji: {
+      bottom: {
+        mobile: 2,
+      },
+      top: {
+        mobile: 1.5,
       },
     },
   },
