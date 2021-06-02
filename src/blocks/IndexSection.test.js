@@ -119,7 +119,7 @@ describe('renders UI correctly:', () => {
 
       .c0 a:focus::after,
       .c0 a:hover::after {
-        background-color: hsla(193,50%,26%,0.2);
+        background-color: hsla(193,30%,57%,0.2);
       }
 
       <div>

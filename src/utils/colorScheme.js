@@ -1,5 +1,5 @@
 const primary = 'hsla(193, 50%, 26%, 0.9)';
-const primaryShade = 'hsla(193, 50%, 26%, 0.2)';
+const primaryShade = 'hsla(193, 30%, 57%, 0.2)'; // same hue and chroma as primary but 3 times brighter
 const onPrimary = 'rgb(238,238,238)';
 const surface = 'rgb(255,255,255)';
 const onSurface = 'rgb(10,10,10)';
