@@ -29,6 +29,11 @@ export const colour = {
   global: {
     background: background, // TODO: change this to match with header/footer's background
   },
+  header: {
+    background: primary,
+    borderBottom: primaryShade,
+    color: onPrimary,
+  },
   index: {
     figure: {
       scrim: {

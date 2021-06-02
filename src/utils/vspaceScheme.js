@@ -1,6 +1,13 @@
 import {font, scale, xHeight} from './fontScheme';
 
 export const vspace = {
+  header: {
+    borderBottom: 1,
+    height: {
+      mobile: 60,
+      desktop: 60,
+    }, // SiteTitle is 48px for 320px wide 181px high; by making it a third, font-size gets 16px
+  },
   index: {
     betweenLines: {
       mobile: getSpaceBetweenLines('mobile', font.index.main),

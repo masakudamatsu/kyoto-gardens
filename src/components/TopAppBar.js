@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import Header from 'src/blocks/Header';
-import {header} from 'src/utils/specLayout';
+import SiteTitle from 'src/components/SiteTitle';
+
+import {colour} from 'src/utils/colorScheme';
+
+const SiteTitleInWhite = styled(SiteTitle)`
+  fill: ${colour.header.color};
+`;
 
 const TopAppBar = () => {
   const [show, setShow] = React.useState(true);
@@ -47,19 +54,7 @@ const TopAppBar = () => {
 
   return (
     <Header hide={!show} show={show}>
-      <Header.OuterWrapper>
-        <Header.InnerWrapper>
-          <Header.ImgWrapper href="https://nextjs.org/">
-            <Header.Img
-              src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
-              alt="Next.js Logo"
-              width={header.logo.width}
-              height={header.logo.height}
-            />
-          </Header.ImgWrapper>
-          <Header.H1>Next.js Template</Header.H1>
-        </Header.InnerWrapper>
-      </Header.OuterWrapper>
+      <SiteTitleInWhite />
     </Header>
   );
 };
