@@ -12,6 +12,7 @@ import {
   makeLineHeightRatioToBe,
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
+import {hspace} from 'src/utils/hspaceScheme';
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
 
 const Article = styled.article`
@@ -45,6 +46,7 @@ const Article = styled.article`
       )};
     }
   }
+  ${hspace.kohoan.marginSide.desktop}
   & a {
     ${cssLinkText({
       backgroundColor: 'trasparent', // disable text-shadow
@@ -93,6 +95,7 @@ const Article = styled.article`
         font.ryoanji.article.metrics,
       )};
     }
+    ${hspace.ryoanji.marginSide.desktop}
     & a {
       ${cssLinkText({
         backgroundColor: colour.ryoanji.article.background,

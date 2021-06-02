@@ -36,6 +36,11 @@ function sideMargin(pageName) {
 }
 
 export const breakpoint = {
+  columnWidth: pageName => {
+    return `(min-width: ${remify(
+      maxColumnWidth + 2 * sideMargin(pageName).desktop,
+    )})`;
+  },
   fontSize: `(min-width: 728px)`, // not in rem, because it proxies the physical distance between the user and the device
   h1: pageName => {
     return `(min-width: ${remify(
@@ -144,6 +149,18 @@ export const hspace = {
         }
       `,
     },
+    marginSide: {
+      desktop: `
+        @media only screen and ${breakpoint.fontSize} {
+          margin-left: ${remify(sideMargin('kohoan').desktop)};
+          margin-right: ${remify(sideMargin('kohoan').desktop)};
+        }
+        @media only screen and ${breakpoint.columnWidth('kohoan')} {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `,
+    },
     paddingSide: {
       mobile: `
         padding-left: ${remify(sideMargin('kohoan').mobile)};
@@ -181,6 +198,18 @@ export const hspace = {
         max-width: ${remify(lineLength.ryoanji.max.mobile)};
         @media only screen and ${breakpoint.fontSize} {
           max-width: ${remify(lineLength.ryoanji.max.desktop)};
+        }
+      `,
+    },
+    marginSide: {
+      desktop: `
+        @media only screen and ${breakpoint.fontSize} {
+          margin-left: ${remify(sideMargin('ryoanji').desktop)};
+          margin-right: ${remify(sideMargin('ryoanji').desktop)};
+        }
+        @media only screen and ${breakpoint.columnWidth('ryoanji')} {
+          margin-left: auto;
+          margin-right: auto;
         }
       `,
     },

@@ -112,6 +112,20 @@ describe('Parent chnages UI by prop value', () => {
       }
 
       @media only screen and (min-width:728px) {
+        .c1 {
+          margin-left: 2.4609rem;
+          margin-right: 2.4609rem;
+        }
+      }
+
+      @media only screen and (min-width:63.7344rem) {
+        .c1 {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
         .c1 a:link,
         .c1 a:visited {
           background: rgb(156,147,143);
@@ -153,6 +167,20 @@ describe('Parent chnages UI by prop value', () => {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
           font-size: 1.6489rem;
           line-height: 1.4925;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
+          margin-left: 3.0078rem;
+          margin-right: 3.0078rem;
+        }
+      }
+
+      @media only screen and (min-width:64.8281rem) {
+        .Main__Ryoanji-sc-126eniy-1 .c0 {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 
