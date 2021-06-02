@@ -112,6 +112,12 @@ export const spaceToTrim = {
         mobile: 4,
       }, // See issue #29
     },
+    h2: {
+      top: {
+        mobile: 11,
+        tablet: 18,
+      },
+    },
     kohoan: {
       top: {
         mobile: 9.5,
@@ -125,8 +131,8 @@ export const spaceToTrim = {
         mobile: 5.5,
       },
       bottom: {
-        mobile: 0, // TODO
-        desktop: 0, // TODO
+        mobile: 4,
+        desktop: 9,
       },
     },
     ryoanji: {

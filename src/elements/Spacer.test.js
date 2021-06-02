@@ -6,6 +6,31 @@ import Spacer from './Spacer';
 const mockProps = {};
 
 describe('renders UI correctly', () => {
+  test('Index', () => {
+    const {container} = render(<Spacer.Index {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        width: 100%;
+      }
+
+      .c1 {
+        clear: both;
+        height: 12.291666666666668px;
+      }
+
+      @media only screen and (min-width:(min-width:728px)px) {
+        .c1 {
+          height: 15.5px;
+        }
+      }
+
+      <div>
+        <div
+          class="c0 c1"
+        />
+      </div>
+    `);
+  });
   test('BoxLineToText without prop', () => {
     const {container} = render(<Spacer.BoxLineToText {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`

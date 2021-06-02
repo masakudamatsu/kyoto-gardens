@@ -1,7 +1,6 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
 
 import {colour} from 'src/utils/colorScheme';
@@ -52,18 +51,11 @@ const IndexSection = styled.section`
   display: flex;
   &:nth-of-type(odd) {
     flex-direction: row;
+    float: right;
   }
   &:nth-of-type(even) {
     flex-direction: row-reverse;
-  }
-  @media only screen and (min-width: ${index.section.maxWidth}px) {
-    width: ${index.section.maxWidth}px;
-    &:nth-of-type(odd) {
-      float: right;
-    }
-    &:nth-of-type(even) {
-      float: left;
-    }
+    float: left;
   }
 `;
 
@@ -74,7 +66,7 @@ const h2FontStyle = css`
   )};
   font-weight: ${font.index.h2.weight};
   font-style: ${font.index.h2.style};
-  @media only screen and ${index.kanji.breakpoint} {
+  @media only screen and ${breakpoint.kanji} {
     font-size: ${remify(
       makeXHeightToBe(font.index.h2.xHeight.tablet, font.index.h2.metrics),
     )};
@@ -84,15 +76,18 @@ const h2FontStyle = css`
 IndexSection.H2 = styled.h2`
   ${h2FontStyle}
   ${hspace.index.paddingSide.mobile}
-  padding-top: ${-vspace.index.kanji.mobile - index.h2.ascender.mobile}px;
-  @media only screen and ${index.kanji.breakpoint} {
-    padding-top: ${-vspace.index.kanji.tablet - index.h2.ascender.tablet}px;
+  padding-top: ${-vspace.index.kanji.mobile -
+  spaceToTrim.index.h2.top.mobile}px;
+  @media only screen and ${breakpoint.kanji} {
+    padding-top: ${-vspace.index.kanji.tablet -
+    spaceToTrim.index.h2.top.tablet}px;
   }
 `;
 
 IndexSection.Card = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: ${hspace.index.section.maxWidth}px;
   position: relative;
   & a {
     text-decoration: none;
@@ -137,7 +132,7 @@ IndexSection.Kanji = styled.span.attrs(props => ({
     left: 0;
     right: auto;
   }
-  @media only screen and ${index.kanji.breakpoint} {
+  @media only screen and ${breakpoint.kanji} {
     font-size: ${font.index.kanji.size.tablet};
   }
 `;
@@ -145,7 +140,7 @@ IndexSection.Kanji = styled.span.attrs(props => ({
 IndexSection.Figure = styled.figure`
   margin-top: ${-vspace.index.kanji.mobile}px;
   position: relative;
-  @media only screen and ${index.kanji.breakpoint} {
+  @media only screen and ${breakpoint.kanji} {
     margin-top: ${-vspace.index.kanji.tablet}px;
   }
   /* Scrim */

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Main from 'src/blocks/Main';
 
-import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
 import {breakpoint} from 'src/utils/hspaceScheme';
 
@@ -239,7 +238,15 @@ function spaceTextParagraphToText(pageName) {
 ////////////////////////////////////////////
 
 Spacer.Index = styled(Spacer)`
-  height: ${index.spacer.height}px;
+  clear: both; // to place the spacer div between floated elements
+  height: ${vspace.index.betweenParagraphs.mobile -
+  vspace.index.xHeight.mobile -
+  spaceToTrim.index.main.bottom.mobile}px;
+  @media only screen and (min-width: ${breakpoint.fontSize}px) {
+    height: ${vspace.index.betweenParagraphs.desktop -
+    vspace.index.xHeight.desktop -
+    spaceToTrim.index.main.bottom.desktop}px;
+  }
 `;
 
 export default Spacer;

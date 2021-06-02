@@ -54,7 +54,7 @@ export const font = {
       weight: 300,
       lineHeightRatio: {
         mobile: {xHeight: 4, betweenLines: 7},
-        desktop: {xHeight: 2, betweenLines: 5},
+        desktop: {xHeight: 1, betweenLines: 2},
       },
     },
     h2: {

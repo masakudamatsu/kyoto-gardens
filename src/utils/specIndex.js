@@ -69,7 +69,7 @@ export const index = {
     paddingSide: sideMargin, // to match with latin.paddingSide
   },
   spacer: {
-    height: 40,
+    height: 0,
   },
   article: {
     // for Footer. To use `setHorizontalSpace()` we need to name it `article`

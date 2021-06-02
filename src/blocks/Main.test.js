@@ -68,9 +68,9 @@ describe('renders UI correctly', () => {
         background-color: rgb(255,255,255);
         color: rgb(10,10,10);
         margin: 0 auto;
-        max-width: 51.875rem;
+        max-width: 58.8125rem;
         overflow: hidden;
-        padding-bottom: 2.5825rem;
+        padding-bottom: 2.3325rem;
       }
 
       .c0 a,
@@ -80,7 +80,21 @@ describe('renders UI correctly', () => {
 
       @media only screen and (min-width:728px) {
         .c0 {
-          padding-bottom: 4.5573rem;
+          padding-bottom: 3.0833rem;
+        }
+      }
+
+      @media only screen and (min-width:728px) {
+        .c0 {
+          margin-left: 2.1875rem;
+          margin-right: 2.1875rem;
+        }
+      }
+
+      @media only screen and (min-width:63.1875rem) {
+        .c0 {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 

@@ -1,9 +1,8 @@
 import styled, {css} from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/hspaceScheme';
+import {breakpoint, hspace, maxColumnWidth} from 'src/utils/hspaceScheme';
 
 import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
 
@@ -29,9 +28,10 @@ Main.Index = styled.main`
   background-color: ${colour.index.main.background};
   color: ${colour.index.main.color};
   margin: 0 auto;
-  max-width: ${remify(index.main.maxWidth)};
+  max-width: ${remify(maxColumnWidth)};
   overflow: hidden; /* to set height large enough to contain floated child elements; see https://www.internetingishard.com/html-and-css/floats/#floats-for-grids */
   ${getPaddingBottom('index')}
+  ${hspace.index.marginSide.desktop}
   & a,
   & a:visited {
     color: ${colour.index.main.color};

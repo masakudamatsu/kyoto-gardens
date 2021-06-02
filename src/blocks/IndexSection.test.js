@@ -21,26 +21,14 @@ describe('renders UI correctly:', () => {
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
+        float: right;
       }
 
       .c0:nth-of-type(even) {
         -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
-      }
-
-      @media only screen and (min-width:500px) {
-        .c0 {
-          width: 500px;
-        }
-
-        .c0:nth-of-type(odd) {
-          float: right;
-        }
-
-        .c0:nth-of-type(even) {
-          float: left;
-        }
+        float: left;
       }
 
       <div>
@@ -93,6 +81,7 @@ describe('renders UI correctly:', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        max-width: 471px;
         position: relative;
       }
 
@@ -309,7 +298,7 @@ describe('renders UI correctly:', () => {
       @media only screen and (min-width:728px) {
         .c1 {
           font-size: 1.3503rem;
-          line-height: 1.701;
+          line-height: 1.458;
         }
       }
 

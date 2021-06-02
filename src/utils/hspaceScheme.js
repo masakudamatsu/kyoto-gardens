@@ -47,6 +47,7 @@ export const breakpoint = {
       lineLength[pageName].max.mobile + 2 * sideMargin(pageName).tablet,
     )})`;
   },
+  kanji: `(min-width: ${remify(410)})`,
   sideMargin: pageName => {
     return `(min-width: ${remify(
       lineLength[pageName].min + 2 * sideMargin(pageName).tablet,
@@ -109,6 +110,18 @@ export const hspace = {
         }
       `,
     },
+    marginSide: {
+      desktop: `
+        @media only screen and ${breakpoint.fontSize} {
+          margin-left: ${remify(sideMargin('index').desktop)};
+          margin-right: ${remify(sideMargin('index').desktop)};
+        }
+        @media only screen and ${breakpoint.columnWidth('index')} {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `,
+    },
     paddingSide: {
       mobile: `
         padding-left: ${remify(vspace['index'].xHeight.mobile)};
@@ -126,6 +139,9 @@ export const hspace = {
           padding-right: ${remify(sideMargin('index').desktop)};
         }
       `,
+    },
+    section: {
+      maxWidth: (maxColumnWidth + 1) / 2,
     },
   },
   kohoan: {
