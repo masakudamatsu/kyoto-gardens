@@ -137,7 +137,29 @@ IndexSection.Kanji = styled.span.attrs(props => ({
   }
 `;
 
+const mainFontStyle = css`
+  font-family: ${font.index.main.family};
+  font-size: ${remify(
+    makeXHeightToBe(font.index.main.xHeight.mobile, font.index.main.metrics),
+  )};
+  font-weight: ${font.index.main.weight};
+  line-height: ${makeLineHeightRatioToBe(
+    font.index.main.lineHeightRatio.mobile,
+    font.index.main.metrics,
+  )};
+  @media only screen and ${breakpoint.fontSize} {
+    font-size: ${remify(
+      makeXHeightToBe(font.index.main.xHeight.desktop, font.index.main.metrics),
+    )};
+    line-height: ${makeLineHeightRatioToBe(
+      font.index.main.lineHeightRatio.desktop,
+      font.index.main.metrics,
+    )};
+  }
+`;
+
 IndexSection.Figure = styled.figure`
+  ${mainFontStyle}
   margin-top: ${-vspace.index.kanji.mobile}px;
   position: relative;
   @media only screen and ${breakpoint.kanji} {
@@ -187,24 +209,7 @@ IndexSection.Latin.propTypes = {
 };
 
 IndexSection.P = styled.p`
-  font-family: ${font.index.main.family};
-  font-size: ${remify(
-    makeXHeightToBe(font.index.main.xHeight.mobile, font.index.main.metrics),
-  )};
-  font-weight: ${font.index.main.weight};
-  line-height: ${makeLineHeightRatioToBe(
-    font.index.main.lineHeightRatio.mobile,
-    font.index.main.metrics,
-  )};
-  @media only screen and ${breakpoint.fontSize} {
-    font-size: ${remify(
-      makeXHeightToBe(font.index.main.xHeight.desktop, font.index.main.metrics),
-    )};
-    line-height: ${makeLineHeightRatioToBe(
-      font.index.main.lineHeightRatio.desktop,
-      font.index.main.metrics,
-    )};
-  }
+  ${mainFontStyle}
   ${hspace.index.paddingSide.mobile}
   padding-top: ${remify(
     vspace.index.betweenLines.mobile - spaceToTrim.index.main.top.mobile,

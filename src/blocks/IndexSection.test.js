@@ -121,6 +121,10 @@ describe('renders UI correctly:', () => {
     const {container} = render(<IndexSection.Figure {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
+        font-family: 'Reforma 1918',serif;
+        font-size: 1.0931rem;
+        font-weight: 300;
+        line-height: 1.3365;
         margin-top: 59px;
         position: relative;
       }
@@ -140,6 +144,13 @@ describe('renders UI correctly:', () => {
 
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0::before {
         background-image: linear-gradient( to top left, rgba(255,255,255,0) 75%, rgba(255,255,255,0.8) );
+      }
+
+      @media only screen and (min-width:728px) {
+        .c1 {
+          font-size: 1.3503rem;
+          line-height: 1.458;
+        }
       }
 
       @media only screen and (min-width:25.625rem) {
