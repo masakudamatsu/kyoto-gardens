@@ -16,6 +16,9 @@ const lineLength = {
       desktop: 64.97 * xHeight('desktop'),
     }, // 682.188px for font-size of 26.3824px
   },
+  get footer() {
+    return this.ryoanji;
+  },
   get index() {
     return this.ryoanji;
   },
@@ -47,6 +50,39 @@ export const breakpoint = {
 };
 
 export const hspace = {
+  footer: {
+    maxWidth: {
+      body: `
+        margin: 0 auto;
+        max-width: ${remify(
+          lineLength.footer.max.mobile + 2 * sideMargin('footer').tablet,
+        )};
+        @media only screen and ${breakpoint.fontSize} {
+          max-width: ${remify(
+            lineLength.footer.max.desktop + 2 * sideMargin('footer').desktop,
+          )};
+        }
+      `,
+    },
+    paddingSide: {
+      mobile: `
+        padding-left: ${remify(sideMargin('footer').mobile)};
+        padding-right: ${remify(sideMargin('footer').mobile)};
+      `,
+      tablet: `
+        @media only screen and ${breakpoint.sideMargin('footer')} {
+          padding-left: ${remify(sideMargin('footer').tablet)};
+          padding-right: ${remify(sideMargin('footer').tablet)};
+        }
+      `,
+      desktop: `
+        @media only screen and ${breakpoint.fontSize} {
+          padding-left: ${remify(sideMargin('footer').desktop)};
+          padding-right: ${remify(sideMargin('footer').desktop)};
+        }
+      `,
+    },
+  },
   index: {
     maxWidth: {
       body: `

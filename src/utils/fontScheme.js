@@ -27,6 +27,22 @@ export const scale = 5 / 3;
 // Page-specific parameters
 
 export const font = {
+  footer: {
+    family: reforma1918.fontFamily,
+    metrics: reforma1918.fontMetrics,
+    xHeight: {
+      mobile: xHeight('mobile'),
+      desktop: xHeight('desktop'),
+    },
+    weight: 300,
+    lineHeightRatio: {
+      mobile: {xHeight: 4, betweenLines: 9},
+      desktop: {xHeight: 2, betweenLines: 5},
+    },
+    small: {
+      size: '80%', // TODO: set this number more systematically (80% is <small>'s default style)
+    },
+  },
   index: {
     main: {
       family: reforma1918.fontFamily,
@@ -40,9 +56,6 @@ export const font = {
         mobile: {xHeight: 4, betweenLines: 9},
         desktop: {xHeight: 2, betweenLines: 5},
       },
-    },
-    footerSmall: {
-      size: '80%', // TODO: set this number more systematically (80% is <small>'s default style)
     },
     h2: {
       family: reforma1918.fontFamily,
@@ -64,11 +77,6 @@ export const font = {
       weight: 500, // TODO: Set this value to match the latin counterpart's storke width
       lineHeight: 1, // to control side margins
       writingMode: 'vertical-rl',
-    },
-    get footer() {
-      return {
-        ...this.main,
-      };
     },
     siteTitle: {
       family: reforma1918.fontFamily,

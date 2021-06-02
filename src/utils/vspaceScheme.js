@@ -1,6 +1,20 @@
 import {font, scale, xHeight} from './fontScheme';
 
 export const vspace = {
+  footer: {
+    betweenLines: {
+      mobile: getSpaceBetweenLines('mobile', font.footer),
+      desktop: getSpaceBetweenLines('desktop', font.footer),
+    },
+    betweenParagraphs: {
+      mobile: getSpaceBetweenLines('mobile', font.footer) * scale,
+      desktop: getSpaceBetweenLines('desktop', font.footer) * scale,
+    },
+    betweenSections: {
+      mobile: getSpaceBetweenLines('mobile', font.footer) * scale * scale,
+      desktop: getSpaceBetweenLines('desktop', font.footer) * scale * scale,
+    },
+  },
   header: {
     borderBottom: 1,
     height: {
@@ -74,6 +88,16 @@ export const vspace = {
 };
 
 export const spaceToTrim = {
+  footer: {
+    bottom: {
+      mobile: 0, // TODO
+      desktop: 0, // TODO
+    },
+    topToX: {
+      mobile: 12.5,
+      desktop: 16,
+    },
+  },
   index: {
     main: {
       bottom: {

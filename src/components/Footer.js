@@ -1,9 +1,7 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import {index} from 'src/utils/specIndex';
 import remify from 'src/utils/remify';
-import {breakpoint} from 'src/utils/hspaceScheme';
 
 import {colour} from 'src/utils/colorScheme';
 import {
@@ -12,23 +10,27 @@ import {
   makeXHeightToBe,
 } from 'src/utils/fontScheme';
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
-import {hspace} from 'src/utils/hspaceScheme';
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
 
 import SiteTitle from 'src/components/SiteTitle';
 
 const FooterStyled = styled.footer`
-  background-color: ${colour.index.footer.background};
+  background-color: ${colour.footer.background};
   margin: 0 auto;
-  padding-top: ${index.article.paddingTop};
-  ${getPaddingBottom('index')}
+  padding-bottom: ${remify(getPaddingBottom('mobile'))};
+  padding-top: ${remify(getPaddingTop('mobile'))};
+  @media only screen and ${breakpoint.fontSize} {
+    padding-bottom: ${remify(getPaddingBottom('desktop'))};
+    padding-top: ${remify(getPaddingTop('desktop'))};
+  }
 `;
 
 const DropCap = styled(SiteTitle)`
-  fill: ${colour.index.footer.color};
+  fill: ${colour.footer.color};
   float: left;
   transform: translate(-8px, 15px);
   width: 160px;
-  @media only screen and ${breakpoint.sideMargin('index')} {
+  @media only screen and ${breakpoint.sideMargin('footer')} {
     width: 253px;
     transform: translate(-10px, 0px);
   }
@@ -40,40 +42,34 @@ const DropCap = styled(SiteTitle)`
 
 const ParagraphStyled = styled.p`
   /* font */
-  color: ${colour.index.footer.color};
-  font-family: ${font.index.footer.family};
+  color: ${colour.footer.color};
+  font-family: ${font.footer.family};
   font-size: ${remify(
-    makeXHeightToBe(
-      font.index.footer.xHeight.mobile,
-      font.index.footer.metrics,
-    ),
+    makeXHeightToBe(font.footer.xHeight.mobile, font.footer.metrics),
   )};
-  font-weight: ${font.index.footer.weight};
+  font-weight: ${font.footer.weight};
   line-height: ${makeLineHeightRatioToBe(
-    font.index.footer.lineHeightRatio.mobile,
-    font.index.footer.metrics,
+    font.footer.lineHeightRatio.mobile,
+    font.footer.metrics,
   )};
   @media only screen and ${breakpoint.fontSize} {
     font-size: ${remify(
-      makeXHeightToBe(
-        font.index.footer.xHeight.desktop,
-        font.index.footer.metrics,
-      ),
+      makeXHeightToBe(font.footer.xHeight.desktop, font.footer.metrics),
     )};
     line-height: ${makeLineHeightRatioToBe(
-      font.index.footer.lineHeightRatio.desktop,
-      font.index.footer.metrics,
+      font.footer.lineHeightRatio.desktop,
+      font.footer.metrics,
     )};
   }
-  ${hspace.index.maxWidth.body}
-  ${hspace.index.paddingSide.mobile}
-  ${hspace.index.paddingSide.tablet}
-  ${hspace.index.paddingSide.desktop}
+  ${hspace.footer.maxWidth.body}
+  ${hspace.footer.paddingSide.mobile}
+  ${hspace.footer.paddingSide.tablet}
+  ${hspace.footer.paddingSide.desktop}
 text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
 `;
 
 const Small = styled.small`
-  font-size: ${font.index.footerSmall.size};
+  font-size: ${font.footer.small.size};
 `;
 
 const Footer = () => {
@@ -98,18 +94,16 @@ Footer.propTypes = {};
 
 export default Footer;
 
-function getPaddingBottom(pageName) {
-  // same as in Main.js
-  return css`
-    padding-bottom: ${remify(
-      vspace[pageName].betweenSections.mobile -
-        spaceToTrim[pageName].main.bottom.mobile,
-    )};
-    @media only screen and ${breakpoint.fontSize} {
-      padding-bottom: ${remify(
-        vspace[pageName].betweenSections.desktop -
-          spaceToTrim[pageName].main.bottom.desktop,
-      )};
-    }
-  `;
+function getPaddingBottom(screenWidth) {
+  return (
+    vspace.footer.betweenSections[screenWidth] -
+    spaceToTrim.footer.bottom[screenWidth]
+  );
+}
+
+function getPaddingTop(screenWidth) {
+  return (
+    vspace.footer.betweenLines[screenWidth] -
+    spaceToTrim.footer.topToX[screenWidth]
+  );
 }

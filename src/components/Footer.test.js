@@ -25,8 +25,8 @@ test('renders UI correctly', () => {
     .c0 {
       background-color: hsla(193,50%,26%,0.9);
       margin: 0 auto;
-      padding-top: 15px;
       padding-bottom: 3.3203rem;
+      padding-top: 0.4141rem;
     }
 
     .c3 {
@@ -71,6 +71,7 @@ test('renders UI correctly', () => {
     @media only screen and (min-width:728px) {
       .c0 {
         padding-bottom: 4.5573rem;
+        padding-top: 0.6406rem;
       }
     }
 

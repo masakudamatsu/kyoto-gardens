@@ -26,6 +26,11 @@ const kohoan = {
 };
 
 export const colour = {
+  footer: {
+    background: primary,
+    color: onPrimary,
+    overlay: lighting,
+  },
   global: {
     background: background, // TODO: change this to match with header/footer's background
   },
@@ -48,11 +53,6 @@ export const colour = {
           rgba(255, 255, 255, 0.8)
         )`,
       },
-    },
-    footer: {
-      background: primary,
-      color: onPrimary,
-      overlay: lighting,
     },
     siteTitle: {
       color: primary,
