@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {render, screen} from '@testing-library/react';
 
-import {color} from './specColor';
 import {cssLinkText} from './cssLinkText';
-import {font} from './specFont';
 
 const inputs = {
   backgroundColor: '#000000',

@@ -2,7 +2,6 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 
 import FigureFullbleed from './FigureFullbleed';
-import {color} from 'src/utils/specColor';
 
 const mockProps = {};
 
