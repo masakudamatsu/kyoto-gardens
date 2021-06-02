@@ -1,13 +1,11 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import remify from 'src/utils/remify';
-import {breakpoint, hspace, maxColumnWidth} from 'src/utils/hspaceScheme';
-
-import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
-
+import {breakpoint, maxColumnWidth} from 'src/utils/hspaceScheme';
 import {colour} from 'src/utils/colorScheme';
-import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
+import remify from 'src/utils/remify';
+import {seigaihaPattern, shippoPattern} from 'src/utils/patterns';
+import {vspace} from 'src/utils/vspaceScheme';
 
 const Main = styled.main`
   padding-top: ${remify(vspace.header.height.mobile)};
@@ -26,32 +24,9 @@ Main.Kohoan = styled(Main)`
 
 Main.Index = styled.main`
   background-color: ${colour.index.main.background};
-  color: ${colour.index.main.color};
   margin: 0 auto;
   max-width: ${remify(maxColumnWidth)};
-  overflow: hidden; /* to set height large enough to contain floated child elements; see https://www.internetingishard.com/html-and-css/floats/#floats-for-grids */
-  ${getPaddingBottom('index')}
-  ${hspace.index.marginSide.desktop}
-  & a,
-  & a:visited {
-    color: ${colour.index.main.color};
-  }
 `;
-
-function getPaddingBottom(pageName) {
-  return css`
-    padding-bottom: ${remify(
-      vspace[pageName].betweenSections.mobile -
-        spaceToTrim[pageName].main.bottom.mobile,
-    )};
-    @media only screen and ${breakpoint.fontSize} {
-      padding-bottom: ${remify(
-        vspace[pageName].betweenSections.desktop -
-          spaceToTrim[pageName].main.bottom.desktop,
-      )};
-    }
-  `;
-}
 
 Main.propTypes = {};
 
