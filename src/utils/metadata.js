@@ -1,3 +1,13 @@
+export const footer = {
+  text: ` presents alternative takes on historical gardens
+  in Japan, attempting to uncover the intentions behind their
+  landscape design. The entire site is a one-person project: articles
+  are written, photographs taken (unless otherwise indicated), and web
+  pages designed and coded, by Masa Kudamatsu, a native Japanese
+  speaker who loves living in Kyoto for its amazing gardens.`,
+  copyrightNotice: `© 2021 Masayuki Kudamatsu. All rights reserved.`,
+};
+
 export const index = {
   title: 'Trasnlating Japanese Gardens',
   description:

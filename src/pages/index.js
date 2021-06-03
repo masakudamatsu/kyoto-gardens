@@ -1,11 +1,12 @@
 import Head from 'next/head';
 
-import Footer from 'src/components/Footer';
+import Footer from 'src/blocks/Footer';
 import Main from 'src/blocks/Main';
-import {index} from 'src/utils/metadata';
 import SiteTitle from 'src/components/SiteTitle';
 import Timeline from 'src/components/Timeline';
 import VisuallyHidden from 'src/elements/VisuallyHidden';
+
+import {footer, index} from 'src/utils/metadata';
 
 const webfont = {
   server: 'https://fonts.gstatic.com',
@@ -42,7 +43,16 @@ function HomePage() {
         <SiteTitle ariaHidden />
         <Timeline />
       </Main.Index>
-      <Footer />
+      <Footer>
+        <Footer.BottomBackground>
+          <Footer.P>
+            <Footer.DropCap /> {footer.text}
+          </Footer.P>
+          <Footer.P centerAligned>
+            <Footer.Small>{footer.copyrightNotice}</Footer.Small>
+          </Footer.P>
+        </Footer.BottomBackground>
+      </Footer>
     </>
   ); // see https://codepen.io/masakudamatsu/pen/QWpbELb
 }
