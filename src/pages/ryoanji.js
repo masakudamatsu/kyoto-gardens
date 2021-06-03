@@ -22,13 +22,14 @@ import Spacer from 'src/elements/Spacer';
 import Strong from '../elements/Strong';
 import SubSection from '../blocks/SubSection';
 import VisuallyHidden from '../elements/VisuallyHidden';
-import {ryoanji} from 'src/utils/metadata';
+import {index, ryoanji} from 'src/utils/metadata';
 
 export default function Ryoanji() {
   const webfont = {
     server: 'https://fonts.gstatic.com',
-    stylesheet:
-      'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Cormorant+SC:wght@600;700&family=Cormorant:wght@700&family=Shippori+Mincho:wght@500&display=swap',
+    stylesheet: `https://fonts.googleapis.com/css2?${ryoanji.googleFonts.join(
+      '&',
+    )}&${index.googleFonts.join('&')}&display=swap`,
   }; // See https://csswizardry.com/2020/05/the-fastest-google-fonts/
   return (
     <>
