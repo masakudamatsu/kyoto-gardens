@@ -27,8 +27,9 @@ const kohoan = {
 
 export const colour = {
   footer: {
-    background: primary,
-    color: onPrimary,
+    background: surface,
+    surface: primary,
+    onSurface: onPrimary,
     overlay: lighting,
   },
   global: {

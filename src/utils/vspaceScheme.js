@@ -98,8 +98,12 @@ export const vspace = {
 export const spaceToTrim = {
   footer: {
     bottom: {
-      mobile: 0, // TODO
-      desktop: 0, // TODO
+      mobile: 6,
+      desktop: 9,
+    },
+    top: {
+      mobile: 7.5, // 13.5 - bottom.mobile
+      desktop: 10.5, // 19.5 - bottom.desktop
     },
     topToX: {
       mobile: 12.5,

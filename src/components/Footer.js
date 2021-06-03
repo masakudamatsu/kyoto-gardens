@@ -1,32 +1,41 @@
-import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import remify from 'src/utils/remify';
 
+import SiteTitle from 'src/components/SiteTitle';
+
+import {breakpoint, hspace} from 'src/utils/hspaceScheme';
 import {colour} from 'src/utils/colorScheme';
 import {
   font,
   makeLineHeightRatioToBe,
   makeXHeightToBe,
+  scale,
 } from 'src/utils/fontScheme';
+import remify from 'src/utils/remify';
 import {spaceToTrim, vspace} from 'src/utils/vspaceScheme';
-import {breakpoint, hspace} from 'src/utils/hspaceScheme';
 
-import SiteTitle from 'src/components/SiteTitle';
+const Footer = styled.footer`
+  background-color: ${colour.footer
+    .background}; /* override Global background of gray */
+`;
 
-const FooterStyled = styled.footer`
-  background-color: ${colour.footer.background};
-  margin: 0 auto;
-  padding-bottom: ${remify(getPaddingBottom('mobile'))};
+Footer.TopBackground = styled.div`
+  background-color: ${colour.footer.surface};
   padding-top: ${remify(getPaddingTop('mobile'))};
   @media only screen and ${breakpoint.fontSize} {
-    padding-bottom: ${remify(getPaddingBottom('desktop'))};
     padding-top: ${remify(getPaddingTop('desktop'))};
   }
 `;
 
-const DropCap = styled(SiteTitle)`
-  fill: ${colour.footer.color};
+Footer.BottomBackground = styled(Footer.TopBackground)`
+  padding-bottom: ${remify(getSpaceBetweenSections('mobile'))};
+  @media only screen and ${breakpoint.fontSize} {
+    padding-bottom: ${remify(getSpaceBetweenSections('desktop'))};
+  }
+`;
+
+Footer.DropCap = styled(SiteTitle)`
+  fill: ${colour.footer.onSurface};
   float: left;
   transform: translate(-8px, 15px);
   width: 160px;
@@ -40,9 +49,9 @@ const DropCap = styled(SiteTitle)`
   }
 `;
 
-const ParagraphStyled = styled.p`
+Footer.P = styled.p`
   /* font */
-  color: ${colour.footer.color};
+  color: ${colour.footer.onSurface};
   font-family: ${font.footer.family};
   font-size: ${remify(
     makeXHeightToBe(font.footer.xHeight.mobile, font.footer.metrics),
@@ -61,6 +70,14 @@ const ParagraphStyled = styled.p`
       font.footer.metrics,
     )};
   }
+  & + & {
+    padding-bottom: ${remify(getPaddingBottom('mobile'))};
+    padding-top: ${remify(getSpaceBetweenParagraphs('mobile'))};
+    @media only screen and ${breakpoint.fontSize} {
+      padding-bottom: ${remify(getPaddingBottom('desktop'))};
+      padding-top: ${remify(getSpaceBetweenParagraphs('desktop'))};
+    }
+  }
   ${hspace.footer.maxWidth.body}
   ${hspace.footer.paddingSide.mobile}
   ${hspace.footer.paddingSide.tablet}
@@ -68,42 +85,38 @@ const ParagraphStyled = styled.p`
 text-align: ${({centerAligned}) => (centerAligned ? 'center' : 'left')};
 `;
 
-const Small = styled.small`
-  font-size: ${font.footer.small.size};
+Footer.Small = styled.small`
+  font-size: ${Math.sqrt(1 / scale) *
+  100}%; /* override the browser's default */
 `;
-
-const Footer = () => {
-  return (
-    <FooterStyled>
-      <ParagraphStyled>
-        <DropCap /> presents alternative takes on historical gardens in Japan,
-        attempting to uncover the intentions of their design. It is a one-person
-        project: articles are written, photographs taken (unless otherwise
-        indicated), and web pages designed and coded, by Masa Kudamatsu, a
-        native Japanese speaker who loves living in Kyoto for its amazing
-        gardens.
-      </ParagraphStyled>
-      <ParagraphStyled centerAligned>
-        <Small>&copy; 2021 Masayuki Kudamatsu. All rights reserved.</Small>
-      </ParagraphStyled>
-    </FooterStyled>
-  );
-};
-
-Footer.propTypes = {};
 
 export default Footer;
 
-function getPaddingBottom(screenWidth) {
+function getSpaceBetweenSections(screenWidth) {
   return (
     vspace.footer.betweenSections[screenWidth] -
     spaceToTrim.footer.bottom[screenWidth]
   );
 }
 
-function getPaddingTop(screenWidth) {
+function getPaddingBottom(screenWidth) {
   return (
     vspace.footer.betweenLines[screenWidth] -
+    spaceToTrim.footer.bottom[screenWidth]
+  );
+}
+
+function getPaddingTop(screenWidth) {
+  return (
+    vspace.footer.betweenParagraphs[screenWidth] -
     spaceToTrim.footer.topToX[screenWidth]
+  );
+}
+
+function getSpaceBetweenParagraphs(screenWidth) {
+  return (
+    vspace.footer.betweenParagraphs[screenWidth] -
+    (spaceToTrim.footer.bottom[screenWidth] +
+      spaceToTrim.footer.top[screenWidth])
   );
 }
