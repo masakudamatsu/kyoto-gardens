@@ -4,7 +4,46 @@ import {render, screen} from '@testing-library/react';
 import IndexSection from './IndexSection';
 import {font} from 'src/utils/fontScheme';
 
-const mockProps = {};
+const mockProps = {
+  currentPage: 'garden',
+  pageName: 'another-garden',
+};
+
+describe('props work as expected', () => {
+  test('currentPage and pageName', () => {
+    const styleToApply = {
+      desaturated: `filter: grayscale(1)`,
+      opaque: `opacity: 0.3`,
+    };
+    const {rerender} = render(
+      <IndexSection {...mockProps} data-testid="index" />,
+    );
+    const index = screen.getByTestId('index');
+    expect(index).not.toHaveStyle(styleToApply.desaturated);
+    expect(index).not.toHaveStyle(styleToApply.opaque);
+    rerender(
+      <IndexSection
+        {...mockProps}
+        currentPage={mockProps.pageName}
+        data-testid="index"
+      />,
+    );
+    expect(index).toHaveStyle(styleToApply.desaturated);
+    expect(index).toHaveStyle(styleToApply.opaque);
+  });
+  test(`Latin's gardenName prop`, () => {
+    const {rerender} = render(
+      <IndexSection.Latin gardenName="kohoan" data-testid="section" />,
+    );
+    expect(screen.getByTestId('section')).toHaveStyle(`
+      font-family: ${font.kohoan.h1.family.replace(/,\s/g, ',')}
+    `);
+    rerender(<IndexSection.Latin gardenName="ryoanji" data-testid="section" />);
+    expect(screen.getByTestId('section')).toHaveStyle(`
+      font-family: ${font.ryoanji.h1.family.replace(/,\s/g, ',')}
+    `);
+  });
+});
 
 describe('renders UI correctly:', () => {
   test('Parent', () => {
@@ -108,6 +147,11 @@ describe('renders UI correctly:', () => {
       .c0 a:focus::after,
       .c0 a:hover::after {
         background-color: hsla(193,30%,57%,0.2);
+      }
+
+      .c0 a:not([href]):focus::after,
+      .c0 a:not([href]):hover::after {
+        background-color: transparent;
       }
 
       <div>
@@ -318,21 +362,6 @@ describe('renders UI correctly:', () => {
           class="c0 c1"
         />
       </div>
-    `);
-  });
-});
-
-describe('props work as expected', () => {
-  test(`Latin's gardenName prop`, () => {
-    const {rerender} = render(
-      <IndexSection.Latin gardenName="kohoan" data-testid="section" />,
-    );
-    expect(screen.getByTestId('section')).toHaveStyle(`
-      font-family: ${font.kohoan.h1.family.replace(/,\s/g, ',')}
-    `);
-    rerender(<IndexSection.Latin gardenName="ryoanji" data-testid="section" />);
-    expect(screen.getByTestId('section')).toHaveStyle(`
-      font-family: ${font.ryoanji.h1.family.replace(/,\s/g, ',')}
     `);
   });
 });

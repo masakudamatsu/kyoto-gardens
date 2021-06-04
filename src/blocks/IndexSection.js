@@ -57,6 +57,14 @@ const IndexSection = styled.section`
     flex-direction: row-reverse;
     float: left;
   }
+  ${({currentPage, pageName}) => {
+    if (currentPage === pageName) {
+      return `
+        filter: grayscale(1);
+        opacity: 0.3;
+      `;
+    }
+  }}
 `;
 
 const h2FontStyle = css`
@@ -108,6 +116,10 @@ IndexSection.Card = styled.div`
   & a:focus::after,
   & a:hover::after {
     background-color: ${colour.index.link.onHoverBackground};
+  }
+  & a:not([href]):focus::after,
+  & a:not([href]):hover::after {
+    background-color: transparent;
   }
 `;
 
@@ -222,4 +234,8 @@ IndexSection.P = styled.p`
   }
 `;
 
+IndexSection.propTypes = {
+  currentPage: PropTypes.string,
+  pageName: PropTypes.string.isRequired,
+};
 export default IndexSection;

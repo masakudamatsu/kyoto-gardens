@@ -53,7 +53,7 @@ export default function Ryoanji() {
         </noscript>
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
-      <Layout>
+      <Layout currentPage="ryoanji">
         <Main.Ryoanji>
           <Article>
             <Article.Header>

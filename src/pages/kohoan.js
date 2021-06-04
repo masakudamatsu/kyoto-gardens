@@ -53,7 +53,7 @@ export default function Kohoan() {
         </noscript>
         {/* Fallback for JavaScript-disabled browsers.  */}
       </Head>
-      <Layout>
+      <Layout currentPage="kohoan">
         <Main.Kohoan>
           <Article>
             <Article.Header>
