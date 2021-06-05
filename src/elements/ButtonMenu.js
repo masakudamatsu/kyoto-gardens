@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {breakpoint, hspace, sideMargin} from 'src/utils/hspaceScheme';
+import {colour} from 'src/utils/colorScheme';
 
 const ButtonMenu = styled.button.attrs(props => ({
   type: 'button',
@@ -27,18 +28,20 @@ const ButtonMenu = styled.button.attrs(props => ({
   &:focus,
   &:hover {
     outline: none;
-    text-shadow: 0 0 3px hsl(0, 0%, 100%);
+    text-shadow: 0 0 3px ${colour.buttonMenu.focus};
+  }
+  &:active {
+    text-shadow: none;
   }
   & svg {
-    fill: hsl(
-      0,
-      0%,
-      78%
-    ); /* 4.5 to 1 against the primary color: https://contrast-ratio.com/#hsl%280%2C0%25%2C78%25%29-on-hsla%28193%2C%2050%25%2C%2026%25%2C%200.9%29 */
+    fill: ${colour.buttonMenu.default};
   }
   &:focus svg,
   &:hover svg {
-    fill: hsl(0, 0%, 100%);
+    fill: ${colour.buttonMenu.focus};
+  }
+  &:active svg {
+    fill: ${colour.buttonMenu.default};
   }
 `;
 

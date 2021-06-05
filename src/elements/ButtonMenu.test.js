@@ -23,13 +23,21 @@ describe('renders UI correctly', () => {
         text-shadow: 0 0 3px hsl(0,0%,100%);
       }
 
+      .c0:active {
+        text-shadow: none;
+      }
+
       .c0 svg {
-        fill: hsl( 0,0%,78% );
+        fill: hsl(0,0%,78%);
       }
 
       .c0:focus svg,
       .c0:hover svg {
         fill: hsl(0,0%,100%);
+      }
+
+      .c0:active svg {
+        fill: hsl(0,0%,78%);
       }
 
       @media only screen and (min-width:31.6802rem) {
@@ -72,13 +80,21 @@ describe('renders UI correctly', () => {
         text-shadow: 0 0 3px hsl(0,0%,100%);
       }
 
+      .c0:active {
+        text-shadow: none;
+      }
+
       .c0 svg {
-        fill: hsl( 0,0%,78% );
+        fill: hsl(0,0%,78%);
       }
 
       .c0:focus svg,
       .c0:hover svg {
         fill: hsl(0,0%,100%);
+      }
+
+      .c0:active svg {
+        fill: hsl(0,0%,78%);
       }
 
       @media only screen and (min-width:30.7948rem) {

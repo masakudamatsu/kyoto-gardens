@@ -26,6 +26,10 @@ const kohoan = {
 };
 
 export const colour = {
+  buttonMenu: {
+    default: `hsl(0, 0%, 78%)` /* 4.5 to 1 against the primary color: https://contrast-ratio.com/#hsl%280%2C0%25%2C78%25%29-on-hsla%28193%2C%2050%25%2C%2026%25%2C%200.9%29 */,
+    focus: `hsl(0, 0%, 100%)`, // TODO: make it consistent with the above colour scheme
+  },
   footer: {
     background: surface,
     surface: primary,
