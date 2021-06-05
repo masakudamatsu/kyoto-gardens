@@ -27,7 +27,7 @@ const lineLength = {
   },
 };
 
-function sideMargin(pageName) {
+export function sideMargin(pageName) {
   return {
     mobile: vspace[pageName].betweenLines.mobile,
     tablet: vspace[pageName].betweenParagraphs.mobile,
@@ -56,6 +56,10 @@ export const breakpoint = {
 };
 
 export const hspace = {
+  buttonMenu: {
+    paddingLeft: 11.5, // to center-align the icon whose width is 25px
+    width: 48, // minimum touch target size (source: https://web.dev/accessible-tap-targets/)
+  },
   footer: {
     maxWidth: {
       body: `

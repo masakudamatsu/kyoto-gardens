@@ -116,13 +116,14 @@ describe('renders UI correctly', () => {
 
       <div>
         <svg
-          aria-labelledby="alt-text"
+          aria-labelledby="site-title"
           class="c0 c1"
+          data-testid="site-title"
           role="img"
           viewBox="0 0 320 181"
         >
           <title
-            id="alt-text"
+            id="site-title"
           >
             Translating Japanese Gardens
           </title>

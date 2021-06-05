@@ -9,7 +9,7 @@ import {footer} from 'src/utils/metadata';
 export default function Layout({children, currentPage}) {
   return (
     <>
-      <TopAppBar />
+      <TopAppBar currentPage={currentPage} />
       {children}
       <Footer>
         <Footer.TopBackground>

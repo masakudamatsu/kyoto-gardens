@@ -22,11 +22,12 @@ const SiteTitle = ({ariaHidden, className}) => {
     <Svg
       viewBox="0 0 320 181"
       role="img"
-      aria-labelledby="alt-text"
+      aria-labelledby="site-title"
       aria-hidden={ariaHidden}
       className={className} // to change style with styled-components; see https://spectrum.chat/styled-components/general/styling-an-existing-component~e79a3695-db96-417f-809f-b4abed9f3c82?m=MTU1MTYzNzQyMTAyNA==
+      data-testid="site-title"
     >
-      <title id="alt-text">Translating Japanese Gardens</title>
+      <title id="site-title">Translating Japanese Gardens</title>
       <text>
         <tspan id="Translating" dx="0 1 2 -2 -2 0 0 -1 1 -1 -2" x="19" y="58">
           <AlternateCap>T</AlternateCap>ranslating

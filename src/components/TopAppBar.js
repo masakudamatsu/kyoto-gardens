@@ -1,9 +1,11 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import ButtonMenu from 'src/elements/ButtonMenu';
 import Header from 'src/blocks/Header';
 import SiteTitle from 'src/components/SiteTitle';
+import Hamburger from 'src/components/Hamburger';
 
 import {colour} from 'src/utils/colorScheme';
 
@@ -11,10 +13,10 @@ const SiteTitleInWhite = styled(SiteTitle)`
   fill: ${colour.header.color};
 `;
 
-const TopAppBar = () => {
-  const [show, setShow] = React.useState(true);
+const TopAppBar = ({currentPage}) => {
+  const [show, setShow] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let scrollPosition = 0;
 
     // for dealing with Safari
@@ -54,11 +56,16 @@ const TopAppBar = () => {
 
   return (
     <Header hide={!show} show={show}>
+      <ButtonMenu currentPage={currentPage}>
+        <Hamburger />
+      </ButtonMenu>
       <SiteTitleInWhite />
     </Header>
   );
 };
 
-TopAppBar.propTypes = {};
+TopAppBar.propTypes = {
+  currentPage: PropTypes.string.isRequired,
+};
 
 export default TopAppBar;

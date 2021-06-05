@@ -4,8 +4,18 @@ import userEvent from '@testing-library/user-event';
 import {axe} from 'jest-axe';
 
 import TopAppBar from './TopAppBar';
+import {colour} from 'src/utils/colorScheme';
 
-const mockProps = {};
+const mockProps = {
+  currentPage: 'ryoanji',
+};
+
+test('renders the site title in white', () => {
+  render(<TopAppBar {...mockProps} />);
+  expect(screen.getByTestId('site-title')).toHaveStyle(
+    `fill: ${colour.header.color}`,
+  );
+});
 
 test('is accessible', async () => {
   const {container} = render(<TopAppBar {...mockProps} />);
