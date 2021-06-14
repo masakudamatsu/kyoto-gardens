@@ -1,12 +1,12 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import {axe} from 'jest-axe';
 
-import Hamburger from './Hamburger';
+import SvgHamburger from './SvgHamburger';
 
 const mockProps = {};
 test('renders UI correctly', () => {
-  const {container} = render(<Hamburger {...mockProps} />);
+  const {container} = render(<SvgHamburger {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
       font-family: 'Reforma 1918',sans-serif;
@@ -43,7 +43,7 @@ test('renders UI correctly', () => {
 });
 
 test('is accessible', async () => {
-  const {container} = render(<Hamburger {...mockProps} />);
+  const {container} = render(<SvgHamburger {...mockProps} />);
   const results = await axe(container);
   expect(results).toHaveNoViolations();
 });

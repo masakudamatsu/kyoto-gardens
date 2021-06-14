@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 
 import {breakpoint, hspace, sideMargin} from 'src/utils/hspaceScheme';
 import {colour} from 'src/utils/colorScheme';
+import {vspace} from 'src/utils/vspaceScheme';
 
-const ButtonMenu = styled.button.attrs(props => ({
-  type: 'button',
-}))`
+const NavTop = styled.nav`
+  display: flex;
+`;
+
+NavTop.Button = styled.button`
   /* minimum touch target size: https://web.dev/accessible-tap-targets/ */
   height: ${hspace.buttonMenu.width}px;
   width: ${hspace.buttonMenu.width}px;
@@ -44,8 +47,27 @@ const ButtonMenu = styled.button.attrs(props => ({
     fill: ${colour.buttonMenu.default};
   }
 `;
-
-ButtonMenu.propTypes = {
+NavTop.Button.propTypes = {
   currentPage: PropTypes.string.isRequired,
 };
-export default ButtonMenu;
+
+NavTop.Ul = styled.ul`
+  background-color: ${colour.header.background};
+  color: ${colour.header.color};
+  height: 85vh;
+  list-style: none;
+  max-width: 320px;
+  position: fixed;
+  top: ${vspace.header.height.mobile}px;
+  width: 85vw;
+  z-index: 5;
+  & a,
+  & a:visited {
+    color: ${colour.header.color};
+    text-decoration: none;
+  }
+`;
+
+NavTop.Ul.propTypes = {};
+
+export default NavTop;

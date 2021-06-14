@@ -26,7 +26,7 @@ const cssAnimation = {
 };
 
 // Center-align child elements rather than setting side margins
-const Header = styled.header`
+const DivTopAppBar = styled.div`
   background-color: ${colour.header.background};
   border-bottom-color: ${colour.header.borderBottom};
   border-bottom-style: solid;
@@ -46,9 +46,9 @@ const Header = styled.header`
   }
 `;
 
-Header.propTypes = {
+DivTopAppBar.propTypes = {
   hide: PropTypes.bool,
   show: PropTypes.bool,
 };
 
-export default Header;
+export default DivTopAppBar;

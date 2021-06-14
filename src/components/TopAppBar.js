@@ -1,11 +1,12 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ButtonMenu from 'src/elements/ButtonMenu';
-import Header from 'src/blocks/Header';
+import DivTopAppBar from 'src/elements/DivTopAppBar';
 import SiteTitle from 'src/components/SiteTitle';
-import Hamburger from 'src/components/Hamburger';
+import SvgHamburger from 'src/elements/SvgHamburger';
+import Header from 'src/elements/Header';
+import NavTop from 'src/elements/NavTop';
 
 import {colour} from 'src/utils/colorScheme';
 
@@ -54,13 +55,69 @@ const TopAppBar = ({currentPage}) => {
     };
   }, []);
 
+  const [hidden, setHidden] = useState(true);
+
+  const useOnClickOutside = (ref, handler) => {
+    useEffect(() => {
+      const listener = event => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+        handler(event);
+      };
+      document.addEventListener('mousedown', listener);
+      return () => {
+        document.removeEventListener('mousedown', listener);
+      };
+    }, [ref, handler]);
+  };
+
+  const node = useRef();
+  useOnClickOutside(node, () => setHidden(true));
+
   return (
-    <Header hide={!show} show={show}>
-      <ButtonMenu currentPage={currentPage}>
-        <Hamburger />
-      </ButtonMenu>
-      <SiteTitleInWhite />
-    </Header>
+    <DivTopAppBar hide={!show} show={show}>
+      <NavTop>
+        <NavTop.Button
+          aria-controls="navigation-drawer"
+          aria-expanded={!hidden}
+          currentPage={currentPage}
+          onClick={() => setHidden(!hidden)}
+          type="button"
+        >
+          <SvgHamburger />
+        </NavTop.Button>
+        <NavTop.Ul
+          data-testid="nav-menu"
+          hidden={hidden}
+          id="navigation-drawer"
+          ref={node}
+        >
+          <li>About</li>
+          <li>
+            <a>Byodo-in</a> (coming soon)
+          </li>
+          <li>
+            <a>Daisen-in</a> (coming soon)
+          </li>
+          <li>
+            <a href="kohoan">Koho-an</a>
+          </li>
+          <li>
+            <a>Osawa Pond</a> (coming soon)
+          </li>
+          <li>
+            <a href="ryoanji">Ryoan-ji</a>
+          </li>
+          <li>
+            <a>Saiho-ji</a> (coming soon)
+          </li>
+        </NavTop.Ul>
+      </NavTop>
+      <Header>
+        <SiteTitleInWhite />
+      </Header>
+    </DivTopAppBar>
   );
 };
 

@@ -1,11 +1,40 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render} from '@testing-library/react';
 
-import ButtonMenu from './ButtonMenu';
+import NavTop from './NavTop';
 
-describe('renders UI correctly', () => {
+const mockProps = {};
+
+// describe('Props work as intended', () => {
+//   test('testProp', () => {
+//     render(<NavTop testProp data-testid="NavTop" />);
+//     expect(screen.getByTestId('NavTop')).toHaveStyle(`display: inline-block`);
+//   });
+// });
+
+describe('NavTop', () => {
+  test('renders UI correctly', () => {
+    const {container} = render(<NavTop {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      <div>
+        <nav
+          class="c0"
+        />
+      </div>
+    `);
+  });
+});
+
+describe('NavTop.Button renders UI correctly', () => {
   test('when currentPage is ryoanji', () => {
-    const {container} = render(<ButtonMenu currentPage="ryoanji" />);
+    const {container} = render(<NavTop.Button currentPage="ryoanji" />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 48px;
@@ -55,14 +84,13 @@ describe('renders UI correctly', () => {
       <div>
         <button
           class="c0"
-          type="button"
         />
       </div>
     `);
   });
 
   test('when currentPage is kohoan', () => {
-    const {container} = render(<ButtonMenu currentPage="kohoan" />);
+    const {container} = render(<NavTop.Button currentPage="kohoan" />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         height: 48px;
@@ -112,7 +140,38 @@ describe('renders UI correctly', () => {
       <div>
         <button
           class="c0"
-          type="button"
+        />
+      </div>
+    `);
+  });
+});
+
+describe('NavTop.Ul', () => {
+  test('renders UI correctly', () => {
+    const {container} = render(<NavTop.Ul {...mockProps} />);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        background-color: hsla(193,50%,26%,0.9);
+        color: rgb(238,238,238);
+        height: 85vh;
+        list-style: none;
+        max-width: 320px;
+        position: fixed;
+        top: 60px;
+        width: 85vw;
+        z-index: 5;
+      }
+
+      .c0 a,
+      .c0 a:visited {
+        color: rgb(238,238,238);
+        -webkit-text-decoration: none;
+        text-decoration: none;
+      }
+
+      <div>
+        <ul
+          class="c0"
         />
       </div>
     `);

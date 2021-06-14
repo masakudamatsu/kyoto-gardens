@@ -9,13 +9,13 @@ const Svg = styled.svg`
   height: 100%; /* i.e. 48px set in ButtonMenu.js */
 `;
 
-const Hamburger = ({className}) => {
+const SvgHamburger = ({className}) => {
   return (
     <Svg
-      viewBox="0 0 25 48"
-      role="img"
       aria-labelledby="hamburger"
       className={className} // to change style with styled-components; see https://spectrum.chat/styled-components/general/styling-an-existing-component~e79a3695-db96-417f-809f-b4abed9f3c82?m=MTU1MTYzNzQyMTAyNA==
+      role="img"
+      viewBox="0 0 25 48"
     >
       <title id="hamburger">Menu</title>
       <text
@@ -29,6 +29,6 @@ const Hamburger = ({className}) => {
   );
 };
 
-Hamburger.propTypes = {};
+SvgHamburger.propTypes = {};
 
-export default Hamburger;
+export default SvgHamburger;

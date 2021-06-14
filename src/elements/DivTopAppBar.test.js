@@ -1,7 +1,7 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 
-import Header from './Header';
+import DivTopAppBar from './DivTopAppBar';
 
 import {animation} from 'src/utils/specAnimation';
 import {vspace} from 'src/utils/vspaceScheme';
@@ -11,7 +11,7 @@ const mockProps = {};
 
 describe('changes style by props values', () => {
   test('show', () => {
-    render(<Header show {...mockProps} data-testid="header" />);
+    render(<DivTopAppBar show {...mockProps} data-testid="header" />);
     expect(screen.getByTestId('header')).toHaveStyle(
       `
         transform: translate(0,0);
@@ -20,7 +20,7 @@ describe('changes style by props values', () => {
     );
   });
   test('hide', () => {
-    render(<Header hide {...mockProps} data-testid="header" />);
+    render(<DivTopAppBar hide {...mockProps} data-testid="header" />);
     expect(screen.getByTestId('header')).toHaveStyle(
       `
         transform: translate(0,-${remify(vspace.header.height.mobile)});
@@ -34,7 +34,7 @@ describe('changes style by props values', () => {
 
 describe('renders UI correctly', () => {
   test('Parent', () => {
-    const {container} = render(<Header {...mockProps} />);
+    const {container} = render(<DivTopAppBar {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
         background-color: hsla(193,50%,26%,0.9);
@@ -62,7 +62,7 @@ describe('renders UI correctly', () => {
       }
 
       <div>
-        <header
+        <div
           class="c0"
         />
       </div>
