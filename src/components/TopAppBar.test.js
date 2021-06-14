@@ -16,26 +16,39 @@ test('renders the site title in white', () => {
     `fill: ${colour.header.color}`,
   );
 });
-
-test('clicking the hamburger menu shows the navigation drawer', () => {
-  // setup
-  render(<TopAppBar {...mockProps} />);
-  // verify
-  expect(screen.getByTestId('nav-menu')).not.toBeVisible();
-  // execute
-  userEvent.click(screen.getByRole('button'));
-  //
-  expect(screen.getByTestId('nav-menu')).toBeVisible();
-});
-
-test('clicking outside the navigation drawer will close it', () => {
-  // setup
-  render(<TopAppBar {...mockProps} />);
-  userEvent.click(screen.getByRole('button'));
-  // execute
-  userEvent.click(document.body);
-  // verify
-  expect(screen.getByTestId('nav-menu')).not.toBeVisible();
+describe('navigation drawer', () => {
+  test('is initially not shown', () => {
+    // setup
+    render(<TopAppBar {...mockProps} />);
+    // verify
+    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
+  });
+  test('appears when clicking the hamburger menu button', () => {
+    // setup
+    render(<TopAppBar {...mockProps} />);
+    // execute
+    userEvent.click(screen.getByRole('button'));
+    // verify
+    expect(screen.getByTestId('nav-menu')).toBeVisible();
+  });
+  test('disappears after clicking again the hamburger menu button', () => {
+    // setup
+    render(<TopAppBar {...mockProps} />);
+    userEvent.click(screen.getByRole('button'));
+    // execute
+    userEvent.click(screen.getByRole('button'));
+    // verify
+    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
+  });
+  test('disappears when clicking outside it', () => {
+    // setup
+    render(<TopAppBar {...mockProps} />);
+    userEvent.click(screen.getByRole('button'));
+    // execute
+    userEvent.click(document.body);
+    // verify
+    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
+  });
 });
 
 test('is accessible', async () => {

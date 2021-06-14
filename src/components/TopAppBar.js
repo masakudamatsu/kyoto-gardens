@@ -1,6 +1,11 @@
 import {useEffect, useRef, useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
 
 import DivTopAppBar from 'src/elements/DivTopAppBar';
 import SiteTitle from 'src/components/SiteTitle';
@@ -15,6 +20,8 @@ const SiteTitleInWhite = styled(SiteTitle)`
 `;
 
 const TopAppBar = ({currentPage}) => {
+  // Hide/Show the top app bar when scrolling down/up
+
   const [show, setShow] = useState(true);
 
   useEffect(() => {
@@ -55,7 +62,38 @@ const TopAppBar = ({currentPage}) => {
     };
   }, []);
 
-  const [hidden, setHidden] = useState(true);
+  // Toggle the modal navigation drawer
+  // cf. https://github.com/willmcpo/body-scroll-lock#reactes6-with-refs
+
+  const [hidden, setHidden] = useState(() => {
+    return true;
+  });
+  const navtop = useRef();
+
+  const showModalDrawer = () => {
+    setHidden(false);
+    disableBodyScroll(navtop);
+  };
+  const hideModalDrawer = () => {
+    setHidden(true);
+    enableBodyScroll(navtop);
+  };
+  const toggleDrawer = event => {
+    if (hidden) {
+      showModalDrawer();
+    } else {
+      hideModalDrawer();
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, []); // not sure if we need this, though
+
+  // Dismiss the drawer when clicking outside it
+  // cf. https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/#close-the-menu-by-clicking-outside-of-it
 
   const useOnClickOutside = (ref, handler) => {
     useEffect(() => {
@@ -72,17 +110,16 @@ const TopAppBar = ({currentPage}) => {
     }, [ref, handler]);
   };
 
-  const node = useRef();
-  useOnClickOutside(node, () => setHidden(true));
+  useOnClickOutside(navtop, hideModalDrawer);
 
   return (
     <DivTopAppBar hide={!show} show={show}>
-      <NavTop>
+      <NavTop ref={navtop}>
         <NavTop.Button
           aria-controls="navigation-drawer"
           aria-expanded={!hidden}
           currentPage={currentPage}
-          onClick={() => setHidden(!hidden)}
+          onClick={toggleDrawer}
           type="button"
         >
           <SvgHamburger />
@@ -91,7 +128,6 @@ const TopAppBar = ({currentPage}) => {
           data-testid="nav-menu"
           hidden={hidden}
           id="navigation-drawer"
-          ref={node}
         >
           <li>About</li>
           <li>
