@@ -5,10 +5,10 @@ const GlobalStyle = createGlobalStyle`
 /* Self-hosted fonts */
 @font-face {
   font-family: 'Reforma 1918';
-  src: url('Reforma1918/Reforma1918-Blanca.woff2') format('woff2'), /* /* Super Modern Browsers */
-       url('Reforma1918/Reforma1918-Blanca.woff') format('woff'), /* Modern Browsers */
-       url('Reforma1918/Reforma1918-Blanca.eot') format('woff'),
-       url('Reforma1918/Reforma1918-Blanca.ttf') format('truetype');	 /* Safari, Android, iOS */
+  src: url('fonts/Reforma1918-Blanca.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('fonts/Reforma1918-Blanca.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Reforma1918-Blanca.eot') format('woff'),
+       url('fonts/Reforma1918-Blanca.ttf') format('truetype');	 /* Safari, Android, iOS */
   font-style: normal;
   font-weight: 300;
   text-rendering: optimizeLegibility;
@@ -17,10 +17,10 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: 'Reforma 1918';
-  src: url('Reforma1918/Reforma1918-Gris.woff2') format('woff2'), /* /* Super Modern Browsers */
-       url('Reforma1918/Reforma1918-Gris.woff') format('woff'), /* Modern Browsers */
-       url('Reforma1918/Reforma1918-Gris.eot') format('woff'),
-       url('Reforma1918/Reforma1918-Gris.ttf') format('truetype');	 /* Safari, Android, iOS */
+  src: url('fonts/Reforma1918-Gris.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('fonts/Reforma1918-Gris.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Reforma1918-Gris.eot') format('woff'),
+       url('fonts/Reforma1918-Gris.ttf') format('truetype');	 /* Safari, Android, iOS */
   font-style: normal;
   font-weight: 500;
   text-rendering: optimizeLegibility;
@@ -29,10 +29,10 @@ const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family: 'Reforma 1918';
-  src: url('Reforma1918/Reforma1918-GrisItalica.woff2') format('woff2'), /* /* Super Modern Browsers */
-       url('Reforma1918/Reforma1918-GrisItalica.woff') format('woff'), /* Modern Browsers */
-       url('Reforma1918/Reforma1918-GrisItalica.eot') format('woff'),
-       url('Reforma1918/Reforma1918-GrisItalica.ttf') format('truetype');	 /* Safari, Android, iOS */
+  src: url('fonts/Reforma1918-GrisItalica.woff2') format('woff2'), /* /* Super Modern Browsers */
+       url('fonts/Reforma1918-GrisItalica.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Reforma1918-GrisItalica.eot') format('woff'),
+       url('fonts/Reforma1918-GrisItalica.ttf') format('truetype');	 /* Safari, Android, iOS */
   font-style: italic;
   font-weight: 500;
   text-rendering: optimizeLegibility;
