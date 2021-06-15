@@ -6,21 +6,9 @@ import {
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 
+import NavigationItem from 'src/components/NavigationItem';
 import NavTop from 'src/elements/NavTop';
 import SvgHamburger from 'src/elements/SvgHamburger';
-
-const ListItem = ({currentPage, pageName, textContent}) => {
-  return (
-    <NavTop.Li currentPage={currentPage} pageName={pageName}>
-      {currentPage === pageName ? (
-        /* eslint-disable-next-line */
-        <a>{textContent}</a>
-      ) : (
-        <a href={pageName}>{textContent}</a>
-      )}
-    </NavTop.Li>
-  );
-};
 
 const Navigation = ({currentPage}) => {
   // Toggle the modal navigation drawer
@@ -85,32 +73,32 @@ const Navigation = ({currentPage}) => {
         <SvgHamburger />
       </NavTop.Button>
       <NavTop.Ul data-testid="nav-menu" hidden={hidden} id="navigation-drawer">
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="byodoin"
           textContent="Byodo-in"
         />
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="daisenin"
           textContent="Daisen-in"
         />
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="kohoan"
           textContent="Koho-an"
         />
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="osawa-pond"
           textContent="Osawa Pond"
         />
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="ryoanji"
           textContent="Ryoan-ji"
         />
-        <ListItem
+        <NavigationItem
           currentPage={currentPage}
           pageName="saihoji"
           textContent="Saiho-ji"
