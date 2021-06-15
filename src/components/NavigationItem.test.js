@@ -60,9 +60,25 @@ test('renders correctly', () => {
       background-color: transparent;
     }
 
+    .c1 {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .c1 span {
+      -webkit-animation: ePEfzm 600ms linear;
+      animation: ePEfzm 600ms linear;
+      background-color: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      position: absolute;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+    }
+
     <div>
       <li
-        class="c0"
+        class="c0 c1"
       >
         <a>
           Ryoan-ji
