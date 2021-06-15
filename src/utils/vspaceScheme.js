@@ -93,6 +93,14 @@ export const vspace = {
       desktop: xHeight('desktop'),
     },
   },
+  topAppBar: {
+    top: {
+      mobile: font.topAppBar.capHeight.mobile,
+    },
+    bottom: {
+      mobile: font.topAppBar.capHeight.mobile,
+    },
+  },
 };
 
 export const spaceToTrim = {
@@ -283,6 +291,14 @@ export const spaceToTrim = {
     //     desktop: 5.5, // 17.5 minus article.bottom.desktop
     //   },
     // },
+  },
+  topAppBar: {
+    top: {
+      mobile: 7.5,
+    },
+    bottom: {
+      mobile: 6, // 13.5 - topAppBar.top.mobile
+    },
   },
 };
 

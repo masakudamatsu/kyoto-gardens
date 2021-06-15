@@ -19,6 +19,19 @@ const SiteTitleInWhite = styled(SiteTitle)`
   fill: ${colour.header.color};
 `;
 
+const ListItem = ({currentPage, pageName, textContent}) => {
+  return (
+    <NavTop.Li currentPage={currentPage} pageName={pageName}>
+      {currentPage === pageName ? (
+        /* eslint-disable-next-line */
+        <a>{textContent}</a>
+      ) : (
+        <a href={pageName}>{textContent}</a>
+      )}
+    </NavTop.Li>
+  );
+};
+
 const TopAppBar = ({currentPage}) => {
   // Hide/Show the top app bar when scrolling down/up
 
@@ -129,25 +142,37 @@ const TopAppBar = ({currentPage}) => {
           hidden={hidden}
           id="navigation-drawer"
         >
-          <li>About</li>
-          <li>
-            <a>Byodo-in</a> (coming soon)
-          </li>
-          <li>
-            <a>Daisen-in</a> (coming soon)
-          </li>
-          <li>
-            <a href="kohoan">Koho-an</a>
-          </li>
-          <li>
-            <a>Osawa Pond</a> (coming soon)
-          </li>
-          <li>
-            <a href="ryoanji">Ryoan-ji</a>
-          </li>
-          <li>
-            <a>Saiho-ji</a> (coming soon)
-          </li>
+          <ListItem
+            currentPage={currentPage}
+            pageName="byodoin"
+            textContent="Byodo-in"
+          />
+          <ListItem
+            currentPage={currentPage}
+            pageName="daisenin"
+            textContent="Daisen-in"
+          />
+          <ListItem
+            currentPage={currentPage}
+            pageName="kohoan"
+            textContent="Koho-an"
+          />
+          <ListItem
+            currentPage={currentPage}
+            pageName="osawa-pond"
+            textContent="Osawa Pond"
+          />
+          <ListItem
+            currentPage={currentPage}
+            pageName="ryoanji"
+            textContent="Ryoan-ji"
+          />
+          <ListItem
+            currentPage={currentPage}
+            pageName="saihoji"
+            textContent="Saiho-ji"
+          />
+          <NavTop.Li>About</NavTop.Li>
         </NavTop.Ul>
       </NavTop>
       <Header>

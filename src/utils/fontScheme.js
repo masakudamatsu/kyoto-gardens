@@ -317,6 +317,15 @@ export const font = {
       wordSpacing: '-0.05em',
     },
   },
+  topAppBar: {
+    family: reforma1918.fontFamily,
+    metrics: reforma1918.fontMetrics,
+    capHeight: {
+      mobile: 16,
+      desktop: 16,
+    },
+    weight: 300,
+  },
 };
 
 // Helper functions
@@ -333,6 +342,18 @@ export function makeXHeightToBe(xHeight, fontMetrics) {
   return xHeightToBe(xHeight, fontMetrics);
 }
 
+export function makeCapHeightToBe(capHeight, fontMetrics) {
+  if (typeof capHeight !== 'number') {
+    throw new Error(
+      `makeCapHeightToBe() received capHeight as ${typeof capHeight}, not as number`,
+    );
+  }
+  if (!fontMetrics) {
+    throw new Error(`makeCapHeightToBe() received no fontMetrics`);
+  }
+  return capHeightToBe(capHeight, fontMetrics);
+}
+
 export function makeLineHeightRatioToBe(lineHeightRatio, fontMetrics) {
   if (!fontMetrics.unitsPerEm) {
     throw new Error(`makeLineHeightRatioToBe() received no fontMetrics`);
@@ -345,6 +366,11 @@ export function makeLineHeightRatioToBe(lineHeightRatio, fontMetrics) {
   );
 }
 
+function capHeightToBe(capHeight, fontMetrics) {
+  const fontSizeToCapHeightRatio =
+    fontMetrics.unitsPerEm / fontMetrics.capHeight;
+  return capHeight * fontSizeToCapHeightRatio;
+}
 function xHeightToBe(xHeight, fontMetrics) {
   const fontSizeToXHeightRatio = fontMetrics.unitsPerEm / fontMetrics.xHeight;
   return xHeight * fontSizeToXHeightRatio;
