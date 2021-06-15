@@ -154,6 +154,7 @@ describe('NavTop.Ul', () => {
         background-color: hsla(193,50%,26%,0.9);
         color: rgb(238,238,238);
         height: 85vh;
+        left: 0;
         list-style: none;
         max-width: 320px;
         position: fixed;

@@ -57,6 +57,7 @@ NavTop.Ul = styled.ul`
   background-color: ${colour.header.background};
   color: ${colour.header.color};
   height: 85vh;
+  left: 0;
   list-style: none;
   max-width: 320px;
   position: fixed;
