@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import DivTopAppBar from 'src/elements/DivTopAppBar';
 import SiteTitle from 'src/components/SiteTitle';
-import Navigation from 'src/components/Navigation';
 import Header from 'src/elements/Header';
 
 import {colour} from 'src/utils/colorScheme';
@@ -13,7 +12,7 @@ const SiteTitleInWhite = styled(SiteTitle)`
   fill: ${colour.header.color};
 `;
 
-const TopAppBar = ({currentPage}) => {
+const TopAppBar = ({navigation}) => {
   // Hide/Show the top app bar when scrolling down/up
 
   const [show, setShow] = useState(true);
@@ -58,7 +57,7 @@ const TopAppBar = ({currentPage}) => {
 
   return (
     <DivTopAppBar hide={!show} show={show}>
-      <Navigation currentPage={currentPage} />
+      {navigation}
       <Header>
         <SiteTitleInWhite />
       </Header>
@@ -67,7 +66,7 @@ const TopAppBar = ({currentPage}) => {
 };
 
 TopAppBar.propTypes = {
-  currentPage: PropTypes.string.isRequired,
+  navigation: PropTypes.element,
 };
 
 export default TopAppBar;

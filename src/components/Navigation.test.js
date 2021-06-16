@@ -7,98 +7,73 @@ import Navigation from './Navigation';
 
 const mockProps = {
   currentPage: 'ryoanji',
+  navShown: false,
+  setNavShown: jest.fn().mockName('setNavShown'),
 };
-describe('hamburger menu button', () => {
-  test('is initially shown', () => {
-    // setup
+
+describe('renders the default UI correctly', () => {
+  test('shows the hamburger menu button', () => {
     render(<Navigation {...mockProps} />);
-    // verify
     expect(screen.getByRole('button', {name: 'Menu'})).toBeVisible();
   });
-  test('is replaced with the back button when clicked', () => {
-    // setup
+  test('hides the back button', () => {
+    render(<Navigation {...mockProps} />);
+    expect(
+      screen.queryByRole('button', {name: 'Back to main content'}),
+    ).not.toBeInTheDocument();
+  });
+  test('hides the navigation bar', () => {
+    render(<Navigation {...mockProps} />);
+    expect(screen.queryByTestId('nav-menu')).not.toBeVisible();
+  });
+});
+
+describe('calls setNavShown(true) when', () => {
+  test('clicking the hamburger menu button', () => {
     render(<Navigation {...mockProps} />);
     // execute
     userEvent.click(screen.getByRole('button', {name: 'Menu'}));
     // verify
+    expect(mockProps.setNavShown).toHaveBeenCalledTimes(1);
+    expect(mockProps.setNavShown).toHaveBeenCalledWith(true);
+  });
+});
+
+describe('changes UI with the navShown prop', () => {
+  test('hides the hamburger menu button', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
     expect(
       screen.queryByRole('button', {name: 'Menu'}),
     ).not.toBeInTheDocument();
   });
-  test('is shown again after clicking the back button', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
-    // execute
-    userEvent.click(screen.getByRole('button', {name: 'Back to main content'}));
-    // verify
-    expect(screen.getByRole('button', {name: 'Menu'})).toBeVisible();
-  });
-});
-describe('back button', () => {
-  test('is not initially shown', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    // verify
-    expect(
-      screen.queryByRole('button', {name: 'Back to main content'}),
-    ).not.toBeInTheDocument();
-  });
-  test('is shown when the hamburger menu button is clicked', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    // execute
-    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
-    // verify
+  test('shows the back button', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
     expect(
       screen.getByRole('button', {name: 'Back to main content'}),
     ).toBeVisible();
   });
-  test('is not shown again after clicking the back button', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
-    // execute
-    userEvent.click(screen.getByRole('button', {name: 'Back to main content'}));
-    // verify
-    expect(
-      screen.queryByRole('button', {name: 'Back to main content'}),
-    ).not.toBeInTheDocument();
+  test('shows the navigation bar', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
+    expect(screen.getByTestId('nav-menu')).toBeVisible();
   });
 });
 
-describe('navigation drawer', () => {
-  test('is initially not shown', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    // verify
-    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
-  });
-  test('appears when clicking the hamburger menu button', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
+describe('calls setNavShown(false) when', () => {
+  test('clicking the back button', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
     // execute
-    userEvent.click(screen.getByRole('button'));
+    userEvent.click(screen.getByRole('button', {name: 'Back to main content'}));
     // verify
-    expect(screen.getByTestId('nav-menu')).toBeVisible();
+    expect(mockProps.setNavShown).toHaveBeenCalledTimes(1);
+    expect(mockProps.setNavShown).toHaveBeenCalledWith(false);
   });
-  test('disappears after clicking again the hamburger menu button', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    userEvent.click(screen.getByRole('button'));
-    // execute
-    userEvent.click(screen.getByRole('button'));
-    // verify
-    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
-  });
-  test('disappears when clicking outside it', () => {
-    // setup
-    render(<Navigation {...mockProps} />);
-    userEvent.click(screen.getByRole('button'));
+  test('clicking outside the navigation drawer', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
     // execute
     userEvent.click(document.body);
     // verify
-    expect(screen.getByTestId('nav-menu')).not.toBeVisible();
+    expect(mockProps.setNavShown).toHaveBeenCalledTimes(1);
+    expect(mockProps.setNavShown).toHaveBeenCalledWith(false);
   });
 });
 

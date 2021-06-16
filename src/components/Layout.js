@@ -1,15 +1,27 @@
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 
-import TopAppBar from 'src/components/TopAppBar';
 import Footer from 'src/blocks/Footer';
+import Navigation from 'src/components/Navigation';
 import Timeline from 'src/components/Timeline';
+import TopAppBar from 'src/components/TopAppBar';
 
 import {footer} from 'src/utils/metadata';
 
 export default function Layout({children, currentPage}) {
+  const [navShown, setNavShown] = useState(false);
+
   return (
     <>
-      <TopAppBar currentPage={currentPage} />
+      <TopAppBar
+        navigation={
+          <Navigation
+            currentPage={currentPage}
+            navShown={navShown}
+            setNavShown={setNavShown}
+          />
+        }
+      />
       {children}
       <Footer>
         <Footer.TopBackground>

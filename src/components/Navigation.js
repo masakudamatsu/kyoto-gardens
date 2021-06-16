@@ -11,25 +11,23 @@ import NavTop from 'src/elements/NavTop';
 import SvgHamburger from 'src/components/SvgHamburger';
 import SvgBackButton from 'src/components/SvgBackButton';
 
-const Navigation = ({currentPage}) => {
+const Navigation = ({currentPage, navShown, setNavShown}) => {
   // Toggle the modal navigation drawer
   // cf. https://github.com/willmcpo/body-scroll-lock#reactes6-with-refs
 
-  const [hidden, setHidden] = useState(() => {
-    return true;
-  });
+  const [hidden, setHidden] = useState(true);
   const navtop = useRef();
 
   const showModalDrawer = () => {
-    setHidden(false);
+    setNavShown(true);
     disableBodyScroll(navtop);
   };
   const hideModalDrawer = () => {
-    setHidden(true);
+    setNavShown(false);
     enableBodyScroll(navtop);
   };
   const toggleDrawer = event => {
-    if (hidden) {
+    if (!navShown) {
       showModalDrawer();
     } else {
       hideModalDrawer();
@@ -66,14 +64,18 @@ const Navigation = ({currentPage}) => {
     <NavTop ref={navtop}>
       <NavTop.Button
         aria-controls="navigation-drawer"
-        aria-expanded={!hidden}
+        aria-expanded={navShown}
         currentPage={currentPage}
         onClick={toggleDrawer}
         type="button"
       >
-        {hidden ? <SvgHamburger /> : <SvgBackButton />}
+        {!navShown ? <SvgHamburger /> : <SvgBackButton />}
       </NavTop.Button>
-      <NavTop.Ul data-testid="nav-menu" hidden={hidden} id="navigation-drawer">
+      <NavTop.Ul
+        data-testid="nav-menu"
+        hidden={!navShown}
+        id="navigation-drawer"
+      >
         <NavigationItem
           currentPage={currentPage}
           pageName="byodoin"
@@ -112,6 +114,8 @@ const Navigation = ({currentPage}) => {
 
 Navigation.propTypes = {
   currentPage: PropTypes.string.isRequired,
+  navShown: PropTypes.bool,
+  setNavShown: PropTypes.func,
 };
 
 export default Navigation;

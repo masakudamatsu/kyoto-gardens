@@ -6,9 +6,7 @@ import {axe} from 'jest-axe';
 import TopAppBar from './TopAppBar';
 import {colour} from 'src/utils/colorScheme';
 
-const mockProps = {
-  currentPage: 'ryoanji',
-};
+const mockProps = {};
 
 test('renders the site title in white', () => {
   render(<TopAppBar {...mockProps} />);
