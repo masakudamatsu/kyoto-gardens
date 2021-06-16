@@ -8,7 +8,8 @@ import {
 
 import NavigationItem from 'src/components/NavigationItem';
 import NavTop from 'src/elements/NavTop';
-import SvgHamburger from 'src/elements/SvgHamburger';
+import SvgHamburger from 'src/components/SvgHamburger';
+import SvgBackButton from 'src/components/SvgBackButton';
 
 const Navigation = ({currentPage}) => {
   // Toggle the modal navigation drawer
@@ -70,7 +71,7 @@ const Navigation = ({currentPage}) => {
         onClick={toggleDrawer}
         type="button"
       >
-        <SvgHamburger />
+        {hidden ? <SvgHamburger /> : <SvgBackButton />}
       </NavTop.Button>
       <NavTop.Ul data-testid="nav-menu" hidden={hidden} id="navigation-drawer">
         <NavigationItem

@@ -8,6 +8,64 @@ import Navigation from './Navigation';
 const mockProps = {
   currentPage: 'ryoanji',
 };
+describe('hamburger menu button', () => {
+  test('is initially shown', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    // verify
+    expect(screen.getByRole('button', {name: 'Menu'})).toBeVisible();
+  });
+  test('is replaced with the back button when clicked', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    // execute
+    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
+    // verify
+    expect(
+      screen.queryByRole('button', {name: 'Menu'}),
+    ).not.toBeInTheDocument();
+  });
+  test('is shown again after clicking the back button', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
+    // execute
+    userEvent.click(screen.getByRole('button', {name: 'Back to main content'}));
+    // verify
+    expect(screen.getByRole('button', {name: 'Menu'})).toBeVisible();
+  });
+});
+describe('back button', () => {
+  test('is not initially shown', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    // verify
+    expect(
+      screen.queryByRole('button', {name: 'Back to main content'}),
+    ).not.toBeInTheDocument();
+  });
+  test('is shown when the hamburger menu button is clicked', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    // execute
+    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
+    // verify
+    expect(
+      screen.getByRole('button', {name: 'Back to main content'}),
+    ).toBeVisible();
+  });
+  test('is not shown again after clicking the back button', () => {
+    // setup
+    render(<Navigation {...mockProps} />);
+    userEvent.click(screen.getByRole('button', {name: 'Menu'}));
+    // execute
+    userEvent.click(screen.getByRole('button', {name: 'Back to main content'}));
+    // verify
+    expect(
+      screen.queryByRole('button', {name: 'Back to main content'}),
+    ).not.toBeInTheDocument();
+  });
+});
 
 describe('navigation drawer', () => {
   test('is initially not shown', () => {
