@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {animation} from 'src/utils/specAnimation';
-import {colour} from 'src/utils/colorScheme';
-import remify from 'src/utils/remify';
 import {breakpoint} from 'src/utils/hspaceScheme';
+import {colour} from 'src/utils/colorScheme';
+import {elevation} from 'src/utils/elevationScheme';
+import remify from 'src/utils/remify';
 import {vspace} from 'src/utils/vspaceScheme';
 
 const cssAnimation = {
@@ -36,7 +37,7 @@ const DivTopAppBar = styled.div`
   justify-content: center;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: ${elevation.topAppBar};
 
   ${props => props.show && cssAnimation.show}
   ${props => props.hide && cssAnimation.hide}

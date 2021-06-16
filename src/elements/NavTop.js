@@ -63,7 +63,6 @@ NavTop.Ul = styled.ul`
   position: fixed;
   top: ${vspace.header.height.mobile}px;
   width: 85vw;
-  z-index: 5;
   & a,
   & a:visited {
     color: ${colour.header.color};

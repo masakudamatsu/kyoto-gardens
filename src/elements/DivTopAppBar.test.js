@@ -52,7 +52,7 @@ describe('renders UI correctly', () => {
         justify-content: center;
         position: fixed;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
       }
 
       @media only screen and (min-width:728px) {

@@ -160,7 +160,6 @@ describe('NavTop.Ul', () => {
         position: fixed;
         top: 60px;
         width: 85vw;
-        z-index: 5;
       }
 
       .c0 a,

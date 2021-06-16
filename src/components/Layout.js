@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
 
+import DivScrim from 'src/elements/DivScrim';
 import Footer from 'src/blocks/Footer';
 import Navigation from 'src/components/Navigation';
 import Timeline from 'src/components/Timeline';
@@ -22,6 +23,7 @@ export default function Layout({children, currentPage}) {
           />
         }
       />
+      {navShown ? <DivScrim /> : null}
       {children}
       <Footer>
         <Footer.TopBackground>
