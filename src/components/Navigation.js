@@ -20,11 +20,11 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
 
   const showModalDrawer = () => {
     setNavShown(true);
-    disableBodyScroll(navtop);
+    disableBodyScroll(navtop.current);
   };
   const hideModalDrawer = () => {
     setNavShown(false);
-    enableBodyScroll(navtop);
+    enableBodyScroll(navtop.current);
   };
   const toggleDrawer = event => {
     if (!navShown) {
