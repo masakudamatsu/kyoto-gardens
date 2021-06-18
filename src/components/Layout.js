@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
+import FocusLock from 'react-focus-lock';
 
 import DivScrim from 'src/elements/DivScrim';
 import Footer from 'src/blocks/Footer';
@@ -14,15 +15,17 @@ export default function Layout({children, currentPage}) {
 
   return (
     <>
-      <TopAppBar
-        navigation={
-          <Navigation
-            currentPage={currentPage}
-            navShown={navShown}
-            setNavShown={setNavShown}
-          />
-        }
-      />
+      <FocusLock disabled={!navShown}>
+        <TopAppBar
+          navigation={
+            <Navigation
+              currentPage={currentPage}
+              navShown={navShown}
+              setNavShown={setNavShown}
+            />
+          }
+        />
+      </FocusLock>
       {navShown ? <DivScrim /> : null}
       {children}
       <Footer>
