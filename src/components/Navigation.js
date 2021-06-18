@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {
   disableBodyScroll,
@@ -15,7 +15,6 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
   // Toggle the modal navigation drawer
   // cf. https://github.com/willmcpo/body-scroll-lock#reactes6-with-refs
 
-  const [hidden, setHidden] = useState(true);
   const navtop = useRef();
 
   const showModalDrawer = () => {
