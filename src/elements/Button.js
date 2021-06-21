@@ -16,8 +16,21 @@ const Button = styled.button`
   &:active {
     text-shadow: none;
   }
+
+  /* Positioning the two Button.SvgSurface in the same spot */
+  /* (not sure why we need flexbox...) */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  /* Attach the second Button.SvgSurface on the back of the button */
+  transform: ${({navShown}) => navShown && `rotateY(180deg)`};
+  transform-style: preserve-3d;
 `;
-Button.propTypes = {};
+Button.propTypes = {
+  navShown: PropTypes.bool,
+};
 
 Button.DivFrame = styled.div`
   /* minimum touch target size: https://web.dev/accessible-tap-targets/ */
@@ -64,6 +77,15 @@ Button.SvgSurface = styled.svg`
   border-radius: 4px;
   height: 100%;
   width: 100%;
+  /* Positioning the two Button.SvgSurface in the same spot */
+  position: absolute;
+  /* Attach the second Button.SvgSurface on the back of the button */
+  backface-visibility: hidden;
+  transform: ${({backside}) =>
+    backside ? `rotateY(180deg)` : `rotateY(0deg)`};
 `;
+Button.SvgSurface.propTypes = {
+  backside: PropTypes.bool,
+};
 
 export default Button;

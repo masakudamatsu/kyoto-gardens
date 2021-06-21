@@ -7,6 +7,7 @@ const SvgBackButton = ({className}) => {
   return (
     <Button.SvgSurface
       aria-labelledby="back-button"
+      backside
       className={className} // to change style with styled-components; see https://spectrum.chat/styled-components/general/styling-an-existing-component~e79a3695-db96-417f-809f-b4abed9f3c82?m=MTU1MTYzNzQyMTAyNA==
       role="img"
       viewBox="0 0 25 48"

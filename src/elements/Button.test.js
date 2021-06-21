@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 
 import Button from './Button';
 
@@ -17,6 +17,22 @@ describe('Button renders UI correctly', () => {
       .c0 {
         height: 100%;
         width: 100%;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
       }
 
       .c0:focus,
@@ -34,6 +50,12 @@ describe('Button renders UI correctly', () => {
           class="c0"
         />
       </div>
+    `);
+  });
+  test('with navShown prop', () => {
+    render(<Button navShown data-testid="button" />);
+    expect(screen.getByTestId('button')).toHaveStyle(`
+      transform: rotateY(180deg)
     `);
   });
 });
@@ -106,9 +128,10 @@ describe('Button.DivFrame renders UI correctly', () => {
   });
 });
 
-test('Button.SvgSurface renders UI correctly', () => {
-  const {container} = render(<Button.SvgSurface currentPage="ryoanji" />);
-  expect(container).toMatchInlineSnapshot(`
+describe('Button.SvgSurface renders UI correctly', () => {
+  test('without any prop', () => {
+    const {container} = render(<Button.SvgSurface />);
+    expect(container).toMatchInlineSnapshot(`
     .c1 {
       font-family: 'Reforma 1918',sans-serif;
       font-size: 33px;
@@ -119,6 +142,12 @@ test('Button.SvgSurface renders UI correctly', () => {
       border-radius: 4px;
       height: 100%;
       width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
     }
 
     .Button-sc-6yjgzo-0 .c0 {
@@ -140,4 +169,11 @@ test('Button.SvgSurface renders UI correctly', () => {
       />
     </div>
   `);
+  });
+  test('with backside prop', () => {
+    render(<Button.SvgSurface data-testid="backside" backside />);
+    expect(screen.getByTestId('backside')).toHaveStyle(`
+      transform: rotateY(180deg)
+    `);
+  });
 });

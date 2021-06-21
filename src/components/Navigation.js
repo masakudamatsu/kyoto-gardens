@@ -66,10 +66,12 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
         <Button
           aria-controls="navigation-drawer"
           aria-expanded={navShown}
+          navShown={navShown}
           onClick={toggleDrawer}
           type="button"
         >
-          {!navShown ? <SvgHamburger /> : <SvgBackButton />}
+          <SvgHamburger />
+          <SvgBackButton />
         </Button>
       </Button.DivFrame>
       <NavTop.Ul
