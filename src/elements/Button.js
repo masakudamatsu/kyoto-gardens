@@ -58,6 +58,12 @@ Button.SvgSurface = styled.svg`
   ${Button}:active & {
     fill: ${colour.buttonMenu.default};
   }
+  /* Add the background and border */
+  background-color: ${colour.header.background};
+  border: 1px solid ${colour.buttonMenu.border};
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
 `;
 
 export default Button;

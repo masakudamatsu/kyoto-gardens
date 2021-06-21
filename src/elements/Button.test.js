@@ -114,6 +114,11 @@ test('Button.SvgSurface renders UI correctly', () => {
       font-size: 33px;
       font-weight: 300;
       height: 100%;
+      background-color: hsla(193,50%,26%,0.9);
+      border: 1px solid;
+      border-radius: 4px;
+      height: 100%;
+      width: 100%;
     }
 
     .Button-sc-6yjgzo-0 .c0 {
