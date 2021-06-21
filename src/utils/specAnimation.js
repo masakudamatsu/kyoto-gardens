@@ -9,4 +9,11 @@ export const animation = {
       easing: 'cubic-bezier(0.0,0.0,0.2,1)', // "Incoming elements are animated using decelerated easing, in which transitions begin at peak velocity (the fastest point in an element's movement) and end at rest." https://material.io/design/motion/speed.html#easing
     },
   },
+  navTop: {
+    duration: {
+      hide: '250ms',
+      show: '300ms',
+    },
+    easing: 'cubic-bezier(0, 0, 0.2, 1)',
+  },
 };

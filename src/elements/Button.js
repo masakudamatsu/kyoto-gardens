@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import {animation} from 'src/utils/specAnimation';
 import {breakpoint, hspace, sideMargin} from 'src/utils/hspaceScheme';
 import {colour} from 'src/utils/colorScheme';
 
@@ -27,6 +28,11 @@ const Button = styled.button`
   /* Attach the second Button.SvgSurface on the back of the button */
   transform: ${({navShown}) => navShown && `rotateY(180deg)`};
   transform-style: preserve-3d;
+
+  /* Animate the flipping of buttons */
+  transition-duration: ${({navShown}) =>
+    navShown ? animation.navTop.duration.show : animation.navTop.duration.hide};
+  transition-timing-function: ${animation.navTop.easing};
 `;
 Button.propTypes = {
   navShown: PropTypes.bool,
@@ -51,6 +57,10 @@ Button.DivFrame = styled.div`
       }px;
     }
   `}
+  /* Animate the flip of the button */
+  background-color: ${colour.buttonMenu.border};
+  border-radius: 4px;
+  perspective: 40rem; /* follow https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/ */
 `;
 Button.DivFrame.propTypes = {
   currentPage: PropTypes.string.isRequired,

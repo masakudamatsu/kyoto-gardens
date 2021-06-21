@@ -33,6 +33,10 @@ describe('Button renders UI correctly', () => {
         -webkit-transform-style: preserve-3d;
         -ms-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        -webkit-transition-duration: 250ms;
+        transition-duration: 250ms;
+        -webkit-transition-timing-function: cubic-bezier(0,0,0.2,1);
+        transition-timing-function: cubic-bezier(0,0,0.2,1);
       }
 
       .c0:focus,
@@ -57,6 +61,9 @@ describe('Button renders UI correctly', () => {
     expect(screen.getByTestId('button')).toHaveStyle(`
       transform: rotateY(180deg)
     `);
+    expect(screen.getByTestId('button')).toHaveStyle(`
+      transition-duration: 300ms
+    `);
   });
 });
 
@@ -72,6 +79,12 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 9.75px;
+        background-color: rgb(13,49,59);
+        border-radius: 4px;
+        -webkit-perspective: 40rem;
+        -moz-perspective: 40rem;
+        -ms-perspective: 40rem;
+        perspective: 40rem;
       }
 
       @media only screen and (min-width:31.6802rem) {
@@ -105,6 +118,12 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 5.5px;
+        background-color: rgb(13,49,59);
+        border-radius: 4px;
+        -webkit-perspective: 40rem;
+        -moz-perspective: 40rem;
+        -ms-perspective: 40rem;
+        perspective: 40rem;
       }
 
       @media only screen and (min-width:30.7948rem) {
