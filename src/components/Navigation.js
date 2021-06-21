@@ -6,6 +6,7 @@ import {
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 
+import Button from 'src/elements/Button';
 import NavigationItem from 'src/components/NavigationItem';
 import NavTop from 'src/elements/NavTop';
 import SvgHamburger from 'src/components/SvgHamburger';
@@ -61,15 +62,16 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
 
   return (
     <NavTop ref={navtop}>
-      <NavTop.Button
-        aria-controls="navigation-drawer"
-        aria-expanded={navShown}
-        currentPage={currentPage}
-        onClick={toggleDrawer}
-        type="button"
-      >
-        {!navShown ? <SvgHamburger /> : <SvgBackButton />}
-      </NavTop.Button>
+      <Button.DivFrame currentPage={currentPage}>
+        <Button
+          aria-controls="navigation-drawer"
+          aria-expanded={navShown}
+          onClick={toggleDrawer}
+          type="button"
+        >
+          {!navShown ? <SvgHamburger /> : <SvgBackButton />}
+        </Button>
+      </Button.DivFrame>
       <NavTop.Ul
         data-testid="nav-menu"
         hidden={!navShown}
