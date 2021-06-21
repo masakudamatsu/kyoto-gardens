@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {breakpoint, hspace, sideMargin} from 'src/utils/hspaceScheme';
+import {animation} from 'src/utils/specAnimation';
 import {colour} from 'src/utils/colorScheme';
 import {font, makeCapHeightToBe} from 'src/utils/fontScheme';
 import remify from 'src/utils/remify';
@@ -26,8 +26,14 @@ NavTop.Ul = styled.ul`
     color: ${colour.header.color};
     text-decoration: none;
   }
+  /* Animate the appearance/disappearance */
+  transform: ${({navShown}) =>
+    navShown ? `translateX(0)` : `translateX(-85vw)`};
+  ${animation.navTop.speed}
 `;
-NavTop.Ul.propTypes = {};
+NavTop.Ul.propTypes = {
+  navShown: PropTypes.bool,
+};
 
 NavTop.Li = styled.li`
   ${({currentPage, pageName}) =>

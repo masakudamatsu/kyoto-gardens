@@ -30,9 +30,7 @@ const Button = styled.button`
   transform-style: preserve-3d;
 
   /* Animate the flipping of buttons */
-  transition-duration: ${({navShown}) =>
-    navShown ? animation.navTop.duration.show : animation.navTop.duration.hide};
-  transition-timing-function: ${animation.navTop.easing};
+  ${animation.navTop.speed}
 `;
 Button.propTypes = {
   navShown: PropTypes.bool,

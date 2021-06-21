@@ -1,3 +1,5 @@
+import {css} from 'styled-components';
+
 export const animation = {
   header: {
     hide: {
@@ -10,10 +12,9 @@ export const animation = {
     },
   },
   navTop: {
-    duration: {
-      hide: '250ms',
-      show: '300ms',
-    },
-    easing: 'cubic-bezier(0, 0, 0.2, 1)',
+    speed: css`
+      transition-duration: ${({navShown}) => (navShown ? '300ms' : '250ms')};
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    `,
   },
 };

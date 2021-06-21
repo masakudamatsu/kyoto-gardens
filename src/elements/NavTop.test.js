@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 
 import NavTop from './NavTop';
 
@@ -32,8 +32,8 @@ describe('NavTop', () => {
   });
 });
 
-describe('NavTop.Ul', () => {
-  test('renders UI correctly', () => {
+describe('NavTop.Ul renders UI correctly', () => {
+  test('without any prop', () => {
     const {container} = render(<NavTop.Ul {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
@@ -46,6 +46,13 @@ describe('NavTop.Ul', () => {
         position: fixed;
         top: 60px;
         width: 85vw;
+        -webkit-transform: translateX(-85vw);
+        -ms-transform: translateX(-85vw);
+        transform: translateX(-85vw);
+        -webkit-transition-duration: 250ms;
+        transition-duration: 250ms;
+        -webkit-transition-timing-function: cubic-bezier(0,0,0.2,1);
+        transition-timing-function: cubic-bezier(0,0,0.2,1);
       }
 
       .c0 a,
@@ -61,5 +68,10 @@ describe('NavTop.Ul', () => {
         />
       </div>
     `);
+  });
+  test('with navShown prop', () => {
+    render(<NavTop.Ul {...mockProps} navShown data-testid="nav-menu" />);
+    expect(screen.getByTestId('nav-menu')).toHaveStyle(`
+      transform: translateX(0)`);
   });
 });

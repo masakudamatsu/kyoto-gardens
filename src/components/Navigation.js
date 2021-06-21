@@ -76,7 +76,7 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
       </Button.DivFrame>
       <NavTop.Ul
         data-testid="nav-menu"
-        hidden={!navShown}
+        navShown={navShown}
         id="navigation-drawer"
       >
         <NavigationItem
