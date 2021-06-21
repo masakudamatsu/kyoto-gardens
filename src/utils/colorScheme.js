@@ -1,5 +1,6 @@
 const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = 'hsla(193, 30%, 57%, 0.2)'; // same hue and chroma as primary but 3 times brighter
+const primaryDarkShade = 'rgb(13, 49, 59)'; // temporary
 const onPrimary = 'rgb(238,238,238)';
 const surface = 'rgb(255,255,255)';
 const onSurface = 'rgb(10,10,10)';
@@ -27,7 +28,8 @@ const kohoan = {
 
 export const colour = {
   buttonMenu: {
-    default: `hsl(0, 0%, 78%)` /* 4.5 to 1 against the primary color: https://contrast-ratio.com/#hsl%280%2C0%25%2C78%25%29-on-hsla%28193%2C%2050%25%2C%2026%25%2C%200.9%29 */,
+    border: primaryDarkShade,
+    default: `hsl(0, 0%, 78%)`, // 4.5 to 1 against the primary color: https://contrast-ratio.com/#hsl%280%2C0%25%2C78%25%29-on-hsla%28193%2C%2050%25%2C%2026%25%2C%200.9%29
     focus: `hsl(0, 0%, 100%)`, // TODO: make it consistent with the above colour scheme
   },
   footer: {

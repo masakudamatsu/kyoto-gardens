@@ -132,43 +132,43 @@ describe('Button.SvgSurface renders UI correctly', () => {
   test('without any prop', () => {
     const {container} = render(<Button.SvgSurface />);
     expect(container).toMatchInlineSnapshot(`
-    .c1 {
-      font-family: 'Reforma 1918',sans-serif;
-      font-size: 33px;
-      font-weight: 300;
-      height: 100%;
-      background-color: hsla(193,50%,26%,0.9);
-      border: 1px solid;
-      border-radius: 4px;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-      transform: rotateY(0deg);
-    }
+      .c1 {
+        font-family: 'Reforma 1918',sans-serif;
+        font-size: 33px;
+        font-weight: 300;
+        height: 100%;
+        background-color: hsla(193,50%,26%,0.9);
+        border: 1px solid rgb(13,49,59);
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
 
-    .Button-sc-6yjgzo-0 .c0 {
-      fill: hsl(0,0%,78%);
-    }
+      .Button-sc-6yjgzo-0 .c0 {
+        fill: hsl(0,0%,78%);
+      }
 
-    .Button-sc-6yjgzo-0:focus .c0,
-    .Button-sc-6yjgzo-0:hover .c1 {
-      fill: hsl(0,0%,100%);
-    }
+      .Button-sc-6yjgzo-0:focus .c0,
+      .Button-sc-6yjgzo-0:hover .c1 {
+        fill: hsl(0,0%,100%);
+      }
 
-    .Button-sc-6yjgzo-0:active .c0 {
-      fill: hsl(0,0%,78%);
-    }
+      .Button-sc-6yjgzo-0:active .c0 {
+        fill: hsl(0,0%,78%);
+      }
 
-    <div>
-      <svg
-        class="c0 c1"
-      />
-    </div>
-  `);
+      <div>
+        <svg
+          class="c0 c1"
+        />
+      </div>
+    `);
   });
   test('with backside prop', () => {
     render(<Button.SvgSurface data-testid="backside" backside />);
