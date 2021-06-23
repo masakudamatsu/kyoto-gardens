@@ -26,7 +26,7 @@ export default function Layout({children, currentPage}) {
           }
         />
       </FocusLock>
-      {navShown ? <DivScrim /> : null}
+      <DivScrim navShown={navShown} />
       {children}
       <Footer>
         <Footer.TopBackground>
