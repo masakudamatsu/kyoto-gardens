@@ -12,17 +12,6 @@ const mockProps = {
 };
 
 describe('renders the default UI correctly', () => {
-  // The following two tests fail, because now both button labels are "visible" and in the DOM
-  // test('shows the hamburger menu button', () => {
-  //   render(<Navigation {...mockProps} />);
-  //   expect(screen.getByRole('button', {name: 'Menu'})).toBeVisible();
-  // });
-  // test('hides the back button', () => {
-  //   render(<Navigation {...mockProps} />);
-  //   expect(
-  //     screen.queryByRole('button', {name: 'Back to main content'}),
-  //   ).not.toBeInTheDocument();
-  // });
   test('hides the navigation bar from screen readers', () => {
     render(<Navigation {...mockProps} />);
     expect(screen.queryByTestId('nav-menu')).toHaveAttribute(
@@ -44,19 +33,6 @@ describe('calls setNavShown(true) when', () => {
 });
 
 describe('changes UI with the navShown prop', () => {
-  // The following two tests fail, because now both button labels are "visible" and in the DOM
-  // test('hides the hamburger menu button', () => {
-  //   render(<Navigation {...mockProps} navShown={true} />);
-  //   expect(
-  //     screen.queryByRole('button', {name: 'Menu'}),
-  //   ).not.toBeInTheDocument();
-  // });
-  // test('shows the back button', () => {
-  //   render(<Navigation {...mockProps} navShown={true} />);
-  //   expect(
-  //     screen.getByRole('button', {name: 'Back to main content'}),
-  //   ).toBeVisible();
-  // });
   test('shows the navigation bar to screen readers', () => {
     render(<Navigation {...mockProps} navShown={true} />);
     expect(screen.getByTestId('nav-menu')).toHaveAttribute(

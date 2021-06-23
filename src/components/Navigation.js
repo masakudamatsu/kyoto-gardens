@@ -70,8 +70,8 @@ const Navigation = ({currentPage, navShown, setNavShown}) => {
           onClick={toggleDrawer}
           type="button"
         >
-          <SvgHamburger />
-          <SvgBackButton />
+          <SvgHamburger navShown={navShown} />
+          <SvgBackButton navShown={navShown} />
         </Button>
       </Button.DivFrame>
       <NavTop.Ul

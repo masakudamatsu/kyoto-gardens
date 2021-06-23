@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import Button from 'src/elements/Button';
 
-const SvgHamburger = ({className}) => {
+const SvgHamburger = ({className, navShown}) => {
   return (
     <Button.SvgSurface
+      aria-hidden={navShown}
       aria-labelledby="hamburger"
       className={className} // to change style with styled-components; see https://spectrum.chat/styled-components/general/styling-an-existing-component~e79a3695-db96-417f-809f-b4abed9f3c82?m=MTU1MTYzNzQyMTAyNA==
+      data-testid="hamburger"
       role="img"
       viewBox="0 0 25 48"
     >
@@ -23,6 +25,8 @@ const SvgHamburger = ({className}) => {
   );
 };
 
-SvgHamburger.propTypes = {};
+SvgHamburger.propTypes = {
+  navShown: PropTypes.bool,
+};
 
 export default SvgHamburger;
