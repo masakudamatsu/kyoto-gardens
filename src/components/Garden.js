@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 import ImageWithPlaceholder from '../elements/ImageWithPlaceholder';
 import IndexSection from 'src/blocks/IndexSection';
@@ -26,11 +27,14 @@ const Garden = ({currentPage, gardenName, description, image, year}) => {
             </IndexSection.Latin>
           </a>
         ) : (
-          <a href={gardenName.lowercase}>
-            <IndexSection.Latin gardenName={gardenName.lowercase}>
-              {gardenName.latin}
-            </IndexSection.Latin>
-          </a>
+          <Link href={gardenName.lowercase}>
+            {/* eslint-disable-next-line */}
+            <a>
+              <IndexSection.Latin gardenName={gardenName.lowercase}>
+                {gardenName.latin}
+              </IndexSection.Latin>
+            </a>
+          </Link>
         )}
         <IndexSection.P>{description}</IndexSection.P>
       </IndexSection.Card>

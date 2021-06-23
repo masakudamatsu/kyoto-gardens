@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, {keyframes} from 'styled-components';
+import Link from 'next/link';
 
 import NavTop from 'src/elements/NavTop';
 import {vspace} from 'src/utils/vspaceScheme';
@@ -78,7 +79,10 @@ const NavigationItem = ({currentPage, pageName, textContent}) => {
         /* eslint-disable-next-line */
         <a>{textContent}</a>
       ) : (
-        <a href={pageName}>{textContent}</a>
+        <Link href={pageName}>
+          {/* eslint-disable-next-line */}
+          <a>{textContent}</a>
+        </Link>
       )}
     </ItemContainer>
   );
