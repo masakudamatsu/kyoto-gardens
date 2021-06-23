@@ -23,11 +23,13 @@ describe('renders the default UI correctly', () => {
   //     screen.queryByRole('button', {name: 'Back to main content'}),
   //   ).not.toBeInTheDocument();
   // });
-  // Following test fails because now the navigation menu is "hidden" by translate to the outside of the screen
-  // test('hides the navigation bar', () => {
-  //   render(<Navigation {...mockProps} />);
-  //   expect(screen.queryByTestId('nav-menu')).not.toBeVisible();
-  // });
+  test('hides the navigation bar from screen readers', () => {
+    render(<Navigation {...mockProps} />);
+    expect(screen.queryByTestId('nav-menu')).toHaveAttribute(
+      'aria-hidden',
+      'true',
+    );
+  });
 });
 
 describe('calls setNavShown(true) when', () => {
@@ -55,11 +57,13 @@ describe('changes UI with the navShown prop', () => {
   //     screen.getByRole('button', {name: 'Back to main content'}),
   //   ).toBeVisible();
   // });
-  // Following test now doesn't make sense because now the navigation menu is "hidden" by translate to the outside of the screen
-  // test('shows the navigation bar', () => {
-  //   render(<Navigation {...mockProps} navShown={true} />);
-  //   expect(screen.getByTestId('nav-menu')).toBeVisible();
-  // });
+  test('shows the navigation bar to screen readers', () => {
+    render(<Navigation {...mockProps} navShown={true} />);
+    expect(screen.getByTestId('nav-menu')).toHaveAttribute(
+      'aria-hidden',
+      'false',
+    );
+  });
 });
 
 describe('calls setNavShown(false) when', () => {
