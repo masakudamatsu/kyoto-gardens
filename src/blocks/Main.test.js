@@ -15,7 +15,7 @@ describe('renders UI correctly', () => {
 
       .c1 {
         background-color: rgb(240,240,240);
-        background-image: radial-gradient( circle closest-side,transparent 91%,rgb(255,255,255) 100%,transparent ),radial-gradient( circle closest-side,rgb(240,240,240) 91%,rgb(255,255,255) 100%,rgb(240,240,240) );
+        background-image: radial-gradient( circle closest-side,rgba(255,255,255,0) 91%,rgb(255,255,255) 99%,rgba(255,255,255,0) ),radial-gradient( circle closest-side,rgb(240,240,240) 91%,rgb(255,255,255) 99%,rgb(240,240,240) );
         background-position: 0 0,1.75rem 1.75rem;
         background-repeat: repeat;
         background-size: 3.5rem 3.5rem;

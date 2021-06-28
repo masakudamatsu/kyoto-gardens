@@ -51,16 +51,20 @@ export const shippoPattern = css`
     .background}; /* fall back for Opera Mini */
   background-image: radial-gradient(
       circle closest-side,
-      transparent 91%,
-      ${colour.ryoanji.pattern.figure} 100%,
-      transparent
+      rgba(255, 255, 255, 0) 91%,
+      ${colour.ryoanji.pattern.figure} 99%,
+      rgba(255, 255, 255, 0)
     ),
     radial-gradient(
       circle closest-side,
       ${colour.ryoanji.pattern.background} 91%,
-      ${colour.ryoanji.pattern.figure} 100%,
+      ${colour.ryoanji.pattern.figure} 99%,
       ${colour.ryoanji.pattern.background}
     ); /* Higher than these percentages will create noticeable dots at the intersection of four circles */
+  /* Notes on Safari
+     The 'transparent' keyword doesn't work with Safari, which renders gradient towards black.
+     Safari will ignore the last color value if the previous color stops at 100%.
+     */
   background-position: 0 0, ${circleDiameter / 2}rem ${circleDiameter / 2}rem; /* The second pair of values should be half as large as the background-size value so that the grid of circles overlaps just in halfway */
   background-repeat: repeat;
   background-size: ${circleDiameter}rem ${circleDiameter}rem; /* Circles won't be recognizable if smaller than these values. The feel of textile will lose if larger than these values */
