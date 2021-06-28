@@ -9,7 +9,7 @@ test('renders UI correctly', () => {
   const {container} = render(<H2 {...mockProps} />);
   expect(container).toMatchInlineSnapshot(`
     .Main__Kohoan-sc-126eniy-2 .c1 {
-      color: rgb(238,238,238);
+      color: rgb(255,255,255);
       font-family: 'Playfair Display',serif;
       font-size: 1.7193rem;
       font-weight: 600;
@@ -26,7 +26,7 @@ test('renders UI correctly', () => {
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c1 {
-      color: rgb(238,238,238);
+      color: rgb(255,255,255);
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 2.2025rem;
       font-weight: 700;
@@ -43,14 +43,14 @@ test('renders UI correctly', () => {
     }
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
-      background-color: rgb(56,75,85);
+      background-color: rgb(33,79,89);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding-left: 1.0625rem;
       padding-right: 1.0625rem;
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
-      background-color: rgb(56,75,85);
+      background-color: rgb(59,105,114);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding-left: 1.3281rem;
       padding-right: 1.3281rem;

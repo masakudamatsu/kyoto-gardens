@@ -148,9 +148,9 @@ describe('renders UI correctly', () => {
       .Main__Ryoanji-sc-126eniy-1 .c0 {
         padding-left: 1.3281rem;
         padding-right: 1.3281rem;
-        background-color: rgb(56,75,85);
+        background-color: rgb(59,105,114);
         background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
-        color: rgb(238,238,238);
+        color: rgb(255,255,255);
         padding-top: 0.5313rem;
         width: 100%;
       }

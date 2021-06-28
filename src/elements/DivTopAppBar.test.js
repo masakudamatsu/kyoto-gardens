@@ -37,7 +37,7 @@ describe('renders UI correctly', () => {
     const {container} = render(<DivTopAppBar {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: rgb(56,75,85);
+        background-color: rgb(33,79,89);
         border-bottom-color: rgba(255,255,255,0.42);
         border-bottom-style: solid;
         border-bottom-width: 1px;

@@ -17,7 +17,7 @@ test('renders correctly', () => {
   // verify
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      background-color: rgb(56,75,85);
+      background-color: rgb(33,79,89);
       border-bottom: 1px solid rgba(255,255,255,0.42);
       font-family: 'Reforma 1918',serif;
       font-size: 1.3333rem;

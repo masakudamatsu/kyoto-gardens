@@ -1,11 +1,10 @@
-const primary = 'rgb(56, 75, 85)';
-const primaryShade = 'rgba(56, 75, 85, 0.2)'; // same hue and chroma as primary but 3 times brighter
-const onPrimary = 'rgb(238,238,238)';
-const secondary = 'rgb(56, 75, 85)'; // 'rgb(73,73,73)'; // 2.33, i.e. contrast ratio 1:9 against onSecondary: https://contrast-ratio.com/#white-on-rgb%2850%2C78%2C73%29
-const secondaryShade = 'rgb(2, 19, 28)'; // 'rgb(22,22,22)'; // 1.16, i.e. contrast ratio 1:2 against secondary: https://contrast-ratio.com/#rgb%2850%2C78%2C73-on-rgb%280%2C26%2C21%29
-const secondaryTranslucent = 'rgba(56, 75, 85, 0.58)'; // 'rgba(73,73,73,0.59)'; // contrast ratio 1:3 against onSecondary, if the background is pure white: https://contrast-ratio.com/#rgba%2850%2C78%2C72%2C0.58%29-on-white
-const onSecondary = 'rgb(255,255,255)';
-const onSecondaryShade = 'rgba(255,255,255,0.42)'; // contrast ratio of 3:1 against secondary: https://contrast-ratio.com/#rgb%28255%2C255%2C255%2C0.42-on-rgba%2850%2C78%2C72%29
+const primary = 'rgb(33, 79, 89)'; // 'rgb(73,73,73)'; // 2.33, i.e. contrast ratio 1:9 against onPrimary: https://contrast-ratio.com/#white-on-rgb%2850%2C78%2C73%29
+const primaryTint = 'rgb(59, 105, 114)'; // for h2 background on each garden page except for Koho-an
+const primaryTintTranslucent = 'rgba(59, 105, 114, 0.2)'; // same hue and chroma as primaryTint but 3 times brighter
+const primaryShade = 'rgb(2, 19, 28)'; // 'rgb(22,22,22)'; // 1.16, i.e. contrast ratio 1:2 against primary: https://contrast-ratio.com/#rgb%2850%2C78%2C73-on-rgb%280%2C26%2C21%29
+const primaryTranslucent = 'rgba(33, 79, 89, 0.58)'; // 'rgba(73,73,73,0.59)'; // contrast ratio 1:3 against onPrimary, if the background is pure white: https://contrast-ratio.com/#rgba%2850%2C78%2C72%2C0.58%29-on-white
+const onPrimary = 'rgb(255,255,255)';
+const onPrimaryTranslucent = 'rgba(255,255,255,0.42)'; // contrast ratio of 3:1 against primary: https://contrast-ratio.com/#rgb%28255%2C255%2C255%2C0.42-on-rgba%2850%2C78%2C72%29
 const surface = 'rgb(255,255,255)';
 const onSurface = 'rgb(10,10,10)';
 const onSurfaceShade = 'rgb(100,100,100)';
@@ -33,22 +32,22 @@ const kohoan = {
 export const colour = {
   navTop: {
     background: {
-      button: secondary,
-      li: secondary,
-      currentPage: secondaryTranslucent,
+      button: primary,
+      li: primary,
+      currentPage: primaryTranslucent,
     },
     border: {
-      button: secondaryShade,
-      li: onSecondaryShade, // to match with header.borderBottom
+      button: primaryShade,
+      li: onPrimaryTranslucent, // to match with header.borderBottom
     },
     font: {
-      button: onSecondaryShade,
-      buttonOnFocus: onSecondary,
-      ul: onSecondary,
+      button: onPrimaryTranslucent,
+      buttonOnFocus: onPrimary,
+      ul: onPrimary,
     },
     overlayOnFocus: {
       button: null, // no overlay for button on focus
-      li: onSecondaryShade,
+      li: onPrimaryTranslucent,
     },
   },
   footer: {
@@ -61,9 +60,9 @@ export const colour = {
     background: background, // TODO: change this to match with header/footer's background
   },
   header: {
-    background: secondary,
-    borderBottom: onSecondaryShade, // to be matched with navTop.border.li
-    font: onSecondary,
+    background: primary,
+    borderBottom: onPrimaryTranslucent, // to be matched with navTop.border.li
+    font: onPrimary,
   },
   index: {
     figure: {
@@ -81,13 +80,13 @@ export const colour = {
       },
     },
     siteTitle: {
-      color: primary,
+      color: primaryTint,
     },
     h2: {
-      color: primary,
+      color: primaryTint,
     },
     link: {
-      onHoverBackground: primaryShade,
+      onHoverBackground: primaryTintTranslucent,
     },
     main: {
       background: surface,
@@ -135,11 +134,11 @@ export const colour = {
       color: onSurface,
     },
     figure: {
-      border: primaryShade,
+      border: primaryTintTranslucent,
     },
     h1: {
       background: {
-        mobile: primary,
+        mobile: primaryTint,
         desktop: 'transparent',
       },
       color: {
@@ -152,19 +151,19 @@ export const colour = {
       },
     },
     h2: {
-      background: primary,
+      background: primaryTint,
       color: onPrimary,
       overlay: lighting,
     },
     h3: {
-      color: primary,
+      color: primaryTint,
     },
     hr: {
-      color: primary,
+      color: primaryTint,
     },
     link: {
       color: 'inherit',
-      onHoverBackground: primaryShade,
+      onHoverBackground: primaryTintTranslucent,
     },
     pattern: {
       background: background,

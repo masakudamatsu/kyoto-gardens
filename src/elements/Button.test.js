@@ -149,7 +149,7 @@ describe('Button.SvgSurface renders UI correctly', () => {
         font-size: 33px;
         font-weight: 300;
         height: 100%;
-        background-color: rgb(56,75,85);
+        background-color: rgb(33,79,89);
         height: 100%;
         width: 100%;
         position: absolute;

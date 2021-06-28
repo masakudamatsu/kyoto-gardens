@@ -24,7 +24,7 @@ describe('renders UI correctly', () => {
     const {container} = render(<Footer.TopBackground {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: rgb(56,75,85);
+        background-color: rgb(33,79,89);
         padding-top: 1.2109rem;
       }
 
@@ -45,7 +45,7 @@ describe('renders UI correctly', () => {
     const {container} = render(<Footer.BottomBackground {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: rgb(56,75,85);
+        background-color: rgb(33,79,89);
         padding-top: 1.2109rem;
       }
 
@@ -76,7 +76,7 @@ describe('renders UI correctly', () => {
     const {container} = render(<Footer.DropCap {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        fill: rgb(56,75,85);
+        fill: rgb(59,105,114);
         font-family: 'Reforma 1918',serif;
         font-size: 48px;
         font-weight: 500;
@@ -88,7 +88,7 @@ describe('renders UI correctly', () => {
       }
 
       .c1 {
-        fill: rgb(238,238,238);
+        fill: rgb(255,255,255);
         float: left;
         -webkit-transform: translate(-8px,15px);
         -ms-transform: translate(-8px,15px);
@@ -166,7 +166,7 @@ describe('renders UI correctly', () => {
     const {container} = render(<Footer.P {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c1 {
-        color: rgb(238,238,238);
+        color: rgb(255,255,255);
         font-family: 'Reforma 1918',serif;
         font-size: 1.0931rem;
         font-weight: 300;
