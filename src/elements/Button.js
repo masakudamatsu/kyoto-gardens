@@ -65,12 +65,13 @@ Button.SvgSurface = styled.svg`
   font-weight: 300;
   height: 100%; /* i.e. 48px set in NavTop.Button.js */
   ${Button} & {
+    border: 1px solid ${colour.navTop.background.button}; /* To keep the content size intact */
     fill: ${colour.navTop.font.button};
   }
   ${Button}:focus &,
   ${Button}:hover & {
     fill: ${colour.navTop.font.buttonOnFocus};
-    outline: 1px solid ${colour.navTop.border.button}; /* To keep the content size intact (border will change the content width and height) */
+    border: 1px solid ${colour.navTop.border.button};
   }
   /* Add the background and border */
   background-color: ${colour.navTop.background.button};

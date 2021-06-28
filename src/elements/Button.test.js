@@ -161,13 +161,14 @@ describe('Button.SvgSurface renders UI correctly', () => {
       }
 
       .Button-sc-6yjgzo-0 .c0 {
+        border: 1px solid rgb(33,79,89);
         fill: rgba(255,255,255,0.42);
       }
 
       .Button-sc-6yjgzo-0:focus .c0,
       .Button-sc-6yjgzo-0:hover .c1 {
         fill: rgb(255,255,255);
-        outline: 1px solid rgb(2,19,28);
+        border: 1px solid rgb(2,19,28);
       }
 
       <div>
