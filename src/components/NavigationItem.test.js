@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {axe} from 'jest-axe';
 
@@ -90,11 +90,13 @@ test('renders correctly', () => {
 });
 
 test('is accessible', async () => {
-  const {container} = render(
-    <ul>
-      <NavigationItem {...mockProps} />
-    </ul>,
-  );
-  const results = await axe(container);
-  expect(results).toHaveNoViolations();
+  await act(async () => {
+    const {container} = render(
+      <ul>
+        <NavigationItem {...mockProps} />
+      </ul>,
+    );
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 });

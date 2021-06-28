@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {axe} from 'jest-axe';
 
@@ -62,7 +62,9 @@ describe('calls setNavShown(false) when', () => {
 });
 
 test('is accessible', async () => {
-  const {container} = render(<Navigation {...mockProps} />);
-  const results = await axe(container);
-  expect(results).toHaveNoViolations();
+  await act(async () => {
+    const {container} = render(<Navigation {...mockProps} />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
 });
