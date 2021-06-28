@@ -78,8 +78,8 @@ describe('renders UI correctly', () => {
       }
 
       .Main__Ryoanji-sc-126eniy-1 .c0 {
-        border-bottom: 1px solid hsla(193,30%,57%,0.2);
-        border-top: 1px solid hsla(193,30%,57%,0.2);
+        border-bottom: 1px solid rgba(56,75,85,0.2);
+        border-top: 1px solid rgba(56,75,85,0.2);
         padding: 15.25px;
       }
 
@@ -91,8 +91,8 @@ describe('renders UI correctly', () => {
 
       @media only screen and (min-width:31.6802rem) {
         .Main__Ryoanji-sc-126eniy-1 .c0 {
-          border-left: 1px solid hsla(193,30%,57%,0.2);
-          border-right: 1px solid hsla(193,30%,57%,0.2);
+          border-left: 1px solid rgba(56,75,85,0.2);
+          border-right: 1px solid rgba(56,75,85,0.2);
         }
       }
 

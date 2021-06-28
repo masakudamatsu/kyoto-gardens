@@ -146,7 +146,7 @@ describe('renders UI correctly:', () => {
 
       .c0 a:focus::after,
       .c0 a:hover::after {
-        background-color: hsla(193,30%,57%,0.2);
+        background-color: rgba(56,75,85,0.2);
       }
 
       .c0 a:not([href]):focus::after,

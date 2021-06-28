@@ -26,7 +26,7 @@ test('renders UI correctly', () => {
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
-      color: hsla(193,50%,26%,0.9);
+      color: rgb(56,75,85);
       font-family: 'Cormorant','Times New Roman',serif;
       font-size: 1.3215rem;
       font-weight: 700;
