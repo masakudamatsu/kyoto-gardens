@@ -223,9 +223,9 @@ describe('renders UI correctly:', () => {
         padding-top: 0.5313rem;
         position: absolute;
         top: 0;
-        -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
+        -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb;
+        writing-mode: vertical-lr;
         z-index: 2;
       }
 

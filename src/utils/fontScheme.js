@@ -76,7 +76,7 @@ export const font = {
       }, // TODO: Set this value to match the latin counterpart's size
       weight: 500, // TODO: Set this value to match the latin counterpart's storke width
       lineHeight: 1, // to control side margins
-      writingMode: 'vertical-rl',
+      writingMode: 'vertical-lr', // Safari screws up the absolute positioning with `vertical-rl`...
     },
     siteTitle: {
       family: reforma1918.fontFamily,
