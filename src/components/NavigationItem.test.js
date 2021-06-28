@@ -6,7 +6,7 @@ import {axe} from 'jest-axe';
 import NavigationItem from './NavigationItem';
 
 const mockProps = {
-  currentPage: 'ryoanji',
+  currentPage: 'kohoan',
   pageName: 'ryoanji',
   textContent: 'Ryoan-ji',
 };
@@ -17,9 +17,8 @@ test('renders correctly', () => {
   // verify
   expect(container).toMatchInlineSnapshot(`
     .c0 {
-      background-color: white;
-      color: black;
-      border-bottom: 1px solid gray;
+      background-color: rgb(73,73,73);
+      border-bottom: 1px solid rgba(255,255,255,0.42);
       font-family: 'Reforma 1918',serif;
       font-size: 1.3333rem;
       font-weight: 300;
@@ -43,7 +42,7 @@ test('renders correctly', () => {
     }
 
     .c0 a::after {
-      content: '';
+      content: '>';
       height: 100%;
       left: 0;
       padding-bottom: 0.625rem;
@@ -57,7 +56,7 @@ test('renders correctly', () => {
 
     .c0 a:focus::after,
     .c0 a:hover::after {
-      background-color: transparent;
+      background-color: rgba(255,255,255,0.42);
     }
 
     .c1 {
@@ -80,7 +79,9 @@ test('renders correctly', () => {
       <li
         class="c0 c1"
       >
-        <a>
+        <a
+          href="/ryoanji"
+        >
           Ryoan-ji
         </a>
       </li>

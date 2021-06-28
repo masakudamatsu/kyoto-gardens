@@ -12,10 +12,6 @@ const Button = styled.button`
   &:focus,
   &:hover {
     outline: none;
-    text-shadow: 0 0 3px ${colour.buttonMenu.focus};
-  }
-  &:active {
-    text-shadow: none;
   }
 
   /* Positioning the two Button.SvgSurface in the same spot */
@@ -56,8 +52,7 @@ Button.DivFrame = styled.div`
     }
   `}
   /* Animate the flip of the button */
-  background-color: ${colour.buttonMenu.border};
-  border-radius: 4px;
+  background-color: ${colour.navTop.border.button};
   perspective: 40rem; /* follow https://www.smashingmagazine.com/2020/02/magic-flip-cards-common-sizing-problem/ */
 `;
 Button.DivFrame.propTypes = {
@@ -70,19 +65,15 @@ Button.SvgSurface = styled.svg`
   font-weight: 300;
   height: 100%; /* i.e. 48px set in NavTop.Button.js */
   ${Button} & {
-    fill: ${colour.buttonMenu.default};
+    fill: ${colour.navTop.font.button};
   }
   ${Button}:focus &,
   ${Button}:hover & {
-    fill: ${colour.buttonMenu.focus};
-  }
-  ${Button}:active & {
-    fill: ${colour.buttonMenu.default};
+    fill: ${colour.navTop.font.buttonOnFocus};
+    outline: 1px solid ${colour.navTop.border.button}; /* To keep the content size intact (border will change the content width and height) */
   }
   /* Add the background and border */
-  background-color: ${colour.header.background};
-  border: 1px solid ${colour.buttonMenu.border};
-  border-radius: 4px;
+  background-color: ${colour.navTop.background.button};
   height: 100%;
   width: 100%;
   /* Positioning the two Button.SvgSurface in the same spot */

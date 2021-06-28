@@ -42,11 +42,6 @@ describe('Button renders UI correctly', () => {
       .c0:focus,
       .c0:hover {
         outline: none;
-        text-shadow: 0 0 3px hsl(0,0%,100%);
-      }
-
-      .c0:active {
-        text-shadow: none;
       }
 
       <div>
@@ -79,8 +74,7 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 9.75px;
-        background-color: rgb(13,49,59);
-        border-radius: 4px;
+        background-color: rgb(22,22,22);
         -webkit-perspective: 40rem;
         -moz-perspective: 40rem;
         -ms-perspective: 40rem;
@@ -118,8 +112,7 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 5.5px;
-        background-color: rgb(13,49,59);
-        border-radius: 4px;
+        background-color: rgb(22,22,22);
         -webkit-perspective: 40rem;
         -moz-perspective: 40rem;
         -ms-perspective: 40rem;
@@ -156,9 +149,7 @@ describe('Button.SvgSurface renders UI correctly', () => {
         font-size: 33px;
         font-weight: 300;
         height: 100%;
-        background-color: hsla(193,50%,26%,0.9);
-        border: 1px solid rgb(13,49,59);
-        border-radius: 4px;
+        background-color: rgb(73,73,73);
         height: 100%;
         width: 100%;
         position: absolute;
@@ -170,16 +161,13 @@ describe('Button.SvgSurface renders UI correctly', () => {
       }
 
       .Button-sc-6yjgzo-0 .c0 {
-        fill: hsl(0,0%,78%);
+        fill: rgba(255,255,255,0.42);
       }
 
       .Button-sc-6yjgzo-0:focus .c0,
       .Button-sc-6yjgzo-0:hover .c1 {
-        fill: hsl(0,0%,100%);
-      }
-
-      .Button-sc-6yjgzo-0:active .c0 {
-        fill: hsl(0,0%,78%);
+        fill: rgb(255,255,255);
+        outline: 1px solid rgb(22,22,22);
       }
 
       <div>

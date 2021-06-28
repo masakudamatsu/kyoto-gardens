@@ -11,7 +11,7 @@ const mockProps = {};
 test('renders the site title in white', () => {
   render(<TopAppBar {...mockProps} />);
   expect(screen.getByTestId('site-title')).toHaveStyle(
-    `fill: ${colour.header.color}`,
+    `fill: ${colour.header.font}`,
   );
 });
 

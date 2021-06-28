@@ -12,9 +12,8 @@ const NavTop = styled.nav`
 `;
 
 NavTop.Ul = styled.ul`
-  background-color: ${colour.header.background};
-  color: ${colour.header.color};
-  height: 85vh;
+  color: ${colour.navTop.font.ul};
+  height: auto;
   left: 0;
   list-style: none;
   max-width: 320px;
@@ -23,7 +22,7 @@ NavTop.Ul = styled.ul`
   width: 85vw;
   & a,
   & a:visited {
-    color: ${colour.header.color};
+    color: inherit;
     text-decoration: none;
   }
   /* Animate the appearance/disappearance */
@@ -39,14 +38,12 @@ NavTop.Li = styled.li`
   ${({currentPage, pageName}) =>
     currentPage === pageName
       ? `
-    background-color: white;
-    color: black;
+    background-color: ${colour.navTop.background.currentPage};
   `
       : `
-    background-color: inherit;
-    color: inherit;
+    background-color: ${colour.navTop.background.li};
   `}
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid ${colour.navTop.border.li};
   font-family: ${font.topAppBar.family};
   font-size: ${remify(
     makeCapHeightToBe(font.topAppBar.capHeight.mobile, font.topAppBar.metrics),
@@ -92,7 +89,7 @@ NavTop.Li = styled.li`
     background-color: ${({currentPage, pageName}) =>
       currentPage === pageName
         ? `transparent`
-        : colour.index.link.onHoverBackground};
+        : colour.navTop.overlayOnFocus.li};
   }
 `;
 NavTop.Li.propTypes = {

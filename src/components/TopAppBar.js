@@ -9,7 +9,7 @@ import Header from 'src/elements/Header';
 import {colour} from 'src/utils/colorScheme';
 
 const SiteTitleInWhite = styled(SiteTitle)`
-  fill: ${colour.header.color};
+  fill: ${colour.header.font};
 `;
 
 const TopAppBar = ({navigation}) => {

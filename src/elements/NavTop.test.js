@@ -37,9 +37,8 @@ describe('NavTop.Ul renders UI correctly', () => {
     const {container} = render(<NavTop.Ul {...mockProps} />);
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: hsla(193,50%,26%,0.9);
-        color: rgb(238,238,238);
-        height: 85vh;
+        color: rgb(255,255,255);
+        height: auto;
         left: 0;
         list-style: none;
         max-width: 320px;
@@ -57,7 +56,7 @@ describe('NavTop.Ul renders UI correctly', () => {
 
       .c0 a,
       .c0 a:visited {
-        color: rgb(238,238,238);
+        color: inherit;
         -webkit-text-decoration: none;
         text-decoration: none;
       }
@@ -83,9 +82,8 @@ describe('NavTop.Li renders UI correctly', () => {
     );
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: inherit;
-        color: inherit;
-        border-bottom: 1px solid gray;
+        background-color: rgb(73,73,73);
+        border-bottom: 1px solid rgba(255,255,255,0.42);
         font-family: 'Reforma 1918',serif;
         font-size: 1.3333rem;
         font-weight: 300;
@@ -123,7 +121,7 @@ describe('NavTop.Li renders UI correctly', () => {
 
       .c0 a:focus::after,
       .c0 a:hover::after {
-        background-color: hsla(193,30%,57%,0.2);
+        background-color: rgba(255,255,255,0.42);
       }
 
       <div>
@@ -143,9 +141,8 @@ describe('NavTop.Li renders UI correctly', () => {
     );
     expect(container).toMatchInlineSnapshot(`
       .c0 {
-        background-color: white;
-        color: black;
-        border-bottom: 1px solid gray;
+        background-color: rgba(73,73,73,0.59);
+        border-bottom: 1px solid rgba(255,255,255,0.42);
         font-family: 'Reforma 1918',serif;
         font-size: 1.3333rem;
         font-weight: 300;

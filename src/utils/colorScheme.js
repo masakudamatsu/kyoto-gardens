@@ -1,7 +1,11 @@
 const primary = 'hsla(193, 50%, 26%, 0.9)';
 const primaryShade = 'hsla(193, 30%, 57%, 0.2)'; // same hue and chroma as primary but 3 times brighter
-const primaryDarkShade = 'rgb(13, 49, 59)'; // temporary
 const onPrimary = 'rgb(238,238,238)';
+const secondary = 'rgb(73,73,73)'; // 2.33, i.e. contrast ratio 1:9 against onSecondary: https://contrast-ratio.com/#white-on-rgb%2850%2C78%2C72%29
+const secondaryShade = 'rgb(22,22,22)'; // 1.16, i.e. contrast ratio 1:2 against secondary: https://contrast-ratio.com/#rgb%2850%2C78%2C72%29-on-rgb%280%2C28%2C22%29
+const secondaryTranslucent = 'rgba(73,73,73,0.59)'; // contrast ratio 1:3 against onSecondary, if the background is pure white: https://contrast-ratio.com/#rgba%2850%2C78%2C72%2C0.59%29-on-white
+const onSecondary = 'rgb(255,255,255)';
+const onSecondaryShade = 'rgba(255,255,255,0.42)'; // contrast ratio of 3:1 against secondary: https://contrast-ratio.com/#rgb%28255%2C255%2C255%2C0.42-on-rgba%2850%2C78%2C72%29
 const surface = 'rgb(255,255,255)';
 const onSurface = 'rgb(10,10,10)';
 const onSurfaceShade = 'rgb(100,100,100)';
@@ -27,10 +31,25 @@ const kohoan = {
 };
 
 export const colour = {
-  buttonMenu: {
-    border: primaryDarkShade,
-    default: `hsl(0, 0%, 78%)`, // 4.5 to 1 against the primary color: https://contrast-ratio.com/#hsl%280%2C0%25%2C78%25%29-on-hsla%28193%2C%2050%25%2C%2026%25%2C%200.9%29
-    focus: `hsl(0, 0%, 100%)`, // TODO: make it consistent with the above colour scheme
+  navTop: {
+    background: {
+      button: secondary,
+      li: secondary,
+      currentPage: secondaryTranslucent,
+    },
+    border: {
+      button: secondaryShade,
+      li: onSecondaryShade, // to match with header.borderBottom
+    },
+    font: {
+      button: onSecondaryShade,
+      buttonOnFocus: onSecondary,
+      ul: onSecondary,
+    },
+    overlayOnFocus: {
+      button: null, // no overlay for button on focus
+      li: onSecondaryShade,
+    },
   },
   footer: {
     background: surface,
@@ -42,9 +61,9 @@ export const colour = {
     background: background, // TODO: change this to match with header/footer's background
   },
   header: {
-    background: primary,
-    borderBottom: primaryShade,
-    color: onPrimary,
+    background: secondary,
+    borderBottom: onSecondaryShade, // to be matched with navTop.border.li
+    font: onSecondary,
   },
   index: {
     figure: {
