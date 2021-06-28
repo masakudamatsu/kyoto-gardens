@@ -43,14 +43,14 @@ test('renders UI correctly', () => {
     }
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
-      background-color: hsla(193,50%,26%,0.9);
+      background-color: rgb(56,75,85);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding-left: 1.0625rem;
       padding-right: 1.0625rem;
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
-      background-color: hsla(193,50%,26%,0.9);
+      background-color: rgb(56,75,85);
       background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
       padding-left: 1.3281rem;
       padding-right: 1.3281rem;

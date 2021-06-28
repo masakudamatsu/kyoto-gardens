@@ -74,7 +74,7 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 9.75px;
-        background-color: rgb(22,22,22);
+        background-color: rgb(2,19,28);
         -webkit-perspective: 40rem;
         -moz-perspective: 40rem;
         -ms-perspective: 40rem;
@@ -112,7 +112,7 @@ describe('Button.DivFrame renders UI correctly', () => {
         align-self: center;
         position: absolute;
         left: 5.5px;
-        background-color: rgb(22,22,22);
+        background-color: rgb(2,19,28);
         -webkit-perspective: 40rem;
         -moz-perspective: 40rem;
         -ms-perspective: 40rem;
@@ -149,7 +149,7 @@ describe('Button.SvgSurface renders UI correctly', () => {
         font-size: 33px;
         font-weight: 300;
         height: 100%;
-        background-color: rgb(73,73,73);
+        background-color: rgb(56,75,85);
         height: 100%;
         width: 100%;
         position: absolute;
@@ -167,7 +167,7 @@ describe('Button.SvgSurface renders UI correctly', () => {
       .Button-sc-6yjgzo-0:focus .c0,
       .Button-sc-6yjgzo-0:hover .c1 {
         fill: rgb(255,255,255);
-        outline: 1px solid rgb(22,22,22);
+        outline: 1px solid rgb(2,19,28);
       }
 
       <div>

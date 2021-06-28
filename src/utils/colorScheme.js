@@ -1,9 +1,9 @@
-const primary = 'hsla(193, 50%, 26%, 0.9)';
-const primaryShade = 'hsla(193, 30%, 57%, 0.2)'; // same hue and chroma as primary but 3 times brighter
+const primary = 'rgb(56, 75, 85)';
+const primaryShade = 'rgba(56, 75, 85, 0.2)'; // same hue and chroma as primary but 3 times brighter
 const onPrimary = 'rgb(238,238,238)';
-const secondary = 'rgb(73,73,73)'; // 2.33, i.e. contrast ratio 1:9 against onSecondary: https://contrast-ratio.com/#white-on-rgb%2850%2C78%2C72%29
-const secondaryShade = 'rgb(22,22,22)'; // 1.16, i.e. contrast ratio 1:2 against secondary: https://contrast-ratio.com/#rgb%2850%2C78%2C72%29-on-rgb%280%2C28%2C22%29
-const secondaryTranslucent = 'rgba(73,73,73,0.59)'; // contrast ratio 1:3 against onSecondary, if the background is pure white: https://contrast-ratio.com/#rgba%2850%2C78%2C72%2C0.59%29-on-white
+const secondary = 'rgb(56, 75, 85)'; // 'rgb(73,73,73)'; // 2.33, i.e. contrast ratio 1:9 against onSecondary: https://contrast-ratio.com/#white-on-rgb%2850%2C78%2C73%29
+const secondaryShade = 'rgb(2, 19, 28)'; // 'rgb(22,22,22)'; // 1.16, i.e. contrast ratio 1:2 against secondary: https://contrast-ratio.com/#rgb%2850%2C78%2C73-on-rgb%280%2C26%2C21%29
+const secondaryTranslucent = 'rgba(56, 75, 85, 0.58)'; // 'rgba(73,73,73,0.59)'; // contrast ratio 1:3 against onSecondary, if the background is pure white: https://contrast-ratio.com/#rgba%2850%2C78%2C72%2C0.58%29-on-white
 const onSecondary = 'rgb(255,255,255)';
 const onSecondaryShade = 'rgba(255,255,255,0.42)'; // contrast ratio of 3:1 against secondary: https://contrast-ratio.com/#rgb%28255%2C255%2C255%2C0.42-on-rgba%2850%2C78%2C72%29
 const surface = 'rgb(255,255,255)';
