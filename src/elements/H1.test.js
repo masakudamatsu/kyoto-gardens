@@ -149,7 +149,7 @@ describe('renders UI correctly', () => {
         padding-left: 1.3281rem;
         padding-right: 1.3281rem;
         background-color: rgb(59,105,114);
-        background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
+        background-image: linear-gradient( 35deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.42) 55%, rgba(255,255,255,0.42) 65%, rgba(255,255,255,0));
         color: rgb(255,255,255);
         padding-top: 0.5313rem;
         width: 100%;

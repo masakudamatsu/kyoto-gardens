@@ -44,14 +44,14 @@ test('renders UI correctly', () => {
 
     .Main__Kohoan-sc-126eniy-2 .c0 {
       background-color: rgb(33,79,89);
-      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
+      background-image: linear-gradient( 35deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.42) 55%, rgba(255,255,255,0.42) 65%, rgba(255,255,255,0));
       padding-left: 1.0625rem;
       padding-right: 1.0625rem;
     }
 
     .Main__Ryoanji-sc-126eniy-1 .c0 {
       background-color: rgb(59,105,114);
-      background-image: linear-gradient( 35deg, hsla(0,0%,100%,0) 0, hsla(0,0%,100%,0.5) 55%, hsla(0,0%,100%,0.5) 65%, hsla(0,0%,100%,0));
+      background-image: linear-gradient( 35deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.42) 55%, rgba(255,255,255,0.42) 65%, rgba(255,255,255,0));
       padding-left: 1.3281rem;
       padding-right: 1.3281rem;
     }

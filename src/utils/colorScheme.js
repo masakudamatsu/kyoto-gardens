@@ -12,10 +12,10 @@ const background = 'rgb(240,240,240)';
 const onBackground = surface;
 const lighting = `linear-gradient(
   35deg,
-  hsla(0, 0%, 100%, 0) 0,
-  hsla(0, 0%, 100%, 0.5) 55%,
-  hsla(0, 0%, 100%, 0.5) 65%,
-  hsla(0, 0%, 100%, 0)
+  rgba(255,255,255,0) 0,
+  ${onPrimaryTranslucent} 55%,
+  ${onPrimaryTranslucent} 65%,
+  rgba(255,255,255,0)
 )`; // borrowed from https://googlefonts.github.io/japanese/#hannari
 
 const kohoan = {
