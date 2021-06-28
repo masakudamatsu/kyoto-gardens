@@ -7,10 +7,12 @@ test('renders UI correctly when the shown props is true', () => {
   const {container} = render(<DivScrim />);
   expect(container).toMatchInlineSnapshot(`
     .c0 {
+      -webkit-animation: dDSXyd 300ms cubic-bezier(0,0,0.2,1);
+      animation: dDSXyd 300ms cubic-bezier(0,0,0.2,1);
       background-color: black;
       height: 100vh;
       left: 0;
-      opacity: 0;
+      opacity: 0.5;
       position: fixed;
       top: 60px;
       width: 100vw;
