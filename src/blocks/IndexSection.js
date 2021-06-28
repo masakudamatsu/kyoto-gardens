@@ -137,12 +137,10 @@ IndexSection.Kanji = styled.span.attrs(props => ({
   writing-mode: ${font.index.kanji.writingMode};
   z-index: 2; /* above scrim */
   ${IndexSection}:nth-of-type(odd) & {
-    left: auto;
     right: 0;
   }
   ${IndexSection}:nth-of-type(even) & {
     left: 0;
-    right: auto;
   }
   @media only screen and ${breakpoint.kanji} {
     font-size: ${font.index.kanji.size.tablet};

@@ -230,13 +230,11 @@ describe('renders UI correctly:', () => {
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(odd) .c0 {
-        left: auto;
         right: 0;
       }
 
       .IndexSection-ff5g7u-0:nth-of-type(even) .c0 {
         left: 0;
-        right: auto;
       }
 
       @media only screen and (min-width:25.625rem) {
