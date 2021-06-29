@@ -66,21 +66,25 @@ const NavigationItem = ({currentPage, pageName, textContent}) => {
   };
 
   return (
-    <ItemContainer
-      onClick={createRipple}
-      currentPage={currentPage}
-      pageName={pageName}
-    >
-      {currentPage === pageName ? (
-        /* eslint-disable-next-line */
-        <a>{textContent}</a>
-      ) : (
-        <Link href={`/${pageName}`}>
+    <>
+      {pageName === currentPage ? (
+        <ItemContainer currentPage={currentPage} pageName={pageName}>
           {/* eslint-disable-next-line */}
           <a>{textContent}</a>
-        </Link>
+        </ItemContainer>
+      ) : (
+        <ItemContainer
+          onClick={createRipple}
+          currentPage={currentPage}
+          pageName={pageName}
+        >
+          <Link href={pageName}>
+            {/* eslint-disable-next-line */}
+            <a>{textContent}</a>
+          </Link>
+        </ItemContainer>
       )}
-    </ItemContainer>
+    </>
   );
 };
 
