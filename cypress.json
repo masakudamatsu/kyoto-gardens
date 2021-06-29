@@ -3,7 +3,6 @@
   "env": {
     "coverage": false
   },
-  "experimentalComponentTesting": true,
   "integrationFolder": "cypress/e2e",
   "video": false,
   "viewportHeight": 1100,

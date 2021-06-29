@@ -16,9 +16,6 @@
 // Cypress Testing Library
 import '@testing-library/cypress/add-commands';
 
-// Cypress React Unit Test
-import 'cypress-react-unit-test/support';
-
 // Import commands.js using ES2015 syntax:
 import './commands';
 
