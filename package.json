@@ -29,7 +29,7 @@
     "precombine:reports": "npm run copy:reports && mkdir .nyc_output || true",
     "combine:reports": "npx nyc merge .nyc_tempdir && mv coverage.json .nyc_output/out.json",
     "prereport:combined": "npm run combine:reports",
-    "report:combined": "npx nyc report --reporter lcov --reporter text --report-dir coverage"
+    "report:combined": "npx nyc report --reporter lcov --reporter text --report-dir coverage --check-coverage"
   },
   "repository": {
     "type": "git",
