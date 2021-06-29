@@ -79,7 +79,7 @@ const NavigationItem = ({currentPage, pageName, textContent}) => {
         /* eslint-disable-next-line */
         <a>{textContent}</a>
       ) : (
-        <Link href={pageName}>
+        <Link href={`/${pageName}`}>
           {/* eslint-disable-next-line */}
           <a>{textContent}</a>
         </Link>

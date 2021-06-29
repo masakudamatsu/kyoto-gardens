@@ -27,7 +27,7 @@ const Garden = ({currentPage, gardenName, description, image, year}) => {
             </IndexSection.Latin>
           </a>
         ) : (
-          <Link href={gardenName.lowercase}>
+          <Link href={`/${gardenName.lowercase}`}>
             {/* eslint-disable-next-line */}
             <a>
               <IndexSection.Latin gardenName={gardenName.lowercase}>
