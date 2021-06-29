@@ -5,7 +5,6 @@ const medium = {
   enter: '250ms',
   exit: '200ms',
 };
-
 const long = {
   enter: '300ms',
   exit: '250ms',
@@ -15,6 +14,7 @@ const long = {
 const decelerated = 'cubic-bezier(0,0,0.2,1)';
 // Source: https://material.io/design/motion/speed.html#easing
 // "Imagine yourself throwing a tennis ball into an open field. The ball leaves your hand with the maximum speed. As it moves, it loses energy, it decelerates and eventually comes to a halt. This is called ease-out." (https://zellwk.com/blog/css-transitions/)
+const linear = 'linear';
 
 export const animation = {
   header: {
@@ -32,6 +32,16 @@ export const animation = {
       transition-duration: ${({navShown}) =>
         navShown ? long.enter : long.exit};
       transition-timing-function: ${decelerated};
+    `,
+  },
+  ripple: {
+    duration: null, // set with createRipple() in NavigationItem.js
+    easing: linear,
+    keyframes: keyframes`
+      to {
+        transform: scale(1);
+        opacity: 0;
+      }  
     `,
   },
   scrim: {

@@ -3,14 +3,8 @@ import styled, {keyframes} from 'styled-components';
 import Link from 'next/link';
 
 import NavTop from 'src/elements/NavTop';
+import {animation} from 'src/utils/specAnimation';
 import {vspace} from 'src/utils/vspaceScheme';
-
-const rippling = keyframes`
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }  
-`;
 
 const ItemContainer = styled(NavTop.Li)`
   /* https://css-tricks.com/how-to-recreate-the-ripple-effect-of-material-design-buttons/#styling-the-button */
@@ -19,7 +13,8 @@ const ItemContainer = styled(NavTop.Li)`
 
   /* https://css-tricks.com/how-to-recreate-the-ripple-effect-of-material-design-buttons/#styling-the-ripples */
   & span {
-    animation: ${rippling} 600ms linear;
+    animation-name: ${animation.ripple.keyframes};
+    animation-timing-function: ${animation.ripple.easing};
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     position: absolute; /* The absolute position we mentioned earlier */
@@ -58,6 +53,7 @@ const NavigationItem = ({currentPage, pageName, textContent}) => {
     newRipple.style.top = `${
       positionClicked.y - positionElementClicked.y - diameter / 2
     }px`;
+    newRipple.style.animationDuration = `${diameter}ms`; // the ripple travels 1px per ms
 
     // Clear the previous ripple
     const previousRipple = elementClicked.getElementsByTagName('span')[0];

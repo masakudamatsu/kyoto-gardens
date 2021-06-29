@@ -65,8 +65,10 @@ test('renders correctly', () => {
     }
 
     .c1 span {
-      -webkit-animation: ePEfzm 600ms linear;
-      animation: ePEfzm 600ms linear;
+      -webkit-animation-name: jbBBgT;
+      animation-name: jbBBgT;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
       background-color: rgba(255,255,255,0.7);
       border-radius: 50%;
       position: absolute;
