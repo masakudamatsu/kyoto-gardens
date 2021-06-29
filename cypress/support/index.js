@@ -16,6 +16,9 @@
 // Cypress Testing Library
 import '@testing-library/cypress/add-commands';
 
+// Cypress code-coverage plugin
+import '@cypress/code-coverage/support';
+
 // Import commands.js using ES2015 syntax:
 import './commands';
 

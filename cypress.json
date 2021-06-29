@@ -1,8 +1,5 @@
 {
   "baseUrl": "http://localhost:3000",
-  "env": {
-    "coverage": false
-  },
   "integrationFolder": "cypress/e2e",
   "video": false,
   "viewportHeight": 1100,
