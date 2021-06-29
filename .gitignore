@@ -3,11 +3,14 @@
 # dependencies
 node_modules/
 
-# testing
-.nyc_output/
+# testing with Cypress
 cypress/videos/
 cypress/screenshots/
 cypress/snapshots/
+
+# code coverage report
+.nyc_output/
+.nyc_tempdir/
 coverage/
 coverage-cypress/
 coverage-jest/

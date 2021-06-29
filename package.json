@@ -22,7 +22,14 @@
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
     "snapshot": "cypress run --spec \"cypress/component/**/*\"",
     "snapshot:update": "cypress run --env updateSnapshots=true --spec \"cypress/component/**/*\"",
-    "validate": "npm-run-all --parallel lint test:coverage test:e2e:run"
+    "validate": "npm-run-all --parallel lint test:coverage test:e2e:run",
+    "mkdir:reports": "mkdir .nyc_tempdir || true",
+    "precopy:reports": "npm run mkdir:reports",
+    "copy:reports": "cp coverage-cypress/coverage-final.json .nyc_tempdir/from-cypress.json && cp coverage-jest/coverage-final.json .nyc_tempdir/from-jest.json",
+    "precombine:reports": "npm run copy:reports && mkdir .nyc_output || true",
+    "combine:reports": "npx nyc merge .nyc_tempdir && mv coverage.json .nyc_output/out.json",
+    "prereport:combined": "npm run combine:reports",
+    "report:combined": "npx nyc report --reporter lcov --reporter text --report-dir coverage"
   },
   "repository": {
     "type": "git",
