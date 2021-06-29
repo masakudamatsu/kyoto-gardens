@@ -8,6 +8,8 @@ import {colour} from 'src/utils/colorScheme';
 
 const mockProps = {};
 
+// see cypress/e2e/topAppBar.js for testing the user's scroll action
+
 test('renders the site title in white', () => {
   render(<TopAppBar {...mockProps} />);
   expect(screen.getByTestId('site-title')).toHaveStyle(

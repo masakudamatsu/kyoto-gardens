@@ -56,7 +56,7 @@ const TopAppBar = ({navigation}) => {
   }, []);
 
   return (
-    <DivTopAppBar hide={!show} show={show}>
+    <DivTopAppBar hide={!show} show={show} data-testid="top-app-bar">
       {navigation}
       <Header>
         <SiteTitleInWhite />
